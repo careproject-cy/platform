@@ -1,6 +1,5 @@
 import Layout from './components/layout'
 import DogCard from './components/dog-card'
-import AdoptionForm from './components/adoption-form'
 import { dogs } from './data/dogs'
 import { blogPosts } from './data/blog-posts'
 import Link from 'next/link'
@@ -48,11 +47,6 @@ export default function Home() {
             <Button>View All Posts</Button>
           </Link>
         </div>
-      </section>
-
-      <section id="adopt" className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Adopt a Dog</h2>
-        <AdoptionForm />
       </section>
 
       <section id="about" className="mb-12">
