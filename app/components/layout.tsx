@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Container from "@/components/ui/container"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-white text-base border-b p-2">
-        <div className="container mx-auto flex justify-between items-center">
+      <header className="bg-white text-base border-b">
+        <Container className="justify-between">
           <div className="flex items-center gap-3">
             <Image src="/logo.svg" alt={'Pawsome Shelter'} width={80} height={80} />
             <Link href="/" className="text-2xl font-bold">
@@ -21,7 +22,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <li><Link href="/#about" className="hover:underline">About</Link></li>
             </ul>
           </nav>
-        </div>
+        </Container>
       </header>
       <main className="flex-grow container mx-auto px-6 py-10">
         {children}
