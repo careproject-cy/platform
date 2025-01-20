@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="bg-white text-base border-b p-4">
+      <header className="bg-white text-base border-b p-2">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center gap-3">
             <Image src="/logo.svg" alt={'Pawsome Shelter'} width={80} height={80} />
@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               Pawsome Shelter
             </Link>
           </div>
-          <nav>
+          <nav className="p-2">
             <ul className="flex space-x-4">
               <li><Link href="/" className="hover:underline">Home</Link></li>
               <li><Link href="/dogs" className="hover:underline">Dogs</Link></li>
@@ -23,7 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
         </div>
       </header>
-      <main className="flex-grow container mx-auto px-4 py-8">
+      <main className="flex-grow container mx-auto px-6 py-10">
         {children}
       </main>
       <footer className="bg-gray-200 p-4">
