@@ -14,10 +14,10 @@ export default function Home() {
   return (
     <Layout>
       <section className="flex flex-row mb-12 w-full">
-        <div className="w-full flex items-center justify-center">
+        <div className="w-full flex flex-1 items-center justify-center">
           <h1 className="text-3xl font-semibold mb-4">{slogan}</h1>
         </div>
-        <Carousel className="w-full max-w-md" images={dogs.filter(d => d.status !== 'Adopted' && d.status !== 'Not available' && d.status !== 'Reserved').map(dog => dog.images[0]).slice(0, 6)} />
+        <Carousel className="flex-1" images={dogs.filter(d => d.status !== 'Adopted' && d.status !== 'Not available' && d.status !== 'Reserved').map(dog => dog.images[0]).slice(0, 6)} />
       </section>
 
       <section className="mb-12 w-full">
