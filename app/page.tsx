@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Carousel from "./components/carousel"
+import { slogan } from "./data/consts"
 
 export default function Home() {
   const recentPosts = blogPosts.slice(0, 3)
@@ -14,7 +15,7 @@ export default function Home() {
     <Layout>
       <section className="flex flex-row mb-12 w-full">
         <div className="w-full flex items-center justify-center">
-          <h1 className="text-3xl font-semibold mb-4">Our Dogs for Adoption</h1>
+          <h1 className="text-3xl font-semibold mb-4">{slogan}</h1>
         </div>
         <Carousel className="w-full max-w-md" images={dogs.filter(d => d.status !== 'Adopted' && d.status !== 'Not available' && d.status !== 'Reserved').map(dog => dog.images[0]).slice(0, 6)} />
       </section>
