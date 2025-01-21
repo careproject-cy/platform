@@ -10,20 +10,13 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
+  const nextImage = () => setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const prevImage = () => setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000);
-
+    }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
 
@@ -44,7 +37,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
             <Image src={image} key={index} alt={`Slide ${currentIndex}`}
               width={288}
               height={288}
-              className={`${c} relative object-cover h-auto transition-all duration-1000 ease-in rounded-xl`} />
+              className={`${c} relative object-cover h-auto transition-all duration-500 ease-in rounded-xl`} />
           );
         })}
         <button onClick={nextImage} className="bg-gray-100/50 p-2 rounded-full flex items-center justify-center h-8 w-8 cursor-pointer absolute right-2 z-20">

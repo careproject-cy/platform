@@ -16,7 +16,7 @@ export default function Home() {
         <div className="w-full">
           <h2 className="text-2xl font-semibold mb-4">Our Dogs for Adoption</h2>
         </div>
-        <Carousel className="w-full" images={dogs.filter(d => d.status !== 'Adopted' && d.status !== 'Not available' && d.status !== 'Reserved').map(dog => dog.images[0])} />
+        <Carousel className="w-full max-w-md" images={dogs.filter(d => d.status !== 'Adopted' && d.status !== 'Not available' && d.status !== 'Reserved').map(dog => dog.images[0]).slice(0, 5)} />
       </section>
 
       <h1 className="text-4xl font-bold mb-8 text-center">Welcome to Pawsome Shelter</h1>
