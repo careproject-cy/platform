@@ -9,51 +9,68 @@ interface CarouselProps {
 }
 
 const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  const [visible, setVisible] = useState([0, 1, 2]);
 
   const prevImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    setVisible((prev) => {
+      const currentIndex = prev[0];
+      return [
+        (currentIndex - 1 + images.length) % images.length,
+        currentIndex,
+        (currentIndex + 1) % images.length,
+      ];
+    });
+  };
+
+  const nextImage = () => {
+    setVisible((prev) => {
+      const currentIndex = prev[2];
+      return [
+        (currentIndex - 1 + images.length) % images.length,
+        currentIndex,
+        (currentIndex + 1) % images.length,
+      ];
+    });
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setVisible((prev) => {
+        const currentIndex = prev[2];
+        return [
+          (currentIndex - 1 + images.length) % images.length,
+          currentIndex,
+          (currentIndex + 1) % images.length,
+        ];
+      });
     }, 3000);
     return () => clearInterval(interval);
   }, [images.length]);
 
-  const leftIndex = (currentIndex - 1 + images.length) % images.length;
-  const rightIndex = (currentIndex + 1) % images.length;
-  const visibleIndices = [leftIndex, currentIndex, rightIndex];
-
   return (
     <div className={twMerge(`flex flex-row items-center justify-center h-80 overflow-hidden`, className)}>
       <div className="flex flex-row items-center justify-center relative">
-        <button onClick={prevImage} className="bg-gray-100/50 rounded-full flex items-center justify-center h-8 w-8 cursor-pointer absolute left-20 z-20">
+        <button onClick={prevImage} className="bg-gray-100/50 rounded-full flex items-center justify-center h-8 w-8 cursor-pointer absolute left-2 z-20">
           <span className="material-symbols-rounded">
             chevron_left
           </span>
         </button>
-        {visibleIndices.map((idx) => {
-          const c = idx - currentIndex === 0
+        {visible.map((idx, id) => {
+          const classValue = id === 1
             ? 'w-80 z-1 min-h-80 rounded-xl'
             : 'w-20 z-0 min-h-72 opacity-50';
           return (
             <Image
               src={images[idx]}
               key={idx}
-              alt={`Slide ${currentIndex}`}
+              alt={`Slide ${id}`}
               width={288}
               height={288}
-              className={`${c} relative object-cover h-auto transition-height duration-300 ease-in`}
+              className={`${classValue} relative object-cover h-auto transition-all duration-500 ease-in-out`}
             />
           );
         })}
-        <button onClick={nextImage} className="bg-gray-100/50 rounded-full flex items-center justify-center h-8 w-8 cursor-pointer absolute right-20 z-20">
+        <button onClick={nextImage} className="bg-gray-100/50 rounded-full flex items-center justify-center h-8 w-8 cursor-pointer absolute right-2 z-20">
           <span className="material-symbols-rounded">
             chevron_right
           </span>
