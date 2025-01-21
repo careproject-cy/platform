@@ -43,7 +43,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
           (currentIndex + 1) % images.length,
         ];
       });
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [images.length]);
 
