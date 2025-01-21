@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Layout from '../components/layout'
-import DogCard from '../components/dog-card'
+import DogCard from '../components/dogCard'
 import { dogs } from '../data/dogs'
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"

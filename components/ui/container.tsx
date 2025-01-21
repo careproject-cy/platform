@@ -11,7 +11,7 @@ const Container: React.FC<ContainerProps> = (props) => {
   return (
     <Tag
       className={twMerge(
-        "w-full mx-auto flex items-center max-w-7xl p-3",
+        "w-full mx-auto flex items-center max-w-7xl p-5",
         className
       )}
       {...otherProps}

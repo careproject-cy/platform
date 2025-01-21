@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import Container from "@/components/ui/container"
 import Logo from "./logo"
+import { platform_name } from "../data/consts"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col min-h-screen">
-      <Container className="justify-between border-b max-w-full" tag={'header'}>
+      <Container className="justify-between border-b max-w-full px-5 py-3" tag={'header'}>
         <Logo />
         <nav className="p-2">
           <ul className="flex space-x-4">
@@ -21,8 +22,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </Container>
       <Container className="bg-gray-100 border-t max-w-full" tag={'footer'}>
-        <Container>
-          <p className="text-sm">&copy; 2025 Pawsome Shelter. All rights reserved.</p>
+        <Container className="py-3 px-0">
+          <p className="text-sm">&copy; 2025 {platform_name}. All rights reserved.</p>
         </Container>
       </Container>
     </div>

@@ -3,8 +3,10 @@ export interface Dog {
   name: string;
   breed: string;
   age: number;
-  description: string;
+  gender: string;
   longDescription: string;
+  status: 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted';
+  images: string[];
 }
 
 export const dogs: Dog[] = [
@@ -13,160 +15,279 @@ export const dogs: Dog[] = [
     name: "Buddy",
     breed: "Golden Retriever",
     age: 3,
-    description: "Friendly and energetic",
-    longDescription: "Buddy is a lovable Golden Retriever who adores people and other dogs. He's always ready for a game of fetch or a long walk in the park. Buddy is well-trained and would make a perfect companion for an active family."
+    gender: "male",
+    longDescription: "Buddy is a lovable Golden Retriever...",
+    status: "Available",
+    images: [
+      "https://placehold.co/400x400?text=Buddy+1",
+      "https://placehold.co/400x400?text=Buddy+2",
+      "https://placehold.co/400x400?text=Buddy+3"
+    ]
   },
   {
     id: "luna",
     name: "Luna",
     breed: "Husky",
     age: 2,
-    description: "Playful and talkative",
-    longDescription: "Luna is a beautiful Husky with striking blue eyes. She's very vocal and loves to 'talk' to her human friends. Luna has a lot of energy and would thrive in a home with a large, fenced yard where she can run and play."
+    gender: "female",
+    longDescription: "Luna is a beautiful Husky with striking blue eyes...",
+    status: "In foster care",
+    images: [
+      "https://placehold.co/400x400?text=Luna+1",
+      "https://placehold.co/400x400?text=Luna+2",
+      "https://placehold.co/400x400?text=Luna+3"
+    ]
   },
   {
     id: "max",
     name: "Max",
     breed: "German Shepherd",
     age: 5,
-    description: "Loyal and protective",
-    longDescription: "Max is a dignified German Shepherd with a heart of gold. He's protective of his loved ones and very intelligent. Max would do well in a home with experienced dog owners who can provide him with mental stimulation and regular exercise."
+    gender: "male",
+    longDescription: "Max is a dignified German Shepherd...",
+    status: "In foster care",
+    images: [
+      "https://placehold.co/400x400?text=Max+1",
+      "https://placehold.co/400x400?text=Max+2",
+      "https://placehold.co/400x400?text=Max+3"
+    ]
   },
   {
     id: "bella",
     name: "Bella",
     breed: "Labrador Retriever",
     age: 4,
-    description: "Gentle and loving",
-    longDescription: "Bella is a sweet Labrador Retriever with a gentle soul. She loves cuddles and is great with children. Bella would be perfect for a family looking for a calm and affectionate companion."
+    gender: "female",
+    longDescription: "Bella is a sweet Labrador Retriever...",
+    status: "Available",
+    images: [
+      "https://placehold.co/400x400?text=Bella+1",
+      "https://placehold.co/400x400?text=Bella+2",
+      "https://placehold.co/400x400?text=Bella+3"
+    ]
   },
   {
     id: "charlie",
     name: "Charlie",
     breed: "Beagle",
     age: 6,
-    description: "Curious and friendly",
-    longDescription: "Charlie is an adventurous Beagle with a nose for exploration. He's friendly with everyone he meets and loves to follow interesting scents. Charlie would be great for an owner who enjoys outdoor activities and can keep up with his curious nature."
+    gender: "male",
+    longDescription: "Charlie is an adventurous Beagle...",
+    status: "Not available",
+    images: [
+      "https://placehold.co/400x400?text=Charlie+1",
+      "https://placehold.co/400x400?text=Charlie+2",
+      "https://placehold.co/400x400?text=Charlie+3"
+    ]
   },
   {
     id: "daisy",
     name: "Daisy",
     breed: "Poodle",
     age: 2,
-    description: "Smart and elegant",
-    longDescription: "Daisy is a graceful Poodle with a sharp mind. She learns tricks quickly and loves to show off her skills. Daisy would thrive in a home that can provide her with plenty of mental stimulation and grooming care."
+    gender: "female",
+    longDescription: "Daisy is a graceful Poodle...",
+    status: "Not available",
+    images: [
+      "https://placehold.co/400x400?text=Daisy+1",
+      "https://placehold.co/400x400?text=Daisy+2",
+      "https://placehold.co/400x400?text=Daisy+3"
+    ]
   },
   {
     id: "rocky",
     name: "Rocky",
     breed: "Boxer",
     age: 5,
-    description: "Energetic and playful",
-    longDescription: "Rocky is a spirited Boxer who loves to play and exercise. He's great with children and has a patient, gentle nature despite his high energy. Rocky needs an active family who can keep up with his playful antics."
+    gender: "male",
+    longDescription: "Rocky is a spirited Boxer who loves to play and exercise...",
+    status: "Reserved",
+    images: [
+      "https://placehold.co/400x400?text=Rocky+1",
+      "https://placehold.co/400x400?text=Rocky+2",
+      "https://placehold.co/400x400?text=Rocky+3"
+    ]
   },
   {
     id: "molly",
     name: "Molly",
     breed: "Cocker Spaniel",
     age: 7,
-    description: "Sweet and gentle",
-    longDescription: "Molly is a loving Cocker Spaniel with a heart of gold. She's calm and patient, making her great for families with young children or elderly owners. Molly enjoys leisurely walks and lots of cuddle time."
+    gender: "female",
+    longDescription: "Molly is a loving Cocker Spaniel...",
+    status: "Available",
+    images: [
+      "https://placehold.co/400x400?text=Molly+1",
+      "https://placehold.co/400x400?text=Molly+2",
+      "https://placehold.co/400x400?text=Molly+3"
+    ]
   },
   {
     id: "duke",
     name: "Duke",
     breed: "Great Dane",
     age: 4,
-    description: "Gentle giant",
-    longDescription: "Duke is a majestic Great Dane with a calm and gentle nature. Despite his size, he's a big softie who loves to lean on his humans. Duke needs a home with plenty of space and owners who can handle his size."
+    gender: "male",
+    longDescription: "Duke is a majestic Great Dane...",
+    status: "Reserved",
+    images: [
+      "https://placehold.co/400x400?text=Duke+1",
+      "https://placehold.co/400x400?text=Duke+2",
+      "https://placehold.co/400x400?text=Duke+3"
+    ]
   },
   {
     id: "zoe",
     name: "Zoe",
     breed: "French Bulldog",
     age: 3,
-    description: "Charming and sociable",
-    longDescription: "Zoe is a charismatic French Bulldog who loves to be the center of attention. She's great with other pets and enjoys meeting new people. Zoe would be perfect for a family looking for a small, affectionate dog with a big personality."
+    gender: "female",
+    longDescription: "Zoe is a charismatic French Bulldog...",
+    status: "Available",
+    images: [
+      "https://placehold.co/400x400?text=Zoe+1",
+      "https://placehold.co/400x400?text=Zoe+2",
+      "https://placehold.co/400x400?text=Zoe+3"
+    ]
   },
   {
     id: "cooper",
     name: "Cooper",
     breed: "Australian Shepherd",
     age: 2,
-    description: "Intelligent and active",
-    longDescription: "Cooper is a brilliant Australian Shepherd with boundless energy. He excels at agility training and needs plenty of physical and mental exercise. Cooper would be ideal for an active owner who can provide him with a job to do."
+    gender: "male",
+    longDescription: "Cooper is a brilliant Australian Shepherd...",
+    status: "Not available",
+    images: [
+      "https://placehold.co/400x400?text=Cooper+1",
+      "https://placehold.co/400x400?text=Cooper+2",
+      "https://placehold.co/400x400?text=Cooper+3"
+    ]
   },
   {
     id: "lucy",
     name: "Lucy",
     breed: "Chihuahua",
     age: 8,
-    description: "Sassy and loyal",
-    longDescription: "Lucy is a spirited Chihuahua with a big personality in a small package. She's fiercely loyal to her favorite person and enjoys being pampered. Lucy would be great for someone looking for a pint-sized companion with plenty of attitude."
+    gender: "female",
+    longDescription: "Lucy is a spirited Chihuahua...",
+    status: "Available",
+    images: [
+      "https://placehold.co/400x400?text=Lucy+1",
+      "https://placehold.co/400x400?text=Lucy+2",
+      "https://placehold.co/400x400?text=Lucy+3"
+    ]
   },
   {
     id: "jack",
-    breed: "Jack Russell Terrier",
     name: "Jack",
+    breed: "Jack Russell Terrier",
     age: 5,
-    description: "Energetic and clever",
-    longDescription: "Jack is a lively Jack Russell Terrier with a mischievous streak. He's always up for a game or adventure and needs plenty of exercise to keep him out of trouble. Jack would be perfect for an owner who can match his energy and provide firm, consistent training."
+    gender: "male",
+    longDescription: "Jack is a lively Jack Russell Terrier...",
+    status: "Reserved",
+    images: [
+      "https://placehold.co/400x400?text=Jack+1",
+      "https://placehold.co/400x400?text=Jack+2",
+      "https://placehold.co/400x400?text=Jack+3"
+    ]
   },
   {
     id: "lola",
     name: "Lola",
     breed: "Rottweiler",
     age: 4,
-    description: "Confident and devoted",
-    longDescription: "Lola is a strong, confident Rottweiler with a heart of gold. She's extremely loyal to her family and has a patient, gentle nature with children. Lola needs an experienced owner who can provide consistent training and socialization."
+    gender: "female",
+    longDescription: "Lola is a strong, confident Rottweiler...",
+    status: "Available",
+    images: [
+      "https://placehold.co/400x400?text=Lola+1",
+      "https://placehold.co/400x400?text=Lola+2",
+      "https://placehold.co/400x400?text=Lola+3"
+    ]
   },
   {
     id: "oliver",
     name: "Oliver",
     breed: "Dachshund",
     age: 6,
-    description: "Clever and courageous",
-    longDescription: "Oliver is a brave little Dachshund with a big personality. He's curious and loves to explore, but also enjoys cuddling up for a nap. Oliver would be great for someone looking for a small dog with plenty of character."
+    gender: "male",
+    longDescription: "Oliver is a brave little Dachshund...",
+    status: "Available",
+    images: [
+      "https://placehold.co/400x400?text=Oliver+1",
+      "https://placehold.co/400x400?text=Oliver+2",
+      "https://placehold.co/400x400?text=Oliver+3"
+    ]
   },
   {
     id: "sophie",
     name: "Sophie",
     breed: "Shih Tzu",
     age: 7,
-    description: "Affectionate and calm",
-    longDescription: "Sophie is a sweet Shih Tzu who loves nothing more than being close to her humans. She's calm and adaptable, making her perfect for apartment living. Sophie would be ideal for someone looking for a low-energy, affectionate companion."
+    gender: "female",
+    longDescription: "Sophie is a sweet Shih Tzu...",
+    status: "Available",
+    images: [
+      "https://placehold.co/400x400?text=Sophie+1",
+      "https://placehold.co/400x400?text=Sophie+2",
+      "https://placehold.co/400x400?text=Sophie+3"
+    ]
   },
   {
     id: "bear",
     name: "Bear",
     breed: "Newfoundland",
     age: 3,
-    description: "Gentle and patient",
-    longDescription: "Bear is a massive Newfoundland with an equally big heart. He's incredibly patient and gentle, especially with children. Bear needs a home with plenty of space and owners who don't mind a bit of drool in exchange for lots of love."
+    gender: "male",
+    longDescription: "Bear is a massive Newfoundland...",
+    status: "Adopted",
+    images: [
+      "https://placehold.co/400x400?text=Bear+1",
+      "https://placehold.co/400x400?text=Bear+2",
+      "https://placehold.co/400x400?text=Bear+3"
+    ]
   },
   {
     id: "milo",
     name: "Milo",
     breed: "Border Collie",
     age: 2,
-    description: "Intelligent and agile",
-    longDescription: "Milo is a highly intelligent Border Collie with amazing agility skills. He learns new tricks quickly and thrives on mental and physical challenges. Milo needs an active owner who can provide him with plenty of exercise and mental stimulation."
+    gender: "male",
+    longDescription: "Milo is a highly intelligent Border Collie...",
+    status: "Adopted",
+    images: [
+      "https://placehold.co/400x400?text=Milo+1",
+      "https://placehold.co/400x400?text=Milo+2",
+      "https://placehold.co/400x400?text=Milo+3"
+    ]
   },
   {
     id: "coco",
     name: "Coco",
     breed: "Cavalier King Charles Spaniel",
     age: 5,
-    description: "Gentle and affectionate",
-    longDescription: "Coco is a sweet Cavalier King Charles Spaniel who loves to be pampered. She's gentle and affectionate, always ready for a cuddle. Coco would be perfect for someone looking for a loving lap dog and loyal companion."
+    gender: "female",
+    longDescription: "Coco is a sweet Cavalier King Charles Spaniel...",
+    status: "Adopted",
+    images: [
+      "https://placehold.co/400x400?text=Coco+1",
+      "https://placehold.co/400x400?text=Coco+2",
+      "https://placehold.co/400x400?text=Coco+3"
+    ]
   },
   {
     id: "rex",
     name: "Rex",
     breed: "Doberman Pinscher",
     age: 4,
-    description: "Loyal and alert",
-    longDescription: "Rex is a noble Doberman Pinscher with a strong protective instinct. He's incredibly loyal to his family and alert to his surroundings. Rex needs an experienced owner who can provide firm, consistent training and plenty of exercise."
+    gender: "male",
+    longDescription: "Rex is a noble Doberman Pinscher...",
+    status: "Available",
+    images: [
+      "https://placehold.co/400x400?text=Rex+1",
+      "https://placehold.co/400x400?text=Rex+2",
+      "https://placehold.co/400x400?text=Rex+3"
+    ]
   }
 ];
-

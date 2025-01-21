@@ -1,0 +1,1 @@
+export const platform_name = "Cyprus Dogs Rehome";
