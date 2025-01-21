@@ -38,13 +38,13 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
         {images.map((image, index) => {
           const dif = index - currentIndex
           const c = dif === 0
-            ? 'w-80 z-1 min-h-80 '
+            ? 'w-80 z-1 min-h-80'
             : dif === 1 || dif === -1 ? 'w-10 z-0 min-h-72' : 'w-0 z-0 min-h-80 '
           return (
             <Image src={image} key={index} alt={`Slide ${currentIndex}`}
               width={288}
               height={288}
-              className={`${c} relative object-cover h-auto transition-width duration-1000 ease-in rounded-xl`} />
+              className={`${c} relative object-cover h-auto transition-all duration-1000 ease-in rounded-xl`} />
           );
         })}
         <button onClick={nextImage} className="bg-gray-100/50 p-2 rounded-full flex items-center justify-center h-8 w-8 cursor-pointer absolute right-2 z-20">
