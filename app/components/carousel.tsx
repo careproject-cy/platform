@@ -57,40 +57,44 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   useEffect(() => {
     startInterval();
     return () => {
-      if (intervalRef.current)
-        clearInterval(intervalRef.current);
+      if (intervalRef.current) clearInterval(intervalRef.current);
     };
   }, [images.length]);
 
   return (
-    <div className={twMerge(`flex flex-row items-center justify-center h-80 overflow-hidden`, className)}>
-      <div className="flex flex-row items-center justify-center relative">
-        <button
-          onClick={prevImage}
-          className="bg-gray-100/50 rounded-full flex items-center justify-center h-8 w-8 cursor-pointer absolute left-2 z-20"
+    <div className={twMerge(`relative flex items-center justify-center h-80`, className)}>
+      <button
+        onClick={prevImage}
+        className="bg-gray-100/50 rounded-full absolute left-2 z-20 h-8 w-8 flex items-center justify-center"
+      >
+        <span className="material-symbols-rounded">chevron_left</span>
+      </button>
+      {visible.map((idx, id) => (
+        <div
+          key={idx}
+          className={
+            id === 1
+              ? 'absolute z-10 w-72 h-72 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-2500'
+              : id === 0
+                ? 'absolute z-0 w-56 h-56 top-1/2 left-[25%] -translate-x-1/2 -translate-y-1/2 opacity-80 scale-90 transition-all duration-2500'
+                : 'absolute z-0 w-56 h-56 top-1/2 right-[25%] translate-x-1/2 -translate-y-1/2 opacity-80 scale-90 transition-all duration-2500'
+          }
         >
-          <span className="material-symbols-rounded">chevron_left</span>
-        </button>
-        {visible.map((idx, id) => {
-          const classValue = id === 1 ? 'w-80 z-1 min-h-80 rounded-xl' : 'w-20 z-0 min-h-72 opacity-50';
-          return (
-            <Image
-              src={images[idx]}
-              key={idx}
-              alt={`Slide ${id}`}
-              width={288}
-              height={288}
-              className={`${classValue} relative object-cover h-auto transition-all duration-500 ease-in-out`}
-            />
-          );
-        })}
-        <button
-          onClick={nextImage}
-          className="bg-gray-100/50 rounded-full flex items-center justify-center h-8 w-8 cursor-pointer absolute right-2 z-20"
-        >
-          <span className="material-symbols-rounded">chevron_right</span>
-        </button>
-      </div>
+          <Image
+            src={images[idx]}
+            alt={`Slide ${id}`}
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover rounded-xl"
+          />
+        </div>
+      ))}
+      <button
+        onClick={nextImage}
+        className="bg-gray-100/50 rounded-full absolute right-2 z-20 h-8 w-8 flex items-center justify-center"
+      >
+        <span className="material-symbols-rounded">chevron_right</span>
+      </button>
     </div>
   );
 };
