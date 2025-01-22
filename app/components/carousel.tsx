@@ -8,20 +8,26 @@ interface CarouselProps {
   className: string;
 }
 
+function getVisibleIndices(
+  current: number[],
+  imagesCount: number,
+  direction: 'prev' | 'next'
+) {
+  const currentIndex = direction === 'prev' ? current[0] : current[2];
+  return [
+    (currentIndex - 1 + imagesCount) % imagesCount,
+    currentIndex,
+    (currentIndex + 1) % imagesCount,
+  ];
+}
+
 const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   const [visible, setVisible] = useState([0, 1, 2]);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const startInterval = React.useCallback(() => {
     intervalRef.current = setInterval(() => {
-      setVisible((prev) => {
-        const currentIndex = prev[2];
-        return [
-          (currentIndex - 1 + images.length) % images.length,
-          currentIndex,
-          (currentIndex + 1) % images.length,
-        ];
-      });
+      setVisible((prev) => getVisibleIndices(prev, images.length, 'next'));
     }, 5000);
   }, [images.length]);
 
@@ -31,26 +37,12 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   };
 
   const prevImage = () => {
-    setVisible((prev) => {
-      const currentIndex = prev[0];
-      return [
-        (currentIndex - 1 + images.length) % images.length,
-        currentIndex,
-        (currentIndex + 1) % images.length,
-      ];
-    });
+    setVisible((prev) => getVisibleIndices(prev, images.length, 'prev'));
     resetInterval();
   };
 
   const nextImage = () => {
-    setVisible((prev) => {
-      const currentIndex = prev[2];
-      return [
-        (currentIndex - 1 + images.length) % images.length,
-        currentIndex,
-        (currentIndex + 1) % images.length,
-      ];
-    });
+    setVisible((prev) => getVisibleIndices(prev, images.length, 'next'));
     resetInterval();
   };
 
