@@ -12,7 +12,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   const [visible, setVisible] = useState([0, 1, 2]);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-  const startInterval = () => {
+  const startInterval = React.useCallback(() => {
     intervalRef.current = setInterval(() => {
       setVisible((prev) => {
         const currentIndex = prev[2];
@@ -23,7 +23,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
         ];
       });
     }, 5000);
-  };
+  }, [images.length]);
 
   const resetInterval = () => {
     if (intervalRef.current) clearInterval(intervalRef.current);
@@ -59,7 +59,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [images.length]);
+  }, [startInterval]);
 
   return (
     <div className={twMerge(`relative flex items-center justify-center h-80`, className)}>
