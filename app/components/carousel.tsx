@@ -10,9 +10,9 @@ interface CarouselProps {
 
 const initialPositions = [
   { id: 0, css: 'left-[0%]   -translate-x-[50%]  z-0  w-56 h-56' },
-  { id: 1, css: 'left-[0%]    translate-x-[0%]   z-0  w-64 h-64' },
-  { id: 2, css: 'left-[50%]  -translate-x-[50%]  z-10 w-72 h-72 opacity-70' },
-  { id: 3, css: 'left-[100%] -translate-x-[100%] z-0  w-64 h-64' },
+  { id: 1, css: 'left-[0%]    translate-x-[0%]   z-0  w-64 h-72' },
+  { id: 2, css: 'left-[50%]  -translate-x-[50%]  z-10 w-80 h-80 opacity-70' },
+  { id: 3, css: 'left-[100%] -translate-x-[100%] z-0  w-64 h-72' },
   { id: 4, css: 'left-[100%] -translate-x-[50%]  z-0  w-56 h-56' },
 ];
 
