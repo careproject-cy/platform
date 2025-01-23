@@ -19,14 +19,14 @@ const initialPositions = [
 const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   const [visible, setVisible] = useState(initialPositions);
 
-  const prevImage = () => {
+  const nextImage = () => {
     setVisible((prev) => {
       const last = prev[prev.length - 1];
       return [last, ...prev.slice(0, -1)];
     });
   };
 
-  const nextImage = () => {
+  const prevImage = () => {
     setVisible((prev) => {
       const first = prev[0];
       return [...prev.slice(1), first];
