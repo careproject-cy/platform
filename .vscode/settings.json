@@ -1,0 +1,6 @@
+{
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
+}

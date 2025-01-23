@@ -19,7 +19,7 @@ export const dogs: Dog[] = [
     longDescription: "Buddy is a lovable Golden Retriever...",
     status: "Available",
     images: [
-      "https://placehold.co/400x400?text=Buddy+1",
+      "https://placehold.co/400x400?text=Buddy",
       "https://placehold.co/400x400?text=Buddy+2",
       "https://placehold.co/400x400?text=Buddy+3"
     ]
@@ -33,7 +33,7 @@ export const dogs: Dog[] = [
     longDescription: "Luna is a beautiful Husky with striking blue eyes...",
     status: "In foster care",
     images: [
-      "https://placehold.co/400x400?text=Luna+1",
+      "https://placehold.co/400x400?text=Luna",
       "https://placehold.co/400x400?text=Luna+2",
       "https://placehold.co/400x400?text=Luna+3"
     ]
@@ -47,7 +47,7 @@ export const dogs: Dog[] = [
     longDescription: "Max is a dignified German Shepherd...",
     status: "In foster care",
     images: [
-      "https://placehold.co/400x400?text=Max+1",
+      "https://placehold.co/400x400?text=Max",
       "https://placehold.co/400x400?text=Max+2",
       "https://placehold.co/400x400?text=Max+3"
     ]
@@ -61,7 +61,7 @@ export const dogs: Dog[] = [
     longDescription: "Bella is a sweet Labrador Retriever...",
     status: "Available",
     images: [
-      "https://placehold.co/400x400?text=Bella+1",
+      "https://placehold.co/400x400?text=Bella",
       "https://placehold.co/400x400?text=Bella+2",
       "https://placehold.co/400x400?text=Bella+3"
     ]
@@ -75,7 +75,7 @@ export const dogs: Dog[] = [
     longDescription: "Charlie is an adventurous Beagle...",
     status: "Not available",
     images: [
-      "https://placehold.co/400x400?text=Charlie+1",
+      "https://placehold.co/400x400?text=Charlie",
       "https://placehold.co/400x400?text=Charlie+2",
       "https://placehold.co/400x400?text=Charlie+3"
     ]

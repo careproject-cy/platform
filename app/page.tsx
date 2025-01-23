@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <section className="flex flex-row mb-12 w-full">
+      <section className="flex flex-row mb-12 w-full gap-8 justify-center items-center overflow-hidden">
         <div className="w-full flex flex-col flex-1 items-center justify-center">
           <div className="w-full flex flex-col">
             <h1 className="text-5xl font-semibold mb-8">{slogan}</h1>
