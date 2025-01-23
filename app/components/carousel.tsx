@@ -34,9 +34,12 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   };
 
   return (
-    <div className={twMerge(`relative flex items-center justify-center h-80 border-1`, className)}>
-      <button onClick={prevImage} className="bg-gray-100/50 rounded-full absolute left-2 z-20 h-8 w-8 flex items-center justify-center border-1">
+    <div className={twMerge(`overflow-hidden relative flex items-center justify-center h-80 border-1 rounded-2xl`, className)}>
+      <button onClick={prevImage} className="transition-all duration-100 bg-gray-100 opacity-50 rounded-full absolute left-2 z-20 h-8 w-8 flex items-center justify-center border-1 cursor-pointer hover:shadow-sm hover:opacity-100">
         <span className="material-symbols-rounded">chevron_left</span>
+      </button>
+      <button onClick={nextImage} className="transition-all duration-100 bg-gray-100 opacity-50 rounded-full absolute right-2 z-20 h-8 w-8 flex items-center justify-center border-1 cursor-pointer hover:shadow-sm hover:opacity-100">
+        <span className="material-symbols-rounded">chevron_right</span>
       </button>
       <div className="w-full h-full relative flex flex-row items-center justify-center">
         {visible.map((data, idx) => (
@@ -51,9 +54,6 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
           </div>
         ))}
       </div>
-      <button onClick={nextImage} className="bg-gray-100/50 rounded-full absolute right-2 z-20 h-8 w-8 flex items-center justify-center border-1">
-        <span className="material-symbols-rounded">chevron_right</span>
-      </button>
     </div>
   );
 };
