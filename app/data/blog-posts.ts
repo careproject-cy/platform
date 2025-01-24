@@ -12,7 +12,7 @@ export const blogPosts: BlogPost[] = [
     id: "new-arrivals-june-2025",
     title: "New Arrivals: Meet Our June 2025 Rescues",
     date: "2025-06-15",
-    description: "We've welcomed five new furry friends to our shelter this month. Learn about their stories and how you can help.",
+    description: "We've welcomed five new furry friends this month, each with a unique story and ready for a fresh start. Learn how you can help them find the loving homes they deserve and why their rescues are so special.",
     content: `
       <p>This June, we're thrilled to introduce five new rescues to our Pawsome family. Each of these dogs has a unique story, and we're committed to finding them loving forever homes.</p>
       
@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
     id: "summer-adoption-event-2025",
     title: "Join Us for Our Summer Adoption Event",
     date: "2025-07-01",
-    description: "Mark your calendars for July 15th! We're hosting a special summer adoption event with activities for the whole family.",
+    description: "Mark your calendars for July 15th! We're hosting a summertime celebration packed with family-friendly activities. Come meet our dogs, explore fun workshops, and learn about responsible pet ownership.",
     content: `
       <p>We're excited to announce our upcoming Summer Adoption Event on July 15th, 2025! This day-long celebration is not just about finding homes for our wonderful dogs, but also about educating the community on responsible pet ownership and the joys of adoption.</p>
       
@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
     id: "volunteer-spotlight-july-2025",
     title: "Volunteer Spotlight: Meet Our Amazing Helpers",
     date: "2025-07-05",
-    description: "Highlighting the people behind the scenes who make everything possible.",
+    description: "Our volunteers are the backbone of our shelter, tirelessly caring for dogs in need. Discover how their dedication keeps everything running and helps each dog find a brighter future.",
     content: `
       <p>Our volunteers dedicate countless hours to caring for our dogs. This month, we're celebrating their unwavering commitment.</p>
       <h2>Spotlight: Emma and James</h2>
@@ -69,7 +69,7 @@ export const blogPosts: BlogPost[] = [
     id: "safe-summer-travel-2025",
     title: "Tips for Safe Summer Travel with Your Dog",
     date: "2025-07-10",
-    description: "Planning a vacation with your canine companion? Follow these tips to ensure a safe trip.",
+    description: "Traveling with your dog can be a blast if you plan carefully. These guidelines will help you keep your furry pal secure, comfortable, and relaxed wherever your summer adventures take you.",
     content: `
       <p>Whether you're road-tripping or flying, preparation is key. Make sure you have enough supplies, and don't forget frequent potty breaks.</p>
       <h2>Travel Checklist</h2>
@@ -85,7 +85,7 @@ export const blogPosts: BlogPost[] = [
     id: "meet-siblings-2025",
     title: "Double the Love: Meet the Bonded Siblings Looking for a Home",
     date: "2025-07-15",
-    description: "Two inseparable pups are searching for a family to adopt them together.",
+    description: "Bella and Bruno do everything together, from playing to napping. They’re looking for a caring family to adopt them as a pair and keep their close bond intact.",
     content: `
       <p>Siblings Bella and Bruno came to us from the same litter. These playful pups share everything, from toys to nap time.</p>
       <h2>Why Adopt a Bonded Pair?</h2>
@@ -97,7 +97,7 @@ export const blogPosts: BlogPost[] = [
     id: "senior-pups-2025",
     title: "Senior Pups: Why Older Dogs Make Great Companions",
     date: "2025-07-20",
-    description: "Looking for a calmer, well-trained pet? Consider adopting a senior dog.",
+    description: "Older dogs often come with basic training, calm temperaments, and deep loyalty. Learn why adopting a senior can be a rewarding decision and how it can transform both your life and theirs.",
     content: `
       <p>Our shelter has several dogs aged seven and up. They enjoy short walks, cozy naps, and plenty of affection.</p>
       <ul>
@@ -112,7 +112,7 @@ export const blogPosts: BlogPost[] = [
     id: "healthy-summer-snacks-2025",
     title: "Healthy Summer Snacks Your Dog Will Love",
     date: "2025-07-25",
-    description: "Easy and nutritious treats to help your pup stay cool this season.",
+    description: "Cool down your pup’s day with fresh, dog-safe treats. From frozen fruit pops to peanut butter bites, discover fun ways to boost nutrition and beat the heat.",
     content: `
       <p>From frozen peanut butter bites to homemade fruit popsicles, there's no shortage of fun ways to keep your dog refreshed.</p>
       <h2>Safe Ingredients</h2>
@@ -124,7 +124,7 @@ export const blogPosts: BlogPost[] = [
     id: "puppy-socialization-2025",
     title: "Puppy Socialization: Building Confidence Early",
     date: "2025-07-30",
-    description: "A well-socialized puppy grows into a friendly, adaptable adult dog.",
+    description: "Positive interactions and gentle exposure to new experiences help puppies grow into well-adjusted adults. See how early socialization boosts confidence and prevents behavioral problems.",
     content: `
       <p>Introduce your new puppy to various people, places, and experiences in a positive way to help them gain confidence.</p>
       <h2>Key Steps</h2>
@@ -140,7 +140,7 @@ export const blogPosts: BlogPost[] = [
     id: "dog-friendly-summer-activities-2025",
     title: "Fun and Dog-Friendly Activities for the Summer",
     date: "2025-08-01",
-    description: "Enjoy the warm weather with these outdoor adventures you can share with your pup.",
+    description: "Enjoy the sunshine with your pup by exploring parks, dog beaches, or pet-friendly hikes. We’ve gathered top ideas to keep them active and safe during the warmer months.",
     content: `
       <p>Try a hike on a pet-friendly trail or a trip to a dog beach. Just remember to keep your dog hydrated and avoid peak heat.</p>
       <h2>Extra Precautions</h2>
@@ -152,7 +152,7 @@ export const blogPosts: BlogPost[] = [
     id: "fostering-benefits-2025",
     title: "Why Fostering Saves Lives: The Benefits of Temporary Homes",
     date: "2025-08-05",
-    description: "Not ready to commit to adoption? Fostering could be the perfect solution.",
+    description: "Fostering a dog provides them with a safe, loving environment and frees up shelter space for others in need. Learn how you can make a meaningful impact without a long-term commitment.",
     content: `
       <p>When you foster, you provide essential care and socialization until a permanent home is found. It also helps free up space at the shelter.</p>
       <h2>Fostering Requirements</h2>

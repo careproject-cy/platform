@@ -8,11 +8,13 @@ import Carousel from "./components/carousel"
 import { longDescription, slogan } from "./data/consts"
 import Section from "@/components/ui/section"
 import Container from "@/components/ui/container"
-import BlogCard from "./components/blogCard"
+import { BlogCard } from "./components/blogCard"
+import Badge from "@/components/ui/badge"
 
 export default function Home() {
 
-  const recentPosts = blogPosts.slice(0, 3)
+  const recentPosts = blogPosts.slice(1, 4)
+  const latestPost = blogPosts[0]
 
   return (
     <Layout>
@@ -31,7 +33,7 @@ export default function Home() {
       <Section className="mb-12">
         <Container className="gap-6">
           <div className="w-full flex justify-center">
-            <span className="font-mono text-sm font-semibold px-3 py-1 bg-gray-200 rounded-full text-gray-600">MEET THE DOGS</span>
+            <Badge>Meet the dogs</Badge>
           </div>
           <h2 className="text-4xl font-semibold mb-4 w-full text-center">Dogs Available For Adoption</h2>
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-7">
@@ -45,9 +47,11 @@ export default function Home() {
       <Section className="mb-12">
         <Container className="gap-6">
           <h2 className="text-4xl font-semibold mb-4 w-full">Latest Blog Posts</h2>
+          <BlogCard large key={latestPost.id} id={latestPost.id} date={new Date(latestPost.date).toLocaleDateString()}
+            image={latestPost.image} title={latestPost.title} desc={latestPost.description} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {recentPosts.map((post) => (
-              <BlogCard key={post.id} id={post.id} date={new Date(post.date).toLocaleDateString()}
+              <BlogCard large={false} key={post.id} id={post.id} date={new Date(post.date).toLocaleDateString()}
                 image={post.image} title={post.title} desc={post.description} />
             ))}
           </div>
