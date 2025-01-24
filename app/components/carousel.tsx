@@ -9,11 +9,11 @@ interface CarouselProps {
 }
 
 const initialPositions = [
-  { id: 0, css: 'left-0    -translate-x-1/2  z-0  w-56' },
-  { id: 1, css: 'left-0     translate-x-0    z-0  w-64' },
-  { id: 2, css: 'left-1/2  -translate-x-1/2  z-10 w-80 opacity-100' },
-  { id: 3, css: 'left-full -translate-x-full z-0  w-64' },
-  { id: 4, css: 'left-full -translate-x-1/2  z-0  w-56' },
+  { id: 0, css: 'left-0    -translate-x-1/4  z-0  scale-50' },
+  { id: 1, css: 'left-0     translate-x-0    z-0  scale-75' },
+  { id: 2, css: 'left-1/2  -translate-x-1/2  z-10 scale-100 opacity-100' },
+  { id: 3, css: 'left-full -translate-x-full z-0  scale-75' },
+  { id: 4, css: 'left-full -translate-x-3/4  z-0  scale-50' },
 ];
 
 const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
@@ -44,14 +44,14 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
       </button>
       <div className="w-full h-full relative flex flex-row items-center justify-center">
         {visible.map((data, idx) => (
-          <div key={idx} className={`top-1/2 -translate-y-1/2 absolute opacity-30 transition-all duration-1000 ${data.css}`}>
+          <div key={idx} className={`top-1/2 -translate-y-1/2 absolute h-full aspect-square opacity-30 transition-all duration-1000 ${data.css}`}>
             <Image
               src={images[idx] + '' + '+' + idx}
               alt={`Slide ${idx}`}
               width={400}
               height={400}
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover rounded-xl"
+              className="object-cover rounded-xl aspect-square"
             />
           </div>
         ))}
