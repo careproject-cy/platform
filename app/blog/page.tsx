@@ -16,7 +16,7 @@ export default function BlogPage() {
               <CardDescription>{new Date(post.date).toLocaleDateString()}</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>{post.excerpt}</p>
+              <p>{post.description}</p>
             </CardContent>
             <CardFooter>
               <Link href={`/blog/${post.id}`}>

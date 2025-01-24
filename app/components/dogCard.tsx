@@ -32,7 +32,7 @@ export default function DogCard({ id, name, breed, age, gender, status, images }
           </div>
           <div className="w-full flex flex-col gap-1">
             <div className="w-full flex flex-row justify-between items-center gap-1">
-              <div className="text-2xl font-semibold leading-none tracking-tight">{name}</div>
+              <h3 className="text-2xl font-semibold leading-none tracking-tight">{name}</h3>
               <div className="text-sm px-2 py-1 rounded-lg bg-gray-100 font-semibold text-gray-600">{gender}</div>
             </div>
             <div className="text-sm text-muted-foreground">{breed}</div>

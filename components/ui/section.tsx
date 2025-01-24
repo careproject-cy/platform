@@ -1,17 +1,17 @@
 import React from 'react';
 import { twMerge } from "tailwind-merge"
 
-interface ContainerProps extends React.HTMLProps<HTMLElement> {
+interface SectionProps extends React.HTMLProps<HTMLElement> {
   tag?: React.ElementType | string;
 }
 
-const Container: React.FC<ContainerProps> = (props) => {
+const Section: React.FC<SectionProps> = (props) => {
   const { className, children, ...otherProps } = props;
-  const Tag = props.tag || "div";
+  const Tag = props.tag || "section";
   return (
     <Tag
       className={twMerge(
-        "w-full mx-auto flex flex-col items-center max-w-7xl p-5",
+        "w-full flex flex-col items-center",
         className
       )}
       {...otherProps}
@@ -21,4 +21,4 @@ const Container: React.FC<ContainerProps> = (props) => {
   )
 }
 
-export default Container;
+export default Section;
