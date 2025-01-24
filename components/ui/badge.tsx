@@ -1,11 +1,11 @@
 import React from 'react';
 import { twMerge } from "tailwind-merge"
 
-interface SectionProps extends React.HTMLProps<HTMLElement> {
+interface BadgeProps extends React.HTMLProps<HTMLElement> {
   tag?: React.ElementType | string;
 }
 
-const Badge: React.FC<SectionProps> = (props) => {
+const Badge: React.FC<BadgeProps> = (props) => {
   const { className, children, ...otherProps } = props;
   const Tag = props.tag || "span";
   return (

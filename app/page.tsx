@@ -46,13 +46,11 @@ export default function Home() {
 
       <Section className="mb-12">
         <Container className="gap-6">
-          <h2 className="text-4xl font-semibold mb-4 w-full">Latest Blog Posts</h2>
-          <BlogCard large key={latestPost.id} id={latestPost.id} date={new Date(latestPost.date).toLocaleDateString()}
-            image={latestPost.image} title={latestPost.title} desc={latestPost.description} />
+          <h2 className="text-4xl font-semibold mb-4 w-full text-center">Latest Blog Posts</h2>
+          <BlogCard large post={latestPost} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {recentPosts.map((post) => (
-              <BlogCard large={false} key={post.id} id={post.id} date={new Date(post.date).toLocaleDateString()}
-                image={post.image} title={post.title} desc={post.description} />
+              <BlogCard large={false} key={post.id} post={post} />
             ))}
           </div>
           <div className="mt-6 text-center">

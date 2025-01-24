@@ -1,19 +1,22 @@
 import Badge from "@/components/ui/badge"
 import Image from 'next/image'
 import Link from 'next/link'
+import { BlogPost } from "../data/blog-posts"
 
 interface BlogCardProps {
-  id: string
-  title: string
-  date: string
-  image: string
-  desc: string
+  post: BlogPost
   large: boolean
 }
 
-export function BlogCard({ id, title, date, image, desc, large }: BlogCardProps) {
+export function BlogCard({ post, large }: BlogCardProps) {
+  const id = post.id
+  const date = new Date(post.date).toLocaleDateString()
+  const image = post.image
+  const title = post.title
+  const desc = post.description
+  const tags = post.tags
   return (
-    <div className={`w-full flex ${large ? "flex-row gap-10" : "flex-col gap-4"}`}>
+    <div className={`w-full flex ${large ? "flex-row gap-10" : "flex-col gap-6"}`}>
       <Link href={`/blog/${id}`} className="w-full">
         <div className="w-full relative rounded-xl overflow-hidden">
           <Image
@@ -25,21 +28,23 @@ export function BlogCard({ id, title, date, image, desc, large }: BlogCardProps)
           />
         </div>
       </Link>
-      <div className={`w-full flex flex-col ${large ? "gap-6 justify-center" : "gap-2"}`}>
+      <div className={`w-full flex flex-col ${large ? "gap-6 justify-center" : "gap-4"}`}>
         {large &&
-          <Badge>Meet the dogs</Badge>
+          <Badge>{tags[0]}</Badge>
         }
         <h3 className={`font-semibold leading-none tracking-tight ${large ? "text-3xl" : "text-2xl"}`}>
           <Link href={`/blog/${id}`} className="w-full">
             {title}
           </Link>
         </h3>
-        <div className={`text-sm ${large ? "line-clamp-3" : "line-clamp-2"}`}>{desc}</div>
-        <div className="text-sm text-muted-foreground">{date}</div>
+        <div className={`${large ? "line-clamp-3 text-md" : "line-clamp-2 text-sm"}`}>{desc}</div>
+        <div className={`${large ? "text-md" : "text-sm"} font-semibold text-gray-500`}>{date}</div>
         {large &&
           <div className="flex">
             <Link href={`/blog/${id}`}>
-              <div className="flex justify-center items-center border-1 rounded-2xl px-4 py-2 text-xl font-semibold shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-300">Read more</div>
+              <div className="flex justify-center items-center border-1 rounded-xl px-4 py-2 text-xl font-semibold shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-300">
+                Read more
+              </div>
             </Link>
           </div>
         }
