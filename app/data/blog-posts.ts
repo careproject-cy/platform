@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
       <h3>2. Daisy - 5-year-old Beagle</h3>
       <p>Daisy was rescued from a puppy mill. Despite her rough start, she's incredibly sweet and is looking for a patient family to help her trust again.</p>      
     `,
-    image: "https://placehold.co/400x400?text=Milo",
+    image: "https://placehold.co/400x400?text=New%20Arrivals%3A%20Meet%20Our%20June%202025%20Rescues",
   },
   {
     id: "summer-adoption-event-2025",
@@ -51,9 +51,8 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>Remember, adopting a dog is a big decision. Our staff will be on hand to answer all your questions and help you find the perfect match for your lifestyle.</p>
     `,
-    image: "https://placehold.co/400x400?text=Milo",
+    image: "https://placehold.co/400x400?text=Join%20Us%20for%20Our%20Summer%20Adoption%20Event",
   },
-
   {
     id: "volunteer-spotlight-july-2025",
     title: "Volunteer Spotlight: Meet Our Amazing Helpers",
@@ -64,7 +63,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Spotlight: Emma and James</h2>
       <p>Emma and James have been walking, grooming, and training our rescues since January. They've helped over 20 dogs find homes!</p>
     `,
-    image: "https://placehold.co/400x400?text=Milo",
+    image: "https://placehold.co/400x400?text=Volunteer%20Spotlight%3A%20Meet%20Our%20Amazing%20Helpers",
   },
   {
     id: "safe-summer-travel-2025",
@@ -80,7 +79,7 @@ export const blogPosts: BlogPost[] = [
         <li>Comfortable carrier or harness</li>
       </ul>
     `,
-    image: "https://placehold.co/400x400?text=Milo",
+    image: "https://placehold.co/400x400?text=Tips%20for%20Safe%20Summer%20Travel%20with%20Your%20Dog",
   },
   {
     id: "meet-siblings-2025",
@@ -92,7 +91,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Why Adopt a Bonded Pair?</h2>
       <p>They keep each other active and entertained, and the transition to a new home is easier when they're together.</p>
     `,
-    image: "https://placehold.co/400x400?text=Milo",
+    image: "https://placehold.co/400x400?text=Double%20the%20Love%3A%20Meet%20the%20Bonded%20Siblings%20Looking%20for%20a%20Home",
   },
   {
     id: "senior-pups-2025",
@@ -107,7 +106,7 @@ export const blogPosts: BlogPost[] = [
         <li>Deep bonds with their owners</li>
       </ul>
     `,
-    image: "https://placehold.co/400x400?text=Milo",
+    image: "https://placehold.co/400x400?text=Senior%20Pups%3A%20Why%20Older%20Dogs%20Make%20Great%20Companions",
   },
   {
     id: "healthy-summer-snacks-2025",
@@ -119,7 +118,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Safe Ingredients</h2>
       <p>Opt for dog-safe fruits like watermelon, blueberries, or bananas. Always avoid added sugars.</p>
     `,
-    image: "https://placehold.co/400x400?text=Milo",
+    image: "https://placehold.co/400x400?text=Healthy%20Summer%20Snacks%20Your%20Dog%20Will%20Love",
   },
   {
     id: "puppy-socialization-2025",
@@ -135,7 +134,7 @@ export const blogPosts: BlogPost[] = [
         <li>Reward good behavior</li>
       </ul>
     `,
-    image: "https://placehold.co/400x400?text=Milo",
+    image: "https://placehold.co/400x400?text=Puppy%20Socialization%3A%20Building%20Confidence%20Early",
   },
   {
     id: "dog-friendly-summer-activities-2025",
@@ -147,7 +146,7 @@ export const blogPosts: BlogPost[] = [
       <h2>Extra Precautions</h2>
       <p>Pack extra water, dog sunscreen, and a portable shade source to ensure a comfortable outing.</p>
     `,
-    image: "https://placehold.co/400x400?text=Milo",
+    image: "https://placehold.co/400x400?text=Fun%20and%20Dog-Friendly%20Activities%20for%20the%20Summer",
   },
   {
     id: "fostering-benefits-2025",
@@ -159,6 +158,6 @@ export const blogPosts: BlogPost[] = [
       <h2>Fostering Requirements</h2>
       <p>Time, patience, and a safe environment. We'll provide food, supplies, and medical care for the foster period.</p>
     `,
-    image: "https://placehold.co/400x400?text=Milo",
+    image: "https://placehold.co/400x400?text=Why%20Fostering%20Saves%20Lives%3A%20The%20Benefits%20of%20Temporary%20Homes",
   }
 ]

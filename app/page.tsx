@@ -4,7 +4,6 @@ import { dogs } from './data/dogs'
 import { blogPosts } from './data/blog-posts'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Carousel from "./components/carousel"
 import { longDescription, slogan } from "./data/consts"
 import Section from "@/components/ui/section"
@@ -48,23 +47,8 @@ export default function Home() {
           <h2 className="text-4xl font-semibold mb-4 w-full">Latest Blog Posts</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {recentPosts.map((post) => (
-              <>
-                <BlogCard key={post.id} id={post.id} date={new Date(post.date).toLocaleDateString()} image={post.image} title={post.title} />
-                <Card key={post.id}>
-                  <CardHeader>
-                    <CardTitle>{post.title}</CardTitle>
-                    <CardDescription>{new Date(post.date).toLocaleDateString()}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="line-clamp-3">{post.description}</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Link href={`/blog/${post.id}`}>
-                      <Button variant="outline">Read More</Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
-              </>
+              <BlogCard key={post.id} id={post.id} date={new Date(post.date).toLocaleDateString()}
+                image={post.image} title={post.title} desc={post.description} />
             ))}
           </div>
           <div className="mt-6 text-center">
