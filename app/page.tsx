@@ -61,10 +61,6 @@ export default function Home() {
         </Container>
       </Section>
 
-      <section id="about" className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">About Us</h2>
-        <p>Pawsome Shelter is dedicated to finding loving homes for dogs in need. We believe every dog deserves a chance at a happy life with a caring family.</p>
-      </section>
     </Layout>
   )
 }
