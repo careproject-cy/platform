@@ -48,10 +48,10 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
             <Image
               src={images[idx] + '' + '+' + idx}
               alt={`Slide ${idx}`}
-              width={300}
-              height={300}
+              width={400}
+              height={400}
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover rounded-xl w-full h-full"
+              className="object-cover rounded-xl"
             />
           </div>
         ))}
