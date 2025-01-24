@@ -10,9 +10,9 @@ interface CarouselProps {
 
 const initialPositions = [
   { id: 0, css: 'left-0    -translate-x-1/4  z-0  scale-50' },
-  { id: 1, css: 'left-0     translate-x-0    z-0  scale-75' },
-  { id: 2, css: 'left-1/2  -translate-x-1/2  z-10 scale-100 opacity-100' },
-  { id: 3, css: 'left-full -translate-x-full z-0  scale-75' },
+  { id: 1, css: 'left-0     translate-x-0    z-10  scale-75 opacity-100 shadow-md' },
+  { id: 2, css: 'left-1/2  -translate-x-1/2  z-20 scale-100 opacity-100 shadow-lg' },
+  { id: 3, css: 'left-full -translate-x-full z-10  scale-75 opacity-100 shadow-md' },
   { id: 4, css: 'left-full -translate-x-3/4  z-0  scale-50' },
 ];
 
@@ -35,7 +35,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   };
 
   return (
-    <div className={twMerge(`overflow-hidden relative flex items-center justify-center h-80 border-1 rounded-2xl`, className)}>
+    <div className={twMerge(`overflow-hidden relative flex items-center justify-center h-80 rounded-2xl`, className)}>
       <button onClick={prevImage} className="transition-all duration-100 bg-gray-100 opacity-50 rounded-full absolute left-2 z-20 h-8 w-8 flex items-center justify-center border-1 cursor-pointer hover:shadow-sm hover:opacity-100">
         <span className="material-symbols-rounded">chevron_left</span>
       </button>
