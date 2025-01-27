@@ -18,7 +18,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
   return (
     <Layout>
-      <article className="max-w-2xl mx-auto">
+      <article className="max-w-2xl mx-auto min-h-screen">
         <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
         <p className="text-gray-600 mb-4">{new Date(post.date).toLocaleDateString()}</p>
         <div className="prose max-w-none mb-6" dangerouslySetInnerHTML={{ __html: post.content }} />
