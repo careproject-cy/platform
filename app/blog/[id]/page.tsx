@@ -22,9 +22,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
         <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
         <p className="text-gray-600 mb-4">{new Date(post.date).toLocaleDateString()}</p>
         <div className="prose max-w-none mb-6" dangerouslySetInnerHTML={{ __html: post.content }} />
-        <Link href="/blog">
-          <Button variant="outline">Back to Blog</Button>
-        </Link>
+        <Button tag={Link} href="/blog" className="w-fit">Back to Blog</Button>
       </article>
     </Layout>
   )

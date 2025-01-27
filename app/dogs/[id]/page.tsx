@@ -43,7 +43,7 @@ export default async function DogPage({ params }: DogPageProps) {
             We will review your application and get back to you as soon as possible.
           </p>
           <Link href="/#adopt">
-            <Button variant="outline" className="w-full">Go to Adoption Form</Button>
+            <Button className="w-full">Go to Adoption Form</Button>
           </Link>
         </div>
       </div>
