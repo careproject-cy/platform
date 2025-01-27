@@ -42,7 +42,7 @@ export function BlogCard({ post, large }: BlogCardProps) {
         {large &&
           <div className="flex">
             <Link href={`/blog/${id}`}>
-              <div className="flex justify-center items-center border-1 rounded-xl px-4 py-2 text-xl font-semibold shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-300">
+              <div className="flex justify-center items-center border-1 rounded-xl px-4 py-2 text-xl font-semibold shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-200">
                 Read more
               </div>
             </Link>
