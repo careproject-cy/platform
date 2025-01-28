@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col min-h-screen">
       <Section className="border-b max-w-full" tag={'header'}>
-        <Container className="flex-row justify-between px-5 py-3 max-w-full" tag={'div'}>
+        <Container className="flex-row justify-between px-5 py-2 max-w-full" tag={'div'}>
           <Logo />
           <nav className="p-2">
             <ul className="flex space-x-4">
