@@ -1,11 +1,8 @@
 import React from 'react';
 import { twMerge } from "tailwind-merge"
+import BaseComponentProps from "./props";
 
-interface ButtonProps extends React.HTMLProps<HTMLButtonElement> {
-  tag?: React.ElementType | string;
-}
-
-export const Button: React.FC<ButtonProps> = (props) => {
+export const Button: React.FC<BaseComponentProps> = (props) => {
   const { className, children, ...otherProps } = props;
   const Tag = props.tag || "button";
   return (

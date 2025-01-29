@@ -1,11 +1,8 @@
 import React from 'react';
 import { twMerge } from "tailwind-merge"
+import BaseComponentProps from "./props";
 
-interface BadgeProps extends React.HTMLProps<HTMLElement> {
-  tag?: React.ElementType | string;
-}
-
-const Badge: React.FC<BadgeProps> = (props) => {
+const Badge: React.FC<BaseComponentProps> = (props) => {
   const { className, children, ...otherProps } = props;
   const Tag = props.tag || "span";
   return (

@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
         </Container>
       </Section>
-      <Section className="flex-col" tag={'main'}>
+      <Section className="flex-col gap-12" tag={'main'}>
         {children}
       </Section>
       <Section className="bg-gray-100 border-t p-5" tag={'footer'}>

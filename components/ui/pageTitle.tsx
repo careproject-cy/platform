@@ -2,13 +2,13 @@ import React from 'react';
 import { twMerge } from "tailwind-merge"
 import BaseComponentProps from "./props";
 
-const Container: React.FC<BaseComponentProps> = (props) => {
+const PageTitle: React.FC<BaseComponentProps> = (props) => {
   const { className, children, ...otherProps } = props;
-  const Tag = props.tag || "div";
+  const Tag = props.tag || "h1";
   return (
     <Tag
       className={twMerge(
-        "w-full mx-auto flex flex-col items-center max-w-7xl p-5",
+        "text-5xl font-semibold",
         className
       )}
       {...otherProps}
@@ -18,4 +18,4 @@ const Container: React.FC<BaseComponentProps> = (props) => {
   )
 }
 
-export default Container;
+export default PageTitle;

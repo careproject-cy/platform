@@ -1,11 +1,8 @@
 import React from 'react';
 import { twMerge } from "tailwind-merge"
+import BaseComponentProps from "./props";
 
-interface SectionProps extends React.HTMLProps<HTMLElement> {
-  tag?: React.ElementType | string;
-}
-
-const Section: React.FC<SectionProps> = (props) => {
+const Section: React.FC<BaseComponentProps> = (props) => {
   const { className, children, ...otherProps } = props;
   const Tag = props.tag || "section";
   return (
