@@ -31,7 +31,6 @@ export default function DogsPage() {
     <Layout>
       <Section className="my-10">
         <Container className="gap-10 justify-center">
-          <Badge>Meet the dogs</Badge>
           <PageTitle>Dogs Available For Adoption</PageTitle>
           <Row className="gap-6">
             <Row className="gap-2">

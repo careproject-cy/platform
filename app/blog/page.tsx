@@ -1,10 +1,11 @@
 'use client'
 import Layout from '../components/layout'
 import { blogPosts } from '../data/blog-posts'
-import { BlogCard } from "../components/blogCard"
+import { BlogCard, LargeBlogCard } from "../components/blogCard"
 import { Button } from "@/components/ui/button"
 import { useState } from 'react'
-import { Container } from "@/components/ui/layout"
+import { Col, Container, Grid3 } from "@/components/ui/layout"
+import { PageTitle } from "@/components/ui/typography"
 
 export default function BlogPage() {
   const [visibleCount, setVisibleCount] = useState(7)
@@ -17,18 +18,18 @@ export default function BlogPage() {
 
   return (
     <Layout>
-      <Container className="gap-6 my-12">
-        <h2 className="text-4xl font-semibold mb-4 w-full text-center">Our Blog</h2>
-        <BlogCard large post={latestPost} />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {visiblePosts.map(post => (
-            <BlogCard large={false} key={post.id} post={post} />
-          ))}
-        </div>
+      <Container className="my-10 gap-10">
+        <PageTitle>Our Blog</PageTitle>
+        <Col className="gap-6">
+          <LargeBlogCard post={latestPost} />
+          <Grid3>
+            {visiblePosts.map((post) => (
+              <BlogCard key={post.id} post={post} />
+            ))}
+          </Grid3>
+        </Col>
         {visibleCount < blogPosts.length && (
-          <div className="my-12 text-center">
-            <Button onClick={loadMore}>Load More Posts</Button>
-          </div>
+          <Button onClick={loadMore}>Load More Posts</Button>
         )}
       </Container>
     </Layout>

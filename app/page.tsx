@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import Carousel from "./components/carousel"
 import { longDescription, slogan } from "./data/consts"
 import { Col, Container, Grid3, Grid4, Section } from "@/components/ui/layout"
-import { BlogCard } from "./components/blogCard"
+import { BlogCard, LargeBlogCard } from "./components/blogCard"
 import { Badge } from "@/components/ui/badge"
 import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
 
@@ -46,14 +46,14 @@ export default function Home() {
       <Section>
         <Container className="gap-10 justify-center">
           <SectionTitle>Latest Blog Posts</SectionTitle>
-          <Container className="p-0 gap-6">
-            <BlogCard large post={latestPost} />
+          <Col className="gap-6">
+            <LargeBlogCard post={latestPost} />
             <Grid3>
               {recentPosts.map((post) => (
-                <BlogCard large={false} key={post.id} post={post} />
+                <BlogCard key={post.id} post={post} />
               ))}
             </Grid3>
-          </Container>
+          </Col>
           <Button className="mt-6" tag={Link} href="/blog">View All Posts</Button>
         </Container>
       </Section>
