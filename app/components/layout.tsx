@@ -1,12 +1,11 @@
 import Link from 'next/link'
-import Container from "@/components/ui/container"
 import Logo from "./logo"
 import { platform_name } from "../data/consts"
-import Section from "@/components/ui/section"
+import { Col, Container, Section } from "@/components/ui/layout"
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col min-h-screen">
+    <Col className="min-h-screen">
       <Section className="border-b max-w-full" tag={'header'}>
         <Container className="flex-row justify-between px-5 py-2 max-w-full" tag={'div'}>
           <Logo />
@@ -21,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
         </Container>
       </Section>
-      <Section className="flex-col gap-12" tag={'main'}>
+      <Section className="gap-12" tag={'main'}>
         {children}
       </Section>
       <Section className="bg-gray-100 border-t p-5" tag={'footer'}>
@@ -29,7 +28,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <p className="text-sm">&copy; 2025 {platform_name}. All rights reserved.</p>
         </Container>
       </Section>
-    </div>
+    </Col>
   )
 }
 

@@ -6,11 +6,10 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import Carousel from "./components/carousel"
 import { longDescription, slogan } from "./data/consts"
-import Section from "@/components/ui/section"
-import Container from "@/components/ui/container"
+import { Col, Container, Grid3, Grid4, Section } from "@/components/ui/layout"
 import { BlogCard } from "./components/blogCard"
-import Badge from "@/components/ui/badge"
-import PageTitle from "@/components/ui/pageTitle"
+import { Badge } from "@/components/ui/badge"
+import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
 
 export default function Home() {
 
@@ -23,12 +22,10 @@ export default function Home() {
     <Layout>
       <Section className="py-12 gap-10 border-b bg-gray-50">
         <Container className="flex-row gap-12">
-          <div className="w-full flex flex-col flex-1 items-center justify-center">
-            <div className="w-full flex flex-col">
-              <PageTitle>{slogan}</PageTitle>
-              <div className="text-lg text-gray-600">{longDescription}</div>
-            </div>
-          </div>
+          <Col className="flex-1 gap-6">
+            <PageTitle>{slogan}</PageTitle>
+            <Text>{longDescription}</Text>
+          </Col>
           <Carousel className="flex-1" images={carouselDogs} />
         </Container>
       </Section>
@@ -36,26 +33,26 @@ export default function Home() {
       <Section>
         <Container className="gap-10 justify-center">
           <Badge>Meet the dogs</Badge>
-          <h2 className="text-4xl font-semibold">Dogs Available For Adoption</h2>
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-6">
+          <SectionTitle>Dogs Available For Adoption</SectionTitle>
+          <Grid4>
             {dogsToShow.map((dog) => (
               <DogCard key={dog.id} {...dog} />
             ))}
-          </div>
+          </Grid4>
           <Button tag={Link} href="/dogs">View All Dogs</Button>
         </Container>
       </Section>
 
       <Section>
         <Container className="gap-10 justify-center">
-          <h2 className="text-4xl font-semibold">Latest Blog Posts</h2>
+          <SectionTitle>Latest Blog Posts</SectionTitle>
           <Container className="p-0 gap-6">
             <BlogCard large post={latestPost} />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Grid3>
               {recentPosts.map((post) => (
                 <BlogCard large={false} key={post.id} post={post} />
               ))}
-            </div>
+            </Grid3>
           </Container>
           <Button className="mt-6" tag={Link} href="/blog">View All Posts</Button>
         </Container>

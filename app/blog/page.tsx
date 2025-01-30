@@ -1,10 +1,10 @@
 'use client'
 import Layout from '../components/layout'
 import { blogPosts } from '../data/blog-posts'
-import Container from "@/components/ui/container"
 import { BlogCard } from "../components/blogCard"
 import { Button } from "@/components/ui/button"
 import { useState } from 'react'
+import { Container } from "@/components/ui/layout"
 
 export default function BlogPage() {
   const [visibleCount, setVisibleCount] = useState(7)
