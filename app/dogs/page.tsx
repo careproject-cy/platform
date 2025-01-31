@@ -7,7 +7,6 @@ import { dogs } from '../data/dogs'
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Container, Grid4, Row, Section } from "@/components/ui/layout"
-import { Badge } from "@/components/ui/badge"
 import { PageTitle } from "@/components/ui/typography"
 
 export default function DogsPage() {
@@ -35,7 +34,7 @@ export default function DogsPage() {
           <Row className="gap-6">
             <Row className="gap-2">
               <Label htmlFor="age-filter">Filter by Age:</Label>
-              <select value={"all"} onChange={(event) => setAgeFilter(event.target.value as string)} className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50">
+              <select value={ageFilter} onChange={(event) => setAgeFilter(event.target.value as string)} className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50">
                 <option className="bg-white text-gray-800 p-2" value={"all"}>All Ages</option>
                 <option className="bg-white text-gray-800 p-2" value={"young"}>Young (0-3 years)</option>
                 <option className="bg-white text-gray-800 p-2" value={"adult"}>Adult (4-8 years)</option>
@@ -44,7 +43,7 @@ export default function DogsPage() {
             </Row>
             <Row className="gap-2">
               <Label htmlFor="breed-filter">Filter by Breed:</Label>
-              <select value={"all"} onChange={(event) => setBreedFilter(event.target.value as string)} className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50">
+              <select value={breedFilter} onChange={(event) => setBreedFilter(event.target.value as string)} className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50">
                 <option className="bg-white text-gray-800 p-2" value={"all"}>All Breeds</option>
                 {uniqueBreeds.map(breed => (
                   <option className="bg-white text-gray-800 p-2" key={breed} value={breed.toLowerCase()}>{breed}</option>
