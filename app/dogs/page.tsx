@@ -8,28 +8,31 @@ import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Container, Grid4, Row, Section } from "@/components/ui/layout"
 import { PageTitle } from "@/components/ui/typography"
+import NoResults from "../components/noResults"
 
 export default function DogsPage() {
   const [ageFilter, setAgeFilter] = useState<string>('all')
   const [breedFilter, setBreedFilter] = useState<string>('all')
   const [visibleDogs, setVisibleDogs] = useState(10)
 
-  const filteredDogs = dogs.filter(dog => {
+  const availableDogs = dogs.filter(dog => dog.status !== 'Not available' && dog.status !== 'Adopted')
+  const filteredDogs = availableDogs.filter(dog => {
+    const notAvailable = dog.status === 'Not available' || dog.status === 'Adopted'
     const ageMatch = ageFilter === 'all' ||
       (ageFilter === 'young' && dog.age <= 3) ||
       (ageFilter === 'adult' && dog.age > 3 && dog.age <= 8) ||
       (ageFilter === 'senior' && dog.age > 8)
     const breedMatch = breedFilter === 'all' || dog.breed.toLowerCase().includes(breedFilter.toLowerCase())
-    return ageMatch && breedMatch
+    return ageMatch && breedMatch && !notAvailable
   })
 
   const displayedDogs = filteredDogs.slice(0, visibleDogs)
-  const uniqueBreeds = Array.from(new Set(dogs.map(dog => dog.breed))).sort()
+  const uniqueBreeds = Array.from(new Set(availableDogs.map(dog => dog.breed))).sort()
 
   return (
     <Layout>
-      <Section className="my-10">
-        <Container className="gap-10 justify-center">
+      <Section className="my-10 flex-1">
+        <Container className="gap-10 flex-1">
           <PageTitle>Dogs Available For Adoption</PageTitle>
           <Row className="gap-6">
             <Row className="gap-2">
@@ -61,6 +64,7 @@ export default function DogsPage() {
               Load More
             </Button>
           )}
+          {displayedDogs.length === 0 && <NoResults />}
         </Container>
       </Section>
     </Layout>

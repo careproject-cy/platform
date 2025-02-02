@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </nav>
         </Container>
       </Section>
-      <Section className="gap-12" tag={'main'}>
+      <Section className="gap-12 flex-1" tag={'main'}>
         {children}
       </Section>
       <Section className="bg-gray-100 border-t p-5" tag={'footer'}>
