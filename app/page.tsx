@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import Carousel from "./components/carousel"
 import { longDescription, slogan } from "./data/consts"
 import { Col, Container, Grid3, Grid4, Section } from "@/components/ui/layout"
-import { BlogCard, LargeBlogCard } from "./components/blogCard"
+import { BlogCard, LargeBlogCard } from "./components/blog/blogCard"
 import { Badge } from "@/components/ui/badge"
 import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
 

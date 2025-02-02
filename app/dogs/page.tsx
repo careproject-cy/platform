@@ -13,7 +13,7 @@ import NoResults from "../components/noResults"
 export default function DogsPage() {
   const [ageFilter, setAgeFilter] = useState<string>('all')
   const [breedFilter, setBreedFilter] = useState<string>('all')
-  const [visibleDogs, setVisibleDogs] = useState(10)
+  const [visibleDogs, setVisibleDogs] = useState(12)
 
   const availableDogs = dogs.filter(dog => dog.status !== 'Not available' && dog.status !== 'Adopted')
   const filteredDogs = availableDogs.filter(dog => {
