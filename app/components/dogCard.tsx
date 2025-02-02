@@ -1,3 +1,5 @@
+import { Col, Row } from "@/components/ui/layout"
+import { SectionTitle } from "@/components/ui/typography"
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -17,7 +19,7 @@ export default function DogCard({ id, name, breed, age, gender, status, images }
   return (
     notAvailable ? null :
       <Link href={`/dogs/${id}`} className="w-full">
-        <div className="w-full flex flex-col gap-4">
+        <Col className="w-full gap-4">
           <div className="w-full relative min-w-full rounded-xl overflow-hidden">
             <Image
               src={images[0]}
@@ -30,15 +32,15 @@ export default function DogCard({ id, name, breed, age, gender, status, images }
               <div className="text-sm px-2 py-1 rounded-lg bg-gray-100/75 absolute right-2 top-2 text-gray-700/75 font-semibold">{status}</div>
             }
           </div>
-          <div className="w-full flex flex-col gap-1">
-            <div className="w-full flex flex-row justify-between items-center gap-1">
-              <h3 className="text-2xl font-semibold leading-none tracking-tight">{name}</h3>
+          <Col className="gap-1">
+            <Row className="w-full justify-between items-center gap-4">
+              <SectionTitle className="text-2xl">{name}</SectionTitle>
               <div className="text-sm px-2 py-1 rounded-lg bg-gray-100 font-semibold text-gray-600">{gender}</div>
-            </div>
-            <div className="text-sm text-muted-foreground">{breed}</div>
-            <div className="text-sm text-muted-foreground">{age} years old</div>
-          </div>
-        </div>
+            </Row>
+            <div className="text-sm">{breed}</div>
+            <div className="text-sm">{age} years old</div>
+          </Col>
+        </Col>
       </Link>
   )
 }
