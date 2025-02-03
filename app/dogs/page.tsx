@@ -5,7 +5,6 @@ import Layout from '../components/layout'
 import DogCard from '../components/dogCard'
 import { dogs } from '../data/dogs'
 import { Button } from "@/components/ui/button"
-import { Label } from "@/components/ui/label"
 import { Container, Grid4, Row, Section } from "@/components/ui/layout"
 import { PageTitle } from "@/components/ui/typography"
 import NoResults from "../components/noResults"
@@ -36,7 +35,7 @@ export default function DogsPage() {
           <PageTitle>Dogs Available For Adoption</PageTitle>
           <Row className="gap-6">
             <Row className="gap-2">
-              <Label htmlFor="age-filter">Filter by Age:</Label>
+              <label htmlFor="age-filter" className="text-sm font-medium">Filter by Age:</label>
               <select value={ageFilter} onChange={(event) => setAgeFilter(event.target.value as string)} className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50">
                 <option className="bg-white text-gray-800 p-2" value={"all"}>All Ages</option>
                 <option className="bg-white text-gray-800 p-2" value={"young"}>Young (0-3 years)</option>
@@ -45,7 +44,7 @@ export default function DogsPage() {
               </select>
             </Row>
             <Row className="gap-2">
-              <Label htmlFor="breed-filter">Filter by Breed:</Label>
+              <label htmlFor="breed-filter" className="text-sm font-medium">Filter by Breed:</label>
               <select value={breedFilter} onChange={(event) => setBreedFilter(event.target.value as string)} className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50">
                 <option className="bg-white text-gray-800 p-2" value={"all"}>All Breeds</option>
                 {uniqueBreeds.map(breed => (

@@ -32,8 +32,10 @@ export default function Home() {
 
       <Section>
         <Container className="gap-10 justify-center">
-          <Badge>Meet the dogs</Badge>
-          <SectionTitle>Dogs Available For Adoption</SectionTitle>
+          <Col className="gap-6 items-center">
+            <Badge>Meet the dogs</Badge>
+            <SectionTitle>Dogs Available For Adoption</SectionTitle>
+          </Col>
           <Grid4>
             {dogsToShow.map((dog) => (
               <DogCard key={dog.id} {...dog} />

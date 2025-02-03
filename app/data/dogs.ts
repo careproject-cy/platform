@@ -7,8 +7,9 @@ export interface Dog {
   longDescription: string;
   status: 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted';
   images: string[];
+  size: 'small' | 'medium' | 'large';
+  added: Date;
 }
-
 export const dogs: Dog[] = [
   {
     id: "buddy",
@@ -22,7 +23,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Buddy",
       "https://placehold.co/400x400?text=Buddy+2",
       "https://placehold.co/400x400?text=Buddy+3"
-    ]
+    ],
+    size: "large",
+    added: new Date("2023-09-01")
   },
   {
     id: "luna",
@@ -36,7 +39,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Luna",
       "https://placehold.co/400x400?text=Luna+2",
       "https://placehold.co/400x400?text=Luna+3"
-    ]
+    ],
+    size: "large",
+    added: new Date("2023-09-01")
   },
   {
     id: "max",
@@ -50,7 +55,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Max",
       "https://placehold.co/400x400?text=Max+2",
       "https://placehold.co/400x400?text=Max+3"
-    ]
+    ],
+    size: "large",
+    added: new Date("2023-09-01")
   },
   {
     id: "bella",
@@ -64,7 +71,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Bella",
       "https://placehold.co/400x400?text=Bella+2",
       "https://placehold.co/400x400?text=Bella+3"
-    ]
+    ],
+    size: "large",
+    added: new Date("2023-09-01")
   },
   {
     id: "charlie",
@@ -78,7 +87,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Charlie",
       "https://placehold.co/400x400?text=Charlie+2",
       "https://placehold.co/400x400?text=Charlie+3"
-    ]
+    ],
+    size: "small",
+    added: new Date("2023-09-01")
   },
   {
     id: "daisy",
@@ -92,7 +103,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Daisy",
       "https://placehold.co/400x400?text=Daisy+2",
       "https://placehold.co/400x400?text=Daisy+3"
-    ]
+    ],
+    size: "medium",
+    added: new Date("2023-09-01")
   },
   {
     id: "rocky",
@@ -106,7 +119,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Rocky",
       "https://placehold.co/400x400?text=Rocky+2",
       "https://placehold.co/400x400?text=Rocky+3"
-    ]
+    ],
+    size: "large",
+    added: new Date("2023-09-01")
   },
   {
     id: "molly",
@@ -120,7 +135,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Molly",
       "https://placehold.co/400x400?text=Molly+2",
       "https://placehold.co/400x400?text=Molly+3"
-    ]
+    ],
+    size: "medium",
+    added: new Date("2023-09-01")
   },
   {
     id: "duke",
@@ -134,7 +151,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Duke",
       "https://placehold.co/400x400?text=Duke+2",
       "https://placehold.co/400x400?text=Duke+3"
-    ]
+    ],
+    size: "large",
+    added: new Date("2023-09-01")
   },
   {
     id: "zoe",
@@ -148,7 +167,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Zoe",
       "https://placehold.co/400x400?text=Zoe+2",
       "https://placehold.co/400x400?text=Zoe+3"
-    ]
+    ],
+    size: "small",
+    added: new Date("2023-09-01")
   },
   {
     id: "cooper",
@@ -162,7 +183,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Cooper",
       "https://placehold.co/400x400?text=Cooper+2",
       "https://placehold.co/400x400?text=Cooper+3"
-    ]
+    ],
+    size: "medium",
+    added: new Date("2023-09-01")
   },
   {
     id: "lucy",
@@ -176,7 +199,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Lucy",
       "https://placehold.co/400x400?text=Lucy+2",
       "https://placehold.co/400x400?text=Lucy+3"
-    ]
+    ],
+    size: "small",
+    added: new Date("2023-09-01")
   },
   {
     id: "jack",
@@ -190,7 +215,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Jack",
       "https://placehold.co/400x400?text=Jack+2",
       "https://placehold.co/400x400?text=Jack+3"
-    ]
+    ],
+    size: "small",
+    added: new Date("2023-09-01")
   },
   {
     id: "lola",
@@ -204,7 +231,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Lola",
       "https://placehold.co/400x400?text=Lola+2",
       "https://placehold.co/400x400?text=Lola+3"
-    ]
+    ],
+    size: "large",
+    added: new Date("2023-09-01")
   },
   {
     id: "oliver",
@@ -218,7 +247,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Oliver",
       "https://placehold.co/400x400?text=Oliver+2",
       "https://placehold.co/400x400?text=Oliver+3"
-    ]
+    ],
+    size: "small",
+    added: new Date("2023-09-01")
   },
   {
     id: "sophie",
@@ -232,7 +263,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Sophie",
       "https://placehold.co/400x400?text=Sophie+2",
       "https://placehold.co/400x400?text=Sophie+3"
-    ]
+    ],
+    size: "small",
+    added: new Date("2023-09-01")
   },
   {
     id: "bear",
@@ -246,7 +279,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Bear",
       "https://placehold.co/400x400?text=Bear+2",
       "https://placehold.co/400x400?text=Bear+3"
-    ]
+    ],
+    size: "large",
+    added: new Date("2023-09-01")
   },
   {
     id: "milo",
@@ -260,7 +295,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Milo",
       "https://placehold.co/400x400?text=Milo+2",
       "https://placehold.co/400x400?text=Milo+3"
-    ]
+    ],
+    size: "medium",
+    added: new Date("2023-09-01")
   },
   {
     id: "coco",
@@ -274,7 +311,9 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Coco",
       "https://placehold.co/400x400?text=Coco+2",
       "https://placehold.co/400x400?text=Coco+3"
-    ]
+    ],
+    size: "small",
+    added: new Date("2023-09-01")
   },
   {
     id: "rex",
@@ -288,6 +327,8 @@ export const dogs: Dog[] = [
       "https://placehold.co/400x400?text=Rex",
       "https://placehold.co/400x400?text=Rex+2",
       "https://placehold.co/400x400?text=Rex+3"
-    ]
+    ],
+    size: "large",
+    added: new Date("2023-09-01")
   }
 ];
