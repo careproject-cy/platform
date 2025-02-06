@@ -38,7 +38,11 @@ export const dogs: Dog[] = [
     images: [
       "https://placehold.co/400x400?text=Luna",
       "https://placehold.co/400x400?text=Luna+2",
-      "https://placehold.co/400x400?text=Luna+3"
+      "https://placehold.co/400x400?text=Luna+3",
+      "https://placehold.co/400x400?text=Luna+4",
+      "https://placehold.co/400x400?text=Luna+5",
+      "https://placehold.co/400x400?text=Luna+6",
+      "https://placehold.co/400x400?text=Luna+7",
     ],
     size: "large",
     added: new Date("2023-09-01")
