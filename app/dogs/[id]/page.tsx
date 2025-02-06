@@ -58,7 +58,7 @@ export default async function DogPage({ params }: DogPageProps) {
                     year: "numeric",
                   })}
                 </TextTitle>
-                <Text className="text-md">Please note that the information about the dog is collected at the time the dog was added to the website meaning some of the data may to be accurate.</Text>
+                <Text className="text-md">Please note that the information about the dog is collected at the time the dog was added to the website meaning some of the data may not be accurate.</Text>
               </Col>
             </Col>
           </Row>
