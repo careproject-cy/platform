@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 import { Col, Row } from "@/components/ui/layout"
@@ -12,6 +12,16 @@ interface GalleryProps {
 const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
 
   const [visible, setVisible] = useState(0)
+  const thumbnailsRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if(thumbnailsRef.current) {
+      const thumbnails = thumbnailsRef.current.querySelectorAll('img')
+      if(thumbnails[visible]) {
+        thumbnails[visible].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+      }
+    }
+  }, [visible])
 
   const nextImage = () => {
     setVisible((prevVisible) => (prevVisible + 1) % images.length)
@@ -40,7 +50,7 @@ const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
             className="object-cover aspect-square rounded-2xl"
           />
         </Row>
-        <Row className="gap-3 overflow-x-scroll pb-3">
+        <Row ref={thumbnailsRef} className="gap-3 overflow-x-scroll pb-3">
           {images.map((src, idx) => (
             <Image key={idx}
               onClick={() => setVisible(idx)}
