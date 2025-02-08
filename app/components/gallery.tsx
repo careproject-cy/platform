@@ -40,18 +40,17 @@ const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
             className="object-cover aspect-square rounded-2xl"
           />
         </Row>
-        <Row className="gap-3">
+        <Row className="gap-3 overflow-x-scroll pb-3">
           {images.map((src, idx) => (
-            <div key={idx} className={`h-full aspect-square overflow-hidden rounded-xl`}>
-              <Image
-                src={src}
-                alt={`Image ${idx}`}
-                width={400}
-                height={400}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover aspect-square"
-              />
-            </div>
+            <Image key={idx}
+              onClick={() => setVisible(idx)}
+              src={src}
+              alt={`Image ${idx}`}
+              width={400}
+              height={400}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className={`object-fit aspect-square w-24 rounded-xl cursor-pointer border-2 ${idx === visible ? "border-amber-600" : "border-transparent"}`}
+            />
           ))}
         </Row>
       </Col>
