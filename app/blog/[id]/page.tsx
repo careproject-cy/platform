@@ -3,14 +3,31 @@ import Layout from '../../components/layout'
 import { blogPosts } from '../../data/blog-posts'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
+import { headers } from "next/headers";
+import { Col, Container } from "@/components/ui/layout"
+import { PageTitle } from "@/components/ui/typography"
 
 interface BlogPageProps {
   params: Promise<{ id: string }>
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {
-  const { id } = await params
+  let { id } = await params
   const post = blogPosts.find(p => p.id === id)
+
+  id = "2025-01-25 test title"
+
+  const host = (await headers()).get("host")!;
+  const protocol = host.includes("localhost") ? "http" : "https";
+  const absoluteUrl = `${protocol}://${host}/api/blog/${id}`;
+
+  const res = await fetch(absoluteUrl);
+
+  if (!res.ok) {
+    notFound();
+  }
+
+  const markdown = await res.text();
 
   if (!post) {
     notFound()
@@ -18,12 +35,16 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
   return (
     <Layout>
-      <article className="max-w-3xl mx-auto min-h-screen">
-        <h1 className="text-3xl font-bold mb-4 w-full">{post.title}</h1>
-        <p className="text-gray-600 mb-4">{new Date(post.date).toLocaleDateString()}</p>
-        <div className="prose max-w-none mb-6" dangerouslySetInnerHTML={{ __html: post.content }} />
-        <Button tag={Link} href="/blog" className="w-fit">Back to Blog</Button>
-      </article>
+      <Container tag={"article"} className="my-10 max-w-4xl">
+        <Col className="gap-6">
+          <PageTitle>{post.title}</PageTitle>
+          <p className="text-gray-600">{new Date(post.date).toLocaleDateString()}</p>
+          <div className="max-w-none">
+            {markdown}
+          </div>
+          <Button tag={Link} href="/blog" className="w-fit">Back to Blog</Button>
+        </Col>
+      </Container>
     </Layout>
   )
 }
