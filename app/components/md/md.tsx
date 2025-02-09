@@ -1,15 +1,16 @@
 import { SectionTitle } from "@/components/ui/typography";
 import Markdoc from "@markdoc/markdoc";
 import React from "react";
+import matter from "gray-matter";
 
 interface MdProps {
   text: string
 }
 
 const Md: React.FC<MdProps> = ({ text }) => {
-  const ast = Markdoc.parse(text);
-
-  const content = Markdoc.transform(ast, {
+  const { content, data: frontmatter } = matter(text);
+  const ast = Markdoc.parse(content);
+  const config = {
     nodes: {
       heading: {
         render: "Heading",
@@ -18,9 +19,12 @@ const Md: React.FC<MdProps> = ({ text }) => {
         },
       },
     },
-  });
+    variables: { markdoc: { frontmatter } }
+  }
 
-  return Markdoc.renderers.react(content, React, {
+  const transformed = Markdoc.transform(ast, config);
+
+  return Markdoc.renderers.react(transformed, React, {
     components: {
       Heading: SectionTitle as React.ComponentType<unknown>, // 👈 Ensure this matches the `render` key above
     },
