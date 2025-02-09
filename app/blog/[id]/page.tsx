@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { headers } from "next/headers";
 import { Col, Container } from "@/components/ui/layout"
 import { PageTitle } from "@/components/ui/typography"
+import Md from "@/app/components/md/md"
 
 interface BlogPageProps {
   params: Promise<{ id: string }>
@@ -39,9 +40,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
         <Col className="gap-6">
           <PageTitle>{post.title}</PageTitle>
           <p className="text-gray-600">{new Date(post.date).toLocaleDateString()}</p>
-          <div className="max-w-none">
-            {markdown}
-          </div>
+          <Md text={markdown} />
           <Button tag={Link} href="/blog" className="w-fit">Back to Blog</Button>
         </Col>
       </Container>

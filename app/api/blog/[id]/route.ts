@@ -6,8 +6,9 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
   const protocol = host.includes("localhost") ? "http" : "https";
   const baseUrl = `${protocol}://${host}`;
 
+  const { id } = await params
   // Construct the absolute URL for the markdown file
-  const absoluteUrl = `${baseUrl}/blog/${params.id}.md`;
+  const absoluteUrl = `${baseUrl}/blog/${id}.md`;
 
   // Fetch the Markdown file
   const res = await fetch(absoluteUrl);

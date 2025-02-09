@@ -1,4 +1,9 @@
-# Dogs: Loyal Companions
+---
+title: Using the Next.js plugin
+description: Integrate Markdoc into your Next.js app
+---
+
+# {% $markdoc.frontmatter.title %}
 
 Dogs are known for their friendly nature and unwavering devotion. They often communicate through body language and thrive on social interaction.
 
