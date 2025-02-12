@@ -1,19 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
-  // Get the absolute base URL from the request
-  const host = request.headers.get("host") || "localhost:3000";
+  
+  const host = request.headers.get("host")!;
   const protocol = host.includes("localhost") ? "http" : "https";
   const baseUrl = `${protocol}://${host}`;
 
   const { id } = await params
-  // Construct the absolute URL for the markdown file
-  const absoluteUrl = `${baseUrl}/blog/${id}.md`;
 
-  // Fetch the Markdown file
+  const absoluteUrl = `${baseUrl}/data/blog/${id}.md`;
   const res = await fetch(absoluteUrl);
+
   if (!res.ok) {
-    return new Response("Markdown file not found", { status: 404 });
+    return new NextResponse("Markdown file not found", { status: 404 });
   }
 
   const markdown = await res.text();

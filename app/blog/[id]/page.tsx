@@ -16,7 +16,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
   let { id } = await params
   const post = blogPosts.find(p => p.id === id)
 
-  id = "2025-01-25 test title"
+  id = "2025-01-25_test_text"
 
   const host = (await headers()).get("host")!;
   const protocol = host.includes("localhost") ? "http" : "https";
