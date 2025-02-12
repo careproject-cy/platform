@@ -2,5 +2,8 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.quickSuggestions": {
     "strings": "on"
-  }
+  },
+  "cSpell.words": [
+    "Markdoc"
+  ]
 }
