@@ -11,7 +11,7 @@ import { platform_name } from "@/app/data/consts"
 import DogCard from "@/app/components/dogCard"
 
 interface GenerateMetadataProps {
-  params: { id: string }
+  params: Promise<{ id: string }>
 }
 
 export async function generateMetadata({ params }: GenerateMetadataProps): Promise<Metadata> {
