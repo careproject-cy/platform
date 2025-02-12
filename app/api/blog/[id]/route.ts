@@ -1,12 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, context: { params: { id: string } }) {
+  
+  const { id } = await context.params; 
   
   const host = request.headers.get("host")!;
   const protocol = host.includes("localhost") ? "http" : "https";
   const baseUrl = `${protocol}://${host}`;
 
-  const { id } = await params
+  //const { id } = await params
 
   const absoluteUrl = `${baseUrl}/data/blog/${id}.md`;
   const res = await fetch(absoluteUrl);
