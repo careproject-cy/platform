@@ -26,7 +26,7 @@ const Md: React.FC<MdProps> = ({ text }) => {
 
   return Markdoc.renderers.react(transformed, React, {
     components: {
-      Heading: SectionTitle as React.ComponentType<unknown>, // 👈 Ensure this matches the `render` key above
+      Heading: (props) => <SectionTitle className={`level-${props.level}`} {...props} />,
     },
   });
 };
