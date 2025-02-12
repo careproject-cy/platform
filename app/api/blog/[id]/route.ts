@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: NextRequest, context: { params: { id: string } }) {
+
+export async function GET(request: NextRequest) {
   
-  const { id } = await context.params; 
+  const id = request.nextUrl.searchParams.get("id")!; 
   
   const host = request.headers.get("host")!;
   const protocol = host.includes("localhost") ? "http" : "https";
