@@ -7,6 +7,7 @@ import { PageTitle, Text } from "@/components/ui/typography"
 import Md from "@/app/components/md/md"
 import { fetchBlogposts, fetchText } from "@/app/data/fetchData"
 import Image from "next/image"
+import { getImageSrc } from "@/app/utils/images"
 
 interface BlogPageProps {
   params: Promise<{ id: string }>
@@ -31,7 +32,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
           <PageTitle>{post.title}</PageTitle>
           <Text>{date}</Text>
           <Image
-            src={post.imageSrc}
+            src={getImageSrc(post.imageSrc)}
             alt={post.title}
             width={600}
             height={300}

@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { cloudfront_domain } from "./app/data/consts";
 
 const nextConfig: NextConfig = {
   images: {
@@ -7,6 +8,10 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'placehold.co',
+      },
+      {
+        protocol: 'https',
+        hostname: cloudfront_domain,
       },
     ],
   },

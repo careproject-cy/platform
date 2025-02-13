@@ -50,7 +50,7 @@ const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
             className="object-cover aspect-square rounded-2xl"
           />
         </Row>
-        <Row ref={thumbnailsRef} className="gap-3 overflow-x-scroll pb-3">
+        <Row ref={thumbnailsRef} className="gap-3 overflow-x-auto pb-3">
           {images.map((src, idx) => (
             <Image key={idx}
               onClick={() => setVisible(idx)}

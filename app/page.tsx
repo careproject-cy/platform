@@ -10,6 +10,7 @@ import { BlogCard, LargeBlogCard } from "./components/blog/blogCard"
 import { Badge } from "@/components/ui/badge"
 import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
 import { fetchBlogposts } from "./data/fetchData"
+import { getImageSrc } from "./utils/images"
 
 export default async function Home() {
 
@@ -17,7 +18,9 @@ export default async function Home() {
   const recentPosts = blogPosts.slice(1, 4)
   const latestPost = blogPosts[0]
   const dogsToShow = dogs.filter(d => d.status !== 'Adopted' && d.status !== 'Not available' && d.status !== 'Reserved').slice(0, 8);
-  const carouselDogs = dogs.filter(d => d.status !== 'Adopted' && d.status !== 'Not available' && d.status !== 'Reserved').map(dog => dog.images[0]).slice(0, 5);
+  const carouselDogs = dogs.filter(d => d.status !== 'Adopted' && d.status !== 'Not available' && d.status !== 'Reserved')
+    .map(dog => getImageSrc(dog.images[0]))
+    .slice(0, 5);
 
   return (
     <Layout>

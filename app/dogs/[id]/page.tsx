@@ -9,6 +9,7 @@ import Gallery from "@/app/components/gallery"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import { platform_name } from "@/app/data/consts"
 import DogCard from "@/app/components/dogCard"
+import { getImageSrc } from "@/app/utils/images"
 
 interface GenerateMetadataProps {
   params: Promise<{ id: string }>
@@ -40,13 +41,15 @@ export default async function DogPage({ params }: DogPageProps) {
   const sizeText = dog.size === "small" ? "Small (< 10 kg) size" : dog.size === "medium" ? "Medium (10-25 kg) size" : "Large (> 25kg) size"
   const similarDogs = dogs.filter(d => d.size === dog.size && d.id !== dog.id).slice(0, 4)
 
+  const galleryImages = dog.images.map((image) => getImageSrc(image));
+
   return (
     <Layout>
       <Section className="my-10 flex-1">
         <Container className="gap-10 flex-1 py-0 max-w-6xl">
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${dog.id}`, text: dog.name }]} />
           <Row className="gap-6 w-full items-start md:max-lg:flex-col">
-            <Gallery images={dog.images} />
+            <Gallery images={galleryImages} />
             <Col className="w-full gap-6 py-6">
               <Col className="gap-3">
                 <Row className="w-full justify-between items-center gap-6">

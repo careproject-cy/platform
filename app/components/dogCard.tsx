@@ -2,6 +2,7 @@ import { Col, Row } from "@/components/ui/layout"
 import { SectionTitle } from "@/components/ui/typography"
 import Image from 'next/image'
 import Link from 'next/link'
+import { getImageSrc } from "../utils/images"
 
 interface DogCardProps {
   id: string
@@ -14,6 +15,7 @@ interface DogCardProps {
 }
 
 export default function DogCard({ id, name, breed, age, gender, status, images }: DogCardProps) {
+  const dogImages = images.map((image) => getImageSrc(image));
   const notAvailable = status === 'Not available' || status === 'Adopted'
   const showStatus = status !== 'Available'
   return (
@@ -22,11 +24,11 @@ export default function DogCard({ id, name, breed, age, gender, status, images }
         <Col className="w-full gap-4">
           <div className="w-full relative min-w-full rounded-xl overflow-hidden">
             <Image
-              src={images[0]}
+              src={dogImages[0]}
               alt={name}
               width={300}
               height={300}
-              className="relative object-cover h-auto w-full"
+              className="relative object-cover h-auto w-full aspect-square"
             />
             {showStatus &&
               <div className="text-sm px-2 py-1 rounded-lg bg-gray-100/75 absolute right-2 top-2 text-gray-700/75 font-semibold">{status}</div>
