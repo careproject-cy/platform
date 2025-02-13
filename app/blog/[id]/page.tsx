@@ -18,10 +18,18 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
   id = "2025-01-25_test_text"
 
+  //const host = (await headers()).get("host")!;
+  //const protocol = host.includes("localhost") ? "http" : "https";
+  //const absoluteUrl = `${protocol}://${host}/api/blog/${id}`;
+
+  //const res = await fetch(absoluteUrl);
+
+
+  
   const host = (await headers()).get("host")!;
   const protocol = host.includes("localhost") ? "http" : "https";
-  const absoluteUrl = `${protocol}://${host}/api/blog/${id}`;
-
+  const baseUrl = `${protocol}://${host}`;
+  const absoluteUrl = `${baseUrl}/data/blog/${id}.md`;
   const res = await fetch(absoluteUrl);
 
   if (!res.ok) {
