@@ -4,14 +4,10 @@ export const runtime = 'edge';
 
 export async function GET(request: NextRequest) {
   
-  const id = request.nextUrl.searchParams.get("id")!; 
-  
+  const id = request.nextUrl.searchParams.get("id")!;
   const host = request.headers.get("host")!;
   const protocol = host.includes("localhost") ? "http" : "https";
   const baseUrl = `${protocol}://${host}`;
-
-  //const { id } = await params
-
   const absoluteUrl = `${baseUrl}/data/blog/${id}.md`;
   const res = await fetch(absoluteUrl);
 
