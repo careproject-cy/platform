@@ -1,7 +1,7 @@
+import { BlogPost } from "@/app/data/blogPost"
 import { Badge } from "@/components/ui/badge"
 import Image from 'next/image'
 import Link from 'next/link'
-import { BlogPost } from "../../data/blog-posts"
 
 interface BlogCardProps {
   post: BlogPost
