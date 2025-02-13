@@ -3,10 +3,10 @@ import Layout from '../../components/layout'
 import { blogPosts } from '../../data/blog-posts'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { headers } from "next/headers";
 import { Col, Container } from "@/components/ui/layout"
 import { PageTitle } from "@/components/ui/typography"
 import Md from "@/app/components/md/md"
+import { fetchText } from "@/app/data/fetchData"
 
 interface BlogPageProps {
   params: Promise<{ id: string }>
@@ -18,25 +18,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
   id = "2025-01-25_test_text"
 
-  //const host = (await headers()).get("host")!;
-  //const protocol = host.includes("localhost") ? "http" : "https";
-  //const absoluteUrl = `${protocol}://${host}/api/blog/${id}`;
-
-  //const res = await fetch(absoluteUrl);
-
-
-  
-  const host = (await headers()).get("host")!;
-  const protocol = host.includes("localhost") ? "http" : "https";
-  const baseUrl = `${protocol}://${host}`;
-  const absoluteUrl = `${baseUrl}/data/blog/${id}.md`;
-  const res = await fetch(absoluteUrl);
-
-  if (!res.ok) {
-    notFound();
-  }
-
-  const markdown = await res.text();
+  const markdown = await fetchText(`data/blog/${id}.md`)
 
   if (!post) {
     notFound()
