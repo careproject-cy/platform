@@ -1,5 +1,6 @@
 import { headers } from "next/headers";
 import { notFound } from 'next/navigation'
+import { BlogPostMetadata } from "./blogPostMetadata";
 
 export async function getAbsoluteUrl(relUrl: string) {
   const host = (await headers()).get("host")!;
@@ -27,4 +28,8 @@ export async function fetchJson(relUrl: string) {
 
   const json = await res.json();
   return json;
+}
+
+export async function fetchBlogposts() {
+  return (await fetchJson("data/blogposts.json")) as BlogPostMetadata[];
 }

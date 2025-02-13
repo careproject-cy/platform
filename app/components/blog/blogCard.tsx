@@ -1,16 +1,16 @@
-import { BlogPost } from "@/app/data/blogPost"
+import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
 import { Badge } from "@/components/ui/badge"
 import Image from 'next/image'
 import Link from 'next/link'
 
 interface BlogCardProps {
-  post: BlogPost
+  post: BlogPostMetadata
 }
 
 export function BlogCard({ post }: BlogCardProps) {
-  const id = post.id
+  const id = post.filename.replace('.md', '')
   const date = new Date(post.date).toLocaleDateString()
-  const image = post.image
+  const image = post.imageSrc
   const title = post.title
   const desc = post.description
   return (
@@ -38,9 +38,9 @@ export function BlogCard({ post }: BlogCardProps) {
 }
 
 export function LargeBlogCard({ post }: BlogCardProps) {
-  const id = post.id
+  const id = post.filename.replace('.md', '')
   const date = new Date(post.date).toLocaleDateString()
-  const image = post.image
+  const image = post.imageSrc
   const title = post.title
   const desc = post.description
   const tags = post.tags

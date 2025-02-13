@@ -1,0 +1,34 @@
+'use client'
+
+import { BlogCard, LargeBlogCard } from "../components/blog/blogCard"
+import { Button } from "@/components/ui/button"
+import { useState } from 'react'
+import { Col, Grid3 } from "@/components/ui/layout"
+import { BlogPostMetadata } from "../data/blogPostMetadata"
+
+export default function BlogPosts({ posts }: { posts: BlogPostMetadata[] }) {
+
+  const [visibleCount, setVisibleCount] = useState(4)
+  const latestPost = posts[0]
+  const visiblePosts = posts.slice(1, visibleCount)
+
+  const loadMore = () => {
+    setVisibleCount(prev => prev + 3)
+  }
+
+  return (
+    <>
+      <Col className="gap-6">
+        <LargeBlogCard post={latestPost} />
+        <Grid3>
+          {visiblePosts.map((post) => (
+            <BlogCard key={post.filename} post={post} />
+          ))}
+        </Grid3>
+      </Col>
+      {visibleCount < posts.length && (
+        <Button onClick={loadMore}>Load More Posts</Button>
+      )}
+    </>
+  )
+}

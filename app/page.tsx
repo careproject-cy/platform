@@ -1,7 +1,6 @@
 import Layout from './components/layout'
 import DogCard from './components/dogCard'
 import { dogs } from './data/dogs'
-import { blogPosts } from './data/blog-posts'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import Carousel from "./components/carousel"
@@ -10,9 +9,11 @@ import { Col, Container, Grid3, Grid4, Section } from "@/components/ui/layout"
 import { BlogCard, LargeBlogCard } from "./components/blog/blogCard"
 import { Badge } from "@/components/ui/badge"
 import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
+import { fetchBlogposts } from "./data/fetchData"
 
-export default function Home() {
+export default async function Home() {
 
+  const blogPosts = await fetchBlogposts();
   const recentPosts = blogPosts.slice(1, 4)
   const latestPost = blogPosts[0]
   const dogsToShow = dogs.filter(d => d.status !== 'Adopted' && d.status !== 'Not available' && d.status !== 'Reserved').slice(0, 8);
@@ -52,7 +53,7 @@ export default function Home() {
             <LargeBlogCard post={latestPost} />
             <Grid3>
               {recentPosts.map((post) => (
-                <BlogCard key={post.id} post={post} />
+                <BlogCard key={post.filename} post={post} />
               ))}
             </Grid3>
           </Col>
