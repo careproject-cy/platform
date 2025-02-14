@@ -1,6 +1,6 @@
 import React from 'react';
-import BaseComponentProps from "./props";
 import { buildComponent } from "./utils";
+import { BaseComponentProps } from "./props";
 
 export const PageTitle: React.FC<BaseComponentProps> = (props) => buildComponent(props, "h1",
   "text-5xl font-semibold");

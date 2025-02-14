@@ -1,5 +1,5 @@
 import React from 'react';
-import BaseComponentProps from "./props";
+import { BaseComponentProps } from "./props";
 import { buildComponent } from "./utils";
 
 export const Section: React.FC<BaseComponentProps> = (props) => buildComponent(props, "section",
