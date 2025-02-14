@@ -8,6 +8,7 @@ import Md from "@/app/components/md/md"
 import { fetchBlogposts, fetchText } from "@/app/data/fetchData"
 import Image from "next/image"
 import { getImageSrc } from "@/app/utils/images"
+import { getDate } from "@/app/utils/dateUtils"
 
 interface BlogPageProps {
   params: Promise<{ id: string }>
@@ -23,19 +24,17 @@ export default async function BlogPage({ params }: BlogPageProps) {
     notFound()
   }
 
-  const date = new Date(post.date).toLocaleDateString();
-
   return (
     <Layout>
       <Container tag={"article"} className="my-10 max-w-4xl">
         <Col className="gap-6">
           <PageTitle>{post.title}</PageTitle>
-          <Text>{date}</Text>
+          <Text>{getDate(post.date)}</Text>
           <Image
             src={getImageSrc(post.imageSrc)}
             alt={post.title}
             width={600}
-            height={300}
+            height={400}
             className="relative object-cover w-full aspect-3/2 rounded-xl overflow-hidden"
           />
           <Md text={markdown} />

@@ -1,4 +1,5 @@
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
+import { getDate } from "@/app/utils/dateUtils"
 import { Badge } from "@/components/ui/badge"
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,7 +10,6 @@ interface BlogCardProps {
 
 export function BlogCard({ post }: BlogCardProps) {
   const id = post.filename.replace('.md', '')
-  const date = new Date(post.date).toLocaleDateString()
   const image = post.imageSrc
   const title = post.title
   const desc = post.description
@@ -31,7 +31,7 @@ export function BlogCard({ post }: BlogCardProps) {
           </Link>
         </h3>
         <div className="line-clamp-2 text-sm">{desc}</div>
-        <div className="text-sm font-semibold text-gray-500">{date}</div>
+        <div className="text-sm font-semibold text-gray-500">{getDate(post.date)}</div>
       </div>
     </div>
   )
@@ -39,7 +39,6 @@ export function BlogCard({ post }: BlogCardProps) {
 
 export function LargeBlogCard({ post }: BlogCardProps) {
   const id = post.filename.replace('.md', '')
-  const date = new Date(post.date).toLocaleDateString()
   const image = post.imageSrc
   const title = post.title
   const desc = post.description
@@ -63,7 +62,7 @@ export function LargeBlogCard({ post }: BlogCardProps) {
           </Link>
         </h3>
         <div className="line-clamp-3 text-md">{desc}</div>
-        <div className="text-md font-semibold text-gray-500">{date}</div>
+        <div className="text-md font-semibold text-gray-500">{getDate(post.date)}</div>
         <div className="flex">
           <Link href={`/blog/${id}`}>
             <div className="flex justify-center items-center border-1 rounded-xl px-4 py-2 text-xl font-semibold shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-200">

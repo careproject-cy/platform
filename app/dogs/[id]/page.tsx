@@ -10,6 +10,7 @@ import Breadcrumbs from "@/app/components/breadcrumbs"
 import { platform_name } from "@/app/data/consts"
 import DogCard from "@/app/components/dogCard"
 import { getImageSrc } from "@/app/utils/images"
+import { getDate } from "@/app/utils/dateUtils"
 
 interface GenerateMetadataProps {
   params: Promise<{ id: string }>
@@ -49,8 +50,8 @@ export default async function DogPage({ params }: DogPageProps) {
         <Container className="gap-10 flex-1 py-0 max-w-6xl">
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${dog.id}`, text: dog.name }]} />
           <Row className="gap-6 w-full items-start md:max-lg:flex-col">
-            <Gallery images={galleryImages} />
-            <Col className="w-full gap-6 py-6">
+            <Gallery className="flex-1" images={galleryImages} />
+            <Col className="w-full gap-6 py-6 flex-1">
               <Col className="gap-3">
                 <Row className="w-full justify-between items-center gap-6">
                   <PageTitle>{dog.name}</PageTitle>
@@ -71,11 +72,7 @@ export default async function DogPage({ params }: DogPageProps) {
               <Col className="gap-2 opacity-50">
                 <TextTitle className="text-xl">
                   Added at{" "}
-                  {new Date(dog.added).toLocaleDateString("en-US", {
-                    month: "short",
-                    day: "2-digit",
-                    year: "numeric",
-                  })}
+                  {getDate(dog.added)}
                 </TextTitle>
                 <Text className="text-md">Please note that the information about the dog is collected at the time the dog was added to the website meaning some of the data may not be accurate.</Text>
               </Col>

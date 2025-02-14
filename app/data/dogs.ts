@@ -21,7 +21,7 @@ export const dogs: Dog[] = [
     status: "Available",
     images: [
       "img/germasogeia/kayla/DSC_4619.jpg",
-      "https://placehold.co/400x400?text=Buddy+2",
+      "https://placehold.co/600x400?text=Buddy+600x400",
       "https://placehold.co/400x400?text=Buddy+3"
     ],
     size: "large",
