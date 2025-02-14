@@ -13,9 +13,7 @@ interface HeadingProps {
 
 type ExtendedHeadingProps = HeadingProps & Record<string, unknown>;
 
-// Declare the component as accepting unknown props
 const Heading: React.FC<unknown> = (props) => {
-  // Cast props to your expected type
   const { level, ...rest } = props as ExtendedHeadingProps;
   return <SectionTitle className={`${level}`} {...rest} />;
 };

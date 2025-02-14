@@ -3,12 +3,14 @@ import Layout from '../../components/layout'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import { Col, Container } from "@/components/ui/layout"
-import { PageTitle, Text } from "@/components/ui/typography"
+import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
 import Md from "@/app/components/md/md"
 import { fetchBlogposts, fetchText } from "@/app/data/fetchData"
 import Image from "next/image"
 import { getImageSrc } from "@/app/utils/images"
 import { getDate } from "@/app/utils/dateUtils"
+import { Divider } from "@/components/ui/divider"
+import { LargeBlogCard } from "@/app/components/blog/largeBlogCard"
 
 interface BlogPageProps {
   params: Promise<{ id: string }>
@@ -24,9 +26,11 @@ export default async function BlogPage({ params }: BlogPageProps) {
     notFound()
   }
 
+  const relatedPosts = posts.filter(p => p.tags.some(t => post.tags.includes(t)) && p.filename !== post.filename).slice(0, 3)
+
   return (
     <Layout>
-      <Container tag={"article"} className="my-10 max-w-4xl">
+      <Container tag={"article"} className="my-10 max-w-3xl">
         <Col className="gap-6">
           <PageTitle>{post.title}</PageTitle>
           <Text>{getDate(post.date)}</Text>
@@ -39,6 +43,13 @@ export default async function BlogPage({ params }: BlogPageProps) {
           />
           <Md text={markdown} />
           <Button tag={Link} href="/blog" className="w-fit">Back to Blog</Button>
+          <Divider />
+          <SectionTitle>Related Posts</SectionTitle>
+          <Col className="gap-6">
+            {relatedPosts.map((p) => (
+              <LargeBlogCard key={p.filename} post={p} />
+            ))}
+          </Col>
         </Col>
       </Container>
     </Layout>

@@ -1,10 +1,11 @@
 'use client'
 
-import { BlogCard, LargeBlogCard } from "../components/blog/blogCard"
+import { BlogCard } from "../components/blog/blogCard"
 import { Button } from "@/components/ui/button"
 import { useState } from 'react'
 import { Col, Grid3 } from "@/components/ui/layout"
 import { BlogPostMetadata } from "../data/blogPostMetadata"
+import { LargeBlogCard } from "../components/blog/largeBlogCard"
 
 export default function BlogPosts({ posts }: { posts: BlogPostMetadata[] }) {
 
