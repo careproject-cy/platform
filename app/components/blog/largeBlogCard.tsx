@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
 
 
-export function LargeBlogCard({ post, showBadge }: { post: BlogPostMetadata, showBadge?: boolean }) {
+export function LargeBlogCard({ post, showBadge, showButton }: { post: BlogPostMetadata, showBadge?: boolean, showButton?: boolean }) {
   const id = post.filename.replace('.md', '')
   const image = post.imageSrc
   const title = post.title
@@ -31,13 +31,15 @@ export function LargeBlogCard({ post, showBadge }: { post: BlogPostMetadata, sho
         </h3>
         <div className="line-clamp-3 text-md">{desc}</div>
         <div className="text-md font-semibold text-gray-500">{getDate(post.date)}</div>
-        <div className="flex">
-          <Link href={`/blog/${id}`}>
-            <div className="flex justify-center items-center border-1 rounded-xl px-4 py-2 text-xl font-semibold shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-200">
-              Read more
-            </div>
-          </Link>
-        </div>
+        {showButton &&
+          <div className="flex">
+            <Link href={`/blog/${id}`}>
+              <div className="flex justify-center items-center border-1 rounded-xl px-4 py-2 text-xl font-semibold shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-200">
+                Read more
+              </div>
+            </Link>
+          </div>
+        }
       </div>
     </div>
   )

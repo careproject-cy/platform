@@ -1,9 +1,9 @@
 import { getDate } from "@/app/utils/dateUtils"
 import Image from 'next/image'
 import Link from 'next/link'
-import { BlogCardProps } from "./blogCardProps"
+import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
 
-export function BlogCard({ post }: BlogCardProps) {
+export function BlogCard({ post }: { post: BlogPostMetadata }) {
   const id = post.filename.replace('.md', '')
   const image = post.imageSrc
   const title = post.title
