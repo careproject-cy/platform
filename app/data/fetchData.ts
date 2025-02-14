@@ -31,5 +31,6 @@ export async function fetchJson(relUrl: string) {
 }
 
 export async function fetchBlogposts() {
-  return (await fetchJson("data/blogposts.json")) as BlogPostMetadata[];
+  const posts = (await fetchJson("data/blogposts.json")) as BlogPostMetadata[];
+  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }

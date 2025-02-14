@@ -30,24 +30,26 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
   return (
     <Layout>
-      <Container tag={"article"} className="my-10 max-w-3xl">
-        <Col className="gap-6">
-          <PageTitle>{post.title}</PageTitle>
-          <Text>{getDate(post.date)}</Text>
-          <Image
-            src={getImageSrc(post.imageSrc)}
-            alt={post.title}
-            width={600}
-            height={400}
-            className="relative object-cover w-full aspect-3/2 rounded-xl overflow-hidden"
-          />
-          <Md text={markdown} />
-          <Button tag={Link} href="/blog" className="w-fit">Back to Blog</Button>
+      <Container tag={"article"} className="my-10 max-w-4xl">
+        <Col className="gap-10">
+          <Col className="gap-6">
+            <PageTitle>{post.title}</PageTitle>
+            <Text>{getDate(post.date)}</Text>
+            <Image
+              src={getImageSrc(post.imageSrc)}
+              alt={post.title}
+              width={600}
+              height={400}
+              className="relative object-cover w-full aspect-3/2 rounded-xl overflow-hidden"
+            />
+            <Md text={markdown} />
+            <Button tag={Link} href="/blog" className="w-fit">Back to Blog</Button>
+          </Col>
           <Divider />
           <SectionTitle>Related Posts</SectionTitle>
-          <Col className="gap-6">
-            {relatedPosts.map((p) => (
-              <LargeBlogCard key={p.filename} post={p} />
+          <Col className="gap-10">
+            {relatedPosts.map((p, i) => (
+              <LargeBlogCard key={p.filename} post={p} showBadge={false} showButton={false} reverse={i % 2 !== 0} />
             ))}
           </Col>
         </Col>

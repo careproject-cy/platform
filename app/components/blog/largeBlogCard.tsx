@@ -5,14 +5,14 @@ import Link from 'next/link'
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
 
 
-export function LargeBlogCard({ post, showBadge, showButton }: { post: BlogPostMetadata, showBadge?: boolean, showButton?: boolean }) {
+export function LargeBlogCard({ post, showBadge = true, showButton = true, reverse = false }: { post: BlogPostMetadata, showBadge?: boolean, showButton?: boolean, reverse?: boolean }) {
   const id = post.filename.replace('.md', '')
   const image = post.imageSrc
   const title = post.title
   const desc = post.description
   const tags = post.tags
   return (
-    <div className="w-full flex flex-row gap-10">
+    <div className={`w-full flex ${reverse ? "flex-row-reverse" : "flex-row"} gap-10`}>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
           src={image}
@@ -23,7 +23,9 @@ export function LargeBlogCard({ post, showBadge, showButton }: { post: BlogPostM
         />
       </Link>
       <div className="w-full flex flex-col gap-6 justify-center">
-        {showBadge && <Badge>{tags[0]}</Badge>}
+        {showBadge && tags.length > 0 &&
+          <Badge>{tags[0]}</Badge>
+        }
         <h3 className="font-semibold leading-none tracking-tight text-3xl">
           <Link href={`/blog/${id}`} className="w-full">
             {title}
