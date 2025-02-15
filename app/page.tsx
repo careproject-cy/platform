@@ -23,6 +23,8 @@ export default async function Home() {
     .map(dog => getImageSrc(dog.images[0]))
     .slice(0, 5);
 
+    console.log(carouselDogs)
+
   return (
     <Layout>
       <Section className="py-12 gap-10 border-b bg-gray-50">

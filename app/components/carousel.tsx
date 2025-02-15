@@ -52,14 +52,18 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
       <div className="w-full h-full relative flex flex-row items-center justify-center">
         {visible.map((data, idx) => (
           <div key={idx} className={`top-1/2 -translate-y-1/2 absolute h-full aspect-square overflow-hidden rounded-xl opacity-100 transition-all duration-1000 ${data.css}`}>
-            <Image
-              src={images[idx]}
-              alt={`Slide ${idx}`}
-              width={400}
-              height={400}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover aspect-square"
-            />
+            {
+              idx > images.length - 1 ? null : (
+                <Image
+                  src={images[idx]}
+                  alt={`Slide ${idx}`}
+                  width={400}
+                  height={400}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover aspect-square"
+                />
+              )
+            }
           </div>
         ))}
       </div>

@@ -8,6 +8,7 @@ interface GalleryProps {
   images: string[]
   className?: string
 }
+
 const SquareImage = ({ src, alt, size, className, imageClassName, onClick }: { src: string, alt: string, size: number, className?: string, imageClassName?: string, onClick?: React.MouseEventHandler }) => {
   return (
     <Col className={twMerge(`relative overflow-hidden rounded-2xl`, className || "")}>
