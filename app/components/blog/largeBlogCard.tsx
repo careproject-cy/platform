@@ -3,11 +3,11 @@ import { Badge } from "@/components/ui/badge"
 import Image from 'next/image'
 import Link from 'next/link'
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
+import { getImageSrc } from "@/app/utils/images"
 
 
 export function LargeBlogCard({ post, showBadge = true, showButton = true, reverse = false }: { post: BlogPostMetadata, showBadge?: boolean, showButton?: boolean, reverse?: boolean }) {
   const id = post.filename.replace('.md', '')
-  const image = post.imageSrc
   const title = post.title
   const desc = post.description
   const tags = post.tags
@@ -15,7 +15,7 @@ export function LargeBlogCard({ post, showBadge = true, showButton = true, rever
     <div className={`w-full flex ${reverse ? "flex-row-reverse" : "flex-row"} gap-10`}>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
-          src={image}
+          src={getImageSrc(post.imageSrc)}
           alt={title}
           width={300}
           height={200}

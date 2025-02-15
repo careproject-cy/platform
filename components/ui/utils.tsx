@@ -1,7 +1,12 @@
 import { twMerge } from "tailwind-merge";
 import { BaseComponentProps, SizeProps } from "./props";
 
-export const buildComponent = (props: BaseComponentProps, defaultTag: string, classes: string, sizeClasses?: Record<keyof (SizeProps), string>) => {
+export const buildComponent = (
+  props: BaseComponentProps,
+  defaultTag: string,
+  classes: string,
+  sizeClasses?: Record<keyof (SizeProps), string>
+) => {
   const { className, children, tag, xs, sm, md, lg, xl, ...otherProps } = props;
   const Tag = tag || defaultTag;
   const sizeClass = !sizeClasses ? ""

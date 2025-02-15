@@ -6,11 +6,12 @@ import { Button } from "@/components/ui/button"
 import Carousel from "./components/carousel"
 import { longDescription, slogan } from "./data/consts"
 import { Col, Container, Grid3, Grid4, Section } from "@/components/ui/layout"
-import { BlogCard, LargeBlogCard } from "./components/blog/blogCard"
+import { BlogCard } from "./components/blog/blogCard"
 import { Badge } from "@/components/ui/badge"
 import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
 import { fetchBlogposts } from "./data/fetchData"
 import { getImageSrc } from "./utils/images"
+import { LargeBlogCard } from "./components/blog/largeBlogCard"
 
 export default async function Home() {
 

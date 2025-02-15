@@ -2,17 +2,17 @@ import { getDate } from "@/app/utils/dateUtils"
 import Image from 'next/image'
 import Link from 'next/link'
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
+import { getImageSrc } from "@/app/utils/images"
 
 export function BlogCard({ post }: { post: BlogPostMetadata }) {
   const id = post.filename.replace('.md', '')
-  const image = post.imageSrc
   const title = post.title
   const desc = post.description
   return (
     <div className="w-full flex flex-col gap-6">
       <Link href={`/blog/${id}`} className="w-full">
         <Image
-          src={image}
+          src={getImageSrc(post.imageSrc)}
           alt={title}
           width={300}
           height={200}
