@@ -3,24 +3,20 @@ import { SectionTitle } from "@/components/ui/typography"
 import Image from 'next/image'
 import Link from 'next/link'
 import { getImageSrc } from "../utils/images"
+import { DogMetadata } from "../data/dogMetadata"
 
-interface DogCardProps {
-  id: string
-  name: string
-  breed: string
-  age: number
-  gender: string
-  status: string
-  images: string[]
-}
-
-export default function DogCard({ id, name, breed, age, gender, status, images }: DogCardProps) {
-  const dogImages = images.map((image) => getImageSrc(image));
+export default function DogCard(dog: DogMetadata) {
+  const dogImages = dog.images.map((image) => getImageSrc(image));
+  const status = dog.status
+  const name = dog.name
+  const breed = dog.breed
+  const age = dog.age
+  const gender = dog.gender
   const notAvailable = status === 'Not available' || status === 'Adopted'
   const showStatus = status !== 'Available'
   return (
     notAvailable ? null :
-      <Link href={`/dogs/${id}`} className="w-full">
+      <Link href={`/dogs/${dog.filename.replace(".md", "")}`} className="w-full">
         <Col className="w-full gap-4">
           <div className="w-full relative min-w-full rounded-xl overflow-hidden">
             <Image
@@ -46,4 +42,3 @@ export default function DogCard({ id, name, breed, age, gender, status, images }
       </Link>
   )
 }
-

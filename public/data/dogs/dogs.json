@@ -1,0 +1,32 @@
+[
+  {
+    "filename": "germasogeia\\anya.md",
+    "name": "Anya",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/anya/20250111_120804 (2).jpg",
+      "img/germasogeia/anya/20250111_120804 (2).jpg",
+      "img/germasogeia/anya/20250111_120804 (2).jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-15T00:00:00.000Z"
+  },
+  {
+    "filename": "germasogeia\\kayla.md",
+    "name": "Kayla",
+    "breed": "Mixed breed",
+    "age": 4.5,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg",
+      "img/germasogeia/kayla/20250118_114227.jpg",
+      "img/germasogeia/kayla/20250118_114220.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  }
+]

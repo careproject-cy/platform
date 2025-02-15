@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-blogposts": "npx ts-node --esm lib/generateBlogPostsJson.ts"
+    "generate-blogposts": "npx ts-node --esm lib/generateBlogPostsJson.ts",
+    "generate-dogs": "npx ts-node --esm lib/generateDogsJson.ts"
   },
   "dependencies": {
     "@markdoc/markdoc": "^0.5.0",

@@ -1,6 +1,5 @@
 import Layout from './components/layout'
 import DogCard from './components/dogCard'
-import { dogs } from './data/dogs'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import Carousel from "./components/carousel"
@@ -9,7 +8,7 @@ import { Col, Container, Grid3, Grid4, Section } from "@/components/ui/layout"
 import { BlogCard } from "./components/blog/blogCard"
 import { Badge } from "@/components/ui/badge"
 import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
-import { fetchBlogposts } from "./data/fetchData"
+import { fetchBlogposts, fetchDogs } from "./data/fetchData"
 import { getImageSrc } from "./utils/images"
 import { LargeBlogCard } from "./components/blog/largeBlogCard"
 
@@ -18,6 +17,7 @@ export default async function Home() {
   const blogPosts = await fetchBlogposts();
   const recentPosts = blogPosts.slice(1, 4)
   const latestPost = blogPosts[0]
+  const dogs = await fetchDogs();
   const dogsToShow = dogs.filter(d => d.status !== 'Adopted' && d.status !== 'Not available' && d.status !== 'Reserved').slice(0, 8);
   const carouselDogs = dogs.filter(d => d.status !== 'Adopted' && d.status !== 'Not available' && d.status !== 'Reserved')
     .map(dog => getImageSrc(dog.images[0]))
@@ -43,7 +43,7 @@ export default async function Home() {
           </Col>
           <Grid4>
             {dogsToShow.map((dog) => (
-              <DogCard key={dog.id} {...dog} />
+              <DogCard key={dog.filename} {...dog} />
             ))}
           </Grid4>
           <Button tag={Link} href="/dogs">View All Dogs</Button>
