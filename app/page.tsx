@@ -29,7 +29,7 @@ export default async function Home() {
         <Container className="flex-row gap-12">
           <Col className="flex-1 gap-6">
             <PageTitle>{slogan}</PageTitle>
-            <Text>{longDescription}</Text>
+            <Text lg>{longDescription}</Text>
           </Col>
           <Carousel className="flex-1" images={carouselDogs} />
         </Container>
