@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <Col className="min-h-screen" ignoreSize>
       <Header />
-      <Col tag={'main'} ignoreSize>
+      <Col tag={'main'} ignoreSize className="flex-1">
         {children}
       </Col>
       <Footer />

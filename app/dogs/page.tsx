@@ -10,8 +10,8 @@ export default async function DogsPage() {
 
   return (
     <Layout>
-      <Section className="my-10 flex-1">
-        <Container className="gap-10 flex-1">
+      <Section>
+        <Container>
           <PageTitle>Dogs Available For Adoption</PageTitle>
           <DogsCollection dogs={dogs} />
         </Container>

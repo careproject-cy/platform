@@ -40,13 +40,19 @@ const commonGaps = {
 }
 
 export const Col: React.FC<LayoutComponentProps> = (props) =>
-  componentBuilder(props, "div", "flex flex-col w-full ")
+  componentBuilder(props, "div", "flex flex-col w-full")
     .withSizes(commonGaps)
+    .withReverse({
+      reverse: "flex-col-reverse"
+    })
     .build();
 
 export const Row: React.FC<LayoutComponentProps> = (props) =>
   componentBuilder(props, "div", "flex flex-row items-center w-full")
     .withSizes(commonGaps)
+    .withReverse({
+      reverse: "flex-row-reverse"
+    })
     .withBreakpoints({
       xsCol: "max-xs:flex-col",
       smCol: "max-sm:flex-col",

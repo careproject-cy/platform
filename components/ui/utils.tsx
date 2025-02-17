@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { BaseComponentProps, BreakpointProps, ReverseProps, SizeProps } from "./props";
+import { BaseComponentProps, BreakpointProps, HideProps, ReverseProps, SizeProps } from "./props";
 
 function getBooleanClass<
   T extends Record<string, boolean | undefined>
@@ -30,7 +30,7 @@ export function componentBuilder(
     ...other
   } = baseProps;
 
-  let otherProps = { ...other };
+  let otherProps: (typeof other) & ReverseProps = { ...other };
 
   function finalize(): React.ReactElement {
     const Tag = tag || defaultTag;
@@ -81,7 +81,27 @@ export function componentBuilder(
       otherProps = remainingProps;
       return builder;
     },
+    withHide(hideMap: Record<keyof HideProps, string>) {
+      const {
+        xsHide, smHide, mdHide, lgHide, xlHide,
+        ...remainingProps
+      } = otherProps;
+      const hideClass = getBooleanClass(
+        { xsHide, smHide, mdHide, lgHide, xlHide },
+        hideMap
+      );
+      extraClasses.push(hideClass);
+      otherProps = remainingProps;
+      return builder;
+    },
     build() {
+      builder.withHide({
+        xsHide: "max-xs:hidden",
+        smHide: "max-sm:hidden",
+        mdHide: "max-md:hidden",
+        lgHide: "max-lg:hidden",
+        xlHide: "max-xl:hidden"
+      })
       return finalize();
     },
   };

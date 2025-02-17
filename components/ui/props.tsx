@@ -19,6 +19,14 @@ export interface BreakpointProps {
   xlCol?: boolean;
 }
 
+export interface HideProps {
+  xsHide?: boolean;
+  smHide?: boolean;
+  mdHide?: boolean;
+  lgHide?: boolean;
+  xlHide?: boolean;
+}
+
 export interface TagProps {
   tag?: React.ElementType | string;
 }
@@ -27,6 +35,6 @@ export interface ReverseProps {
   reverse?: boolean;
 }
 
-export type BaseComponentProps = TagProps & Partial<SizeProps & IgnoreSizeProps & BreakpointProps> & React.HTMLProps<HTMLElement>;
+export type BaseComponentProps = TagProps & Partial<SizeProps & IgnoreSizeProps & BreakpointProps & HideProps> & React.HTMLProps<HTMLElement>;
 
 export type LayoutComponentProps = BaseComponentProps & ReverseProps;
