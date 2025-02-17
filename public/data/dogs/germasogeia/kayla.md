@@ -1,7 +1,7 @@
 ---
   name: Kayla
   breed: Mixed breed
-  age: 4.5
+  age: 9
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
@@ -13,4 +13,12 @@
   added: 2025-02-14
 ---
 
-Kayla is a sweet and gentle mixed breed dog who is looking for her forever home. She is approximately 4.5 years old and has a calm and affectionate personality. Kayla enjoys going for walks and spending time with her human companions. She is well-behaved and gets along well with other dogs. Kayla is spayed, vaccinated, and microchipped, and she is ready to join a loving family. If you are interested in adopting Kayla, please contact us to arrange a meeting.
+We don’t know exactly how Kayla ended up at the shelter, but one thing is certain—she once had a family. She knows the "sit" command and comes when called, showing that she was once loved and trained.
+
+What truly matters to Kayla is being with people. She isn’t interested in toys or running around outside—she simply craves affection. When you visit her, she presses her whole body against the kennel bars, hoping for some scratches. She adores belly rubs, and if you stop too soon, she’ll gently nudge you with her paw, asking for more.
+
+Sadly, older dogs—especially those from breeds like hers—are often overlooked. Many assume they must be aggressive or have something "wrong" with them to end up in a shelter. But once you meet Kayla, you’ll see that she is nothing but love and gentleness.
+
+She would be happiest with a warm spot on the couch and someone who is ready to love and cuddle her. Since she’s spent so much time alone, she may not be thrilled about sharing her home with an energetic second dog.
+
+Could you be the one to give Kayla the loving home she deserves?

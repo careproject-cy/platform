@@ -3,7 +3,7 @@
     "filename": "germasogeia\\anya.md",
     "name": "Anya",
     "breed": "Mixed breed",
-    "age": 1.5,
+    "age": 2.5,
     "gender": "female",
     "status": "Available",
     "images": [
@@ -15,10 +15,36 @@
     "added": "2025-02-15T00:00:00.000Z"
   },
   {
+    "filename": "germasogeia\\chloe.md",
+    "name": "Chloe",
+    "breed": "hound mixed",
+    "age": 3,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "germasogeia\\dorothy.md",
+    "name": "Dorothy",
+    "breed": "hound mixed",
+    "age": 2,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
     "filename": "germasogeia\\kayla.md",
     "name": "Kayla",
     "breed": "Mixed breed",
-    "age": 4.5,
+    "age": 9,
     "gender": "female",
     "status": "Available",
     "images": [
@@ -27,6 +53,19 @@
       "img/germasogeia/kayla/20250118_114220.jpg"
     ],
     "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "germasogeia\\luna.md",
+    "name": "Luna",
+    "breed": "kokoni mix",
+    "age": 2,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg"
+    ],
+    "size": "small",
     "added": "2025-02-14T00:00:00.000Z"
   }
 ]

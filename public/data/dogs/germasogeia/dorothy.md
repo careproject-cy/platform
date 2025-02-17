@@ -1,0 +1,17 @@
+---
+  name: Dorothy
+  breed: hound mixed
+  age: 2
+  gender: female
+  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  images: [
+    img/germasogeia/kayla/DSC_4619.jpg
+  ]
+  size: medium # 'small' | 'medium' | 'large'
+  added: 2025-02-14
+---
+We don’t know what happened to Dorothy before, but in January 2025, she was found and brought to the shelter. She still doesn’t trust people and trembles at the sight of them—she needs time to understand that humans can be kind.
+
+However, when she had another dog by her side, she happily ran through the grass, though she clearly wished no people were around. This shows just how difficult her past must have been and how little love she likely received.
+
+Building her confidence in a shelter environment is challenging, but our volunteers are doing their best to help her. Dorothy needs a patient and gentle home where she can learn, at her own pace, that the world isn’t as scary as she believes.

@@ -56,7 +56,7 @@ export default async function DogPage({ params }: DogPageProps) {
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${dog.filename.replace(".md", "")}`, text: dog.name }]} />
           <Row className="gap-6 w-full items-start md:max-lg:flex-col">
             <Gallery className="flex-1" images={galleryImages} />
-            <Col className="w-full gap-6 py-6 flex-1">
+            <Col className="w-full gap-6 flex-1">
               <Col className="gap-3">
                 <Row className="w-full justify-between items-center gap-6">
                   <PageTitle>{dog.name}</PageTitle>
@@ -84,7 +84,7 @@ export default async function DogPage({ params }: DogPageProps) {
             </Col>
           </Row>
           <Divider />
-          <SectionTitle className="w-full">Similar Dogs</SectionTitle>
+          {similarDogs.length !== 0 && <SectionTitle className="w-full">Similar dogs</SectionTitle>}
           <Grid4>
             {similarDogs.map((dog) => (
               <DogCard key={dog.filename} {...dog} />

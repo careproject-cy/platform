@@ -1,7 +1,7 @@
 ---
   name: Anya
   breed: Mixed breed
-  age: 1.5
+  age: 2.5
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
@@ -13,4 +13,8 @@
   added: 2025-02-15
 ---
 
-Anya is a sweet and playful mixed breed dog who is looking for her forever home. She is approximately 1.5 years old and has a friendly and affectionate personality. Anya enjoys playing with toys and going for walks, and she is eager to learn new tricks. She gets along well with other dogs and enjoys socializing with people of all ages. Anya is spayed, vaccinated, and microchipped, and she is ready to join a loving family. If you are interested in adopting Anya, please contact us to arrange a meeting.
+Anya arrived at the shelter as a puppy and has spent two long years in a kennel, unnoticed and unwanted. She was very shy at first, but once she realized that people can be trusted and that walks are exciting, she started eagerly asking to go outside whenever she saw a volunteer.
+
+She absolutely loves treats, which will be a great help for her future family in training. Anya is an active girl who gets along wonderfully with both people and other dogs. She would thrive in a home with a yard, where she can finally run freely and no longer be confined to a small space.
+
+Would you like to make Anya a part of your family?
