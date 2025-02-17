@@ -1,4 +1,4 @@
-import { Col, Section } from "@/components/ui/layout"
+import { Col } from "@/components/ui/layout"
 import Header from "./header"
 import Footer from "./footer"
 
@@ -6,11 +6,11 @@ export const runtime = 'edge' // 'nodejs' (default) | 'edge'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <Col className="min-h-screen">
+    <Col className="min-h-screen gap-0">
       <Header />
-      <Section className="gap-12 flex-1" tag={'main'}>
+      <Col tag={'main'} className="gap-0">
         {children}
-      </Section>
+      </Col>
       <Footer />
     </Col>
   )

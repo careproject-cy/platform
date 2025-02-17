@@ -13,6 +13,8 @@ import { getDate } from "@/app/utils/dateUtils"
 import { fetchDogs, fetchText } from "@/app/data/fetchData"
 import Md from "@/app/components/md/md"
 
+export const runtime = 'edge';
+
 interface GenerateMetadataProps {
   params: Promise<{ id: string[] }>
 }

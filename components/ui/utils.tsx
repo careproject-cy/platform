@@ -59,11 +59,11 @@ export function componentBuilder(
     },
     withBreakpoints(breakpointMap: Record<keyof BreakpointProps, string>) {
       const {
-        smCol, mdCol, lgCol, xlCol,
+        xsCol, smCol, mdCol, lgCol, xlCol,
         ...remainingProps
       } = otherProps;
       const breakpointClass = getBooleanClass(
-        { smCol, mdCol, lgCol, xlCol },
+        { xsCol , smCol, mdCol, lgCol, xlCol },
         breakpointMap,
         "mdCol"
       );

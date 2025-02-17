@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Button } from "@/components/ui/button"
 import Carousel from "./components/carousel"
 import { longDescription, slogan } from "./data/consts"
-import { Col, Container, Grid3, Grid4, Section } from "@/components/ui/layout"
+import { Col, Container, Grid3, Grid4, Row, Section } from "@/components/ui/layout"
 import { BlogCard } from "./components/blog/blogCard"
 import { Badge } from "@/components/ui/badge"
 import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
@@ -25,18 +25,20 @@ export default async function Home() {
 
   return (
     <Layout>
-      <Section className="py-12 gap-10 border-b bg-gray-50">
-        <Container className="flex-row gap-12">
-          <Col className="flex-1 gap-6">
-            <PageTitle>{slogan}</PageTitle>
-            <Text lg>{longDescription}</Text>
-          </Col>
-          <Carousel className="flex-1" images={carouselDogs} />
+      <Section className="border-b bg-gray-50">
+        <Container>
+          <Row xl>
+            <Col className="flex-1">
+              <PageTitle>{slogan}</PageTitle>
+              <Text lg>{longDescription}</Text>
+            </Col>
+            <Carousel className="flex-1" images={carouselDogs} />
+          </Row>
         </Container>
       </Section>
 
       <Section>
-        <Container className="gap-10 justify-center">
+        <Container>
           <Col className="gap-6 items-center">
             <Badge>Meet the dogs</Badge>
             <SectionTitle>Dogs Available For Adoption</SectionTitle>

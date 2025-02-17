@@ -8,6 +8,7 @@ export interface SizeProps {
 }
 
 export interface BreakpointProps {
+  xsCol?: boolean;
   smCol?: boolean;
   mdCol?: boolean;
   lgCol?: boolean;
@@ -18,4 +19,4 @@ export interface TagProps {
   tag?: React.ElementType | string;
 }
 
-export type BaseComponentProps = TagProps & SizeProps & BreakpointProps & React.HTMLProps<HTMLElement>;
+export type BaseComponentProps = TagProps & Partial<SizeProps & BreakpointProps> & React.HTMLProps<HTMLElement>;
