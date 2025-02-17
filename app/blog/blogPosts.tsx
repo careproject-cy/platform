@@ -19,7 +19,7 @@ export default function BlogPosts({ posts }: { posts: BlogPostMetadata[] }) {
 
   return (
     <>
-      <Col className="gap-6">
+      <Col>
         <LargeBlogCard post={latestPost} />
         <Grid3>
           {visiblePosts.map((post) => (

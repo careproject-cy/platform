@@ -27,7 +27,7 @@ export default async function Home() {
     <Layout>
       <Section className="border-b bg-gray-50">
         <Container>
-          <Row xl>
+          <Row xl mdCol>
             <Col className="flex-1">
               <PageTitle>{slogan}</PageTitle>
               <Text lg>{longDescription}</Text>
@@ -39,7 +39,7 @@ export default async function Home() {
 
       <Section>
         <Container>
-          <Col className="gap-6 items-center">
+          <Col className="items-center">
             <Badge>Meet the dogs</Badge>
             <SectionTitle>Dogs Available For Adoption</SectionTitle>
           </Col>

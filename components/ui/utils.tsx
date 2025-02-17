@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { BaseComponentProps, BreakpointProps, SizeProps } from "./props";
+import { BaseComponentProps, BreakpointProps, ReverseProps, SizeProps } from "./props";
 
 function getBooleanClass<
   T extends Record<string, boolean | undefined>
@@ -45,7 +45,7 @@ export function componentBuilder(
   const builder = {
     withSizes(sizeMap: Record<keyof SizeProps, string>) {
       const {
-        xs, sm, md, lg, xl,
+        xs, sm, md, lg, xl, ignoreSize,
         ...remainingProps
       } = otherProps;
       const sizeClass = getBooleanClass(
@@ -53,7 +53,8 @@ export function componentBuilder(
         sizeMap,
         "md"
       );
-      extraClasses.push(sizeClass);
+      if (ignoreSize === undefined || !ignoreSize)
+        extraClasses.push(sizeClass);
       otherProps = remainingProps;
       return builder;
     },
@@ -63,11 +64,20 @@ export function componentBuilder(
         ...remainingProps
       } = otherProps;
       const breakpointClass = getBooleanClass(
-        { xsCol , smCol, mdCol, lgCol, xlCol },
-        breakpointMap,
-        "mdCol"
+        { xsCol, smCol, mdCol, lgCol, xlCol },
+        breakpointMap
       );
       extraClasses.push(breakpointClass);
+      otherProps = remainingProps;
+      return builder;
+    },
+    withReverse(reverseMap: Record<keyof ReverseProps, string>) {
+      const {
+        reverse,
+        ...remainingProps
+      } = otherProps;
+      const reverseClass = getBooleanClass({ reverse }, reverseMap);
+      extraClasses.push(reverseClass);
       otherProps = remainingProps;
       return builder;
     },

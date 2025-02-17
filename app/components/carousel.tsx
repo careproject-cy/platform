@@ -42,14 +42,14 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   }, [autoPlayKey])
 
   return (
-    <div className={twMerge(`relative flex items-center justify-center h-80 rounded-2xl`, className)}>
+    <div className={twMerge(`relative flex items-center justify-center min-h-80 h-80 rounded-2xl w-full`, className)}>
       <button onClick={prevImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-50 rounded-full absolute left-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
         <span className="material-symbols-rounded">chevron_left</span>
       </button>
       <button onClick={nextImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-50 rounded-full absolute right-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
         <span className="material-symbols-rounded">chevron_right</span>
       </button>
-      <div className="w-full h-full relative flex flex-row items-center justify-center">
+      <div className="w-full relative flex flex-row items-center min-h-80 h-80 justify-center">
         {visible.map((data, idx) => (
           <div key={idx} className={`top-1/2 -translate-y-1/2 absolute h-full aspect-square overflow-hidden rounded-xl opacity-100 transition-all duration-1000 ${data.css}`}>
             {

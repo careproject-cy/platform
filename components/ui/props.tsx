@@ -7,6 +7,10 @@ export interface SizeProps {
   xl?: boolean;
 }
 
+export interface IgnoreSizeProps {
+  ignoreSize?: boolean;
+}
+
 export interface BreakpointProps {
   xsCol?: boolean;
   smCol?: boolean;
@@ -19,4 +23,10 @@ export interface TagProps {
   tag?: React.ElementType | string;
 }
 
-export type BaseComponentProps = TagProps & Partial<SizeProps & BreakpointProps> & React.HTMLProps<HTMLElement>;
+export interface ReverseProps {
+  reverse?: boolean;
+}
+
+export type BaseComponentProps = TagProps & Partial<SizeProps & IgnoreSizeProps & BreakpointProps> & React.HTMLProps<HTMLElement>;
+
+export type LayoutComponentProps = BaseComponentProps & ReverseProps;

@@ -6,9 +6,9 @@ export const runtime = 'edge' // 'nodejs' (default) | 'edge'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <Col className="min-h-screen gap-0">
+    <Col className="min-h-screen" ignoreSize>
       <Header />
-      <Col tag={'main'} className="gap-0">
+      <Col tag={'main'} ignoreSize>
         {children}
       </Col>
       <Footer />
