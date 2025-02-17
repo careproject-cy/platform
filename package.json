@@ -8,8 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-blogposts": "npx ts-node --esm lib/generateBlogPostsJson.ts",
-    "generate-dogs": "npx ts-node --esm lib/generateDogsJson.ts"
+    "generate-blogposts": "npx tsx lib/generateBlogPostsJson.ts",
+    "generate-dogs": "npx tsx lib/generateDogsJson.ts"
   },
   "dependencies": {
     "@markdoc/markdoc": "^0.5.0",
@@ -31,6 +31,7 @@
     "eslint-config-next": "15.1.5",
     "postcss": "^8",
     "tailwindcss": "^4.0.0-beta.9",
+    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }
