@@ -26,13 +26,13 @@ export default async function Home() {
   return (
     <Layout>
       <Section className="border-b bg-gray-50">
-        <Container>
-          <Row xl mdCol>
-            <Col className="flex-1">
+        <Container className="py-12 max-lg:py-10 max-md:py-8">
+          <Row xl lgCol>
+            <Col>
               <PageTitle>{slogan}</PageTitle>
               <Text lg>{longDescription}</Text>
             </Col>
-            <Carousel className="flex-1" images={carouselDogs} />
+            <Carousel className="" images={carouselDogs} />
           </Row>
         </Container>
       </Section>
