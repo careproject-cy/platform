@@ -1,25 +1,80 @@
 import { twMerge } from "tailwind-merge";
-import { BaseComponentProps, SizeProps } from "./props";
+import { BaseComponentProps, BreakpointProps, SizeProps } from "./props";
 
-export const buildComponent = (
-  props: BaseComponentProps,
+function getBooleanClass<
+  T extends Record<string, boolean | undefined>
+>(
+  props: T,
+  classes?: Record<keyof T, string>,
+  fallbackKey?: keyof T
+): string {
+  if (!classes) return "";
+  for (const key in props) {
+    if (Object.prototype.hasOwnProperty.call(props, key) && props[key]) {
+      return classes[key] ?? "";
+    }
+  }
+  return fallbackKey ? classes[fallbackKey] ?? "" : "";
+}
+
+export function componentBuilder(
+  baseProps: BaseComponentProps,
   defaultTag: string,
-  classes: string,
-  sizeClasses?: Record<keyof (SizeProps), string>
-) => {
-  const { className, children, tag, xs, sm, md, lg, xl, ...otherProps } = props;
-  const Tag = tag || defaultTag;
-  const sizeClass = !sizeClasses ? ""
-    : xs ? sizeClasses?.xs
-      : sm ? sizeClasses?.sm
-        : md ? sizeClasses?.md
-          : lg ? sizeClasses?.lg
-            : xl ? sizeClasses?.xl
-              : sizeClasses?.md; // default to md
+  baseClasses: string
+) {
+  const extraClasses: string[] = [];
+  const {
+    className,
+    children,
+    tag,
+    ...other
+  } = baseProps;
 
-  return (
-    <Tag className={twMerge(classes, sizeClass, className)} {...otherProps}>
-      {children}
-    </Tag>
-  );
+  let otherProps = { ...other };
+
+  function finalize(): React.ReactElement {
+    const Tag = tag || defaultTag;
+    const merged = twMerge(baseClasses, ...extraClasses, className);
+    return (
+      <Tag className={merged} {...otherProps}>
+        {children}
+      </Tag>
+    );
+  }
+
+  const builder = {
+    withSizes(sizeMap: Record<keyof SizeProps, string>) {
+      const {
+        xs, sm, md, lg, xl,
+        ...remainingProps
+      } = otherProps;
+      const sizeClass = getBooleanClass(
+        { xs, sm, md, lg, xl },
+        sizeMap,
+        "md"
+      );
+      extraClasses.push(sizeClass);
+      otherProps = remainingProps;
+      return builder;
+    },
+    withBreakpoints(breakpointMap: Record<keyof BreakpointProps, string>) {
+      const {
+        smCol, mdCol, lgCol, xlCol,
+        ...remainingProps
+      } = otherProps;
+      const breakpointClass = getBooleanClass(
+        { smCol, mdCol, lgCol, xlCol },
+        breakpointMap,
+        "mdCol"
+      );
+      extraClasses.push(breakpointClass);
+      otherProps = remainingProps;
+      return builder;
+    },
+    build() {
+      return finalize();
+    },
+  };
+
+  return builder;
 }
