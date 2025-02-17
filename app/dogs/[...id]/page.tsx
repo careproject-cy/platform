@@ -51,7 +51,7 @@ export default async function DogPage({ params }: DogPageProps) {
 
   return (
     <Layout>
-      <Section className="my-10 flex-1">
+      <Section>
         <Container className="gap-10 flex-1 py-0 max-w-6xl">
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${dog.filename.replace(".md", "")}`, text: dog.name }]} />
           <Row className="gap-6 w-full items-start md:max-lg:flex-col">
