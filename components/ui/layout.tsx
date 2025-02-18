@@ -16,14 +16,16 @@ export const Section: React.FC<LayoutComponentProps> = (props) =>
       sm: "py-8  max-lg:py-6  max-md:py-4",
       md: "py-10 max-lg:py-8  max-md:py-6",
       lg: "py-12 max-lg:py-10 max-md:py-8",
-      xl: "py-14 max-lg:py-12 max-md:py-10"
+      xl: "py-14 max-lg:py-12 max-md:py-10",
+      ignoreSize: "",
     })
     .withSizes({
       xs: "px-4  max-lg:px-2  max-md:px-0",
       sm: "px-6  max-lg:px-6  max-md:px-2",
       md: "px-8  max-lg:px-6  max-md:px-4",
       lg: "px-10 max-lg:px-8  max-md:px-6",
-      xl: "px-12 max-lg:px-10 max-md:px-8"
+      xl: "px-12 max-lg:px-10 max-md:px-8",
+      ignoreSize: "",
     })
     .build();
 
@@ -35,7 +37,8 @@ export const Container: React.FC<LayoutComponentProps> = (props) =>
       sm: "max-w-4xl gap-4  max-lg:gap-3 max-md:gap-2",
       md: "max-w-5xl gap-6  max-lg:gap-5 max-md:gap-4",
       lg: "max-w-6xl gap-8  max-lg:gap-7 max-md:gap-6",
-      xl: "max-w-7xl gap-10 max-lg:gap-9 max-md:gap-8"
+      xl: "max-w-7xl gap-10 max-lg:gap-9 max-md:gap-8",
+      ignoreSize: "",
     })
     .build();
 
@@ -44,7 +47,8 @@ const commonGaps = {
   sm: "gap-2 max-lg:gap-1",
   md: "gap-4 max-lg:gap-3 max-md:gap-2",
   lg: "gap-6 max-lg:gap-5 max-md:gap-4",
-  xl: "gap-8 max-lg:gap-7 max-md:gap-6"
+  xl: "gap-8 max-lg:gap-7 max-md:gap-6",
+  ignoreSize: "",
 }
 
 export const Col: React.FC<LayoutComponentProps> = (props) =>
@@ -77,7 +81,8 @@ const gridGaps = {
   sm: "gap-4  max-lg:gap-2",
   md: "gap-6  max-lg:gap-4",
   lg: "gap-8  max-lg:gap-6 max-md:gap-4",
-  xl: "gap-10 max-lg:gap-8 max-md:gap-6"
+  xl: "gap-10 max-lg:gap-8 max-md:gap-6",
+  ignoreSize: "",
 }
 
 export const Grid3: React.FC<BaseComponentProps> = (props) =>

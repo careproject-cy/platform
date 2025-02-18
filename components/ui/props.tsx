@@ -5,9 +5,6 @@ export interface SizeProps {
   md?: boolean;
   lg?: boolean;
   xl?: boolean;
-}
-
-export interface IgnoreSizeProps {
   ignoreSize?: boolean;
 }
 
@@ -49,6 +46,6 @@ export interface CenteredProps {
   hCentered?: boolean;
 }
 
-export type BaseComponentProps = TagProps & Partial<SizeProps & IgnoreSizeProps & BreakpointProps & HideProps & PositionProps> & React.HTMLProps<HTMLElement>;
+export type BaseComponentProps = TagProps & Partial<SizeProps & BreakpointProps & HideProps & PositionProps> & React.HTMLProps<HTMLElement>;
 
 export type LayoutComponentProps = BaseComponentProps & ReverseProps & CenteredProps;

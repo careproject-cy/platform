@@ -29,19 +29,6 @@ export function componentBuilder(
 
   const propsToRemove: string[] = []
 
-  function finalize(): React.ReactElement {
-    const Tag = tag || defaultTag;
-    const merged = twMerge(baseClasses, ...extraClasses, className);
-
-    propsToRemove.forEach(key => delete otherProps[key as keyof typeof otherProps])
-
-    return (
-      <Tag className={merged} {...otherProps}>
-        {children}
-      </Tag>
-    );
-  }
-
   const registerKeys = (keys: string[]) => {
     keys.forEach((key) => propsToRemove.push(key));
   };
@@ -65,6 +52,19 @@ export function componentBuilder(
     registerKeys(keys as string[]);
     return builder;
   };
+
+  function finalize(): React.ReactElement {
+    const Tag = tag || defaultTag;
+    const merged = twMerge(baseClasses, ...extraClasses, className);
+
+    propsToRemove.forEach(key => delete otherProps[key as keyof typeof otherProps])
+
+    return (
+      <Tag className={merged} {...otherProps}>
+        {children}
+      </Tag>
+    );
+  }
 
   const builder = {
     withSizes: (sizeMap: Record<keyof SizeProps, string>) => {
