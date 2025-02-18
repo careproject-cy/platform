@@ -1,5 +1,31 @@
 [
   {
+    "filename": "other\\loki.md",
+    "name": "Loki",
+    "breed": "Mixed breed",
+    "age": "6 months",
+    "gender": "male",
+    "status": "In foster care",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg"
+    ],
+    "size": "large",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "other\\luka.md",
+    "name": "Luka",
+    "breed": "Mixed breed",
+    "age": "6 months",
+    "gender": "male",
+    "status": "In foster care",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg"
+    ],
+    "size": "large",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
     "filename": "germasogeia\\anya.md",
     "name": "Anya",
     "breed": "Mixed breed",
@@ -7,9 +33,10 @@
     "gender": "female",
     "status": "Available",
     "images": [
-      "img/germasogeia/anya/20250111_120804 (2).jpg",
-      "img/germasogeia/anya/20250111_120804 (2).jpg",
-      "img/germasogeia/anya/20250111_120804 (2).jpg"
+      "img/germasogeia/anya/mixed-breed-adoption-anya.jpg",
+      "img/germasogeia/anya/anya-dog-shelter-cyprus-winking.jpg",
+      "img/germasogeia/anya/anya-dog-shelter-cyprus-closeup.jpg",
+      "img/germasogeia/anya/anya-dog-shelter-cyprus-fullbody.jpg"
     ],
     "size": "medium",
     "added": "2025-02-15T00:00:00.000Z"
@@ -17,12 +44,15 @@
   {
     "filename": "germasogeia\\chloe.md",
     "name": "Chloe",
-    "breed": "hound mixed",
+    "breed": "Hound mixed",
     "age": 3,
     "gender": "female",
     "status": "Available",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg"
+      "img/germasogeia/chloe/chloe-adoption-cyprus.jpg",
+      "img/germasogeia/chloe/shelter-dog-smiling-cyprus.jpg",
+      "img/germasogeia/chloe/chloe-looking-family-cyprus.jpg",
+      "img/germasogeia/chloe/shelter-dog-in-kennel-cyprus.jpg"
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
@@ -30,12 +60,15 @@
   {
     "filename": "germasogeia\\dorothy.md",
     "name": "Dorothy",
-    "breed": "hound mixed",
+    "breed": "Hound mixed",
     "age": 2,
     "gender": "female",
     "status": "Available",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg"
+      "img/germasogeia/dorothy/dorothy-smiling-adoption.jpg",
+      "img/germasogeia/dorothy/hound-mixed-girl.jpg",
+      "img/germasogeia/dorothy/shy-dog-cyprus.jpg",
+      "img/germasogeia/dorothy/need-family-cyprus-dog.jpg"
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
@@ -43,9 +76,25 @@
   {
     "filename": "germasogeia\\kayla.md",
     "name": "Kayla",
-    "breed": "Mixed breed",
+    "breed": "Rottweiler mixed",
     "age": 9,
     "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/kayla/smiling-dog-rehoming.jpg",
+      "img/germasogeia/kayla/rottweiler-adoption-cyprus.jpg",
+      "img/germasogeia/kayla/old-dog-cyprus.jpg",
+      "img/germasogeia/kayla/kayla-sweet-girl.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "germasogeia\\kody.md",
+    "name": "Kodi",
+    "breed": "Mixed breed",
+    "age": 3,
+    "gender": "male",
     "status": "Available",
     "images": [
       "img/germasogeia/kayla/DSC_4619.jpg",
@@ -66,6 +115,84 @@
       "img/germasogeia/kayla/DSC_4619.jpg"
     ],
     "size": "small",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "germasogeia\\marlo.md",
+    "name": "Marlo",
+    "breed": "Coonhound",
+    "age": "3-4",
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "germasogeia\\max.md",
+    "name": "Max",
+    "breed": "Shepherd",
+    "age": 5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg"
+    ],
+    "size": "large",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "germasogeia\\oreo.md",
+    "name": "Oreo",
+    "breed": "Mixed breed",
+    "age": 5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "germasogeia\\sandy.md",
+    "name": "Sandy",
+    "breed": "bulldog mixed",
+    "age": 2,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg"
+    ],
+    "size": "small",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "germasogeia\\scarlet.md",
+    "name": "Sandy",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "germasogeia\\zeus.md",
+    "name": "Zeus",
+    "breed": "Malinois",
+    "age": 4,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/kayla/DSC_4619.jpg"
+    ],
+    "size": "large",
     "added": "2025-02-14T00:00:00.000Z"
   }
 ]

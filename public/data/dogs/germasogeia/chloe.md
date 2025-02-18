@@ -1,11 +1,14 @@
 ---
   name: Chloe
-  breed: hound mixed
+  breed: Hound mixed
   age: 3
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg
+    img/germasogeia/chloe/chloe-adoption-cyprus.jpg,
+    img/germasogeia/chloe/shelter-dog-smiling-cyprus.jpg,
+    img/germasogeia/chloe/chloe-looking-family-cyprus.jpg,
+    img/germasogeia/chloe/shelter-dog-in-kennel-cyprus.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-02-14

@@ -5,9 +5,10 @@
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/anya/20250111_120804 (2).jpg,
-    img/germasogeia/anya/20250111_120804 (2).jpg,
-    img/germasogeia/anya/20250111_120804 (2).jpg
+    img/germasogeia/anya/mixed-breed-adoption-anya.jpg,
+    img/germasogeia/anya/anya-dog-shelter-cyprus-winking.jpg,
+    img/germasogeia/anya/anya-dog-shelter-cyprus-closeup.jpg,
+    img/germasogeia/anya/anya-dog-shelter-cyprus-fullbody.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-02-15

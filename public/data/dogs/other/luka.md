@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 6 months
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/kayla/DSC_4619.jpg
   ]

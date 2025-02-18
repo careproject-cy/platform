@@ -1,13 +1,14 @@
 ---
   name: Kayla
-  breed: Mixed breed
+  breed: Rottweiler mixed
   age: 9
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg,
-    img/germasogeia/kayla/20250118_114227.jpg,
-    img/germasogeia/kayla/20250118_114220.jpg
+    img/germasogeia/kayla/smiling-dog-rehoming.jpg,
+    img/germasogeia/kayla/rottweiler-adoption-cyprus.jpg,
+    img/germasogeia/kayla/old-dog-cyprus.jpg,
+    img/germasogeia/kayla/kayla-sweet-girl.jpg
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-02-14
