@@ -38,8 +38,8 @@ export default async function Home() {
       </Section>
 
       <Section>
-        <Container>
-          <Col className="items-center">
+        <Container centered>
+          <Col centered>
             <Badge>Meet the dogs</Badge>
             <SectionTitle>Dogs Available For Adoption</SectionTitle>
           </Col>
@@ -53,9 +53,9 @@ export default async function Home() {
       </Section>
 
       <Section>
-        <Container className="gap-10 justify-center">
+        <Container centered>
           <SectionTitle>Latest Blog Posts</SectionTitle>
-          <Col className="gap-6">
+          <Col>
             <LargeBlogCard post={latestPost} />
             <Grid3>
               {recentPosts.map((post) => (
@@ -63,7 +63,7 @@ export default async function Home() {
               ))}
             </Grid3>
           </Col>
-          <Button className="mt-6" tag={Link} href="/blog">View All Posts</Button>
+          <Button tag={Link} href="/blog">View All Posts</Button>
         </Container>
       </Section>
 

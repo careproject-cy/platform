@@ -27,6 +27,14 @@ export interface HideProps {
   xlHide?: boolean;
 }
 
+export interface PositionProps {
+  relative?: boolean;
+  absolute?: boolean;
+  fixed?: boolean;
+  sticky?: boolean;
+  static?: boolean;
+}
+
 export interface TagProps {
   tag?: React.ElementType | string;
 }
@@ -35,6 +43,10 @@ export interface ReverseProps {
   reverse?: boolean;
 }
 
-export type BaseComponentProps = TagProps & Partial<SizeProps & IgnoreSizeProps & BreakpointProps & HideProps> & React.HTMLProps<HTMLElement>;
+export interface CenteredProps {
+  centered?: boolean;
+}
 
-export type LayoutComponentProps = BaseComponentProps & ReverseProps;
+export type BaseComponentProps = TagProps & Partial<SizeProps & IgnoreSizeProps & BreakpointProps & HideProps & PositionProps> & React.HTMLProps<HTMLElement>;
+
+export type LayoutComponentProps = BaseComponentProps & ReverseProps & CenteredProps;

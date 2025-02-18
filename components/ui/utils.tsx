@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { BaseComponentProps, BreakpointProps, HideProps, ReverseProps, SizeProps } from "./props";
+import { BaseComponentProps, BreakpointProps, CenteredProps, HideProps, PositionProps, ReverseProps, SizeProps } from "./props";
 
 function getBooleanClass<
   T extends Record<string, boolean | undefined>
@@ -30,7 +30,7 @@ export function componentBuilder(
     ...other
   } = baseProps;
 
-  let otherProps: (typeof other) & ReverseProps = { ...other };
+  let otherProps: (typeof other) & Partial<ReverseProps & CenteredProps> = { ...other };
 
   function finalize(): React.ReactElement {
     const Tag = tag || defaultTag;
@@ -81,6 +81,16 @@ export function componentBuilder(
       otherProps = remainingProps;
       return builder;
     },
+    withCentered(centeredMap: Record<keyof CenteredProps, string>) {
+      const {
+        centered,
+        ...remainingProps
+      } = otherProps;
+      const centeredClass = getBooleanClass({ centered }, centeredMap);
+      extraClasses.push(centeredClass);
+      otherProps = remainingProps;
+      return builder;
+    },
     withHide(hideMap: Record<keyof HideProps, string>) {
       const {
         xsHide, smHide, mdHide, lgHide, xlHide,
@@ -91,6 +101,19 @@ export function componentBuilder(
         hideMap
       );
       extraClasses.push(hideClass);
+      otherProps = remainingProps;
+      return builder;
+    },
+    withPosition(positionMap: Record<keyof PositionProps, string>) {
+      const {
+        relative, absolute, fixed, sticky, static: staticProp,
+        ...remainingProps
+      } = otherProps;
+      const positionClass = getBooleanClass(
+        { relative, absolute, fixed, sticky, static: staticProp },
+        positionMap
+      );
+      extraClasses.push(positionClass);
       otherProps = remainingProps;
       return builder;
     },

@@ -2,8 +2,11 @@ import React from 'react';
 import { BaseComponentProps, LayoutComponentProps } from "./props";
 import { componentBuilder } from "./utils";
 
-export const Section: React.FC<BaseComponentProps> = (props) =>
-  componentBuilder(props, "section", "w-full flex flex-col items-center")
+export const Section: React.FC<LayoutComponentProps> = (props) =>
+  componentBuilder(props, "section", "w-full flex flex-col items-start")
+    .withCentered({
+      centered: "items-center"
+    })
     .withSizes({
       xs: "py-6  max-lg:py-4  max-md:py-2",
       sm: "py-8  max-lg:py-6  max-md:py-4",
@@ -20,8 +23,11 @@ export const Section: React.FC<BaseComponentProps> = (props) =>
     })
     .build();
 
-export const Container: React.FC<BaseComponentProps> = (props) =>
-  componentBuilder(props, "div", "flex flex-col items-center mx-auto w-full")
+export const Container: React.FC<LayoutComponentProps> = (props) =>
+  componentBuilder(props, "div", "flex flex-col mx-auto w-full")
+    .withCentered({
+      centered: "items-center"
+    })
     .withSizes({
       xs: "max-w-5xl gap-6  max-lg:gap-4  max-md:gap-2",
       sm: "max-w-6xl gap-8  max-lg:gap-6  max-md:gap-4",
@@ -45,6 +51,9 @@ export const Col: React.FC<LayoutComponentProps> = (props) =>
     .withReverse({
       reverse: "flex-col-reverse"
     })
+    .withCentered({
+      centered: "items-center"
+    })
     .build();
 
 export const Row: React.FC<LayoutComponentProps> = (props) =>
@@ -52,6 +61,9 @@ export const Row: React.FC<LayoutComponentProps> = (props) =>
     .withSizes(commonGaps)
     .withReverse({
       reverse: "flex-row-reverse"
+    })
+    .withCentered({
+      centered: "items-center"
     })
     .withBreakpoints({
       xsCol: "max-xs:flex-col",

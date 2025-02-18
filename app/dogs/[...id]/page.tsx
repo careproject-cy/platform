@@ -39,7 +39,7 @@ export default async function DogPage({ params }: DogPageProps) {
   const dogs = await fetchDogs()
   const filename = `${id.join("\\")}.md`
   const dog = dogs.find(d => d.filename === filename)
-  
+
   if (!dog) {
     notFound()
   }
@@ -54,44 +54,48 @@ export default async function DogPage({ params }: DogPageProps) {
   return (
     <Layout>
       <Section>
-        <Container className="gap-10 flex-1 py-0 max-w-6xl">
+        <Container sm>
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${dog.filename.replace(".md", "")}`, text: dog.name }]} />
-          <Row className="gap-6 w-full items-start md:max-lg:flex-col">
+          <Row mdCol className="items-start">
             <Gallery className="flex-1" images={galleryImages} />
             <Col className="w-full gap-6 flex-1">
               <Col className="gap-3">
-                <Row className="w-full justify-between items-center gap-6">
+                <Row className="justify-between">
                   <PageTitle>{dog.name}</PageTitle>
                   <div className="text-md px-3 py-1 rounded-lg bg-gray-100 font-semibold text-gray-600">{dog.gender}</div>
                 </Row>
-                <Row className="w-full justify-between items-center gap-6">
+                <Row className="justify-between">
                   <Text>{dog.breed}</Text>
                   <Text>~{dog.age} years old</Text>
                 </Row>
                 <Text className="italic">{sizeText}</Text>
               </Col>
               <Divider />
-              <Col className="gap-2">
+              <Col sm>
                 <TextTitle>Description</TextTitle>
                 <Md text={markdown} />
               </Col>
               <Divider />
-              <Col className="gap-2 opacity-50">
-                <TextTitle className="text-xl">
+              <Col sm className="opacity-75">
+                <TextTitle sm>
                   Added at{" "}
                   {getDate(dog.added)}
                 </TextTitle>
-                <Text className="text-md">Please note that the information about the dog is collected at the time the dog was added to the website meaning some of the data may not be accurate.</Text>
+                <Text>Please note that the information about the dog is collected at the time the dog was added to the website meaning some of the data may not be accurate.</Text>
               </Col>
             </Col>
           </Row>
-          <Divider />
-          {similarDogs.length !== 0 && <SectionTitle className="w-full">Similar dogs</SectionTitle>}
-          <Grid4>
-            {similarDogs.map((dog) => (
-              <DogCard key={dog.filename} {...dog} />
-            ))}
-          </Grid4>
+          {similarDogs.length !== 0 &&
+            <>
+              <Divider />
+              <SectionTitle>Similar dogs</SectionTitle>
+              <Grid4>
+                {similarDogs.map((dog) => (
+                  <DogCard key={dog.filename} {...dog} />
+                ))}
+              </Grid4>
+            </>
+          }
         </Container>
       </Section>
     </Layout>
