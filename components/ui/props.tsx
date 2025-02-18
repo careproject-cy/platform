@@ -45,6 +45,8 @@ export interface ReverseProps {
 
 export interface CenteredProps {
   centered?: boolean;
+  vCentered?: boolean;
+  hCentered?: boolean;
 }
 
 export type BaseComponentProps = TagProps & Partial<SizeProps & IgnoreSizeProps & BreakpointProps & HideProps & PositionProps> & React.HTMLProps<HTMLElement>;

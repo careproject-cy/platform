@@ -2,11 +2,15 @@ import React from 'react';
 import { BaseComponentProps, LayoutComponentProps } from "./props";
 import { componentBuilder } from "./utils";
 
+const centeredClasses = {
+  centered: "items-center justify-center",
+  vCentered: "items-center",
+  hCentered: "justify-center"
+}
+
 export const Section: React.FC<LayoutComponentProps> = (props) =>
   componentBuilder(props, "section", "w-full flex flex-col items-start")
-    .withCentered({
-      centered: "items-center"
-    })
+    .withCentered(centeredClasses)
     .withSizes({
       xs: "py-6  max-lg:py-4  max-md:py-2",
       sm: "py-8  max-lg:py-6  max-md:py-4",
@@ -25,9 +29,7 @@ export const Section: React.FC<LayoutComponentProps> = (props) =>
 
 export const Container: React.FC<LayoutComponentProps> = (props) =>
   componentBuilder(props, "div", "flex flex-col mx-auto w-full")
-    .withCentered({
-      centered: "items-center"
-    })
+    .withCentered(centeredClasses)
     .withSizes({
       xs: "max-w-3xl gap-2  max-lg:gap-1",
       sm: "max-w-4xl gap-4  max-lg:gap-3 max-md:gap-2",
@@ -51,9 +53,7 @@ export const Col: React.FC<LayoutComponentProps> = (props) =>
     .withReverse({
       reverse: "flex-col-reverse"
     })
-    .withCentered({
-      centered: "items-center"
-    })
+    .withCentered(centeredClasses)
     .build();
 
 export const Row: React.FC<LayoutComponentProps> = (props) =>
@@ -62,9 +62,7 @@ export const Row: React.FC<LayoutComponentProps> = (props) =>
     .withReverse({
       reverse: "flex-row-reverse"
     })
-    .withCentered({
-      centered: "items-center"
-    })
+    .withCentered(centeredClasses)
     .withBreakpoints({
       xsCol: "max-xs:flex-col",
       smCol: "max-sm:flex-col",
