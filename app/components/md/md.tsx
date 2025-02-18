@@ -27,11 +27,13 @@ const MdLink: React.FC<unknown> = (props) => {
 
 const MdImg: React.FC<unknown> = (props) => {
   const { src, alt, title, ...rest } = props as { src: string; alt: string; title: string; } & Record<string, unknown>;
-  return <Image {...rest} title={title} src={src} alt={alt}
-    className="w-full rounded-2xl"
-    width={0}
-    height={0}
-    sizes="100vw" />;
+  return (
+    <Image {...rest} title={title} src={src} alt={alt}
+      className="w-full rounded-2xl"
+      width={0}
+      height={0}
+      sizes="100vw" />
+  );
 };
 
 const MdContainer: React.FC<unknown> = (props) => <Col className="gap-6" {...(props as Record<string, unknown>)} />;
