@@ -125,6 +125,13 @@ export function componentBuilder(
         lgHide: "max-lg:hidden",
         xlHide: "max-xl:hidden"
       })
+      builder.withPosition({
+        relative: "relative",
+        absolute: "absolute",
+        fixed: "fixed",
+        sticky: "sticky",
+        static: "static"
+      })
       return finalize();
     },
   };

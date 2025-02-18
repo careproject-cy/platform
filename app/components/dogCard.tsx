@@ -17,8 +17,8 @@ export default function DogCard(dog: DogMetadata) {
   return (
     notAvailable ? null :
       <Link href={`/dogs/${dog.filename.replace(".md", "")}`} className="w-full">
-        <Col sm>
-          <Col className="relative">
+        <Col>
+          <Col relative>
             <Image
               src={dogImages[0]}
               alt={name}

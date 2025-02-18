@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import Layout from '../../components/layout'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { Col, Container } from "@/components/ui/layout"
+import { Col, Container, Section } from "@/components/ui/layout"
 import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
 import Md from "@/app/components/md/md"
 import { fetchBlogposts, fetchText } from "@/app/data/fetchData"
@@ -30,30 +30,32 @@ export default async function BlogPage({ params }: BlogPageProps) {
 
   return (
     <Layout>
-      <Container tag={"article"} className="my-10 max-w-4xl">
-        <Col className="gap-10">
-          <Col className="gap-6">
-            <PageTitle>{post.title}</PageTitle>
-            <Text>{getDate(post.date)}</Text>
-            <Image
-              src={getImageSrc(post.imageSrc)}
-              alt={post.title}
-              width={600}
-              height={400}
-              className="relative object-cover w-full aspect-3/2 rounded-xl overflow-hidden"
-            />
-            <Md text={markdown} />
-            <Button tag={Link} href="/blog" className="w-fit">Back to Blog</Button>
+      <Section>
+        <Container sm tag={"article"}>
+          <Col xl>
+            <Col lg>
+              <PageTitle>{post.title}</PageTitle>
+              <Text>{getDate(post.date)}</Text>
+              <Image
+                src={getImageSrc(post.imageSrc)}
+                alt={post.title}
+                width={600}
+                height={400}
+                className="relative object-cover w-full aspect-3/2 rounded-xl overflow-hidden"
+              />
+              <Md text={markdown} />
+              <Button tag={Link} href="/blog">Back to Blog</Button>
+            </Col>
+            <Divider />
+            <SectionTitle>Related Posts</SectionTitle>
+            <Col xl>
+              {relatedPosts.map((p, i) => (
+                <LargeBlogCard key={p.filename} post={p} showBadge={false} showButton={false} reverse={i % 2 !== 0} />
+              ))}
+            </Col>
           </Col>
-          <Divider />
-          <SectionTitle>Related Posts</SectionTitle>
-          <Col className="gap-10">
-            {relatedPosts.map((p, i) => (
-              <LargeBlogCard key={p.filename} post={p} showBadge={false} showButton={false} reverse={i % 2 !== 0} />
-            ))}
-          </Col>
-        </Col>
-      </Container>
+        </Container>
+      </Section>
     </Layout>
   )
 }

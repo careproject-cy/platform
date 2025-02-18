@@ -3,13 +3,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
 import { getImageSrc } from "@/app/utils/images"
+import { Col } from "@/components/ui/layout"
+import { Text } from "@/components/ui/typography"
 
 export function BlogCard({ post }: { post: BlogPostMetadata }) {
   const id = post.filename.replace('.md', '')
   const title = post.title
   const desc = post.description
   return (
-    <div className="w-full flex flex-col gap-6">
+    <Col>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
           src={getImageSrc(post.imageSrc)}
@@ -19,15 +21,15 @@ export function BlogCard({ post }: { post: BlogPostMetadata }) {
           className="relative object-cover h-auto w-full aspect-3/2 rounded-xl overflow-hidden"
         />
       </Link>
-      <div className="w-full flex flex-col gap-4">
+      <Col>
         <h3 className={`font-semibold leading-none tracking-tight text-2xl`}>
           <Link href={`/blog/${id}`} className="w-full">
             {title}
           </Link>
         </h3>
-        <div className="line-clamp-2 text-sm">{desc}</div>
-        <div className="text-sm font-semibold text-gray-500">{getDate(post.date)}</div>
-      </div>
-    </div>
+        <Text className="line-clamp-2">{desc}</Text>
+        <Text className="semibold text-gray-500">{getDate(post.date)}</Text>
+      </Col>
+    </Col>
   )
 }

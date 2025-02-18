@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Layout from '../../components/layout'
 import type { Metadata } from 'next'
-import { Col, Row, Section, Container, Grid4 } from "@/components/ui/layout"
+import { Col, Row, Section, Container, Grid3 } from "@/components/ui/layout"
 import { PageTitle, SectionTitle, Text, TextTitle } from "@/components/ui/typography"
 import { Divider } from "@/components/ui/divider"
 import Gallery from "@/app/components/gallery"
@@ -54,9 +54,9 @@ export default async function DogPage({ params }: DogPageProps) {
   return (
     <Layout>
       <Section>
-        <Container sm>
+        <Container>
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${dog.filename.replace(".md", "")}`, text: dog.name }]} />
-          <Row mdCol className="items-start">
+          <Row xl mdCol className="items-start">
             <Gallery className="flex-1" images={galleryImages} />
             <Col className="w-full gap-6 flex-1">
               <Col className="gap-3">
@@ -89,11 +89,11 @@ export default async function DogPage({ params }: DogPageProps) {
             <>
               <Divider />
               <SectionTitle>Similar dogs</SectionTitle>
-              <Grid4>
+              <Grid3>
                 {similarDogs.map((dog) => (
                   <DogCard key={dog.filename} {...dog} />
                 ))}
-              </Grid4>
+              </Grid3>
             </>
           }
         </Container>

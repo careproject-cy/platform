@@ -26,9 +26,9 @@ export default async function Home() {
   return (
     <Layout>
       <Section className="border-b bg-gray-50">
-        <Container className="py-12 max-lg:py-10 max-md:py-8">
+        <Container xl className="py-12 max-lg:py-10 max-md:py-8">
           <Row xl lgCol>
-            <Col>
+            <Col lg>
               <PageTitle>{slogan}</PageTitle>
               <Text lg>{longDescription}</Text>
             </Col>
@@ -38,7 +38,7 @@ export default async function Home() {
       </Section>
 
       <Section>
-        <Container centered>
+        <Container xl centered>
           <Col centered>
             <Badge>Meet the dogs</Badge>
             <SectionTitle>Dogs Available For Adoption</SectionTitle>
@@ -53,9 +53,9 @@ export default async function Home() {
       </Section>
 
       <Section>
-        <Container centered>
+        <Container xl centered>
           <SectionTitle>Latest Blog Posts</SectionTitle>
-          <Col>
+          <Col lg>
             <LargeBlogCard post={latestPost} />
             <Grid3>
               {recentPosts.map((post) => (

@@ -29,20 +29,20 @@ export const Container: React.FC<LayoutComponentProps> = (props) =>
       centered: "items-center"
     })
     .withSizes({
-      xs: "max-w-5xl gap-6  max-lg:gap-4  max-md:gap-2",
-      sm: "max-w-6xl gap-8  max-lg:gap-6  max-md:gap-4",
-      md: "max-w-7xl gap-10 max-lg:gap-8  max-md:gap-6",
-      lg: "max-w-8xl gap-12 max-lg:gap-10 max-md:gap-8",
-      xl: "max-w-9xl gap-14 max-lg:gap-12 max-md:gap-10"
+      xs: "max-w-3xl gap-2  max-lg:gap-1",
+      sm: "max-w-4xl gap-4  max-lg:gap-3 max-md:gap-2",
+      md: "max-w-5xl gap-6  max-lg:gap-5 max-md:gap-4",
+      lg: "max-w-6xl gap-8  max-lg:gap-7 max-md:gap-6",
+      xl: "max-w-7xl gap-10 max-lg:gap-9 max-md:gap-8"
     })
     .build();
 
 const commonGaps = {
-  xs: "gap-2",
-  sm: "gap-4  max-lg:gap-3 max-md:gap-2",
-  md: "gap-6  max-lg:gap-5 max-md:gap-4",
-  lg: "gap-8  max-lg:gap-7 max-md:gap-6",
-  xl: "gap-10 max-lg:gap-9 max-md:gap-8"
+  xs: "gap-1",
+  sm: "gap-2 max-lg:gap-1",
+  md: "gap-4 max-lg:gap-3 max-md:gap-2",
+  lg: "gap-6 max-lg:gap-5 max-md:gap-4",
+  xl: "gap-8 max-lg:gap-7 max-md:gap-"
 }
 
 export const Col: React.FC<LayoutComponentProps> = (props) =>
