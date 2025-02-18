@@ -1,11 +1,14 @@
 ---
   name: Dorothy
-  breed: hound mixed
+  breed: Hound mixed
   age: 2
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg
+    img/germasogeia/dorothy/dorothy-smiling-adoption.jpg,
+    img/germasogeia/dorothy/hound-mixed-girl.jpg,
+    img/germasogeia/dorothy/shy-dog-cyprus.jpg,
+    img/germasogeia/dorothy/need-family-cyprus-dog.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-02-14
