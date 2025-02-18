@@ -25,7 +25,7 @@ export function componentBuilder(
   const extraClasses: string[] = [];
   const { className, children, tag, ...other } = baseProps;
 
-  let otherProps: (typeof other) & Partial<ReverseProps & CenteredProps> = { ...other };
+  const otherProps: (typeof other) & Partial<ReverseProps & CenteredProps> = { ...other };
 
   const propsToRemove: string[] = []
 
@@ -45,76 +45,46 @@ export function componentBuilder(
   const builder = {
     withSizes(sizeMap: Record<keyof SizeProps, string>) {
       const { xs, sm, md, lg, xl, ignoreSize } = otherProps;
-      const sizeClass = getBooleanClass(
-        { xs, sm, md, lg, xl },
-        sizeMap,
-        "md"
-      );
+      const sizeClass = getBooleanClass({ xs, sm, md, lg, xl }, sizeMap, "md");
       if (ignoreSize === undefined || !ignoreSize)
         extraClasses.push(sizeClass);
-      Object.keys(sizeMap).forEach((key) => {
-        propsToRemove.push(key)
-      })
+      Object.keys(sizeMap).forEach((key) => { propsToRemove.push(key) })
       propsToRemove.push("ignoreSize")
       return builder;
     },
     withBreakpoints(breakpointMap: Record<keyof BreakpointProps, string>) {
-      const {
-        xsCol, smCol, mdCol, lgCol, xlCol,
-        ...remainingProps
-      } = otherProps;
-      const breakpointClass = getBooleanClass(
-        { xsCol, smCol, mdCol, lgCol, xlCol },
-        breakpointMap
-      );
+      const { xsCol, smCol, mdCol, lgCol, xlCol } = otherProps;
+      const breakpointClass = getBooleanClass({ xsCol, smCol, mdCol, lgCol, xlCol }, breakpointMap);
       extraClasses.push(breakpointClass);
-      otherProps = remainingProps;
+      Object.keys(breakpointMap).forEach((key) => { propsToRemove.push(key) })
       return builder;
     },
     withReverse(reverseMap: Record<keyof ReverseProps, string>) {
-      const {
-        reverse,
-        ...remainingProps
-      } = otherProps;
+      const { reverse } = otherProps;
       const reverseClass = getBooleanClass({ reverse }, reverseMap);
       extraClasses.push(reverseClass);
-      otherProps = remainingProps;
+      Object.keys(reverseMap).forEach((key) => { propsToRemove.push(key) })
       return builder;
     },
     withCentered(centeredMap: Record<keyof CenteredProps, string>) {
-      const {
-        centered,
-        ...remainingProps
-      } = otherProps;
-      const centeredClass = getBooleanClass({ centered }, centeredMap);
+      const { centered, vCentered, hCentered } = otherProps;
+      const centeredClass = getBooleanClass({ centered, vCentered, hCentered }, centeredMap);
       extraClasses.push(centeredClass);
-      otherProps = remainingProps;
+      Object.keys(centeredMap).forEach((key) => { propsToRemove.push(key) })
       return builder;
     },
     withHide(hideMap: Record<keyof HideProps, string>) {
-      const {
-        xsHide, smHide, mdHide, lgHide, xlHide,
-        ...remainingProps
-      } = otherProps;
-      const hideClass = getBooleanClass(
-        { xsHide, smHide, mdHide, lgHide, xlHide },
-        hideMap
-      );
+      const { xsHide, smHide, mdHide, lgHide, xlHide } = otherProps;
+      const hideClass = getBooleanClass({ xsHide, smHide, mdHide, lgHide, xlHide }, hideMap);
       extraClasses.push(hideClass);
-      otherProps = remainingProps;
+      Object.keys(hideMap).forEach((key) => { propsToRemove.push(key) })
       return builder;
     },
     withPosition(positionMap: Record<keyof PositionProps, string>) {
-      const {
-        relative, absolute, fixed, sticky, static: staticProp,
-        ...remainingProps
-      } = otherProps;
-      const positionClass = getBooleanClass(
-        { relative, absolute, fixed, sticky, static: staticProp },
-        positionMap
-      );
+      const { relative, absolute, fixed, sticky, static: staticProp } = otherProps;
+      const positionClass = getBooleanClass({ relative, absolute, fixed, sticky, static: staticProp }, positionMap);
       extraClasses.push(positionClass);
-      otherProps = remainingProps;
+      Object.keys(positionMap).forEach((key) => { propsToRemove.push(key) })
       return builder;
     },
     build() {
