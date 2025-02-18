@@ -33,7 +33,7 @@ export default async function Home() {
               <Text lg>{longDescription}</Text>
               <Row lg smCol>
                 <Button lg tag={Link} href="/pages/get-involved" className="bg-gradient-to-br from-orange-400 to-red-600 border-orange-700 font-black text-white hover:opacity-90 hover:scale-105">Get Involved</Button>
-                <Button lg tag={Link} href="/pages/about" className="hover:opacity-90 hover:scale-105">Learn More</Button>
+                <Button lg tag={Link} href="/pages/about" className="bg-white hover:opacity-90 hover:scale-105">Learn More</Button>
               </Row>
             </Col>
             <Carousel images={carouselDogs} />
