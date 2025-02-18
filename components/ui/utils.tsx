@@ -42,51 +42,45 @@ export function componentBuilder(
     );
   }
 
+  const registerKeys = (keys: string[]) => {
+    keys.forEach((key) => propsToRemove.push(key));
+  };
+
+  const withBooleanProps = <T extends Record<string, string>>(
+    propMap: Record<keyof T, string>,
+    fallbackKey?: keyof T
+  ) => {
+    // Build a subset of props from otherProps for the keys in the map.
+    const propsSubset: Partial<Record<keyof T, boolean>> = {} as Partial<Record<keyof T, boolean>>;
+    const keys = Object.keys(propMap) as (keyof T)[];
+    keys.forEach((key) => {
+      if (key in otherProps) {
+        propsSubset[key] = otherProps[key as keyof typeof otherProps];
+      }
+    });
+    // Compute the class.
+    const newClass = getBooleanClass(propsSubset, propMap, fallbackKey);
+    extraClasses.push(newClass);
+    // Register all keys found in the map.
+    registerKeys(keys as string[]);
+    return builder;
+  };
+
   const builder = {
-    withSizes(sizeMap: Record<keyof SizeProps, string>) {
-      const { xs, sm, md, lg, xl, ignoreSize } = otherProps;
-      const sizeClass = getBooleanClass({ xs, sm, md, lg, xl }, sizeMap, "md");
-      if (ignoreSize === undefined || !ignoreSize)
-        extraClasses.push(sizeClass);
-      Object.keys(sizeMap).forEach((key) => { propsToRemove.push(key) })
-      propsToRemove.push("ignoreSize")
+    withSizes: (sizeMap: Record<keyof SizeProps, string>) => {
+      const { ignoreSize } = otherProps;
+      if (ignoreSize !== undefined && ignoreSize) {
+        registerKeys(["ignoreSize"]);
+      } else {
+        withBooleanProps(sizeMap, "md");
+      }
       return builder;
     },
-    withBreakpoints(breakpointMap: Record<keyof BreakpointProps, string>) {
-      const { xsCol, smCol, mdCol, lgCol, xlCol } = otherProps;
-      const breakpointClass = getBooleanClass({ xsCol, smCol, mdCol, lgCol, xlCol }, breakpointMap);
-      extraClasses.push(breakpointClass);
-      Object.keys(breakpointMap).forEach((key) => { propsToRemove.push(key) })
-      return builder;
-    },
-    withReverse(reverseMap: Record<keyof ReverseProps, string>) {
-      const { reverse } = otherProps;
-      const reverseClass = getBooleanClass({ reverse }, reverseMap);
-      extraClasses.push(reverseClass);
-      Object.keys(reverseMap).forEach((key) => { propsToRemove.push(key) })
-      return builder;
-    },
-    withCentered(centeredMap: Record<keyof CenteredProps, string>) {
-      const { centered, vCentered, hCentered } = otherProps;
-      const centeredClass = getBooleanClass({ centered, vCentered, hCentered }, centeredMap);
-      extraClasses.push(centeredClass);
-      Object.keys(centeredMap).forEach((key) => { propsToRemove.push(key) })
-      return builder;
-    },
-    withHide(hideMap: Record<keyof HideProps, string>) {
-      const { xsHide, smHide, mdHide, lgHide, xlHide } = otherProps;
-      const hideClass = getBooleanClass({ xsHide, smHide, mdHide, lgHide, xlHide }, hideMap);
-      extraClasses.push(hideClass);
-      Object.keys(hideMap).forEach((key) => { propsToRemove.push(key) })
-      return builder;
-    },
-    withPosition(positionMap: Record<keyof PositionProps, string>) {
-      const { relative, absolute, fixed, sticky, static: staticProp } = otherProps;
-      const positionClass = getBooleanClass({ relative, absolute, fixed, sticky, static: staticProp }, positionMap);
-      extraClasses.push(positionClass);
-      Object.keys(positionMap).forEach((key) => { propsToRemove.push(key) })
-      return builder;
-    },
+    withBreakpoints: (breakpointMap: Record<keyof BreakpointProps, string>) => withBooleanProps(breakpointMap),
+    withReverse: (reverseMap: Record<keyof ReverseProps, string>) => withBooleanProps(reverseMap),
+    withCentered: (centeredMap: Record<keyof CenteredProps, string>) => withBooleanProps(centeredMap),
+    withHide: (hideMap: Record<keyof HideProps, string>) => withBooleanProps(hideMap),
+    withPosition: (positionMap: Record<keyof PositionProps, string>) => withBooleanProps(positionMap),
     build() {
       builder.withHide({
         xsHide: "max-xs:hidden",
