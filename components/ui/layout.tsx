@@ -44,7 +44,7 @@ const commonGaps = {
   sm: "gap-2 max-lg:gap-1",
   md: "gap-4 max-lg:gap-3 max-md:gap-2",
   lg: "gap-6 max-lg:gap-5 max-md:gap-4",
-  xl: "gap-8 max-lg:gap-7 max-md:gap-"
+  xl: "gap-8 max-lg:gap-7 max-md:gap-6"
 }
 
 export const Col: React.FC<LayoutComponentProps> = (props) =>

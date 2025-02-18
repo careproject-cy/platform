@@ -3,6 +3,19 @@ import { componentBuilder } from "./utils";
 import { BaseComponentProps } from "./props";
 
 export const Button: React.FC<BaseComponentProps> = (props) =>
-  componentBuilder(props, "button",
-    "w-fit cursor-pointer flex justify-center items-center border-1 rounded-xl px-4 py-2 text-xl font-semibold shadow-sm hover:shadow-md hover:bg-gray-50 transition-all duration-300")
+  componentBuilder(props, "button", "w-fit cursor-pointer flex justify-center items-center border border-gray-200 transition-all duration-300 hover:bg-gray-50")
+    .withSizes({
+      xs: "px-2 py-1 rounded-sm text-xs",
+      sm: "px-3 py-1 rounded-md text-sm",
+      md: "px-4 py-2 rounded-md text-base",
+      lg: "px-6 py-3 rounded-lg text-lg",
+      xl: "px-8 py-4 rounded-xl text-xl",
+    })
+    .withSizes({
+      xs: "shadow-xs hover:shadow-sm",
+      sm: "shadow-xs hover:shadow-sm",
+      md: "shadow-sm hover:shadow-md",
+      lg: "shadow-md hover:shadow-lg",
+      xl: "shadow-lg hover:shadow-xl",
+    })
     .build();
