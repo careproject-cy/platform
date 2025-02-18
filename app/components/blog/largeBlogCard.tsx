@@ -9,13 +9,13 @@ import { Text, TextTitle } from "@/components/ui/typography"
 import { Button } from "@/components/ui/button"
 
 
-export function LargeBlogCard({ post, showBadge = true, showButton = true, reverse = false }: { post: BlogPostMetadata, showBadge?: boolean, showButton?: boolean, reverse?: boolean }) {
+export function LargeBlogCard({ post }: { post: BlogPostMetadata }) {
   const id = post.filename.replace('.md', '')
   const title = post.title
   const desc = post.description
   const tags = post.tags
   return (
-    <Row lg reverse={reverse} mdCol>
+    <Row lg mdCol>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
           src={getImageSrc(post.imageSrc)}
@@ -26,11 +26,11 @@ export function LargeBlogCard({ post, showBadge = true, showButton = true, rever
         />
       </Link>
       <Col className="justify-center" lg>
-        <Badge lg lgHide hidden={!showBadge || tags.length === 0}>{tags[0]}</Badge>
+        <Badge lg lgHide hidden={tags.length === 0}>{tags[0]}</Badge>
         <TextTitle lg tag={Link} href={`/blog/${id}`}>{title}</TextTitle>
         <Text lg className="line-clamp-3">{desc}</Text>
         <Text lg className="font-semibold text-gray-500">{getDate(post.date)}</Text>
-        <Button tag={Link} href={`/blog/${id}`} hidden={!showButton} lgHide>Read more</Button>
+        <Button tag={Link} href={`/blog/${id}`} lgHide>Read more</Button>
       </Col>
     </Row>
   )

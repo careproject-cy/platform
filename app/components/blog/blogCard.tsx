@@ -3,15 +3,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
 import { getImageSrc } from "@/app/utils/images"
-import { Col } from "@/components/ui/layout"
+import { Col, Row } from "@/components/ui/layout"
 import { Text } from "@/components/ui/typography"
 
-export function BlogCard({ post }: { post: BlogPostMetadata }) {
+export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPostMetadata, horizontal?: boolean, reverse?: boolean }) {
   const id = post.filename.replace('.md', '')
   const title = post.title
   const desc = post.description
+  const Tag = horizontal ? Row : Col;
   return (
-    <Col>
+    <Tag lg reverse={reverse}>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
           src={getImageSrc(post.imageSrc)}
@@ -30,6 +31,6 @@ export function BlogCard({ post }: { post: BlogPostMetadata }) {
         <Text className="line-clamp-2">{desc}</Text>
         <Text className="semibold text-gray-500">{getDate(post.date)}</Text>
       </Col>
-    </Col>
+    </Tag>
   )
 }

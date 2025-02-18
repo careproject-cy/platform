@@ -10,7 +10,7 @@ import Image from "next/image"
 import { getImageSrc } from "@/app/utils/images"
 import { getDate } from "@/app/utils/dateUtils"
 import { Divider } from "@/components/ui/divider"
-import { LargeBlogCard } from "@/app/components/blog/largeBlogCard"
+import { BlogCard } from "@/app/components/blog/blogCard"
 
 interface BlogPageProps {
   params: Promise<{ id: string }>
@@ -31,7 +31,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
   return (
     <Layout>
       <Section>
-        <Container sm tag={"article"}>
+        <Container xs tag={"article"}>
           <Col xl>
             <Col lg>
               <PageTitle>{post.title}</PageTitle>
@@ -44,15 +44,19 @@ export default async function BlogPage({ params }: BlogPageProps) {
                 className="relative object-cover w-full aspect-3/2 rounded-xl overflow-hidden"
               />
               <Md text={markdown} />
-              <Button tag={Link} href="/blog">Back to Blog</Button>
             </Col>
-            <Divider />
-            <SectionTitle>Related Posts</SectionTitle>
-            <Col xl>
-              {relatedPosts.map((p, i) => (
-                <LargeBlogCard key={p.filename} post={p} showBadge={false} showButton={false} reverse={i % 2 !== 0} />
-              ))}
-            </Col>
+            <Button tag={Link} href="/blog">Back to Blog</Button>
+            {relatedPosts.length === 0 ? null :
+              <>
+                <Divider />
+                <SectionTitle>Related Posts</SectionTitle>
+                <Col xl>
+                  {relatedPosts.map((p, i) => (
+                    <BlogCard key={p.filename} post={p} horizontal reverse={i % 2 !== 0} />
+                  ))}
+                </Col>
+              </>
+            }
           </Col>
         </Container>
       </Section>
