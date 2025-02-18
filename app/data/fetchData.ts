@@ -11,22 +11,18 @@ export async function getAbsoluteUrl(relUrl: string) {
 
 export async function fetchText(relUrl: string) {
   const res = await fetch(await getAbsoluteUrl(relUrl));
-
   if (!res.ok) {
     notFound();
   }
-
   const text = await res.text();
   return text;
 }
 
 export async function fetchJson(relUrl: string) {
   const res = await fetch(await getAbsoluteUrl(relUrl));
-
   if (!res.ok) {
     notFound();
   }
-
   const json = await res.json();
   return json;
 }
