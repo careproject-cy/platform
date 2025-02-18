@@ -11,9 +11,10 @@ export default function Layout() {
           <li><Link href="/" className="hover:underline">Home</Link></li>
           <li><Link href="/dogs" className="hover:underline">Dogs</Link></li>
           <li><Link href="/blog" className="hover:underline">Blog</Link></li>
+          <li><Link href="/pages/about" className="hover:underline">About</Link></li>
+          <li><Link href="/pages/get-involved" className="hover:underline whitespace-nowrap">Get Involved</Link></li>
         </ul>
       </nav>
     </Row>
   )
 }
-

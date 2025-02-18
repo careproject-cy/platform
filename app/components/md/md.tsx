@@ -2,7 +2,6 @@ import { Link as TyLink, TextTitle, List } from "@/components/ui/typography";
 import Link from 'next/link'
 import Markdoc from "@markdoc/markdoc";
 import React from "react";
-import matter from "gray-matter";
 import { Col } from "@/components/ui/layout";
 import Image from "next/image";
 
@@ -40,8 +39,7 @@ const MdContainer: React.FC<unknown> = (props) => <Col className="gap-6" {...(pr
 
 const MdList: React.FC<unknown> = (props) => <List {...(props as Record<string, unknown>)} />;
 
-const Md: React.FC<{ text: string }> = ({ text }) => {
-  const { content, data: frontmatter } = matter(text);
+const Md: React.FC<{ content: string, frontmatter: { [key: string]: unknown } }> = ({ content, frontmatter }) => {
   const ast = Markdoc.parse(content);
   const config = {
     nodes: {

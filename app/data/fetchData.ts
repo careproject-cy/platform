@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 import { notFound } from 'next/navigation'
 import { BlogPostMetadata } from "./blogPostMetadata";
 import { DogMetadata } from "./dogMetadata";
+import matter from "gray-matter";
 
 export async function getAbsoluteUrl(relUrl: string) {
   const host = (await headers()).get("host")!;
@@ -9,13 +10,14 @@ export async function getAbsoluteUrl(relUrl: string) {
   return `${protocol}://${host}/${relUrl}`;
 }
 
-export async function fetchText(relUrl: string) {
+export async function fetchMd(relUrl: string) {
   const res = await fetch(await getAbsoluteUrl(relUrl));
   if (!res.ok) {
     notFound();
   }
   const text = await res.text();
-  return text;
+  const { content, data: frontmatter } = matter(text);
+  return { content, frontmatter };
 }
 
 export async function fetchJson(relUrl: string) {

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Col, Container, Section } from "@/components/ui/layout"
 import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
 import Md from "@/app/components/md/md"
-import { fetchBlogposts, fetchText } from "@/app/data/fetchData"
+import { fetchBlogposts, fetchMd } from "@/app/data/fetchData"
 import Image from "next/image"
 import { getImageSrc } from "@/app/utils/images"
 import { getDate } from "@/app/utils/dateUtils"
@@ -20,7 +20,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
   const { id } = await params
   const posts = await fetchBlogposts();
   const post = posts.find(p => p.filename === `${id}.md`)
-  const markdown = await fetchText(`data/blog/${id}.md`)
+  const { content, frontmatter } = await fetchMd(`data/blog/${id}.md`)
 
   if (!post) {
     notFound()
@@ -43,7 +43,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                 height={400}
                 className="relative object-cover w-full aspect-3/2 rounded-xl overflow-hidden"
               />
-              <Md text={markdown} />
+              <Md content={content} frontmatter={frontmatter} />
             </Col>
             <Button tag={Link} href="/blog">Back to Blog</Button>
             {relatedPosts.length === 0 ? null :

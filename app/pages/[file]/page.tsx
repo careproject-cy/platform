@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Section, Container } from "@/components/ui/layout"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import { platform_name } from "@/app/data/consts"
-import { fetchText } from "@/app/data/fetchData"
+import { fetchMd } from "@/app/data/fetchData"
 import Md from "@/app/components/md/md"
 
 export const runtime = 'edge';
@@ -19,16 +19,18 @@ interface MdPageProps {
 }
 
 export default async function Page({ params }: MdPageProps) {
-  
+
   const { file } = await params
-  const markdown = await fetchText(`data/pages/${file}.md`)
+  const { content, frontmatter } = await fetchMd(`data/pages/${file}.md`)
+
+  const title = frontmatter.title || "Page"
 
   return (
     <Layout>
       <Section>
         <Container>
-          <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/pages/about", text: "About" }]} />
-          <Md text={markdown} />
+          <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: `/pages/${file}`, text: title }]} />
+          <Md content={content} frontmatter={frontmatter} />
         </Container>
       </Section>
     </Layout>

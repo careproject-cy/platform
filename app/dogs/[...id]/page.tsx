@@ -10,7 +10,7 @@ import { platform_name } from "@/app/data/consts"
 import DogCard from "@/app/components/dogCard"
 import { getImageSrc } from "@/app/utils/images"
 import { getDate } from "@/app/utils/dateUtils"
-import { fetchDogs, fetchText } from "@/app/data/fetchData"
+import { fetchDogs, fetchMd } from "@/app/data/fetchData"
 import Md from "@/app/components/md/md"
 
 export const runtime = 'edge';
@@ -44,7 +44,7 @@ export default async function DogPage({ params }: DogPageProps) {
     notFound()
   }
 
-  const markdown = await fetchText(`data/dogs/${filename}`)
+  const { content, frontmatter } = await fetchMd(`data/dogs/${filename}`)
 
   const sizeText = dog.size === "small" ? "Small (< 10 kg) size" : dog.size === "medium" ? "Medium (10-25 kg) size" : "Large (> 25kg) size"
   const similarDogs = dogs.filter(d => d.size === dog.size && d.filename !== dog.filename).slice(0, 4)
@@ -73,7 +73,7 @@ export default async function DogPage({ params }: DogPageProps) {
               <Divider />
               <Col sm>
                 <TextTitle>Description</TextTitle>
-                <Md text={markdown} />
+                <Md content={content} frontmatter={frontmatter} />
               </Col>
               <Divider />
               <Col sm className="opacity-75">
