@@ -23,18 +23,18 @@ export function componentBuilder(
   baseClasses: string
 ) {
   const extraClasses: string[] = [];
-  const {
-    className,
-    children,
-    tag,
-    ...other
-  } = baseProps;
+  const { className, children, tag, ...other } = baseProps;
 
   let otherProps: (typeof other) & Partial<ReverseProps & CenteredProps> = { ...other };
+
+  const propsToRemove: string[] = []
 
   function finalize(): React.ReactElement {
     const Tag = tag || defaultTag;
     const merged = twMerge(baseClasses, ...extraClasses, className);
+
+    propsToRemove.forEach(key => delete otherProps[key as keyof typeof otherProps])
+
     return (
       <Tag className={merged} {...otherProps}>
         {children}
@@ -44,10 +44,7 @@ export function componentBuilder(
 
   const builder = {
     withSizes(sizeMap: Record<keyof SizeProps, string>) {
-      const {
-        xs, sm, md, lg, xl, ignoreSize,
-        ...remainingProps
-      } = otherProps;
+      const { xs, sm, md, lg, xl, ignoreSize } = otherProps;
       const sizeClass = getBooleanClass(
         { xs, sm, md, lg, xl },
         sizeMap,
@@ -55,7 +52,10 @@ export function componentBuilder(
       );
       if (ignoreSize === undefined || !ignoreSize)
         extraClasses.push(sizeClass);
-      otherProps = remainingProps;
+      Object.keys(sizeMap).forEach((key) => {
+        propsToRemove.push(key)
+      })
+      propsToRemove.push("ignoreSize")
       return builder;
     },
     withBreakpoints(breakpointMap: Record<keyof BreakpointProps, string>) {
