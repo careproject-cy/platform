@@ -29,7 +29,7 @@ export default async function Page({ params }: MdPageProps) {
     <Layout>
       <Section>
         <Container>
-          <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: `/pages/${file}`, text: title }]} />
+          <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: `/more/${file}`, text: title }]} />
           <Md content={content} frontmatter={frontmatter} />
         </Container>
       </Section>
