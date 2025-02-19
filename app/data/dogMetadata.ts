@@ -1,5 +1,6 @@
 export interface DogMetadata {
   filename: string;
+  location: string;
   name: string;
   breed: string;
   age: number;

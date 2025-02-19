@@ -13,10 +13,13 @@ async function generateDogsJson() {
     for (const file of files) {
       if (file.endsWith(".md")) {
         const filePath = path.join(dogDir, file);
+        const folder = path.dirname(filePath).split(path.sep).pop();
+        const filename = path.basename(filePath);
         const fileContent = await fs.readFile(filePath, "utf-8");
         const { data: frontmatter } = matter(fileContent);
         const dog: DogMetadata = {
-          filename: file,
+          filename: filename,
+          location: folder || "",
           name: frontmatter.name,
           breed: frontmatter.breed,
           age: frontmatter.age,

@@ -1,6 +1,7 @@
 [
   {
-    "filename": "other\\loki.md",
+    "filename": "loki.md",
+    "location": "other",
     "name": "Loki",
     "breed": "Mixed breed",
     "age": "6 months",
@@ -13,7 +14,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "other\\luka.md",
+    "filename": "luka.md",
+    "location": "other",
     "name": "Luka",
     "breed": "Mixed breed",
     "age": "6 months",
@@ -26,7 +28,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\anya.md",
+    "filename": "anya.md",
+    "location": "germasogeia",
     "name": "Anya",
     "breed": "Mixed breed",
     "age": 2.5,
@@ -42,7 +45,8 @@
     "added": "2025-02-15T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\chloe.md",
+    "filename": "chloe.md",
+    "location": "germasogeia",
     "name": "Chloe",
     "breed": "Hound mixed",
     "age": 3,
@@ -58,7 +62,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\dorothy.md",
+    "filename": "dorothy.md",
+    "location": "germasogeia",
     "name": "Dorothy",
     "breed": "Hound mixed",
     "age": 2,
@@ -74,7 +79,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\kayla.md",
+    "filename": "kayla.md",
+    "location": "germasogeia",
     "name": "Kayla",
     "breed": "Rottweiler mixed",
     "age": 9,
@@ -90,7 +96,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\kody.md",
+    "filename": "kody.md",
+    "location": "germasogeia",
     "name": "Kodi",
     "breed": "Mixed breed",
     "age": 3,
@@ -105,7 +112,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\luna.md",
+    "filename": "luna.md",
+    "location": "germasogeia",
     "name": "Luna",
     "breed": "kokoni mix",
     "age": 2,
@@ -118,7 +126,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\marlo.md",
+    "filename": "marlo.md",
+    "location": "germasogeia",
     "name": "Marlo",
     "breed": "Coonhound",
     "age": "3-4",
@@ -131,7 +140,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\max.md",
+    "filename": "max.md",
+    "location": "germasogeia",
     "name": "Max",
     "breed": "Shepherd",
     "age": 5,
@@ -144,7 +154,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\oreo.md",
+    "filename": "oreo.md",
+    "location": "germasogeia",
     "name": "Oreo",
     "breed": "Mixed breed",
     "age": 5,
@@ -157,7 +168,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\sandy.md",
+    "filename": "sandy.md",
+    "location": "germasogeia",
     "name": "Sandy",
     "breed": "bulldog mixed",
     "age": 2,
@@ -170,7 +182,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\scarlet.md",
+    "filename": "scarlet.md",
+    "location": "germasogeia",
     "name": "Sandy",
     "breed": "Mixed breed",
     "age": 1.5,
@@ -183,7 +196,8 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "germasogeia\\zeus.md",
+    "filename": "zeus.md",
+    "location": "germasogeia",
     "name": "Zeus",
     "breed": "Malinois",
     "age": 4,

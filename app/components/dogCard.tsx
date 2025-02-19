@@ -16,7 +16,7 @@ export default function DogCard(dog: DogMetadata) {
   const showStatus = status !== 'Available'
   return (
     notAvailable ? null :
-      <Link href={`/dogs/${dog.filename.replace(".md", "")}`} className="w-full">
+      <Link href={`/dogs/${dog.location}/${dog.filename.replace(".md", "")}`} className="w-full">
         <Col>
           <Col relative>
             <Image

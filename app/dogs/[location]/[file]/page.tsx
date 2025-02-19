@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import Layout from '../../components/layout'
+import Layout from '../../../components/layout'
 import type { Metadata } from 'next'
 import { Col, Row, Section, Container, Grid3 } from "@/components/ui/layout"
 import { PageTitle, SectionTitle, Text, TextTitle } from "@/components/ui/typography"
@@ -16,31 +16,33 @@ import Md from "@/app/components/md/md"
 export const runtime = 'edge';
 
 interface IdProps {
-  params: Promise<{ id: string[] }>
+  params: Promise<{ location: string, file: string }>
 }
 
 export async function generateMetadata({ params }: IdProps): Promise<Metadata> {
-  const { id } = await params
+  const { location, file } = await params
   const dogs = await fetchDogs()
-  const filename = `${id.join("\\")}.md`
-  const dog = dogs.find(d => d.filename === filename)
+  const filename = `${file}.md`
+  const dog = dogs.find(d => d.filename === filename && d.location === location)
   return {
     title: !dog ? `Not found | ${platform_name}` : `${dog.name} | ${dog.breed} | ${platform_name}`
   }
 }
 
 export default async function DogPage({ params }: IdProps) {
-  const { id } = await params
+  const { location, file } = await params
+
+  console.log(location, file)
 
   const dogs = await fetchDogs()
-  const filename = `${id.join("\\")}.md`
-  const dog = dogs.find(d => d.filename === filename)
+  const filename = `${file}.md`
+  const dog = dogs.find(d => d.filename === filename && d.location === location)
 
   if (!dog) {
     notFound()
   }
 
-  const { content, frontmatter } = await fetchMd(`data/dogs/${filename}`)
+  const { content, frontmatter } = await fetchMd(`data/dogs/${location}/${filename}`)
 
   const sizeText = dog.size === "small" ? "Small (< 10 kg) size" : dog.size === "medium" ? "Medium (10-25 kg) size" : "Large (> 25kg) size"
   const similarDogs = dogs.filter(d => d.size === dog.size && d.filename !== dog.filename).slice(0, 4)
