@@ -10,6 +10,7 @@ export const Badge: React.FC<BaseComponentProps> = (props) =>
       sm: "text-sm",
       md: "text-md",
       lg: "text-lg",
-      xl: "text-xl"
+      xl: "text-xl",
+      ignoreSize: "",
     })
     .build();

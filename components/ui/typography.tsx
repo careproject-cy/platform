@@ -9,7 +9,8 @@ export const PageTitle: React.FC<BaseComponentProps> = (props) =>
       sm: "text-4xl",
       md: "text-5xl",
       lg: "text-6xl",
-      xl: "text-7xl"
+      xl: "text-7xl",
+      ignoreSize: "",
     })
     .build();
 
@@ -20,7 +21,8 @@ export const SectionTitle: React.FC<BaseComponentProps> = (props) =>
       sm: "text-3xl",
       md: "text-4xl",
       lg: "text-5xl",
-      xl: "text-6xl"
+      xl: "text-6xl",
+      ignoreSize: "",
     })
     .build();
 
@@ -31,7 +33,8 @@ export const TextTitle: React.FC<BaseComponentProps> = (props) =>
       sm: "text-xl",
       md: "text-2xl",
       lg: "text-3xl",
-      xl: "text-4xl"
+      xl: "text-4xl",
+      ignoreSize: "",
     })
     .build();
 
@@ -42,7 +45,8 @@ export const Text: React.FC<BaseComponentProps> = (props) =>
       sm: "text-sm",
       md: "text-md",
       lg: "text-lg",
-      xl: "text-xl"
+      xl: "text-xl",
+      ignoreSize: "",
     })
     .build();
 
@@ -53,7 +57,8 @@ export const Link: React.FC<BaseComponentProps> = (props) =>
       sm: "text-sm",
       md: "text-md",
       lg: "text-lg",
-      xl: "text-xl"
+      xl: "text-xl",
+      ignoreSize: "",
     })
     .build();
 
@@ -64,7 +69,8 @@ export const ListItem: React.FC<BaseComponentProps> = (props) =>
       sm: "text-sm",
       md: "text-md",
       lg: "text-lg",
-      xl: "text-xl"
+      xl: "text-xl",
+      ignoreSize: "",
     })
     .build();
 
@@ -75,6 +81,7 @@ export const List: React.FC<BaseComponentProps> = (props) =>
       sm: "text-sm",
       md: "text-md",
       lg: "text-lg",
-      xl: "text-xl"
+      xl: "text-xl",
+      ignoreSize: "",
     })
     .build();
