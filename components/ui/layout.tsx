@@ -61,7 +61,7 @@ export const Col: React.FC<LayoutComponentProps> = (props) =>
     .build();
 
 export const Row: React.FC<LayoutComponentProps> = (props) =>
-  componentBuilder(props, "div", "flex flex-row items-center w-full")
+  componentBuilder(props, "div", "flex flex-row items-center")
     .withSizes(commonGaps)
     .withReverse({
       reverse: "flex-row-reverse"

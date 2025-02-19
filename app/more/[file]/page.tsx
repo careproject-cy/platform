@@ -8,10 +8,13 @@ import Md from "@/app/components/md/md"
 
 export const runtime = 'edge';
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: { file: string } }): Promise<Metadata> {
+  const { file } = await params;
+  const { frontmatter } = await fetchMd(`data/pages/${file}.md`);
   return {
-    title: `About | ${platform_name}`
-  }
+    title: `${frontmatter.title || "Page"} | ${platform_name}`,
+    // You can also add description or other meta from frontmatter.
+  };
 }
 
 interface MdPageProps {
