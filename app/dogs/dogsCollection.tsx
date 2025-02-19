@@ -30,7 +30,7 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
   return (
     <>
       <Row className="justify-center">
-        <Row xs className="w-fit">
+        <Row xs vCentered>
           <label htmlFor="age-filter" className="text-sm font-medium">Filter by Age:</label>
           <select value={ageFilter} onChange={(event) => setAgeFilter(event.target.value as string)} className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50">
             <option className="bg-white text-gray-800 p-2" value={"all"}>All Ages</option>
@@ -39,7 +39,7 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
             <option className="bg-white text-gray-800 p-2" value={"senior"}>Senior (9+ years)</option>
           </select>
         </Row>
-        <Row xs className="w-fit">
+        <Row xs vCentered>
           <label htmlFor="breed-filter" className="text-sm font-medium">Filter by Breed:</label>
           <select value={breedFilter} onChange={(event) => setBreedFilter(event.target.value as string)} className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50">
             <option className="bg-white text-gray-800 p-2" value={"all"}>All Breeds</option>
