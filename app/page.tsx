@@ -32,7 +32,7 @@ export default async function Home() {
               <PageTitle>{slogan}</PageTitle>
               <Text lg>{longDescription}</Text>
               <Row lg smCol>
-                <Button lg tag={Link} href="/more/get-involved" className="bg-gradient-to-br from-orange-400 to-red-600 border-orange-400 font-bold text-white hover:opacity-90 hover:scale-105">Get Involved</Button>
+                <Button lg bold tag={Link} href="/more/get-involved" className="bg-gradient-to-br from-orange-400 to-red-600 border-orange-400 text-white hover:opacity-90 hover:scale-105">Get Involved</Button>
                 <Button lg tag={Link} href="/more/about" className="bg-white hover:opacity-90 hover:scale-105">Learn More</Button>
               </Row>
             </Col>

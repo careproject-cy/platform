@@ -12,7 +12,7 @@ export default function Layout() {
         <Link href="/dogs" className="hover:underline">Dogs</Link>
         <Link href="/blog" className="hover:underline">Blog</Link>
         <Link href="/more/about" className="hover:underline">About</Link>
-        <Button tag={Link} href="/more/get-involved" className="bg-gradient-to-br from-orange-400 to-red-600 border-orange-400 font-bold text-white hover:opacity-90 hover:scale-105">Get Involved</Button>
+        <Button bold tag={Link} href="/more/get-involved" className="bg-gradient-to-br from-orange-400 to-red-600 border-orange-400 text-white hover:opacity-90 hover:scale-105">Get Involved</Button>
       </Row>
     </Row>
   )

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
 import { getImageSrc } from "@/app/utils/images"
 import { Col, Row } from "@/components/ui/layout"
-import { Text } from "@/components/ui/typography"
+import { Text, TextTitle } from "@/components/ui/typography"
 
 export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPostMetadata, horizontal?: boolean, reverse?: boolean }) {
   const id = post.filename.replace('.md', '')
@@ -23,13 +23,11 @@ export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPost
         />
       </Link>
       <Col>
-        <h3 className={`font-semibold leading-none tracking-tight text-2xl`}>
-          <Link href={`/blog/${id}`} className="w-full">
-            {title}
-          </Link>
-        </h3>
+        <TextTitle semibold tag={Link} href={`/blog/${id}`}>
+          {title}
+        </TextTitle>
         <Text className="line-clamp-2">{desc}</Text>
-        <Text className="semibold text-gray-500">{getDate(post.date)}</Text>
+        <Text semibold className="text-gray-500">{getDate(post.date)}</Text>
       </Col>
     </Tag>
   )

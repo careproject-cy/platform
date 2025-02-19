@@ -8,6 +8,39 @@ export interface SizeProps {
   ignoreSize?: boolean;
 }
 
+export interface FontWeightProps {
+  thin?: boolean;
+  extralight?: boolean;
+  light?: boolean;
+  normal?: boolean;
+  medium?: boolean;
+  semibold?: boolean;
+  bold?: boolean;
+  extrabold?: boolean;
+  black?: boolean;
+}
+
+export interface FontStyleProps {
+  italic?: boolean;
+  notItalic?: boolean;
+}
+
+export interface TextDecorationProps {
+  underline?: boolean;
+  lineThrough?: boolean;
+  noUnderline?: boolean;
+  overline?: boolean;
+}
+
+export interface TextTransformProps {
+  uppercase?: boolean;
+  lowercase?: boolean;
+  capitalize?: boolean;
+  normalCase?: boolean;
+}
+
+export type FontProps = FontWeightProps & FontStyleProps & TextDecorationProps & TextTransformProps;
+
 export interface BreakpointProps {
   xsCol?: boolean;
   smCol?: boolean;
@@ -49,3 +82,5 @@ export interface CenteredProps {
 export type BaseComponentProps = TagProps & Partial<SizeProps & BreakpointProps & HideProps & PositionProps> & React.HTMLProps<HTMLElement>;
 
 export type LayoutComponentProps = BaseComponentProps & ReverseProps & CenteredProps;
+
+export type TypographyComponentProps = BaseComponentProps & FontProps;

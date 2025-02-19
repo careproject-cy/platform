@@ -29,7 +29,7 @@ export function LargeBlogCard({ post }: { post: BlogPostMetadata }) {
         <Badge lg lgHide hidden={tags.length === 0}>{tags[0]}</Badge>
         <TextTitle lg tag={Link} href={`/blog/${id}`}>{title}</TextTitle>
         <Text lg className="line-clamp-3">{desc}</Text>
-        <Text lg className="font-semibold text-gray-500">{getDate(post.date)}</Text>
+        <Text lg semibold className="text-gray-500">{getDate(post.date)}</Text>
         <Button tag={Link} href={`/blog/${id}`} lgHide>Read more</Button>
       </Col>
     </Row>

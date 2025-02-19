@@ -1,14 +1,19 @@
+import { Button } from "@/components/ui/button"
+import { Col, Container, Section } from "@/components/ui/layout"
+import { PageTitle, Text } from "@/components/ui/typography"
 import Link from 'next/link'
 
 export default function NotFound() {
   return (
-    <div className="text-center">
-      <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
-      <p className="mb-8">Oops! The page you are looking for does not exist.</p>
-      <Link href="/">
-        <button>Go back home</button>
-      </Link>
-    </div>
+    <Section>
+      <Container xl>
+        <Col xl centered>
+          <PageTitle>404 - Page Not Found</PageTitle>
+          <Text>Oops! The page you are looking for does not exist.</Text>
+          <Button tag={Link} href="/">Go back home</Button>
+        </Col>
+      </Container>
+    </Section>
   )
 }
 

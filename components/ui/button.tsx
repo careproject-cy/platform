@@ -1,8 +1,9 @@
 import React from 'react';
 import { componentBuilder } from "./utils";
-import { BaseComponentProps } from "./props";
+import { TypographyComponentProps } from "./props";
+import { fontMap } from "./commonValues";
 
-export const Button: React.FC<BaseComponentProps> = (props) =>
+export const Button: React.FC<TypographyComponentProps> = (props) =>
   componentBuilder(props, "button", "w-fit cursor-pointer flex justify-center items-center border border-gray-200 transition-all duration-300 hover:bg-gray-50")
     .withSizes({
       xs: "px-2 py-1 rounded-sm text-xs",
@@ -20,4 +21,5 @@ export const Button: React.FC<BaseComponentProps> = (props) =>
       xl: "shadow-lg hover:shadow-xl",
       ignoreSize: "",
     })
+    .withFont(fontMap)
     .build();

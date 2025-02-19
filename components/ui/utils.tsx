@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { BaseComponentProps, BreakpointProps, CenteredProps, HideProps, PositionProps, ReverseProps, SizeProps } from "./props";
+import { BaseComponentProps, BreakpointProps, CenteredProps, FontProps, HideProps, PositionProps, ReverseProps, SizeProps } from "./props";
 
 function getBooleanClass<
   T extends Record<string, boolean | undefined>
@@ -81,6 +81,7 @@ export function componentBuilder(
     withCentered: (centeredMap: Record<keyof CenteredProps, string>) => withBooleanProps(centeredMap),
     withHide: (hideMap: Record<keyof HideProps, string>) => withBooleanProps(hideMap),
     withPosition: (positionMap: Record<keyof PositionProps, string>) => withBooleanProps(positionMap),
+    withFont: (fontMap: Record<keyof FontProps, string>) => withBooleanProps(fontMap),
     build() {
       builder.withHide({
         xsHide: "max-xs:hidden",

@@ -1,8 +1,9 @@
 import React from 'react';
 import { componentBuilder } from "./utils";
-import { BaseComponentProps } from "./props";
+import { TypographyComponentProps } from "./props";
+import { fontMap } from "./commonValues";
 
-export const PageTitle: React.FC<BaseComponentProps> = (props) =>
+export const PageTitle: React.FC<TypographyComponentProps> = (props) =>
   componentBuilder(props, "h1", "font-semibold")
     .withSizes({
       xs: "text-3xl",
@@ -12,9 +13,10 @@ export const PageTitle: React.FC<BaseComponentProps> = (props) =>
       xl: "text-7xl",
       ignoreSize: "",
     })
+    .withFont(fontMap)
     .build();
 
-export const SectionTitle: React.FC<BaseComponentProps> = (props) =>
+export const SectionTitle: React.FC<TypographyComponentProps> = (props) =>
   componentBuilder(props, "h2", "font-semibold")
     .withSizes({
       xs: "text-2xl",
@@ -24,9 +26,10 @@ export const SectionTitle: React.FC<BaseComponentProps> = (props) =>
       xl: "text-6xl",
       ignoreSize: "",
     })
+    .withFont(fontMap)
     .build();
 
-export const TextTitle: React.FC<BaseComponentProps> = (props) =>
+export const TextTitle: React.FC<TypographyComponentProps> = (props) =>
   componentBuilder(props, "h3", "font-semibold")
     .withSizes({
       xs: "text-lg",
@@ -36,9 +39,10 @@ export const TextTitle: React.FC<BaseComponentProps> = (props) =>
       xl: "text-4xl",
       ignoreSize: "",
     })
+    .withFont(fontMap)
     .build();
 
-export const Text: React.FC<BaseComponentProps> = (props) =>
+export const Text: React.FC<TypographyComponentProps> = (props) =>
   componentBuilder(props, "p", "text-gray-600 p-0 m-0")
     .withSizes({
       xs: "text-xs",
@@ -48,9 +52,10 @@ export const Text: React.FC<BaseComponentProps> = (props) =>
       xl: "text-xl",
       ignoreSize: "",
     })
+    .withFont(fontMap)
     .build();
 
-export const Link: React.FC<BaseComponentProps> = (props) =>
+export const Link: React.FC<TypographyComponentProps> = (props) =>
   componentBuilder(props, "a", "text-blue-500 hover:underline")
     .withSizes({
       xs: "text-xs",
@@ -60,9 +65,10 @@ export const Link: React.FC<BaseComponentProps> = (props) =>
       xl: "text-xl",
       ignoreSize: "",
     })
+    .withFont(fontMap)
     .build();
 
-export const ListItem: React.FC<BaseComponentProps> = (props) =>
+export const ListItem: React.FC<TypographyComponentProps> = (props) =>
   componentBuilder(props, "li", "text-gray-600")
     .withSizes({
       xs: "text-xs",
@@ -72,9 +78,10 @@ export const ListItem: React.FC<BaseComponentProps> = (props) =>
       xl: "text-xl",
       ignoreSize: "",
     })
+    .withFont(fontMap)
     .build();
 
-export const List: React.FC<BaseComponentProps> = (props) =>
+export const List: React.FC<TypographyComponentProps> = (props) =>
   componentBuilder(props, "ul", "list-disc list-inside")
     .withSizes({
       xs: "text-xs",
@@ -84,4 +91,5 @@ export const List: React.FC<BaseComponentProps> = (props) =>
       xl: "text-xl",
       ignoreSize: "",
     })
+    .withFont(fontMap)
     .build();
