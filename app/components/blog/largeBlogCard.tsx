@@ -15,7 +15,7 @@ export function LargeBlogCard({ post }: { post: BlogPostMetadata }) {
   const desc = post.description
   const tags = post.tags
   return (
-    <Row lg mdCol>
+    <Row lg mdCol vCentered>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
           src={getImageSrc(post.imageSrc)}
@@ -25,7 +25,7 @@ export function LargeBlogCard({ post }: { post: BlogPostMetadata }) {
           className="relative object-cover h-auto w-full aspect-3/2 rounded-xl overflow-hidden"
         />
       </Link>
-      <Col className="justify-center" lg>
+      <Col lg>
         <Badge lg lgHide hidden={tags.length === 0}>{tags[0]}</Badge>
         <TextTitle lg tag={Link} href={`/blog/${id}`}>{title}</TextTitle>
         <Text lg className="line-clamp-3">{desc}</Text>
