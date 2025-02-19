@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button"
 
 export default function Layout() {
   return (
-    <Row className="justify-between border-b px-4 py-2" tag={'header'}>
+    <Row vCentered className="justify-between border-b px-4 py-2" tag={'header'}>
       <Logo />
-      <Row tag={"nav"}>
+      <Row vCentered tag={"nav"}>
         <Link href="/" className="hover:underline">Home</Link>
         <Link href="/dogs" className="hover:underline">Dogs</Link>
         <Link href="/blog" className="hover:underline">Blog</Link>

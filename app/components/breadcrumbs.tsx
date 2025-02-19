@@ -8,7 +8,7 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ breadcrumbs }: BreadcrumbsProps) {
   return (
-    <Row className="w-full gap-3">
+    <Row md vCentered>
       {breadcrumbs.map(({ href, text }, idx) => (
         <React.Fragment key={idx}>
           <Link href={href} className="text-lg text-gray-700 hover:text-gray-900">

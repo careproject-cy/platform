@@ -49,9 +49,9 @@ const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
   }
 
   return (
-    <div className={twMerge(`relative flex items-center justify-center w-full rounded-2xl`, className || "")}>
+    <div className={twMerge(`relative flex justify-center w-full rounded-2xl`, className || "")}>
       <Col className="gap-3 w-full">
-        <Row className="relative overflow-hidden rounded-2xl">
+        <Row vCentered relative className="overflow-hidden rounded-2xl">
           <button onClick={prevImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-75 rounded-full absolute left-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
             <span className="material-symbols-rounded">chevron_left</span>
           </button>

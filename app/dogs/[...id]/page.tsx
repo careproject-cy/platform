@@ -15,11 +15,11 @@ import Md from "@/app/components/md/md"
 
 export const runtime = 'edge';
 
-interface GenerateMetadataProps {
+interface IdProps {
   params: Promise<{ id: string[] }>
 }
 
-export async function generateMetadata({ params }: GenerateMetadataProps): Promise<Metadata> {
+export async function generateMetadata({ params }: IdProps): Promise<Metadata> {
   const { id } = await params
   const dogs = await fetchDogs()
   const filename = `${id.join("\\")}.md`
@@ -29,11 +29,7 @@ export async function generateMetadata({ params }: GenerateMetadataProps): Promi
   }
 }
 
-interface DogPageProps {
-  params: Promise<{ id: string[] }>
-}
-
-export default async function DogPage({ params }: DogPageProps) {
+export default async function DogPage({ params }: IdProps) {
   const { id } = await params
 
   const dogs = await fetchDogs()
@@ -56,13 +52,13 @@ export default async function DogPage({ params }: DogPageProps) {
       <Section>
         <Container>
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${dog.filename.replace(".md", "")}`, text: dog.name }]} />
-          <Row xl mdCol className="items-start">
+          <Row xl mdCol>
             <Gallery className="flex-1" images={galleryImages} />
             <Col className="w-full gap-6 flex-1">
               <Col className="gap-3">
-                <Row className="justify-between">
+                <Row vCentered className="justify-between">
                   <PageTitle>{dog.name}</PageTitle>
-                  <div className="text-md px-3 py-1 rounded-lg bg-gray-100 font-semibold text-gray-600">{dog.gender}</div>
+                  <span className="text-md px-3 py-1 rounded-lg bg-gray-100 font-semibold text-gray-600">{dog.gender}</span>
                 </Row>
                 <Row className="justify-between">
                   <Text>{dog.breed}</Text>
