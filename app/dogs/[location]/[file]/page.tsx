@@ -66,7 +66,7 @@ export default async function DogPage({ params }: IdProps) {
                   <Text>{dog.breed}</Text>
                   <Text>~{dog.age} years old</Text>
                 </Row>
-                <Text className="italic">{sizeText}</Text>
+                <Text italic>{sizeText}</Text>
               </Col>
               <Divider />
               <Col sm>
