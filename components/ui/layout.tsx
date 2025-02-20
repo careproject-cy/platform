@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseComponentProps, LayoutComponentProps } from "./props";
+import { GridProps, LayoutComponentProps, RowColProps } from "./props";
 import { componentBuilder } from "./utils";
 
 const centeredClasses = {
@@ -17,7 +17,6 @@ export const Section: React.FC<LayoutComponentProps> = (props) =>
       md: "py-10 max-lg:py-8  max-md:py-6",
       lg: "py-12 max-lg:py-10 max-md:py-8",
       xl: "py-14 max-lg:py-12 max-md:py-10",
-      ignoreSize: "",
     })
     .withSizes({
       xs: "px-4  max-lg:px-2  max-md:px-0",
@@ -25,7 +24,6 @@ export const Section: React.FC<LayoutComponentProps> = (props) =>
       md: "px-8  max-lg:px-6  max-md:px-4",
       lg: "px-10 max-lg:px-8  max-md:px-6",
       xl: "px-12 max-lg:px-10 max-md:px-8",
-      ignoreSize: "",
     })
     .build();
 
@@ -38,7 +36,6 @@ export const Container: React.FC<LayoutComponentProps> = (props) =>
       md: "max-w-5xl gap-6  max-lg:gap-5 max-md:gap-4",
       lg: "max-w-6xl gap-8  max-lg:gap-7 max-md:gap-6",
       xl: "max-w-7xl gap-10 max-lg:gap-9 max-md:gap-8",
-      ignoreSize: "",
     })
     .build();
 
@@ -48,21 +45,20 @@ const commonGaps = {
   md: "gap-4 max-lg:gap-3 max-md:gap-2",
   lg: "gap-6 max-lg:gap-5 max-md:gap-4",
   xl: "gap-8 max-lg:gap-7 max-md:gap-6",
-  ignoreSize: "",
 }
 
-export const Col: React.FC<LayoutComponentProps> = (props) =>
+export const Col: React.FC<RowColProps> = (props) =>
   componentBuilder(props, "div", "flex flex-col")
-    .withSizes(commonGaps)
+    .withGaps({ noGap: "gap-0" }, commonGaps)
     .withReverse({
       reverse: "flex-col-reverse"
     })
     .withCentered(centeredClasses)
     .build();
 
-export const Row: React.FC<LayoutComponentProps> = (props) =>
+export const Row: React.FC<RowColProps> = (props) =>
   componentBuilder(props, "div", "flex flex-row")
-    .withSizes(commonGaps)
+    .withGaps({ noGap: "gap-0" }, commonGaps)
     .withReverse({
       reverse: "flex-row-reverse"
     })
@@ -82,16 +78,15 @@ const gridGaps = {
   md: "gap-6  max-lg:gap-4",
   lg: "gap-8  max-lg:gap-6 max-md:gap-4",
   xl: "gap-10 max-lg:gap-8 max-md:gap-6",
-  ignoreSize: "",
 }
 
-export const Grid3: React.FC<BaseComponentProps> = (props) =>
+export const Grid3: React.FC<GridProps> = (props) =>
   componentBuilder(props, "div", "w-full grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1")
-    .withSizes(gridGaps)
+    .withGaps({ noGap: "gap-0" }, gridGaps)
     .build();
 
-export const Grid4: React.FC<BaseComponentProps> = (props) =>
+export const Grid4: React.FC<GridProps> = (props) =>
   componentBuilder(props, "div", "w-full grid grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1")
-    .withSizes(gridGaps)
+    .withGaps({ noGap: "gap-0" }, gridGaps)
     .build();
 

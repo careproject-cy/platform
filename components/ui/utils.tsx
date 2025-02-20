@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { BaseComponentProps, BreakpointProps, CenteredProps, FontFamilyProps, FontStyleProps, FontWeightProps, HideProps, PositionProps, ReverseProps, SizeProps, TextDecorationProps, TextTransformProps } from "./props";
+import { BaseComponentProps, BreakpointProps, CenteredProps, FontFamilyProps, FontStyleProps, FontWeightProps, GapProps, HideProps, PositionProps, ReverseProps, SizeProps, TextDecorationProps, TextTransformProps } from "./props";
 import { fontFamilyMap, fontStyleMap, fontWeightMap, textDecorationMap, textTransformMap } from "./commonValues";
 
 function getBooleanClass<
@@ -26,7 +26,7 @@ export function componentBuilder(
   const extraClasses: string[] = [];
   const { className, children, tag, ...other } = baseProps;
 
-  const otherProps: (typeof other) & Partial<ReverseProps & CenteredProps> = { ...other };
+  const otherProps: (typeof other) & Partial<ReverseProps & CenteredProps & GapProps> = { ...other };
 
   const propsToRemove: string[] = []
 
@@ -68,15 +68,7 @@ export function componentBuilder(
   }
 
   const builder = {
-    withSizes: (sizeMap: Record<keyof SizeProps, string>) => {
-      const { ignoreSize } = otherProps;
-      if (ignoreSize !== undefined && ignoreSize) {
-        registerKeys(["ignoreSize"]);
-      } else {
-        withBooleanProps(sizeMap, "md");
-      }
-      return builder;
-    },
+    withSizes: (sizeMap: Record<keyof SizeProps, string>) => withBooleanProps(sizeMap, "md"),
     withBreakpoints: (breakpointMap: Record<keyof BreakpointProps, string>) => withBooleanProps(breakpointMap),
     withReverse: (reverseMap: Record<keyof ReverseProps, string>) => withBooleanProps(reverseMap),
     withCentered: (centeredMap: Record<keyof CenteredProps, string>) => withBooleanProps(centeredMap),
@@ -88,6 +80,9 @@ export function componentBuilder(
     withFontFamily: (fontMap: Record<keyof FontFamilyProps, string>) => withBooleanProps(fontMap),
     withTextDecoration: (fontMap: Record<keyof TextDecorationProps, string>) => withBooleanProps(fontMap),
     withTextTransform: (fontMap: Record<keyof TextTransformProps, string>) => withBooleanProps(fontMap),
+
+    withGaps: (gapMap: Record<keyof GapProps, string>, sizeMap: Record<keyof SizeProps, string>) =>
+      otherProps.noGap !== undefined && otherProps.noGap ? withBooleanProps(gapMap) : builder.withSizes(sizeMap),
 
     withTypography: () => builder
       .withFontFamily(fontFamilyMap)

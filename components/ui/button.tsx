@@ -10,7 +10,6 @@ export const Button: React.FC<TypographyComponentProps> = (props) =>
       md: "px-4 py-2 rounded-md text-base",
       lg: "px-6 py-3 rounded-lg text-lg",
       xl: "px-8 py-4 rounded-xl text-xl",
-      ignoreSize: "",
     })
     .withSizes({
       xs: "shadow-xs hover:shadow-sm",
@@ -18,7 +17,6 @@ export const Button: React.FC<TypographyComponentProps> = (props) =>
       md: "shadow-sm hover:shadow-md",
       lg: "shadow-md hover:shadow-lg",
       xl: "shadow-lg hover:shadow-xl",
-      ignoreSize: "",
     })
     .withTypography()
     .build();

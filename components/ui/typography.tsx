@@ -10,7 +10,6 @@ export const PageTitle: React.FC<TypographyComponentProps> = (props) =>
       md: "text-5xl",
       lg: "text-6xl",
       xl: "text-7xl",
-      ignoreSize: "",
     })
     .withTypography()
     .build();
@@ -23,7 +22,6 @@ export const SectionTitle: React.FC<TypographyComponentProps> = (props) =>
       md: "text-4xl",
       lg: "text-5xl",
       xl: "text-6xl",
-      ignoreSize: "",
     })
     .withTypography()
     .build();
@@ -36,7 +34,6 @@ export const TextTitle: React.FC<TypographyComponentProps> = (props) =>
       md: "text-2xl",
       lg: "text-3xl",
       xl: "text-4xl",
-      ignoreSize: "",
     })
     .withTypography()
     .build();
@@ -49,7 +46,6 @@ export const Text: React.FC<TypographyComponentProps> = (props) =>
       md: "text-md",
       lg: "text-lg",
       xl: "text-xl",
-      ignoreSize: "",
     })
     .withTypography()
     .build();
@@ -62,7 +58,6 @@ export const Link: React.FC<TypographyComponentProps> = (props) =>
       md: "text-md",
       lg: "text-lg",
       xl: "text-xl",
-      ignoreSize: "",
     })
     .withTypography()
     .build();
@@ -75,7 +70,6 @@ export const ListItem: React.FC<TypographyComponentProps> = (props) =>
       md: "text-md",
       lg: "text-lg",
       xl: "text-xl",
-      ignoreSize: "",
     })
     .withTypography()
     .build();
@@ -88,7 +82,6 @@ export const List: React.FC<TypographyComponentProps> = (props) =>
       md: "text-md",
       lg: "text-lg",
       xl: "text-xl",
-      ignoreSize: "",
     })
     .withTypography()
     .build();

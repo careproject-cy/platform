@@ -5,7 +5,6 @@ export interface SizeProps {
   md?: boolean;
   lg?: boolean;
   xl?: boolean;
-  ignoreSize?: boolean;
 }
 
 export interface FontFamilyProps {
@@ -79,6 +78,10 @@ export interface ReverseProps {
   reverse?: boolean;
 }
 
+export interface GapProps {
+  noGap?: boolean;
+}
+
 export interface CenteredProps {
   centered?: boolean;
   vCentered?: boolean;
@@ -90,3 +93,7 @@ export type BaseComponentProps = TagProps & Partial<SizeProps & BreakpointProps 
 export type LayoutComponentProps = BaseComponentProps & ReverseProps & CenteredProps;
 
 export type TypographyComponentProps = BaseComponentProps & FontProps;
+
+export type GridProps = BaseComponentProps & GapProps;
+
+export type RowColProps = BaseComponentProps & GapProps & ReverseProps & CenteredProps;
