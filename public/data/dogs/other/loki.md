@@ -5,7 +5,10 @@
   gender: male
   status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg
+    img/other/loki/loki-adoption-cyprus.jpg,
+    img/other/loki/sweet-loki-cyprus.jpg,
+    img/other/loki/loki-boy-adoption.jpg,
+    img/other/loki/rehome-loki-cyprus.jpg,
   ]
   size: large # 'small' | 'medium' | 'large'
   added: 2025-02-14

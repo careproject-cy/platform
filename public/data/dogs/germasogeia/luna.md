@@ -1,11 +1,15 @@
 ---
   name: Luna
-  breed: kokoni mix
+  breed: Kokoni mix
   age: 2
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg
+    img/germasogeia/luna/sweet-luna-rehome-cyprus.jpg,
+    img/germasogeia/luna/luna-with-people-adopt.jpg,
+    img/germasogeia/luna/cyprus-stray-dog-luna.jpg,
+    img/germasogeia/luna/looking-home-small-dog.jpg,
+    img/germasogeia/luna/smiling-dog-rehome.jpg,
   ]
   size: small # 'small' | 'medium' | 'large'
   added: 2025-02-14

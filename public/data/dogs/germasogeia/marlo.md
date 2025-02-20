@@ -5,7 +5,10 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg
+    img/germasogeia/marlo/stand-full-body-dog.jpg,
+    img/germasogeia/marlo/marlo-adoption-cyprus.jpg,
+    img/germasogeia/marlo/volunteer-dog-adoption.jpg,
+    img/germasogeia/marlo/marlo-walk-rehome-cyprus.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-02-14
