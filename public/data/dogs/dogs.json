@@ -8,7 +8,10 @@
     "gender": "male",
     "status": "In foster care",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg"
+      "img/other/loki/loki-adoption-cyprus.jpg",
+      "img/other/loki/sweet-loki-cyprus.jpg",
+      "img/other/loki/loki-boy-adoption.jpg",
+      "img/other/loki/rehome-loki-cyprus.jpg"
     ],
     "size": "large",
     "added": "2025-02-14T00:00:00.000Z"
@@ -22,7 +25,10 @@
     "gender": "male",
     "status": "In foster care",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg"
+      "img/other/luka/puppy-adoption-cyprus.jpg",
+      "img/other/luka/sweet-boy-cyprus.jpg",
+      "img/other/luka/big-boy-adoption.jpg",
+      "img/other/luka/rehome-puppy-cyprus.jpg"
     ],
     "size": "large",
     "added": "2025-02-14T00:00:00.000Z"
@@ -96,7 +102,7 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "kody.md",
+    "filename": "kodi.md",
     "location": "germasogeia",
     "name": "Kodi",
     "breed": "Mixed breed",
@@ -104,9 +110,11 @@
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg",
-      "img/germasogeia/kayla/20250118_114227.jpg",
-      "img/germasogeia/kayla/20250118_114220.jpg"
+      "img/germasogeia/kodi/kodi-adoption-cyprus.jpg",
+      "img/germasogeia/kodi/rehome-cyprus-kodi.jpg",
+      "img/germasogeia/kodi/dog-lying-cyprus.jpg",
+      "img/germasogeia/kodi/dog-smiling-rehome.jpg",
+      "img/germasogeia/kodi/first-walk-kodi-dog.jpg"
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
@@ -115,12 +123,16 @@
     "filename": "luna.md",
     "location": "germasogeia",
     "name": "Luna",
-    "breed": "kokoni mix",
+    "breed": "Kokoni mix",
     "age": 2,
     "gender": "female",
     "status": "Available",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg"
+      "img/germasogeia/luna/sweet-luna-rehome-cyprus.jpg",
+      "img/germasogeia/luna/luna-with-people-adopt.jpg",
+      "img/germasogeia/luna/cyprus-stray-dog-luna.jpg",
+      "img/germasogeia/luna/looking-home-small-dog.jpg",
+      "img/germasogeia/luna/smiling-dog-rehome.jpg"
     ],
     "size": "small",
     "added": "2025-02-14T00:00:00.000Z"
@@ -134,7 +146,10 @@
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg"
+      "img/germasogeia/marlo/stand-full-body-dog.jpg",
+      "img/germasogeia/marlo/marlo-adoption-cyprus.jpg",
+      "img/germasogeia/marlo/volunteer-dog-adoption.jpg",
+      "img/germasogeia/marlo/marlo-walk-rehome-cyprus.jpg"
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
@@ -148,7 +163,10 @@
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg"
+      "img/germasogeia/max/max-first-walk.jpg",
+      "img/germasogeia/max/shepherd-adopt.jpg",
+      "img/germasogeia/max/max-rehome-cyprus.jpg",
+      "img/germasogeia/max/dog-in-shelter-adoption.jpg"
     ],
     "size": "large",
     "added": "2025-02-14T00:00:00.000Z"
@@ -162,7 +180,10 @@
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg"
+      "img/germasogeia/oreo/need-family-cyprus.jpg",
+      "img/germasogeia/oreo/happy-dog-cyprus.jpg",
+      "img/germasogeia/oreo/oreo-smiling-cyprus.jpg",
+      "img/germasogeia/oreo/shelter-oreo-rehome.jpg"
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
@@ -176,7 +197,11 @@
     "gender": "female",
     "status": "Available",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg"
+      "img/germasogeia/sandy/small-bulldog-mixed-cyprus.jpg",
+      "img/germasogeia/sandy/available-for-adoption-sandy.jpg",
+      "img/germasogeia/sandy/smiling-small-dog.jpg",
+      "img/germasogeia/sandy/bulldog-cyprus-adoption.jpg",
+      "img/germasogeia/sandy/sandy-kennel-adopt.jpg"
     ],
     "size": "small",
     "added": "2025-02-14T00:00:00.000Z"
@@ -184,13 +209,17 @@
   {
     "filename": "scarlet.md",
     "location": "germasogeia",
-    "name": "Sandy",
+    "name": "Scarlet",
     "breed": "Mixed breed",
     "age": 1.5,
     "gender": "female",
     "status": "Available",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg"
+      "img/germasogeia/scarlet/smiling-girl-adoption.jpg",
+      "img/germasogeia/scarlet/need-family-urgent.jpg",
+      "img/germasogeia/scarlet/scarlet-first-walk-cyprus.jpg",
+      "img/germasogeia/scarlet/scarlet-with-people-cyprus.jpg",
+      "img/germasogeia/scarlet/dog-in-shelter-cyprus.jpg"
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
@@ -204,7 +233,11 @@
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/germasogeia/kayla/DSC_4619.jpg"
+      "img/germasogeia/zeus/malinois-need-family.jpg",
+      "img/germasogeia/zeus/malinois-adoption-cyprus.jpg",
+      "img/germasogeia/zeus/zeus-rehome-cyprus.jpg",
+      "img/germasogeia/zeus/strong-boy-adopt.jpg",
+      "img/germasogeia/zeus/malinois-in-shelter.jpg"
     ],
     "size": "large",
     "added": "2025-02-14T00:00:00.000Z"

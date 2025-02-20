@@ -5,7 +5,10 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg
+    img/germasogeia/max/max-first-walk.jpg,
+    img/germasogeia/max/shepherd-adopt.jpg,
+    img/germasogeia/max/max-rehome-cyprus.jpg,
+    img/germasogeia/max/dog-in-shelter-adoption.jpg,
   ]
   size: large # 'small' | 'medium' | 'large'
   added: 2025-02-14

@@ -1,11 +1,15 @@
 ---
-  name: Sandy
+  name: Scarlet
   breed: Mixed breed
   age: 1.5
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg
+    img/germasogeia/scarlet/smiling-girl-adoption.jpg,
+    img/germasogeia/scarlet/need-family-urgent.jpg,
+    img/germasogeia/scarlet/scarlet-first-walk-cyprus.jpg,
+    img/germasogeia/scarlet/scarlet-with-people-cyprus.jpg,
+    img/germasogeia/scarlet/dog-in-shelter-cyprus.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-02-14

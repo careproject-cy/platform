@@ -5,7 +5,10 @@
   gender: male
   status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg
+    img/other/luka/puppy-adoption-cyprus.jpg,
+    img/other/luka/sweet-boy-cyprus.jpg,
+    img/other/luka/big-boy-adoption.jpg,
+    img/other/luka/rehome-puppy-cyprus.jpg,
   ]
   size: large # 'small' | 'medium' | 'large'
   added: 2025-02-14

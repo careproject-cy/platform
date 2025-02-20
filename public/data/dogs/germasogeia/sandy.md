@@ -5,7 +5,11 @@
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg
+    img/germasogeia/sandy/small-bulldog-mixed-cyprus.jpg,
+    img/germasogeia/sandy/available-for-adoption-sandy.jpg,
+    img/germasogeia/sandy/smiling-small-dog.jpg,
+    img/germasogeia/sandy/bulldog-cyprus-adoption.jpg,
+    img/germasogeia/sandy/sandy-kennel-adopt.jpg,
   ]
   size: small # 'small' | 'medium' | 'large'
   added: 2025-02-14

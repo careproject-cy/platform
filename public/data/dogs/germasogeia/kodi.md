@@ -5,9 +5,11 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg,
-    img/germasogeia/kayla/20250118_114227.jpg,
-    img/germasogeia/kayla/20250118_114220.jpg
+    img/germasogeia/kodi/kodi-adoption-cyprus.jpg,
+    img/germasogeia/kodi/rehome-cyprus-kodi.jpg,
+    img/germasogeia/kodi/dog-lying-cyprus.jpg,
+    img/germasogeia/kodi/dog-smiling-rehome.jpg,
+    img/germasogeia/kodi/first-walk-kodi-dog.jpg
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-02-14

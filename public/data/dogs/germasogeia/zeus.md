@@ -5,7 +5,11 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg
+    img/germasogeia/zeus/malinois-need-family.jpg,
+    img/germasogeia/zeus/malinois-adoption-cyprus.jpg,
+    img/germasogeia/zeus/zeus-rehome-cyprus.jpg,
+    img/germasogeia/zeus/strong-boy-adopt.jpg,
+    img/germasogeia/zeus/malinois-in-shelter.jpg,
   ]
   size: large # 'small' | 'medium' | 'large'
   added: 2025-02-14

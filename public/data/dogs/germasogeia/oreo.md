@@ -5,7 +5,11 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/kayla/DSC_4619.jpg
+    img/germasogeia/oreo/need-family-cyprus.jpg,
+    img/germasogeia/oreo/happy-dog-cyprus.jpg,
+    img/germasogeia/oreo/oreo-smiling-cyprus.jpg,
+    img/germasogeia/oreo/shelter-oreo-rehome.jpg,
+    
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-02-14
