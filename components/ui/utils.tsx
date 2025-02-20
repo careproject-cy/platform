@@ -1,5 +1,6 @@
 import { twMerge } from "tailwind-merge";
-import { BaseComponentProps, BreakpointProps, CenteredProps, FontProps, HideProps, PositionProps, ReverseProps, SizeProps } from "./props";
+import { BaseComponentProps, BreakpointProps, CenteredProps, FontFamilyProps, FontStyleProps, FontWeightProps, HideProps, PositionProps, ReverseProps, SizeProps, TextDecorationProps, TextTransformProps } from "./props";
+import { fontFamilyMap, fontStyleMap, fontWeightMap, textDecorationMap, textTransformMap } from "./commonValues";
 
 function getBooleanClass<
   T extends Record<string, boolean | undefined>
@@ -81,7 +82,20 @@ export function componentBuilder(
     withCentered: (centeredMap: Record<keyof CenteredProps, string>) => withBooleanProps(centeredMap),
     withHide: (hideMap: Record<keyof HideProps, string>) => withBooleanProps(hideMap),
     withPosition: (positionMap: Record<keyof PositionProps, string>) => withBooleanProps(positionMap),
-    withFont: (fontMap: Record<keyof FontProps, string>) => withBooleanProps(fontMap),
+
+    withFontWeight: (fontMap: Record<keyof FontWeightProps, string>) => withBooleanProps(fontMap),
+    withFontStyle: (fontMap: Record<keyof FontStyleProps, string>) => withBooleanProps(fontMap),
+    withFontFamily: (fontMap: Record<keyof FontFamilyProps, string>) => withBooleanProps(fontMap),
+    withTextDecoration: (fontMap: Record<keyof TextDecorationProps, string>) => withBooleanProps(fontMap),
+    withTextTransform: (fontMap: Record<keyof TextTransformProps, string>) => withBooleanProps(fontMap),
+
+    withTypography: () => builder
+      .withFontFamily(fontFamilyMap)
+      .withFontStyle(fontStyleMap)
+      .withFontWeight(fontWeightMap)
+      .withTextDecoration(textDecorationMap)
+      .withTextTransform(textTransformMap),
+
     build() {
       builder.withHide({
         xsHide: "max-xs:hidden",

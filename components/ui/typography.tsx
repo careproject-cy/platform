@@ -1,7 +1,6 @@
 import React from 'react';
 import { componentBuilder } from "./utils";
 import { TypographyComponentProps } from "./props";
-import { fontMap } from "./commonValues";
 
 export const PageTitle: React.FC<TypographyComponentProps> = (props) =>
   componentBuilder(props, "h1", "font-semibold")
@@ -13,7 +12,7 @@ export const PageTitle: React.FC<TypographyComponentProps> = (props) =>
       xl: "text-7xl",
       ignoreSize: "",
     })
-    .withFont(fontMap)
+    .withTypography()
     .build();
 
 export const SectionTitle: React.FC<TypographyComponentProps> = (props) =>
@@ -26,7 +25,7 @@ export const SectionTitle: React.FC<TypographyComponentProps> = (props) =>
       xl: "text-6xl",
       ignoreSize: "",
     })
-    .withFont(fontMap)
+    .withTypography()
     .build();
 
 export const TextTitle: React.FC<TypographyComponentProps> = (props) =>
@@ -39,7 +38,7 @@ export const TextTitle: React.FC<TypographyComponentProps> = (props) =>
       xl: "text-4xl",
       ignoreSize: "",
     })
-    .withFont(fontMap)
+    .withTypography()
     .build();
 
 export const Text: React.FC<TypographyComponentProps> = (props) =>
@@ -52,7 +51,7 @@ export const Text: React.FC<TypographyComponentProps> = (props) =>
       xl: "text-xl",
       ignoreSize: "",
     })
-    .withFont(fontMap)
+    .withTypography()
     .build();
 
 export const Link: React.FC<TypographyComponentProps> = (props) =>
@@ -65,7 +64,7 @@ export const Link: React.FC<TypographyComponentProps> = (props) =>
       xl: "text-xl",
       ignoreSize: "",
     })
-    .withFont(fontMap)
+    .withTypography()
     .build();
 
 export const ListItem: React.FC<TypographyComponentProps> = (props) =>
@@ -78,7 +77,7 @@ export const ListItem: React.FC<TypographyComponentProps> = (props) =>
       xl: "text-xl",
       ignoreSize: "",
     })
-    .withFont(fontMap)
+    .withTypography()
     .build();
 
 export const List: React.FC<TypographyComponentProps> = (props) =>
@@ -91,5 +90,5 @@ export const List: React.FC<TypographyComponentProps> = (props) =>
       xl: "text-xl",
       ignoreSize: "",
     })
-    .withFont(fontMap)
+    .withTypography()
     .build();

@@ -8,6 +8,12 @@ export interface SizeProps {
   ignoreSize?: boolean;
 }
 
+export interface FontFamilyProps {
+  sans?: boolean;
+  serif?: boolean;
+  mono?: boolean;
+}
+
 export interface FontWeightProps {
   thin?: boolean;
   extralight?: boolean;
@@ -39,7 +45,7 @@ export interface TextTransformProps {
   normalCase?: boolean;
 }
 
-export type FontProps = FontWeightProps & FontStyleProps & TextDecorationProps & TextTransformProps;
+export type FontProps = FontWeightProps & FontStyleProps & TextDecorationProps & TextTransformProps & FontFamilyProps;
 
 export interface BreakpointProps {
   xsCol?: boolean;

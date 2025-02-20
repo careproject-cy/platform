@@ -1,5 +1,4 @@
-export const fontMap = {
-  // Font weights
+export const fontWeightMap = {
   thin: "font-thin",
   extralight: "font-extralight",
   light: "font-light",
@@ -9,17 +8,29 @@ export const fontMap = {
   bold: "font-bold",
   extrabold: "font-extrabold",
   black: "font-black",
-  // Font styles
+}
+
+export const fontStyleMap = {
   italic: "italic",
   notItalic: "not-italic",
-  // Text decorations
+}
+
+export const fontFamilyMap = {
+  sans: "font-sans",
+  serif: "font-serif",
+  mono: "font-mono",
+}
+
+export const textDecorationMap = {
   underline: "underline",
   lineThrough: "line-through",
   noUnderline: "no-underline",
   overline: "overline",
-  // Text transformations
+}
+
+export const textTransformMap = {
   uppercase: "uppercase",
   lowercase: "lowercase",
   capitalize: "capitalize",
   normalCase: "normal-case",
-};
+}
