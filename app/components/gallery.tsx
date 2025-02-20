@@ -50,7 +50,7 @@ const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
 
   return (
     <div className={twMerge(`relative flex justify-center w-full rounded-2xl`, className || "")}>
-      <Col className="gap-3 w-full">
+      <Col sm>
         <Row vCentered relative className="overflow-hidden rounded-2xl">
           <button onClick={prevImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-75 rounded-full absolute left-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
             <span className="material-symbols-rounded">chevron_left</span>
@@ -60,7 +60,7 @@ const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
           </button>
           <SquareImage src={images[visible]} alt={`image-${visible}`} size={1000} />
         </Row>
-        <Row ref={thumbnailsRef} className="gap-3 overflow-x-auto pb-3">
+        <Row sm ref={thumbnailsRef} className="overflow-x-auto pb-3">
           {images.map((src, idx) => (
             <Image key={idx}
               onClick={() => setVisible(idx)}
