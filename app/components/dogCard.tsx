@@ -1,5 +1,5 @@
 import { Col, Row } from "@/components/ui/layout"
-import { SectionTitle, Text } from "@/components/ui/typography"
+import { Text, TextTitle } from "@/components/ui/typography"
 import Image from 'next/image'
 import Link from 'next/link'
 import { getImageSrc } from "../utils/images"
@@ -32,10 +32,10 @@ export default function DogCard(dog: DogMetadata) {
           </Col>
           <Col xs>
             <Row vCentered className="justify-between">
-              <SectionTitle className="text-2xl">{name}</SectionTitle>
+              <TextTitle>{name}</TextTitle>
               <div className="text-sm px-2 py-1 rounded-lg bg-gray-100 font-semibold text-gray-600">{gender}</div>
             </Row>
-            <Text sm>{breed}</Text>
+            <Text italic>{breed}</Text>
             <Text sm>{age} years old</Text>
           </Col>
         </Col>
