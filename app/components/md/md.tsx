@@ -4,6 +4,7 @@ import Markdoc from "@markdoc/markdoc";
 import React from "react";
 import { Col } from "@/components/ui/layout";
 import Image from "next/image";
+import { getImageSrc } from "@/app/utils/images";
 
 const MdHeading: React.FC<unknown> = (props) => {
   const { level, ...rest } = props as { level: number; } & Record<string, unknown>;
@@ -27,8 +28,8 @@ const MdLink: React.FC<unknown> = (props) => {
 const MdImg: React.FC<unknown> = (props) => {
   const { src, alt, title, ...rest } = props as { src: string; alt: string; title: string; } & Record<string, unknown>;
   return (
-    <Image {...rest} title={title} src={src} alt={alt}
-      className="w-full rounded-2xl"
+    <Image {...rest} title={title} src={getImageSrc(src)} alt={alt}
+      className="w-fit rounded-lg"
       width={0}
       height={0}
       sizes="100vw" />
