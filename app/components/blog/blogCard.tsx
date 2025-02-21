@@ -22,7 +22,7 @@ export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPost
           className="relative object-cover h-auto w-full aspect-3/2 rounded-xl overflow-hidden"
         />
       </Link>
-      <Col>
+      <Col className="w-full">
         <TextTitle semibold tag={Link} href={`/blog/${id}`}>
           {title}
         </TextTitle>

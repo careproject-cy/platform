@@ -1,58 +1,50 @@
 [
   {
-    "filename": "2024-10-10_test_post.md",
-    "title": "Some text about dogs and stuff",
-    "date": "2024-10-10T00:00:00.000Z",
-    "description": "Dogs are known for their friendly nature and unwavering devotion. They often communicate through body language and thrive on social interaction.",
-    "imageSrc": "https://placehold.co/400x400?text=Image+placeholder",
-    "tags": [
-      "next.js",
-      "plugin"
-    ]
-  },
-  {
-    "filename": "2024-11-19_test_post2.md",
-    "title": "Some text about dogs and stuff",
-    "date": "2024-11-19T00:00:00.000Z",
-    "description": "Dogs are known for their friendly nature and unwavering devotion. They often communicate through body language and thrive on social interaction.",
-    "imageSrc": "https://placehold.co/400x400?text=Image+placeholder",
-    "tags": [
-      "next.js",
-      "plugin"
-    ]
-  },
-  {
-    "filename": "2025-01-25_test_text.md",
-    "title": "Some text about dogs",
-    "date": "2025-01-25T00:00:00.000Z",
-    "description": "Dogs are known for their friendly nature and unwavering devotion. They often communicate through body language and thrive on social interaction.",
-    "imageSrc": "https://placehold.co/400x400?text=Image+placeholder",
-    "tags": [
-      "next.js",
-      "plugin"
-    ]
-  },
-  {
-    "filename": "2025-01-29_test_post.md",
-    "title": "Some text about dogs 2",
-    "date": "2025-01-29T00:00:00.000Z",
-    "description": "Dogs are known for their friendly nature and unwavering devotion. They often communicate through body language and thrive on social interaction.",
-    "imageSrc": "https://placehold.co/400x400?text=Image+placeholder",
-    "tags": [
-      "next.js",
-      "plugin"
-    ]
-  },
-  {
-    "filename": "2025-02-10_test_post.md",
-    "title": "Some text about dogs and stuff",
+    "filename": "2025-02-10-your-new-best-friend-awaits.md",
+    "title": "Your new best friend awaits",
     "date": "2025-02-10T00:00:00.000Z",
-    "description": "Dogs are known for their friendly nature and unwavering devotion. They often communicate through body language and thrive on social interaction.",
-    "imageSrc": "https://placehold.co/400x400?text=Image+placeholder",
+    "description": "Dogs aren't just pets; they become an integral part of our lives. They offer us companionship that fills our days with joy and helps us feel less alone. When you adopt a shelter dog, you're not only gaining a loyal friend; you're opening your heart to a whole new world of love, support, and heartwarming experiences.",
+    "imageSrc": "img/blog/2025-02-10-your-new-best-friend-awaits/dog-in-the-forest.png",
     "tags": [
+      "adoption",
       "dogs",
-      "pets",
-      "animals"
+      "fostering"
+    ]
+  },
+  {
+    "filename": "2025-02-12-beware-of-dangerous-caterpillars-for-your-pets.md",
+    "title": "Beware of dangerous caterpillars for your pets",
+    "date": "2025-02-12T00:00:00.000Z",
+    "description": "If your dog comes into contact with a pine processionary caterpillar and shows symptoms such as allergic reactions, swelling, or unusual behavior, seek immediate assistance. If you're at a shelter, contact the volunteers. Otherwise, take your pet to a veterinarian without a delay. Quick action can prevent serious health issues and ensure your pet receives the necessary treatment.",
+    "imageSrc": "img/blog/2025-02-12-beware-of-dangerous-caterpillars-for-your-pets/caterpillars.jpg",
+    "tags": [
+      "adoption",
+      "dogs",
+      "fostering"
+    ]
+  },
+  {
+    "filename": "2025-02-15-beware-of-foxtail-grass.md",
+    "title": "Attention dog owners in Cyprus - Beware of Foxtail Grass",
+    "date": "2025-02-15T00:00:00.000Z",
+    "description": "A foxtail is a spikelet or cluster of grass that disperses its seeds as a unit, acting as a plant dispersal mechanism. Foxtails can become a significant health hazard for pets and other domestic animals, as well as a nuisance for people. In dogs, cats, and other animals, foxtails can become lodged irreversibly.",
+    "imageSrc": "img/blog/2025-02-15-beware-of-foxtail-grass/foxtail-grass.png",
+    "tags": [
+      "adoption",
+      "dogs",
+      "fostering"
+    ]
+  },
+  {
+    "filename": "2025-02-18-essential-items-for-welcoming-your-new-dog-in-cyprus.md",
+    "title": "Essential items for welcoming your new dog in Cyprus",
+    "date": "2025-02-18T00:00:00.000Z",
+    "description": "Bringing a dog home, especially one from a shelter, requires some preparation to ensure a smooth transition. Here’s a list of must-have items for dog owners in Cyprus...",
+    "imageSrc": "img/blog/2025-02-18-essential-items-for-welcoming-your-new-dog-in-cyprus/smiling-small-dog.jpg",
+    "tags": [
+      "adoption",
+      "dogs",
+      "fostering"
     ]
   }
 ]
