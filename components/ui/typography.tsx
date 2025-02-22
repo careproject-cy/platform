@@ -3,7 +3,7 @@ import { componentBuilder } from "./utils";
 import { TypographyComponentProps } from "./props";
 
 export const PageTitle: React.FC<TypographyComponentProps> = (props) =>
-  componentBuilder(props, "h1", "font-semibold")
+  componentBuilder(props, "h1", "")
     .withSizes({
       xs: "text-3xl",
       sm: "text-4xl",
@@ -11,11 +11,13 @@ export const PageTitle: React.FC<TypographyComponentProps> = (props) =>
       lg: "text-6xl",
       xl: "text-7xl",
     })
-    .withTypography()
+    .withTypography({
+      fontWeight: { semibold: true }
+    })
     .build();
 
 export const SectionTitle: React.FC<TypographyComponentProps> = (props) =>
-  componentBuilder(props, "h2", "font-semibold")
+  componentBuilder(props, "h2", "")
     .withSizes({
       xs: "text-2xl",
       sm: "text-3xl",
@@ -23,11 +25,13 @@ export const SectionTitle: React.FC<TypographyComponentProps> = (props) =>
       lg: "text-5xl",
       xl: "text-6xl",
     })
-    .withTypography()
+    .withTypography({
+      fontWeight: { semibold: true }
+    })
     .build();
 
 export const TextTitle: React.FC<TypographyComponentProps> = (props) =>
-  componentBuilder(props, "h3", "font-semibold")
+  componentBuilder(props, "h3", "")
     .withSizes({
       xs: "text-lg",
       sm: "text-xl",
@@ -35,11 +39,13 @@ export const TextTitle: React.FC<TypographyComponentProps> = (props) =>
       lg: "text-3xl",
       xl: "text-4xl",
     })
-    .withTypography()
+    .withTypography({
+      fontWeight: { semibold: true }
+    })
     .build();
 
 export const Text: React.FC<TypographyComponentProps> = (props) =>
-  componentBuilder(props, "p", "text-gray-600 p-0 m-0")
+  componentBuilder(props, "p", "p-0 m-0")
     .withSizes({
       xs: "text-xs",
       sm: "text-sm",
@@ -47,11 +53,13 @@ export const Text: React.FC<TypographyComponentProps> = (props) =>
       lg: "text-lg",
       xl: "text-xl",
     })
-    .withTypography()
+    .withTypography({
+      textAppearance: { secondary: true }
+    })
     .build();
 
 export const Link: React.FC<TypographyComponentProps> = (props) =>
-  componentBuilder(props, "a", "text-blue-500 hover:underline")
+  componentBuilder(props, "a", "hover:underline")
     .withSizes({
       xs: "text-xs",
       sm: "text-sm",
@@ -59,11 +67,13 @@ export const Link: React.FC<TypographyComponentProps> = (props) =>
       lg: "text-lg",
       xl: "text-xl",
     })
-    .withTypography()
+    .withTypography({
+      textAppearance: { link: true }
+    })
     .build();
 
 export const ListItem: React.FC<TypographyComponentProps> = (props) =>
-  componentBuilder(props, "li", "text-gray-600")
+  componentBuilder(props, "li", "")
     .withSizes({
       xs: "text-xs",
       sm: "text-sm",
@@ -71,7 +81,7 @@ export const ListItem: React.FC<TypographyComponentProps> = (props) =>
       lg: "text-lg",
       xl: "text-xl",
     })
-    .withTypography()
+    .withTypography({})
     .build();
 
 export const List: React.FC<TypographyComponentProps> = (props) =>
@@ -83,5 +93,5 @@ export const List: React.FC<TypographyComponentProps> = (props) =>
       lg: "text-lg",
       xl: "text-xl",
     })
-    .withTypography()
+    .withTypography({})
     .build();

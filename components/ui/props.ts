@@ -1,4 +1,3 @@
-
 export interface SizeProps {
   xs?: boolean;
   sm?: boolean;
@@ -60,8 +59,6 @@ export interface CommonAppearanceProps {
   info?: boolean;
 }
 
-export type FontProps = FontWeightProps & FontStyleProps & TextDecorationProps & TextTransformProps & FontFamilyProps & TextAppearanceProps & CommonAppearanceProps;
-
 export interface BreakpointProps {
   xsCol?: boolean;
   smCol?: boolean;
@@ -107,6 +104,8 @@ export interface CenteredProps {
 export type BaseComponentProps = TagProps & Partial<SizeProps & HideProps & PositionProps> & React.HTMLProps<HTMLElement>;
 
 export type LayoutComponentProps = BaseComponentProps & ReverseProps & CenteredProps;
+
+export type FontProps = FontWeightProps & FontStyleProps & TextDecorationProps & TextTransformProps & FontFamilyProps & TextAppearanceProps & CommonAppearanceProps;
 
 export type TypographyComponentProps = BaseComponentProps & FontProps;
 

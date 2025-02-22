@@ -8,7 +8,7 @@
   --text-primary: var(--color-gray-950, #171717);
   --text-secondary: var(--color-gray-600, #4a5568);
   --text-tertiary: var(--color-gray-500, #718096);
-  --text-muted: var(--color-gray-300, #e2e8f0);
+  --text-muted: var(--color-gray-400, #4a5568);
   --text-link: var(--color-blue-600, #2b6cb0);
 
   --text-success: var(--color-green-600, #2f855a);

@@ -35,7 +35,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
           <Col xl>
             <Col lg>
               <PageTitle>{post.title}</PageTitle>
-              <Text>{getDate(post.date)}</Text>
+              <Text muted semibold>{getDate(post.date)}</Text>
               <Image
                 src={getImageSrc(post.imageSrc)}
                 alt={post.title}
