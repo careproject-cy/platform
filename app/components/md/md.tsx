@@ -36,7 +36,7 @@ const MdImg: React.FC<unknown> = (props) => {
   );
 };
 
-const MdContainer: React.FC<unknown> = (props) => <Col className="gap-6" {...(props as Record<string, unknown>)} />;
+const MdContainer: React.FC<unknown> = (props) => <Col {...(props as Record<string, unknown>)} />;
 
 const MdList: React.FC<unknown> = (props) => <List {...(props as Record<string, unknown>)} />;
 

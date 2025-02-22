@@ -12,7 +12,7 @@ export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPost
   const desc = post.description
   const Tag = horizontal ? Row : Col;
   return (
-    <Tag lg vCentered reverse={reverse}>
+    <Tag lg vCentered reverse={reverse} mdCol={Tag === Row}>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
           src={getImageSrc(post.imageSrc)}
