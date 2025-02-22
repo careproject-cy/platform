@@ -18,5 +18,5 @@ export const Button: React.FC<TypographyComponentProps> = (props) =>
       lg: "shadow-md hover:shadow-lg",
       xl: "shadow-lg hover:shadow-xl",
     })
-    .withTypography()
+    .withTypography({})
     .build();
