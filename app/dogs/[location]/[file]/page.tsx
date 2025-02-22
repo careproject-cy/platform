@@ -56,30 +56,32 @@ export default async function DogPage({ params }: IdProps) {
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${dog.filename.replace(".md", "")}`, text: dog.name }]} />
           <Row xl mdCol>
             <Gallery className="flex-1" images={galleryImages} />
-            <Col className="w-full gap-6 flex-1">
-              <Col className="gap-3">
-                <Row vCentered className="justify-between">
+            <Col lg className="flex-1">
+              <Col>
+                <Row vCentered justifyBetween>
                   <PageTitle>{dog.name}</PageTitle>
                   <span className="text-md px-3 py-1 rounded-lg bg-gray-100 font-semibold text-gray-600">{dog.gender}</span>
                 </Row>
-                <Row className="justify-between">
+                <Row justifyBetween>
                   <Text>{dog.breed}</Text>
                   <Text>~{dog.age} years old</Text>
                 </Row>
                 <Text italic>{sizeText}</Text>
               </Col>
               <Divider />
-              <Col sm>
+              <Col lg>
                 <TextTitle>Description</TextTitle>
                 <Md content={content} frontmatter={frontmatter} />
               </Col>
               <Divider />
-              <Col sm className="opacity-75">
-                <TextTitle sm>
+              <Col>
+                <TextTitle sm secondary>
                   Added at{" "}
                   {getDate(dog.added)}
                 </TextTitle>
-                <Text>Please note that the information about the dog is collected at the time the dog was added to the website meaning some of the data may not be accurate.</Text>
+                <Text secondary>
+                  Please note that the information about the dog is collected at the time the dog was added to the website meaning some of the data may not be accurate.
+                </Text>
               </Col>
             </Col>
           </Row>

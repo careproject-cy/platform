@@ -29,7 +29,7 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
 
   return (
     <>
-      <Row className="justify-center">
+      <Row>
         <Row xs vCentered>
           <label htmlFor="age-filter" className="text-sm font-medium">Filter by Age:</label>
           <select value={ageFilter} onChange={(event) => setAgeFilter(event.target.value as string)} className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50">

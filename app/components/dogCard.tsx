@@ -31,7 +31,7 @@ export default function DogCard(dog: DogMetadata) {
             }
           </Col>
           <Col xs>
-            <Row vCentered className="justify-between">
+            <Row vCentered justifyBetween>
               <TextTitle>{name}</TextTitle>
               <div className="text-sm px-2 py-1 rounded-lg bg-gray-100 font-semibold text-gray-600">{gender}</div>
             </Row>

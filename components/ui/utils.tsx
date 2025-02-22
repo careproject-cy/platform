@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { BaseComponentProps, BreakpointProps, CenteredProps, CommonAppearanceProps, FontFamilyProps, FontStyleProps, FontWeightProps, GapProps, HideProps, PositionProps, ReverseProps, RowColProps, SizeProps, TextAppearanceProps, TextDecorationProps, TextTransformProps } from "./props";
+import { BaseComponentProps, BreakpointProps, CenteredProps, CommonAppearanceProps, FontFamilyProps, FontStyleProps, FontWeightProps, GapProps, HideProps, PositionProps, ReverseProps, ColProps, RowProps, TextAppearanceProps, TextDecorationProps, TextTransformProps, SizeProps } from "./props";
 import { fontFamilyClasses, fontStyleClasses, fontWeightClasses, textAppearanceClasses, textDecorationClasses, textTransformClasses } from "./commonValues";
 import { FontFamilySettings, FontStyleSettings, FontWeightSettings, TextAppearanceSettings, TextDecorationSettings, TextTransformSettings, TypographySettings } from "./settings";
 
@@ -26,7 +26,7 @@ export function componentBuilder(
 ) {
   const extraClasses: string[] = [];
   const { className, children, tag, ...other } = baseProps;
-  const otherProps: (typeof other) & Partial<ReverseProps & CenteredProps & GapProps & RowColProps> = { ...other };
+  const otherProps: (typeof other) & Partial<ReverseProps & CenteredProps & GapProps & RowProps & ColProps> = { ...other };
   const propsToRemove: string[] = []
 
   const registerKeys = (keys: string[]) => {

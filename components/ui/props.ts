@@ -101,6 +101,17 @@ export interface CenteredProps {
   hCentered?: boolean;
 }
 
+export interface JustifyProps {
+  justifyStart?: boolean;
+  justifyEnd?: boolean;
+  justifyCenter?: boolean;
+  justifyBetween?: boolean;
+  justifyAround?: boolean;
+  justifyEvenly?: boolean;
+  justifyStretch?: boolean;
+  justifyBaseline?: boolean;
+}
+
 export type BaseComponentProps = TagProps & Partial<SizeProps & HideProps & PositionProps> & React.HTMLProps<HTMLElement>;
 
 export type LayoutComponentProps = BaseComponentProps & ReverseProps & CenteredProps;
@@ -111,4 +122,6 @@ export type TypographyComponentProps = BaseComponentProps & FontProps;
 
 export type GridProps = BaseComponentProps & GapProps;
 
-export type RowColProps = BaseComponentProps & GapProps & ReverseProps & CenteredProps & BreakpointProps;
+export type RowProps = BaseComponentProps & GapProps & ReverseProps & CenteredProps & BreakpointProps & JustifyProps;
+
+export type ColProps = BaseComponentProps & GapProps & ReverseProps & CenteredProps;
