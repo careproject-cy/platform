@@ -1,4 +1,5 @@
 import { Row } from "@/components/ui/layout"
+import { Text } from "@/components/ui/typography"
 import Link from 'next/link'
 import React from 'react'
 
@@ -11,9 +12,7 @@ export default function Breadcrumbs({ breadcrumbs }: BreadcrumbsProps) {
     <Row md vCentered>
       {breadcrumbs.map(({ href, text }, idx) => (
         <React.Fragment key={idx}>
-          <Link href={href} className="text-lg text-gray-700 hover:text-gray-900">
-            {text}
-          </Link>
+          <Text lg tag={Link} href={href}>{text}</Text>
           {idx < breadcrumbs.length - 1 && <span className="text-gray-500">/</span>}
         </React.Fragment>
       ))}

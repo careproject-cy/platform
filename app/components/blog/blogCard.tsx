@@ -12,7 +12,7 @@ export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPost
   const desc = post.description
   const Tag = horizontal ? Row : Col;
   return (
-    <Tag lg vCentered reverse={reverse} mdCol={Tag === Row}>
+    <Tag lg vCentered reverse={reverse} {...(horizontal ? { mdCol: true } : {})}>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
           src={getImageSrc(post.imageSrc)}
@@ -27,7 +27,7 @@ export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPost
           {title}
         </TextTitle>
         <Text className="line-clamp-2">{desc}</Text>
-        <Text semibold className="text-gray-500">{getDate(post.date)}</Text>
+        <Text semibold secondary>{getDate(post.date)}</Text>
       </Col>
     </Tag>
   )

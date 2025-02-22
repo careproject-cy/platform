@@ -22,3 +22,4 @@ By having these essentials ready, you'll create a welcoming environment for your
 - **Donate**: Your donations help us provide care and support for more dogs in need.
 - **Spread the Word**: Share our mission with friends and family to raise awareness and encourage community involvement.
 
+You can learn more about our work and how to get involved on our website page [here](/more/get-involved). Thank you for supporting us!

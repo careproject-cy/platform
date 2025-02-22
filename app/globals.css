@@ -3,17 +3,30 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent-color: var(--color-orange-600, #dd6b20);
+  --text-accent: var(--accent-color, #dd6b20);
+  --text-primary: var(--color-gray-950, #171717);
+  --text-secondary: var(--color-gray-600, #4a5568);
+  --text-tertiary: var(--color-gray-500, #718096);
+  --text-muted: var(--color-gray-300, #e2e8f0);
+  --text-link: var(--color-blue-600, #2b6cb0);
+
+  --text-success: var(--color-green-600, #2f855a);
+  --text-warning: var(--color-yellow-600, #b7791f);
+  --text-error: var(--color-red-600, #9b2c2c);
+  --text-info: var(--color-blue-600, #2b6cb0);
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+*/
 
 body {
-  color: var(--foreground);
   background: var(--background);
 }
 

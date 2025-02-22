@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
-import { BaseComponentProps, BreakpointProps, CenteredProps, FontFamilyProps, FontStyleProps, FontWeightProps, GapProps, HideProps, PositionProps, ReverseProps, SizeProps, TextDecorationProps, TextTransformProps } from "./props";
-import { fontFamilyMap, fontStyleMap, fontWeightMap, textDecorationMap, textTransformMap } from "./commonValues";
+import { BaseComponentProps, BreakpointProps, CenteredProps, CommonAppearanceProps, FontFamilyProps, FontStyleProps, FontWeightProps, GapProps, HideProps, PositionProps, ReverseProps, RowColProps, SizeProps, TextAppearanceProps, TextDecorationProps, TextTransformProps } from "./props";
+import { fontFamilyClasses, fontStyleClasses, fontWeightClasses, textAppearanceClasses, textDecorationClasses, textTransformClasses } from "./commonValues";
 
 function getBooleanClass<
   T extends Record<string, boolean | undefined>
@@ -25,9 +25,7 @@ export function componentBuilder(
 ) {
   const extraClasses: string[] = [];
   const { className, children, tag, ...other } = baseProps;
-
-  const otherProps: (typeof other) & Partial<ReverseProps & CenteredProps & GapProps> = { ...other };
-
+  const otherProps: (typeof other) & Partial<ReverseProps & CenteredProps & GapProps & RowColProps> = { ...other };
   const propsToRemove: string[] = []
 
   const registerKeys = (keys: string[]) => {
@@ -74,22 +72,23 @@ export function componentBuilder(
     withCentered: (centeredMap: Record<keyof CenteredProps, string>) => withBooleanProps(centeredMap),
     withHide: (hideMap: Record<keyof HideProps, string>) => withBooleanProps(hideMap),
     withPosition: (positionMap: Record<keyof PositionProps, string>) => withBooleanProps(positionMap),
-
-    withFontWeight: (fontMap: Record<keyof FontWeightProps, string>) => withBooleanProps(fontMap),
-    withFontStyle: (fontMap: Record<keyof FontStyleProps, string>) => withBooleanProps(fontMap),
-    withFontFamily: (fontMap: Record<keyof FontFamilyProps, string>) => withBooleanProps(fontMap),
-    withTextDecoration: (fontMap: Record<keyof TextDecorationProps, string>) => withBooleanProps(fontMap),
-    withTextTransform: (fontMap: Record<keyof TextTransformProps, string>) => withBooleanProps(fontMap),
+    withFontWeight: (fontWeight: Record<keyof FontWeightProps, string>) => withBooleanProps(fontWeight),
+    withFontStyle: (fontStyle: Record<keyof FontStyleProps, string>) => withBooleanProps(fontStyle),
+    withFontFamily: (fontFamily: Record<keyof FontFamilyProps, string>) => withBooleanProps(fontFamily),
+    withTextDecoration: (textDecoration: Record<keyof TextDecorationProps, string>) => withBooleanProps(textDecoration),
+    withTextTransform: (textTransform: Record<keyof TextTransformProps, string>) => withBooleanProps(textTransform),
+    withTextAppearance: (appearance: Record<keyof TextAppearanceProps & CommonAppearanceProps, string>) => withBooleanProps(appearance, "primary"),
 
     withGaps: (gapMap: Record<keyof GapProps, string>, sizeMap: Record<keyof SizeProps, string>) =>
       otherProps.noGap !== undefined && otherProps.noGap ? withBooleanProps(gapMap) : builder.withSizes(sizeMap),
 
     withTypography: () => builder
-      .withFontFamily(fontFamilyMap)
-      .withFontStyle(fontStyleMap)
-      .withFontWeight(fontWeightMap)
-      .withTextDecoration(textDecorationMap)
-      .withTextTransform(textTransformMap),
+      .withFontFamily(fontFamilyClasses)
+      .withFontStyle(fontStyleClasses)
+      .withFontWeight(fontWeightClasses)
+      .withTextDecoration(textDecorationClasses)
+      .withTextTransform(textTransformClasses)
+      .withTextAppearance(textAppearanceClasses),
 
     build() {
       builder.withHide({

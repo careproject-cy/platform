@@ -44,7 +44,23 @@ export interface TextTransformProps {
   normalCase?: boolean;
 }
 
-export type FontProps = FontWeightProps & FontStyleProps & TextDecorationProps & TextTransformProps & FontFamilyProps;
+export interface TextAppearanceProps {
+  muted?: boolean;
+  link?: boolean;
+}
+
+export interface CommonAppearanceProps {
+  accent?: boolean;
+  primary?: boolean;
+  secondary?: boolean;
+  tertiary?: boolean;
+  success?: boolean;
+  danger?: boolean;
+  warning?: boolean;
+  info?: boolean;
+}
+
+export type FontProps = FontWeightProps & FontStyleProps & TextDecorationProps & TextTransformProps & FontFamilyProps & TextAppearanceProps & CommonAppearanceProps;
 
 export interface BreakpointProps {
   xsCol?: boolean;
@@ -88,7 +104,7 @@ export interface CenteredProps {
   hCentered?: boolean;
 }
 
-export type BaseComponentProps = TagProps & Partial<SizeProps & BreakpointProps & HideProps & PositionProps> & React.HTMLProps<HTMLElement>;
+export type BaseComponentProps = TagProps & Partial<SizeProps & HideProps & PositionProps> & React.HTMLProps<HTMLElement>;
 
 export type LayoutComponentProps = BaseComponentProps & ReverseProps & CenteredProps;
 
@@ -96,4 +112,4 @@ export type TypographyComponentProps = BaseComponentProps & FontProps;
 
 export type GridProps = BaseComponentProps & GapProps;
 
-export type RowColProps = BaseComponentProps & GapProps & ReverseProps & CenteredProps;
+export type RowColProps = BaseComponentProps & GapProps & ReverseProps & CenteredProps & BreakpointProps;

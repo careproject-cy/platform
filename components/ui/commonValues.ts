@@ -1,4 +1,4 @@
-export const fontWeightMap = {
+export const fontWeightClasses = {
   thin: "font-thin",
   extralight: "font-extralight",
   light: "font-light",
@@ -10,27 +10,41 @@ export const fontWeightMap = {
   black: "font-black",
 }
 
-export const fontStyleMap = {
+export const fontStyleClasses = {
   italic: "italic",
   notItalic: "not-italic",
 }
 
-export const fontFamilyMap = {
+export const fontFamilyClasses = {
   sans: "font-sans",
   serif: "font-serif",
   mono: "font-mono",
 }
 
-export const textDecorationMap = {
+export const textDecorationClasses = {
   underline: "underline",
   lineThrough: "line-through",
   noUnderline: "no-underline",
   overline: "overline",
 }
 
-export const textTransformMap = {
+export const textTransformClasses = {
   uppercase: "uppercase",
   lowercase: "lowercase",
   capitalize: "capitalize",
   normalCase: "normal-case",
+}
+
+export const textAppearanceClasses = {
+  primary: "text-(--text-primary)",
+  secondary: "text-(--text-secondary)",
+  tertiary: "text-(--text-tertiary)",
+  muted: "text-(--text-muted)",
+  link: "text-(--text-link)",
+
+  accent: "text-(--text-accent)",
+  success: "text-(--text-success)",
+  danger: "text-(--text-danger)",
+  warning: "text-(--text-warning)",
+  info: "text-(--text-info)",
 }
