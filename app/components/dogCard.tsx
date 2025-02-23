@@ -35,8 +35,8 @@ export default function DogCard(dog: DogMetadata) {
               <TextTitle>{name}</TextTitle>
               <div className="text-sm px-2 py-1 rounded-lg bg-gray-100 font-semibold text-gray-600">{gender}</div>
             </Row>
-            <Text italic>{breed}</Text>
-            <Text sm>{age} years old</Text>
+            <Text secondary italic>{breed}</Text>
+            <Text secondary sm>{age} years old</Text>
           </Col>
         </Col>
       </Link>

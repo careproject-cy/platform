@@ -1,5 +1,7 @@
 import { CommonAppearanceProps, FontFamilyProps, FontStyleProps, FontWeightProps, TextAppearanceProps, TextDecorationProps, TextTransformProps } from "./props";
 
+export type CommonAppearanceSettings = { [key in keyof CommonAppearanceProps]: boolean; };
+
 export type FontFamilySettings = { [key in keyof FontFamilyProps]: boolean; };
 export type FontWeightSettings = { [key in keyof FontWeightProps]: boolean; };
 export type FontStyleSettings = { [key in keyof FontStyleProps]: boolean; };

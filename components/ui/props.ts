@@ -49,6 +49,7 @@ export interface TextAppearanceProps {
 }
 
 export interface CommonAppearanceProps {
+  default?: boolean;
   accent?: boolean;
   primary?: boolean;
   secondary?: boolean;

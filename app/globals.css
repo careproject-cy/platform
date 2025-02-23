@@ -3,18 +3,28 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --accent-color: var(--color-orange-600, #dd6b20);
-  --text-accent: var(--accent-color, #dd6b20);
-  --text-primary: var(--color-gray-950, #171717);
-  --text-secondary: var(--color-gray-600, #4a5568);
-  --text-tertiary: var(--color-gray-500, #718096);
-  --text-muted: var(--color-gray-400, #4a5568);
-  --text-link: var(--color-blue-600, #2b6cb0);
 
-  --text-success: var(--color-green-600, #2f855a);
-  --text-warning: var(--color-yellow-600, #b7791f);
-  --text-error: var(--color-red-600, #9b2c2c);
-  --text-info: var(--color-blue-600, #2b6cb0);
+  --accent-color: var(--color-orange-600, #dd6b20);
+  --primary-color: var(--color-blue-600, #2b6cb0);
+  --secondary-color: var(--color-gray-600, #4a5568);
+  --tertiary-color: var(--color-gray-500, #718096);
+  --success-color: var(--color-green-600, #2f855a);
+  --warning-color: var(--color-yellow-600, #b7791f);
+  --danger-color: var(--color-red-600, #9b2c2c);
+  --info-color: var(--color-blue-600, #2b6cb0);
+
+  --text-color-default: var(--color-gray-900, #171717);
+  --text-color-accent: var(--accent-color, #dd6b20);
+  --text-color-primary: var(--color-blue-900, #092c51);
+  --text-color-secondary: var(--color-gray-700, #4a5568);
+  --text-color-tertiary: var(--color-gray-500, #718096);
+  --text-color-muted: var(--color-gray-500, #4a5568);
+  --text-color-link: var(--color-blue-600, #2b6cb0);
+
+  --text-color-success: var(--color-green-600, #2f855a);
+  --text-color-warning: var(--color-yellow-600, #b7791f);
+  --text-color-danger: var(--color-red-600, #9b2c2c);
+  --text-color-info: var(--color-blue-600, #2b6cb0);
 }
 
 /*

@@ -1,11 +1,9 @@
 import { twMerge } from "tailwind-merge";
 import { BaseComponentProps, BreakpointProps, CenteredProps, CommonAppearanceProps, FontFamilyProps, FontStyleProps, FontWeightProps, GapProps, HideProps, PositionProps, ReverseProps, ColProps, RowProps, TextAppearanceProps, TextDecorationProps, TextTransformProps, SizeProps } from "./props";
 import { fontFamilyClasses, fontStyleClasses, fontWeightClasses, textAppearanceClasses, textDecorationClasses, textTransformClasses } from "./commonValues";
-import { FontFamilySettings, FontStyleSettings, FontWeightSettings, TextAppearanceSettings, TextDecorationSettings, TextTransformSettings, TypographySettings } from "./settings";
+import { CommonAppearanceSettings, FontFamilySettings, FontStyleSettings, FontWeightSettings, TextAppearanceSettings, TextDecorationSettings, TextTransformSettings, TypographySettings } from "./settings";
 
-function getBooleanClass<
-  T extends Record<string, boolean | undefined>
->(
+function getBooleanClass<T extends Record<string, boolean | undefined>>(
   props: T,
   classes?: Record<keyof T, string>,
   fallbackKey?: keyof T
@@ -22,7 +20,7 @@ function getBooleanClass<
 export function componentBuilder(
   baseProps: BaseComponentProps,
   defaultTag: string,
-  baseClasses: string
+  baseClasses?: string
 ) {
   const extraClasses: string[] = [];
   const { className, children, tag, ...other } = baseProps;
@@ -46,14 +44,16 @@ export function componentBuilder(
         propsSubset[key] = otherProps[key as keyof typeof otherProps];
       }
     });
-    // Compute the class.
-    const newClass = getBooleanClass(propsSubset, propMap, fallbackKey);
 
-    extraClasses.push(newClass);
     if (settings) {
       const settingsClass = getBooleanClass(settings || {}, propMap);
       extraClasses.push(settingsClass);
     }
+
+    // Compute the class.
+    const newClass = getBooleanClass(propsSubset, propMap, fallbackKey);
+    extraClasses.push(newClass);
+
     // Register all keys found in the map.
     registerKeys(keys as string[]);
     return builder;
@@ -86,7 +86,7 @@ export function componentBuilder(
     withFontFamily: (fontFamily: Record<keyof FontFamilyProps, string>, settings: FontFamilySettings) => withBooleanProps(fontFamily, undefined, settings),
     withTextDecoration: (textDecoration: Record<keyof TextDecorationProps, string>, settings: TextDecorationSettings) => withBooleanProps(textDecoration, undefined, settings),
     withTextTransform: (textTransform: Record<keyof TextTransformProps, string>, settings: TextTransformSettings) => withBooleanProps(textTransform, undefined, settings),
-    withTextAppearance: (appearance: Record<keyof TextAppearanceProps & CommonAppearanceProps, string>, settings: TextAppearanceSettings) => withBooleanProps(appearance, "primary", settings),
+    withTextAppearance: (appearance: Record<keyof TextAppearanceProps & CommonAppearanceProps, string>, settings: TextAppearanceSettings) => withBooleanProps(appearance, "default", settings),
 
     withGaps: (gapMap: Record<keyof GapProps, string>, sizeMap: Record<keyof SizeProps, string>) =>
       otherProps.noGap !== undefined && otherProps.noGap ? withBooleanProps(gapMap) : builder.withSizes(sizeMap),
@@ -98,6 +98,8 @@ export function componentBuilder(
       .withTextDecoration(textDecorationClasses, settings?.textDecoration ?? {})
       .withTextTransform(textTransformClasses, settings?.textTransform ?? {})
       .withTextAppearance(textAppearanceClasses, settings?.textAppearance ?? {}),
+
+    withAppearance: (appearance: Record<keyof CommonAppearanceProps, string>, settings: CommonAppearanceSettings) => withBooleanProps(appearance, "default", settings),
 
     build() {
       builder.withHide({
