@@ -42,7 +42,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   }, [autoPlayKey])
 
   return (
-    <div className={twMerge(`relative flex items-center justify-center min-h-80 h-80 rounded-2xl w-full`, className ?? "")}>
+    <div className={twMerge(`relative flex items-center justify-center min-h-80 h-80 rounded-2xl w-full overflow-hidden`, className ?? "")}>
       <button onClick={prevImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-50 rounded-full absolute left-2 z-30 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
         <span className="material-symbols-rounded">chevron_left</span>
       </button>
