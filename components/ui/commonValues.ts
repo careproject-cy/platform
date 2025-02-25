@@ -36,15 +36,16 @@ export const textTransformClasses = {
 }
 
 export const textAppearanceClasses = {
-  primary: "text-(--text-primary)",
-  secondary: "text-(--text-secondary)",
-  tertiary: "text-(--text-tertiary)",
-  muted: "text-(--text-muted)",
-  link: "text-(--text-link)",
+  default: "text-(--text-color-default)",
+  primary: "text-(--text-color-primary)",
+  secondary: "text-(--text-color-secondary)",
+  tertiary: "text-(--text-color-tertiary)",
+  muted: "text-(--text-color-muted)",
+  link: "text-(--text-color-link)",
 
-  accent: "text-(--text-accent)",
-  success: "text-(--text-success)",
-  danger: "text-(--text-danger)",
-  warning: "text-(--text-warning)",
-  info: "text-(--text-info)",
+  accent: "text-(--text-color-accent)",
+  success: "text-(--text-color-success)",
+  danger: "text-(--text-color-danger)",
+  warning: "text-(--text-color-warning)",
+  info: "text-(--text-color-info)",
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { GridProps, LayoutComponentProps, RowColProps } from "./props";
+import { GridProps, LayoutComponentProps, ColProps, RowProps } from "./props";
 import { componentBuilder } from "./utils";
 
 const centeredClasses = {
@@ -47,7 +47,7 @@ const commonGaps = {
   xl: "gap-8 max-lg:gap-7 max-md:gap-6",
 }
 
-export const Col: React.FC<RowColProps> = (props) =>
+export const Col: React.FC<ColProps> = (props) =>
   componentBuilder(props, "div", "flex flex-col")
     .withGaps({ noGap: "gap-0" }, commonGaps)
     .withReverse({
@@ -56,7 +56,7 @@ export const Col: React.FC<RowColProps> = (props) =>
     .withCentered(centeredClasses)
     .build();
 
-export const Row: React.FC<RowColProps> = (props) =>
+export const Row: React.FC<RowProps> = (props) =>
   componentBuilder(props, "div", "flex flex-row")
     .withGaps({ noGap: "gap-0" }, commonGaps)
     .withReverse({
@@ -69,6 +69,16 @@ export const Row: React.FC<RowColProps> = (props) =>
       mdCol: "max-md:flex-col",
       lgCol: "max-lg:flex-col",
       xlCol: "max-xl:flex-col"
+    })
+    .withBooleanProps({
+      justifyStart: "justify-start",
+      justifyEnd: "justify-end",
+      justifyCenter: "justify-center",
+      justifyBetween: "justify-between",
+      justifyAround: "justify-around",
+      justifyEvenly: "justify-evenly",
+      justifyStretch: "justify-stretch",
+      justifyBaseline: "justify-baseline",
     })
     .build();
 

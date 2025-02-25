@@ -26,8 +26,8 @@ export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPost
         <TextTitle semibold tag={Link} href={`/blog/${id}`}>
           {title}
         </TextTitle>
-        <Text className="line-clamp-2">{desc}</Text>
-        <Text semibold secondary>{getDate(post.date)}</Text>
+        <Text secondary className="line-clamp-2">{desc}</Text>
+        <Text semibold muted>{getDate(post.date)}</Text>
       </Col>
     </Tag>
   )

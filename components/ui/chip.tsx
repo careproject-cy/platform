@@ -2,14 +2,14 @@ import React from 'react';
 import { componentBuilder } from "./utils";
 import { TypographyComponentProps } from "./props";
 
-export const Badge: React.FC<TypographyComponentProps> = (props) =>
+export const Chip: React.FC<TypographyComponentProps> = (props) =>
   componentBuilder(props, "span", "rounded-full w-fit")
     .withSizes({
-      xs: "px-2 py-1 text-xs",
-      sm: "px-3 py-1 text-sm",
-      md: "px-4 py-2 text-base",
-      lg: "px-5 py-2 text-lg",
-      xl: "px-6 py-3 text-xl",
+      xs: "px-1 py-1 rounded-sm text-xs",
+      sm: "px-2 py-1 rounded-md text-sm",
+      md: "px-2 py-1 rounded-lg text-base",
+      lg: "px-3 py-2 rounded-xl text-lg",
+      xl: "px-4 py-3 rounded-2xl text-xl",
     })
     .withAppearance({
       default: "bg-gray-200",
@@ -23,9 +23,7 @@ export const Badge: React.FC<TypographyComponentProps> = (props) =>
       info: "bg-blue-200"
     }, {})
     .withTypography({
-      fontWeight: { semibold: true },
       fontFamily: { mono: true },
-      textTransform: { uppercase: true },
       textAppearance: { secondary: true },
     })
     .build();

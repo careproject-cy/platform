@@ -1,4 +1,3 @@
-
 export interface SizeProps {
   xs?: boolean;
   sm?: boolean;
@@ -50,6 +49,7 @@ export interface TextAppearanceProps {
 }
 
 export interface CommonAppearanceProps {
+  default?: boolean;
   accent?: boolean;
   primary?: boolean;
   secondary?: boolean;
@@ -59,8 +59,6 @@ export interface CommonAppearanceProps {
   warning?: boolean;
   info?: boolean;
 }
-
-export type FontProps = FontWeightProps & FontStyleProps & TextDecorationProps & TextTransformProps & FontFamilyProps & TextAppearanceProps & CommonAppearanceProps;
 
 export interface BreakpointProps {
   xsCol?: boolean;
@@ -104,12 +102,27 @@ export interface CenteredProps {
   hCentered?: boolean;
 }
 
+export interface JustifyProps {
+  justifyStart?: boolean;
+  justifyEnd?: boolean;
+  justifyCenter?: boolean;
+  justifyBetween?: boolean;
+  justifyAround?: boolean;
+  justifyEvenly?: boolean;
+  justifyStretch?: boolean;
+  justifyBaseline?: boolean;
+}
+
 export type BaseComponentProps = TagProps & Partial<SizeProps & HideProps & PositionProps> & React.HTMLProps<HTMLElement>;
 
 export type LayoutComponentProps = BaseComponentProps & ReverseProps & CenteredProps;
+
+export type FontProps = FontWeightProps & FontStyleProps & TextDecorationProps & TextTransformProps & FontFamilyProps & TextAppearanceProps & CommonAppearanceProps;
 
 export type TypographyComponentProps = BaseComponentProps & FontProps;
 
 export type GridProps = BaseComponentProps & GapProps;
 
-export type RowColProps = BaseComponentProps & GapProps & ReverseProps & CenteredProps & BreakpointProps;
+export type RowProps = BaseComponentProps & GapProps & ReverseProps & CenteredProps & BreakpointProps & JustifyProps;
+
+export type ColProps = BaseComponentProps & GapProps & ReverseProps & CenteredProps;

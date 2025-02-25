@@ -3,7 +3,7 @@ import { componentBuilder } from "./utils";
 import { TypographyComponentProps } from "./props";
 
 export const Button: React.FC<TypographyComponentProps> = (props) =>
-  componentBuilder(props, "button", "w-fit cursor-pointer flex justify-center items-center border border-gray-200 transition-all duration-300 hover:bg-gray-50")
+  componentBuilder(props, "button", "w-fit cursor-pointer flex justify-center items-center border border-gray-200 transition-all duration-300")
     .withSizes({
       xs: "px-2 py-1 rounded-sm text-xs",
       sm: "px-3 py-1 rounded-md text-sm",
@@ -18,5 +18,7 @@ export const Button: React.FC<TypographyComponentProps> = (props) =>
       lg: "shadow-md hover:shadow-lg",
       xl: "shadow-lg hover:shadow-xl",
     })
-    .withTypography()
+    .withTypography({
+      fontWeight: { semibold: true },
+    })
     .build();

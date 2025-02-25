@@ -13,7 +13,9 @@ export default function Breadcrumbs({ breadcrumbs }: BreadcrumbsProps) {
       {breadcrumbs.map(({ href, text }, idx) => (
         <React.Fragment key={idx}>
           <Text lg tag={Link} href={href}>{text}</Text>
-          {idx < breadcrumbs.length - 1 && <span className="text-gray-500">/</span>}
+          {idx < breadcrumbs.length - 1 &&
+            <Text lg secondary tag={"span"}>/</Text>
+          }
         </React.Fragment>
       ))}
     </Row>

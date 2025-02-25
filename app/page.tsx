@@ -30,9 +30,9 @@ export default async function Home() {
           <Row xl lgCol>
             <Col xl>
               <PageTitle>{slogan}</PageTitle>
-              <Text lg>{longDescription}</Text>
+              <Text secondary lg>{longDescription}</Text>
               <Row lg smCol>
-                <Button lg bold tag={Link} href="/more/get-involved" className="bg-gradient-to-br from-orange-400 to-red-600 border-orange-400 text-white hover:opacity-90 hover:scale-105">Get Involved</Button>
+                <Button lg tag={Link} href="/more/get-involved" className="bg-gradient-to-br from-orange-400 to-red-600 border-orange-400 text-white hover:opacity-90 hover:scale-105">Get Involved</Button>
                 <Button lg tag={Link} href="/more/about" className="bg-white hover:opacity-90 hover:scale-105">Learn More</Button>
               </Row>
             </Col>
@@ -43,7 +43,7 @@ export default async function Home() {
 
       <Section>
         <Container xl centered>
-          <Col centered>
+          <Col lg centered>
             <Badge>Meet the dogs</Badge>
             <SectionTitle>Dogs Available For Adoption</SectionTitle>
           </Col>
