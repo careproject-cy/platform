@@ -1,5 +1,22 @@
 [
   {
+    "filename": "dixie.md",
+    "location": "other",
+    "name": "Dixie",
+    "breed": "Pointer mix",
+    "age": "8 years",
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/other/dixie/old-boy-adoption-cyprus.jpg",
+      "img/other/dixie/sweet-dog-rehome.jpg",
+      "img/other/dixie/smile-shelters-dogs.jpg",
+      "img/other/dixie/dixie-with-people-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
     "filename": "loki.md",
     "location": "other",
     "name": "Loki",
