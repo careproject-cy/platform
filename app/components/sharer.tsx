@@ -2,21 +2,46 @@
 
 import React from 'react';
 
-interface SocialShareProps {
+interface SocialShareCommonProps {
   url?: string;
   text?: string;
-  title?: string;
-  hashtag?: string;
-  hashtags?: string;
-  via?: string;
-  related?: string;
-  inReplyTo?: string;
-  to?: string;
-  web?: boolean;
   width?: number;
   height?: number;
   isLink?: boolean;
   isBlank?: boolean;
+}
+
+interface FacebookShareProps {
+  hashtag?: string;
+}
+
+interface TwitterShareProps {
+  hashtags?: string;
+  via?: string;
+  related?: string;
+  inReplyTo?: string;
+}
+
+interface EmailShareProps {
+  title?: string;
+  to?: string;
+}
+
+interface WhatsAppShareProps {
+  to?: string;
+  web?: boolean;
+}
+
+interface SocialShareProps extends SocialShareCommonProps {
+  facebookProps?: FacebookShareProps;
+  twitterProps?: TwitterShareProps;
+  emailProps?: EmailShareProps;
+  whatsappProps?: WhatsAppShareProps;
+}
+
+interface ShareConfig {
+  shareUrl: string;
+  getParams: () => { [key: string]: string | number | boolean | undefined };
 }
 
 const buildQueryString = (params: { [key: string]: string | number | boolean | undefined }): string => {
@@ -28,33 +53,24 @@ const buildQueryString = (params: { [key: string]: string | number | boolean | u
     : '';
 };
 
-interface ShareConfig {
-  shareUrl: string;
-  getParams: () => { [key: string]: string | number | boolean | undefined };
-}
-
 const SocialShare: React.FC<SocialShareProps> = ({
   url = window.location.href,
   text = '',
-  title = '',
-  hashtag = '',
-  hashtags = '',
-  via = '',
-  related = '',
-  inReplyTo = '',
-  to = '',
-  web = false,
   width = 600,
   height = 480,
   isLink = false,
   isBlank = true,
+  facebookProps = {},
+  twitterProps = {},
+  emailProps = {},
+  whatsappProps = {},
 }) => {
   const shareConfigs: { [key: string]: ShareConfig } = {
     fb: {
       shareUrl: 'https://www.facebook.com/sharer/sharer.php',
       getParams: () => ({
         u: url,
-        hashtag: hashtag ? (hashtag.startsWith('#') ? hashtag : `#${hashtag}`) : '',
+        hashtag: facebookProps.hashtag ? (facebookProps.hashtag.startsWith('#') ? facebookProps.hashtag : `#${facebookProps.hashtag}`) : '',
         quote: text,
       }),
     },
@@ -69,10 +85,10 @@ const SocialShare: React.FC<SocialShareProps> = ({
       getParams: () => ({
         text,
         url,
-        hashtags,
-        via,
-        related,
-        in_reply_to: inReplyTo,
+        hashtags: twitterProps.hashtags,
+        via: twitterProps.via,
+        related: twitterProps.related,
+        in_reply_to: twitterProps.inReplyTo,
       }),
     },
     th: {
@@ -82,16 +98,16 @@ const SocialShare: React.FC<SocialShareProps> = ({
       }),
     },
     em: {
-      shareUrl: 'mailto:' + to,
+      shareUrl: 'mailto:' + (emailProps.to || ''),
       getParams: () => ({
-        subject: title,
+        subject: emailProps.title,
         body: `${text}\n${url}`,
       }),
     },
     wa: {
-      shareUrl: web ? 'https://web.whatsapp.com/send' : 'https://wa.me/',
+      shareUrl: (whatsappProps.web ? 'https://web.whatsapp.com/send' : 'https://wa.me/'),
       getParams: () => ({
-        phone: to,
+        phone: whatsappProps.to,
         text: `${text} ${url}`,
       }),
     },
