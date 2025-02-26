@@ -9,6 +9,10 @@ interface SocialShareCommonProps {
   height?: number;
   isLink?: boolean;
   isBlank?: boolean;
+  // New props:
+  platforms?: string[];
+  containerComponent?: React.ElementType;
+  buttonComponent?: React.ElementType;
 }
 
 interface FacebookShareProps {
@@ -44,12 +48,17 @@ interface ShareConfig {
   getParams: () => { [key: string]: string | number | boolean | undefined };
 }
 
-const buildQueryString = (params: { [key: string]: string | number | boolean | undefined }): string => {
+const buildQueryString = (
+  params: { [key: string]: string | number | boolean | undefined }
+): string => {
   const validKeys = Object.keys(params).filter(
     key => params[key] !== undefined && params[key] !== ''
   );
   return validKeys.length > 0
-    ? '?' + validKeys.map(key => `${key}=${encodeURIComponent(String(params[key]))}`).join('&')
+    ? '?' +
+        validKeys
+          .map(key => `${key}=${encodeURIComponent(String(params[key]))}`)
+          .join('&')
     : '';
 };
 
@@ -60,17 +69,25 @@ const SocialShare: React.FC<SocialShareProps> = ({
   height = 480,
   isLink = false,
   isBlank = true,
+  platforms,
+  containerComponent,
+  buttonComponent,
   facebookProps = {},
   twitterProps = {},
   emailProps = {},
   whatsappProps = {},
 }) => {
+  // Share config for each platform.
   const shareConfigs: { [key: string]: ShareConfig } = {
     fb: {
       shareUrl: 'https://www.facebook.com/sharer/sharer.php',
       getParams: () => ({
         u: url,
-        hashtag: facebookProps.hashtag ? (facebookProps.hashtag.startsWith('#') ? facebookProps.hashtag : `#${facebookProps.hashtag}`) : '',
+        hashtag: facebookProps.hashtag
+          ? facebookProps.hashtag.startsWith('#')
+            ? facebookProps.hashtag
+            : `#${facebookProps.hashtag}`
+          : '',
         quote: text,
       }),
     },
@@ -105,7 +122,9 @@ const SocialShare: React.FC<SocialShareProps> = ({
       }),
     },
     wa: {
-      shareUrl: (whatsappProps.web ? 'https://web.whatsapp.com/send' : 'https://wa.me/'),
+      shareUrl: whatsappProps.web
+        ? 'https://web.whatsapp.com/send'
+        : 'https://wa.me/',
       getParams: () => ({
         phone: whatsappProps.to,
         text: `${text} ${url}`,
@@ -125,6 +144,18 @@ const SocialShare: React.FC<SocialShareProps> = ({
         title: text,
       }),
     },
+  };
+
+  // Mapping for button labels based on platform key
+  const platformLabels: { [key: string]: string } = {
+    fb: 'Facebook',
+    li: 'LinkedIn',
+    x: 'X',
+    th: 'Threads',
+    em: 'Email',
+    wa: 'WhatsApp',
+    tg: 'Telegram',
+    re: 'Reddit',
   };
 
   const buildShareUrl = (config: ShareConfig): string => {
@@ -158,33 +189,27 @@ const SocialShare: React.FC<SocialShareProps> = ({
     openShareWindow(shareUrl);
   };
 
+  // Choose container and button components.
+  const Container = containerComponent || 'div';
+  const Button = buttonComponent || 'button';
+  // Default platforms: if not provided, use all keys available in shareConfigs.
+  const platformsToShow = platforms || Object.keys(shareConfigs);
+
   return (
-    <div className="social-share">
-      <button onClick={() => handleShare('fb')} title="Share on Facebook">
-        Facebook
-      </button>
-      <button onClick={() => handleShare('li')} title="Share on LinkedIn">
-        LinkedIn
-      </button>
-      <button onClick={() => handleShare('x')} title="Share on X">
-        X
-      </button>
-      <button onClick={() => handleShare('th')} title="Share on Threads">
-        Threads
-      </button>
-      <button onClick={() => handleShare('em')} title="Share via Email">
-        Email
-      </button>
-      <button onClick={() => handleShare('wa')} title="Share on WhatsApp">
-        WhatsApp
-      </button>
-      <button onClick={() => handleShare('tg')} title="Share on Telegram">
-        Telegram
-      </button>
-      <button onClick={() => handleShare('re')} title="Share on Reddit">
-        Reddit
-      </button>
-    </div>
+    <Container className="social-share">
+      {platformsToShow.map(key => {
+        const label = platformLabels[key] || key;
+        return (
+          <Button
+            key={key}
+            onClick={() => handleShare(key)}
+            title={`Share on ${label}`}
+          >
+            {label}
+          </Button>
+        );
+      })}
+    </Container>
   );
 };
 
