@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+type Platform = 'fb' | 'li' | 'x' | 'th' | 'em' | 'wa' | 'tg' | 're';
+
 interface SocialShareCommonProps {
   url?: string;
   text?: string;
@@ -9,10 +11,10 @@ interface SocialShareCommonProps {
   height?: number;
   isLink?: boolean;
   isBlank?: boolean;
-  // New props:
-  platforms?: string[];
+  platforms?: Platform[];
   containerComponent?: React.ElementType;
   buttonComponent?: React.ElementType;
+  buttonComponents?: Partial<Record<Platform, React.ElementType>>;
 }
 
 interface FacebookShareProps {
@@ -72,13 +74,13 @@ const SocialShare: React.FC<SocialShareProps> = ({
   platforms,
   containerComponent,
   buttonComponent,
+  buttonComponents,
   facebookProps = {},
   twitterProps = {},
   emailProps = {},
   whatsappProps = {},
 }) => {
-  // Share config for each platform.
-  const shareConfigs: { [key: string]: ShareConfig } = {
+  const shareConfigs: { [key in Platform]: ShareConfig } = {
     fb: {
       shareUrl: 'https://www.facebook.com/sharer/sharer.php',
       getParams: () => ({
@@ -146,8 +148,7 @@ const SocialShare: React.FC<SocialShareProps> = ({
     },
   };
 
-  // Mapping for button labels based on platform key
-  const platformLabels: { [key: string]: string } = {
+  const platformLabels: { [key in Platform]: string } = {
     fb: 'Facebook',
     li: 'LinkedIn',
     x: 'X',
@@ -182,22 +183,25 @@ const SocialShare: React.FC<SocialShareProps> = ({
     }
   };
 
-  const handleShare = (key: string): void => {
+  const handleShare = (key: Platform): void => {
     const config = shareConfigs[key];
     if (!config) return;
     const shareUrl = buildShareUrl(config);
     openShareWindow(shareUrl);
   };
 
-  // Choose container and button components.
+  // Use the provided container component or default to 'div'
   const Container = containerComponent || 'div';
-  const Button = buttonComponent || 'button';
-  // Default platforms: if not provided, use all keys available in shareConfigs.
-  const platformsToShow = platforms || Object.keys(shareConfigs);
+  // Default button component to use if no platform-specific component is provided
+  const DefaultButton = buttonComponent || 'button';
+  const platformsToShow: Platform[] =
+    platforms || (Object.keys(shareConfigs) as Platform[]);
 
   return (
-    <Container className="social-share">
+    <Container>
       {platformsToShow.map(key => {
+        // Use a specific button component if defined for the key
+        const Button = (buttonComponents && buttonComponents[key]) || DefaultButton;
         const label = platformLabels[key] || key;
         return (
           <Button

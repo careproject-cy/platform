@@ -12,7 +12,7 @@ import { getImageSrc } from "@/app/utils/images"
 import { getDate } from "@/app/utils/dateUtils"
 import { fetchDogs, fetchMd } from "@/app/data/fetchData"
 import Md from "@/app/components/md/md"
-import SocialShare from "@/app/components/sharer"
+import Sharer from "@/app/components/sharerWrapper"
 
 export const runtime = 'edge';
 
@@ -33,8 +33,6 @@ export async function generateMetadata({ params }: IdProps): Promise<Metadata> {
 export default async function DogPage({ params }: IdProps) {
   const { location, file } = await params
 
-  console.log(location, file)
-
   const dogs = await fetchDogs()
   const filename = `${file}.md`
   const dog = dogs.find(d => d.filename === filename && d.location === location)
@@ -49,6 +47,8 @@ export default async function DogPage({ params }: IdProps) {
   const similarDogs = dogs.filter(d => d.size === dog.size && d.filename !== dog.filename).slice(0, 4)
 
   const galleryImages = dog.images.map((image) => getImageSrc(image));
+
+  const shareText = `Check out ${dog.name}!`
 
   return (
     <Layout>
@@ -86,10 +86,7 @@ export default async function DogPage({ params }: IdProps) {
               </Col>
             </Col>
           </Row>
-          <SocialShare
-            url="https://example.com"
-            text="Check out this amazing website!"
-          />
+          <Sharer shareText={shareText}/>
           {similarDogs.length !== 0 &&
             <>
               <Divider />
