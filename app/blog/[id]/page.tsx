@@ -11,6 +11,8 @@ import { getImageSrc } from "@/app/utils/images"
 import { getDate } from "@/app/utils/dateUtils"
 import { Divider } from "@/components/ui/divider"
 import { BlogCard } from "@/app/components/blog/blogCard"
+import Sharer from "@/app/components/sharerWrapper"
+import { domain } from "@/app/data/consts"
 
 interface BlogPageProps {
   params: Promise<{ id: string }>
@@ -27,6 +29,9 @@ export default async function BlogPage({ params }: BlogPageProps) {
   }
 
   const relatedPosts = posts.filter(p => p.tags.some(t => post.tags.includes(t)) && p.filename !== post.filename).slice(0, 3)
+  const shareText = `Check out a new blog post: ${post.title}`
+
+  const url = `https://${domain}/blog/${post.filename.replace(".md", "")}`;
 
   return (
     <Layout>
@@ -44,6 +49,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
                 className="relative object-cover w-full aspect-3/2 rounded-xl overflow-hidden"
               />
               <Md content={content} frontmatter={frontmatter} />
+              <Sharer shareText={shareText} url={url} />
             </Col>
             <Button tag={Link} href="/blog">Back to Blog</Button>
             {relatedPosts.length === 0 ? null :
