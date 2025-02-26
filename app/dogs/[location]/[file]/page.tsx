@@ -12,6 +12,7 @@ import { getImageSrc } from "@/app/utils/images"
 import { getDate } from "@/app/utils/dateUtils"
 import { fetchDogs, fetchMd } from "@/app/data/fetchData"
 import Md from "@/app/components/md/md"
+import SocialShare from "@/app/components/sharer"
 
 export const runtime = 'edge';
 
@@ -85,6 +86,21 @@ export default async function DogPage({ params }: IdProps) {
               </Col>
             </Col>
           </Row>
+          <SocialShare
+            url="https://example.com"
+            text="Check out this amazing website!"
+            hashtag="AwesomeSite"
+            hashtags="awesome,website,share"
+            via="exampleUser"
+            related="friend1,friend2"
+            inReplyTo="123456789"
+            to="contact@example.com"
+            web={false}
+            width={600}
+            height={480}
+            isLink={true}
+            isBlank={true}
+          />
           {similarDogs.length !== 0 &&
             <>
               <Divider />
