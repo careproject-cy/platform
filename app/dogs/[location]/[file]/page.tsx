@@ -6,7 +6,7 @@ import { PageTitle, SectionTitle, Text, TextTitle } from "@/components/ui/typogr
 import { Divider } from "@/components/ui/divider"
 import Gallery from "@/app/components/gallery"
 import Breadcrumbs from "@/app/components/breadcrumbs"
-import { platform_name } from "@/app/data/consts"
+import { domain, platform_name } from "@/app/data/consts"
 import DogCard from "@/app/components/dogCard"
 import { getImageSrc } from "@/app/utils/images"
 import { getDate } from "@/app/utils/dateUtils"
@@ -49,6 +49,7 @@ export default async function DogPage({ params }: IdProps) {
   const galleryImages = dog.images.map((image) => getImageSrc(image));
 
   const shareText = `Check out ${dog.name}!`
+  const url = `https://${domain}/dogs/${location}/${file}`
 
   return (
     <Layout>
@@ -86,7 +87,7 @@ export default async function DogPage({ params }: IdProps) {
               </Col>
             </Col>
           </Row>
-          <Sharer shareText={shareText}/>
+          <Sharer shareText={shareText} url={url} />
           {similarDogs.length !== 0 &&
             <>
               <Divider />
