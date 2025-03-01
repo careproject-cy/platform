@@ -1,4 +1,4 @@
-import { Link as TyLink, TextTitle, List } from "@/components/ui/typography";
+import { Link as TyLink, Title, List } from "@/components/ui/typography";
 import Link from 'next/link'
 import Markdoc from "@markdoc/markdoc";
 import React from "react";
@@ -17,7 +17,7 @@ const MdHeading: React.FC<unknown> = (props) => {
     case 4: size = { sm: true }; break;
     case 5: size = { xs: true }; break;
   }
-  return <TextTitle {...rest} {...size} tag={tag} />;
+  return <Title {...rest} {...size} tag={tag} />;
 };
 
 const MdLink: React.FC<unknown> = (props) => {

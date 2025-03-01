@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
 import { getImageSrc } from "@/app/utils/images"
 import { Col, Row } from "@/components/ui/layout"
-import { Text, TextTitle } from "@/components/ui/typography"
+import { Text, Title } from "@/components/ui/typography"
 import { Button } from "@/components/ui/button"
 
 
@@ -27,7 +27,7 @@ export function LargeBlogCard({ post }: { post: BlogPostMetadata }) {
       </Link>
       <Col lg>
         <Badge lg lgHide hidden={tags.length === 0}>{tags[0]}</Badge>
-        <TextTitle lg tag={Link} href={`/blog/${id}`}>{title}</TextTitle>
+        <Title lg tag={Link} href={`/blog/${id}`}>{title}</Title>
         <Text lg secondary className="line-clamp-3">{desc}</Text>
         <Text lg semibold muted>{getDate(post.date)}</Text>
         <Button tag={Link} href={`/blog/${id}`} lgHide>Read more</Button>

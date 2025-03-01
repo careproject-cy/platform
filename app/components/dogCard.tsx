@@ -1,5 +1,5 @@
 import { Col, Row } from "@/components/ui/layout"
-import { Text, TextTitle } from "@/components/ui/typography"
+import { Text, Title } from "@/components/ui/typography"
 import Image from 'next/image'
 import Link from 'next/link'
 import { getImageSrc } from "../utils/images"
@@ -33,7 +33,7 @@ export default function DogCard(dog: DogMetadata) {
           </Col>
           <Col xs>
             <Row vCentered justifyBetween>
-              <TextTitle>{name}</TextTitle>
+              <Title>{name}</Title>
               <Chip semibold sm sans>{gender}</Chip>
             </Row>
             <Text secondary italic>{breed}</Text>

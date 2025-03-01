@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import Layout from '../../../components/layout'
 import type { Metadata } from 'next'
 import { Col, Row, Section, Container, Grid3 } from "@/components/ui/layout"
-import { PageTitle, SectionTitle, Text, TextTitle } from "@/components/ui/typography"
+import { PageTitle, SectionTitle, Text, Title } from "@/components/ui/typography"
 import { Divider } from "@/components/ui/divider"
 import Gallery from "@/app/components/gallery"
 import Breadcrumbs from "@/app/components/breadcrumbs"
@@ -13,6 +13,7 @@ import { getDate } from "@/app/utils/dateUtils"
 import { fetchDogs, fetchMd } from "@/app/data/fetchData"
 import Md from "@/app/components/md/md"
 import Sharer from "@/app/components/sharerWrapper"
+import { Chip } from "@/components/ui/chip"
 
 export const runtime = 'edge';
 
@@ -60,27 +61,26 @@ export default async function DogPage({ params }: IdProps) {
             <Gallery className="flex-1" images={galleryImages} />
             <Col lg className="flex-1">
               <Col>
+                <PageTitle>{dog.name}</PageTitle>
                 <Row vCentered justifyBetween>
-                  <PageTitle>{dog.name}</PageTitle>
-                  <span className="text-md px-3 py-1 rounded-lg bg-gray-100 font-semibold text-gray-600">{dog.gender}</span>
+                  <Text semibold>{sizeText}</Text>
+                  <Chip sans semibold>{dog.gender}</Chip>
                 </Row>
                 <Row justifyBetween>
                   <Text>{dog.breed}</Text>
                   <Text>~{dog.age} years old</Text>
                 </Row>
-                <Text italic>{sizeText}</Text>
               </Col>
               <Divider />
               <Col lg>
-                <TextTitle>Description</TextTitle>
+                <Title>Description</Title>
                 <Md content={content} frontmatter={frontmatter} />
               </Col>
               <Divider />
               <Col>
-                <TextTitle sm secondary>
-                  Added at{" "}
-                  {getDate(dog.added)}
-                </TextTitle>
+                <Title sm secondary>
+                  Added at {getDate(dog.added)}
+                </Title>
                 <Text secondary>
                   Please note that the information about the dog is collected at the time the dog was added to the website meaning some of the data may not be accurate.
                 </Text>

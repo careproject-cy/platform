@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 import { Col, Row } from "@/components/ui/layout"
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid'
 
 interface GalleryProps {
   images: string[]
@@ -53,10 +54,10 @@ const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
       <Col sm>
         <Row vCentered relative className="overflow-hidden rounded-2xl">
           <button onClick={prevImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-75 rounded-full absolute left-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
-            <span className="material-symbols-rounded">chevron_left</span>
+            <ChevronLeftIcon className="size-6" />
           </button>
           <button onClick={nextImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-75 rounded-full absolute right-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
-            <span className="material-symbols-rounded">chevron_right</span>
+            <ChevronRightIcon className="size-6" />
           </button>
           <SquareImage src={images[visible]} alt={`image-${visible}`} size={1000} />
         </Row>

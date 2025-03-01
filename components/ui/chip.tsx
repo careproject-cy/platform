@@ -3,7 +3,7 @@ import { componentBuilder } from "./utils";
 import { TypographyComponentProps } from "./props";
 
 export const Chip: React.FC<TypographyComponentProps> = (props) =>
-  componentBuilder(props, "span", "rounded-full w-fit")
+  componentBuilder(props, "span", "rounded-full w-fit h-fit border")
     .withSizes({
       xs: "px-1 py-1 rounded-sm text-xs",
       sm: "px-2 py-1 rounded-md text-sm",
@@ -12,7 +12,7 @@ export const Chip: React.FC<TypographyComponentProps> = (props) =>
       xl: "px-4 py-3 rounded-2xl text-xl",
     })
     .withAppearance({
-      default: "bg-gray-200",
+      default: "bg-gray-100",
       accent: "bg-gray-200",
       primary: "bg-blue-200",
       secondary: "bg-gray-200",

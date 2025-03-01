@@ -30,7 +30,7 @@ export const SectionTitle: React.FC<TypographyComponentProps> = (props) =>
     })
     .build();
 
-export const TextTitle: React.FC<TypographyComponentProps> = (props) =>
+export const Title: React.FC<TypographyComponentProps> = (props) =>
   componentBuilder(props, "h3")
     .withSizes({
       xs: "text-lg",

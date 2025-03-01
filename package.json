@@ -12,6 +12,7 @@
     "generate-dogs": "npx tsx lib/generateDogsJson.ts"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@markdoc/markdoc": "^0.5.0",
     "@tailwindcss/postcss": "^4.0.0-beta.9",
     "class-variance-authority": "^0.7.1",
