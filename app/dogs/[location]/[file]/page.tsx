@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
 import Layout from '../../../components/layout'
 import type { Metadata } from 'next'
-import { Col, Row, Section, Container, Grid3 } from "@/components/ui/layout"
-import { PageTitle, SectionTitle, Text, Title } from "@/components/ui/typography"
+import { Col, Row, Section, Container, Grid3 } from "@vaneui/ui"
+import { PageTitle, SectionTitle, Text, Title } from "@vaneui/ui"
 import { Divider } from "@/components/ui/divider"
 import Gallery from "@/app/components/gallery"
 import Breadcrumbs from "@/app/components/breadcrumbs"
