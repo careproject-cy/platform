@@ -3,7 +3,7 @@ import Layout from '../../../components/layout'
 import type { Metadata } from 'next'
 import { Col, Row, Section, Container, Grid3 } from "@vaneui/ui"
 import { PageTitle, SectionTitle, Text, Title } from "@vaneui/ui"
-import { Divider } from "@/components/ui/divider"
+import { Divider } from "@vaneui/ui"
 import Gallery from "@/app/components/gallery"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import { domain, platform_name } from "@/app/data/consts"
@@ -13,7 +13,7 @@ import { getDate } from "@/app/utils/dateUtils"
 import { fetchDogs, fetchMd } from "@/app/data/fetchData"
 import Md from "@/app/components/md/md"
 import Sharer from "@/app/components/sharerWrapper"
-import { Chip } from "@/components/ui/chip"
+import { Chip } from "@vaneui/ui"
 
 export const runtime = 'edge';
 

@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import DogCard from '../components/dogCard'
-import { Button } from "@/components/ui/button"
-import { Grid4, Row } from "@/components/ui/layout"
+import { Button } from "@vaneui/ui"
+import { Grid4, Row } from "@vaneui/ui"
 import NoResults from "../components/noResults"
 import { DogMetadata } from "../data/dogMetadata"
 

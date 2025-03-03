@@ -1,8 +1,8 @@
-import { Link as TyLink, Title, List } from "@/components/ui/typography";
+import { Link as TyLink, Title, List } from "@vaneui/ui";
 import Link from 'next/link'
 import Markdoc from "@markdoc/markdoc";
 import React from "react";
-import { Col } from "@/components/ui/layout";
+import { Col } from "@vaneui/ui";
 import Image from "next/image";
 import { getImageSrc } from "@/app/utils/images";
 

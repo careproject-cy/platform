@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
-import { Col, Row } from "@/components/ui/layout"
+import { Col, Row } from "@vaneui/ui"
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid'
 
 interface GalleryProps {

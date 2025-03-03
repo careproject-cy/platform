@@ -1,12 +1,12 @@
 import { getDate } from "@/app/utils/dateUtils"
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@vaneui/ui"
 import Image from 'next/image'
 import Link from 'next/link'
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
 import { getImageSrc } from "@/app/utils/images"
-import { Col, Row } from "@/components/ui/layout"
-import { Text, Title } from "@/components/ui/typography"
-import { Button } from "@/components/ui/button"
+import { Col, Row } from "@vaneui/ui"
+import { Text, Title } from "@vaneui/ui"
+import { Button } from "@vaneui/ui"
 
 
 export function LargeBlogCard({ post }: { post: BlogPostMetadata }) {

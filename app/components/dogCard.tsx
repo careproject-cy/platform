@@ -1,10 +1,10 @@
-import { Col, Row } from "@/components/ui/layout"
-import { Text, Title } from "@/components/ui/typography"
+import { Col, Row } from "@vaneui/ui"
+import { Text, Title } from "@vaneui/ui"
 import Image from 'next/image'
 import Link from 'next/link'
 import { getImageSrc } from "../utils/images"
 import { DogMetadata } from "../data/dogMetadata"
-import { Chip } from "@/components/ui/chip"
+import { Chip } from "@vaneui/ui"
 
 export default function DogCard(dog: DogMetadata) {
   const dogImages = dog.images.map((image) => getImageSrc(image));

@@ -1,6 +1,6 @@
 import Layout from '../../components/layout'
 import type { Metadata } from 'next'
-import { Section, Container } from "@/components/ui/layout"
+import { Section, Container } from "@vaneui/ui"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import { platform_name } from "@/app/data/consts"
 import { fetchMd } from "@/app/data/fetchData"

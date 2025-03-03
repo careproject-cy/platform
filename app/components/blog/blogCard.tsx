@@ -3,8 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
 import { getImageSrc } from "@/app/utils/images"
-import { Col, Row } from "@/components/ui/layout"
-import { Text, Title } from "@/components/ui/typography"
+import { Col, Row } from "@vaneui/ui"
+import { Text, Title } from "@vaneui/ui"
 
 export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPostMetadata, horizontal?: boolean, reverse?: boolean }) {
   const id = post.filename.replace('.md', '')

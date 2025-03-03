@@ -1,15 +1,15 @@
 import { notFound } from 'next/navigation'
 import Layout from '../../components/layout'
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
-import { Col, Container, Section } from "@/components/ui/layout"
-import { PageTitle, SectionTitle, Text } from "@/components/ui/typography"
+import { Button } from "@vaneui/ui"
+import { Col, Container, Section } from "@vaneui/ui"
+import { PageTitle, SectionTitle, Text } from "@vaneui/ui"
 import Md from "@/app/components/md/md"
 import { fetchBlogposts, fetchMd } from "@/app/data/fetchData"
 import Image from "next/image"
 import { getImageSrc } from "@/app/utils/images"
 import { getDate } from "@/app/utils/dateUtils"
-import { Divider } from "@/components/ui/divider"
+import { Divider } from "@vaneui/ui"
 import { BlogCard } from "@/app/components/blog/blogCard"
 import Sharer from "@/app/components/sharerWrapper"
 import { domain } from "@/app/data/consts"

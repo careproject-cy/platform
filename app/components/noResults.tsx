@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image'
-import { Col } from "@/components/ui/layout";
-import { SectionTitle, Text } from "@/components/ui/typography";
+import { Col } from "@vaneui/ui";
+import { SectionTitle, Text } from "@vaneui/ui";
 
 const NoResults: React.FC = () => {
   return (

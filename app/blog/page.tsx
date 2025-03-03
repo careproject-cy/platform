@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
-import { Container, Section } from "@/components/ui/layout"
-import { PageTitle } from "@/components/ui/typography"
+import { Container, Section } from "@vaneui/ui"
+import { PageTitle } from "@vaneui/ui"
 import { fetchBlogposts } from "../data/fetchData"
 import BlogPosts from "./blogPosts"
 

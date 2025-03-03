@@ -2,8 +2,8 @@
 
 import Link from 'next/link'
 import Logo from "./logo"
-import { Row } from "@/components/ui/layout"
-import { Button } from "@/components/ui/button"
+import { Row } from "@vaneui/ui"
+import { Button } from "@vaneui/ui"
 import { useState } from "react"
 
 export default function Layout() {

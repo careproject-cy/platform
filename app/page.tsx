@@ -1,11 +1,10 @@
 import Layout from './components/layout'
 import DogCard from './components/dogCard'
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
 import Carousel from "./components/carousel"
 import { longDescription, slogan } from "./data/consts"
 import { BlogCard } from "./components/blog/blogCard"
-import { Col, Container, Grid3, Grid4, Row, Section, Badge, PageTitle, SectionTitle, Text } from "@vaneui/ui"
+import { Button, Col, Container, Grid3, Grid4, Row, Section, Badge, PageTitle, SectionTitle, Text } from "@vaneui/ui"
 import { fetchBlogposts, fetchDogs } from "./data/fetchData"
 import { getImageSrc } from "./utils/images"
 import { LargeBlogCard } from "./components/blog/largeBlogCard"

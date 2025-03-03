@@ -1,5 +1,5 @@
-import { Row } from "@/components/ui/layout"
-import { Text } from "@/components/ui/typography"
+import { Row } from "@vaneui/ui"
+import { Text } from "@vaneui/ui"
 import Link from 'next/link'
 import React from 'react'
 

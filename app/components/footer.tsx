@@ -1,4 +1,4 @@
-import { Container, Section } from "@/components/ui/layout"
+import { Container, Section } from "@vaneui/ui"
 import { platform_name } from "../data/consts"
 
 export default function Layout() {

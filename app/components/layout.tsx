@@ -1,4 +1,4 @@
-import { Col } from "@/components/ui/layout"
+import { Col } from "@vaneui/ui"
 import Header from "./header"
 import Footer from "./footer"
 

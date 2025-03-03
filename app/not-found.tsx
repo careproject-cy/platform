@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button"
-import { Col, Container, Section } from "@/components/ui/layout"
-import { PageTitle, Text } from "@/components/ui/typography"
+import { Button, Col, Container, Section, PageTitle, Text } from "@vaneui/ui"
 import Link from 'next/link'
 
 export default function NotFound() {

@@ -1,9 +1,9 @@
 'use client'
 
 import { BlogCard } from "../components/blog/blogCard"
-import { Button } from "@/components/ui/button"
+import { Button } from "@vaneui/ui"
 import { useState } from 'react'
-import { Col, Grid3 } from "@/components/ui/layout"
+import { Col, Grid3 } from "@vaneui/ui"
 import { BlogPostMetadata } from "../data/blogPostMetadata"
 import { LargeBlogCard } from "../components/blog/largeBlogCard"
 

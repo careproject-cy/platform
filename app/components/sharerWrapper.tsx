@@ -1,9 +1,9 @@
 'use client'
 
 import React from 'react';
-import { Row } from "@/components/ui/layout";
-import SocialShare from "../../components/complex/sharer";
-import { Text } from "@/components/ui/typography";
+import { Row } from "@vaneui/ui";
+import { SocialShare } from "@vaneui/ui/complex";
+import { Text } from "@vaneui/ui";
 
 const Sharer: React.FC<{ labelText?: string, shareText?: string, url?: string }> = ({ labelText = "Share this page:", shareText, url }) => {
   const spanClass = "w-10 h-10 opacity-70 hover:opacity-100 hover:bg-gray-100 cursor-pointer rounded-lg border-1 shadow-sm flex items-center justify-center";
