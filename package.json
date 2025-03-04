@@ -15,7 +15,7 @@
     "@heroicons/react": "^2.2.0",
     "@markdoc/markdoc": "^0.5.0",
     "@tailwindcss/postcss": "^4.0.9",
-    "@vaneui/ui": "^0.0.11",
+    "@vaneui/ui": "^0.0.12",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
