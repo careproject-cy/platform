@@ -24,6 +24,8 @@ export default function Layout() {
         <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/" >Home</Link>
         <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/dogs">Dogs</Link>
         <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/blog">Blog</Link>
+        <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/more/adopt">Adopt</Link>
+        <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/more/foster">Foster</Link>
         <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/more/about">About</Link>
         <Button tag={Link} href="/more/get-involved" className="bg-gradient-to-br from-orange-400 to-red-600 border-orange-400 text-white hover:opacity-90 w-full">Get Involved</Button>
       </Row>
