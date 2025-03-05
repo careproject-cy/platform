@@ -1,10 +1,11 @@
 ---
   name: Max
   breed: Shepherd
-  age: 5
+  age: 4
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
+    img/germasogeia/max/max-adoption-cyprus.jpg,
     img/germasogeia/max/max-first-walk.jpg,
     img/germasogeia/max/shepherd-adopt.jpg,
     img/germasogeia/max/max-rehome-cyprus.jpg,
