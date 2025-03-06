@@ -25,6 +25,7 @@ export default function DogCard(dog: DogMetadata) {
               alt={name}
               width={300}
               height={300}
+              sizes="(max-width: 768px) 100vw, 300px"
               className="relative object-cover h-auto w-full aspect-square"
             />
             {showStatus &&

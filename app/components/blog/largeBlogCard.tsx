@@ -22,6 +22,7 @@ export function LargeBlogCard({ post }: { post: BlogPostMetadata }) {
           alt={title}
           width={300}
           height={200}
+          sizes="(max-width: 768px) 100vw, 300px"
           className="relative object-cover h-auto w-full aspect-3/2 rounded-xl overflow-hidden"
         />
       </Link>
