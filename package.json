@@ -20,6 +20,7 @@
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "next": "15.1.5",
+    "postcss-discard-duplicates": "^7.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.6.0"
@@ -29,6 +30,7 @@
     "@types/node": "^20",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19",
+    "cssnano": "^7.0.6",
     "eslint": "^9",
     "eslint-config-next": "15.1.5",
     "postcss": "^8",

@@ -1,5 +1,6 @@
 @import "tailwindcss";
-@import "@vaneui/ui/css";
+@source "../node_modules/@vaneui/ui";
+/*@import "@vaneui/ui/css";*/
 
 :root {
   --background: #ffffff;

@@ -26,8 +26,27 @@ export async function generateMetadata({ params }: IdProps): Promise<Metadata> {
   const dogs = await fetchDogs()
   const filename = `${file}.md`
   const dog = dogs.find(d => d.filename === filename && d.location === location)
+  if (!dog) {
+    return {
+      title: `Not found | ${platform_name}`
+    };
+  }
   return {
-    title: !dog ? `Not found | ${platform_name}` : `${dog.name} | ${dog.breed} | ${platform_name}`
+    title: `${dog.name} | ${dog.breed} | ${platform_name}`,
+    openGraph: {
+      images: [
+        {
+          url: dog.images[0] || "care-project-social.png",
+          width: 800,
+          height: 600,
+          alt: `${dog.name} open graph image`
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [dog.images[0] || "care-project-social.png"]
+    }
   }
 }
 

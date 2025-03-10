@@ -61,7 +61,7 @@ const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
           </button>
           <SquareImage src={images[visible]} alt={`image-${visible}`} size={1000} />
         </Row>
-        <Row sm ref={thumbnailsRef} className="overflow-x-hidden">
+        <Row sm ref={thumbnailsRef} className="overflow-x-hidden max-md:overflow-x-scroll">
           {images.map((src, idx) => (
             <Image key={idx}
               onClick={() => setVisible(idx)}

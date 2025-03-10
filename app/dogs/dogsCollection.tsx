@@ -8,7 +8,7 @@ import NoResults from "../components/noResults"
 import { DogMetadata } from "../data/dogMetadata"
 
 export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
-  
+
   const [ageFilter, setAgeFilter] = useState<string>('all')
   const [breedFilter, setBreedFilter] = useState<string>('all')
   const [visibleDogs, setVisibleDogs] = useState(12)
@@ -29,19 +29,21 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
 
   return (
     <>
-      <Row>
-        <Row xs vCentered>
-          <label htmlFor="age-filter" className="text-sm font-medium">Filter by Age:</label>
-          <select value={ageFilter} onChange={(event) => setAgeFilter(event.target.value as string)} className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50">
+      <Row lg mdCol className="max-md:w-full">
+        <Row smCol vCentered className="max-md:w-full">
+          <label htmlFor="age-filter" className="text-sm font-medium max-sm:w-full">Filter by Age:</label>
+          <select value={ageFilter} onChange={(event) => setAgeFilter(event.target.value as string)}
+            className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50 max-sm:w-full">
             <option className="bg-white text-gray-800 p-2" value={"all"}>All Ages</option>
             <option className="bg-white text-gray-800 p-2" value={"young"}>Young (0-3 years)</option>
             <option className="bg-white text-gray-800 p-2" value={"adult"}>Adult (4-8 years)</option>
             <option className="bg-white text-gray-800 p-2" value={"senior"}>Senior (9+ years)</option>
           </select>
         </Row>
-        <Row xs vCentered>
-          <label htmlFor="breed-filter" className="text-sm font-medium">Filter by Breed:</label>
-          <select value={breedFilter} onChange={(event) => setBreedFilter(event.target.value as string)} className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50">
+        <Row smCol vCentered>
+          <label htmlFor="breed-filter" className="text-sm font-medium max-sm:w-full">Filter by Breed:</label>
+          <select value={breedFilter} onChange={(event) => setBreedFilter(event.target.value as string)}
+            className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50 max-sm:w-full">
             <option className="bg-white text-gray-800 p-2" value={"all"}>All Breeds</option>
             {uniqueBreeds.map(breed => (
               <option className="bg-white text-gray-800 p-2" key={breed} value={breed.toLowerCase()}>{breed}</option>
