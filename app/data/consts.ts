@@ -4,4 +4,6 @@ export const longDescription = "At CARE Project, we believe volunteering in anim
 
 export const cloudfront_domain = "d1ki5tb2ey2mtg.cloudfront.net";
 
-export const domain = "careproject.cy"; 
+export const domain = "careproject.cy";
+
+export const social_img_url = `https://careproject.cy/care-project-social.png`;

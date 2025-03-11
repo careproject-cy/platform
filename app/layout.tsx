@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans, Noto_Sans_Mono } from "next/font/google";
 import "./globals.css";
-import { platform_name, slogan } from "./data/consts";
+import { platform_name, slogan, social_img_url } from "./data/consts";
 
 const sans = Noto_Sans({
   variable: "--font-sans",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "care-project-social.png",
+        url: social_img_url,
         width: 800,
         height: 600,
         alt: `care-project-social`
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["care-project-social.png"]
+    images: [social_img_url]
   }
 };
 
