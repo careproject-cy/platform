@@ -16,6 +16,20 @@ const mono = Noto_Sans_Mono({
 export const metadata: Metadata = {
   title: platform_name,
   description: slogan,
+  openGraph: {
+    images: [
+      {
+        url: "care-project-social.png",
+        width: 800,
+        height: 600,
+        alt: `care-project-social`
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["care-project-social.png"]
+  }
 };
 
 export const runtime = 'edge' // 'nodejs' (default) | 'edge'

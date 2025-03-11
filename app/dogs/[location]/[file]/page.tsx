@@ -31,12 +31,13 @@ export async function generateMetadata({ params }: IdProps): Promise<Metadata> {
       title: `Not found | ${platform_name}`
     };
   }
+  const imgUrl = getImageSrc(dog.images[0]);
   return {
     title: `${dog.name} | ${dog.breed} | ${platform_name}`,
     openGraph: {
       images: [
         {
-          url: dog.images[0] || "care-project-social.png",
+          url: imgUrl || "care-project-social.png",
           width: 800,
           height: 600,
           alt: `${dog.name} open graph image`
@@ -45,7 +46,7 @@ export async function generateMetadata({ params }: IdProps): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      images: [dog.images[0] || "care-project-social.png"]
+      images: [imgUrl || "care-project-social.png"]
     }
   }
 }
@@ -97,10 +98,10 @@ export default async function DogPage({ params }: IdProps) {
               </Col>
               <Divider />
               <Col>
-                <Title sm secondary>
+                <Title xs secondary>
                   Added at {getDate(dog.added)}
                 </Title>
-                <Text secondary>
+                <Text sm secondary>
                   Please note that the information about the dog is collected at the time the dog was added to the website meaning some of the data may not be accurate.
                 </Text>
               </Col>
