@@ -56,6 +56,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
             {
               idx > images.length - 1 ? null : (
                 <Image
+                  loading='eager'
                   src={images[idx]}
                   alt={`Slide ${idx}`}
                   width={400}

@@ -3,6 +3,7 @@ import { cloudfront_domain } from "./app/data/consts";
 
 const nextConfig: NextConfig = {
   images: {
+    minimumCacheTTL: 2678400, // 31 days
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {

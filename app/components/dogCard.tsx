@@ -21,6 +21,7 @@ export default function DogCard(dog: DogMetadata) {
         <Col>
           <Col relative className="hover:scale-105 transition-all duration-300 hover:shadow-lg rounded-xl overflow-hidden">
             <Image
+              loading='eager'
               src={dogImages[0]}
               alt={name}
               width={300}

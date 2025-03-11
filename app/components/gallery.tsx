@@ -15,10 +15,12 @@ const SquareImage = ({ src, alt, size, className, imageClassName, onClick }: { s
     <Col className={twMerge(`relative overflow-hidden rounded-2xl`, className || "")}>
       <Image src={src} alt={`${alt} background`} width={size} height={size}
         sizes="(max-width: 768px) 100vw, 50vw"
+        loading='eager'
         className={twMerge(`aspect-square object-cover blur-xs`, imageClassName || "")}
       />
       <Image onClick={onClick} src={src} alt={alt} width={size} height={size}
         sizes="(max-width: 768px) 100vw, 50vw"
+        loading='eager'
         className={twMerge(`absolute object-contain h-full w-full`, imageClassName || "")}
       />
     </Col>
@@ -64,6 +66,7 @@ const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
         <Row sm ref={thumbnailsRef} className="overflow-x-hidden max-md:overflow-x-scroll">
           {images.map((src, idx) => (
             <Image key={idx}
+              loading='eager'
               onClick={() => setVisible(idx)}
               src={src}
               alt={`Image ${idx}`}
