@@ -5,7 +5,7 @@ import { SectionTitle, Text } from "@vaneui/ui";
 
 const NoResults: React.FC = () => {
   return (
-    <Col centered className="opacity-50 flex-1">
+    <Col itemsCenter className="opacity-50 flex-1">
       <Image src="/dog.svg" alt={"No results available"} width={300} height={200} />
       <SectionTitle>No results available</SectionTitle>
       <Text>Sorry, no results were found for your search.</Text>

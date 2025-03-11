@@ -10,10 +10,10 @@ const Sharer: React.FC<{ labelText?: string, shareText?: string, url?: string }>
   const svgClass = "w-7 h-7";
 
   return (
-    <Row vCentered xl justifyEnd>
+    <Row itemsCenter xl justifyEnd>
       <Text>{labelText}</Text>
       <SocialShare
-        containerComponent={(props) => <Row vCentered {...props} />}
+        containerComponent={(props) => <Row itemsCenter {...props} />}
         /*buttonComponent={(props) => <Button md {...props} />}*/
         buttonComponents={
           {

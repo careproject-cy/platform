@@ -11,7 +11,7 @@ export default async function DogsPage() {
   return (
     <Layout>
       <Section>
-        <Container xl centered>
+        <Container xl itemsCenter>
           <PageTitle>Dogs Available For Adoption</PageTitle>
           <DogsCollection dogs={dogs} />
         </Container>

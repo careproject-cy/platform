@@ -34,7 +34,7 @@ export default function DogCard(dog: DogMetadata) {
             }
           </Col>
           <Col xs>
-            <Row vCentered justifyBetween>
+            <Row itemsCenter justifyBetween>
               <Title>{name}</Title>
               <Chip semibold sm sans>{gender}</Chip>
             </Row>

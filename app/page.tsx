@@ -39,8 +39,8 @@ export default async function Home() {
       </Section>
 
       <Section>
-        <Container xl centered>
-          <Col lg centered>
+        <Container xl itemsCenter>
+          <Col lg itemsCenter>
             <Badge>Meet the dogs</Badge>
             <SectionTitle>Dogs Available For Adoption</SectionTitle>
           </Col>
@@ -54,7 +54,7 @@ export default async function Home() {
       </Section>
 
       <Section>
-        <Container xl centered>
+        <Container xl itemsCenter>
           <SectionTitle>Latest Blog Posts</SectionTitle>
           <Col lg>
             <LargeBlogCard post={latestPost} />

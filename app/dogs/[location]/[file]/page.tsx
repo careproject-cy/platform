@@ -80,7 +80,7 @@ export default async function DogPage({ params }: IdProps) {
             <Col lg className="flex-1">
               <Col>
                 <PageTitle>{dog.name}</PageTitle>
-                <Row vCentered justifyBetween>
+                <Row itemsCenter justifyBetween>
                   <Text semibold>{sizeText}</Text>
                   <Chip sans semibold>{dog.gender}</Chip>
                 </Row>

@@ -6,7 +6,7 @@ import { Row, Title } from "@vaneui/ui"
 
 const Logo: React.FC = () => {
   return (
-    <Row xs vCentered href="/" tag={Link}>
+    <Row xs itemsCenter href="/" tag={Link}>
       <Image src="/logo.svg" alt={platform_name} width={80} height={80} className="h-14" />
       <Title bold mdHide>
         {platform_name}

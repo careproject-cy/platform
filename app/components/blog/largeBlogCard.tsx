@@ -15,7 +15,7 @@ export function LargeBlogCard({ post }: { post: BlogPostMetadata }) {
   const desc = post.description
   const tags = post.tags
   return (
-    <Row lg mdCol vCentered>
+    <Row lg mdCol itemsCenter>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
           src={getImageSrc(post.imageSrc)}

@@ -10,7 +10,7 @@ export default async function BlogPage() {
   return (
     <Layout>
       <Section>
-        <Container xl centered>
+        <Container xl itemsCenter>
           <PageTitle>Our Blog</PageTitle>
           <BlogPosts posts={posts} />
         </Container>

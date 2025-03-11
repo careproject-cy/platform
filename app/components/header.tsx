@@ -16,8 +16,8 @@ export default function Layout() {
     `hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center ${pathname === href ? 'underline' : ''}`
 
   return (
-    <Row vCentered justifyBetween relative className="border-b px-4 py-2 w-full bg-white" tag={'header'} mdCol>
-      <Row vCentered justifyBetween className="max-md:w-full">
+    <Row itemsCenter justifyBetween relative className="border-b px-4 py-2 w-full bg-white" tag={'header'} mdCol>
+      <Row itemsCenter justifyBetween className="max-md:w-full">
         <Logo />
         <Button className="hidden max-md:flex" onClick={() => setIsVisible(!isVisible)}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -25,7 +25,7 @@ export default function Layout() {
           </svg>
         </Button>
       </Row>
-      <Row sm vCentered tag="nav" mdCol className={`max-md:w-full max-md:flex ${isVisible ? 'max-md:flex' : 'max-md:hidden'}`}>
+      <Row sm itemsCenter tag="nav" mdCol className={`max-md:w-full max-md:flex ${isVisible ? 'max-md:flex' : 'max-md:hidden'}`}>
         <Link className={getLinkClasses("/")} href="/" >Home</Link>
         <Link className={getLinkClasses("/dogs")} href="/dogs">Dogs</Link>
         <Link className={getLinkClasses("/blog")} href="/blog">Blog</Link>
