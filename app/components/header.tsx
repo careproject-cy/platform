@@ -5,10 +5,15 @@ import Logo from "./logo"
 import { Row } from "@vaneui/ui"
 import { Button } from "@vaneui/ui"
 import { useState } from "react"
+import { usePathname } from 'next/navigation'
 
 export default function Layout() {
+  const [isVisible, setIsVisible] = useState(false)
+  const pathname = usePathname()
 
-  const [isVisible, setIsVisible] = useState(false);
+  // Helper function to conditionally apply the active class
+  const getLinkClasses = (href: string) =>
+    `hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center ${pathname === href ? 'underline' : ''}`
 
   return (
     <Row vCentered justifyBetween relative className="border-b px-4 py-2 w-full bg-white" tag={'header'} mdCol>
@@ -20,14 +25,20 @@ export default function Layout() {
           </svg>
         </Button>
       </Row>
-      <Row sm vCentered tag={"nav"} mdCol className={`max-md:w-full max-md:flex ${isVisible ? 'max-md:flex' : 'max-md:hidden'}`}>
-        <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/" >Home</Link>
-        <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/dogs">Dogs</Link>
-        <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/blog">Blog</Link>
-        <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/more/adopt">Adopt</Link>
-        <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/more/foster">Foster</Link>
-        <Link className="hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center" href="/more/about">About</Link>
-        <Button tag={Link} href="/more/get-involved" className="bg-gradient-to-br from-orange-400 to-red-600 border-orange-400 text-white hover:opacity-90 w-full">Get Involved</Button>
+      <Row sm vCentered tag="nav" mdCol className={`max-md:w-full max-md:flex ${isVisible ? 'max-md:flex' : 'max-md:hidden'}`}>
+        <Link className={getLinkClasses("/")} href="/" >Home</Link>
+        <Link className={getLinkClasses("/dogs")} href="/dogs">Dogs</Link>
+        <Link className={getLinkClasses("/blog")} href="/blog">Blog</Link>
+        <Link className={getLinkClasses("/more/adopt")} href="/more/adopt">Adopt</Link>
+        <Link className={getLinkClasses("/more/foster")} href="/more/foster">Foster</Link>
+        <Link className={getLinkClasses("/more/about")} href="/more/about">About</Link>
+        <Button
+          tag={Link}
+          href="/more/get-involved"
+          className={`bg-gradient-to-br from-orange-400 to-red-600 border-orange-400 text-white hover:opacity-90 w-full ${pathname === '/more/get-involved' ? 'shadow-xl' : ''}`}
+        >
+          Get Involved
+        </Button>
       </Row>
     </Row>
   )
