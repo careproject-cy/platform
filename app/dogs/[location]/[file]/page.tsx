@@ -15,8 +15,6 @@ import Md from "@/app/components/md/md"
 import Sharer from "@/app/components/sharerWrapper"
 import { Chip } from "@vaneui/ui"
 
-export const runtime = 'edge';
-
 interface IdProps {
   params: Promise<{ location: string, file: string }>
 }

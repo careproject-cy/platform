@@ -6,8 +6,6 @@ import { platform_name } from "@/app/data/consts"
 import { fetchMd } from "@/app/data/fetchData"
 import Md from "@/app/components/md/md"
 
-export const runtime = 'edge';
-
 export async function generateMetadata({ params }: MdPageProps): Promise<Metadata> {
   const { file } = await params;
   const { frontmatter } = await fetchMd(`data/pages/${file}.md`);
