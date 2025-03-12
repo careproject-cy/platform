@@ -3,7 +3,7 @@
   breed: Pointer mix
   age: 8 years
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/other/dixie/old-boy-adoption-cyprus.jpg,
     img/other/dixie/sweet-dog-rehome.jpg,

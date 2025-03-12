@@ -6,7 +6,7 @@
     "breed": "Pointer mix",
     "age": "8 years",
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/other/dixie/old-boy-adoption-cyprus.jpg",
       "img/other/dixie/sweet-dog-rehome.jpg",
@@ -31,6 +31,23 @@
       "img/other/loki/rehome-loki-cyprus.jpg"
     ],
     "size": "large",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "lucy.md",
+    "location": "other",
+    "name": "Lucy",
+    "breed": "Whippet mix",
+    "age": "3 years",
+    "gender": "female",
+    "status": "Reserved",
+    "images": [
+      "img/other/lucy/lucy-adoption-cyprus.jpg",
+      "img/other/lucy/sweet-dog-rehome.jpg",
+      "img/other/lucy/female-shelters-dogs.jpg",
+      "img/other/lucy/lucy-looking-home-adopt.jpg"
+    ],
+    "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
@@ -210,10 +227,10 @@
     "filename": "sandy.md",
     "location": "germasogeia",
     "name": "Sandy",
-    "breed": "bulldog mixed",
+    "breed": "Bulldog mixed",
     "age": 2,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/sandy/small-bulldog-mixed-cyprus.jpg",
       "img/germasogeia/sandy/available-for-adoption-sandy.jpg",
