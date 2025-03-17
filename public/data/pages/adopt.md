@@ -41,4 +41,8 @@ Once we receive your email, we'll provide you with the adoption application form
 We are committed to finding the best homes for our dogs and assisting adopters in choosing a dog that fits their lifestyle. 
 
 **Thank you for considering adoption and giving a rescue dog a second chance at life!**
-```
+
+## Ready to adopt a pet?
+
+Adoption process is handled by [UANA Foundation](https://uanafoundation.com/), a nonprofit organization dedicated to supporting animal welfare in Cyprus.
+If you are interested in adopting a dog, please email us at [info@uanafoundation.com](mailto:info@uanafoundation.com)
