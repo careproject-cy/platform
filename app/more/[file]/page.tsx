@@ -34,11 +34,13 @@ export default async function Page({ params }: MdPageProps) {
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: `/more/${file}`, text: title }]} />
           <Row xl lgCol reverse className="w-full">
             {file == "donate" &&
-              <Row className="w-full">
+              <Row itemsCenter className="w-1/2 max-lg:w-full">
                 <DonationCard />
               </Row>
             }
-            <Md content={content} frontmatter={frontmatter} />
+            <Row className={file == "donate" ? "w-1/2 max-lg:w-full" : "w-full"}>
+              <Md content={content} frontmatter={frontmatter} />
+            </Row>
           </Row>
         </Container>
       </Section>

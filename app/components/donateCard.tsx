@@ -38,91 +38,11 @@ export default function DonationCard() {
         "1500": "https://buy.stripe.com/aEU5mD9jOa9VgNi9AI",
       }[sum]
     }
-    return "href"
-  }
-
-  const formContainerStyle = {
-    display: "flex",
-    flexDirection: "column" as const,
-    gap: 10,
-    minWidth: "220px",
-    maxWidth: "600px",
-    margin: "20px auto",
-    padding: "20px",
-    border: "1px solid #ddd",
-    backgroundColor: "#fafafa",
-    borderRadius: "16px",
-    textAlign: "center" as const,
-  }
-
-  const secondaryText = {
-    fontSize: 20,
-    color: "#777",
-  }
-
-  const amountButtonsStyle = {
-    margin: "15px 0",
-  }
-
-  const donateButtonStyle = {
-    marginTop: 10,
-    backgroundColor: "#ffbd52",
-    fontSize: "20px",
-    fontWeight: "bold",
-    border: "none",
-    padding: "16px 32px",
-    borderRadius: "8px",
-    cursor: "pointer",
-    textDecoration: "none",
-    color: "black",
-  }
-
-  const amountButtonStyle = {
-    border: "1px solid #eee",
-    backgroundColor: "#fff",
-    padding: "10px 20px",
-    margin: "5px",
-    borderRadius: "8px",
-    cursor: "pointer",
-    fontSize: 16,
-  }
-
-  const tabStyle = {
-    cursor: "pointer",
-    padding: "16px 8px",
-    borderRadius: "14px",
-    textAlign: "center" as const,
-    width: "50%",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "8px",
-  }
-
-  const activeTabStyle = {
-    ...tabStyle,
-    color: "#3371e6",
-    fontWeight: "bold",
-    backgroundColor: "#ebf1fc",
-    boxShadow: "inset 0 0 0 2px #3371e6",
-  }
-
-  const selectedAmountButtonStyle = {
-    ...amountButtonStyle,
-    backgroundColor: "#ffbd52",
-    color: "white",
   }
 
   return (
-    <div style={formContainerStyle}>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "8px",
-        }}
-      >
+    <div className="flex flex-col gap-[10px] min-w-[220px] max-w-[600px] mx-auto my-5 p-5 border border-gray-200 bg-gray-50 rounded-[16px] text-center">
+      <div className="flex justify-center items-center gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
@@ -136,26 +56,25 @@ export default function DonationCard() {
       <label htmlFor="donation-type">Select donation type</label>
       <div
         id="donation-type"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          backgroundColor: "white",
-          alignItems: "center",
-          gap: "0px",
-          border: "2px solid #ddd",
-          borderRadius: "16px",
-          fontSize: 16,
-        }}
+        className="flex justify-center items-center bg-white border-2 border-gray-300 rounded-[16px] text-base"
       >
         <a
-          onClick={() => onTabClick()}
-          style={isMonthly ? tabStyle : activeTabStyle}
+          onClick={onTabClick}
+          className={
+            isMonthly
+              ? "cursor-pointer py-4 px-2 rounded-[14px] text-center w-1/2 flex justify-center items-center gap-2"
+              : "cursor-pointer py-4 px-2 rounded-[14px] text-center w-1/2 flex justify-center items-center gap-2 text-blue-600 font-bold bg-blue-100 ring-2 ring-blue-600 ring-inset"
+          }
         >
           Donate once
         </a>
         <a
-          onClick={() => onTabClick()}
-          style={!isMonthly ? tabStyle : activeTabStyle}
+          onClick={onTabClick}
+          className={
+            !isMonthly
+              ? "cursor-pointer py-4 px-2 rounded-[14px] text-center w-1/2 flex justify-center items-center gap-2"
+              : "cursor-pointer py-4 px-2 rounded-[14px] text-center w-1/2 flex justify-center items-center gap-2 text-blue-600 font-bold bg-blue-100 ring-2 ring-blue-600 ring-inset"
+          }
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -172,14 +91,14 @@ export default function DonationCard() {
         </a>
       </div>
 
-      <div style={amountButtonsStyle}>
+      <div className="my-4">
         {priceOptions.map((amount) => (
           <button
             key={amount}
-            style={
+            className={
               selectedAmount === amount
-                ? selectedAmountButtonStyle
-                : amountButtonStyle
+                ? "border border-gray-200 bg-orange-500 text-white py-2 px-4 m-[5px] rounded-lg cursor-pointer text-base"
+                : "border border-gray-200 bg-white py-2 px-4 m-[5px] rounded-lg cursor-pointer text-base"
             }
             onClick={() => handleAmountClick(amount)}
           >
@@ -187,10 +106,10 @@ export default function DonationCard() {
           </button>
         ))}
         <button
-          style={
+          className={
             priceOptions.indexOf(selectedAmount) < 0
-              ? selectedAmountButtonStyle
-              : amountButtonStyle
+              ? "border border-gray-200 bg-orange-500 text-white py-2 px-4 m-[5px] rounded-lg cursor-pointer text-base"
+              : "border border-gray-200 bg-white py-2 px-4 m-[5px] rounded-lg cursor-pointer text-base"
           }
           onClick={() => handleAmountClick(isMonthly ? "1500" : "5")}
         >
@@ -199,33 +118,9 @@ export default function DonationCard() {
       </div>
 
       <label htmlFor="amount">Amount to donate, EUR</label>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          border: "1px solid #eee",
-          backgroundColor: "#fff",
-          padding: "16px 20px",
-          borderRadius: "8px",
-          gap: 4,
-        }}
-      >
-        <div style={secondaryText}>€</div>
+      <div className="flex justify-center items-center border border-gray-200 bg-white py-4 px-5 rounded-lg gap-1">
+        <div className="text-[20px] text-[#777]">€</div>
         <input
-          style={{
-            width: "100%",
-            border: "none",
-            backgroundColor: "#fff",
-            padding: "0px",
-            margin: "0px",
-            borderRadius: "8px",
-            fontSize: 28,
-            textAlign: "left",
-            outline: "none",
-            flexGrow: 1,
-            color: "#3371e6",
-          }}
           type="number"
           id="amount"
           placeholder="Enter amount in EUR"
@@ -233,15 +128,16 @@ export default function DonationCard() {
           onChange={(e) => {
             if (!isMonthly) setSelectedAmount(e.target.value)
           }}
+          className="w-full border-none bg-white p-0 rounded-lg text-[28px] text-left outline-none flex-grow text-blue-600"
         />
-        <div style={secondaryText}>EUR</div>
+        <div className="text-[20px] text-[#777]">EUR</div>
       </div>
 
       <a
         id="donate-button"
         target="_blank"
-        style={donateButtonStyle}
         href={getLink(isMonthly, selectedAmount)}
+        className="mt-2.5 bg-orange-500 text-[20px] font-bold border-none py-4 px-8 rounded-lg cursor-pointer no-underline text-white"
       >
         Donate
       </a>
