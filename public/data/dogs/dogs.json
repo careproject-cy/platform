@@ -154,6 +154,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "lily.md",
+    "location": "germasogeia",
+    "name": "Lily",
+    "breed": "Pointer mixed",
+    "age": 2,
+    "gender": "female",
+    "status": "Reserved",
+    "images": [
+      "img/germasogeia/lily/mixed-pointer-adoption-lily.jpg",
+      "img/germasogeia/lily/lily-dog-shelter-cyprus-winking.jpg",
+      "img/germasogeia/lily/lily-dog-shelter-cyprus-closeup.jpg",
+      "img/germasogeia/lily/lily-rehome-shelter-cyprus.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-15T00:00:00.000Z"
+  },
+  {
     "filename": "luna.md",
     "location": "germasogeia",
     "name": "Luna",
