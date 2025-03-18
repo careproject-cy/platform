@@ -22,7 +22,7 @@ const MdHeading: React.FC<unknown> = (props) => {
 
 const MdLink: React.FC<unknown> = (props) => {
   const { href, title, ...rest } = props as { href: string; title: string; } & Record<string, unknown>;
-  return <TyLink {...rest} href={href} title={title} tag={Link} />;
+  return <TyLink link {...rest} href={href} title={title} tag={Link} />;
 };
 
 const MdImg: React.FC<unknown> = (props) => {

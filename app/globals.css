@@ -9,6 +9,7 @@
   /* Override default colors */
   --text-color-default: var(--color-gray-800, #171717);
   --text-color-secondary: var(--color-gray-600, #6B7280);
+  --text-color-link: var(--color-blue-600, #2563EB);
 }
 
 body {

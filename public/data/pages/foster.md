@@ -42,3 +42,8 @@ Fostering a dog, especially one that has been in a shelter, can come with challe
 We appreciate your commitment and patience, and we are here to guide you every step of the way.
 
 If you're ready to make a difference in a dog's life and have the ability to foster long-term, please get in touch with us today!
+
+## Ready to foster a pet?
+
+Foster process is handled by [UANA Foundation](https://uanafoundation.com/), a nonprofit organization dedicated to supporting animal welfare in Cyprus.
+If you are interested in fostering a dog, please email us at [info@uanafoundation.com](mailto:info@uanafoundation.com)
