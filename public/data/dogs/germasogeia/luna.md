@@ -3,7 +3,7 @@
   breed: Kokoni mix
   age: 2
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/luna/sweet-luna-rehome-cyprus.jpg,
     img/germasogeia/luna/luna-with-people-adopt.jpg,
