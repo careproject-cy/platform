@@ -68,6 +68,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "william.md",
+    "location": "other",
+    "name": "William",
+    "breed": "Mixed breed",
+    "age": "3 months",
+    "gender": "male",
+    "status": "In foster care",
+    "images": [
+      "img/other/william/puppy-boy-adoption.JPG",
+      "img/other/william/sweet-dog-rehome.JPG",
+      "img/other/william/cyprus-shelters-dogs.JPG",
+      "img/other/william/william-cyprus-adopt.JPG"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
     "filename": "anya.md",
     "location": "germasogeia",
     "name": "Anya",
