@@ -3,7 +3,7 @@
   breed: Bulldog mixed
   age: 2
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/sandy/small-bulldog-mixed-cyprus.jpg,
     img/germasogeia/sandy/available-for-adoption-sandy.jpg,

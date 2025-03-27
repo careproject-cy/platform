@@ -3,7 +3,7 @@
   breed: Pointer mixed
   age: 2
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/lily/mixed-pointer-adoption-lily.jpg,
     img/germasogeia/lily/lily-dog-shelter-cyprus-winking.jpg,
