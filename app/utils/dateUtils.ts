@@ -5,3 +5,10 @@ export function getDate(date: string | Date): string {
     year: "numeric",
   });
 }
+
+export function getStringFromYears(years: number): string {
+  if(years < 1){
+    return `~${Math.ceil(years * 12)} months old`;
+  }
+  return years === 1 ? "~1 year old" : `~${years} years old`;
+}

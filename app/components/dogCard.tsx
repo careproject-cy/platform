@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { getImageSrc } from "../utils/images"
 import { DogMetadata } from "../data/dogMetadata"
 import { Chip } from "@vaneui/ui"
+import { getStringFromYears } from "../utils/dateUtils"
 
 export default function DogCard(dog: DogMetadata) {
   const dogImages = dog.images.map((image) => getImageSrc(image));
@@ -39,7 +40,7 @@ export default function DogCard(dog: DogMetadata) {
               <Chip semibold sm sans>{gender}</Chip>
             </Row>
             <Text secondary italic>{breed}</Text>
-            <Text secondary sm>{age} years old</Text>
+            <Text secondary sm>{getStringFromYears(age)}</Text>
           </Col>
         </Col>
       </Link>

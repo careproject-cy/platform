@@ -1,7 +1,7 @@
 ---
   name: Javier
   breed: Coonhound
-  age: 1.3 years
+  age: 1.3
   gender: male
   status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [

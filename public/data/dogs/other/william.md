@@ -1,7 +1,7 @@
 ---
   name: William
   breed: Mixed breed
-  age: 3 months
+  age: 0.25
   gender: male
   status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [

@@ -1,7 +1,7 @@
 ---
   name: Marlo
   breed: Coonhound
-  age: 3-4
+  age: 3
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [

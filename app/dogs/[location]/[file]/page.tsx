@@ -9,7 +9,7 @@ import Breadcrumbs from "@/app/components/breadcrumbs"
 import { domain, platform_name } from "@/app/data/consts"
 import DogCard from "@/app/components/dogCard"
 import { getImageSrc } from "@/app/utils/images"
-import { getDate } from "@/app/utils/dateUtils"
+import { getDate, getStringFromYears } from "@/app/utils/dateUtils"
 import { fetchDogs, fetchMd } from "@/app/data/fetchData"
 import Md from "@/app/components/md/md"
 import Sharer from "@/app/components/sharerWrapper"
@@ -86,7 +86,7 @@ export default async function DogPage({ params }: IdProps) {
                 </Row>
                 <Row justifyBetween>
                   <Text>{dog.breed}</Text>
-                  <Text>~{dog.age} years old</Text>
+                  <Text>{getStringFromYears(dog.age)}</Text>
                 </Row>
               </Col>
               <Divider />

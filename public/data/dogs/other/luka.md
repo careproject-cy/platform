@@ -1,7 +1,7 @@
 ---
   name: Luka
   breed: Mixed breed
-  age: 6 months
+  age: 0.5
   gender: male
   status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
