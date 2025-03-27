@@ -1,7 +1,7 @@
 ---
   name: Lucy
   breed: Whippet mix
-  age: 3 years
+  age: 3
   gender: female
   status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [

@@ -4,7 +4,7 @@
     "location": "other",
     "name": "Dixie",
     "breed": "Pointer mix",
-    "age": "8 years",
+    "age": 8,
     "gender": "male",
     "status": "Reserved",
     "images": [
@@ -38,7 +38,7 @@
     "location": "other",
     "name": "Lucy",
     "breed": "Whippet mix",
-    "age": "3 years",
+    "age": 3,
     "gender": "female",
     "status": "Reserved",
     "images": [

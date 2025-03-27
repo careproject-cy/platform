@@ -1,7 +1,7 @@
 ---
   name: Dixie
   breed: Pointer mix
-  age: 8 years
+  age: 8
   gender: male
   status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
