@@ -3,7 +3,7 @@
   breed: Whippet mix
   age: 3
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/other/lucy/lucy-adoption-cyprus.jpg,
     img/other/lucy/sweet-dog-rehome.jpg,

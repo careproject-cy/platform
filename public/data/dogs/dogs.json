@@ -3,7 +3,7 @@
     "filename": "dixie.md",
     "location": "other",
     "name": "Dixie",
-    "breed": "Pointer mix",
+    "breed": "Pointer",
     "age": 8,
     "gender": "male",
     "status": "Reserved",
@@ -51,23 +51,6 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "lucy.md",
-    "location": "other",
-    "name": "Lucy",
-    "breed": "Whippet mix",
-    "age": 3,
-    "gender": "female",
-    "status": "Reserved",
-    "images": [
-      "img/other/lucy/lucy-adoption-cyprus.jpg",
-      "img/other/lucy/sweet-dog-rehome.jpg",
-      "img/other/lucy/female-shelters-dogs.jpg",
-      "img/other/lucy/lucy-looking-home-adopt.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
     "filename": "luka.md",
     "location": "other",
     "name": "Luka",
@@ -99,7 +82,7 @@
       "img/other/william/william-cyprus-adopt.JPG"
     ],
     "size": "medium",
-    "added": "2025-02-14T00:00:00.000Z"
+    "added": "2025-03-23T00:00:00.000Z"
   },
   {
     "filename": "anya.md",
@@ -153,6 +136,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "feodor.md",
+    "location": "germasogeia",
+    "name": "Feodor",
+    "breed": "Staff mix",
+    "age": 6,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/feodor/mixed-staff-adoption.jpeg",
+      "img/germasogeia/feodor/dog-shelter-cyprus-smile.jpeg",
+      "img/germasogeia/feodor/rehome-staff-shelter-cyprus.jpeg",
+      "img/germasogeia/feodor/feodor-dog-shelter-cyprus-fullbody.jpeg"
+    ],
+    "size": "medium",
+    "added": "2025-04-01T00:00:00.000Z"
+  },
+  {
     "filename": "kayla.md",
     "location": "germasogeia",
     "name": "Kayla",
@@ -186,23 +186,6 @@
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
-    "filename": "lily.md",
-    "location": "germasogeia",
-    "name": "Lily",
-    "breed": "Pointer mixed",
-    "age": 2,
-    "gender": "female",
-    "status": "Adopted",
-    "images": [
-      "img/germasogeia/lily/mixed-pointer-adoption-lily.jpg",
-      "img/germasogeia/lily/lily-dog-shelter-cyprus-winking.jpg",
-      "img/germasogeia/lily/lily-dog-shelter-cyprus-closeup.jpg",
-      "img/germasogeia/lily/lily-rehome-shelter-cyprus.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-02-15T00:00:00.000Z"
   },
   {
     "filename": "luna.md",
@@ -275,22 +258,21 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "sandy.md",
+    "filename": "rony.md",
     "location": "germasogeia",
-    "name": "Sandy",
-    "breed": "Bulldog mixed",
+    "name": "Rony",
+    "breed": "Pointer",
     "age": 2,
-    "gender": "female",
-    "status": "Adopted",
+    "gender": "male",
+    "status": "Available",
     "images": [
-      "img/germasogeia/sandy/small-bulldog-mixed-cyprus.jpg",
-      "img/germasogeia/sandy/available-for-adoption-sandy.jpg",
-      "img/germasogeia/sandy/smiling-small-dog.jpg",
-      "img/germasogeia/sandy/bulldog-cyprus-adoption.jpg",
-      "img/germasogeia/sandy/sandy-kennel-adopt.jpg"
+      "img/germasogeia/rony/pointer-breed-adoption.jpg",
+      "img/germasogeia/rony/rony-dog-shelter-cyprus.jpg",
+      "img/germasogeia/rony/rony-rehome-cyprus.jpg",
+      "img/germasogeia/rony/pointer-dog-rony-cyprus.jpg"
     ],
-    "size": "small",
-    "added": "2025-02-14T00:00:00.000Z"
+    "size": "medium",
+    "added": "2025-04-01T00:00:00.000Z"
   },
   {
     "filename": "scarlet.md",
@@ -311,6 +293,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "winston.md",
+    "location": "germasogeia",
+    "name": "Winston",
+    "breed": "Staff mix",
+    "age": 2,
+    "gender": "male",
+    "status": "Reserved",
+    "images": [
+      "img/germasogeia/winston/staff-breed-smile-winston.jpg",
+      "img/germasogeia/winston/winston-dog-shelter-cyprus.jpg",
+      "img/germasogeia/winston/dog-shelter-cyprus-winston.jpg",
+      "img/germasogeia/winston/winston-dog-shelter-adopt.jpg"
+    ],
+    "size": "large",
+    "added": "2025-03-25T00:00:00.000Z"
+  },
+  {
     "filename": "zeus.md",
     "location": "germasogeia",
     "name": "Zeus",
@@ -326,6 +325,58 @@
       "img/germasogeia/zeus/malinois-in-shelter.jpg"
     ],
     "size": "large",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "lily.md",
+    "location": "adopted",
+    "name": "Lily",
+    "breed": "Pointer mixed",
+    "age": 2,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/lily/mixed-pointer-adoption-lily.jpg",
+      "img/germasogeia/lily/lily-dog-shelter-cyprus-winking.jpg",
+      "img/germasogeia/lily/lily-dog-shelter-cyprus-closeup.jpg",
+      "img/germasogeia/lily/lily-rehome-shelter-cyprus.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-15T00:00:00.000Z"
+  },
+  {
+    "filename": "lucy.md",
+    "location": "adopted",
+    "name": "Lucy",
+    "breed": "Whippet mix",
+    "age": 3,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/other/lucy/lucy-adoption-cyprus.jpg",
+      "img/other/lucy/sweet-dog-rehome.jpg",
+      "img/other/lucy/female-shelters-dogs.jpg",
+      "img/other/lucy/lucy-looking-home-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "sandy.md",
+    "location": "adopted",
+    "name": "Sandy",
+    "breed": "Bulldog mixed",
+    "age": 2,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/sandy/small-bulldog-mixed-cyprus.jpg",
+      "img/germasogeia/sandy/available-for-adoption-sandy.jpg",
+      "img/germasogeia/sandy/smiling-small-dog.jpg",
+      "img/germasogeia/sandy/bulldog-cyprus-adoption.jpg",
+      "img/germasogeia/sandy/sandy-kennel-adopt.jpg"
+    ],
+    "size": "small",
     "added": "2025-02-14T00:00:00.000Z"
   }
 ]

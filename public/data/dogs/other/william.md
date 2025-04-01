@@ -11,7 +11,7 @@
     img/other/william/william-cyprus-adopt.JPG,
   ]
   size: medium # 'small' | 'medium' | 'large'
-  added: 2025-02-14
+  added: 2025-03-23
 
 ---
 Meet little William, an adorable and affectionate pup, around 3 months old. He was found with his sibling, who was lucky enough to find a home quickly. Now, it's William’s turn to find his own family!

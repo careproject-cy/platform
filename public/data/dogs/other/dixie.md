@@ -1,6 +1,6 @@
 ---
   name: Dixie
-  breed: Pointer mix
+  breed: Pointer
   age: 8
   gender: male
   status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
