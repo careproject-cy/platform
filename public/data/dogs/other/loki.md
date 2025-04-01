@@ -18,4 +18,4 @@ Loki and his brother were found all alone in a garage, possibly abandoned. They 
 
 Loki is the larger and more confident of the two. He curiously explores everything around him but always stays close to the person he trusts. He adores attention and affection—especially kisses!
 
-Both Loki and his brother are expected to grow into large dogs, roughly the size of a Husky, so they’ll need plenty of space and exercise as they mature. Loki is ready to find a loving home where he can grow into the amazing dog he’s meant to be!
+Both Loki and his brother are expected to grow into medium dogs. Loki is ready to find a loving home where he can grow into the amazing dog he’s meant to be!

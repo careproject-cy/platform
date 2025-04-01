@@ -18,4 +18,4 @@ Luka and his brother were found all alone in a garage, possibly abandoned. They 
 
 Luka is smaller and more shy compared to his brother. He cautiously explores the world around him, always seeking support from those nearby. Luka loves being hugged or held in people's arms and forms a deep bond with those who show him care.
 
-Like his brother, Luka is expected to grow into a large dog, possibly the size of a Husky, so he will need space to run and lots of love and attention as he grows. With a patient family, Luka will become a loyal and loving companion!
+Like his brother, Luka is expected to grow into a medium dog. With a patient family, Luka will become a loyal and loving companion!
