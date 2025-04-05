@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans, Noto_Sans_Mono } from "next/font/google";
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import { platform_name, slogan, social_img_url } from "./data/consts";
 
@@ -41,6 +42,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${mono.variable} ${sans.variable} antialiased font-sans`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
