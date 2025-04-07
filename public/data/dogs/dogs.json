@@ -17,6 +17,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "feodor.md",
+    "location": "other",
+    "name": "Feodor",
+    "breed": "Staff mix",
+    "age": 6,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/feodor/mixed-staff-adoption.jpeg",
+      "img/germasogeia/feodor/dog-shelter-cyprus-smile.jpeg",
+      "img/germasogeia/feodor/rehome-staff-shelter-cyprus.jpeg",
+      "img/germasogeia/feodor/feodor-dog-shelter-cyprus-fullbody.jpeg"
+    ],
+    "size": "medium",
+    "added": "2025-04-01T00:00:00.000Z"
+  },
+  {
     "filename": "javier.md",
     "location": "other",
     "name": "Javier",
@@ -134,23 +151,6 @@
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
-    "filename": "feodor.md",
-    "location": "germasogeia",
-    "name": "Feodor",
-    "breed": "Staff mix",
-    "age": 6,
-    "gender": "male",
-    "status": "Available",
-    "images": [
-      "img/germasogeia/feodor/mixed-staff-adoption.jpeg",
-      "img/germasogeia/feodor/dog-shelter-cyprus-smile.jpeg",
-      "img/germasogeia/feodor/rehome-staff-shelter-cyprus.jpeg",
-      "img/germasogeia/feodor/feodor-dog-shelter-cyprus-fullbody.jpeg"
-    ],
-    "size": "medium",
-    "added": "2025-04-01T00:00:00.000Z"
   },
   {
     "filename": "kayla.md",
