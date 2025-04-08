@@ -8,7 +8,7 @@ export default function NotFound() {
         <Col xl itemsCenter>
           <PageTitle>404 - Page Not Found</PageTitle>
           <Text>Oops! The page you are looking for does not exist.</Text>
-          <Button tag={Link} href="/">Go back home</Button>
+          <Button tag={Link} href="/">Open home page</Button>
         </Col>
       </Container>
     </Section>
