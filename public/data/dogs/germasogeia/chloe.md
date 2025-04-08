@@ -3,7 +3,7 @@
   breed: Hound mixed
   age: 3
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/chloe/chloe-adoption-cyprus.jpg,
     img/germasogeia/chloe/shelter-dog-smiling-cyprus.jpg,
