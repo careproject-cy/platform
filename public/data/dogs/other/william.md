@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 0.25
   gender: male
-  status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/other/william/puppy-boy-adoption.JPG,
     img/other/william/sweet-dog-rehome.JPG,

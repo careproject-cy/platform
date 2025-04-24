@@ -1,5 +1,22 @@
 [
   {
+    "filename": "Baron.md",
+    "location": "other",
+    "name": "Baron",
+    "breed": "Pit bull",
+    "age": 11,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/other/baron/old-boy-adoption-cyprus.jpg",
+      "img/other/baron/baron-dog-rehome.jpg",
+      "img/other/baron/shelters-dogs.jpg",
+      "img/other/baron/baron-old-adopt.jpg"
+    ],
+    "size": "large",
+    "added": "2025-04-14T00:00:00.000Z"
+  },
+  {
     "filename": "dixie.md",
     "location": "other",
     "name": "Dixie",
@@ -91,7 +108,7 @@
     "breed": "Mixed breed",
     "age": 0.25,
     "gender": "male",
-    "status": "In foster care",
+    "status": "Reserved",
     "images": [
       "img/other/william/puppy-boy-adoption.JPG",
       "img/other/william/sweet-dog-rehome.JPG",
@@ -229,7 +246,7 @@
     "breed": "Mixed breed",
     "age": 5,
     "gender": "male",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/germasogeia/oreo/need-family-cyprus.jpg",
       "img/germasogeia/oreo/happy-dog-cyprus.jpg",
