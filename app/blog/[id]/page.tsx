@@ -24,7 +24,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
   const post = posts.find(p => p.filename === `${id}.md`)
   const { content, frontmatter } = await fetchMd(`data/blog/${id}.md`)
 
-  if (!post) {
+  if (!post || !post.visible) {
     notFound()
   }
 

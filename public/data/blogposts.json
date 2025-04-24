@@ -1,16 +1,5 @@
 [
   {
-    "filename": "2025-02-10-your-new-best-friend-awaits copy.md",
-    "title": "Adoptions in March! 🌸✈️🐾",
-    "date": "2025-03-31T00:00:00.000Z",
-    "description": "Adoption is always a joy — a moment filled with hope, love, and a reminder that kindness still wins. And this March, we were lucky to witness three beautiful stories unfold!",
-    "tags": [
-      "adoption",
-      "dogs",
-      "fostering"
-    ]
-  },
-  {
     "filename": "2025-02-10-your-new-best-friend-awaits.md",
     "title": "Your new best friend awaits",
     "date": "2025-02-10T00:00:00.000Z",
@@ -20,7 +9,8 @@
       "adoption",
       "dogs",
       "fostering"
-    ]
+    ],
+    "visible": true
   },
   {
     "filename": "2025-02-12-beware-of-dangerous-caterpillars-for-your-pets.md",
@@ -32,7 +22,8 @@
       "adoption",
       "dogs",
       "fostering"
-    ]
+    ],
+    "visible": true
   },
   {
     "filename": "2025-02-15-beware-of-foxtail-grass.md",
@@ -44,7 +35,8 @@
       "adoption",
       "dogs",
       "fostering"
-    ]
+    ],
+    "visible": true
   },
   {
     "filename": "2025-02-18-essential-items-for-welcoming-your-new-dog-in-cyprus.md",
@@ -56,17 +48,7 @@
       "adoption",
       "dogs",
       "fostering"
-    ]
-  },
-  {
-    "filename": "2025-03-31-adoptions-in-march.md",
-    "title": "Adoptions in March! 🌸✈️🐾",
-    "date": "2025-03-31T00:00:00.000Z",
-    "description": "Adoption is always a joy — a moment filled with hope, love, and a reminder that kindness still wins. And this March, we were lucky to witness three beautiful stories unfold!",
-    "tags": [
-      "adoption",
-      "dogs",
-      "fostering"
-    ]
+    ],
+    "visible": true
   }
 ]

@@ -22,8 +22,11 @@ async function generateBlogPostsJson() {
           description: frontmatter.description,
           imageSrc: frontmatter.imageSrc,
           tags: frontmatter.tags,
+          visible: frontmatter.visible ?? true,
         }
-        blogPosts.push(blogpost);
+        if(blogpost.visible) {
+          blogPosts.push(blogpost);
+        }
       }
     }
 

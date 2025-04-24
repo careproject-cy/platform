@@ -5,4 +5,5 @@ export interface BlogPostMetadata {
   description: string
   imageSrc: string
   tags: string[]
+  visible: boolean
 }

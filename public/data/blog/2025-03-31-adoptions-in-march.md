@@ -2,14 +2,16 @@
 title: Adoptions in March! 🌸✈️🐾
 date: 2025-03-31
 description: Adoption is always a joy — a moment filled with hope, love, and a reminder that kindness still wins. And this March, we were lucky to witness three beautiful stories unfold!
+imageSrc: img/blog/2025-02-10-your-new-best-friend-awaits/dog-in-the-forest.png
 tags: [adoption, dogs, fostering]
+visible: false
 ---
 
 🐾 **Lily** — rescued from the municipal shelter in Limassol.  
 A shy girl with a big heart and a deep desire to trust.  
 She won the hearts of her new family and is now living a happy life in the **Netherlands**, in a loving home shared with a cat! 🐱💕
 
-[![Lily](Lily)](img/blog/2025-02-10-your-new-best-friend-awaits/dog-in-the-forest.png)
+![Lily](img/blog/2025-02-10-your-new-best-friend-awaits/dog-in-the-forest.png)
 ---
 
 🐾 **Sandy** — a tiny bundle of joy from the municipal shelter.  

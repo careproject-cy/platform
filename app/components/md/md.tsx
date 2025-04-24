@@ -29,7 +29,7 @@ const MdImg: React.FC<unknown> = (props) => {
   const { src, alt, title, ...rest } = props as { src: string; alt: string; title: string; } & Record<string, unknown>;
   return (
     <Image {...rest} title={title} src={getImageSrc(src)} alt={alt}
-      className="w-fit rounded-lg"
+      className="w-full rounded-lg"
       width={0}
       height={0}
       sizes="100vw" />
