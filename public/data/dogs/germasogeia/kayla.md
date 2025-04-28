@@ -14,12 +14,12 @@
   added: 2025-02-14
 ---
 
-We don’t know exactly how Kayla ended up at the shelter, but one thing is certain—she once had a family. She knows the "sit" command and comes when called, showing that she was once loved and trained.
+Kayla’s story is a sad one. She was found in May last year after her owner was in an accident. Kayla was taken to a municipal shelter, but her owner never returned, and no one knows what happened to him. Since then, she has been waiting alone for a new family.
 
-What truly matters to Kayla is being with people. She isn’t interested in toys or running around outside—she simply craves affection. When you visit her, she presses her whole body against the kennel bars, hoping for some scratches. She adores belly rubs, and if you stop too soon, she’ll gently nudge you with her paw, asking for more.
+It’s clear she once had a loving home — she knows basic commands like "sit" and comes when called. What Kayla wants most is human affection. She’s not interested in toys or running around; she just wants to be close to people. When you visit her, she leans her whole body against the kennel bars, asking for love, and she absolutely adores belly rubs.
 
-Sadly, older dogs—especially those from breeds like hers—are often overlooked. Many assume they must be aggressive or have something "wrong" with them to end up in a shelter. But once you meet Kayla, you’ll see that she is nothing but love and gentleness.
+Sadly, older dogs like Kayla are often overlooked. But if you meet her, you’ll see she is pure love and gentleness.
 
-She would be happiest with a warm spot on the couch and someone who is ready to love and cuddle her. Since she’s spent so much time alone, she may not be thrilled about sharing her home with an energetic second dog.
+Kayla would thrive in a quiet home where she can finally relax and be someone’s beloved companion. She would prefer to be the only dog in the home.
 
-Could you be the one to give Kayla the loving home she deserves?
+Could you be the one to give Kayla the happy ending she deserves?
