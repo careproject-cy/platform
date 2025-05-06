@@ -3,6 +3,8 @@ import { Noto_Sans, Noto_Sans_Mono } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import { platform_name, slogan, social_img_url } from "./data/consts";
+import React from "react";
+import Script from "next/script";
 
 const sans = Noto_Sans({
   variable: "--font-sans",
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     images: [social_img_url]
-  }
+  },
 };
 
 export default function RootLayout({
@@ -40,6 +42,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+    <head>
+      <Script src="https://analytics.ahrefs.com/analytics.js" data-key="j+/2DiRHjgrgVvAfvvGKDw" async></Script>
+      <title>{platform_name}</title>
+    </head>
       <body className={`${mono.variable} ${sans.variable} antialiased font-sans`}>
         {children}
         <Analytics />
