@@ -16,7 +16,6 @@ const mono = Noto_Sans_Mono({
 });
 
 export const metadata: Metadata = {
-  title: platform_name,
   description: slogan,
   openGraph: {
     images: [
