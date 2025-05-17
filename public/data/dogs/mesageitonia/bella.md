@@ -1,21 +1,21 @@
 ---
-  name: Anya
-  breed: Mixed breed
-  age: 2.5
+  name: Bella
+  breed: Beagle cross
+  age: 1.5
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/anya/mixed-breed-adoption-anya.jpg,
-    img/germasogeia/anya/anya-dog-shelter-cyprus-winking.jpg,
-    img/germasogeia/anya/anya-dog-shelter-cyprus-closeup.jpg,
-    img/germasogeia/anya/anya-dog-shelter-cyprus-fullbody.jpg,
+    img/germasogeia/bella/bella-shelters-dog.jpg,
+    img/germasogeia/bella/female-shelter-rehome.jpg,
+    img/germasogeia/bella/adoption-dog-rehome.jpg,
+    img/germasogeia/bella/beagle-cross-mix-dog.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
-  added: 2025-02-15
+  added: 2025-05-15
 ---
 
-Anya arrived at the shelter as a puppy and has spent two long years in a kennel, unnoticed and unwanted. She was very shy at first, but once she realized that people can be trusted and that walks are exciting, she started eagerly asking to go outside whenever she saw a volunteer.
+Bella was found as a stray — skinny, covered in ticks, and clearly having been through a lot. Despite her tough start, she’s a gentle and soft-hearted girl who just needs time to feel safe.
 
-She absolutely loves treats, which will be a great help for her future family in training. Anya is an active girl who gets along wonderfully with both people and other dogs. She would thrive in a home with a yard, where she can finally run freely and no longer be confined to a small space.
+She’s a bit timid and cautious around people, but once she learns to trust, she shows her sweet and loving nature. Bella walks beautifully on a leash and gets along very well with other dogs. She’s healthy now and ready for a fresh start.
 
-Would you like to make Anya a part of your family?
+Bella would do best in a calm and patient home, preferably without small children, where she can blossom at her own pace and feel truly safe and loved.

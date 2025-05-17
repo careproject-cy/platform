@@ -17,23 +17,6 @@
     "added": "2025-04-14T00:00:00.000Z"
   },
   {
-    "filename": "dixie.md",
-    "location": "other",
-    "name": "Dixie",
-    "breed": "Pointer",
-    "age": 8,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/other/dixie/old-boy-adoption-cyprus.jpg",
-      "img/other/dixie/sweet-dog-rehome.jpg",
-      "img/other/dixie/smile-shelters-dogs.jpg",
-      "img/other/dixie/dixie-with-people-adopt.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
     "filename": "feodor.md",
     "location": "other",
     "name": "Feodor",
@@ -57,7 +40,7 @@
     "breed": "Coonhound",
     "age": 1.3,
     "gender": "male",
-    "status": "In foster care",
+    "status": "Reserved",
     "images": [
       "img/other/javier/sweet-dog-rehome.JPG",
       "img/other/javier/javier-beautiful-adoption-cyprus.jpg",
@@ -74,7 +57,7 @@
     "breed": "Mixed breed",
     "age": 0.5,
     "gender": "male",
-    "status": "In foster care",
+    "status": "Reserved",
     "images": [
       "img/other/loki/loki-adoption-cyprus.jpg",
       "img/other/loki/sweet-loki-cyprus.jpg",
@@ -91,7 +74,7 @@
     "breed": "Mixed breed",
     "age": 0.5,
     "gender": "male",
-    "status": "In foster care",
+    "status": "Reserved",
     "images": [
       "img/other/luka/puppy-adoption-cyprus.jpg",
       "img/other/luka/sweet-boy-cyprus.jpg",
@@ -102,21 +85,38 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "william.md",
-    "location": "other",
-    "name": "William",
-    "breed": "Mixed breed",
-    "age": 0.25,
-    "gender": "male",
-    "status": "Reserved",
+    "filename": "bella.md",
+    "location": "mesageitonia",
+    "name": "Bella",
+    "breed": "Beagle cross",
+    "age": 1.5,
+    "gender": "female",
+    "status": "Available",
     "images": [
-      "img/other/william/puppy-boy-adoption.JPG",
-      "img/other/william/sweet-dog-rehome.JPG",
-      "img/other/william/cyprus-shelters-dogs.JPG",
-      "img/other/william/william-cyprus-adopt.JPG"
+      "img/germasogeia/bella/bella-shelters-dog.jpg",
+      "img/germasogeia/bella/female-shelter-rehome.jpg",
+      "img/germasogeia/bella/adoption-dog-rehome.jpg",
+      "img/germasogeia/bella/beagle-cross-mix-dog.jpg"
     ],
     "size": "medium",
-    "added": "2025-03-23T00:00:00.000Z"
+    "added": "2025-05-15T00:00:00.000Z"
+  },
+  {
+    "filename": "charlie.md",
+    "location": "mesageitonia",
+    "name": "Charlie",
+    "breed": "Mix breed",
+    "age": "3-4",
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/charlie/charlie-big-boy.jpg",
+      "img/germasogeia/charlie/shelters-dog-adopt.jpg",
+      "img/germasogeia/charlie/adoption-dog-rehome.jpg",
+      "img/germasogeia/charlie/dog-in-cage-rehome.jpg"
+    ],
+    "size": "large",
+    "added": "2025-05-17T00:00:00.000Z"
   },
   {
     "filename": "anya.md",
@@ -136,21 +136,21 @@
     "added": "2025-02-15T00:00:00.000Z"
   },
   {
-    "filename": "chloe.md",
+    "filename": "betty.md",
     "location": "germasogeia",
-    "name": "Chloe",
-    "breed": "Hound mixed",
-    "age": 3,
+    "name": "Betty",
+    "breed": "Kokoni cross",
+    "age": "2-3",
     "gender": "female",
-    "status": "Reserved",
+    "status": "Available",
     "images": [
-      "img/germasogeia/chloe/chloe-adoption-cyprus.jpg",
-      "img/germasogeia/chloe/shelter-dog-smiling-cyprus.jpg",
-      "img/germasogeia/chloe/chloe-looking-family-cyprus.jpg",
-      "img/germasogeia/chloe/shelter-dog-in-kennel-cyprus.jpg"
+      "img/germasogeia/betty/small-dog-adoption.jpg",
+      "img/germasogeia/betty/betty-girl-rehome.jpg",
+      "img/germasogeia/betty/dog-snacks-shelter.jpg",
+      "img/germasogeia/betty/dog-in-cage-small.jpg"
     ],
-    "size": "medium",
-    "added": "2025-02-14T00:00:00.000Z"
+    "size": "small",
+    "added": "2025-05-17T00:00:00.000Z"
   },
   {
     "filename": "dorothy.md",
@@ -168,6 +168,41 @@
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "freya.md",
+    "location": "germasogeia",
+    "name": "Freya",
+    "breed": "Retriever+labrador cross",
+    "age": 1,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/freya/female-shelter-rehome.jpg",
+      "img/germasogeia/freya/smiling-dog-shelter.jpg",
+      "img/germasogeia/freya/freya-stand-adoption.jpg",
+      "img/germasogeia/freya/sweet-face-dog-freya.jpg",
+      "img/germasogeia/freya/dog-in-the-cage-shelter.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-05-17T00:00:00.000Z"
+  },
+  {
+    "filename": "gina.md",
+    "location": "germasogeia",
+    "name": "Gina",
+    "breed": "Retriever+labrador cross",
+    "age": "1.5-2",
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/gina/smiling-dog-adoption.jpg",
+      "img/germasogeia/gina/female-gina-adoption.jpg",
+      "img/germasogeia/gina/beautiful-dog.jpg",
+      "img/germasogeia/gina/sad-dog-in-cage-shelter.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-05-17T00:00:00.000Z"
   },
   {
     "filename": "kayla.md",
@@ -240,23 +275,6 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "oreo.md",
-    "location": "germasogeia",
-    "name": "Oreo",
-    "breed": "Mixed breed",
-    "age": 5,
-    "gender": "male",
-    "status": "Adopted",
-    "images": [
-      "img/germasogeia/oreo/need-family-cyprus.jpg",
-      "img/germasogeia/oreo/happy-dog-cyprus.jpg",
-      "img/germasogeia/oreo/oreo-smiling-cyprus.jpg",
-      "img/germasogeia/oreo/shelter-oreo-rehome.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
     "filename": "rony.md",
     "location": "germasogeia",
     "name": "Rony",
@@ -292,23 +310,6 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "winston.md",
-    "location": "germasogeia",
-    "name": "Winston",
-    "breed": "Staff mix",
-    "age": 2,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/germasogeia/winston/staff-breed-smile-winston.jpg",
-      "img/germasogeia/winston/winston-dog-shelter-cyprus.jpg",
-      "img/germasogeia/winston/dog-shelter-cyprus-winston.jpg",
-      "img/germasogeia/winston/winston-dog-shelter-adopt.jpg"
-    ],
-    "size": "large",
-    "added": "2025-03-25T00:00:00.000Z"
-  },
-  {
     "filename": "zeus.md",
     "location": "germasogeia",
     "name": "Zeus",
@@ -324,6 +325,40 @@
       "img/germasogeia/zeus/malinois-in-shelter.jpg"
     ],
     "size": "large",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "chloe.md",
+    "location": "adopted",
+    "name": "Chloe",
+    "breed": "Hound mixed",
+    "age": 3,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/chloe/chloe-adoption-cyprus.jpg",
+      "img/germasogeia/chloe/shelter-dog-smiling-cyprus.jpg",
+      "img/germasogeia/chloe/chloe-looking-family-cyprus.jpg",
+      "img/germasogeia/chloe/shelter-dog-in-kennel-cyprus.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "dixie.md",
+    "location": "adopted",
+    "name": "Dixie",
+    "breed": "Pointer",
+    "age": 8,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/other/dixie/old-boy-adoption-cyprus.jpg",
+      "img/other/dixie/sweet-dog-rehome.jpg",
+      "img/other/dixie/smile-shelters-dogs.jpg",
+      "img/other/dixie/dixie-with-people-adopt.jpg"
+    ],
+    "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
@@ -379,6 +414,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "oreo.md",
+    "location": "adopted",
+    "name": "Oreo",
+    "breed": "Mixed breed",
+    "age": 5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/oreo/need-family-cyprus.jpg",
+      "img/germasogeia/oreo/happy-dog-cyprus.jpg",
+      "img/germasogeia/oreo/oreo-smiling-cyprus.jpg",
+      "img/germasogeia/oreo/shelter-oreo-rehome.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
     "filename": "sandy.md",
     "location": "adopted",
     "name": "Sandy",
@@ -395,5 +447,39 @@
     ],
     "size": "small",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "william.md",
+    "location": "adopted",
+    "name": "William",
+    "breed": "Mixed breed",
+    "age": 0.25,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/other/william/puppy-boy-adoption.JPG",
+      "img/other/william/sweet-dog-rehome.JPG",
+      "img/other/william/cyprus-shelters-dogs.JPG",
+      "img/other/william/william-cyprus-adopt.JPG"
+    ],
+    "size": "medium",
+    "added": "2025-03-23T00:00:00.000Z"
+  },
+  {
+    "filename": "winston.md",
+    "location": "adopted",
+    "name": "Winston",
+    "breed": "Staff mix",
+    "age": 2,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/winston/staff-breed-smile-winston.jpg",
+      "img/germasogeia/winston/winston-dog-shelter-cyprus.jpg",
+      "img/germasogeia/winston/dog-shelter-cyprus-winston.jpg",
+      "img/germasogeia/winston/winston-dog-shelter-adopt.jpg"
+    ],
+    "size": "large",
+    "added": "2025-03-25T00:00:00.000Z"
   }
 ]

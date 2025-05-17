@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 0.5
   gender: male
-  status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/other/luka/puppy-adoption-cyprus.jpg,
     img/other/luka/sweet-boy-cyprus.jpg,

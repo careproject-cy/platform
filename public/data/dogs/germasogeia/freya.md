@@ -1,21 +1,22 @@
 ---
-  name: Anya
-  breed: Mixed breed
-  age: 2.5
+  name: Freya
+  breed: Retriever+labrador cross
+  age: 1
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/anya/mixed-breed-adoption-anya.jpg,
-    img/germasogeia/anya/anya-dog-shelter-cyprus-winking.jpg,
-    img/germasogeia/anya/anya-dog-shelter-cyprus-closeup.jpg,
-    img/germasogeia/anya/anya-dog-shelter-cyprus-fullbody.jpg,
+    img/germasogeia/freya/female-shelter-rehome.jpg,
+    img/germasogeia/freya/smiling-dog-shelter.jpg,
+    img/germasogeia/freya/freya-stand-adoption.jpg,
+    img/germasogeia/freya/sweet-face-dog-freya.jpg,
+    img/germasogeia/freya/dog-in-the-cage-shelter.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
-  added: 2025-02-15
+  added: 2025-05-17
 ---
 
-Anya arrived at the shelter as a puppy and has spent two long years in a kennel, unnoticed and unwanted. She was very shy at first, but once she realized that people can be trusted and that walks are exciting, she started eagerly asking to go outside whenever she saw a volunteer.
+Freya is a charming girl who absolutely loves cuddles — she’ll gently stand on her hind legs just to be close to you! Medium-sized and full of love, she’s very friendly and social. Freya would thrive in a family, whether as the only dog or alongside other canine companions.
 
-She absolutely loves treats, which will be a great help for her future family in training. Anya is an active girl who gets along wonderfully with both people and other dogs. She would thrive in a home with a yard, where she can finally run freely and no longer be confined to a small space.
+And just look at her adorable paws — each little toe is dipped in white, like she's wearing the cutest socks!
 
-Would you like to make Anya a part of your family?
+She’s ready to bring warmth, affection, and joy into her forever home — are you the one she’s been waiting for?

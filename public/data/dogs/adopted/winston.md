@@ -3,7 +3,7 @@
   breed: Staff mix
   age: 2
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/winston/staff-breed-smile-winston.jpg,
     img/germasogeia/winston/winston-dog-shelter-cyprus.jpg,

@@ -1,21 +1,19 @@
 ---
-  name: Anya
-  breed: Mixed breed
-  age: 2.5
+  name: Betty
+  breed: Kokoni cross
+  age: 2-3
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/anya/mixed-breed-adoption-anya.jpg,
-    img/germasogeia/anya/anya-dog-shelter-cyprus-winking.jpg,
-    img/germasogeia/anya/anya-dog-shelter-cyprus-closeup.jpg,
-    img/germasogeia/anya/anya-dog-shelter-cyprus-fullbody.jpg,
+    img/germasogeia/betty/small-dog-adoption.jpg,
+    img/germasogeia/betty/betty-girl-rehome.jpg,
+    img/germasogeia/betty/dog-snacks-shelter.jpg,
+    img/germasogeia/betty/dog-in-cage-small.jpg,
   ]
-  size: medium # 'small' | 'medium' | 'large'
-  added: 2025-02-15
+  size: small # 'small' | 'medium' | 'large'
+  added: 2025-05-17
 ---
 
-Anya arrived at the shelter as a puppy and has spent two long years in a kennel, unnoticed and unwanted. She was very shy at first, but once she realized that people can be trusted and that walks are exciting, she started eagerly asking to go outside whenever she saw a volunteer.
+Betty is a small-sized, super active, and incredibly friendly girl! She absolutely loves jumping into your arms for a cuddle and soaking up all the affection she can get. Whether you live in a house or a cozy apartment, Betty will fit right in. She’s the perfect little companion — always ready to brighten your day with her joyful energy and loving nature.
 
-She absolutely loves treats, which will be a great help for her future family in training. Anya is an active girl who gets along wonderfully with both people and other dogs. She would thrive in a home with a yard, where she can finally run freely and no longer be confined to a small space.
-
-Would you like to make Anya a part of your family?
+Are you ready to welcome this sweet bundle of happiness into your life?
