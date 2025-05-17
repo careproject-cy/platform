@@ -5,7 +5,6 @@
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/freya/female-shelter-rehome.jpg,
     img/germasogeia/freya/smiling-dog-shelter.jpg,
     img/germasogeia/freya/freya-stand-adoption.jpg,
     img/germasogeia/freya/sweet-face-dog-freya.jpg,

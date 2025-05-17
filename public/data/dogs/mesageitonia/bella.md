@@ -5,10 +5,10 @@
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/bella/bella-shelters-dog.jpg,
-    img/germasogeia/bella/female-shelter-rehome.jpg,
-    img/germasogeia/bella/adoption-dog-rehome.jpg,
-    img/germasogeia/bella/beagle-cross-mix-dog.jpg,
+    img/mesageitonia/bella/bella-shelters-dog.png,
+    img/mesageitonia/bella/female-shelter-rehome.png,
+    img/mesageitonia/bella/adoption-dog-rehome.jpeg,
+    img/mesageitonia/bella/beagle-cross-mix-dog.jpeg,
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-05-15

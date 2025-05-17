@@ -5,10 +5,10 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/charlie/charlie-big-boy.jpg,
-    img/germasogeia/charlie/shelters-dog-adopt.jpg,
-    img/germasogeia/charlie/adoption-dog-rehome.jpg,
-    img/germasogeia/charlie/dog-in-cage-rehome.jpg,
+    img/mesageitonia/charlie/charlie-big-boy.jpg,
+    img/mesageitonia/charlie/shelters-dog-adopt.jpg,
+    img/mesageitonia/charlie/adoption-dog-rehome.jpg,
+    img/mesageitonia/charlie/dog-in-cage-rehome.jpg,
   ]
   size: large # 'small' | 'medium' | 'large'
   added: 2025-05-17

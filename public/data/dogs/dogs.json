@@ -93,10 +93,10 @@
     "gender": "female",
     "status": "Available",
     "images": [
-      "img/germasogeia/bella/bella-shelters-dog.jpg",
-      "img/germasogeia/bella/female-shelter-rehome.jpg",
-      "img/germasogeia/bella/adoption-dog-rehome.jpg",
-      "img/germasogeia/bella/beagle-cross-mix-dog.jpg"
+      "img/mesageitonia/bella/bella-shelters-dog.png",
+      "img/mesageitonia/bella/female-shelter-rehome.png",
+      "img/mesageitonia/bella/adoption-dog-rehome.jpeg",
+      "img/mesageitonia/bella/beagle-cross-mix-dog.jpeg"
     ],
     "size": "medium",
     "added": "2025-05-15T00:00:00.000Z"
@@ -110,10 +110,10 @@
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/germasogeia/charlie/charlie-big-boy.jpg",
-      "img/germasogeia/charlie/shelters-dog-adopt.jpg",
-      "img/germasogeia/charlie/adoption-dog-rehome.jpg",
-      "img/germasogeia/charlie/dog-in-cage-rehome.jpg"
+      "img/mesageitonia/charlie/charlie-big-boy.jpg",
+      "img/mesageitonia/charlie/shelters-dog-adopt.jpg",
+      "img/mesageitonia/charlie/adoption-dog-rehome.jpg",
+      "img/mesageitonia/charlie/dog-in-cage-rehome.jpg"
     ],
     "size": "large",
     "added": "2025-05-17T00:00:00.000Z"
@@ -178,7 +178,6 @@
     "gender": "female",
     "status": "Available",
     "images": [
-      "img/germasogeia/freya/female-shelter-rehome.jpg",
       "img/germasogeia/freya/smiling-dog-shelter.jpg",
       "img/germasogeia/freya/freya-stand-adoption.jpg",
       "img/germasogeia/freya/sweet-face-dog-freya.jpg",
