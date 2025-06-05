@@ -8,7 +8,7 @@ tags: [next.js, plugin]
 
 # About us
 
-The **CARE (Cyprus Animals Rescue Effort)** Project is an initiative of the **UANA Foundation**, a nonprofit organization dedicated to supporting animal welfare in Cyprus. CARE is run by a group of volunteers who share a deep love for animals and a strong commitment to helping stray dogs.
+The **CARE (Cyprus Animals Rescue Effort)** Project is an initiative of the [UANA Foundation](https://uanafoundation.com/), a nonprofit organization dedicated to supporting animal welfare in Cyprus. CARE is run by a group of volunteers who share a deep love for animals and a strong commitment to helping stray dogs.
 
 Although we all have full-time jobs and families, we are united by our passion for animal welfare and our desire to make the world a better place for stray dogs. We focus on helping dogs find loving homes both in Cyprus and abroad through partnerships with organizations in the UK, Germany, and the Netherlands.
 
