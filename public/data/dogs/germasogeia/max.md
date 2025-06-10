@@ -1,6 +1,6 @@
 ---
   name: Max
-  breed: Shepherd
+  breed: German Shepherd mix
   age: 4
   gender: male
   status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'

@@ -3,7 +3,7 @@
   breed: Beagle cross
   age: 1.5
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/bella/bella-shelters-dog.png,
     img/mesageitonia/bella/female-shelter-rehome.png,

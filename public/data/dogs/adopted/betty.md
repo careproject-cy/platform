@@ -3,7 +3,7 @@
   breed: Kokoni cross
   age: 2-3
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/betty/small-dog-adoption.jpg,
     img/germasogeia/betty/betty-girl-rehome.jpg,

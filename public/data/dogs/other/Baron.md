@@ -3,7 +3,7 @@
   breed: Pit bull
   age: 11
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/other/baron/old-boy-adoption-cyprus.jpg,
     img/other/baron/baron-dog-rehome.jpg,

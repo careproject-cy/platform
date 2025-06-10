@@ -6,7 +6,7 @@
     "breed": "Pit bull",
     "age": 11,
     "gender": "male",
-    "status": "Available",
+    "status": "In foster care",
     "images": [
       "img/other/baron/old-boy-adoption-cyprus.jpg",
       "img/other/baron/baron-dog-rehome.jpg",
@@ -51,47 +51,13 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "loki.md",
-    "location": "other",
-    "name": "Loki",
-    "breed": "Mixed breed",
-    "age": 0.5,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/other/loki/loki-adoption-cyprus.jpg",
-      "img/other/loki/sweet-loki-cyprus.jpg",
-      "img/other/loki/loki-boy-adoption.jpg",
-      "img/other/loki/rehome-loki-cyprus.jpg"
-    ],
-    "size": "large",
-    "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
-    "filename": "luka.md",
-    "location": "other",
-    "name": "Luka",
-    "breed": "Mixed breed",
-    "age": 0.5,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/other/luka/puppy-adoption-cyprus.jpg",
-      "img/other/luka/sweet-boy-cyprus.jpg",
-      "img/other/luka/big-boy-adoption.jpg",
-      "img/other/luka/rehome-puppy-cyprus.jpg"
-    ],
-    "size": "large",
-    "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
     "filename": "bella.md",
     "location": "mesageitonia",
     "name": "Bella",
     "breed": "Beagle cross",
     "age": 1.5,
     "gender": "female",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/mesageitonia/bella/bella-shelters-dog.png",
       "img/mesageitonia/bella/female-shelter-rehome.png",
@@ -119,13 +85,47 @@
     "added": "2025-05-17T00:00:00.000Z"
   },
   {
+    "filename": "cleopatra.md",
+    "location": "mesageitonia",
+    "name": "Cleopatra",
+    "breed": "Labrador/Staffy mix",
+    "age": 3,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/cleopatra/cleopatra_rescue_cyprus.jpg",
+      "img/mesageitonia/cleopatra/cleopatra_adoption_dog.jpg",
+      "img/mesageitonia/cleopatra/cleopatra_cuddle_dog.jpg",
+      "img/mesageitonia/cleopatra/cleopatra_shelter_dog.JPG"
+    ],
+    "size": "medium",
+    "added": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "filename": "diamond.md",
+    "location": "mesageitonia",
+    "name": "Diamond",
+    "breed": "German Shepherd mix",
+    "age": "2-3",
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/diamond/diamond_black_gsd_cyprus.jpg",
+      "img/mesageitonia/diamond/diamond_rescue_dog.JPG",
+      "img/mesageitonia/diamond/diamond_shy_but_sweet.jpg",
+      "img/mesageitonia/diamond/diamond_needs_love.jpg"
+    ],
+    "size": "large",
+    "added": "2025-06-01T00:00:00.000Z"
+  },
+  {
     "filename": "anya.md",
     "location": "germasogeia",
     "name": "Anya",
     "breed": "Mixed breed",
     "age": 2.5,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/anya/mixed-breed-adoption-anya.jpg",
       "img/germasogeia/anya/anya-dog-shelter-cyprus-winking.jpg",
@@ -134,23 +134,6 @@
     ],
     "size": "medium",
     "added": "2025-02-15T00:00:00.000Z"
-  },
-  {
-    "filename": "betty.md",
-    "location": "germasogeia",
-    "name": "Betty",
-    "breed": "Kokoni cross",
-    "age": "2-3",
-    "gender": "female",
-    "status": "Reserved",
-    "images": [
-      "img/germasogeia/betty/small-dog-adoption.jpg",
-      "img/germasogeia/betty/betty-girl-rehome.jpg",
-      "img/germasogeia/betty/dog-snacks-shelter.jpg",
-      "img/germasogeia/betty/dog-in-cage-small.jpg"
-    ],
-    "size": "small",
-    "added": "2025-05-17T00:00:00.000Z"
   },
   {
     "filename": "dorothy.md",
@@ -259,7 +242,7 @@
     "filename": "max.md",
     "location": "germasogeia",
     "name": "Max",
-    "breed": "Shepherd",
+    "breed": "German Shepherd mix",
     "age": 4,
     "gender": "male",
     "status": "Reserved",
@@ -327,6 +310,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "betty.md",
+    "location": "adopted",
+    "name": "Betty",
+    "breed": "Kokoni cross",
+    "age": "2-3",
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/betty/small-dog-adoption.jpg",
+      "img/germasogeia/betty/betty-girl-rehome.jpg",
+      "img/germasogeia/betty/dog-snacks-shelter.jpg",
+      "img/germasogeia/betty/dog-in-cage-small.jpg"
+    ],
+    "size": "small",
+    "added": "2025-05-17T00:00:00.000Z"
+  },
+  {
     "filename": "chloe.md",
     "location": "adopted",
     "name": "Chloe",
@@ -378,6 +378,23 @@
     "added": "2025-02-15T00:00:00.000Z"
   },
   {
+    "filename": "loki.md",
+    "location": "adopted",
+    "name": "Loki",
+    "breed": "Mixed breed",
+    "age": 0.5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/other/loki/loki-adoption-cyprus.jpg",
+      "img/other/loki/sweet-loki-cyprus.jpg",
+      "img/other/loki/loki-boy-adoption.jpg",
+      "img/other/loki/rehome-loki-cyprus.jpg"
+    ],
+    "size": "large",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
     "filename": "lucy.md",
     "location": "adopted",
     "name": "Lucy",
@@ -392,6 +409,23 @@
       "img/other/lucy/lucy-looking-home-adopt.jpg"
     ],
     "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "luka.md",
+    "location": "adopted",
+    "name": "Luka",
+    "breed": "Mixed breed",
+    "age": 0.5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/other/luka/puppy-adoption-cyprus.jpg",
+      "img/other/luka/sweet-boy-cyprus.jpg",
+      "img/other/luka/big-boy-adoption.jpg",
+      "img/other/luka/rehome-puppy-cyprus.jpg"
+    ],
+    "size": "large",
     "added": "2025-02-14T00:00:00.000Z"
   },
   {

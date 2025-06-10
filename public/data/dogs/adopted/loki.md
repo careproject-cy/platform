@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 0.5
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/other/loki/loki-adoption-cyprus.jpg,
     img/other/loki/sweet-loki-cyprus.jpg,
