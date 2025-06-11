@@ -11,6 +11,7 @@ export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPost
   const title = post.title
   const desc = post.description
   const Tag = horizontal ? Row : Col;
+  
   return (
     <Tag lg itemsCenter reverse={reverse} {...(horizontal ? { mdCol: true } : {})}>
       <Link href={`/blog/${id}`} className="w-full">
