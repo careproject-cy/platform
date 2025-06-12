@@ -1,0 +1,26 @@
+# robots.txt for https://www.careproject.cy/
+
+User-agent: *
+# allow everything under / (public site)
+Allow: /
+
+# block any back-office or temporary directories
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /admin/
+Disallow: /login/
+Disallow: /user/
+
+# ensure bots can fetch your CSS/JS/images
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+
+# crawl-delay for overly aggressive crawlers (optional)
+# Crawl-delay: 10
+
+# sitemap location
+Sitemap: https://www.careproject.cy/sitemap.xml
