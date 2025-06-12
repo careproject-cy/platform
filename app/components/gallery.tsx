@@ -2,12 +2,13 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
-import { Col, Row } from "@vaneui/ui"
+import { Chip, Col, Row } from "@vaneui/ui"
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid'
 
 interface GalleryProps {
   images: string[]
   className?: string
+  chipText?: string
 }
 
 const SquareImage = ({ src, alt, size, className, imageClassName, onClick }: { src: string, alt: string, size: number, className?: string, imageClassName?: string, onClick?: React.MouseEventHandler }) => {
@@ -27,7 +28,7 @@ const SquareImage = ({ src, alt, size, className, imageClassName, onClick }: { s
   );
 }
 
-const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
+const Gallery: React.FC<GalleryProps> = ({ images, className, chipText }) => {
 
   const [visible, setVisible] = useState(0)
   const thumbnailsRef = useRef<HTMLDivElement>(null)
@@ -61,7 +62,12 @@ const Gallery: React.FC<GalleryProps> = ({ images, className }) => {
           <button onClick={nextImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-75 rounded-full absolute right-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
             <ChevronRightIcon className="size-6" />
           </button>
-          <SquareImage src={images[visible]} alt={`image-${visible}`} size={1000} />
+          <Col relative className="overflow-hidden">
+            <SquareImage src={images[visible]} alt={`image-${visible}`} size={1000} />
+            {chipText &&
+              <Chip lg semibold absolute sans className="right-2 bottom-2 opacity-75">{chipText}</Chip>
+            }
+          </Col>
         </Row>
         <Row sm ref={thumbnailsRef} className="overflow-x-hidden max-md:overflow-x-scroll">
           {images.map((src, idx) => (

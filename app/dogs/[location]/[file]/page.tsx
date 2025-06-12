@@ -63,20 +63,24 @@ export default async function DogPage({ params }: IdProps) {
   const { content, frontmatter } = await fetchMd(`data/dogs/${location}/${filename}`)
 
   const sizeText = dog.size === "small" ? "Small (< 10 kg) size" : dog.size === "medium" ? "Medium (10-25 kg) size" : "Large (> 25kg) size"
-  const similarDogs = dogs.filter(d => d.size === dog.size && d.filename !== dog.filename).slice(0, 4)
+  const similarDogs = dogs.filter(d => d.size === dog.size && d.filename !== dog.filename && d.status != "Adopted" && d.status != "Not available").slice(0, 4)
 
   const galleryImages = dog.images.map((image) => getImageSrc(image));
 
   const shareText = `Check out ${dog.name}!`
   const url = `https://${domain}/dogs/${location}/${file}`
 
+  const status = dog.status
+  const showStatus = status !== 'Available'
+
   return (
     <Layout>
       <Section>
         <Container>
-          <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${dog.filename.replace(".md", "")}`, text: dog.name }]} />
+          <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name }]} />
           <Row xl mdCol>
-            <Gallery className="flex-1" images={galleryImages} />
+            <Gallery className="flex-1" images={galleryImages}
+              chipText={showStatus ? status : undefined} />
             <Col lg className="flex-1">
               <Col>
                 <PageTitle>{dog.name}</PageTitle>
