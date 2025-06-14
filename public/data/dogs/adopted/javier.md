@@ -3,7 +3,7 @@
   breed: Coonhound
   age: 1.3
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/other/javier/sweet-dog-rehome.JPG,
     img/other/javier/javier-beautiful-adoption-cyprus.jpg,

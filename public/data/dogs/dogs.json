@@ -34,23 +34,6 @@
     "added": "2025-04-01T00:00:00.000Z"
   },
   {
-    "filename": "javier.md",
-    "location": "other",
-    "name": "Javier",
-    "breed": "Coonhound",
-    "age": 1.3,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/other/javier/sweet-dog-rehome.JPG",
-      "img/other/javier/javier-beautiful-adoption-cyprus.jpg",
-      "img/other/javier/rehome-shelters-dogs.jpg",
-      "img/other/javier/javier-funny-dog-adopt.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
     "filename": "bella.md",
     "location": "mesageitonia",
     "name": "Bella",
@@ -71,7 +54,7 @@
     "filename": "charlie.md",
     "location": "mesageitonia",
     "name": "Charlie",
-    "breed": "Mix breed",
+    "breed": "Mixed breed",
     "age": "3-4",
     "gender": "male",
     "status": "Available",
@@ -119,21 +102,38 @@
     "added": "2025-06-01T00:00:00.000Z"
   },
   {
-    "filename": "anya.md",
-    "location": "germasogeia",
-    "name": "Anya",
+    "filename": "era.md",
+    "location": "mesageitonia",
+    "name": "Era",
     "breed": "Mixed breed",
-    "age": 2.5,
+    "age": 2,
     "gender": "female",
-    "status": "Reserved",
+    "status": "Available",
     "images": [
-      "img/germasogeia/anya/mixed-breed-adoption-anya.jpg",
-      "img/germasogeia/anya/anya-dog-shelter-cyprus-winking.jpg",
-      "img/germasogeia/anya/anya-dog-shelter-cyprus-closeup.jpg",
-      "img/germasogeia/anya/anya-dog-shelter-cyprus-fullbody.jpg"
+      "img/mesageitonia/era/era-shelters-dog.jpg",
+      "img/mesageitonia/era/rescue-dog.jpg",
+      "img/mesageitonia/era/adoption-era-dog.jpg",
+      "img/mesageitonia/era/era-loving-rescue-dog-for-family.jpg"
     ],
     "size": "medium",
-    "added": "2025-02-15T00:00:00.000Z"
+    "added": "2025-06-10T00:00:00.000Z"
+  },
+  {
+    "filename": "olivia.md",
+    "location": "mesageitonia",
+    "name": "Olivia",
+    "breed": "Mixed breed",
+    "age": "1-2",
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/olivia/olivia-rescue-dog-for-adoption.jpg",
+      "img/mesageitonia/olivia/gentle-dog-olivia-cyprus.jpg",
+      "img/mesageitonia/olivia/adopt-sweet-dog.jpg",
+      "img/mesageitonia/olivia/rescue-dog.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-06-10T00:00:00.000Z"
   },
   {
     "filename": "dorothy.md",
@@ -173,7 +173,7 @@
     "filename": "gina.md",
     "location": "germasogeia",
     "name": "Gina",
-    "breed": "Retriever+labrador cross",
+    "breed": "Vizla cross",
     "age": "1.5-2",
     "gender": "female",
     "status": "Available",
@@ -239,24 +239,6 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "max.md",
-    "location": "germasogeia",
-    "name": "Max",
-    "breed": "German Shepherd mix",
-    "age": 4,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/germasogeia/max/max-adoption-cyprus.jpg",
-      "img/germasogeia/max/max-first-walk.jpg",
-      "img/germasogeia/max/shepherd-adopt.jpg",
-      "img/germasogeia/max/max-rehome-cyprus.jpg",
-      "img/germasogeia/max/dog-in-shelter-adoption.jpg"
-    ],
-    "size": "large",
-    "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
     "filename": "rony.md",
     "location": "germasogeia",
     "name": "Rony",
@@ -310,6 +292,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "anya.md",
+    "location": "adopted",
+    "name": "Anya",
+    "breed": "Mixed breed",
+    "age": 2.5,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/anya/mixed-breed-adoption-anya.jpg",
+      "img/germasogeia/anya/anya-dog-shelter-cyprus-winking.jpg",
+      "img/germasogeia/anya/anya-dog-shelter-cyprus-closeup.jpg",
+      "img/germasogeia/anya/anya-dog-shelter-cyprus-fullbody.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-15T00:00:00.000Z"
+  },
+  {
     "filename": "betty.md",
     "location": "adopted",
     "name": "Betty",
@@ -356,6 +355,23 @@
       "img/other/dixie/sweet-dog-rehome.jpg",
       "img/other/dixie/smile-shelters-dogs.jpg",
       "img/other/dixie/dixie-with-people-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "javier.md",
+    "location": "adopted",
+    "name": "Javier",
+    "breed": "Coonhound",
+    "age": 1.3,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/other/javier/sweet-dog-rehome.JPG",
+      "img/other/javier/javier-beautiful-adoption-cyprus.jpg",
+      "img/other/javier/rehome-shelters-dogs.jpg",
+      "img/other/javier/javier-funny-dog-adopt.jpg"
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
@@ -444,6 +460,24 @@
       "img/germasogeia/luna/smiling-dog-rehome.jpg"
     ],
     "size": "small",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "max.md",
+    "location": "adopted",
+    "name": "Max",
+    "breed": "German Shepherd mix",
+    "age": 4,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/max/max-adoption-cyprus.jpg",
+      "img/germasogeia/max/max-first-walk.jpg",
+      "img/germasogeia/max/shepherd-adopt.jpg",
+      "img/germasogeia/max/max-rehome-cyprus.jpg",
+      "img/germasogeia/max/dog-in-shelter-adoption.jpg"
+    ],
+    "size": "large",
     "added": "2025-02-14T00:00:00.000Z"
   },
   {

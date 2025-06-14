@@ -1,6 +1,6 @@
 ---
   name: Charlie
-  breed: Mix breed
+  breed: Mixed breed
   age: 3-4
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'

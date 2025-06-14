@@ -1,6 +1,6 @@
 ---
   name: Gina
-  breed: Retriever+labrador cross
+  breed: Vizla cross
   age: 1.5-2
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'

@@ -3,7 +3,7 @@
   breed: German Shepherd mix
   age: 4
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/max/max-adoption-cyprus.jpg,
     img/germasogeia/max/max-first-walk.jpg,

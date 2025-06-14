@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 2.5
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/anya/mixed-breed-adoption-anya.jpg,
     img/germasogeia/anya/anya-dog-shelter-cyprus-winking.jpg,
