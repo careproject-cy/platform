@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans, Noto_Sans_Mono } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
-import { platform_name, slogan, social_img_url } from "./data/consts";
+import { slogan, social_img_url } from "./data/consts";
 import React from "react";
 
 const sans = Noto_Sans({
@@ -46,7 +46,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="j+/2DiRHjgrgVvAfvvGKDw" async></script>
-        <title>{platform_name}</title>
       </head>
       <body className={`${mono.variable} ${sans.variable} antialiased font-sans`}>
         {children}

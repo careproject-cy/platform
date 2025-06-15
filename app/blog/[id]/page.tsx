@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Layout from '../../components/layout'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Button } from "@vaneui/ui"
 import { Col, Container, Section } from "@vaneui/ui"
 import { PageTitle, SectionTitle, Text } from "@vaneui/ui"
@@ -12,10 +13,20 @@ import { getDate } from "@/app/utils/dateUtils"
 import { Divider } from "@vaneui/ui"
 import { BlogCard } from "@/app/components/blog/blogCard"
 import Sharer from "@/app/components/sharerWrapper"
-import { domain } from "@/app/data/consts"
+import { domain, platform_name } from "@/app/data/consts"
 
 interface BlogPageProps {
   params: Promise<{ id: string }>
+}
+
+export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
+  const { id } = await params;
+  const posts = await fetchBlogposts();
+  const post = posts.find(p => p.filename === `${id}.md`)
+  return {
+    title: `${post?.title ?? "Page"} | ${platform_name}`,
+    // You can also add description or other meta from frontmatter.
+  };
 }
 
 export default async function BlogPage({ params }: BlogPageProps) {

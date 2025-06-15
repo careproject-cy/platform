@@ -2,12 +2,19 @@ import Layout from './components/layout'
 import DogCard from './components/dogCard'
 import Link from 'next/link'
 import Carousel from "./components/carousel"
-import { longDescription, slogan } from "./data/consts"
+import { longDescription, platform_name, slogan } from "./data/consts"
 import { BlogCard } from "./components/blog/blogCard"
 import { Button, Col, Container, Grid3, Grid4, Row, Section, Badge, PageTitle, SectionTitle, Text } from "@vaneui/ui"
 import { fetchBlogposts, fetchDogs } from "./data/fetchData"
 import { getImageSrc } from "./utils/images"
 import { LargeBlogCard } from "./components/blog/largeBlogCard"
+import { Metadata } from "next"
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: `${"Home Page"} | ${platform_name}`,
+  };
+}
 
 export default async function Home() {
 

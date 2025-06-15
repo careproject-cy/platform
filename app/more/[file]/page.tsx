@@ -7,6 +7,11 @@ import { fetchMd } from "@/app/data/fetchData"
 import Md from "@/app/components/md/md"
 import DonationCard from "@/app/components/donateCard"
 
+
+interface MdPageProps {
+  params: Promise<{ file: string }>
+}
+
 export async function generateMetadata({ params }: MdPageProps): Promise<Metadata> {
   const { file } = await params;
   const { frontmatter } = await fetchMd(`data/pages/${file}.md`);
@@ -14,10 +19,6 @@ export async function generateMetadata({ params }: MdPageProps): Promise<Metadat
     title: `${frontmatter.title || "Page"} | ${platform_name}`,
     // You can also add description or other meta from frontmatter.
   };
-}
-
-interface MdPageProps {
-  params: Promise<{ file: string }>
 }
 
 export default async function Page({ params }: MdPageProps) {
