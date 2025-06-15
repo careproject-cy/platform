@@ -30,9 +30,11 @@ export async function generateMetadata({ params }: IdProps): Promise<Metadata> {
     };
   }
   const imgUrl = getImageSrc(dog.images[0]);
+  const url = `https://${domain}/dogs/${location}/${file}`
   return {
     title: `${dog.name} | ${dog.breed} | ${platform_name}`,
     openGraph: {
+      url: url,
       images: [
         {
           url: imgUrl || "care-project-social.png",
