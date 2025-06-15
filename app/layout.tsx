@@ -17,6 +17,9 @@ const mono = Noto_Sans_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://careproject.cy"),
+  alternates: {
+    canonical: './',
+  },
   description: slogan,
   openGraph: {
     images: [
@@ -41,10 +44,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <head>
-      <script src="https://analytics.ahrefs.com/analytics.js" data-key="j+/2DiRHjgrgVvAfvvGKDw" async></script>
-      <title>{platform_name}</title>
-    </head>
+      <head>
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="j+/2DiRHjgrgVvAfvvGKDw" async></script>
+        <title>{platform_name}</title>
+      </head>
       <body className={`${mono.variable} ${sans.variable} antialiased font-sans`}>
         {children}
         <Analytics />
