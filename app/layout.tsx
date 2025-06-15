@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   },
   description: slogan,
   openGraph: {
+    url: './',
     images: [
       {
         url: social_img_url,
