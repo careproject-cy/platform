@@ -1,22 +1,5 @@
 [
   {
-    "filename": "Baron.md",
-    "location": "other",
-    "name": "Baron",
-    "breed": "Pit bull",
-    "age": 11,
-    "gender": "male",
-    "status": "In foster care",
-    "images": [
-      "img/other/baron/old-boy-adoption-cyprus.jpg",
-      "img/other/baron/baron-dog-rehome.jpg",
-      "img/other/baron/shelters-dogs.jpg",
-      "img/other/baron/baron-old-adopt.jpg"
-    ],
-    "size": "large",
-    "added": "2025-04-14T00:00:00.000Z"
-  },
-  {
     "filename": "feodor.md",
     "location": "other",
     "name": "Feodor",
@@ -83,6 +66,23 @@
     ],
     "size": "medium",
     "added": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "filename": "cookie.md",
+    "location": "mesageitonia",
+    "name": "Cookie",
+    "breed": "Mixed breed",
+    "age": 1,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/cookie/adopt-rescue-shelter-cookie.jpg",
+      "img/mesageitonia/cookie/rescue-dog-female.jpg",
+      "img/mesageitonia/cookie/smiley-girl-rescue.jpg",
+      "img/mesageitonia/cookie/adopt-dog-mixed-breed.jpg"
+    ],
+    "size": "small",
+    "added": "2025-06-24T00:00:00.000Z"
   },
   {
     "filename": "diamond.md",
@@ -262,7 +262,7 @@
     "breed": "Mixed breed",
     "age": 1.5,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/scarlet/smiling-girl-adoption.jpg",
       "img/germasogeia/scarlet/need-family-urgent.jpg",
@@ -272,6 +272,22 @@
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "teddy.md",
+    "location": "germasogeia",
+    "name": "Teddy",
+    "breed": "German Shepherd",
+    "age": "8-9",
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/teddy/adopt-rescue-shelter-teddy.jpg",
+      "img/germasogeia/teddy/rescue-dog-male.jpg",
+      "img/germasogeia/teddy/german-shepherd-adoption.jpg"
+    ],
+    "size": "large",
+    "added": "2025-06-23T00:00:00.000Z"
   },
   {
     "filename": "zeus.md",
@@ -307,6 +323,23 @@
     ],
     "size": "medium",
     "added": "2025-02-15T00:00:00.000Z"
+  },
+  {
+    "filename": "Baron.md",
+    "location": "adopted",
+    "name": "Baron",
+    "breed": "Pit bull",
+    "age": 11,
+    "gender": "male",
+    "status": "Not available",
+    "images": [
+      "img/other/baron/old-boy-adoption-cyprus.jpg",
+      "img/other/baron/baron-dog-rehome.jpg",
+      "img/other/baron/shelters-dogs.jpg",
+      "img/other/baron/baron-old-adopt.jpg"
+    ],
+    "size": "large",
+    "added": "2025-04-14T00:00:00.000Z"
   },
   {
     "filename": "betty.md",

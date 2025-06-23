@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 1.5
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/scarlet/smiling-girl-adoption.jpg,
     img/germasogeia/scarlet/need-family-urgent.jpg,
