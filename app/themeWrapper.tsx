@@ -10,7 +10,7 @@ const overrideFunc = (theme: ThemeProps) => {
   theme.button.themes.appearance.background.filled.primary.active = 'active:bg-gradient-to-br active:from-orange-600 active:to-red-600';
   theme.button.themes.appearance.ring.filled.primary.base = 'ring-orange-400';
 
-  theme.button.defaults.noShadow = true;
+  //theme.button.defaults.noShadow = true;
 
   return theme;
 };
