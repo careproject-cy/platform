@@ -78,7 +78,7 @@ export default async function DogPage({ params }: IdProps) {
   return (
     <Layout>
       <Section>
-        <Container>
+        <Container className="text-(--text-color-default)">
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name }]} />
           <Row xl mdCol>
             <Gallery className="flex-1" images={galleryImages}
@@ -116,7 +116,7 @@ export default async function DogPage({ params }: IdProps) {
             <>
               <Divider />
               <SectionTitle>Similar dogs</SectionTitle>
-              <Grid3>
+              <Grid3 className="w-full">
                 {similarDogs.map((dog) => (
                   <DogCard key={dog.filename} {...dog} />
                 ))}

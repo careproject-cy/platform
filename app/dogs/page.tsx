@@ -19,7 +19,7 @@ export default async function DogsPage() {
   return (
     <Layout>
       <Section>
-        <Container xl itemsCenter>
+        <Container xl itemsCenter className="text-(--text-color-default)">
           <PageTitle>Dogs Available For Adoption</PageTitle>
           <DogsCollection dogs={dogs} />
         </Container>

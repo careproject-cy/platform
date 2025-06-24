@@ -9,7 +9,7 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ breadcrumbs }: BreadcrumbsProps) {
   return (
-    <Row md itemsCenter>
+    <Row md itemsCenter className="w-full">
       {breadcrumbs.map(({ href, text }, idx) => (
         <React.Fragment key={idx}>
           <Text lg tag={Link} href={href}>{text}</Text>

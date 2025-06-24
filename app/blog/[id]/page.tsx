@@ -47,7 +47,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
   return (
     <Layout>
       <Section>
-        <Container xs tag={"article"}>
+        <Container xs tag={"article"} className="text-(--text-color-default)">
           <Col xl>
             <Col lg>
               <PageTitle>{post.title}</PageTitle>

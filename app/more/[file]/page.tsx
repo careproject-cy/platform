@@ -31,7 +31,7 @@ export default async function Page({ params }: MdPageProps) {
   return (
     <Layout>
       <Section>
-        <Container>
+        <Container className="text-(--text-color-default)">
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: `/more/${file}`, text: title }]} />
           <Row xl lgCol reverse className="w-full">
             {file == "donate" &&
