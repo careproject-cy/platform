@@ -12,7 +12,7 @@ import { Metadata } from "next"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: `${"Home Page"} | ${platform_name}`,
+    title: `Home Page | ${platform_name}`,
   };
 }
 
@@ -29,10 +29,10 @@ export default async function Home() {
 
   return (
     <Layout>
-      <Section className="border-b bg-gray-50">
+      <Section secondary className="border-b bg-gray-50">
         <Container xl className="py-12 max-lg:py-10 max-md:py-8">
           <Row xl lgCol>
-            <Col xl>
+            <Col xl className="w-1/2 max-lg:w-full">
               <PageTitle>{slogan}</PageTitle>
               <Text secondary lg>{longDescription}</Text>
               <Row lg smCol>
@@ -40,7 +40,7 @@ export default async function Home() {
                 <Button lg tag={Link} href="/more/about" className="max-sm:w-full bg-white hover:opacity-90 hover:scale-105">Learn More</Button>
               </Row>
             </Col>
-            <Carousel images={carouselDogs} className="max-md:hidden"/>
+            <Carousel images={carouselDogs} className="max-md:hidden w-1/2 max-lg:w-full"/>
           </Row>
         </Container>
       </Section>
