@@ -15,7 +15,7 @@ export function LargeBlogCard({ post }: { post: BlogPostMetadata }) {
   const desc = post.description
   const tags = post.tags
   return (
-    <Row lg mdCol itemsCenter>
+    <Row xl mdCol itemsCenter>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
           src={getImageSrc(post.imageSrc)}
@@ -27,11 +27,11 @@ export function LargeBlogCard({ post }: { post: BlogPostMetadata }) {
         />
       </Link>
       <Col lg>
-        <Badge lg lgHide hidden={tags.length === 0}>{tags[0]}</Badge>
+        <Badge secondary lgHide hidden={tags.length === 0}>{tags[0]}</Badge>
         <Title lg tag={Link} href={`/blog/${id}`}>{title}</Title>
         <Text lg secondary className="line-clamp-3">{desc}</Text>
-        <Text lg semibold muted>{getDate(post.date)}</Text>
-        <Button tag={Link} href={`/blog/${id}`} lgHide>Read more</Button>
+        <Text lg semibold secondary>{getDate(post.date)}</Text>
+        <Button lg tag={Link} href={`/blog/${id}`} lgHide>Read more</Button>
       </Col>
     </Row>
   )

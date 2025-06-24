@@ -102,6 +102,25 @@
     "added": "2025-06-01T00:00:00.000Z"
   },
   {
+    "filename": "dobbie.md",
+    "location": "mesageitonia",
+    "name": "Dobbie",
+    "breed": "Coonhound",
+    "age": 1.5,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/dobbie/dobbie-shelters-dog.jpg",
+      "img/mesageitonia/dobbie/male-shelter-rehome.jpg",
+      "img/mesageitonia/dobbie/adoption-dog-rehome.jpg",
+      "img/mesageitonia/dobbie/coonhound-mix-dog.jpeg",
+      "img/mesageitonia/dobbie/dobbie-with-girl.jpeg",
+      "img/mesageitonia/dobbie/dobbie-in-the-cage.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-06-20T00:00:00.000Z"
+  },
+  {
     "filename": "era.md",
     "location": "mesageitonia",
     "name": "Era",
@@ -134,6 +153,40 @@
     ],
     "size": "medium",
     "added": "2025-06-10T00:00:00.000Z"
+  },
+  {
+    "filename": "orlando.md",
+    "location": "mesageitonia",
+    "name": "Orlando",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/orlando/happy-dog-male.jpg",
+      "img/mesageitonia/orlando/smiley-orlando-dog.jpg",
+      "img/mesageitonia/orlando/male-rescue-shelter-dog.jpg",
+      "img/mesageitonia/orlando/dog-in-the-cage.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-06-15T00:00:00.000Z"
+  },
+  {
+    "filename": "oscar.md",
+    "location": "mesageitonia",
+    "name": "Oscar",
+    "breed": "Mixed breed",
+    "age": 4,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/oscar/male-dog-rescue.jpg",
+      "img/mesageitonia/oscar/oscar-lovely-boy.jpg",
+      "img/mesageitonia/oscar/beautiful-boy-adopt.jpg",
+      "img/mesageitonia/oscar/adoptdontbuy.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-06-23T00:00:00.000Z"
   },
   {
     "filename": "dorothy.md",

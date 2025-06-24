@@ -29,7 +29,7 @@ export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPost
           {title}
         </Title>
         <Text secondary className="line-clamp-2">{desc}</Text>
-        <Text semibold muted>{getDate(post.date)}</Text>
+        <Text semibold secondary>{getDate(post.date)}</Text>
       </Col>
     </Tag>
   )

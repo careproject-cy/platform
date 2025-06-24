@@ -36,8 +36,10 @@ export default async function Home() {
               <PageTitle>{slogan}</PageTitle>
               <Text secondary lg>{longDescription}</Text>
               <Row lg smCol>
-                <Button lg tag={Link} href="/more/donate" className="max-sm:w-full bg-gradient-to-br from-orange-400 to-red-600 border-orange-400 text-white hover:opacity-90 hover:scale-105">Support Us</Button>
-                <Button lg tag={Link} href="/more/about" className="max-sm:w-full bg-white hover:opacity-90 hover:scale-105">Learn More</Button>
+                <Button filled primary lg tag={Link} href="/more/donate"
+                        className="max-sm:w-full">Support Us</Button>
+                <Button lg tag={Link} href="/more/about"
+                        className="max-sm:w-full">Learn More</Button>
               </Row>
             </Col>
             <Carousel images={carouselDogs} className="max-md:hidden w-1/2 max-lg:w-full"/>
@@ -48,7 +50,7 @@ export default async function Home() {
       <Section>
         <Container xl itemsCenter>
           <Col lg itemsCenter>
-            <Badge>Meet the dogs</Badge>
+            <Badge secondary>Meet the dogs</Badge>
             <SectionTitle>Dogs Available For Adoption</SectionTitle>
           </Col>
           <Grid4>
@@ -56,7 +58,7 @@ export default async function Home() {
               <DogCard key={dog.filename} {...dog} />
             ))}
           </Grid4>
-          <Button tag={Link} href="/dogs">View All Dogs</Button>
+          <Button lg tag={Link} href="/dogs">View All Dogs</Button>
         </Container>
       </Section>
 
@@ -64,14 +66,14 @@ export default async function Home() {
         <Container xl itemsCenter>
           <SectionTitle>Latest Blog Posts</SectionTitle>
           <Col lg>
-            <LargeBlogCard post={latestPost} />
+            <LargeBlogCard post={latestPost}/>
             <Grid3>
               {recentPosts.map((post) => (
-                <BlogCard key={post.filename} post={post} />
+                <BlogCard key={post.filename} post={post}/>
               ))}
             </Grid3>
           </Col>
-          <Button tag={Link} href="/blog">View All Posts</Button>
+          <Button lg tag={Link} href="/blog">View All Posts</Button>
         </Container>
       </Section>
 

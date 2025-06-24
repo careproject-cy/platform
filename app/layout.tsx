@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import { slogan, social_img_url } from "./data/consts";
 import React from "react";
+import ThemeWrapper from "@/app/themeWrapper";
 
 const sans = Noto_Sans({
   variable: "--font-sans",
@@ -39,18 +40,20 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
+                                     children,
+                                   }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="j+/2DiRHjgrgVvAfvvGKDw" async></script>
-      </head>
+    <head>
+      <script src="https://analytics.ahrefs.com/analytics.js" data-key="j+/2DiRHjgrgVvAfvvGKDw" async></script>
+    </head>
       <body className={`${mono.variable} ${sans.variable} antialiased font-sans`}>
+      <ThemeWrapper>
         {children}
-        <Analytics />
+      </ThemeWrapper>
+      <Analytics/>
       </body>
     </html>
   );
