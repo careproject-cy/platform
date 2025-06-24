@@ -8,8 +8,7 @@
     img/mesageitonia/dobbie/dobbie-shelters-dog.jpg,
     img/mesageitonia/dobbie/male-shelter-rehome.jpg,
     img/mesageitonia/dobbie/adoption-dog-rehome.jpg,
-    img/mesageitonia/dobbie/coonhound-mix-dog.jpeg,
-    img/mesageitonia/dobbie/dobbie-with-girl.jpeg,
+    img/mesageitonia/dobbie/dobbie-with-girl.jpg,
     img/mesageitonia/dobbie/dobbie-in-the-cage.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'

@@ -6,8 +6,8 @@
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/oscar/male-dog-rescue.jpg,
+    img/mesageitonia/oscar/male-boy-shelter.jpg,
     img/mesageitonia/oscar/oscar-lovely-boy.jpg,
-    img/mesageitonia/oscar/beautiful-boy-adopt.jpg,
     img/mesageitonia/oscar/adoptdontbuy.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
