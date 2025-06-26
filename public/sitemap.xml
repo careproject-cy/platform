@@ -1,135 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<url>
-  <loc>https://careproject.cy/</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/blog</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/more/adopt</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/more/foster</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/more/about</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/more/get-involved</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/more/donate</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/mesageitonia/era</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/mesageitonia/olivia</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/mesageitonia/cleopatra</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/mesageitonia/diamond</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/mesageitonia/charlie</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/germasogeia/freya</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/germasogeia/gina</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/other/Baron</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/blog/2025-02-18-essential-items-for-welcoming-your-new-dog-in-cyprus</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/blog/2025-02-15-beware-of-foxtail-grass</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/blog/2025-02-12-beware-of-dangerous-caterpillars-for-your-pets</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/blog/2025-02-10-your-new-best-friend-awaits</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/other/feodor</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/germasogeia/rony</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/germasogeia/dorothy</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/germasogeia/kayla</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://careproject.cy/dogs/germasogeia/zeus</loc>
-  <lastmod>2025-06-15T15:33:02+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
+    <url>
+        <loc>https://careproject.cy/</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/blog</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/more/adopt</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/more/foster</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/more/about</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/more/get-involved</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/more/donate</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/mesageitonia/cookie</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/mesageitonia/oscar</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/germasogeia/teddy</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/mesageitonia/dobbie</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/mesageitonia/orlando</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/mesageitonia/era</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/mesageitonia/olivia</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/mesageitonia/cleopatra</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/blog/2025-02-18-essential-items-for-welcoming-your-new-dog-in-cyprus</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/blog/2025-02-15-beware-of-foxtail-grass</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/blog/2025-02-12-beware-of-dangerous-caterpillars-for-your-pets</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/blog/2025-02-10-your-new-best-friend-awaits</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/mesageitonia/diamond</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/mesageitonia/charlie</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/germasogeia/freya</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/germasogeia/gina</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://careproject.cy/dogs/germasogeia/zeus</loc>
+        <lastmod>2025-06-26T14:12:39+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
 
 
 </urlset>
