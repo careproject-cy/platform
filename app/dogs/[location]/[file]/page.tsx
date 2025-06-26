@@ -65,7 +65,7 @@ export default async function DogPage({ params }: IdProps) {
   const { content, frontmatter } = await fetchMd(`data/dogs/${location}/${filename}`)
 
   const sizeText = dog.size === "small" ? "Small (< 10 kg) size" : dog.size === "medium" ? "Medium (10-25 kg) size" : "Large (> 25kg) size"
-  const similarDogs = dogs.filter(d => d.size === dog.size && d.filename !== dog.filename && d.status != "Adopted" && d.status != "Not available").slice(0, 4)
+  const similarDogs = dogs.filter(d => d.size === dog.size && d.filename !== dog.filename && d.status != "Adopted" && d.status != "Not available").slice(0, 6)
 
   const galleryImages = dog.images.map((image) => getImageSrc(image));
 
@@ -113,7 +113,7 @@ export default async function DogPage({ params }: IdProps) {
           </Row>
           <Sharer shareText={shareText} url={url} />
           {similarDogs.length !== 0 &&
-            <>
+            <Col xl itemsCenter className="w-full gap-10 pb-10">
               <Divider />
               <SectionTitle>Similar dogs</SectionTitle>
               <Grid3 className="w-full">
@@ -121,7 +121,7 @@ export default async function DogPage({ params }: IdProps) {
                   <DogCard key={dog.filename} {...dog} />
                 ))}
               </Grid3>
-            </>
+            </Col>
           }
         </Container>
       </Section>

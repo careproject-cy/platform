@@ -29,7 +29,7 @@ export default async function Home() {
 
   return (
     <Layout>
-      <Section secondary className="border-b bg-gray-50">
+      <Section secondary className="border-b">
         <Container xl className="py-12 max-lg:py-10 max-md:py-8">
           <Row xl lgCol>
             <Col xl className="w-1/2 max-lg:w-full">

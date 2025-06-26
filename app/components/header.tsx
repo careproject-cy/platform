@@ -6,6 +6,7 @@ import { Row } from "@vaneui/ui"
 import { Button } from "@vaneui/ui"
 import { useState } from "react"
 import { usePathname } from 'next/navigation'
+import { HeartIcon } from '@heroicons/react/16/solid'
 
 export default function Layout() {
   const [isVisible, setIsVisible] = useState(false)
@@ -39,9 +40,9 @@ export default function Layout() {
           primary filled
           tag={Link}
           href="/more/donate"
-          className="hover:opacity-90 w-full"
+          className="hover:opacity-90 max-lg:w-full"
         >
-          Donate
+          <HeartIcon className="size-6"/>Donate
         </Button>
       </Row>
     </Row>
