@@ -80,7 +80,7 @@ export default async function DogPage({ params }: IdProps) {
       <Section>
         <Container className="text-(--text-color-default)">
           <Breadcrumbs breadcrumbs={[{ href: "/", text: "Home" }, { href: "/dogs", text: "Dogs" }, { href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name }]} />
-          <Row xl mdCol>
+          <Row xl mdCol itemsStart>
             <Gallery className="flex-1" images={galleryImages}
               chipText={showStatus ? status : undefined} />
             <Col lg className="flex-1">
