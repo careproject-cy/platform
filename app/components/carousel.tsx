@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid'
+import { ChevronLeft, ChevronRight } from 'react-feather'
 
 interface CarouselProps {
   images: string[]
@@ -45,10 +45,10 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   return (
     <div className={twMerge(`relative flex items-center justify-center min-h-80 h-80 overflow-hidden text-(--text-color-default)`, className ?? "")}>
       <button onClick={prevImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-50 rounded-full absolute left-2 z-30 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
-        <ChevronLeftIcon className="size-6" />
+        <ChevronLeft className="size-6" />
       </button>
       <button onClick={nextImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-50 rounded-full absolute right-2 z-30 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
-        <ChevronRightIcon className="size-6" />
+        <ChevronRight className="size-6" />
       </button>
       <div className="w-full relative flex flex-row items-center min-h-80 h-80 justify-center">
         {visible.map((data, idx) => (

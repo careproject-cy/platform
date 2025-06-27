@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 import { Chip, Col, Row } from "@vaneui/ui"
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/16/solid'
+import { ChevronLeft, ChevronRight } from 'react-feather'
 
 interface GalleryProps {
   images: string[]
@@ -57,10 +57,10 @@ const Gallery: React.FC<GalleryProps> = ({ images, className, chipText }) => {
       <Col sm>
         <Row itemsCenter relative className="overflow-hidden rounded-2xl">
           <button onClick={prevImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-75 rounded-full absolute left-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
-            <ChevronLeftIcon className="size-6" />
+            <ChevronLeft className="size-6" />
           </button>
           <button onClick={nextImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-75 rounded-full absolute right-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
-            <ChevronRightIcon className="size-6" />
+            <ChevronRight className="size-6" />
           </button>
           <Col relative className="overflow-hidden">
             <SquareImage src={images[visible]} alt={`image-${visible}`} size={1000} />

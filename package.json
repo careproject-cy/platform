@@ -12,10 +12,9 @@
     "generate-dogs": "npx tsx lib/generateDogsJson.ts"
   },
   "dependencies": {
-    "@vaneui/ui": "^0.0.17",
-    "@heroicons/react": "^2.2.0",
     "@markdoc/markdoc": "^0.5.0",
     "@tailwindcss/postcss": "^4.0.9",
+    "@vaneui/ui": "^0.0.17",
     "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -24,6 +23,7 @@
     "postcss-discard-duplicates": "^7.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-feather": "^2.0.10",
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {

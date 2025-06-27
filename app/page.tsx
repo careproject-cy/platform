@@ -9,6 +9,7 @@ import { fetchBlogposts, fetchDogs } from "./data/fetchData"
 import { getImageSrc } from "./utils/images"
 import { LargeBlogCard } from "./components/blog/largeBlogCard"
 import { Metadata } from "next"
+import { ArrowRight, CheckCircle } from "react-feather";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -37,9 +38,13 @@ export default async function Home() {
               <Text secondary lg>{longDescription}</Text>
               <Row lg smCol>
                 <Button filled primary lg tag={Link} href="/more/donate"
-                        className="max-sm:w-full">Support Us</Button>
+                        className="max-sm:w-full">
+                  <CheckCircle/> Support Us
+                </Button>
                 <Button lg tag={Link} href="/more/about"
-                        className="max-sm:w-full">Learn More</Button>
+                        className="max-sm:w-full">
+                  Learn More <ArrowRight/>
+                </Button>
               </Row>
             </Col>
             <Carousel images={carouselDogs} className="max-md:hidden w-1/2 max-lg:w-full"/>
@@ -58,7 +63,9 @@ export default async function Home() {
               <DogCard key={dog.filename} {...dog} />
             ))}
           </Grid4>
-          <Button lg tag={Link} href="/dogs">View All Dogs</Button>
+          <Button lg tag={Link} href="/dogs">
+            View All Dogs <ArrowRight/>
+          </Button>
         </Container>
       </Section>
 
@@ -73,7 +80,9 @@ export default async function Home() {
               ))}
             </Grid3>
           </Col>
-          <Button lg tag={Link} href="/blog">View All Posts</Button>
+          <Button lg tag={Link} href="/blog">
+            View All Posts <ArrowRight/>
+          </Button>
         </Container>
       </Section>
 
