@@ -6,7 +6,7 @@ import matter from "gray-matter";
 import { promises as fs } from 'fs';
 import path from 'path';
 
-const cacheRevalidate = process.env.NODE_ENV === "development" ? 1 : 60;
+const cacheRevalidate = process.env.NODE_ENV === "development" ? 1 : 3600;
 
 async function readFileAndParse(relUrl: string) {
   const filePath = path.join(process.cwd(), relUrl);
