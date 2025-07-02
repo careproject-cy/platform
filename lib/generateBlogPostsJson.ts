@@ -5,7 +5,7 @@ import { BlogPostMetadata } from "@/app/data/blogPostMetadata";
 
 async function generateBlogPostsJson() {
   try {
-    const blogDir = path.join(process.cwd(), "public", "data", "blog");
+    const blogDir = path.join(process.cwd(), "data", "blog");
     const files = await fs.readdir(blogDir);
 
     const blogPosts: BlogPostMetadata[] = [];
@@ -30,7 +30,7 @@ async function generateBlogPostsJson() {
       }
     }
 
-    const outputPath = path.join(process.cwd(), "public", "data", "blogposts.json");
+    const outputPath = path.join(process.cwd(), "data", "blogposts.json");
     await fs.writeFile(outputPath, JSON.stringify(blogPosts, null, 2), "utf-8");
 
     console.log(`Successfully generated ${outputPath}`);

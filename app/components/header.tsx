@@ -12,7 +12,6 @@ export default function Layout() {
   const [isVisible, setIsVisible] = useState(false)
   const pathname = usePathname()
 
-  // Helper function to conditionally apply the active class
   const getLinkClasses = (href: string) =>
     `hover:bg-gray-100 px-3 rounded-md py-2 max-md:w-full max-md:text-center whitespace-nowrap ${pathname === href ? 'bg-gray-100' : ''}`
 
@@ -20,7 +19,7 @@ export default function Layout() {
     <Row itemsCenter justifyBetween relative className="border-b px-4 py-2 w-full bg-white" tag={'header'} lgCol>
       <Row itemsCenter justifyBetween className="max-lg:w-full">
         <Logo/>
-        <Button className="hidden max-lg:flex" onClick={() => setIsVisible(!isVisible)}>
+        <Button noShadow className="hidden max-lg:flex" onClick={() => setIsVisible(!isVisible)}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
             <path
               d="M3.75 5.25a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Zm0 6a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Zm0 6a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Z"></path>

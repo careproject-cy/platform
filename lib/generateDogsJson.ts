@@ -5,7 +5,7 @@ import { DogMetadata } from "@/app/data/dogMetadata";
 
 async function generateDogsJson() {
   try {
-    const dogDir = path.join(process.cwd(), "public", "data", "dogs");
+    const dogDir = path.join(process.cwd(), "data", "dogs");
     const files = await fs.readdir(dogDir, { recursive: true });
 
     const dogs: DogMetadata[] = [];
@@ -33,7 +33,7 @@ async function generateDogsJson() {
       }
     }
 
-    const outputPath = path.join(process.cwd(), "public", "data", "dogs", "dogs.json");
+    const outputPath = path.join(process.cwd(), "data", "dogs.json");
     await fs.writeFile(outputPath, JSON.stringify(dogs, null, 2), "utf-8");
 
     console.log(`Successfully generated ${outputPath}`);
