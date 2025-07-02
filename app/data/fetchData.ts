@@ -1,4 +1,3 @@
-import { headers } from "next/headers";
 import { notFound } from 'next/navigation'
 import { BlogPostMetadata } from "./blogPostMetadata";
 import { DogMetadata } from "./dogMetadata";
@@ -9,31 +8,33 @@ import path from 'path';
 
 const cacheRevalidate = process.env.NODE_ENV === "development" ? 1 : 60;
 
-export async function getAbsoluteUrl(relUrl: string, host: string) {
-  const protocol = host.includes("localhost") ? "http" : "https";
-  return `${protocol}://${host}/${relUrl}`;
-}
-
-async function fetchMdInternal(relUrl: string, host: string) {
-  const url = await getAbsoluteUrl(relUrl, host);
-  const res = await fetch(url);
-  if (!res.ok) {
-    notFound();
+async function readFileAndParse(relUrl: string) {
+  const filePath = path.join(process.cwd(), relUrl);
+  try {
+    const fileContents = await fs.readFile(filePath, 'utf8');
+    const {content, data: frontmatter} = matter(fileContents);
+    return {content, frontmatter};
+  } catch (error) {
+    console.error(error);
+    // If the file doesn't exist, trigger a 404 page.
+    return notFound();
   }
-  const text = await res.text();
-  const {content, data: frontmatter} = matter(text);
-  return {content, frontmatter};
 }
 
 export async function fetchMd(relUrl: string) {
-  const host = (await headers()).get("host")!;
-  const cachedFetchMd = unstable_cache(fetchMdInternal,
-    [relUrl], // Use the URL as part of the cache key
+  const cachedFetch = unstable_cache(
+    // The function to cache
+    (url) => readFileAndParse(url),
+    // A base key for this cache entry
+    ['md'],
     {
-      tags: ["md", relUrl],
-      revalidate: cacheRevalidate, // Cache revalidation time in seconds
-    });
-  return cachedFetchMd(relUrl, host);
+      // Dynamic tags for on-demand revalidation
+      tags: [relUrl],
+      revalidate: cacheRevalidate,
+    }
+  );
+
+  return cachedFetch(relUrl);
 }
 
 async function getCachedData<T>(filename: string): Promise<T[]> {
@@ -45,7 +46,7 @@ async function getCachedData<T>(filename: string): Promise<T[]> {
       return JSON.parse(fileContent);
     },
     [filename], // Use the filename as a unique key part
-    {revalidate: 3600} // Example: cache for 1 hour
+    {revalidate: cacheRevalidate} // Example: cache for 1 hour
   );
 
   return await cachedReadFile(filename) as T[];
