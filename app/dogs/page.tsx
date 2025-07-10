@@ -13,9 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function DogsPage() {
-
   const dogs = await fetchDogs()
-
   return (
     <Layout>
       <Section>
@@ -27,4 +25,3 @@ export default async function DogsPage() {
     </Layout>
   )
 }
-
