@@ -74,7 +74,7 @@
     "breed": "Mixed breed",
     "age": 1,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/cookie/adopt-rescue-shelter-cookie.jpg",
       "img/mesageitonia/cookie/rescue-dog-female.jpg",
@@ -188,6 +188,41 @@
     "added": "2025-06-23T00:00:00.000Z"
   },
   {
+    "filename": "rolly.md",
+    "location": "mesageitonia",
+    "name": "Rolly",
+    "breed": "Mixed breed",
+    "age": 5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/rolly/rolly-shelters-dog.jpg",
+      "img/mesageitonia/rolly/male-shelter-rehome.jpg",
+      "img/mesageitonia/rolly/adoption-dog-rehome.jpg",
+      "img/mesageitonia/rolly/mixed-cross-breed-dog.jpeg",
+      "img/mesageitonia/rolly/dog-in-the-cage.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-07-02T00:00:00.000Z"
+  },
+  {
+    "filename": "silver.md",
+    "location": "mesageitonia",
+    "name": "Silver",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/silver/silver-shelters-dog.JPG",
+      "img/mesageitonia/silver/shy-shelter-dog.jpg",
+      "img/mesageitonia/silver/adoption-dog-rehome.jpg",
+      "img/mesageitonia/silver/foster-young-dog.jpg"
+    ],
+    "size": "large",
+    "added": "2025-07-02T00:00:00.000Z"
+  },
+  {
     "filename": "dorothy.md",
     "location": "germasogeia",
     "name": "Dorothy",
@@ -245,7 +280,7 @@
     "breed": "Rottweiler mixed",
     "age": 9,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/kayla/smiling-dog-rehoming.jpg",
       "img/germasogeia/kayla/rottweiler-adoption-cyprus.jpg",
@@ -280,7 +315,7 @@
     "breed": "Coonhound",
     "age": 3,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/marlo/stand-full-body-dog.jpg",
       "img/germasogeia/marlo/marlo-adoption-cyprus.jpg",
@@ -291,13 +326,31 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "olaf.md",
+    "location": "germasogeia",
+    "name": "Olaf",
+    "breed": "Pointer mixed",
+    "age": 2,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/olaf/olaf-smiling-adoption.jpg",
+      "img/germasogeia/olaf/pointer-mixed-male.jpg",
+      "img/germasogeia/olaf/happy-dog-cyprus.jpg",
+      "img/germasogeia/olaf/need-family-cyprus-dog.jpg",
+      "img/germasogeia/olaf/rescue-adoptnotshop.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-07-01T00:00:00.000Z"
+  },
+  {
     "filename": "rony.md",
     "location": "germasogeia",
     "name": "Rony",
     "breed": "Pointer",
     "age": 2,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/rony/pointer-breed-adoption.jpg",
       "img/germasogeia/rony/rony-dog-shelter-cyprus.jpg",
