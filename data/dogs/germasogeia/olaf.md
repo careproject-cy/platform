@@ -5,7 +5,7 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/olaf/olaf-smiling-adoption.jpg,
+    img/germasogeia/olaf/olaf-smiling-adoptio.jpg,
     img/germasogeia/olaf/pointer-mixed-male.jpg,
     img/germasogeia/olaf/happy-dog-cyprus.jpg,
     img/germasogeia/olaf/need-family-cyprus-dog.jpg,
