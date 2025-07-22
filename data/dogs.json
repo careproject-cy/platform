@@ -68,40 +68,6 @@
     "added": "2025-06-01T00:00:00.000Z"
   },
   {
-    "filename": "cookie.md",
-    "location": "mesageitonia",
-    "name": "Cookie",
-    "breed": "Mixed breed",
-    "age": 1,
-    "gender": "female",
-    "status": "Reserved",
-    "images": [
-      "img/mesageitonia/cookie/adopt-rescue-shelter-cookie.jpg",
-      "img/mesageitonia/cookie/rescue-dog-female.jpg",
-      "img/mesageitonia/cookie/smiley-girl-rescue.jpg",
-      "img/mesageitonia/cookie/adopt-dog-mixed-breed.jpg"
-    ],
-    "size": "small",
-    "added": "2025-06-24T00:00:00.000Z"
-  },
-  {
-    "filename": "diamond.md",
-    "location": "mesageitonia",
-    "name": "Diamond",
-    "breed": "German Shepherd mix",
-    "age": "2-3",
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/mesageitonia/diamond/diamond_black_gsd_cyprus.jpg",
-      "img/mesageitonia/diamond/diamond_rescue_dog.JPG",
-      "img/mesageitonia/diamond/diamond_shy_but_sweet.jpg",
-      "img/mesageitonia/diamond/diamond_needs_love.jpg"
-    ],
-    "size": "large",
-    "added": "2025-06-01T00:00:00.000Z"
-  },
-  {
     "filename": "dobbie.md",
     "location": "mesageitonia",
     "name": "Dobbie",
@@ -274,23 +240,6 @@
     "added": "2025-05-17T00:00:00.000Z"
   },
   {
-    "filename": "kayla.md",
-    "location": "germasogeia",
-    "name": "Kayla",
-    "breed": "Rottweiler mixed",
-    "age": 9,
-    "gender": "female",
-    "status": "Reserved",
-    "images": [
-      "img/germasogeia/kayla/smiling-dog-rehoming.jpg",
-      "img/germasogeia/kayla/rottweiler-adoption-cyprus.jpg",
-      "img/germasogeia/kayla/old-dog-cyprus.jpg",
-      "img/germasogeia/kayla/kayla-sweet-girl.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
     "filename": "kodi.md",
     "location": "germasogeia",
     "name": "Kodi",
@@ -359,24 +308,6 @@
     ],
     "size": "medium",
     "added": "2025-04-01T00:00:00.000Z"
-  },
-  {
-    "filename": "scarlet.md",
-    "location": "germasogeia",
-    "name": "Scarlet",
-    "breed": "Mixed breed",
-    "age": 1.5,
-    "gender": "female",
-    "status": "Reserved",
-    "images": [
-      "img/germasogeia/scarlet/smiling-girl-adoption.jpg",
-      "img/germasogeia/scarlet/need-family-urgent.jpg",
-      "img/germasogeia/scarlet/scarlet-first-walk-cyprus.jpg",
-      "img/germasogeia/scarlet/scarlet-with-people-cyprus.jpg",
-      "img/germasogeia/scarlet/dog-in-shelter-cyprus.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-02-14T00:00:00.000Z"
   },
   {
     "filename": "teddy.md",
@@ -481,6 +412,40 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "cookie.md",
+    "location": "adopted",
+    "name": "Cookie",
+    "breed": "Mixed breed",
+    "age": 1,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/cookie/adopt-rescue-shelter-cookie.jpg",
+      "img/mesageitonia/cookie/rescue-dog-female.jpg",
+      "img/mesageitonia/cookie/smiley-girl-rescue.jpg",
+      "img/mesageitonia/cookie/adopt-dog-mixed-breed.jpg"
+    ],
+    "size": "small",
+    "added": "2025-06-24T00:00:00.000Z"
+  },
+  {
+    "filename": "diamond.md",
+    "location": "adopted",
+    "name": "Diamond",
+    "breed": "German Shepherd mix",
+    "age": "2-3",
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/diamond/diamond_black_gsd_cyprus.jpg",
+      "img/mesageitonia/diamond/diamond_rescue_dog.JPG",
+      "img/mesageitonia/diamond/diamond_shy_but_sweet.jpg",
+      "img/mesageitonia/diamond/diamond_needs_love.jpg"
+    ],
+    "size": "large",
+    "added": "2025-06-01T00:00:00.000Z"
+  },
+  {
     "filename": "dixie.md",
     "location": "adopted",
     "name": "Dixie",
@@ -510,6 +475,23 @@
       "img/other/javier/javier-beautiful-adoption-cyprus.jpg",
       "img/other/javier/rehome-shelters-dogs.jpg",
       "img/other/javier/javier-funny-dog-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "kayla.md",
+    "location": "adopted",
+    "name": "Kayla",
+    "breed": "Rottweiler mixed",
+    "age": 9,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/kayla/smiling-dog-rehoming.jpg",
+      "img/germasogeia/kayla/rottweiler-adoption-cyprus.jpg",
+      "img/germasogeia/kayla/old-dog-cyprus.jpg",
+      "img/germasogeia/kayla/kayla-sweet-girl.jpg"
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
@@ -651,6 +633,24 @@
       "img/germasogeia/sandy/sandy-kennel-adopt.jpg"
     ],
     "size": "small",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "scarlet.md",
+    "location": "adopted",
+    "name": "Scarlet",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/scarlet/smiling-girl-adoption.jpg",
+      "img/germasogeia/scarlet/need-family-urgent.jpg",
+      "img/germasogeia/scarlet/scarlet-first-walk-cyprus.jpg",
+      "img/germasogeia/scarlet/scarlet-with-people-cyprus.jpg",
+      "img/germasogeia/scarlet/dog-in-shelter-cyprus.jpg"
+    ],
+    "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
   },
   {

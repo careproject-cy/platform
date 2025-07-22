@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 1
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/cookie/adopt-rescue-shelter-cookie.jpg,
     img/mesageitonia/cookie/rescue-dog-female.jpg,

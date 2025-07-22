@@ -3,7 +3,7 @@
   breed: Rottweiler mixed
   age: 9
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/kayla/smiling-dog-rehoming.jpg,
     img/germasogeia/kayla/rottweiler-adoption-cyprus.jpg,

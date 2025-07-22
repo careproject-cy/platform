@@ -3,7 +3,7 @@
   breed:  German Shepherd mix
   age: 2-3
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/diamond/diamond_black_gsd_cyprus.jpg,
     img/mesageitonia/diamond/diamond_rescue_dog.JPG,
