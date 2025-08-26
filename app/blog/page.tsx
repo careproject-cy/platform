@@ -1,4 +1,3 @@
-import Layout from '../components/layout'
 import type { Metadata } from 'next'
 import { Container, Section } from "@vaneui/ui"
 import { PageTitle } from "@vaneui/ui"
@@ -16,13 +15,11 @@ export default async function BlogPage() {
   const posts = await fetchBlogposts()
 
   return (
-    <Layout>
-      <Section>
-        <Container xl itemsCenter>
-          <PageTitle>Our Blog</PageTitle>
-          <BlogPosts posts={posts} />
-        </Container>
-      </Section>
-    </Layout>
+    <Section>
+      <Container xl itemsCenter>
+        <PageTitle>Our Blog</PageTitle>
+        <BlogPosts posts={posts}/>
+      </Container>
+    </Section>
   )
 }

@@ -4,26 +4,82 @@
 @source "../node_modules/@vaneui/ui";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 
-  /* Override default colors */
-  --text-color-default: var(--color-gray-800, #171717);
-  --text-color-secondary: var(--color-gray-600, #6B7280);
-  --text-color-link: var(--color-blue-600, #2563EB);
+    /* Override default colors */
+    --text-color-default: var(--color-gray-800, #171717);
+    --text-color-secondary: var(--color-gray-500, #6B7280);
+    --text-color-link: var(--color-blue-600, #2563EB);
+    --text-color-accent: var(--color-orange-500);
+
+    --layout-background-accent: var(--color-orange-50, #FFF7ED);
+    --background-color-accent: var(--color-orange-50, #FFF7ED);
+    --background-color-hover-accent: var(--color-orange-50, #FFF7ED);
+    --border-color-accent: var(--color-orange-200);
+
+    --filled-background-color-accent: var(--color-orange-600);
+    --filled-background-color-hover-accent: var(--color-orange-700);
+    --filled-border-color-accent: var(--color-orange-500);
+
+    --font-serif: "Crimson Pro", serif;
+
+    --_gradient-blend-mode: normal; /* or multiply, screen, overlay, etc. */
+    --_gradient-blur: 8px;          /* how strong the frosted blur is */
 }
 
 body {
-  background: var(--background);
+    background: var(--background);
 }
 
 @layer base {
 
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, #E5E7EB);
+    }
+}
+
+.mesh-grad {
+    position: relative;
+    overflow: hidden;         /* clip the blur */
+
+    /* Aurora background on the element */
+    background:
+            radial-gradient(at 90% 6%, #FFD5A6 0px, transparent 50%),
+            radial-gradient(at 22% 78%, #FFFFFF 0px, transparent 50%),
+            radial-gradient(at 10% 55%, #FF6A00 0px, transparent 50%),
+            radial-gradient(at 30% 95%, #FFD5A6 0px, transparent 50%),
+            #FFFFFF;
+    background-blend-mode: var(--_gradient-blend-mode);
+}
+
+/* Blurred copy of the aurora behind content */
+.mesh-grad::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;                 /* clone the aurora */
+    background-blend-mode: inherit;
+    filter: blur(var(--_gradient-blur)); /* the “frost” */
+    transform: translateZ(0);            /* perf hint */
+    z-index: 0;
+}
+
+/* Milky glass tint */
+.mesh-grad::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.6);   /* adjust opacity to taste */
+    z-index: 0;
+}
+
+/* Ensure real content sits above the pseudo-layers */
+.mesh-grad > * {
+    position: relative;
+    z-index: 1;
 }

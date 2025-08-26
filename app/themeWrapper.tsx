@@ -1,19 +1,37 @@
 'use client'
 
 import React from "react";
-import { ThemeProps, ThemeProvider } from "@vaneui/ui";
+import { ThemeDefaults, ThemeProps, ThemeProvider } from "@vaneui/ui";
 
 
 const overrideFunc = (theme: ThemeProps) => {
-  theme.button.themes.appearance.background.filled.primary.base = 'bg-gradient-to-br from-orange-400 to-red-600';
-  theme.button.themes.appearance.background.filled.primary.hover = 'hover:bg-gradient-to-br hover:from-orange-500 hover:to-red-600';
-  theme.button.themes.appearance.background.filled.primary.active = 'active:bg-gradient-to-br active:from-orange-600 active:to-red-600';
+  theme.button.themes.appearance.background.filled.primary.base = 'bg-gradient-to-br from-orange-400 to-orange-700';
+  theme.button.themes.appearance.background.filled.primary.hover = 'hover:opacity-90';
+  theme.button.themes.appearance.background.filled.primary.active = 'active:opacity-100';
   theme.button.themes.appearance.ring.filled.primary.base = 'ring-orange-400';
 
-  //theme.button.defaults.noShadow = true;
+  theme.button.themes.appearance.background.outline.default.hover = 'hover:bg-gray-50';
 
   return theme;
 };
+
+const themeDefaults: ThemeDefaults = {
+  button: {
+    noShadow: true,
+    pill: true,
+  },
+  pageTitle: {
+    serif: true,
+    xl: true,
+  },
+  sectionTitle: {
+    serif: true,
+    xl: true,
+  },
+  badge: {
+    accent: true,
+  }
+}
 
 export default function ThemeWrapper({
                                        children,
@@ -21,7 +39,7 @@ export default function ThemeWrapper({
   children: React.ReactNode;
 }>) {
   return (
-    <ThemeProvider themeOverride={overrideFunc}>
+    <ThemeProvider themeOverride={overrideFunc} themeDefaults={themeDefaults}>
       {children}
     </ThemeProvider>
   );

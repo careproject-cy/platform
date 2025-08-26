@@ -1,4 +1,4 @@
-import { Col, Row } from "@vaneui/ui"
+import { Col, Img, Row } from "@vaneui/ui"
 import { Text, Title } from "@vaneui/ui"
 import Image from 'next/image'
 import Link from 'next/link'
@@ -20,18 +20,19 @@ export default function DogCard(dog: DogMetadata) {
     notAvailable ? null :
       <Link href={`/dogs/${dog.location}/${dog.filename.replace(".md", "")}`} className="w-full">
         <Col>
-          <Col relative className="hover:scale-105 transition-all duration-300 hover:shadow-lg rounded-xl overflow-hidden">
-            <Image
+          <Col relative className="hover:scale-102 transition-all duration-200">
+            <Img relative shadow
+              tag={Image}
               loading='eager'
               src={dogImages[0]}
               alt={name}
               width={300}
               height={300}
               sizes="(max-width: 768px) 100vw, 300px"
-              className="relative object-cover h-auto w-full aspect-square"
+              className="object-cover h-auto w-full aspect-square"
             />
             {showStatus &&
-              <Chip semibold absolute sans secondary className="right-2 bottom-2 opacity-75">{status}</Chip>
+              <Chip sm default semibold absolute sans className="right-2 bottom-2 opacity-75">{status}</Chip>
             }
           </Col>
           <Col xs>

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 import { ChevronLeft, ChevronRight } from 'react-feather'
+import { Img } from "@vaneui/ui";
 
 interface CarouselProps {
   images: string[]
@@ -43,11 +44,11 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   }, [autoPlayKey])
 
   return (
-    <div className={twMerge(`relative flex items-center justify-center min-h-80 h-80 overflow-hidden text-(--text-color-default)`, className ?? "")}>
-      <button onClick={prevImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-50 rounded-full absolute left-2 z-30 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
+    <div className={twMerge(`transition-all relative flex items-center justify-center min-h-80 h-80  text-(--text-color-default)`, className ?? "")}>
+      <button onClick={prevImage} className="cursor-pointer duration-100 bg-gray-100 opacity-50 rounded-full absolute left-2 z-30 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
         <ChevronLeft className="size-6" />
       </button>
-      <button onClick={nextImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-50 rounded-full absolute right-2 z-30 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
+      <button onClick={nextImage} className="cursor-pointer duration-100 bg-gray-100 opacity-50 rounded-full absolute right-2 z-30 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
         <ChevronRight className="size-6" />
       </button>
       <div className="w-full relative flex flex-row items-center min-h-80 h-80 justify-center">
@@ -55,7 +56,8 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
           <div key={idx} className={`top-1/2 -translate-y-1/2 absolute h-full aspect-square overflow-hidden rounded-xl opacity-100 transition-all duration-1000 ${data.css}`}>
             {
               idx > images.length - 1 ? null : (
-                <Image
+                <Img
+                  tag={Image}
                   loading='eager'
                   src={images[idx]}
                   alt={`Slide ${idx}`}

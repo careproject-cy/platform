@@ -6,9 +6,18 @@ import matter from "gray-matter";
 import { promises as fs } from 'fs';
 import path from 'path';
 
-const cacheRevalidate = process.env.NODE_ENV === "development" ? 1 : 3600;
+const cacheRevalidate = process.env.NODE_ENV === "development" ? 300 : 3600; // 5 minutes in dev, 1 hour in prod
 
-async function readFileAndParse(relUrl: string) {
+// Simple in-memory cache for development
+const memoryCache = new Map<string, { data: unknown; timestamp: number }>();
+const CACHE_TTL = cacheRevalidate * 1000; // Convert to milliseconds
+
+type MdResult = {
+  content: string;
+  frontmatter: Record<string, unknown>;
+};
+
+async function readFileAndParse(relUrl: string): Promise<MdResult> {
   const filePath = path.join(process.cwd(), relUrl);
   try {
     const fileContents = await fs.readFile(filePath, 'utf8');
@@ -21,35 +30,62 @@ async function readFileAndParse(relUrl: string) {
   }
 }
 
-export async function fetchMd(relUrl: string) {
-  const cachedFetch = unstable_cache(
-    // The function to cache
-    (url) => readFileAndParse(url),
-    // A base key for this cache entry
-    ['md'],
-    {
-      // Dynamic tags for on-demand revalidation
-      tags: [relUrl],
-      revalidate: cacheRevalidate,
+export async function fetchMd(relUrl: string): Promise<MdResult> {
+  if (process.env.NODE_ENV === "development") {
+    // Use simple memory cache in development
+    const cacheKey = `md:${relUrl}`;
+    const cached = memoryCache.get(cacheKey);
+    
+    if (cached && (Date.now() - cached.timestamp) < CACHE_TTL) {
+      return cached.data as MdResult;
     }
-  );
+    
+    const result = await readFileAndParse(relUrl);
+    memoryCache.set(cacheKey, { data: result, timestamp: Date.now() });
+    return result;
+  } else {
+    // Use Next.js cache in production
+    const cachedFetch = unstable_cache(
+      (url) => readFileAndParse(url),
+      ['md'],
+      {
+        tags: [relUrl],
+        revalidate: cacheRevalidate,
+      }
+    );
+    return cachedFetch(relUrl);
+  }
+}
 
-  return cachedFetch(relUrl);
+async function readJsonFile(filename: string) {
+  console.log(`Reading ${filename} from disk...`);
+  const filePath = path.join(process.cwd(), 'data', filename);
+  const fileContent = await fs.readFile(filePath, 'utf8');
+  return JSON.parse(fileContent);
 }
 
 async function getCachedData<T>(filename: string): Promise<T[]> {
-  const cachedReadFile = unstable_cache(
-    async (file: string) => {
-      console.log(`Reading ${file} from disk...`); // This logs only on a cache miss
-      const filePath = path.join(process.cwd(), 'data', file);
-      const fileContent = await fs.readFile(filePath, 'utf8');
-      return JSON.parse(fileContent);
-    },
-    [filename], // Use the filename as a unique key part
-    {revalidate: cacheRevalidate} // Example: cache for 1 hour
-  );
-
-  return await cachedReadFile(filename) as T[];
+  if (process.env.NODE_ENV === "development") {
+    // Use simple memory cache in development
+    const cacheKey = `data:${filename}`;
+    const cached = memoryCache.get(cacheKey);
+    
+    if (cached && (Date.now() - cached.timestamp) < CACHE_TTL) {
+      return cached.data as T[];
+    }
+    
+    const result = await readJsonFile(filename);
+    memoryCache.set(cacheKey, { data: result, timestamp: Date.now() });
+    return result;
+  } else {
+    // Use Next.js cache in production
+    const cachedReadFile = unstable_cache(
+      async (file: string) => readJsonFile(file),
+      ['data-files'],
+      {revalidate: cacheRevalidate}
+    );
+    return await cachedReadFile(filename) as T[];
+  }
 }
 
 export async function fetchBlogposts() {

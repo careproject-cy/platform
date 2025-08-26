@@ -8,7 +8,7 @@ const Logo: React.FC = () => {
   return (
     <Row xs itemsCenter href="/" tag={Link}>
       <Image src="/logo.svg" alt={platform_name} width={80} height={80} className="h-14 w-auto" />
-      <Title bold mdHide>
+      <Title lg serif bold mdHide>
         {platform_name}
       </Title>
     </Row>

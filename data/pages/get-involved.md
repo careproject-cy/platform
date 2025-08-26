@@ -6,7 +6,7 @@ imageSrc: https://placehold.co/400x400?text=Image+placeholder
 
 ## Get Involved
 
-Helping stray dogs requires a collective effort, and the **CARE Project** is dedicated to giving them a second chance. There are many ways you can support our mission—through donations, volunteering, or providing essential supplies.
+Helping stray dogs requires a collective effort, and the **CARE Project** is dedicated to giving them a second chance. There are many ways you can support our mission-through donations, volunteering, or providing essential supplies.
 
 ## Donate 
 
@@ -25,7 +25,7 @@ Our shelter is always in need of essential supplies. Your material donations hel
 - **Fly traps** to help maintain cleanliness
 - **Cleaning supplies** for disinfecting kennels and maintaining hygiene
 
-We primarily support a municipal shelter but also assist other shelters in need. If we receive items that aren’t suitable for our shelter—like large bedding—we pass them on to places that can use them.
+We primarily support a municipal shelter but also assist other shelters in need. If we receive items that aren’t suitable for our shelter — like large bedding — we pass them on to places that can use them.
 
 If you’re not sure whether an item is needed, please contact us. We are happy to provide guidance and ensure your donations go to the right place!
 
@@ -34,7 +34,7 @@ If you’re not sure whether an item is needed, please contact us. We are happy 
 We are always looking for passionate volunteers to support the **CARE Project**. You can get involved by:
 
 - Helping find loving homes for our dogs by sharing their stories and assisting with the adoption process.
-- Spending quality time with the dogs—socializing, walking, and providing basic training.
+- Spending quality time with the dogs-socializing, walking, and providing basic training.
 - Assisting with transportation to veterinary appointments or foster homes.
 
-If you're interested in volunteering, let us know how you’d like to help—we would love to have you on board!
+If you're interested in volunteering, let us know how you’d like to help. We would love to have you on board!
