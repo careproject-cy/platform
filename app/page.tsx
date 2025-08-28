@@ -15,7 +15,7 @@ import {
   PageTitle,
   SectionTitle,
   Text,
-  Grid2, Card, Title, Img, Stack
+  Grid2, Card, Title,
 } from "@vaneui/ui"
 import { fetchBlogposts, fetchDogs } from "./data/fetchData"
 import { getImageSrc } from "./utils/images"
