@@ -22,7 +22,7 @@ export default function GallerySection({images}: GallerySectionProps) {
       <Container xl itemsCenter>
         <Col itemsCenter className="w-full">
           <SectionTitle>Success Stories</SectionTitle>
-          <Text xl className="text-center max-w-[600px] mb-8">
+          <Text xl textCenter className="max-w-[600px]">
             Celebrate with us! These amazing dogs have found their forever homes through our rescue efforts.
           </Text>
         </Col>
