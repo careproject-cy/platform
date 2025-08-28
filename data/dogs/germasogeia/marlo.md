@@ -3,7 +3,7 @@
   breed: Coonhound
   age: 3
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/marlo/stand-full-body-dog.jpg,
     img/germasogeia/marlo/marlo-adoption-cyprus.jpg,

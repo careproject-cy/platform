@@ -3,7 +3,7 @@
   breed: Pointer
   age: 2
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/rony/pointer-breed-adoption.jpg,
     img/germasogeia/rony/rony-dog-shelter-cyprus.jpg,

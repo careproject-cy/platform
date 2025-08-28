@@ -264,7 +264,7 @@
     "breed": "Coonhound",
     "age": 3,
     "gender": "male",
-    "status": "Reserved",
+    "status": "Available",
     "images": [
       "img/germasogeia/marlo/stand-full-body-dog.jpg",
       "img/germasogeia/marlo/marlo-adoption-cyprus.jpg",
@@ -291,23 +291,6 @@
     ],
     "size": "medium",
     "added": "2025-07-01T00:00:00.000Z"
-  },
-  {
-    "filename": "rony.md",
-    "location": "germasogeia",
-    "name": "Rony",
-    "breed": "Pointer",
-    "age": 2,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/germasogeia/rony/pointer-breed-adoption.jpg",
-      "img/germasogeia/rony/rony-dog-shelter-cyprus.jpg",
-      "img/germasogeia/rony/rony-rehome-cyprus.jpg",
-      "img/germasogeia/rony/pointer-dog-rony-cyprus.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-04-01T00:00:00.000Z"
   },
   {
     "filename": "teddy.md",
@@ -616,6 +599,23 @@
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "rony.md",
+    "location": "adopted",
+    "name": "Rony",
+    "breed": "Pointer",
+    "age": 2,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/rony/pointer-breed-adoption.jpg",
+      "img/germasogeia/rony/rony-dog-shelter-cyprus.jpg",
+      "img/germasogeia/rony/rony-rehome-cyprus.jpg",
+      "img/germasogeia/rony/pointer-dog-rony-cyprus.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-04-01T00:00:00.000Z"
   },
   {
     "filename": "sandy.md",
