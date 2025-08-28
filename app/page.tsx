@@ -24,7 +24,7 @@ export default async function HomePage() {
     .map(dog => getImageSrc(dog.images[0]))
     .slice(0, 5);
   const galleryImages = dogs.filter(d => d.status === 'Adopted')
-    .map((dog, index) => ({
+    .map((dog) => ({
       src: getImageSrc(dog.images[0]),
       alt: `${dog.name} - Successfully adopted rescued dog`
     }))
@@ -32,11 +32,11 @@ export default async function HomePage() {
 
   return (
     <>
-      <HeroSection carouselImages={carouselDogs} />
-      <HowWeHelpSection />
-      <AvailableDogsSection dogs={dogsToShow} />
-      <GallerySection images={galleryImages} />
-      <BlogPostsSection latestPost={latestPost} recentPosts={recentPosts} />
+      <HeroSection carouselImages={carouselDogs}/>
+      <HowWeHelpSection/>
+      <AvailableDogsSection dogs={dogsToShow}/>
+      <GallerySection images={galleryImages}/>
+      <BlogPostsSection latestPost={latestPost} recentPosts={recentPosts}/>
     </>
   )
 }
