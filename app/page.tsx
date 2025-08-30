@@ -27,8 +27,7 @@ export default async function HomePage() {
     .map((dog) => ({
       src: getImageSrc(dog.images[0]),
       alt: `${dog.name} - Successfully adopted rescued dog`
-    }))
-    .slice(0, 12);
+    }));
 
   return (
     <>
