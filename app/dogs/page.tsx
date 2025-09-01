@@ -16,7 +16,7 @@ export default async function DogsPage() {
   return (
     <Section>
       <Container xl itemsCenter>
-        <PageTitle>Dogs Available For Adoption</PageTitle>
+        <PageTitle textCenter>Dogs Available For Adoption</PageTitle>
         <DogsCollection dogs={dogs}/>
       </Container>
     </Section>

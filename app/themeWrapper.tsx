@@ -31,6 +31,7 @@ const themeDefaults: ThemeDefaults = {
   sectionTitle: {
     serif: true,
     xl: true,
+    textCenter: true,
   },
   badge: {
     accent: true,

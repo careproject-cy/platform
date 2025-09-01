@@ -49,7 +49,7 @@ export default async function BlogPage({params}: BlogPageProps) {
       <Container sm>
         <Col lg>
           <PageTitle>{post.title}</PageTitle>
-          <Row justifyBetween>
+          <Row mdCol justifyBetween>
             <Text secondary semibold className="w-full">{getDate(post.date)}</Text>
             <Sharer shareText={shareText} url={url} labelText={""}/>
           </Row>
