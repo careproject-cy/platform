@@ -1,12 +1,13 @@
-import { Container, Link as VLink, Section, Text, Col, Row, Title } from "@vaneui/ui"
+import { Container, Link as VLink, Section, Text, Col, Row, Title, Card } from "@vaneui/ui"
 import { platform_name } from "../data/consts"
 import Link from 'next/link'
 import Image from "next/image";
 import React from "react";
+import { Facebook, Instagram, Linkedin, Send } from "react-feather";
 
 export default function Footer() {
   return (
-    <Section accent className="border-t bg-gray-800" tag={'footer'}>
+    <Section default filled className="border-t" tag={'footer'}>
       <Container xl itemsStart>
         <Row xl lgCol justifyBetween itemsStart className="w-full">
           <Col className="max-w-lg">
@@ -15,6 +16,22 @@ export default function Footer() {
               <Title lg serif bold mdHide className="text-white">
                 {platform_name}
               </Title>
+            </Row>
+            <Row>
+              {
+                [
+                  {icon: Instagram, link: "https://www.instagram.com/uana.cy/"},
+                  {icon: Facebook, link: "https://www.facebook.com/careproject.cy"},
+                  {icon: Linkedin, link: "https://www.linkedin.com/company/uana-foundation/"},
+                  {icon: Send, link: "https://t.me/care_project"},
+                ].map((item, i) => (
+                    <Card xs secondary filled noBorder className="w-fit opacity-75 hover:opacity-100 duration-300" key={i} tag={Link}
+                          href={item.link}>
+                      <item.icon className="text-accent size-7"/>
+                    </Card>
+                  )
+                )
+              }
             </Row>
             <Text lg className="text-white">
               <b>CARE (Cyprus Animals Rescue Effort) Project</b> is a <VLink link info tag={Link}
@@ -39,11 +56,11 @@ export default function Footer() {
                   ]
                 },
                 {
-                  category: "Support",
+                  category: "Support us",
                   links: [
                     {href: "/more/get-involved", text: "Get Involved"},
+                    {href: "/more/adopt", text: "Adopt us"},
                     {href: "/more/donate", text: "Donate"},
-                    {href: "/more/adopt", text: "Adopt"},
                     {href: "/more/foster", text: "Foster"},
                   ]
                 }
