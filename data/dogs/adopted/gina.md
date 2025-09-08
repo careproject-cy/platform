@@ -3,7 +3,7 @@
   breed: Vizla cross
   age: 1.5-2
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/gina/smiling-dog-adoption.jpg,
     img/germasogeia/gina/female-gina-adoption.jpg,

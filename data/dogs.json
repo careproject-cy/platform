@@ -109,7 +109,7 @@
     "breed": "Mixed breed",
     "age": "1-2",
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/olivia/olivia-rescue-dog-for-adoption.jpg",
       "img/mesageitonia/olivia/gentle-dog-olivia-cyprus.jpg",
@@ -218,23 +218,6 @@
       "img/germasogeia/freya/freya-stand-adoption.jpg",
       "img/germasogeia/freya/sweet-face-dog-freya.jpg",
       "img/germasogeia/freya/dog-in-the-cage-shelter.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-05-17T00:00:00.000Z"
-  },
-  {
-    "filename": "gina.md",
-    "location": "germasogeia",
-    "name": "Gina",
-    "breed": "Vizla cross",
-    "age": "1.5-2",
-    "gender": "female",
-    "status": "Reserved",
-    "images": [
-      "img/germasogeia/gina/smiling-dog-adoption.jpg",
-      "img/germasogeia/gina/female-gina-adoption.jpg",
-      "img/germasogeia/gina/beautiful-dog.jpg",
-      "img/germasogeia/gina/sad-dog-in-cage-shelter.jpg"
     ],
     "size": "medium",
     "added": "2025-05-17T00:00:00.000Z"
@@ -444,6 +427,23 @@
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "gina.md",
+    "location": "adopted",
+    "name": "Gina",
+    "breed": "Vizla cross",
+    "age": "1.5-2",
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/gina/smiling-dog-adoption.jpg",
+      "img/germasogeia/gina/female-gina-adoption.jpg",
+      "img/germasogeia/gina/beautiful-dog.jpg",
+      "img/germasogeia/gina/sad-dog-in-cage-shelter.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-05-17T00:00:00.000Z"
   },
   {
     "filename": "javier.md",
