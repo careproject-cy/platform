@@ -189,6 +189,57 @@
     "added": "2025-07-02T00:00:00.000Z"
   },
   {
+    "filename": "stella.md",
+    "location": "mesageitonia",
+    "name": "Stella",
+    "breed": "Mixed breed",
+    "age": "1.5-2",
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/stella/stella-shelters-dog.jpg",
+      "img/mesageitonia/stella/female-shelter-rehome.jpg",
+      "img/mesageitonia/stella/adoption-dog-rehome.jpeg",
+      "img/mesageitonia/stella/shelter-mix-dog.jpeg"
+    ],
+    "size": "medium",
+    "added": "2025-09-08T00:00:00.000Z"
+  },
+  {
+    "filename": "banksy.md",
+    "location": "germasogeia",
+    "name": "Banksy",
+    "breed": "Mixed breed",
+    "age": 2,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/banksy/banksy-smiling-adoption.jpg",
+      "img/germasogeia/banksy/mixed-breed-boy.jpg",
+      "img/germasogeia/banksy/happy-small-dog-cyprus.jpg",
+      "img/germasogeia/banksy/need-family-cyprus-dog.jpg"
+    ],
+    "size": "small",
+    "added": "2025-09-08T00:00:00.000Z"
+  },
+  {
+    "filename": "cracker.md",
+    "location": "germasogeia",
+    "name": "Cracker",
+    "breed": "Kokoni mix",
+    "age": 5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/cracker/cracker-smiling-adoption.jpg",
+      "img/germasogeia/cracker/kokoni-breed-boy.jpg",
+      "img/germasogeia/cracker/happy-small-dog-cyprus.jpg",
+      "img/germasogeia/cracker/need-family-cyprus-dog.jpg"
+    ],
+    "size": "small",
+    "added": "2025-09-08T00:00:00.000Z"
+  },
+  {
     "filename": "dorothy.md",
     "location": "germasogeia",
     "name": "Dorothy",
