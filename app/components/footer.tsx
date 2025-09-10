@@ -3,7 +3,7 @@ import { platform_name } from "../data/consts"
 import Link from 'next/link'
 import Image from "next/image";
 import React from "react";
-import { Facebook, Instagram, Linkedin, Send } from "react-feather";
+import { Facebook, GitHub, Instagram, Linkedin, Send } from "react-feather";
 
 export default function Footer() {
   return (
@@ -24,6 +24,7 @@ export default function Footer() {
                   {icon: Facebook, link: "https://www.facebook.com/careproject.cy"},
                   {icon: Linkedin, link: "https://www.linkedin.com/company/uana-foundation/"},
                   {icon: Send, link: "https://t.me/care_project"},
+                  {icon: GitHub, link: "https://github.com/careproject-cy/"},
                 ].map((item, i) => (
                     <Card xs secondary filled noBorder className="w-fit opacity-75 hover:opacity-100 duration-300" key={i} tag={Link}
                           href={item.link}>
