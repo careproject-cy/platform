@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 1-2
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | ''
   images: [
     img/mesageitonia/olivia/olivia-rescue-dog-for-adoption.jpg,
     img/mesageitonia/olivia/gentle-dog-olivia-cyprus.jpg,
