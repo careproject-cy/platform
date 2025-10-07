@@ -35,7 +35,7 @@ Once we receive your email, we'll provide you with the adoption application form
 
 ## Adoption Fees
 
-- **On Cyprus:** The adoption fee is **€250**. This covers essential veterinary expenses, including a passport, microchip, vaccinations, and spaying/neutering.
+- **In Cyprus:** The adoption fee is **€250**. This covers essential veterinary expenses, including a passport, microchip, vaccinations, and spaying/neutering.
 - **For the UK, Germany, and the Netherlands:** Adoption fees vary depending on the organizations that assist with the rehoming process. Additional costs, such as transport, may apply.
 
 We are committed to finding the best homes for our dogs and assisting adopters in choosing a dog that fits their lifestyle. 
