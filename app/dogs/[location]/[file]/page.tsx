@@ -63,8 +63,15 @@ export default async function DogPage({params}: IdProps) {
 
   const {content} = await fetchMd(`data/dogs/${location}/${filename}`)
 
-  const sizeText = dog.size === "small" ? "Small (< 10 kg) size" : dog.size === "medium" ? "Medium (10-25 kg) size" : "Large (> 25kg) size"
-  const similarDogs = dogs.filter(d => d.size === dog.size && d.filename !== dog.filename && d.status != "Adopted" && d.status != "Not available").slice(0, 6)
+  const sizeText =
+    dog.size === "small"
+      ? "Small (< 10 kg) size"
+      : dog.size === "medium"
+        ? "Medium (10-25 kg) size"
+        : "Large (> 25kg) size"
+  const similarDogs = dogs.filter(d =>
+    d.size === dog.size && d.filename !== dog.filename
+    && d.status != "Adopted" && d.status != "Not available").slice(0, 9)
 
   const galleryImages = dog.images.map((image) => getImageSrc(image));
 
