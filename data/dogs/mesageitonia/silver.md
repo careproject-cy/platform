@@ -5,7 +5,10 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/mesageitonia/silver/silver-shelters-dog.JPG,
+    img/mesageitonia/silver/silver-shelters-dog.jpg,
+    img/mesageitonia/silver/shelter-dog-cyprus.jpg,
+    img/mesageitonia/silver/happy-felix.jpg,
+    img/mesageitonia/silver/felix-male-boy.jpg,
     img/mesageitonia/silver/shy-shelter-dog.jpg,
     img/mesageitonia/silver/adoption-dog-rehome.jpg,
     img/mesageitonia/silver/foster-young-dog.jpg,

@@ -1,9 +1,9 @@
 ---
   name: Kyproula
-  breed:  Pointer cross
+  breed:  Pointer mixed
   age: 8-10
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/kyproula/kyproula-old-dog-adoption.jpg,
     img/germasogeia/kyproula/pointer-breed-girl.jpg,

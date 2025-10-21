@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 4
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/oscar/male-dog-rescue.jpg,
     img/mesageitonia/oscar/male-boy-shelter.jpg,

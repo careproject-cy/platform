@@ -3,7 +3,7 @@
   breed:  Labrador/Staffy mix
   age: 3
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Not available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/cleopatra/cleopatra_rescue_cyprus.jpg,
     img/mesageitonia/cleopatra/cleopatra_adoption_dog.jpg,

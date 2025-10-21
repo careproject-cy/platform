@@ -5,6 +5,10 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
+    img/mesageitonia/felix/adoption-dog-rehome-felix.jpg,
+    img/mesageitonia/felix/felix-male-boy.jpg,
+    img/mesageitonia/felix/happy-felix.jpg,
+    img/mesageitonia/felix/shelter-dog-cyprus.jpg,
     img/mesageitonia/felix/felix-shelters-dog.jpg,
     img/mesageitonia/felix/male-dog-shelter-rehome.jpg,
     img/mesageitonia/felix/adoption-dog-rehome.jpg,

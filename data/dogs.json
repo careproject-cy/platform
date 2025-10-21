@@ -57,7 +57,7 @@
     "breed": "Labrador/Staffy mix",
     "age": 3,
     "gender": "female",
-    "status": "Available",
+    "status": "Not available",
     "images": [
       "img/mesageitonia/cleopatra/cleopatra_rescue_cyprus.jpg",
       "img/mesageitonia/cleopatra/cleopatra_adoption_dog.jpg",
@@ -111,6 +111,10 @@
     "gender": "male",
     "status": "Available",
     "images": [
+      "img/mesageitonia/felix/adoption-dog-rehome-felix.jpg",
+      "img/mesageitonia/felix/felix-male-boy.jpg",
+      "img/mesageitonia/felix/happy-felix.jpg",
+      "img/mesageitonia/felix/shelter-dog-cyprus.jpg",
       "img/mesageitonia/felix/felix-shelters-dog.jpg",
       "img/mesageitonia/felix/male-dog-shelter-rehome.jpg",
       "img/mesageitonia/felix/adoption-dog-rehome.jpg",
@@ -143,7 +147,7 @@
     "breed": "Mixed breed",
     "age": 4,
     "gender": "male",
-    "status": "Available",
+    "status": "Adopted",
     "images": [
       "img/mesageitonia/oscar/male-dog-rescue.jpg",
       "img/mesageitonia/oscar/male-boy-shelter.jpg",
@@ -180,7 +184,10 @@
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/mesageitonia/silver/silver-shelters-dog.JPG",
+      "img/mesageitonia/silver/silver-shelters-dog.jpg",
+      "img/mesageitonia/silver/shelter-dog-cyprus.jpg",
+      "img/mesageitonia/silver/happy-felix.jpg",
+      "img/mesageitonia/silver/felix-male-boy.jpg",
       "img/mesageitonia/silver/shy-shelter-dog.jpg",
       "img/mesageitonia/silver/adoption-dog-rehome.jpg",
       "img/mesageitonia/silver/foster-young-dog.jpg"
@@ -195,7 +202,7 @@
     "breed": "Mixed breed",
     "age": "1.5-2",
     "gender": "female",
-    "status": "Available",
+    "status": "Adopted",
     "images": [
       "img/mesageitonia/stella/stella-shelters-dog.jpg",
       "img/mesageitonia/stella/female-shelter-rehome.jpg",
@@ -212,7 +219,7 @@
     "breed": "Mixed breed",
     "age": 2,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/banksy/banksy-smiling-adoption.jpg",
       "img/germasogeia/banksy/mixed-breed-boy.jpg",
@@ -295,10 +302,10 @@
     "filename": "kyproula.md",
     "location": "germasogeia",
     "name": "Kyproula",
-    "breed": "Pointer cross",
+    "breed": "Pointer mixed",
     "age": "8-10",
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/kyproula/kyproula-old-dog-adoption.jpg",
       "img/germasogeia/kyproula/pointer-breed-girl.jpg",
@@ -326,6 +333,25 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "nala.md",
+    "location": "germasogeia",
+    "name": "Nala",
+    "breed": "German Shepherd",
+    "age": "8-9 months",
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/nala/german-shepgerd-female.jpg",
+      "img/germasogeia/nala/puppy-in-shelter.jpg",
+      "img/germasogeia/nala/happy-dog-cyprus.jpg",
+      "img/germasogeia/nala/smiling-girl-adopt.jpg",
+      "img/germasogeia/nala/adopt-dont-buy.jpg",
+      "img/germasogeia/nala/nala-dog-for-adoption.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-10-22T00:00:00.000Z"
+  },
+  {
     "filename": "olaf.md",
     "location": "germasogeia",
     "name": "Olaf",
@@ -342,6 +368,22 @@
     ],
     "size": "medium",
     "added": "2025-07-01T00:00:00.000Z"
+  },
+  {
+    "filename": "oliver.md",
+    "location": "germasogeia",
+    "name": "Oliver",
+    "breed": "Beagle mixed",
+    "age": "6-8 months",
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/oliver/small-boy-adopt.jpg",
+      "img/germasogeia/oliver/puppy-in-shelter.jpg",
+      "img/germasogeia/oliver/scared-dog-cyprus.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-10-22T00:00:00.000Z"
   },
   {
     "filename": "teddy.md",

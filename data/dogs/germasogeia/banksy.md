@@ -3,7 +3,7 @@
   breed:  Mixed breed
   age: 2
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/banksy/banksy-smiling-adoption.jpg,
     img/germasogeia/banksy/mixed-breed-boy.jpg,

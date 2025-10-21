@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 1.5-2
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/stella/stella-shelters-dog.jpg,
     img/mesageitonia/stella/female-shelter-rehome.jpg,
