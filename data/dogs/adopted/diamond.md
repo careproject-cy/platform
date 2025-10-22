@@ -1,7 +1,7 @@
 ---
   name: Diamond
   breed:  German Shepherd mix
-  age: 2-3
+  age: 3
   gender: male
   status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [

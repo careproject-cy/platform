@@ -1,7 +1,7 @@
 ---
   name: Oliver
   breed:  Beagle mixed
-  age: 6-8 months
+  age: 0.7
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [

@@ -1,7 +1,7 @@
 ---
   name: Teddy
   breed: German Shepherd
-  age: 8-9
+  age: 8
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [

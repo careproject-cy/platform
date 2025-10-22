@@ -1,7 +1,7 @@
 ---
   name: Betty
   breed: Kokoni cross
-  age: 2-3
+  age: 3
   gender: female
   status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [

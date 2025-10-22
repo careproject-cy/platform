@@ -38,7 +38,7 @@
     "location": "mesageitonia",
     "name": "Charlie",
     "breed": "Mixed breed",
-    "age": "3-4",
+    "age": 3,
     "gender": "male",
     "status": "Available",
     "images": [
@@ -200,7 +200,7 @@
     "location": "mesageitonia",
     "name": "Stella",
     "breed": "Mixed breed",
-    "age": "1.5-2",
+    "age": 2,
     "gender": "female",
     "status": "Adopted",
     "images": [
@@ -303,7 +303,7 @@
     "location": "germasogeia",
     "name": "Kyproula",
     "breed": "Pointer mixed",
-    "age": "8-10",
+    "age": 9,
     "gender": "female",
     "status": "Reserved",
     "images": [
@@ -337,7 +337,7 @@
     "location": "germasogeia",
     "name": "Nala",
     "breed": "German Shepherd",
-    "age": "8-9 months",
+    "age": 0.75,
     "gender": "female",
     "status": "Available",
     "images": [
@@ -374,7 +374,7 @@
     "location": "germasogeia",
     "name": "Oliver",
     "breed": "Beagle mixed",
-    "age": "6-8 months",
+    "age": 0.7,
     "gender": "male",
     "status": "Available",
     "images": [
@@ -390,7 +390,7 @@
     "location": "germasogeia",
     "name": "Teddy",
     "breed": "German Shepherd",
-    "age": "8-9",
+    "age": 8,
     "gender": "male",
     "status": "Available",
     "images": [
@@ -458,7 +458,7 @@
     "location": "adopted",
     "name": "Betty",
     "breed": "Kokoni cross",
-    "age": "2-3",
+    "age": 3,
     "gender": "female",
     "status": "Adopted",
     "images": [
@@ -509,7 +509,7 @@
     "location": "adopted",
     "name": "Diamond",
     "breed": "German Shepherd mix",
-    "age": "2-3",
+    "age": 3,
     "gender": "male",
     "status": "Adopted",
     "images": [
@@ -543,7 +543,7 @@
     "location": "adopted",
     "name": "Gina",
     "breed": "Vizla cross",
-    "age": "1.5-2",
+    "age": 1.5,
     "gender": "female",
     "status": "Adopted",
     "images": [
@@ -698,7 +698,7 @@
     "location": "adopted",
     "name": "Olivia",
     "breed": "Mixed breed",
-    "age": "1-2",
+    "age": 1.5,
     "gender": "female",
     "status": "Adopted",
     "images": [

@@ -1,7 +1,7 @@
 ---
   name: Stella
   breed: Mixed breed
-  age: 1.5-2
+  age: 2
   gender: female
   status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [

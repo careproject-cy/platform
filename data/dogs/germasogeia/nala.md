@@ -1,7 +1,7 @@
 ---
   name: Nala
-  breed:  German Shepherd
-  age: 8-9 months
+  breed: German Shepherd
+  age: 0.75
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
@@ -10,8 +10,7 @@
     img/germasogeia/nala/happy-dog-cyprus.jpg,
     img/germasogeia/nala/smiling-girl-adopt.jpg,
     img/germasogeia/nala/adopt-dont-buy.jpg,
-    img/germasogeia/nala/nala-dog-for-adoption.jpg,
-    
+    img/germasogeia/nala/nala-dog-for-adoption.jpg,    
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-10-22

@@ -1,7 +1,7 @@
 ---
   name: Olivia
   breed: Mixed breed
-  age: 1-2
+  age: 1.5
   gender: female
   status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | ''
   images: [

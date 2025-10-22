@@ -1,7 +1,7 @@
 ---
   name: Kyproula
   breed:  Pointer mixed
-  age: 8-10
+  age: 9
   gender: female
   status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
