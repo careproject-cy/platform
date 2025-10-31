@@ -253,7 +253,7 @@
     "breed": "Hound mixed",
     "age": 2,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/dorothy/dorothy-smiling-adoption.jpg",
       "img/germasogeia/dorothy/hound-mixed-girl.jpg",
@@ -322,7 +322,7 @@
     "breed": "Coonhound",
     "age": 3,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/marlo/stand-full-body-dog.jpg",
       "img/germasogeia/marlo/marlo-adoption-cyprus.jpg",
