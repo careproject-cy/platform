@@ -74,7 +74,7 @@
     "breed": "Coonhound",
     "age": 1.5,
     "gender": "female",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/mesageitonia/dobbie/dobbie-shelters-dog.jpg",
       "img/mesageitonia/dobbie/male-shelter-rehome.jpg",
@@ -213,13 +213,30 @@
     "added": "2025-09-08T00:00:00.000Z"
   },
   {
+    "filename": "aris.md",
+    "location": "germasogeia",
+    "name": "Aris",
+    "breed": "German Shepherd",
+    "age": 6,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/aris/german-shepherd.jpg",
+      "img/germasogeia/aris/abandoned-dog.jpg",
+      "img/germasogeia/aris/shelter-pound-limassol.jpg",
+      "img/germasogeia/aris/shepherd-boy.jpg"
+    ],
+    "size": "large",
+    "added": "2025-11-11T00:00:00.000Z"
+  },
+  {
     "filename": "banksy.md",
     "location": "germasogeia",
     "name": "Banksy",
     "breed": "Mixed breed",
     "age": 2,
     "gender": "male",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/germasogeia/banksy/banksy-smiling-adoption.jpg",
       "img/germasogeia/banksy/mixed-breed-boy.jpg",
@@ -238,6 +255,8 @@
     "gender": "male",
     "status": "Available",
     "images": [
+      "img/germasogeia/cracker/kokoni-mixed.jpg",
+      "img/germasogeia/cracker/cracker-boy.jpg",
       "img/germasogeia/cracker/cracker-smiling-adoption.jpg",
       "img/germasogeia/cracker/kokoni-breed-boy.jpg",
       "img/germasogeia/cracker/happy-small-dog-cyprus.jpg",
@@ -253,7 +272,7 @@
     "breed": "Hound mixed",
     "age": 2,
     "gender": "female",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/germasogeia/dorothy/dorothy-smiling-adoption.jpg",
       "img/germasogeia/dorothy/hound-mixed-girl.jpg",
@@ -316,13 +335,31 @@
     "added": "2025-09-09T00:00:00.000Z"
   },
   {
+    "filename": "leia.md",
+    "location": "germasogeia",
+    "name": "Leia",
+    "breed": "Beagle mixed",
+    "age": 0.8,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/leia/beagle-cross.jpg",
+      "img/germasogeia/leia/happy-hug-dog.jpg",
+      "img/germasogeia/leia/leia-girl-adopt.jpg",
+      "img/germasogeia/leia/puppy-limassol.jpg",
+      "img/germasogeia/leia/dog-in-cage.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-11-11T00:00:00.000Z"
+  },
+  {
     "filename": "marlo.md",
     "location": "germasogeia",
     "name": "Marlo",
     "breed": "Coonhound",
     "age": 3,
     "gender": "male",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/germasogeia/marlo/stand-full-body-dog.jpg",
       "img/germasogeia/marlo/marlo-adoption-cyprus.jpg",
@@ -352,6 +389,23 @@
     "added": "2025-10-22T00:00:00.000Z"
   },
   {
+    "filename": "nora.md",
+    "location": "germasogeia",
+    "name": "Nora",
+    "breed": "Mixed breed",
+    "age": 0.9,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/nora/shelters-dogs.jpg",
+      "img/germasogeia/nora/cyprus-dogs.jpg",
+      "img/germasogeia/nora/girl-nora-puppy.jpg",
+      "img/germasogeia/nora/happy-dog.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-11-11T00:00:00.000Z"
+  },
+  {
     "filename": "olaf.md",
     "location": "germasogeia",
     "name": "Olaf",
@@ -373,13 +427,16 @@
     "filename": "oliver.md",
     "location": "germasogeia",
     "name": "Oliver",
-    "breed": "Beagle mixed",
-    "age": 0.7,
+    "breed": "Mixed breed",
+    "age": 0.8,
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/germasogeia/oliver/small-boy-adopt.jpg",
-      "img/germasogeia/oliver/puppy-in-shelter.jpg",
+      "img/germasogeia/oliver/beutiful-boy.jpg",
+      "img/germasogeia/oliver/smile-dog.jpg",
+      "img/germasogeia/oliver/adopt-dont-buy.jpg",
+      "img/germasogeia/oliver/cross-breed-boy.jpg",
+      "img/germasogeia/oliver/full-body-male.jpg",
       "img/germasogeia/oliver/scared-dog-cyprus.jpg"
     ],
     "size": "medium",
