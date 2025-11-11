@@ -1,12 +1,15 @@
 ---
   name: Oliver
-  breed:  Beagle mixed
-  age: 0.7
+  breed:  Mixed breed
+  age: 0.8
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/oliver/small-boy-adopt.jpg,
-    img/germasogeia/oliver/puppy-in-shelter.jpg,
+    img/germasogeia/oliver/beutiful-boy.jpg,
+    img/germasogeia/oliver/smile-dog.jpg,
+    img/germasogeia/oliver/adopt-dont-buy.jpg,
+    img/germasogeia/oliver/cross-breed-boy.jpg,
+    img/germasogeia/oliver/full-body-male.jpg,
     img/germasogeia/oliver/scared-dog-cyprus.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'

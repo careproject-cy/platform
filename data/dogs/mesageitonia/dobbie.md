@@ -3,7 +3,7 @@
   breed: Coonhound
   age: 1.5
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/dobbie/dobbie-shelters-dog.jpg,
     img/mesageitonia/dobbie/male-shelter-rehome.jpg,

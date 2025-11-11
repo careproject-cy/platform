@@ -5,6 +5,8 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
+    img/germasogeia/cracker/kokoni-mixed.jpg,
+    img/germasogeia/cracker/cracker-boy.jpg,
     img/germasogeia/cracker/cracker-smiling-adoption.jpg,
     img/germasogeia/cracker/kokoni-breed-boy.jpg,
     img/germasogeia/cracker/happy-small-dog-cyprus.jpg,
