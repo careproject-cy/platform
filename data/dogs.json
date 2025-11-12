@@ -17,6 +17,24 @@
     "added": "2025-04-01T00:00:00.000Z"
   },
   {
+    "filename": "ariel.md",
+    "location": "mesageitonia",
+    "name": "Ariel",
+    "breed": "Staff mixed",
+    "age": 2,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/ariel/smile-dog.jpeg",
+      "img/mesageitonia/ariel/staff-cross.jpeg",
+      "img/mesageitonia/ariel/ariel-girl.jpeg",
+      "img/mesageitonia/ariel/adopt-rehome.jpeg",
+      "img/mesageitonia/ariel/jump-female.jpeg"
+    ],
+    "size": "medium",
+    "added": "2025-11-12T00:00:00.000Z"
+  },
+  {
     "filename": "bella.md",
     "location": "mesageitonia",
     "name": "Bella",
@@ -124,6 +142,41 @@
     "added": "2025-09-09T00:00:00.000Z"
   },
   {
+    "filename": "jackson.md",
+    "location": "mesageitonia",
+    "name": "Jackson",
+    "breed": "Mixed breed",
+    "age": 2.5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/jackson/happy-boy.jpeg",
+      "img/mesageitonia/jackson/jackson-boy-adopt.jpg",
+      "img/mesageitonia/jackson/black-dog-shelter.jpg",
+      "img/mesageitonia/jackson/adopt-cyprus-dog.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-11-12T00:00:00.000Z"
+  },
+  {
+    "filename": "molly.md",
+    "location": "mesageitonia",
+    "name": "Molly",
+    "breed": "Beagle mixed",
+    "age": 3,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/molly/molly-girl.jpeg",
+      "img/mesageitonia/molly/abandoned-dog.jpeg",
+      "img/mesageitonia/molly/shelter-dog.jpeg",
+      "img/mesageitonia/molly/adopt-dont-buy.jpeg",
+      "img/mesageitonia/molly/dog-in-the-cage.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-11-12T00:00:00.000Z"
+  },
+  {
     "filename": "orlando.md",
     "location": "mesageitonia",
     "name": "Orlando",
@@ -211,6 +264,23 @@
     ],
     "size": "medium",
     "added": "2025-09-08T00:00:00.000Z"
+  },
+  {
+    "filename": "ziggy.md",
+    "location": "mesageitonia",
+    "name": "Ziggy",
+    "breed": "Staff cross",
+    "age": 1.5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/ziggy/dog-in-the-cage.jpg",
+      "img/mesageitonia/ziggy/happy-boy-adopt.jpg",
+      "img/mesageitonia/ziggy/staff-adoption.jpg",
+      "img/mesageitonia/ziggy/ziggy-staff.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-05-15T00:00:00.000Z"
   },
   {
     "filename": "aris.md",
@@ -477,23 +547,6 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "anya.md",
-    "location": "adopted",
-    "name": "Anya",
-    "breed": "Mixed breed",
-    "age": 2.5,
-    "gender": "female",
-    "status": "Adopted",
-    "images": [
-      "img/germasogeia/anya/mixed-breed-adoption-anya.jpg",
-      "img/germasogeia/anya/anya-dog-shelter-cyprus-winking.jpg",
-      "img/germasogeia/anya/anya-dog-shelter-cyprus-closeup.jpg",
-      "img/germasogeia/anya/anya-dog-shelter-cyprus-fullbody.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-02-15T00:00:00.000Z"
-  },
-  {
     "filename": "Baron.md",
     "location": "adopted",
     "name": "Baron",
@@ -509,6 +562,23 @@
     ],
     "size": "large",
     "added": "2025-04-14T00:00:00.000Z"
+  },
+  {
+    "filename": "anya.md",
+    "location": "adopted",
+    "name": "Anya",
+    "breed": "Mixed breed",
+    "age": 2.5,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/anya/mixed-breed-adoption-anya.jpg",
+      "img/germasogeia/anya/anya-dog-shelter-cyprus-winking.jpg",
+      "img/germasogeia/anya/anya-dog-shelter-cyprus-closeup.jpg",
+      "img/germasogeia/anya/anya-dog-shelter-cyprus-fullbody.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-15T00:00:00.000Z"
   },
   {
     "filename": "betty.md",
