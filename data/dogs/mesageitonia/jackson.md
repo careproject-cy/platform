@@ -5,9 +5,9 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
+    img/mesageitonia/jackson/black-dog-shelter.jpg,
     img/mesageitonia/jackson/happy-boy.jpeg,
     img/mesageitonia/jackson/jackson-boy-adopt.jpg,
-    img/mesageitonia/jackson/black-dog-shelter.jpg,
     img/mesageitonia/jackson/adopt-cyprus-dog.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'

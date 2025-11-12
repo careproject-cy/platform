@@ -5,8 +5,8 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/aris/german-shepherd.jpg,
     img/germasogeia/aris/abandoned-dog.jpg,
+    img/germasogeia/aris/german-shepherd.jpg,
     img/germasogeia/aris/shelter-pound-limassol.jpg,
     img/germasogeia/aris/shepherd-boy.jpg,
   ]

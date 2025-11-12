@@ -150,9 +150,9 @@
     "gender": "male",
     "status": "Available",
     "images": [
+      "img/mesageitonia/jackson/black-dog-shelter.jpg",
       "img/mesageitonia/jackson/happy-boy.jpeg",
       "img/mesageitonia/jackson/jackson-boy-adopt.jpg",
-      "img/mesageitonia/jackson/black-dog-shelter.jpg",
       "img/mesageitonia/jackson/adopt-cyprus-dog.jpg"
     ],
     "size": "medium",
@@ -291,8 +291,8 @@
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/germasogeia/aris/german-shepherd.jpg",
       "img/germasogeia/aris/abandoned-dog.jpg",
+      "img/germasogeia/aris/german-shepherd.jpg",
       "img/germasogeia/aris/shelter-pound-limassol.jpg",
       "img/germasogeia/aris/shepherd-boy.jpg"
     ],
@@ -467,8 +467,8 @@
     "gender": "female",
     "status": "Available",
     "images": [
-      "img/germasogeia/nora/shelters-dogs.jpg",
       "img/germasogeia/nora/cyprus-dogs.jpg",
+      "img/germasogeia/nora/shelters-dogs.jpg",
       "img/germasogeia/nora/girl-nora-puppy.jpg",
       "img/germasogeia/nora/happy-dog.jpg"
     ],
@@ -547,23 +547,6 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "Baron.md",
-    "location": "adopted",
-    "name": "Baron",
-    "breed": "Pit bull",
-    "age": 11,
-    "gender": "male",
-    "status": "Not available",
-    "images": [
-      "img/other/baron/old-boy-adoption-cyprus.jpg",
-      "img/other/baron/baron-dog-rehome.jpg",
-      "img/other/baron/shelters-dogs.jpg",
-      "img/other/baron/baron-old-adopt.jpg"
-    ],
-    "size": "large",
-    "added": "2025-04-14T00:00:00.000Z"
-  },
-  {
     "filename": "anya.md",
     "location": "adopted",
     "name": "Anya",
@@ -579,6 +562,23 @@
     ],
     "size": "medium",
     "added": "2025-02-15T00:00:00.000Z"
+  },
+  {
+    "filename": "Baron.md",
+    "location": "adopted",
+    "name": "Baron",
+    "breed": "Pit bull",
+    "age": 11,
+    "gender": "male",
+    "status": "Not available",
+    "images": [
+      "img/other/baron/old-boy-adoption-cyprus.jpg",
+      "img/other/baron/baron-dog-rehome.jpg",
+      "img/other/baron/shelters-dogs.jpg",
+      "img/other/baron/baron-old-adopt.jpg"
+    ],
+    "size": "large",
+    "added": "2025-04-14T00:00:00.000Z"
   },
   {
     "filename": "betty.md",

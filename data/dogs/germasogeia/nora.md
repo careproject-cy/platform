@@ -5,8 +5,8 @@
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/nora/shelters-dogs.jpg,
     img/germasogeia/nora/cyprus-dogs.jpg,
+    img/germasogeia/nora/shelters-dogs.jpg,
     img/germasogeia/nora/girl-nora-puppy.jpg,
     img/germasogeia/nora/happy-dog.jpg,
   ]
