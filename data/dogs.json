@@ -4,13 +4,13 @@
     "location": "other",
     "name": "Axel",
     "breed": "Dachshund cross",
-    "age": 0.6,
+    "age": 0.5,
     "gender": "male",
     "status": "Available",
     "images": [
+      "img/other/axel/dachshund-cross.jpeg",
       "img/other/axel/axel-foster-home.jpeg",
       "img/other/axel/small-boy-adopt.jpeg",
-      "img/other/axel/dachshund-cross.jpeg",
       "img/other/axel/puppy-shelter.jpeg",
       "img/other/axel/dog-in-the-cage.jpg"
     ],

@@ -5,9 +5,9 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
+    img/other/axel/dachshund-cross.jpeg,
     img/other/axel/axel-foster-home.jpeg,
     img/other/axel/small-boy-adopt.jpeg,
-    img/other/axel/dachshund-cross.jpeg,
     img/other/axel/puppy-shelter.jpeg,
     img/other/axel/dog-in-the-cage.jpg,
   ]
