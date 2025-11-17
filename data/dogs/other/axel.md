@@ -1,7 +1,7 @@
 ---
   name: Axel
   breed: Dachshund cross
-  age: 0.6
+  age: 0.5
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
