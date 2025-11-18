@@ -5,6 +5,16 @@ import { DogMetadata } from "@/app/data/dogMetadata";
 
 async function generateDogsJson() {
   try {
+    const outputPath = path.join(process.cwd(), "data", "dogs.json");
+
+    // Delete old file if it exists
+    try {
+      await fs.unlink(outputPath);
+      console.log(`Deleted old ${outputPath}`);
+    } catch {
+      // File doesn't exist, that's fine
+    }
+
     const dogDir = path.join(process.cwd(), "data", "dogs");
     const files = await fs.readdir(dogDir, { recursive: true });
 
@@ -33,7 +43,6 @@ async function generateDogsJson() {
       }
     }
 
-    const outputPath = path.join(process.cwd(), "data", "dogs.json");
     await fs.writeFile(outputPath, JSON.stringify(dogs, null, 2), "utf-8");
 
     console.log(`Successfully generated ${outputPath}`);

@@ -5,6 +5,16 @@ import { BlogPostMetadata } from "@/app/data/blogPostMetadata";
 
 async function generateBlogPostsJson() {
   try {
+    const outputPath = path.join(process.cwd(), "data", "blogposts.json");
+
+    // Delete old file if it exists
+    try {
+      await fs.unlink(outputPath);
+      console.log(`Deleted old ${outputPath}`);
+    } catch {
+      // File doesn't exist, that's fine
+    }
+
     const blogDir = path.join(process.cwd(), "data", "blog");
     const files = await fs.readdir(blogDir);
 
@@ -30,7 +40,6 @@ async function generateBlogPostsJson() {
       }
     }
 
-    const outputPath = path.join(process.cwd(), "data", "blogposts.json");
     await fs.writeFile(outputPath, JSON.stringify(blogPosts, null, 2), "utf-8");
 
     console.log(`Successfully generated ${outputPath}`);
