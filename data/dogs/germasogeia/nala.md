@@ -3,7 +3,7 @@
   breed: German Shepherd
   age: 0.75
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/nala/german-shepgerd-female.jpg,
     img/germasogeia/nala/puppy-in-shelter.jpg,

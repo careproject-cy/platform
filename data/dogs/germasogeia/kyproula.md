@@ -3,7 +3,7 @@
   breed:  Pointer mixed
   age: 9
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/kyproula/kyproula-old-dog-adoption.jpg,
     img/germasogeia/kyproula/pointer-breed-girl.jpg,

@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 3
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/kodi/kodi-adoption-cyprus.jpg,
     img/germasogeia/kodi/rehome-cyprus-kodi.jpg,

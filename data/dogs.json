@@ -6,7 +6,7 @@
     "breed": "Dachshund cross",
     "age": 0.5,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/other/axel/dachshund-cross.jpeg",
       "img/other/axel/axel-foster-home.jpeg",
@@ -394,7 +394,7 @@
     "breed": "Mixed breed",
     "age": 3,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/kodi/kodi-adoption-cyprus.jpg",
       "img/germasogeia/kodi/rehome-cyprus-kodi.jpg",
@@ -412,7 +412,7 @@
     "breed": "Pointer mixed",
     "age": 9,
     "gender": "female",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/germasogeia/kyproula/kyproula-old-dog-adoption.jpg",
       "img/germasogeia/kyproula/pointer-breed-girl.jpg",
@@ -464,7 +464,7 @@
     "breed": "German Shepherd",
     "age": 0.75,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/nala/german-shepgerd-female.jpg",
       "img/germasogeia/nala/puppy-in-shelter.jpg",
