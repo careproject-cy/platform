@@ -1,23 +1,5 @@
 [
   {
-    "filename": "axel.md",
-    "location": "other",
-    "name": "Axel",
-    "breed": "Dachshund cross",
-    "age": 0.5,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/other/axel/dachshund-cross.jpeg",
-      "img/other/axel/axel-foster-home.jpeg",
-      "img/other/axel/small-boy-adopt.jpeg",
-      "img/other/axel/puppy-shelter.jpeg",
-      "img/other/axel/dog-in-the-cage.jpg"
-    ],
-    "size": "small",
-    "added": "2025-11-17T00:00:00.000Z"
-  },
-  {
     "filename": "feodor.md",
     "location": "other",
     "name": "Feodor",
@@ -128,7 +110,7 @@
     "breed": "Mixed breed",
     "age": 2,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/era/era-shelters-dog.jpg",
       "img/mesageitonia/era/rescue-dog.jpg",
@@ -267,23 +249,6 @@
     "added": "2025-07-02T00:00:00.000Z"
   },
   {
-    "filename": "stella.md",
-    "location": "mesageitonia",
-    "name": "Stella",
-    "breed": "Mixed breed",
-    "age": 2,
-    "gender": "female",
-    "status": "Adopted",
-    "images": [
-      "img/mesageitonia/stella/stella-shelters-dog.jpg",
-      "img/mesageitonia/stella/female-shelter-rehome.jpg",
-      "img/mesageitonia/stella/adoption-dog-rehome.jpeg",
-      "img/mesageitonia/stella/shelter-mix-dog.jpeg"
-    ],
-    "size": "medium",
-    "added": "2025-09-08T00:00:00.000Z"
-  },
-  {
     "filename": "ziggy.md",
     "location": "mesageitonia",
     "name": "Ziggy",
@@ -318,21 +283,21 @@
     "added": "2025-11-11T00:00:00.000Z"
   },
   {
-    "filename": "banksy.md",
+    "filename": "bruno.md",
     "location": "germasogeia",
-    "name": "Banksy",
-    "breed": "Mixed breed",
+    "name": "Bruno",
+    "breed": "Pointer mixed",
     "age": 2,
     "gender": "male",
-    "status": "Adopted",
+    "status": "Available",
     "images": [
-      "img/germasogeia/banksy/banksy-smiling-adoption.jpg",
-      "img/germasogeia/banksy/mixed-breed-boy.jpg",
-      "img/germasogeia/banksy/happy-small-dog-cyprus.jpg",
-      "img/germasogeia/banksy/need-family-cyprus-dog.jpg"
+      "img/germasogeia/bruno/abandoned-dog.jpg",
+      "img/germasogeia/bruno/bruno-adopt.jpg",
+      "img/germasogeia/bruno/pointer-dog.jpg",
+      "img/germasogeia/bruno/smile-boy.jpg"
     ],
-    "size": "small",
-    "added": "2025-09-08T00:00:00.000Z"
+    "size": "medium",
+    "added": "2025-12-01T00:00:00.000Z"
   },
   {
     "filename": "cracker.md",
@@ -354,30 +319,13 @@
     "added": "2025-09-08T00:00:00.000Z"
   },
   {
-    "filename": "dorothy.md",
-    "location": "germasogeia",
-    "name": "Dorothy",
-    "breed": "Hound mixed",
-    "age": 2,
-    "gender": "female",
-    "status": "Adopted",
-    "images": [
-      "img/germasogeia/dorothy/dorothy-smiling-adoption.jpg",
-      "img/germasogeia/dorothy/hound-mixed-girl.jpg",
-      "img/germasogeia/dorothy/shy-dog-cyprus.jpg",
-      "img/germasogeia/dorothy/need-family-cyprus-dog.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
     "filename": "freya.md",
     "location": "germasogeia",
     "name": "Freya",
     "breed": "Retriever+labrador cross",
     "age": 1,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/freya/smiling-dog-shelter.jpg",
       "img/germasogeia/freya/freya-stand-adoption.jpg",
@@ -386,41 +334,6 @@
     ],
     "size": "medium",
     "added": "2025-05-17T00:00:00.000Z"
-  },
-  {
-    "filename": "kodi.md",
-    "location": "germasogeia",
-    "name": "Kodi",
-    "breed": "Mixed breed",
-    "age": 3,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/germasogeia/kodi/kodi-adoption-cyprus.jpg",
-      "img/germasogeia/kodi/rehome-cyprus-kodi.jpg",
-      "img/germasogeia/kodi/dog-lying-cyprus.jpg",
-      "img/germasogeia/kodi/dog-smiling-rehome.jpg",
-      "img/germasogeia/kodi/first-walk-kodi-dog.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
-    "filename": "kyproula.md",
-    "location": "germasogeia",
-    "name": "Kyproula",
-    "breed": "Pointer mixed",
-    "age": 9,
-    "gender": "female",
-    "status": "Adopted",
-    "images": [
-      "img/germasogeia/kyproula/kyproula-old-dog-adoption.jpg",
-      "img/germasogeia/kyproula/pointer-breed-girl.jpg",
-      "img/germasogeia/kyproula/medium-size-dog-cyprus.jpg",
-      "img/germasogeia/kyproula/need-family-cyprus-dog.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-09-09T00:00:00.000Z"
   },
   {
     "filename": "leia.md",
@@ -439,42 +352,6 @@
     ],
     "size": "medium",
     "added": "2025-11-11T00:00:00.000Z"
-  },
-  {
-    "filename": "marlo.md",
-    "location": "germasogeia",
-    "name": "Marlo",
-    "breed": "Coonhound",
-    "age": 3,
-    "gender": "male",
-    "status": "Adopted",
-    "images": [
-      "img/germasogeia/marlo/stand-full-body-dog.jpg",
-      "img/germasogeia/marlo/marlo-adoption-cyprus.jpg",
-      "img/germasogeia/marlo/volunteer-dog-adoption.jpg",
-      "img/germasogeia/marlo/marlo-walk-rehome-cyprus.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-02-14T00:00:00.000Z"
-  },
-  {
-    "filename": "nala.md",
-    "location": "germasogeia",
-    "name": "Nala",
-    "breed": "German Shepherd",
-    "age": 0.75,
-    "gender": "female",
-    "status": "Reserved",
-    "images": [
-      "img/germasogeia/nala/german-shepgerd-female.jpg",
-      "img/germasogeia/nala/puppy-in-shelter.jpg",
-      "img/germasogeia/nala/happy-dog-cyprus.jpg",
-      "img/germasogeia/nala/smiling-girl-adopt.jpg",
-      "img/germasogeia/nala/adopt-dont-buy.jpg",
-      "img/germasogeia/nala/nala-dog-for-adoption.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-10-22T00:00:00.000Z"
   },
   {
     "filename": "nora.md",
@@ -565,6 +442,20 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "alfie.md",
+    "location": "adopted",
+    "name": "Alfy",
+    "breed": "Mixed breed",
+    "age": 2,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/alfy/mixed-breed-adoption.jpg"
+    ],
+    "size": "small",
+    "added": "2025-02-15T00:00:00.000Z"
+  },
+  {
     "filename": "anya.md",
     "location": "adopted",
     "name": "Anya",
@@ -580,6 +471,41 @@
     ],
     "size": "medium",
     "added": "2025-02-15T00:00:00.000Z"
+  },
+  {
+    "filename": "axel.md",
+    "location": "adopted",
+    "name": "Axel",
+    "breed": "Dachshund cross",
+    "age": 0.5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/other/axel/dachshund-cross.jpeg",
+      "img/other/axel/axel-foster-home.jpeg",
+      "img/other/axel/small-boy-adopt.jpeg",
+      "img/other/axel/puppy-shelter.jpeg",
+      "img/other/axel/dog-in-the-cage.jpg"
+    ],
+    "size": "small",
+    "added": "2025-11-17T00:00:00.000Z"
+  },
+  {
+    "filename": "banksy.md",
+    "location": "adopted",
+    "name": "Banksy",
+    "breed": "Mixed breed",
+    "age": 2,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/banksy/banksy-smiling-adoption.jpg",
+      "img/germasogeia/banksy/mixed-breed-boy.jpg",
+      "img/germasogeia/banksy/happy-small-dog-cyprus.jpg",
+      "img/germasogeia/banksy/need-family-cyprus-dog.jpg"
+    ],
+    "size": "small",
+    "added": "2025-09-08T00:00:00.000Z"
   },
   {
     "filename": "Baron.md",
@@ -684,6 +610,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "dorothy.md",
+    "location": "adopted",
+    "name": "Dorothy",
+    "breed": "Hound mixed",
+    "age": 2,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/dorothy/dorothy-smiling-adoption.jpg",
+      "img/germasogeia/dorothy/hound-mixed-girl.jpg",
+      "img/germasogeia/dorothy/shy-dog-cyprus.jpg",
+      "img/germasogeia/dorothy/need-family-cyprus-dog.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
     "filename": "gina.md",
     "location": "adopted",
     "name": "Gina",
@@ -733,6 +676,41 @@
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "kodi.md",
+    "location": "adopted",
+    "name": "Kodi",
+    "breed": "Mixed breed",
+    "age": 3,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/kodi/kodi-adoption-cyprus.jpg",
+      "img/germasogeia/kodi/rehome-cyprus-kodi.jpg",
+      "img/germasogeia/kodi/dog-lying-cyprus.jpg",
+      "img/germasogeia/kodi/dog-smiling-rehome.jpg",
+      "img/germasogeia/kodi/first-walk-kodi-dog.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "kyproula.md",
+    "location": "adopted",
+    "name": "Kyproula",
+    "breed": "Pointer mixed",
+    "age": 9,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/kyproula/kyproula-old-dog-adoption.jpg",
+      "img/germasogeia/kyproula/pointer-breed-girl.jpg",
+      "img/germasogeia/kyproula/medium-size-dog-cyprus.jpg",
+      "img/germasogeia/kyproula/need-family-cyprus-dog.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-09-09T00:00:00.000Z"
   },
   {
     "filename": "lily.md",
@@ -821,6 +799,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "marlo.md",
+    "location": "adopted",
+    "name": "Marlo",
+    "breed": "Coonhound",
+    "age": 3,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/marlo/stand-full-body-dog.jpg",
+      "img/germasogeia/marlo/marlo-adoption-cyprus.jpg",
+      "img/germasogeia/marlo/volunteer-dog-adoption.jpg",
+      "img/germasogeia/marlo/marlo-walk-rehome-cyprus.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
     "filename": "max.md",
     "location": "adopted",
     "name": "Max",
@@ -837,6 +832,25 @@
     ],
     "size": "large",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "nala.md",
+    "location": "adopted",
+    "name": "Nala",
+    "breed": "German Shepherd",
+    "age": 0.75,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/nala/german-shepgerd-female.jpg",
+      "img/germasogeia/nala/puppy-in-shelter.jpg",
+      "img/germasogeia/nala/happy-dog-cyprus.jpg",
+      "img/germasogeia/nala/smiling-girl-adopt.jpg",
+      "img/germasogeia/nala/adopt-dont-buy.jpg",
+      "img/germasogeia/nala/nala-dog-for-adoption.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-10-22T00:00:00.000Z"
   },
   {
     "filename": "olivia.md",
@@ -924,6 +938,23 @@
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "stella.md",
+    "location": "adopted",
+    "name": "Stella",
+    "breed": "Mixed breed",
+    "age": 2,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/stella/stella-shelters-dog.jpg",
+      "img/mesageitonia/stella/female-shelter-rehome.jpg",
+      "img/mesageitonia/stella/adoption-dog-rehome.jpeg",
+      "img/mesageitonia/stella/shelter-mix-dog.jpeg"
+    ],
+    "size": "medium",
+    "added": "2025-09-08T00:00:00.000Z"
   },
   {
     "filename": "william.md",
