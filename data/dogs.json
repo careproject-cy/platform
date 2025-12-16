@@ -300,6 +300,57 @@
     "added": "2025-12-01T00:00:00.000Z"
   },
   {
+    "filename": "buffy.md",
+    "location": "germasogeia",
+    "name": "Buffy",
+    "breed": "Mixed Breed",
+    "age": 2,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/buffy/handsome-boy.jpg",
+      "img/germasogeia/buffy/foster-adopt-dog.jpg",
+      "img/germasogeia/buffy/fluffy-dog-adopt.jpg",
+      "img/germasogeia/buffy/smile-dog.jpg"
+    ],
+    "size": "small",
+    "added": "2025-12-11T00:00:00.000Z"
+  },
+  {
+    "filename": "cathy.md",
+    "location": "germasogeia",
+    "name": "Cathy",
+    "breed": "Beagle mixed",
+    "age": 2,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/cathy/cathy-adopt.jpg",
+      "img/germasogeia/cathy/sweet-girl.jpg",
+      "img/germasogeia/cathy/lovely-female-dog.jpg",
+      "img/germasogeia/cathy/shelter-dogy.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-12-12T00:00:00.000Z"
+  },
+  {
+    "filename": "choco.md",
+    "location": "germasogeia",
+    "name": "Choco",
+    "breed": "Mixed Breed",
+    "age": 6,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/choco/small-dog.jpg",
+      "img/germasogeia/choco/dog-for-foster.jpg",
+      "img/germasogeia/choco/foster-urgent.jpg",
+      "img/germasogeia/choco/choco-female.jpg"
+    ],
+    "size": "small",
+    "added": "2025-12-11T00:00:00.000Z"
+  },
+  {
     "filename": "cracker.md",
     "location": "germasogeia",
     "name": "Cracker",
