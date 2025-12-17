@@ -64,9 +64,9 @@ async function readJsonFile(filename: string) {
   return JSON.parse(fileContent);
 }
 
-async function getCachedData<T>(filename: string): Promise<T[]> {
+async function getData<T>(filename: string): Promise<T[]> {
   if (process.env.NODE_ENV === "development") {
-    // Use simple memory cache in development
+    // Use simple memory cache in development for faster reloads
     const cacheKey = `data:${filename}`;
     const cached = memoryCache.get(cacheKey);
 
@@ -85,11 +85,11 @@ async function getCachedData<T>(filename: string): Promise<T[]> {
 }
 
 export async function fetchBlogposts() {
-  const posts = await getCachedData<BlogPostMetadata>('blogposts.json');
+  const posts = await getData<BlogPostMetadata>('blogposts.json');
   return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export async function fetchDogs() {
-  const dogs = await getCachedData<DogMetadata>('dogs.json');
+  const dogs = await getData<DogMetadata>('dogs.json');
   return dogs.sort((a, b) => new Date(b.added).getTime() - new Date(a.added).getTime());
 }
