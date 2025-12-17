@@ -7,7 +7,7 @@
   images: [
     img/mesageitonia/molly/molly-girl.jpeg,
     img/mesageitonia/molly/abandoned-dog.jpeg,
-    img/mesageitonia/molly/shelter-dog.jpeg,
+    img/mesageitonia/molly/limassol-shelter-dog.jpeg,
     img/mesageitonia/molly/adopt-dont-buy.jpeg,
     img/mesageitonia/molly/dog-in-the-cage.jpg,
   ]

@@ -8,7 +8,7 @@
     img/germasogeia/cathy/cathy-adopt.jpg,
     img/germasogeia/cathy/sweet-girl.jpg,
     img/germasogeia/cathy/lovely-female-dog.jpg,
-    img/germasogeia/cathy/shelter-dogy.jpg,
+    img/germasogeia/cathy/shelter-dog.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-12-12

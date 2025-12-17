@@ -9,7 +9,7 @@
     img/germasogeia/leia/happy-hug-dog.jpg,
     img/germasogeia/leia/leia-girl-adopt.jpg,
     img/germasogeia/leia/puppy-limassol.jpg,
-    img/germasogeia/leia/dog-in-cage.jpg,
+    img/germasogeia/leia/dog-in-cage.jpeg,
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2025-11-11
