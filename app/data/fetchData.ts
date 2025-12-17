@@ -69,22 +69,18 @@ async function getCachedData<T>(filename: string): Promise<T[]> {
     // Use simple memory cache in development
     const cacheKey = `data:${filename}`;
     const cached = memoryCache.get(cacheKey);
-    
+
     if (cached && (Date.now() - cached.timestamp) < CACHE_TTL) {
       return cached.data as T[];
     }
-    
+
     const result = await readJsonFile(filename);
     memoryCache.set(cacheKey, { data: result, timestamp: Date.now() });
     return result;
   } else {
-    // Use Next.js cache in production
-    const cachedReadFile = unstable_cache(
-      async (file: string) => readJsonFile(file),
-      ['data-files'],
-      {revalidate: cacheRevalidate}
-    );
-    return await cachedReadFile(filename) as T[];
+    // In production, read JSON directly - no caching needed since
+    // the file is generated at build time and fresh per deployment
+    return await readJsonFile(filename) as T[];
   }
 }
 
