@@ -10,7 +10,7 @@
     img/germasogeia/buffy/fluffy-dog-adopt.jpg,
     img/germasogeia/buffy/smile-dog.jpg,
   ]
-  size: small # 'small' | 'medium' | 'large'
+  size: medium # 'small' | 'medium' | 'large'
   added: 2025-12-11
 
 ---
