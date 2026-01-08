@@ -14,12 +14,10 @@
   added: 2025-12-11
 
 ---
- Choco is a very sensitive dog who is slowly learning that humans can be safe.
+Buffy came to the shelter feeling confused and scared, and at first he really didn’t want to leave his kennel.
+Little by little, he started overcoming his fears, and now he happily goes out for walks.
 
-She arrived at the shelter extremely fearful and shut down, clearly having experienced serious trauma. Choco does not allow physical contact yet — she is afraid of being touched, and raised hands still frighten her. According to the vets, this behavior strongly suggests she was physically abused in the past.
+Inside the kennel, Buffy tries to press himself as close to the fence as possible, just so someone will notice him and give him a scratch.
+He is an incredibly affectionate, touch-loving boy and absolutely adores belly rubs.
 
-Choco has been diagnosed with leishmaniasis and will soon begin treatment. Her condition is manageable, but she needs a calm, stable environment during this time.
-
-She is looking for a patient, understanding person — ideally an experienced foster or adopter — who will respect her boundaries and allow her to build trust at her own pace. Choco is food-motivated, gentle, and observant, and she shows progress when she is not pressured.
-
-She is not ready for a busy home, but with time, safety, and the right human, Choco has the potential to learn trust and feel secure again.
+Buffy is like a soft little cloud — gentle, sweet, and craving human love ☁️🐾
