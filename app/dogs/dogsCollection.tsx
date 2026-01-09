@@ -52,7 +52,7 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
           </select>
         </Row>
       </Row>
-      <Grid4 lg>
+      <Grid4 xl>
         {displayedDogs.map((dog) => (
           <DogCard key={dog.filename} {...dog} />
         ))}

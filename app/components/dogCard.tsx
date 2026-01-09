@@ -19,8 +19,8 @@ export default function DogCard(dog: DogMetadata) {
   return (
     notAvailable ? null :
       <Link href={`/dogs/${dog.location}/${dog.filename.replace(".md", "")}`} className="w-full">
-        <Col>
-          <Col relative className="hover:scale-102 transition-all duration-200">
+        <Col xl>
+          <Col lg relative className="hover:scale-102 transition-all duration-200">
             <Img relative shadow
               tag={Image}
               loading='eager'
@@ -38,7 +38,7 @@ export default function DogCard(dog: DogMetadata) {
           <Col xs>
             <Row itemsCenter justifyBetween>
               <Title>{name}</Title>
-              <Chip semibold sm sans>{gender}</Chip>
+              <Chip semibold sm>{gender}</Chip>
             </Row>
             <Text secondary italic>{breed}</Text>
             <Text secondary sm>{getStringFromYears(age)}</Text>

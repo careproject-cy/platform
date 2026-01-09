@@ -26,7 +26,7 @@ export default function AvailableDogsSection({ dogs }: AvailableDogsSectionProps
           <Badge>Meet the dogs</Badge>
           <SectionTitle>Dogs Available For Adoption</SectionTitle>
         </Col>
-        <Grid4 lg>
+        <Grid4 xl>
           {dogs.map((dog) => (
             <DogCard key={dog.filename} {...dog} />
           ))}

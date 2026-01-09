@@ -8,6 +8,10 @@ const extraClasses: ThemeExtraClasses = {
   button: {
     filled: 'bg-gradient-to-br from-orange-400 via-orange-500 to-orange-700 hover:opacity-90 active:opacity-100',
   },
+  container: {
+    xl: "gap-10",
+    lg: "gap-8",
+  }
 }
 
 const themeDefaults: ThemeDefaults = {

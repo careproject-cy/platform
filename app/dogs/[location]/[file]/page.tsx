@@ -84,23 +84,26 @@ export default async function DogPage({params}: IdProps) {
   return (
     <Section>
       <Container lg>
-        <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {
-          href: "/dogs",
-          text: "Dogs"
-        }, {href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name}]}/>
+        <Row lg justifyBetween tabletCol className="w-full">
+          <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {
+            href: "/dogs",
+            text: "Dogs"
+          }, {href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name}]}/>
+          <Sharer shareText={shareText} url={url}/>
+        </Row>
         <Row xl mobileCol itemsStart>
           <Gallery className="flex-1" images={galleryImages}
                    chipText={showStatus ? status : undefined}/>
           <Col lg className="flex-1">
-            <Col>
+            <Col sm>
               <PageTitle>{dog.name}</PageTitle>
               <Row itemsCenter justifyBetween>
-                <Text semibold>{sizeText}</Text>
-                <Chip sans semibold>{dog.gender}</Chip>
+                <Text semibold lg>{sizeText}</Text>
+                <Chip semibold lg>{dog.gender}</Chip>
               </Row>
               <Row justifyBetween>
-                <Text>{dog.breed}</Text>
-                <Text>{getStringFromYears(dog.age)}</Text>
+                <Text lg>{dog.breed}</Text>
+                <Text lg>{getStringFromYears(dog.age)}</Text>
               </Row>
             </Col>
             <Divider/>
@@ -119,12 +122,11 @@ export default async function DogPage({params}: IdProps) {
             </Col>
           </Col>
         </Row>
-        <Sharer shareText={shareText} url={url}/>
         {similarDogs.length !== 0 &&
           <Col xl itemsCenter className="w-full gap-10 pb-10">
             <Divider/>
             <SectionTitle>Similar dogs</SectionTitle>
-            <Grid3 className="w-full">
+            <Grid3 xl className="w-full">
               {similarDogs.map((dog) => (
                 <DogCard key={dog.filename} {...dog} />
               ))}

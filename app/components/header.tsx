@@ -23,7 +23,7 @@ export default function Layout() {
           </svg>
         </Button>
       </Row>
-      <Row sm itemsCenter desktopCol tag="nav"
+      <Row xs itemsCenter desktopCol tag="nav"
            className={`max-xl:w-full max-xl:flex ${isVisible ? 'max-xl:flex' : 'max-xl:hidden'}`}>
         {
           [
