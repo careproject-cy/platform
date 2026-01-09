@@ -37,7 +37,7 @@ export default function Layout() {
           ].map((item) => {
             const active = pathname === item.href;
             return (
-              <Button lg noRing outline accent={active} bold={active} medium={!active} tag={Link} key={item.href}
+              <Button lg noRing noBorder noShadow outline accent={active} bold={active} medium={!active} tag={Link} key={item.href}
                       href={item.href}
                       className="max-xl:w-full ring-transparent">
                 {item.text}
@@ -46,7 +46,7 @@ export default function Layout() {
           })
         }
         <Button
-          primary filled
+          accent filled
           tag={Link}
           href="/more/donate"
           className="hover:opacity-90 max-xl:w-full"

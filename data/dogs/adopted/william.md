@@ -16,4 +16,4 @@
 ---
 Meet little William, an adorable and affectionate pup, around 3 months old. He was found with his sibling, who was lucky enough to find a home quickly. Now, it's William’s turn to find his own family!
 
-Currently living in a foster home, William is experiencing love and care, but what he truly needs is a permanent family to call his own. He’s playful, curious, and full of puppy energy—ready to bring endless joy, laughter, and unconditional love into someone’s life.
+Currently living in a foster home, William is experiencing love and care, but what he truly needs is a permanent family to call his own. He’s playful, curious, and full of puppy energy — ready to bring endless joy, laughter, and unconditional love into someone’s life.

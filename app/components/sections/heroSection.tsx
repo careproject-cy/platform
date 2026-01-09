@@ -34,7 +34,7 @@ export default function HeroSection({ carouselImages }: HeroSectionProps) {
             </PageTitle>
             <Text lg>{subtitle}</Text>
             <Row lg mobileCol>
-              <Button filled primary lg tag={Link} href="/more/donate"
+              <Button filled accent lg tag={Link} href="/more/donate"
                       className="max-sm:w-full">
                 <CheckCircle/> Support Us
               </Button>

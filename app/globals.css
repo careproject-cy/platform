@@ -13,6 +13,8 @@
     --color-text-link: var(--color-blue-600, #2563EB);
     --color-text-accent: var(--color-orange-500);
 
+    --color-text-filled-accent: white;
+
     /* Accent color overrides (orange theme instead of default rose) */
     --color-bg-accent: var(--color-orange-50, #FFF7ED);
     --color-bg-hover-accent: var(--color-orange-100);
@@ -27,7 +29,7 @@
     --color-border-accent: var(--color-orange-200);
     --color-border-filled-accent: var(--color-orange-500);
 
-    --color-ring-accent: var(--color-orange-400);
+    --rw: 2px;
 
     --font-serif: "Crimson Pro", serif;
 

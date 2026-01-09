@@ -8,13 +8,13 @@ tags: [fostering, dogs, rescue]
 
 # Foster a Dog
 
-Fostering a dog is one of the most impactful ways to support the **CARE Project**. We are looking for dedicated foster homes who are willing to provide a safe and loving environment for dogs in need—often for an extended period—until they are ready for adoption.
+Fostering a dog is one of the most impactful ways to support the **CARE Project**. We are looking for dedicated foster homes who are willing to provide a safe and loving environment for dogs in need — often for an extended period — until they are ready for adoption.
 
 ## Why Long-Term Foster Care is Important
 
 One of the key aspects of fostering with us is that we seek long-term foster homes for our dogs. Returning a dog to a shelter after being in a home for a month or more can be extremely stressful and even damaging for them. It's essential that the dog feels secure and comfortable in a home environment until we find them a permanent home.
 
-We ask for your commitment to fostering a dog until the right home is found for them—this ensures a smoother transition for the dog and reduces emotional stress.
+We ask for your commitment to fostering a dog until the right home is found for them — this ensures a smoother transition for the dog and reduces emotional stress.
 
 ## Foster Care Requirements
 

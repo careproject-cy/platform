@@ -14,9 +14,9 @@
   added: 2025-04-01
 ---
 
-Feodor is a kind, well-mannered, and affectionate boy. He is clean, patient, and has zero aggression toward people—an absolute dream companion!
+Feodor is a kind, well-mannered, and affectionate boy. He is clean, patient, and has zero aggression toward people — an absolute dream companion!
 
-With other dogs, he has had some conflicts in the past, but we believe this was due to his living conditions. When out on walks, he doesn’t react to other dogs or seek trouble—he simply enjoys his surroundings. With a stable home environment, we are confident he will be calm and well-adjusted.
+With other dogs, he has had some conflicts in the past, but we believe this was due to his living conditions. When out on walks, he doesn’t react to other dogs or seek trouble — he simply enjoys his surroundings. With a stable home environment, we are confident he will be calm and well-adjusted.
 
 Feodor has spent almost three years in the shelter, waiting for someone to notice him. He is great with female dogs and generally gets along well with others, but he would do best in a home where he won’t be overwhelmed. He is house-trained and will make a wonderful companion for someone ready to give him a chance.
 

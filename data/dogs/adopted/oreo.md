@@ -15,6 +15,6 @@
   added: 2025-02-14
 
 ---
-Oreo is a true gentleman! He loves people and dislikes being alone. When you pass by his kennel, he longs for attention, yet he remains calm, pressing himself against the fence, simply gazing at you with hope—waiting for a walk and a belly rub.
+Oreo is a true gentleman! He loves people and dislikes being alone. When you pass by his kennel, he longs for attention, yet he remains calm, pressing himself against the fence, simply gazing at you with hope — waiting for a walk and a belly rub.
 
-He gets along wonderfully with other dogs and would be a great fit for both an apartment or a house. Oreo is ready to be someone's loyal and loving companion—could that be you?
+He gets along wonderfully with other dogs and would be a great fit for both an apartment or a house. Oreo is ready to be someone's loyal and loving companion — could that be you?

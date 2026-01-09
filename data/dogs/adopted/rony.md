@@ -16,7 +16,7 @@
 
 Meet Rony – a brave soul looking for a fresh start. 💛
 
-In late March 2025, Rony was found in a heartbreaking state—severely emaciated, covered in ticks, with wounds on his tail and head. The marks on his body suggest he spent a long time confined in a cramped cage, deprived of care and freedom.
+In late March 2025, Rony was found in a heartbreaking state — severely emaciated, covered in ticks, with wounds on his tail and head. The marks on his body suggest he spent a long time confined in a cramped cage, deprived of care and freedom.
 
 But despite everything he’s been through, Rony remains an incredibly friendly and social boy. He adores people, loves exploring the world around him, and is always eager for a walk.
 

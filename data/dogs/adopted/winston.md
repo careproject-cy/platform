@@ -14,7 +14,7 @@
   added: 2025-03-25
 ---
 
-Winston’s story is heartbreaking—he was thrown out of a car and left behind on the road. 💔 But even after such betrayal, he remains an incredibly energetic and affectionate dog.
+Winston’s story is heartbreaking — he was thrown out of a car and left behind on the road. 💔 But even after such betrayal, he remains an incredibly energetic and affectionate dog.
 
 He is strong and full of life, so he needs an experienced owner who can channel his energy in the right direction. Winston would do best in a home without other animals or small children.
 

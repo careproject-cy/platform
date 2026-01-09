@@ -83,7 +83,7 @@ export default async function DogPage({params}: IdProps) {
 
   return (
     <Section>
-      <Container>
+      <Container lg>
         <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {
           href: "/dogs",
           text: "Dogs"
@@ -105,7 +105,6 @@ export default async function DogPage({params}: IdProps) {
             </Col>
             <Divider/>
             <Col lg>
-              <Title>Description</Title>
               <MdComponent md={content}/>
             </Col>
             <Divider/>

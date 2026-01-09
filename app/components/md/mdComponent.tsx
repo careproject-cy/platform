@@ -14,7 +14,7 @@ export default function MdComponent({md}: MdComponentProps) {
   return (
     <ThemeProvider extraClasses={{
       text: {
-        md: "leading-7 w-full",
+        md: "leading-8 w-full",
       },
       title: {
         xs: "pt-2",
