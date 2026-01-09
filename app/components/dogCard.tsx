@@ -32,7 +32,7 @@ export default function DogCard(dog: DogMetadata) {
               className="object-cover h-auto w-full aspect-square"
             />
             {showStatus &&
-              <Chip sm default semibold absolute sans className="right-2 bottom-2 opacity-75">{status}</Chip>
+              <Chip sm semibold absolute sans className="right-2 bottom-2 opacity-75">{status}</Chip>
             }
           </Col>
           <Col xs>

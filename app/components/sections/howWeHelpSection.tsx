@@ -17,28 +17,24 @@ export default function HowWeHelpSection() {
       text:
         "Exams, vaccinations, spay/neuter, diagnostics, and medicines: getting dogs healthy and ready for the next step.",
       icon: CheckCircle,
-      img: "/landing-img/vet.jpg"
     },
     {
       title: "Rehabilitation & Recovery",
       text:
         "Post-treatment care, wound management, follow-ups, and monitored rest so dogs heal safely and regain strength.",
       icon: BarChart,
-      img: "/landing-img/vet.jpg"
     },
     {
       title: "Dogs Socialization",
       text:
         "With socialization of dogs, we build confidence and good habits — socializing dogs so they're ready for family life.",
       icon: Eye,
-      img: "/landing-img/vet.jpg"
     },
     {
       title: "Adoption & Safe Transport",
       text:
         "We promote dogs for adoption, handle paperwork and microchips, and organize transport in Cyprus and abroad.",
       icon: Home,
-      img: "/landing-img/vet.jpg"
     },
   ]
 
@@ -53,8 +49,8 @@ export default function HowWeHelpSection() {
         </Col>
         <Grid2>
           {cards.map((card, index) => (
-            <Card xl relative key={index} className="bg-gradient-to-br from-white via-white to-orange-50">
-              <Card xs accent shadow className="w-fit border-2">
+            <Card lg relative key={index} className="bg-gradient-to-br from-white via-white to-orange-50">
+              <Card accent shadow className="w-fit border-2 p-3">
                 <card.icon className="size-10"/>
               </Card>
               <Title>{card.title}</Title>

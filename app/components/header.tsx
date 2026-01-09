@@ -13,17 +13,17 @@ export default function Layout() {
   const pathname = usePathname()
 
   return (
-    <Row itemsCenter justifyBetween relative className="border-b px-4 py-2 w-full bg-white" tag={'header'} xlCol>
+    <Row itemsCenter justifyBetween relative className="border-b px-4 py-2 w-full bg-white" tag={'header'} desktopCol>
       <Row itemsCenter justifyBetween className="max-xl:w-full">
         <Logo/>
-        <Button noShadow rounded className="hidden max-xl:flex p-2" onClick={() => setIsVisible(!isVisible)}>
+        <Button outline noShadow rounded className="hidden max-xl:flex" onClick={() => setIsVisible(!isVisible)}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
             <path
               d="M3.75 5.25a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Zm0 6a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Zm0 6a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Z"></path>
           </svg>
         </Button>
       </Row>
-      <Row sm itemsCenter xlCol tag="nav"
+      <Row sm itemsCenter desktopCol tag="nav"
            className={`max-xl:w-full max-xl:flex ${isVisible ? 'max-xl:flex' : 'max-xl:hidden'}`}>
         {
           [
@@ -37,9 +37,9 @@ export default function Layout() {
           ].map((item) => {
             const active = pathname === item.href;
             return (
-              <Button lg noRing accent={active} bold={active} medium={!active} tag={Link} key={item.href}
+              <Button lg noRing outline accent={active} bold={active} medium={!active} tag={Link} key={item.href}
                       href={item.href}
-                      className="max-xl:w-full">
+                      className="max-xl:w-full ring-transparent">
                 {item.text}
               </Button>
             );

@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import DogCard from '../dogCard'
 import {
@@ -24,7 +26,7 @@ export default function AvailableDogsSection({ dogs }: AvailableDogsSectionProps
           <Badge>Meet the dogs</Badge>
           <SectionTitle>Dogs Available For Adoption</SectionTitle>
         </Col>
-        <Grid4>
+        <Grid4 lg>
           {dogs.map((dog) => (
             <DogCard key={dog.filename} {...dog} />
           ))}

@@ -49,7 +49,7 @@ export default async function BlogPage({params}: BlogPageProps) {
       <Container sm>
         <Col lg>
           <PageTitle>{post.title}</PageTitle>
-          <Row mdCol justifyBetween>
+          <Row mobileCol justifyBetween>
             <Text secondary semibold className="w-full">{getDate(post.date)}</Text>
             <Sharer shareText={shareText} url={url} labelText={""}/>
           </Row>
@@ -68,7 +68,7 @@ export default async function BlogPage({params}: BlogPageProps) {
             <MdComponent md={content}/>
             <Sharer shareText={shareText} url={url}/>
           </Col>
-          <Button lg tag={Link} href="/blog"><ArrowLeft/>Back to Blog</Button>
+          <Link href="/blog"><Button lg><ArrowLeft/>Back to Blog</Button></Link>
           {relatedPosts.length === 0 ? null :
             <>
               <Divider/>

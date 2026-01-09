@@ -30,8 +30,8 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
 
   return (
     <>
-      <Row lg mdCol className="max-md:w-full">
-        <Row smCol itemsCenter className="max-md:w-full">
+      <Row lg mobileCol className="max-md:w-full">
+        <Row mobileCol itemsCenter className="max-md:w-full">
           <label htmlFor="age-filter" className="text-sm font-medium max-sm:w-full">Filter by Age:</label>
           <select value={ageFilter} onChange={(event) => setAgeFilter(event.target.value as string)}
             className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50 max-sm:w-full">
@@ -41,7 +41,7 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
             <option className="bg-white text-gray-800 p-2" value={"senior"}>Senior (9+ years)</option>
           </select>
         </Row>
-        <Row smCol itemsCenter className="max-md:w-full">
+        <Row mobileCol itemsCenter className="max-md:w-full">
           <label htmlFor="breed-filter" className="text-sm font-medium max-sm:w-full">Filter by Breed:</label>
           <select value={breedFilter} onChange={(event) => setBreedFilter(event.target.value as string)}
             className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50 max-sm:w-full">
@@ -52,7 +52,7 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
           </select>
         </Row>
       </Row>
-      <Grid4>
+      <Grid4 lg>
         {displayedDogs.map((dog) => (
           <DogCard key={dog.filename} {...dog} />
         ))}

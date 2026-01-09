@@ -1,3 +1,5 @@
+'use client'
+
 import { getDate } from "@/app/utils/dateUtils"
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,7 +15,7 @@ export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPost
   const Tag = horizontal ? Row : Col;
   
   return (
-    <Tag lg itemsCenter reverse={reverse} {...(horizontal ? { mdCol: true } : {})}>
+    <Tag lg itemsCenter reverse={reverse} {...(horizontal ? { mobileCol: true } : {})}>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
           src={getImageSrc(post.imageSrc)}

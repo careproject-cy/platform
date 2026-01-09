@@ -7,20 +7,26 @@
     --background: #ffffff;
     --foreground: #171717;
 
-    /* Override default colors */
-    --text-color-default: var(--color-gray-800, #171717);
-    --text-color-secondary: var(--color-gray-500, #6B7280);
-    --text-color-link: var(--color-blue-600, #2563EB);
-    --text-color-accent: var(--color-orange-500);
+    /* Override default colors - using new VaneUI naming convention */
+    --color-text-primary: var(--color-gray-800, #171717);
+    --color-text-secondary: var(--color-gray-500, #6B7280);
+    --color-text-link: var(--color-blue-600, #2563EB);
+    --color-text-accent: var(--color-orange-500);
 
-    --layout-background-accent: var(--color-orange-50, #FFF7ED);
-    --background-color-accent: var(--color-orange-50, #FFF7ED);
-    --background-color-hover-accent: var(--color-orange-50, #FFF7ED);
-    --border-color-accent: var(--color-orange-200);
+    /* Accent color overrides (orange theme instead of default rose) */
+    --color-bg-accent: var(--color-orange-50, #FFF7ED);
+    --color-bg-hover-accent: var(--color-orange-100);
+    --color-bg-active-accent: var(--color-orange-200);
+    --color-bg-layout-accent: var(--color-orange-50, #FFF7ED);
 
-    --filled-background-color-accent: var(--color-orange-600);
-    --filled-background-color-hover-accent: var(--color-orange-700);
-    --filled-border-color-accent: var(--color-orange-500);
+    --color-bg-filled-accent: var(--color-orange-600);
+    --color-bg-filled-hover-accent: var(--color-orange-700);
+    --color-bg-filled-active-accent: var(--color-orange-800);
+
+    --color-border-accent: var(--color-orange-200);
+    --color-border-filled-accent: var(--color-orange-500);
+
+    --color-ring-accent: var(--color-orange-400);
 
     --font-serif: "Crimson Pro", serif;
 
@@ -64,7 +70,7 @@ body {
     inset: 0;
     background: inherit;                 /* clone the aurora */
     background-blend-mode: inherit;
-    filter: blur(var(--_gradient-blur)); /* the “frost” */
+    filter: blur(var(--_gradient-blur)); /* the "frost" */
     transform: translateZ(0);            /* perf hint */
     z-index: 0;
 }
@@ -83,4 +89,3 @@ body {
     position: relative;
     z-index: 1;
 }
-

@@ -88,7 +88,7 @@ export default async function DogPage({params}: IdProps) {
           href: "/dogs",
           text: "Dogs"
         }, {href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name}]}/>
-        <Row xl mdCol itemsStart>
+        <Row xl mobileCol itemsStart>
           <Gallery className="flex-1" images={galleryImages}
                    chipText={showStatus ? status : undefined}/>
           <Col lg className="flex-1">

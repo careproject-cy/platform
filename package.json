@@ -1,5 +1,5 @@
 {
-  "name": "rehomecy",
+  "name": "careproject",
   "version": "0.1.0",
   "type": "module",
   "private": true,
@@ -7,7 +7,7 @@
     "dev": "npm run lint && npm run typecheck && next dev --turbopack",
     "build": "npm run lint && npm run typecheck && next build",
     "start": "npm run lint && npm run typecheck && next start",
-    "lint": "next lint",
+    "lint": "eslint app",
     "typecheck": "tsc --noEmit",
     "generate-blogposts": "npx tsx lib/generateBlogPostsJson.ts",
     "generate-dogs": "npx tsx lib/generateDogsJson.ts"
@@ -15,13 +15,13 @@
   "dependencies": {
     "@markdoc/markdoc": "^0.5.0",
     "@tailwindcss/postcss": "^4.0.9",
-    "@vaneui/ui": "^0.2.1-alpha.20250901145733.e9c8d4d",
-    "@vaneui/md": "^0.0.3-alpha.20250807150626.4231a8a",
+    "@vaneui/ui": "^0.9.0-alpha.20260108153335.d1109b4",
+    "@vaneui/md": "^0.9.0-alpha.20260108133619.78ec3c3",
     "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
-    "next": "15.4.8",
+    "next": "16.1.0-canary.19",
     "postcss-discard-duplicates": "^7.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

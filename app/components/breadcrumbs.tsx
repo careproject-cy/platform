@@ -1,3 +1,5 @@
+'use client'
+
 import { Row } from "@vaneui/ui"
 import { Text } from "@vaneui/ui"
 import Link from 'next/link'

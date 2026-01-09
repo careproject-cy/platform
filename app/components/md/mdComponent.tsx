@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import { Md } from "@vaneui/md";
 import { Img, ThemeProvider } from "@vaneui/ui";
@@ -12,7 +14,7 @@ export default function MdComponent({md}: MdComponentProps) {
   return (
     <ThemeProvider extraClasses={{
       text: {
-        default: "leading-7 w-full",
+        md: "leading-7 w-full",
       },
       title: {
         xs: "pt-2",

@@ -53,7 +53,7 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
       </button>
       <div className="w-full relative flex flex-row items-center min-h-80 h-80 justify-center">
         {visible.map((data, idx) => (
-          <div key={idx} className={`top-1/2 -translate-y-1/2 absolute h-full aspect-square overflow-hidden rounded-xl opacity-100 transition-all duration-1000 ${data.css}`}>
+          <div key={idx} className={`top-1/2 -translate-y-1/2 absolute h-full aspect-square overflow-hidden rounded-3xl opacity-100 transition-all duration-1000 ${data.css}`}>
             {
               idx > images.length - 1 ? null : (
                 <Img

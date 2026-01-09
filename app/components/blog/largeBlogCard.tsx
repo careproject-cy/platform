@@ -1,3 +1,5 @@
+'use client'
+
 import { getDate } from "@/app/utils/dateUtils"
 import { Badge, SectionTitle } from "@vaneui/ui"
 import Image from 'next/image'
@@ -16,7 +18,7 @@ export function LargeBlogCard({post}: { post: BlogPostMetadata }) {
   const desc = post.description
   const tags = post.tags
   return (
-    <Row xl lgCol itemsCenter>
+    <Row xl tabletCol itemsCenter>
       <Link href={`/blog/${id}`} className="w-full">
         <Image
           src={getImageSrc(post.imageSrc)}
@@ -28,7 +30,7 @@ export function LargeBlogCard({post}: { post: BlogPostMetadata }) {
         />
       </Link>
       <Col>
-        <Badge sm lgHide hidden={tags.length === 0}>{tags[0]}</Badge>
+        <Badge sm tabletHide hidden={tags.length === 0}>{tags[0]}</Badge>
         <SectionTitle serif lg textLeft tag={Link} href={`/blog/${id}`}>{title}</SectionTitle>
         <Text lg secondary className="line-clamp-3">{desc}</Text>
         <Text lg secondary semibold>{getDate(post.date)}</Text>

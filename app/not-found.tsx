@@ -1,3 +1,5 @@
+'use client'
+
 import { Button, Col, Container, Section, PageTitle, Text } from "@vaneui/ui"
 import Link from 'next/link'
 
