@@ -22,6 +22,7 @@
     --color-bg-filled-accent: var(--color-orange-600);
     --color-bg-filled-hover-accent: var(--color-orange-700);
     --color-bg-filled-active-accent: var(--color-orange-800);
+    --filled-text-color-primary: white;
 
     --color-border-accent: var(--color-orange-200);
     --color-border-filled-accent: var(--color-orange-500);
