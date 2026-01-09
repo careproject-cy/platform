@@ -47,7 +47,7 @@ export default function Footer() {
               Foundation</VLink> initiative that supports animal welfare in Cyprus. Run by devoted volunteers, it&apos;s
               dedicated to helping stray dogs in Cyprus.
             </Text>
-            <Text className="text-white opacity-50">&copy; 2025 {platform_name}. All rights reserved.</Text>
+            <Text className="text-white opacity-50">&copy; 2026 {platform_name}. All rights reserved.</Text>
           </Col>
           <Row itemsStart mobileCol>
             {
