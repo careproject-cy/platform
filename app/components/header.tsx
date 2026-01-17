@@ -23,8 +23,7 @@ export default function Layout() {
           </svg>
         </Button>
       </Row>
-      <Row xs itemsCenter desktopCol tag="nav"
-           className={`max-xl:w-full max-xl:flex ${isVisible ? 'max-xl:flex' : 'max-xl:hidden'}`}>
+      <Row xs itemsCenter desktopCol tag="nav" className={`max-xl:w-full max-xl:flex ${isVisible ? 'max-xl:flex' : 'max-xl:hidden'}`}>
         {
           [
             {href: "/", text: "Home"},
@@ -45,12 +44,7 @@ export default function Layout() {
             );
           })
         }
-        <Button
-          accent filled
-          tag={Link}
-          href="/more/donate"
-          className="hover:opacity-90 max-xl:w-full"
-        >
+        <Button accent filled tag={Link} href="/more/donate" className="hover:opacity-90 max-xl:w-full">
           <Heart className="size-6"/> Donate
         </Button>
       </Row>
