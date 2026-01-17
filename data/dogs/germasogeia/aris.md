@@ -3,7 +3,7 @@
   breed: German Shepherd
   age: 6
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/aris/abandoned-dog.jpg,
     img/germasogeia/aris/german-shepherd.jpg,

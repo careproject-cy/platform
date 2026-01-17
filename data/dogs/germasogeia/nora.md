@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 0.9
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/nora/cyprus-dogs.jpg,
     img/germasogeia/nora/shelters-dogs.jpg,

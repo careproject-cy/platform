@@ -3,7 +3,7 @@
   breed: Retriever+labrador cross
   age: 1
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/freya/smiling-dog-shelter.jpg,
     img/germasogeia/freya/freya-stand-adoption.jpg,

@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 2
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/era/era-shelters-dog.jpg,
     img/mesageitonia/era/rescue-dog.jpg,
