@@ -3,7 +3,7 @@
   breed: Chihuahua
   age: 9
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/other/raya/chihuahua-adopt.jpg,
     img/other/raya/raya-female-adopt.jpg,
