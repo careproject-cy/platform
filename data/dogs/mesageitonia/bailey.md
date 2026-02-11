@@ -5,10 +5,10 @@
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
+    img/mesageitonia/bailey/hound-dog-cyprus.jpg,
     img/mesageitonia/bailey/boy-shelter.jpeg,
     img/mesageitonia/bailey/male-adopt.jpeg,
     img/mesageitonia/bailey/smilie-boy.jpg,
-    img/mesageitonia/bailey/hound-dog-cyprus.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2026-02-01

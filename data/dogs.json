@@ -50,23 +50,6 @@
     "added": "2025-12-30T00:00:00.000Z"
   },
   {
-    "filename": "Dipper.md",
-    "location": "mesageitonia",
-    "name": "Dipper",
-    "breed": "Staff mixed",
-    "age": 0.5,
-    "gender": "male",
-    "status": "Available",
-    "images": [
-      "img/mesageitonia/dipper/male-puppy-shelter.jpg",
-      "img/mesageitonia/dipper/puppy-for-adoption.jpg",
-      "img/mesageitonia/dipper/brother-and-sister.jpg",
-      "img/mesageitonia/dipper/puppy-adopt.jpg"
-    ],
-    "size": "medium",
-    "added": "2026-01-01T00:00:00.000Z"
-  },
-  {
     "filename": "ariel.md",
     "location": "mesageitonia",
     "name": "Ariel",
@@ -93,10 +76,10 @@
     "gender": "male",
     "status": "Available",
     "images": [
+      "img/mesageitonia/bailey/hound-dog-cyprus.jpg",
       "img/mesageitonia/bailey/boy-shelter.jpeg",
       "img/mesageitonia/bailey/male-adopt.jpeg",
-      "img/mesageitonia/bailey/smilie-boy.jpg",
-      "img/mesageitonia/bailey/hound-dog-cyprus.jpg"
+      "img/mesageitonia/bailey/smilie-boy.jpg"
     ],
     "size": "medium",
     "added": "2026-02-01T00:00:00.000Z"
@@ -117,6 +100,23 @@
     ],
     "size": "large",
     "added": "2025-05-17T00:00:00.000Z"
+  },
+  {
+    "filename": "Dipper.md",
+    "location": "mesageitonia",
+    "name": "Dipper",
+    "breed": "Staff mixed",
+    "age": 0.5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/dipper/male-puppy-shelter.jpg",
+      "img/mesageitonia/dipper/puppy-for-adoption.jpg",
+      "img/mesageitonia/dipper/brother-and-sister.jpg",
+      "img/mesageitonia/dipper/puppy-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-01-01T00:00:00.000Z"
   },
   {
     "filename": "felix.md",
@@ -422,23 +422,6 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
-    "filename": "Baron.md",
-    "location": "adopted",
-    "name": "Baron",
-    "breed": "Pit bull",
-    "age": 11,
-    "gender": "male",
-    "status": "Not available",
-    "images": [
-      "img/other/baron/old-boy-adoption-cyprus.jpg",
-      "img/other/baron/baron-dog-rehome.jpg",
-      "img/other/baron/shelters-dogs.jpg",
-      "img/other/baron/baron-old-adopt.jpg"
-    ],
-    "size": "large",
-    "added": "2025-04-14T00:00:00.000Z"
-  },
-  {
     "filename": "alfie.md",
     "location": "adopted",
     "name": "Alfy",
@@ -503,6 +486,23 @@
     ],
     "size": "small",
     "added": "2025-09-08T00:00:00.000Z"
+  },
+  {
+    "filename": "Baron.md",
+    "location": "adopted",
+    "name": "Baron",
+    "breed": "Pit bull",
+    "age": 11,
+    "gender": "male",
+    "status": "Not available",
+    "images": [
+      "img/other/baron/old-boy-adoption-cyprus.jpg",
+      "img/other/baron/baron-dog-rehome.jpg",
+      "img/other/baron/shelters-dogs.jpg",
+      "img/other/baron/baron-old-adopt.jpg"
+    ],
+    "size": "large",
+    "added": "2025-04-14T00:00:00.000Z"
   },
   {
     "filename": "bella.md",
