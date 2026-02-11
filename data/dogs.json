@@ -50,13 +50,30 @@
     "added": "2025-12-30T00:00:00.000Z"
   },
   {
+    "filename": "Dipper.md",
+    "location": "mesageitonia",
+    "name": "Dipper",
+    "breed": "Staff mixed",
+    "age": 0.5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/dipper/male-puppy-shelter.jpg",
+      "img/mesageitonia/dipper/puppy-for-adoption.jpg",
+      "img/mesageitonia/dipper/brother-and-sister.jpg",
+      "img/mesageitonia/dipper/puppy-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-01-01T00:00:00.000Z"
+  },
+  {
     "filename": "ariel.md",
     "location": "mesageitonia",
     "name": "Ariel",
     "breed": "Staff mixed",
     "age": 2,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/ariel/smile-dog.jpeg",
       "img/mesageitonia/ariel/staff-cross.jpeg",
@@ -66,6 +83,23 @@
     ],
     "size": "medium",
     "added": "2025-11-12T00:00:00.000Z"
+  },
+  {
+    "filename": "bailey.md",
+    "location": "mesageitonia",
+    "name": "Bailey",
+    "breed": "Hound mixed",
+    "age": 1.5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/bailey/boy-shelter.jpeg",
+      "img/mesageitonia/bailey/male-adopt.jpeg",
+      "img/mesageitonia/bailey/smilie-boy.jpg",
+      "img/mesageitonia/bailey/hound-dog-cyprus.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-02-01T00:00:00.000Z"
   },
   {
     "filename": "charlie.md",
@@ -83,23 +117,6 @@
     ],
     "size": "large",
     "added": "2025-05-17T00:00:00.000Z"
-  },
-  {
-    "filename": "Dipper.md",
-    "location": "mesageitonia",
-    "name": "Dipper",
-    "breed": "Staff mixed",
-    "age": 0.5,
-    "gender": "male",
-    "status": "Available",
-    "images": [
-      "img/mesageitonia/dipper/male-puppy-shelter.jpg",
-      "img/mesageitonia/dipper/puppy-for-adoption.jpg",
-      "img/mesageitonia/dipper/brother-and-sister.jpg",
-      "img/mesageitonia/dipper/puppy-adopt.jpg"
-    ],
-    "size": "medium",
-    "added": "2026-01-01T00:00:00.000Z"
   },
   {
     "filename": "felix.md",
@@ -173,24 +190,6 @@
     ],
     "size": "medium",
     "added": "2025-06-15T00:00:00.000Z"
-  },
-  {
-    "filename": "rolly.md",
-    "location": "mesageitonia",
-    "name": "Rolly",
-    "breed": "Mixed breed",
-    "age": 5,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/mesageitonia/rolly/rolly-shelters-dog.jpg",
-      "img/mesageitonia/rolly/male-shelter-rehome.jpg",
-      "img/mesageitonia/rolly/adoption-dog-rehome.jpg",
-      "img/mesageitonia/rolly/mixed-cross-breed-dog.jpeg",
-      "img/mesageitonia/rolly/dog-in-the-cage.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-07-02T00:00:00.000Z"
   },
   {
     "filename": "silver.md",
@@ -298,23 +297,6 @@
     "added": "2025-12-11T00:00:00.000Z"
   },
   {
-    "filename": "cathy.md",
-    "location": "germasogeia",
-    "name": "Cathy",
-    "breed": "Beagle mixed",
-    "age": 2,
-    "gender": "female",
-    "status": "Reserved",
-    "images": [
-      "img/germasogeia/cathy/cathy-adopt.jpg",
-      "img/germasogeia/cathy/sweet-girl.jpg",
-      "img/germasogeia/cathy/lovely-female-dog.jpg",
-      "img/germasogeia/cathy/shelter-dog.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-12-12T00:00:00.000Z"
-  },
-  {
     "filename": "choco.md",
     "location": "germasogeia",
     "name": "Choco",
@@ -351,23 +333,6 @@
     "added": "2025-09-08T00:00:00.000Z"
   },
   {
-    "filename": "freya.md",
-    "location": "germasogeia",
-    "name": "Freya",
-    "breed": "Retriever+labrador cross",
-    "age": 1,
-    "gender": "female",
-    "status": "Adopted",
-    "images": [
-      "img/germasogeia/freya/smiling-dog-shelter.jpg",
-      "img/germasogeia/freya/freya-stand-adoption.jpg",
-      "img/germasogeia/freya/sweet-face-dog-freya.jpg",
-      "img/germasogeia/freya/dog-in-the-cage-shelter.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-05-17T00:00:00.000Z"
-  },
-  {
     "filename": "leia.md",
     "location": "germasogeia",
     "name": "Leia",
@@ -381,23 +346,6 @@
       "img/germasogeia/leia/leia-girl-adopt.jpg",
       "img/germasogeia/leia/puppy-limassol.jpg",
       "img/germasogeia/leia/dog-in-cage.jpeg"
-    ],
-    "size": "medium",
-    "added": "2025-11-11T00:00:00.000Z"
-  },
-  {
-    "filename": "nora.md",
-    "location": "germasogeia",
-    "name": "Nora",
-    "breed": "Mixed breed",
-    "age": 0.9,
-    "gender": "female",
-    "status": "Adopted",
-    "images": [
-      "img/germasogeia/nora/cyprus-dogs.jpg",
-      "img/germasogeia/nora/shelters-dogs.jpg",
-      "img/germasogeia/nora/girl-nora-puppy.jpg",
-      "img/germasogeia/nora/happy-dog.jpg"
     ],
     "size": "medium",
     "added": "2025-11-11T00:00:00.000Z"
@@ -474,6 +422,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "Baron.md",
+    "location": "adopted",
+    "name": "Baron",
+    "breed": "Pit bull",
+    "age": 11,
+    "gender": "male",
+    "status": "Not available",
+    "images": [
+      "img/other/baron/old-boy-adoption-cyprus.jpg",
+      "img/other/baron/baron-dog-rehome.jpg",
+      "img/other/baron/shelters-dogs.jpg",
+      "img/other/baron/baron-old-adopt.jpg"
+    ],
+    "size": "large",
+    "added": "2025-04-14T00:00:00.000Z"
+  },
+  {
     "filename": "alfie.md",
     "location": "adopted",
     "name": "Alfy",
@@ -540,23 +505,6 @@
     "added": "2025-09-08T00:00:00.000Z"
   },
   {
-    "filename": "Baron.md",
-    "location": "adopted",
-    "name": "Baron",
-    "breed": "Pit bull",
-    "age": 11,
-    "gender": "male",
-    "status": "Not available",
-    "images": [
-      "img/other/baron/old-boy-adoption-cyprus.jpg",
-      "img/other/baron/baron-dog-rehome.jpg",
-      "img/other/baron/shelters-dogs.jpg",
-      "img/other/baron/baron-old-adopt.jpg"
-    ],
-    "size": "large",
-    "added": "2025-04-14T00:00:00.000Z"
-  },
-  {
     "filename": "bella.md",
     "location": "adopted",
     "name": "Bella",
@@ -589,6 +537,23 @@
     ],
     "size": "small",
     "added": "2025-05-17T00:00:00.000Z"
+  },
+  {
+    "filename": "cathy.md",
+    "location": "adopted",
+    "name": "Cathy",
+    "breed": "Beagle mixed",
+    "age": 2,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/cathy/cathy-adopt.jpg",
+      "img/germasogeia/cathy/sweet-girl.jpg",
+      "img/germasogeia/cathy/lovely-female-dog.jpg",
+      "img/germasogeia/cathy/shelter-dog.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-12-12T00:00:00.000Z"
   },
   {
     "filename": "chloe.md",
@@ -726,6 +691,23 @@
     ],
     "size": "medium",
     "added": "2025-06-10T00:00:00.000Z"
+  },
+  {
+    "filename": "freya.md",
+    "location": "adopted",
+    "name": "Freya",
+    "breed": "Retriever+labrador cross",
+    "age": 1,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/freya/smiling-dog-shelter.jpg",
+      "img/germasogeia/freya/freya-stand-adoption.jpg",
+      "img/germasogeia/freya/sweet-face-dog-freya.jpg",
+      "img/germasogeia/freya/dog-in-the-cage-shelter.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-05-17T00:00:00.000Z"
   },
   {
     "filename": "gina.md",
@@ -968,6 +950,23 @@
     "added": "2025-10-22T00:00:00.000Z"
   },
   {
+    "filename": "nora.md",
+    "location": "adopted",
+    "name": "Nora",
+    "breed": "Mixed breed",
+    "age": 0.9,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/nora/cyprus-dogs.jpg",
+      "img/germasogeia/nora/shelters-dogs.jpg",
+      "img/germasogeia/nora/girl-nora-puppy.jpg",
+      "img/germasogeia/nora/happy-dog.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-11-11T00:00:00.000Z"
+  },
+  {
     "filename": "olivia.md",
     "location": "adopted",
     "name": "Olivia",
@@ -1017,6 +1016,24 @@
     ],
     "size": "medium",
     "added": "2025-06-23T00:00:00.000Z"
+  },
+  {
+    "filename": "rolly.md",
+    "location": "adopted",
+    "name": "Rolly",
+    "breed": "Mixed breed",
+    "age": 5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/rolly/rolly-shelters-dog.jpg",
+      "img/mesageitonia/rolly/male-shelter-rehome.jpg",
+      "img/mesageitonia/rolly/adoption-dog-rehome.jpg",
+      "img/mesageitonia/rolly/mixed-cross-breed-dog.jpeg",
+      "img/mesageitonia/rolly/dog-in-the-cage.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-07-02T00:00:00.000Z"
   },
   {
     "filename": "rony.md",

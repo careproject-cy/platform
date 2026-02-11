@@ -3,7 +3,7 @@
   breed: Beagle mixed
   age: 2
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/cathy/cathy-adopt.jpg,
     img/germasogeia/cathy/sweet-girl.jpg,

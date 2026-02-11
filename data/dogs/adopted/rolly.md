@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 5
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/rolly/rolly-shelters-dog.jpg,
     img/mesageitonia/rolly/male-shelter-rehome.jpg,
