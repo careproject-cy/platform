@@ -74,7 +74,6 @@ body {
     background: inherit;                 /* clone the aurora */
     background-blend-mode: inherit;
     filter: blur(var(--_gradient-blur)); /* the "frost" */
-    transform: translateZ(0);            /* perf hint */
     z-index: 0;
 }
 

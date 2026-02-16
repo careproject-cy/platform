@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 import { ChevronLeft, ChevronRight } from 'react-feather'
@@ -20,14 +20,24 @@ const initialPositions = [
 
 const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
   const [visible, setVisible] = useState(initialPositions)
-  const [autoPlayKey, setAutoPlayKey] = useState(0)
+  const intervalRef = useRef<ReturnType<typeof setInterval>>(null)
+
+  const startAutoPlay = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current)
+    intervalRef.current = setInterval(() => {
+      setVisible((prev) => {
+        const last = prev[prev.length - 1]
+        return [last, ...prev.slice(0, -1)]
+      })
+    }, 3000)
+  }, [])
 
   const nextImage = () => {
     setVisible((prev) => {
       const last = prev[prev.length - 1]
       return [last, ...prev.slice(0, -1)]
     })
-    setAutoPlayKey((k) => k + 1)
+    startAutoPlay()
   }
 
   const prevImage = () => {
@@ -35,13 +45,13 @@ const Carousel: React.FC<CarouselProps> = ({ images, className }) => {
       const first = prev[0]
       return [...prev.slice(1), first]
     })
-    setAutoPlayKey((k) => k + 1)
+    startAutoPlay()
   }
 
   useEffect(() => {
-    const interval = setInterval(nextImage, 3000)
-    return () => clearInterval(interval)
-  }, [autoPlayKey])
+    startAutoPlay()
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current) }
+  }, [startAutoPlay])
 
   return (
     <div className={twMerge(`transition-all relative flex items-center justify-center min-h-80 h-80  text-(--text-color-default)`, className ?? "")}>

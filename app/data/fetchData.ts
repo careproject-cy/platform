@@ -36,10 +36,13 @@ export async function fetchMd(relUrl: string): Promise<MdResult> {
     const cacheKey = `md:${relUrl}`;
     const cached = memoryCache.get(cacheKey);
     
-    if (cached && (Date.now() - cached.timestamp) < CACHE_TTL) {
-      return cached.data as MdResult;
+    if (cached) {
+      if ((Date.now() - cached.timestamp) < CACHE_TTL) {
+        return cached.data as MdResult;
+      }
+      memoryCache.delete(cacheKey);
     }
-    
+
     const result = await readFileAndParse(relUrl);
     memoryCache.set(cacheKey, { data: result, timestamp: Date.now() });
     return result;
@@ -70,8 +73,11 @@ async function getData<T>(filename: string): Promise<T[]> {
     const cacheKey = `data:${filename}`;
     const cached = memoryCache.get(cacheKey);
 
-    if (cached && (Date.now() - cached.timestamp) < CACHE_TTL) {
-      return cached.data as T[];
+    if (cached) {
+      if ((Date.now() - cached.timestamp) < CACHE_TTL) {
+        return cached.data as T[];
+      }
+      memoryCache.delete(cacheKey);
     }
 
     const result = await readJsonFile(filename);
