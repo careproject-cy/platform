@@ -23,7 +23,7 @@ export default function DogCard(dog: DogMetadata) {
           <Col lg relative className="hover:scale-102 transition-all duration-200">
             <Img relative shadow
               tag={Image}
-              loading='eager'
+              loading='lazy'
               src={dogImages[0]}
               alt={name}
               width={300}

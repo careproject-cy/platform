@@ -11,16 +11,19 @@ interface InfiniteGalleryProps {
   images: GalleryImage[];
   className?: string;
   durationMs?: number;
+  maxImages?: number;
 }
 
-export default function InfiniteGallery({ 
-  images, 
-  className = "", 
-  durationMs = 60000 
+export default function InfiniteGallery({
+  images,
+  className = "",
+  durationMs = 60000,
+  maxImages = 15,
 }: InfiniteGalleryProps) {
   if (!images?.length) return null;
 
-  const doubled = [...images, ...images];
+  const limited = images.slice(0, maxImages);
+  const doubled = [...limited, ...limited];
 
   return (
     <div
@@ -31,7 +34,7 @@ export default function InfiniteGallery({
       ].join(" ")}
     >
       <div
-        className="flex gap-4 w-max will-change-transform hover:[animation-play-state:paused] motion-reduce:animate-none"
+        className="flex gap-4 w-max hover:[animation-play-state:paused] motion-reduce:animate-none"
         // Use inline animation so you don't need a custom Tailwind utility
         style={{ animation: `scroll-x ${durationMs}ms linear infinite` }}
       >
@@ -39,8 +42,8 @@ export default function InfiniteGallery({
           <Img lg
             key={`${img.src}-${i}`}
             src={img.src}
-            alt={i < images.length ? img.alt : ""}      // hide dupes from SRs
-            aria-hidden={i >= images.length}
+            alt={i < limited.length ? img.alt : ""}      // hide dupes from SRs
+            aria-hidden={i >= limited.length}
             className="h-80 w-auto object-cover shrink-0 select-none pointer-events-none"
             loading="lazy"
             draggable={false}
