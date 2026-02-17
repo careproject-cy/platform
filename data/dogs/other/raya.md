@@ -1,7 +1,7 @@
 ---
   name: Raya
   breed: Chihuahua
-  age: 9
+  age: 10
   gender: female
   status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [

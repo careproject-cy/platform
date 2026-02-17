@@ -1,9 +1,9 @@
 ---
   name: Oliver
   breed:  Mixed breed
-  age: 0.8
+  age: 1
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/oliver/beutiful-boy.jpg,
     img/germasogeia/oliver/smile-dog.jpg,
@@ -13,7 +13,7 @@
     img/germasogeia/oliver/scared-dog-cyprus.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
-  added: 2025-10-22
+  added: 2026-02-16
 ---
 
 Oliver is a wonderful puppy who’s just beginning to blossom. After spending about a month at the shelter, this shy boy has started to come out of his shell. He arrived very frightened — he used to hide in his little house and didn’t want to come out — but step by step he began to trust the volunteers. He’s made a special friendship with an equally timid girl and loves spending time with her.

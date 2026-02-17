@@ -20,7 +20,7 @@
     "location": "other",
     "name": "Raya",
     "breed": "Chihuahua",
-    "age": 9,
+    "age": 10,
     "gender": "female",
     "status": "In foster care",
     "images": [
@@ -48,6 +48,40 @@
     ],
     "size": "small",
     "added": "2025-12-30T00:00:00.000Z"
+  },
+  {
+    "filename": "Dipper.md",
+    "location": "mesageitonia",
+    "name": "Dipper",
+    "breed": "Staff mixed",
+    "age": 0.5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/dipper/male-puppy-shelter.jpg",
+      "img/mesageitonia/dipper/puppy-for-adoption.jpg",
+      "img/mesageitonia/dipper/brother-and-sister.jpg",
+      "img/mesageitonia/dipper/puppy-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-01-01T00:00:00.000Z"
+  },
+  {
+    "filename": "Mabel.md",
+    "location": "mesageitonia",
+    "name": "Mabel",
+    "breed": "Staff mixed",
+    "age": 0.5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/mabel/female-puppy-shelter.jpg",
+      "img/mesageitonia/mabel/puppy-for-adoption.jpeg",
+      "img/mesageitonia/mabel/brother-and-sister.jpg",
+      "img/mesageitonia/mabel/puppy-adoptpuppy-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-01-01T00:00:00.000Z"
   },
   {
     "filename": "ariel.md",
@@ -100,23 +134,6 @@
     ],
     "size": "large",
     "added": "2025-05-17T00:00:00.000Z"
-  },
-  {
-    "filename": "Dipper.md",
-    "location": "mesageitonia",
-    "name": "Dipper",
-    "breed": "Staff mixed",
-    "age": 0.5,
-    "gender": "male",
-    "status": "Available",
-    "images": [
-      "img/mesageitonia/dipper/male-puppy-shelter.jpg",
-      "img/mesageitonia/dipper/puppy-for-adoption.jpg",
-      "img/mesageitonia/dipper/brother-and-sister.jpg",
-      "img/mesageitonia/dipper/puppy-adopt.jpg"
-    ],
-    "size": "medium",
-    "added": "2026-01-01T00:00:00.000Z"
   },
   {
     "filename": "felix.md",
@@ -373,9 +390,9 @@
     "location": "germasogeia",
     "name": "Oliver",
     "breed": "Mixed breed",
-    "age": 0.8,
+    "age": 1,
     "gender": "male",
-    "status": "Reserved",
+    "status": "Available",
     "images": [
       "img/germasogeia/oliver/beutiful-boy.jpg",
       "img/germasogeia/oliver/smile-dog.jpg",
@@ -385,7 +402,7 @@
       "img/germasogeia/oliver/scared-dog-cyprus.jpg"
     ],
     "size": "medium",
-    "added": "2025-10-22T00:00:00.000Z"
+    "added": "2026-02-16T00:00:00.000Z"
   },
   {
     "filename": "teddy.md",
@@ -420,6 +437,23 @@
     ],
     "size": "large",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "Baron.md",
+    "location": "adopted",
+    "name": "Baron",
+    "breed": "Pit bull",
+    "age": 11,
+    "gender": "male",
+    "status": "Not available",
+    "images": [
+      "img/other/baron/old-boy-adoption-cyprus.jpg",
+      "img/other/baron/baron-dog-rehome.jpg",
+      "img/other/baron/shelters-dogs.jpg",
+      "img/other/baron/baron-old-adopt.jpg"
+    ],
+    "size": "large",
+    "added": "2025-04-14T00:00:00.000Z"
   },
   {
     "filename": "alfie.md",
@@ -486,23 +520,6 @@
     ],
     "size": "small",
     "added": "2025-09-08T00:00:00.000Z"
-  },
-  {
-    "filename": "Baron.md",
-    "location": "adopted",
-    "name": "Baron",
-    "breed": "Pit bull",
-    "age": 11,
-    "gender": "male",
-    "status": "Not available",
-    "images": [
-      "img/other/baron/old-boy-adoption-cyprus.jpg",
-      "img/other/baron/baron-dog-rehome.jpg",
-      "img/other/baron/shelters-dogs.jpg",
-      "img/other/baron/baron-old-adopt.jpg"
-    ],
-    "size": "large",
-    "added": "2025-04-14T00:00:00.000Z"
   },
   {
     "filename": "bella.md",
