@@ -16,40 +16,6 @@
     "added": "2026-01-10T00:00:00.000Z"
   },
   {
-    "filename": "raya.md",
-    "location": "other",
-    "name": "Raya",
-    "breed": "Chihuahua",
-    "age": 10,
-    "gender": "female",
-    "status": "In foster care",
-    "images": [
-      "img/other/raya/chihuahua-adopt.jpg",
-      "img/other/raya/raya-female-adopt.jpg",
-      "img/other/raya/old-dog.jpg",
-      "img/other/raya/small-dog-adopt.jpg"
-    ],
-    "size": "small",
-    "added": "2026-01-02T00:00:00.000Z"
-  },
-  {
-    "filename": "rocky.md",
-    "location": "other",
-    "name": "Rocky Balboa",
-    "breed": "Pointer mix",
-    "age": 0.16,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/other/rocky/pointer-cross-boy.jpg",
-      "img/other/rocky/adopt-dont-buy.jpg",
-      "img/other/rocky/puppy-male.jpg",
-      "img/other/rocky/funny-puppy.jpg"
-    ],
-    "size": "small",
-    "added": "2025-12-30T00:00:00.000Z"
-  },
-  {
     "filename": "ariel.md",
     "location": "mesageitonia",
     "name": "Ariel",
@@ -180,7 +146,7 @@
     "breed": "Beagle mixed",
     "age": 3,
     "gender": "female",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/mesageitonia/molly/molly-girl.jpeg",
       "img/mesageitonia/molly/abandoned-dog.jpeg",
@@ -350,6 +316,23 @@
     "added": "2025-09-08T00:00:00.000Z"
   },
   {
+    "filename": "harris.md",
+    "location": "germasogeia",
+    "name": "Harris",
+    "breed": "Pointer mix",
+    "age": 0.7,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/harris/abandoned-dog.jpg",
+      "img/germasogeia/harris/pointer-mix.jpg",
+      "img/germasogeia/harris/shelter-pound-limassol.jpg",
+      "img/germasogeia/harris/puppy-in-the-cage.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-02-11T00:00:00.000Z"
+  },
+  {
     "filename": "leia.md",
     "location": "germasogeia",
     "name": "Leia",
@@ -403,6 +386,25 @@
     ],
     "size": "medium",
     "added": "2026-02-16T00:00:00.000Z"
+  },
+  {
+    "filename": "orea.md",
+    "location": "germasogeia",
+    "name": "Orea",
+    "breed": "Mixed breed",
+    "age": 0.8,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/orea/beautifull-female.jpg.jpg",
+      "img/germasogeia/orea/orea-dog-adopt.jpg",
+      "img/germasogeia/orea/puppy-for-adoption.jpg",
+      "img/germasogeia/orea/smilie-dog-rescue.jpg",
+      "img/germasogeia/orea/female-mixed-breed.jpg",
+      "img/germasogeia/orea/dog-in-the-cage.jpg.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-02-01T00:00:00.000Z"
   },
   {
     "filename": "teddy.md",
@@ -1033,6 +1035,40 @@
     ],
     "size": "medium",
     "added": "2025-06-23T00:00:00.000Z"
+  },
+  {
+    "filename": "raya.md",
+    "location": "adopted",
+    "name": "Raya",
+    "breed": "Chihuahua",
+    "age": 10,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/other/raya/chihuahua-adopt.jpg",
+      "img/other/raya/raya-female-adopt.jpg",
+      "img/other/raya/old-dog.jpg",
+      "img/other/raya/small-dog-adopt.jpg"
+    ],
+    "size": "small",
+    "added": "2026-01-02T00:00:00.000Z"
+  },
+  {
+    "filename": "rocky.md",
+    "location": "adopted",
+    "name": "Rocky Balboa",
+    "breed": "Pointer mix",
+    "age": 0.16,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/other/rocky/pointer-cross-boy.jpg",
+      "img/other/rocky/adopt-dont-buy.jpg",
+      "img/other/rocky/puppy-male.jpg",
+      "img/other/rocky/funny-puppy.jpg"
+    ],
+    "size": "small",
+    "added": "2025-12-30T00:00:00.000Z"
   },
   {
     "filename": "rolly.md",
