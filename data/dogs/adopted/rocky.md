@@ -3,7 +3,7 @@
   breed: Pointer mix
   age: 0.16
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/other/rocky/pointer-cross-boy.jpg,
     img/other/rocky/adopt-dont-buy.jpg,
