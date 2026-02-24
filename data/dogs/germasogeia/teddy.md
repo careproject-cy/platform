@@ -11,7 +11,7 @@
     img/germasogeia/teddy/male-dog-in-the-cage.jpg,
   ]
   size: large # 'small' | 'medium' | 'large'
-  added: 2025-06-23
+  added: 2026-02-11
 ---
 Teddy arrived at the shelter in May 2025 after kind people found him in poor condition and asked for help. Veterinary examination and X-rays revealed an old leg fracture in three places, as well as leishmaniasis.
 
