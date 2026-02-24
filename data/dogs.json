@@ -396,12 +396,12 @@
     "gender": "female",
     "status": "Available",
     "images": [
-      "img/germasogeia/orea/beautifull-female.jpg.jpg",
+      "img/germasogeia/orea/beautifull-female.jpg",
       "img/germasogeia/orea/orea-dog-adopt.jpg",
       "img/germasogeia/orea/puppy-for-adoption.jpg",
       "img/germasogeia/orea/smilie-dog-rescue.jpg",
       "img/germasogeia/orea/female-mixed-breed.jpg",
-      "img/germasogeia/orea/dog-in-the-cage.jpg.jpg"
+      "img/germasogeia/orea/dog-in-the-cage.jpg"
     ],
     "size": "medium",
     "added": "2026-02-01T00:00:00.000Z"
@@ -417,10 +417,11 @@
     "images": [
       "img/germasogeia/teddy/adopt-rescue-shelter-teddy.jpg",
       "img/germasogeia/teddy/rescue-dog-male.jpg",
-      "img/germasogeia/teddy/german-shepherd-adoption.jpg"
+      "img/germasogeia/teddy/german-shepherd-adoption.jpg",
+      "img/germasogeia/teddy/male-dog-in-the-cage.jpg"
     ],
     "size": "large",
-    "added": "2025-06-23T00:00:00.000Z"
+    "added": "2026-02-11T00:00:00.000Z"
   },
   {
     "filename": "zeus.md",

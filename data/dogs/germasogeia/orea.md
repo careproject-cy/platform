@@ -5,12 +5,12 @@
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/germasogeia/orea/beautifull-female.jpg.jpg,
+    img/germasogeia/orea/beautifull-female.jpg,
     img/germasogeia/orea/orea-dog-adopt.jpg,
     img/germasogeia/orea/puppy-for-adoption.jpg,
     img/germasogeia/orea/smilie-dog-rescue.jpg,
     img/germasogeia/orea/female-mixed-breed.jpg,
-    img/germasogeia/orea/dog-in-the-cage.jpg.jpg,
+    img/germasogeia/orea/dog-in-the-cage.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2026-02-01
