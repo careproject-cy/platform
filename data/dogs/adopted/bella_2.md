@@ -2,8 +2,8 @@
   name: Bella
   breed: Beagle
   age: 8
-  gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  gender: female
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/bella/beagle-old-female.jpg,
     img/germasogeia/bella/beautiful-girl.jpg,
