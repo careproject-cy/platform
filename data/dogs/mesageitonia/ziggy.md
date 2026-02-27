@@ -1,6 +1,6 @@
 ---
   name: Ziggy
-  breed: Staff cross
+  breed: Staff mixed
   age: 1.5
   gender: male
   status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'

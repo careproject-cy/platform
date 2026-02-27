@@ -1,6 +1,6 @@
 ---
   name: Buffy
-  breed: Mixed Breed
+  breed: Mixed breed
   age: 2
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'

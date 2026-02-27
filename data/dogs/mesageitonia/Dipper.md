@@ -3,7 +3,7 @@
   breed: Staff mixed
   age: 0.5
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/dipper/male-puppy-shelter.jpg,
     img/mesageitonia/dipper/puppy-for-adoption.jpg,

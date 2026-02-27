@@ -1,6 +1,6 @@
 ---
   name: Harris
-  breed: Pointer mix
+  breed: Pointer mixed
   age: 0.7
   gender: male
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
