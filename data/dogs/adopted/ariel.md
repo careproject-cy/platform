@@ -3,7 +3,7 @@
   breed: Staff mixed
   age: 2
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/ariel/smile-dog.jpeg,
     img/mesageitonia/ariel/staff-cross.jpeg,

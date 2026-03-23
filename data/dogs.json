@@ -31,24 +31,6 @@
     "added": "2026-01-10T00:00:00.000Z"
   },
   {
-    "filename": "ariel.md",
-    "location": "mesageitonia",
-    "name": "Ariel",
-    "breed": "Staff mixed",
-    "age": 2,
-    "gender": "female",
-    "status": "Reserved",
-    "images": [
-      "img/mesageitonia/ariel/smile-dog.jpeg",
-      "img/mesageitonia/ariel/staff-cross.jpeg",
-      "img/mesageitonia/ariel/ariel-girl.jpeg",
-      "img/mesageitonia/ariel/adopt-rehome.jpeg",
-      "img/mesageitonia/ariel/jump-female.jpeg"
-    ],
-    "size": "medium",
-    "added": "2025-11-12T00:00:00.000Z"
-  },
-  {
     "filename": "bailey.md",
     "location": "mesageitonia",
     "name": "Bailey",
@@ -81,23 +63,6 @@
     ],
     "size": "large",
     "added": "2025-05-17T00:00:00.000Z"
-  },
-  {
-    "filename": "Dipper.md",
-    "location": "mesageitonia",
-    "name": "Dipper",
-    "breed": "Staff mixed",
-    "age": 0.5,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/mesageitonia/dipper/male-puppy-shelter.jpg",
-      "img/mesageitonia/dipper/puppy-for-adoption.jpg",
-      "img/mesageitonia/dipper/brother-and-sister.jpg",
-      "img/mesageitonia/dipper/puppy-adopt.jpg"
-    ],
-    "size": "medium",
-    "added": "2026-01-01T00:00:00.000Z"
   },
   {
     "filename": "felix.md",
@@ -155,22 +120,21 @@
     "added": "2026-01-01T00:00:00.000Z"
   },
   {
-    "filename": "molly.md",
+    "filename": "napoleon.md",
     "location": "mesageitonia",
-    "name": "Molly",
-    "breed": "Beagle mixed",
-    "age": 3,
-    "gender": "female",
-    "status": "Adopted",
+    "name": "Napoleon",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "male",
+    "status": "Available",
     "images": [
-      "img/mesageitonia/molly/molly-girl.jpeg",
-      "img/mesageitonia/molly/abandoned-dog.jpeg",
-      "img/mesageitonia/molly/limassol-shelter-dog.jpeg",
-      "img/mesageitonia/molly/adopt-dont-buy.jpeg",
-      "img/mesageitonia/molly/dog-in-the-cage.jpg"
+      "img/mesageitonia/napoleon/handsome-boy.jpg",
+      "img/mesageitonia/napoleon/adopt-dont-shop.jpg",
+      "img/mesageitonia/napoleon/napoleon-boy.jpg",
+      "img/mesageitonia/napoleon/dog-in-the-kennel.jpg"
     ],
     "size": "medium",
-    "added": "2025-11-12T00:00:00.000Z"
+    "added": "2026-03-23T00:00:00.000Z"
   },
   {
     "filename": "orlando.md",
@@ -208,23 +172,6 @@
     ],
     "size": "large",
     "added": "2025-07-02T00:00:00.000Z"
-  },
-  {
-    "filename": "ziggy.md",
-    "location": "mesageitonia",
-    "name": "Ziggy",
-    "breed": "Staff mixed",
-    "age": 1.5,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/mesageitonia/ziggy/dog-in-the-cage.jpg",
-      "img/mesageitonia/ziggy/happy-boy-adopt.jpg",
-      "img/mesageitonia/ziggy/staff-adoption.jpg",
-      "img/mesageitonia/ziggy/ziggy-staff.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-05-15T00:00:00.000Z"
   },
   {
     "filename": "bruno.md",
@@ -295,6 +242,23 @@
     ],
     "size": "small",
     "added": "2025-09-08T00:00:00.000Z"
+  },
+  {
+    "filename": "ginger.md",
+    "location": "germasogeia",
+    "name": "Ginger",
+    "breed": "Pointer mixed",
+    "age": 4,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/ginger/abandoned-dog.jpg",
+      "img/germasogeia/ginger/male-for-adopt.jpg",
+      "img/germasogeia/ginger/ginger-adopt-cyprus.jpg",
+      "img/germasogeia/ginger/sad-boy-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-03-18T00:00:00.000Z"
   },
   {
     "filename": "harris.md",
@@ -452,6 +416,24 @@
     ],
     "size": "medium",
     "added": "2025-02-15T00:00:00.000Z"
+  },
+  {
+    "filename": "ariel.md",
+    "location": "adopted",
+    "name": "Ariel",
+    "breed": "Staff mixed",
+    "age": 2,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/ariel/smile-dog.jpeg",
+      "img/mesageitonia/ariel/staff-cross.jpeg",
+      "img/mesageitonia/ariel/ariel-girl.jpeg",
+      "img/mesageitonia/ariel/adopt-rehome.jpeg",
+      "img/mesageitonia/ariel/jump-female.jpeg"
+    ],
+    "size": "medium",
+    "added": "2025-11-12T00:00:00.000Z"
   },
   {
     "filename": "aris.md",
@@ -642,6 +624,20 @@
     "added": "2025-06-24T00:00:00.000Z"
   },
   {
+    "filename": "daisy.md",
+    "location": "adopted",
+    "name": "Daisy",
+    "breed": "Mixed breed",
+    "age": 5,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/daisy/daisy.jpg"
+    ],
+    "size": "small",
+    "added": "2026-02-15T00:00:00.000Z"
+  },
+  {
     "filename": "diamond.md",
     "location": "adopted",
     "name": "Diamond",
@@ -657,6 +653,23 @@
     ],
     "size": "large",
     "added": "2025-06-01T00:00:00.000Z"
+  },
+  {
+    "filename": "Dipper.md",
+    "location": "adopted",
+    "name": "Dipper",
+    "breed": "Staff mixed",
+    "age": 0.5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/dipper/male-puppy-shelter.jpg",
+      "img/mesageitonia/dipper/puppy-for-adoption.jpg",
+      "img/mesageitonia/dipper/brother-and-sister.jpg",
+      "img/mesageitonia/dipper/puppy-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-01-01T00:00:00.000Z"
   },
   {
     "filename": "dixie.md",
@@ -966,6 +979,24 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "molly.md",
+    "location": "adopted",
+    "name": "Molly",
+    "breed": "Beagle mixed",
+    "age": 3,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/molly/molly-girl.jpeg",
+      "img/mesageitonia/molly/abandoned-dog.jpeg",
+      "img/mesageitonia/molly/limassol-shelter-dog.jpeg",
+      "img/mesageitonia/molly/adopt-dont-buy.jpeg",
+      "img/mesageitonia/molly/dog-in-the-cage.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-11-12T00:00:00.000Z"
+  },
+  {
     "filename": "nala.md",
     "location": "adopted",
     "name": "Nala",
@@ -1207,5 +1238,22 @@
     ],
     "size": "large",
     "added": "2025-03-25T00:00:00.000Z"
+  },
+  {
+    "filename": "ziggy.md",
+    "location": "adopted",
+    "name": "Ziggy",
+    "breed": "Staff mixed",
+    "age": 1.5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/ziggy/dog-in-the-cage.jpg",
+      "img/mesageitonia/ziggy/happy-boy-adopt.jpg",
+      "img/mesageitonia/ziggy/staff-adoption.jpg",
+      "img/mesageitonia/ziggy/ziggy-staff.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-05-15T00:00:00.000Z"
   }
 ]

@@ -3,7 +3,7 @@
   breed: Staff mixed
   age: 1.5
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/ziggy/dog-in-the-cage.jpg,
     img/mesageitonia/ziggy/happy-boy-adopt.jpg,
