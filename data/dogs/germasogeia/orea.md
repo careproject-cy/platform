@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 0.8
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/orea/beautifull-female.jpg,
     img/germasogeia/orea/orea-dog-adopt.jpg,

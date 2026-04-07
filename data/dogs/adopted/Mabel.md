@@ -3,7 +3,7 @@
   breed: Staff mixed
   age: 0.5
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/mabel/female-puppy-shelter.jpg,
     img/mesageitonia/mabel/puppy-for-adoption.jpeg,

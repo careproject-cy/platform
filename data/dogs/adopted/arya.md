@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 0.4
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/other/arya/puppy-adopt.jpeg,
     img/other/arya/puppy-sleep.jpeg,
