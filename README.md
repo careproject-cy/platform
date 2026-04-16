@@ -1,4 +1,4 @@
-# CARE Project — Cyprus Animals Rescue Effort
+# CARE Project - Cyprus Animals Rescue Effort
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://app.cloudback.it/badge/careproject-cy/platform)](https://cloudback.it)
@@ -11,9 +11,9 @@
 
 ## About
 
-CARE Project is the adoption platform for [UANA Foundation](https://uanafoundation.com), a registered nonprofit in Cyprus. We rescue stray dogs, cover their veterinary care, rehabilitate and socialize them, and coordinate adoptions — locally in Cyprus and internationally to the UK, Germany, and the Netherlands.
+CARE Project is the adoption platform for [UANA Foundation](https://uanafoundation.com), a registered nonprofit in Cyprus. We rescue stray dogs, cover their veterinary care, rehabilitate and socialize them, and coordinate adoptions locally and internationally to the UK, Germany, and the Netherlands.
 
-**100% volunteer** — no paid staff, every euro goes to the animals.
+100% volunteer. No paid staff. Every euro goes to the animals.
 
 ## Why Open Source
 
@@ -21,13 +21,11 @@ Every rescue organization deserves a modern adoption platform. Most operate thro
 
 ## Tech Stack
 
-- **[Next.js](https://nextjs.org) 16** — App Router, Turbopack
-- **[VaneUI](https://vaneui.com)** — React component library with boolean props API
-- **[Markdoc](https://markdoc.dev)** — Markdown-based blog and pages
-- **[Tailwind CSS](https://tailwindcss.com) v4** — Styling
-- **[Vercel](https://vercel.com)** — Hosting and deployment (free tier)
-- **[Vercel Analytics](https://vercel.com/analytics)** — Traffic insights
-- **CloudFront** — Image CDN
+- [Next.js](https://nextjs.org) 16 (App Router, Turbopack)
+- [VaneUI](https://vaneui.com) (React component library)
+- [Markdoc](https://markdoc.dev) (blog and pages)
+- [Tailwind CSS](https://tailwindcss.com) v4
+- [Vercel](https://vercel.com)
 
 ## Features
 
@@ -143,9 +141,9 @@ Then run `npm run generate-blogposts` to update the data.
 
 CARE Project operates under [UANA Foundation](https://uanafoundation.com), a registered Cyprus nonprofit (HE 442538) that supports animal rescuers across the island. UANA also runs:
 
-- **Shelter Support** — Financial aid to municipal pounds and private rescue centers
-- **Emergency Foster Program** — Temporary pet care for owners facing illness, unemployment, or domestic violence
-- **Volunteer Coordination** — Organizing shelter visits, dog walks, and care activities
+- **Shelter Support:** Financial aid to municipal pounds and private rescue centers
+- **Emergency Foster Program:** Temporary pet care for owners facing illness, unemployment, or domestic violence
+- **Volunteer Coordination:** Organizing shelter visits, dog walks, and care activities
 
 Contact: info@uanafoundation.com
 
@@ -170,4 +168,4 @@ We welcome contributions! Whether you're a developer, designer, or animal welfar
 
 ## License
 
-[MIT](LICENSE) — Use this freely for your own rescue organization.
+[MIT](LICENSE)
