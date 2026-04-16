@@ -99,44 +99,6 @@ careproject/
   lib/                # Data generation scripts
 ```
 
-## Adding a New Dog
-
-Create a Markdown file in the appropriate `data/dogs/` subdirectory:
-
-```markdown
----
-name: "Luna"
-breed: "Mixed breed"
-age: "~2 years"
-gender: "Female"
-status: "Available"
-images:
-  - "luna-1.jpg"
-  - "luna-2.jpg"
----
-
-Luna was found wandering near Limassol. She is gentle, house-trained, and loves belly rubs.
-```
-
-Then run `npm run generate-dogs` to update the data.
-
-## Adding a Blog Post
-
-Create a Markdown file in `data/blog/` following the naming convention `YYYY-MM-DD-slug.md`:
-
-```markdown
----
-title: "Your Post Title"
-date: "2025-04-17"
-description: "A brief description for SEO and previews."
-image: "post-image.jpg"
----
-
-Your blog post content here.
-```
-
-Then run `npm run generate-blogposts` to update the data.
-
 ## UANA Foundation
 
 CARE Project operates under [UANA Foundation](https://uanafoundation.com), a registered Cyprus nonprofit (HE 442538) that supports animal rescuers across the island. UANA also runs:
