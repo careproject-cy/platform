@@ -1,6 +1,5 @@
 # CARE Project — Cyprus Animals Rescue Effort
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcareproject-cy%2Fplatform)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://app.cloudback.it/badge/careproject-cy/platform)](https://cloudback.it)
 
@@ -12,12 +11,9 @@
 
 ## About
 
-CARE Project is the adoption platform for [UANA Foundation](https://uanafoundation.com) (reg. HE 442538), a registered nonprofit in Cyprus. We rescue stray dogs, cover their veterinary care, rehabilitate and socialize them, and coordinate adoptions — locally in Cyprus and internationally to the UK, Germany, and the Netherlands.
+CARE Project is the adoption platform for [UANA Foundation](https://uanafoundation.com), a registered nonprofit in Cyprus. We rescue stray dogs, cover their veterinary care, rehabilitate and socialize them, and coordinate adoptions — locally in Cyprus and internationally to the UK, Germany, and the Netherlands.
 
-- **76 dogs** have been through our program
-- **54 dogs** successfully adopted
-- **10+ dogs** currently looking for homes
-- **100% volunteer** — no paid staff, every euro goes to the animals
+**100% volunteer** — no paid staff, every euro goes to the animals.
 
 ## Why Open Source
 
@@ -37,7 +33,7 @@ Every rescue organization deserves a modern adoption platform. Most operate thro
 
 - Dog profile pages with photos, breed, age, and adoption status
 - Adoption listings filtered by availability
-- Success stories gallery (54 adopted dogs)
+- Success stories gallery
 - Markdown-powered blog with Cyprus-specific pet care content
 - Static pages (About, Adopt, Foster, Donate, Get Involved)
 - SEO-optimized with sitemap generation
@@ -143,19 +139,6 @@ Your blog post content here.
 
 Then run `npm run generate-blogposts` to update the data.
 
-## Deploy Your Own
-
-Click the button below to deploy your own instance to Vercel for free:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcareproject-cy%2Fplatform)
-
-After deploying:
-1. Replace dog profiles in `data/dogs/` with your own animals
-2. Update `app/data/consts.ts` with your organization name and details
-3. Replace images in `public/` with your branding
-4. Update blog posts in `data/blog/`
-5. Run the generation scripts and redeploy
-
 ## UANA Foundation
 
 CARE Project operates under [UANA Foundation](https://uanafoundation.com), a registered Cyprus nonprofit (HE 442538) that supports animal rescuers across the island. UANA also runs:
@@ -178,15 +161,6 @@ We welcome contributions! Whether you're a developer, designer, or animal welfar
 6. Push to the branch (`git push origin feature/your-feature`)
 7. Open a Pull Request
 
-### Ideas for Contributions
-
-- Improve accessibility (alt text, ARIA labels, keyboard navigation)
-- Add internationalization (Greek, German, Dutch translations)
-- Dark mode support
-- Advanced search/filtering for dog listings
-- Foster application form
-- Integration with pet adoption APIs
-
 ## Social
 
 - Instagram: [@uana.cy](https://instagram.com/uana.cy) / [@dog_adoption_cyprus](https://instagram.com/dog_adoption_cyprus)
@@ -196,4 +170,4 @@ We welcome contributions! Whether you're a developer, designer, or animal welfar
 
 ## License
 
-[MIT](LICENSE) -- Use this freely for your own rescue organization.
+[MIT](LICENSE) — Use this freely for your own rescue organization.

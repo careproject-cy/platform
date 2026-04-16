@@ -16,6 +16,23 @@
     "added": "2026-01-10T00:00:00.000Z"
   },
   {
+    "filename": "aster.md",
+    "location": "mesageitonia",
+    "name": "Aster",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/aster/adopt-dont-shop.jpeg",
+      "img/mesageitonia/aster/smilie-dog.jpeg",
+      "img/mesageitonia/aster/black-dog.jpg",
+      "img/mesageitonia/aster/dog-in-the-cage.jpg"
+    ],
+    "size": "small",
+    "added": "2026-04-16T00:00:00.000Z"
+  },
+  {
     "filename": "bailey.md",
     "location": "mesageitonia",
     "name": "Bailey",
