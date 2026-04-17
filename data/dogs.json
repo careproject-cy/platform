@@ -67,6 +67,23 @@
     "added": "2025-05-17T00:00:00.000Z"
   },
   {
+    "filename": "danny.md",
+    "location": "mesageitonia",
+    "name": "Danny",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/danny/happy-boy.jpg",
+      "img/mesageitonia/danny/adopt-dog.jpg",
+      "img/mesageitonia/danny/small-dog.jpg",
+      "img/mesageitonia/danny/dog-in-the-cage.jpeg"
+    ],
+    "size": "small",
+    "added": "2026-04-17T00:00:00.000Z"
+  },
+  {
     "filename": "felix.md",
     "location": "mesageitonia",
     "name": "Felix",
