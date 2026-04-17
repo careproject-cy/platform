@@ -1,7 +1,6 @@
 {
   "name": "careproject",
   "version": "0.1.0",
-  "type": "module",
   "private": true,
   "scripts": {
     "dev": "npm run lint && npm run typecheck && next dev --turbopack",
