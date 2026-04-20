@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 1.5
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/silver/silver-shelters-dog.jpg,
     img/mesageitonia/silver/shelter-dog-cyprus.jpg,

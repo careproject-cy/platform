@@ -3,7 +3,7 @@
   breed: Pointer mixed
   age: 2
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/olaf/olaf-smiling-adoptio.jpg,
     img/germasogeia/olaf/pointer-mixed-male.jpg,
