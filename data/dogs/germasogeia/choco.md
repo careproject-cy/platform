@@ -1,6 +1,6 @@
 ---
   name: Choco
-  breed: Mixed creed
+  breed: Mixed breed
   age: 6
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'

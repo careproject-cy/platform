@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 1
   gender: female
-  status: In foster care # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/other/karma/karma-female.jpg,
     img/other/karma/adopt-dog.jpg,

@@ -3,7 +3,7 @@
   breed:  Kokoni mix
   age: 5
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/cracker/kokoni-mixed.jpg,
     img/germasogeia/cracker/cracker-boy.jpg,
