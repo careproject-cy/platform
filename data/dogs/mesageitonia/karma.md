@@ -5,9 +5,9 @@
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/other/karma/karma-female.jpg,
-    img/other/karma/adopt-dog.jpg,
-    img/other/karma/after-surgery.jpg
+    img/mesageitonia/karma/karma-female.jpg,
+    img/mesageitonia/karma/adopt-dog.jpg,
+    img/mesageitonia/karma/after-surgery.jpg
   ]
   size: medium # 'small' | 'medium' | 'large'
   added: 2026-01-10
