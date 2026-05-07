@@ -1,21 +1,5 @@
 [
   {
-    "filename": "karma.md",
-    "location": "other",
-    "name": "Karma",
-    "breed": "Mixed breed",
-    "age": 1,
-    "gender": "female",
-    "status": "In foster care",
-    "images": [
-      "img/other/karma/karma-female.jpg",
-      "img/other/karma/adopt-dog.jpg",
-      "img/other/karma/after-surgery.jpg"
-    ],
-    "size": "medium",
-    "added": "2026-01-10T00:00:00.000Z"
-  },
-  {
     "filename": "aster.md",
     "location": "mesageitonia",
     "name": "Aster",
@@ -118,6 +102,22 @@
     "added": "2026-04-01T00:00:00.000Z"
   },
   {
+    "filename": "karma.md",
+    "location": "mesageitonia",
+    "name": "Karma",
+    "breed": "Mixed breed",
+    "age": 1,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/karma/karma-female.jpg",
+      "img/mesageitonia/karma/adopt-dog.jpg",
+      "img/mesageitonia/karma/after-surgery.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-01-10T00:00:00.000Z"
+  },
+  {
     "filename": "napoleon.md",
     "location": "mesageitonia",
     "name": "Napoleon",
@@ -169,6 +169,23 @@
     "added": "2026-04-07T00:00:00.000Z"
   },
   {
+    "filename": "brando.md",
+    "location": "germasogeia",
+    "name": "Brando",
+    "breed": "German Shepherd",
+    "age": 4,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/brando/german-shepherd.jpg",
+      "img/germasogeia/brando/dog-for-adoption.jpg",
+      "img/germasogeia/brando/adopt-gs.jpg",
+      "img/germasogeia/brando/smilie-boy-adopt.jpg"
+    ],
+    "size": "large",
+    "added": "2026-05-01T00:00:00.000Z"
+  },
+  {
     "filename": "bruno.md",
     "location": "germasogeia",
     "name": "Bruno",
@@ -206,7 +223,7 @@
     "filename": "choco.md",
     "location": "germasogeia",
     "name": "Choco",
-    "breed": "Mixed creed",
+    "breed": "Mixed breed",
     "age": 6,
     "gender": "female",
     "status": "Available",
@@ -218,25 +235,6 @@
     ],
     "size": "small",
     "added": "2025-12-11T00:00:00.000Z"
-  },
-  {
-    "filename": "cracker.md",
-    "location": "germasogeia",
-    "name": "Cracker",
-    "breed": "Kokoni mix",
-    "age": 5,
-    "gender": "male",
-    "status": "Available",
-    "images": [
-      "img/germasogeia/cracker/kokoni-mixed.jpg",
-      "img/germasogeia/cracker/cracker-boy.jpg",
-      "img/germasogeia/cracker/cracker-smiling-adoption.jpg",
-      "img/germasogeia/cracker/kokoni-breed-boy.jpg",
-      "img/germasogeia/cracker/happy-small-dog-cyprus.jpg",
-      "img/germasogeia/cracker/need-family-cyprus-dog.jpg"
-    ],
-    "size": "small",
-    "added": "2025-09-08T00:00:00.000Z"
   },
   {
     "filename": "ginger.md",
@@ -577,6 +575,25 @@
     ],
     "size": "small",
     "added": "2025-06-24T00:00:00.000Z"
+  },
+  {
+    "filename": "cracker.md",
+    "location": "adopted",
+    "name": "Cracker",
+    "breed": "Kokoni mix",
+    "age": 5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/cracker/kokoni-mixed.jpg",
+      "img/germasogeia/cracker/cracker-boy.jpg",
+      "img/germasogeia/cracker/cracker-smiling-adoption.jpg",
+      "img/germasogeia/cracker/kokoni-breed-boy.jpg",
+      "img/germasogeia/cracker/happy-small-dog-cyprus.jpg",
+      "img/germasogeia/cracker/need-family-cyprus-dog.jpg"
+    ],
+    "size": "small",
+    "added": "2025-09-08T00:00:00.000Z"
   },
   {
     "filename": "daisy.md",
