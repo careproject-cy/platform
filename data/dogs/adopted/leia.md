@@ -3,7 +3,7 @@
   breed: Beagle mixed
   age: 0.8
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/leia/beagle-cross.jpg,
     img/germasogeia/leia/happy-hug-dog.jpg,

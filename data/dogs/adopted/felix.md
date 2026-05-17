@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 1
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/felix/adoption-dog-rehome-felix.jpg,
     img/mesageitonia/felix/felix-male-boy.jpg,

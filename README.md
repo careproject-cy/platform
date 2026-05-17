@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CARE Project - Cyprus Animals Rescue Effort
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://app.cloudback.it/badge/careproject-cy/platform)](https://cloudback.it)
+
+**A 100% volunteer-run dog rescue platform helping stray and shelter-bound dogs across Cyprus find loving homes.**
+
+[careproject.cy](https://careproject.cy) | [UANA Foundation](https://uanafoundation.com)
+
+![CARE Project](public/care-project-social.png)
+
+## About
+
+CARE Project is the adoption platform for [UANA Foundation](https://uanafoundation.com), a registered nonprofit in Cyprus. We rescue stray dogs, cover their veterinary care, rehabilitate and socialize them, and coordinate adoptions locally and internationally to the UK, Germany, and the Netherlands.
+
+100% volunteer. No paid staff. Every euro goes to the animals.
+
+## Why Open Source
+
+Every rescue organization deserves a modern adoption platform. Most operate through social media DMs and spreadsheets. We built this site for CARE Project and are open-sourcing it so any animal rescue can fork it, add their animals, and deploy for free.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router, Turbopack)
+- [VaneUI](https://vaneui.com) (React component library)
+- [Markdoc](https://markdoc.dev) (blog and pages)
+- [Tailwind CSS](https://tailwindcss.com) v4
+- [Vercel](https://vercel.com)
+
+## Features
+
+- Dog profile pages with photos, breed, age, and adoption status
+- Adoption listings filtered by availability
+- Success stories gallery
+- Markdown-powered blog with Cyprus-specific pet care content
+- Static pages (About, Adopt, Foster, Donate, Get Involved)
+- SEO-optimized with sitemap generation
+- Social sharing (Open Graph, Twitter cards)
+- Responsive design
+- Ahrefs analytics integration
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/careproject-cy/platform.git
+cd platform
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Content Generation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Dog profiles and blog posts are stored as Markdown files in the `data/` directory. After adding or editing content, regenerate the JSON data files:
 
-## Learn More
+```bash
+npm run generate-dogs
+npm run generate-blogposts
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+careproject/
+  app/
+    components/       # React components (header, footer, dog cards, etc.)
+    data/             # Constants and data fetching utilities
+    blog/             # Blog pages
+    dogs/             # Dog profile pages
+    more/             # Static pages (adopt, foster, donate, etc.)
+  data/
+    dogs/             # Dog profiles as Markdown files
+      adopted/        # Successfully adopted dogs
+      germasogeia/    # Dogs from Germasogeia shelter
+      mesageitonia/   # Dogs from Mesageitonia shelter
+      other/          # Dogs from other locations
+    blog/             # Blog posts as Markdown files
+    pages/            # Static page content as Markdown
+  public/             # Static assets (logos, images)
+  lib/                # Data generation scripts
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## UANA Foundation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+CARE Project operates under [UANA Foundation](https://uanafoundation.com), a registered Cyprus nonprofit (HE 442538) that supports animal rescuers across the island. UANA also runs:
+
+- **Shelter Support:** Financial aid to municipal pounds and private rescue centers
+- **Emergency Foster Program:** Temporary pet care for owners facing illness, unemployment, or domestic violence
+- **Volunteer Coordination:** Organizing shelter visits, dog walks, and care activities
+
+Contact: info@uanafoundation.com
+
+## Contributing
+
+We welcome contributions! Whether you're a developer, designer, or animal welfare advocate:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Make your changes
+4. Run linting and type checks (`npm run lint && npm run typecheck`)
+5. Commit your changes
+6. Push to the branch (`git push origin feature/your-feature`)
+7. Open a Pull Request
+
+## Social
+
+- Instagram: [@uana.cy](https://instagram.com/uana.cy) / [@dog_adoption_cyprus](https://instagram.com/dog_adoption_cyprus)
+- Facebook: [careproject.cy](https://facebook.com/careproject.cy)
+- LinkedIn: [UANA Foundation](https://linkedin.com/company/uana-foundation)
+- Telegram: [care_project](https://t.me/care_project)
+
+## License
+
+[MIT](LICENSE)

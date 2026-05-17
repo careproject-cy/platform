@@ -1,34 +1,20 @@
 [
   {
-    "filename": "arya.md",
-    "location": "other",
-    "name": "Arya",
+    "filename": "aster.md",
+    "location": "mesageitonia",
+    "name": "Aster",
     "breed": "Mixed breed",
-    "age": 0.4,
+    "age": 1.5,
     "gender": "female",
-    "status": "Reserved",
+    "status": "Available",
     "images": [
-      "img/other/arya/puppy-adopt.jpeg",
-      "img/other/arya/puppy-sleep.jpeg"
+      "img/mesageitonia/aster/adopt-dont-shop.jpeg",
+      "img/mesageitonia/aster/smilie-dog.jpeg",
+      "img/mesageitonia/aster/black-dog.jpg",
+      "img/mesageitonia/aster/dog-in-the-cage.jpg"
     ],
-    "size": "medium",
-    "added": "2026-01-01T00:00:00.000Z"
-  },
-  {
-    "filename": "karma.md",
-    "location": "other",
-    "name": "Karma",
-    "breed": "Mixed breed",
-    "age": 1,
-    "gender": "female",
-    "status": "In foster care",
-    "images": [
-      "img/other/karma/karma-female.jpg",
-      "img/other/karma/adopt-dog.jpg",
-      "img/other/karma/after-surgery.jpg"
-    ],
-    "size": "medium",
-    "added": "2026-01-10T00:00:00.000Z"
+    "size": "small",
+    "added": "2026-04-16T00:00:00.000Z"
   },
   {
     "filename": "bailey.md",
@@ -65,25 +51,21 @@
     "added": "2025-05-17T00:00:00.000Z"
   },
   {
-    "filename": "felix.md",
+    "filename": "danny.md",
     "location": "mesageitonia",
-    "name": "Felix",
+    "name": "Danny",
     "breed": "Mixed breed",
-    "age": 1,
+    "age": 1.5,
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/mesageitonia/felix/adoption-dog-rehome-felix.jpg",
-      "img/mesageitonia/felix/felix-male-boy.jpg",
-      "img/mesageitonia/felix/happy-felix.jpg",
-      "img/mesageitonia/felix/shelter-dog-cyprus.jpg",
-      "img/mesageitonia/felix/felix-shelters-dog.jpg",
-      "img/mesageitonia/felix/male-dog-shelter-rehome.jpg",
-      "img/mesageitonia/felix/adoption-dog-rehome.jpg",
-      "img/mesageitonia/felix/mixed-breed-black-dog.jpg"
+      "img/mesageitonia/danny/happy-boy.jpg",
+      "img/mesageitonia/danny/adopt-dog.jpg",
+      "img/mesageitonia/danny/small-dog.jpg",
+      "img/mesageitonia/danny/dog-in-the-cage.jpeg"
     ],
-    "size": "medium",
-    "added": "2025-09-09T00:00:00.000Z"
+    "size": "small",
+    "added": "2026-04-17T00:00:00.000Z"
   },
   {
     "filename": "jackson.md",
@@ -103,21 +85,37 @@
     "added": "2025-11-12T00:00:00.000Z"
   },
   {
-    "filename": "Mabel.md",
+    "filename": "johny.md",
     "location": "mesageitonia",
-    "name": "Mabel",
-    "breed": "Staff mixed",
-    "age": 0.5,
+    "name": "Johnny",
+    "breed": "Mixed breed",
+    "age": 3,
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/mesageitonia/mabel/female-puppy-shelter.jpg",
-      "img/mesageitonia/mabel/puppy-for-adoption.jpeg",
-      "img/mesageitonia/mabel/brother-and-sister.jpg",
-      "img/mesageitonia/mabel/puppy-adopt.jpg"
+      "img/mesageitonia/johnny/boy-shelter.jpg",
+      "img/mesageitonia/johnny/black-dog.jpg",
+      "img/mesageitonia/johnny/mixed-breed.jpg",
+      "img/mesageitonia/johnny/calm-dog-adopt.jpg"
     ],
     "size": "medium",
-    "added": "2026-01-01T00:00:00.000Z"
+    "added": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "filename": "karma.md",
+    "location": "mesageitonia",
+    "name": "Karma",
+    "breed": "Mixed breed",
+    "age": 1,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/karma/karma-female.jpg",
+      "img/mesageitonia/karma/adopt-dog.jpg",
+      "img/mesageitonia/karma/after-surgery.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-01-10T00:00:00.000Z"
   },
   {
     "filename": "napoleon.md",
@@ -154,24 +152,38 @@
     "added": "2025-06-15T00:00:00.000Z"
   },
   {
-    "filename": "silver.md",
-    "location": "mesageitonia",
-    "name": "Silver",
-    "breed": "Mixed breed",
-    "age": 1.5,
+    "filename": "bear.md",
+    "location": "germasogeia",
+    "name": "Bear",
+    "breed": "Chow-chow mixed",
+    "age": 3,
     "gender": "male",
     "status": "Available",
     "images": [
-      "img/mesageitonia/silver/silver-shelters-dog.jpg",
-      "img/mesageitonia/silver/shelter-dog-cyprus.jpg",
-      "img/mesageitonia/silver/happy-felix.jpg",
-      "img/mesageitonia/silver/felix-male-boy.jpg",
-      "img/mesageitonia/silver/shy-shelter-dog.jpg",
-      "img/mesageitonia/silver/adoption-dog-rehome.jpg",
-      "img/mesageitonia/silver/foster-young-dog.jpg"
+      "img/germasogeia/bear/smilie-boy.jpeg",
+      "img/germasogeia/bear/happy-boy.jpg",
+      "img/germasogeia/bear/adopt-dog.jpg",
+      "img/germasogeia/bear/chow-chow-mixed.jpeg"
+    ],
+    "size": "medium",
+    "added": "2026-04-07T00:00:00.000Z"
+  },
+  {
+    "filename": "brando.md",
+    "location": "germasogeia",
+    "name": "Brando",
+    "breed": "German Shepherd",
+    "age": 4,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/brando/german-shepherd.jpg",
+      "img/germasogeia/brando/dog-for-adoption.jpg",
+      "img/germasogeia/brando/adopt-gs.jpg",
+      "img/germasogeia/brando/smilie-boy-adopt.jpg"
     ],
     "size": "large",
-    "added": "2025-07-02T00:00:00.000Z"
+    "added": "2026-05-01T00:00:00.000Z"
   },
   {
     "filename": "bruno.md",
@@ -211,7 +223,7 @@
     "filename": "choco.md",
     "location": "germasogeia",
     "name": "Choco",
-    "breed": "Mixed creed",
+    "breed": "Mixed breed",
     "age": 6,
     "gender": "female",
     "status": "Available",
@@ -223,25 +235,6 @@
     ],
     "size": "small",
     "added": "2025-12-11T00:00:00.000Z"
-  },
-  {
-    "filename": "cracker.md",
-    "location": "germasogeia",
-    "name": "Cracker",
-    "breed": "Kokoni mix",
-    "age": 5,
-    "gender": "male",
-    "status": "Available",
-    "images": [
-      "img/germasogeia/cracker/kokoni-mixed.jpg",
-      "img/germasogeia/cracker/cracker-boy.jpg",
-      "img/germasogeia/cracker/cracker-smiling-adoption.jpg",
-      "img/germasogeia/cracker/kokoni-breed-boy.jpg",
-      "img/germasogeia/cracker/happy-small-dog-cyprus.jpg",
-      "img/germasogeia/cracker/need-family-cyprus-dog.jpg"
-    ],
-    "size": "small",
-    "added": "2025-09-08T00:00:00.000Z"
   },
   {
     "filename": "ginger.md",
@@ -267,7 +260,7 @@
     "breed": "Pointer mixed",
     "age": 0.7,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/harris/abandoned-dog.jpg",
       "img/germasogeia/harris/pointer-mix.jpg",
@@ -276,42 +269,6 @@
     ],
     "size": "medium",
     "added": "2026-02-11T00:00:00.000Z"
-  },
-  {
-    "filename": "leia.md",
-    "location": "germasogeia",
-    "name": "Leia",
-    "breed": "Beagle mixed",
-    "age": 0.8,
-    "gender": "female",
-    "status": "Available",
-    "images": [
-      "img/germasogeia/leia/beagle-cross.jpg",
-      "img/germasogeia/leia/happy-hug-dog.jpg",
-      "img/germasogeia/leia/leia-girl-adopt.jpg",
-      "img/germasogeia/leia/puppy-limassol.jpg",
-      "img/germasogeia/leia/dog-in-cage.jpeg"
-    ],
-    "size": "medium",
-    "added": "2025-11-11T00:00:00.000Z"
-  },
-  {
-    "filename": "olaf.md",
-    "location": "germasogeia",
-    "name": "Olaf",
-    "breed": "Pointer mixed",
-    "age": 2,
-    "gender": "male",
-    "status": "Available",
-    "images": [
-      "img/germasogeia/olaf/olaf-smiling-adoptio.jpg",
-      "img/germasogeia/olaf/pointer-mixed-male.jpg",
-      "img/germasogeia/olaf/happy-dog-cyprus.jpg",
-      "img/germasogeia/olaf/need-family-cyprus-dog.jpg",
-      "img/germasogeia/olaf/rescue-adoptnotshop.jpg"
-    ],
-    "size": "medium",
-    "added": "2025-07-01T00:00:00.000Z"
   },
   {
     "filename": "oliver.md",
@@ -331,25 +288,6 @@
     ],
     "size": "medium",
     "added": "2026-02-16T00:00:00.000Z"
-  },
-  {
-    "filename": "orea.md",
-    "location": "germasogeia",
-    "name": "Orea",
-    "breed": "Mixed breed",
-    "age": 0.8,
-    "gender": "female",
-    "status": "Available",
-    "images": [
-      "img/germasogeia/orea/beautifull-female.jpg",
-      "img/germasogeia/orea/orea-dog-adopt.jpg",
-      "img/germasogeia/orea/puppy-for-adoption.jpg",
-      "img/germasogeia/orea/smilie-dog-rescue.jpg",
-      "img/germasogeia/orea/female-mixed-breed.jpg",
-      "img/germasogeia/orea/dog-in-the-cage.jpg"
-    ],
-    "size": "medium",
-    "added": "2026-02-01T00:00:00.000Z"
   },
   {
     "filename": "teddy.md",
@@ -451,6 +389,21 @@
     ],
     "size": "large",
     "added": "2025-11-11T00:00:00.000Z"
+  },
+  {
+    "filename": "arya.md",
+    "location": "adopted",
+    "name": "Arya",
+    "breed": "Mixed breed",
+    "age": 0.4,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/other/arya/puppy-adopt.jpeg",
+      "img/other/arya/puppy-sleep.jpeg"
+    ],
+    "size": "medium",
+    "added": "2026-01-01T00:00:00.000Z"
   },
   {
     "filename": "axel.md",
@@ -624,6 +577,25 @@
     "added": "2025-06-24T00:00:00.000Z"
   },
   {
+    "filename": "cracker.md",
+    "location": "adopted",
+    "name": "Cracker",
+    "breed": "Kokoni mix",
+    "age": 5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/cracker/kokoni-mixed.jpg",
+      "img/germasogeia/cracker/cracker-boy.jpg",
+      "img/germasogeia/cracker/cracker-smiling-adoption.jpg",
+      "img/germasogeia/cracker/kokoni-breed-boy.jpg",
+      "img/germasogeia/cracker/happy-small-dog-cyprus.jpg",
+      "img/germasogeia/cracker/need-family-cyprus-dog.jpg"
+    ],
+    "size": "small",
+    "added": "2025-09-08T00:00:00.000Z"
+  },
+  {
     "filename": "daisy.md",
     "location": "adopted",
     "name": "Daisy",
@@ -741,6 +713,27 @@
     "added": "2025-06-10T00:00:00.000Z"
   },
   {
+    "filename": "felix.md",
+    "location": "adopted",
+    "name": "Felix",
+    "breed": "Mixed breed",
+    "age": 1,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/felix/adoption-dog-rehome-felix.jpg",
+      "img/mesageitonia/felix/felix-male-boy.jpg",
+      "img/mesageitonia/felix/happy-felix.jpg",
+      "img/mesageitonia/felix/shelter-dog-cyprus.jpg",
+      "img/mesageitonia/felix/felix-shelters-dog.jpg",
+      "img/mesageitonia/felix/male-dog-shelter-rehome.jpg",
+      "img/mesageitonia/felix/adoption-dog-rehome.jpg",
+      "img/mesageitonia/felix/mixed-breed-black-dog.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-09-09T00:00:00.000Z"
+  },
+  {
     "filename": "freya.md",
     "location": "adopted",
     "name": "Freya",
@@ -844,6 +837,24 @@
     "added": "2025-09-09T00:00:00.000Z"
   },
   {
+    "filename": "leia.md",
+    "location": "adopted",
+    "name": "Leia",
+    "breed": "Beagle mixed",
+    "age": 0.8,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/leia/beagle-cross.jpg",
+      "img/germasogeia/leia/happy-hug-dog.jpg",
+      "img/germasogeia/leia/leia-girl-adopt.jpg",
+      "img/germasogeia/leia/puppy-limassol.jpg",
+      "img/germasogeia/leia/dog-in-cage.jpeg"
+    ],
+    "size": "medium",
+    "added": "2025-11-11T00:00:00.000Z"
+  },
+  {
     "filename": "lily.md",
     "location": "adopted",
     "name": "Lily",
@@ -944,6 +955,23 @@
     "added": "2025-02-14T00:00:00.000Z"
   },
   {
+    "filename": "Mabel.md",
+    "location": "adopted",
+    "name": "Mabel",
+    "breed": "Staff mixed",
+    "age": 0.5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/mabel/female-puppy-shelter.jpg",
+      "img/mesageitonia/mabel/puppy-for-adoption.jpeg",
+      "img/mesageitonia/mabel/brother-and-sister.jpg",
+      "img/mesageitonia/mabel/puppy-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-01-01T00:00:00.000Z"
+  },
+  {
     "filename": "marlo.md",
     "location": "adopted",
     "name": "Marlo",
@@ -1033,6 +1061,24 @@
     "added": "2025-11-11T00:00:00.000Z"
   },
   {
+    "filename": "olaf.md",
+    "location": "adopted",
+    "name": "Olaf",
+    "breed": "Pointer mixed",
+    "age": 2,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/olaf/olaf-smiling-adoptio.jpg",
+      "img/germasogeia/olaf/pointer-mixed-male.jpg",
+      "img/germasogeia/olaf/happy-dog-cyprus.jpg",
+      "img/germasogeia/olaf/need-family-cyprus-dog.jpg",
+      "img/germasogeia/olaf/rescue-adoptnotshop.jpg"
+    ],
+    "size": "medium",
+    "added": "2025-07-01T00:00:00.000Z"
+  },
+  {
     "filename": "olivia.md",
     "location": "adopted",
     "name": "Olivia",
@@ -1048,6 +1094,25 @@
     ],
     "size": "medium",
     "added": "2025-06-10T00:00:00.000Z"
+  },
+  {
+    "filename": "orea.md",
+    "location": "adopted",
+    "name": "Orea",
+    "breed": "Mixed breed",
+    "age": 0.8,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/orea/beautifull-female.jpg",
+      "img/germasogeia/orea/orea-dog-adopt.jpg",
+      "img/germasogeia/orea/puppy-for-adoption.jpg",
+      "img/germasogeia/orea/smilie-dog-rescue.jpg",
+      "img/germasogeia/orea/female-mixed-breed.jpg",
+      "img/germasogeia/orea/dog-in-the-cage.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-02-01T00:00:00.000Z"
   },
   {
     "filename": "oreo.md",
@@ -1187,6 +1252,26 @@
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "silver.md",
+    "location": "adopted",
+    "name": "Silver",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/silver/silver-shelters-dog.jpg",
+      "img/mesageitonia/silver/shelter-dog-cyprus.jpg",
+      "img/mesageitonia/silver/happy-felix.jpg",
+      "img/mesageitonia/silver/felix-male-boy.jpg",
+      "img/mesageitonia/silver/shy-shelter-dog.jpg",
+      "img/mesageitonia/silver/adoption-dog-rehome.jpg",
+      "img/mesageitonia/silver/foster-young-dog.jpg"
+    ],
+    "size": "large",
+    "added": "2025-07-02T00:00:00.000Z"
   },
   {
     "filename": "stella.md",
