@@ -18,6 +18,7 @@ interface IdProps {
   params: Promise<{ location: string, file: string }>
 }
 
+
 export async function generateMetadata({params}: IdProps): Promise<Metadata> {
   const {location, file} = await params
   const dogs = await fetchDogs()
