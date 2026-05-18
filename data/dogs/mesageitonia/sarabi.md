@@ -1,7 +1,7 @@
 ---
   name: Sarabi
   breed: German Shepherd mixed
-  age: 0.2
+  age: 0.16
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
