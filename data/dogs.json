@@ -1,5 +1,20 @@
 [
   {
+    "filename": "abi.md",
+    "location": "mesageitonia",
+    "name": "Abi",
+    "breed": "Mixed breed",
+    "age": 0.4,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/abi/adopt-dont-shop.jpeg",
+      "img/mesageitonia/abi/mixed-breed.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-05-19T00:00:00.000Z"
+  },
+  {
     "filename": "aster.md",
     "location": "mesageitonia",
     "name": "Aster",
@@ -68,6 +83,22 @@
     "added": "2026-04-17T00:00:00.000Z"
   },
   {
+    "filename": "indy.md",
+    "location": "mesageitonia",
+    "name": "Indy",
+    "breed": "German Shepherd",
+    "age": 4,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "a img/mesageitonia/indy/mommy-dog.jpg",
+      "img/mesageitonia/indy/smilie-dog.jpg",
+      "img/mesageitonia/indy/german-shepherd.jpg"
+    ],
+    "size": "small",
+    "added": "2026-04-16T00:00:00.000Z"
+  },
+  {
     "filename": "jackson.md",
     "location": "mesageitonia",
     "name": "Jackson",
@@ -108,7 +139,7 @@
     "breed": "Mixed breed",
     "age": 1,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/karma/karma-female.jpg",
       "img/mesageitonia/karma/adopt-dog.jpg",
@@ -116,6 +147,48 @@
     ],
     "size": "medium",
     "added": "2026-01-10T00:00:00.000Z"
+  },
+  {
+    "filename": "kiara.md",
+    "location": "mesageitonia",
+    "name": "Kiara",
+    "breed": "German Shepherd mixed",
+    "age": 0.2,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/kiara/kiara-puppy.jpg"
+    ],
+    "size": "large",
+    "added": "2026-05-18T00:00:00.000Z"
+  },
+  {
+    "filename": "mufasa.md",
+    "location": "mesageitonia",
+    "name": "Mufasa",
+    "breed": "German Shepherd mixed",
+    "age": 0.2,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/mufasa/mufasa-puppy.jpg"
+    ],
+    "size": "large",
+    "added": "2026-05-18T00:00:00.000Z"
+  },
+  {
+    "filename": "nala.md",
+    "location": "mesageitonia",
+    "name": "Nala",
+    "breed": "German Shepherd mixed",
+    "age": 0.2,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/nala/nala-puppy.jpg"
+    ],
+    "size": "large",
+    "added": "2026-05-18T00:00:00.000Z"
   },
   {
     "filename": "napoleon.md",
@@ -150,6 +223,48 @@
     ],
     "size": "medium",
     "added": "2025-06-15T00:00:00.000Z"
+  },
+  {
+    "filename": "sarabi.md",
+    "location": "mesageitonia",
+    "name": "Sarabi",
+    "breed": "German Shepherd mixed",
+    "age": 0.2,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/sarabi/sarabi-puppy.jpg"
+    ],
+    "size": "large",
+    "added": "2026-05-18T00:00:00.000Z"
+  },
+  {
+    "filename": "zazu.md",
+    "location": "mesageitonia",
+    "name": "Zazu",
+    "breed": "German Shepherd mixed",
+    "age": 0.2,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/zazu/zazu-puppy.jpg"
+    ],
+    "size": "large",
+    "added": "2026-05-18T00:00:00.000Z"
+  },
+  {
+    "filename": "zira.md",
+    "location": "mesageitonia",
+    "name": "Zira",
+    "breed": "German Shepherd mixed",
+    "age": 0.2,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/zira/zira-puppy.jpg"
+    ],
+    "size": "large",
+    "added": "2026-05-18T00:00:00.000Z"
   },
   {
     "filename": "argo.md",
@@ -832,6 +947,20 @@
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "joey.md",
+    "location": "adopted",
+    "name": "Joey",
+    "breed": "Mixed breed",
+    "age": 4,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/joey/adopt-dog.jpg"
+    ],
+    "size": "small",
+    "added": "2026-04-21T00:00:00.000Z"
   },
   {
     "filename": "kayla.md",
