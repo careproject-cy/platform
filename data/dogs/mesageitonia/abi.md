@@ -5,7 +5,7 @@
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
-    img/mesageitonia/abi/adopt-dont-shop.jpeg,
+    img/mesageitonia/abi/adopt-dont-shop.jpg,
     img/mesageitonia/abi/mixed-breed.jpg,
   ]
   size: medium # 'small' | 'medium' | 'large'
