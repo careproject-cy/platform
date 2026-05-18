@@ -4,13 +4,13 @@
   age: 4
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
-  images: [a
+  images: [
     img/mesageitonia/indy/mommy-dog.jpg,
     img/mesageitonia/indy/smilie-dog.jpg,
     img/mesageitonia/indy/german-shepherd.jpg,
   ]
   size: small # 'small' | 'medium' | 'large'
-  added: 2026-04-16
+  added: 2026-05-16
 ---
 
 Indy is the loving mum of six beautiful puppies. Sadly, she became another victim of irresponsible ownership — after not being spayed in time, she was abandoned when she became pregnant.
