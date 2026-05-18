@@ -152,6 +152,21 @@
     "added": "2025-06-15T00:00:00.000Z"
   },
   {
+    "filename": "argo.md",
+    "location": "germasogeia",
+    "name": "Argo",
+    "breed": "Mixed breed",
+    "age": 4,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/argo/abandoned-dog.jpg",
+      "img/germasogeia/argo/argo-adopt.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-04-01T00:00:00.000Z"
+  },
+  {
     "filename": "bear.md",
     "location": "germasogeia",
     "name": "Bear",
@@ -237,6 +252,23 @@
     "added": "2025-12-11T00:00:00.000Z"
   },
   {
+    "filename": "diana.md",
+    "location": "germasogeia",
+    "name": "Diana",
+    "breed": "Mixed breed",
+    "age": 4,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/diana/beautiful-girl.jpg",
+      "img/germasogeia/diana/smilie-diana.jpg",
+      "img/germasogeia/diana/shelter-dog.jpg",
+      "img/germasogeia/diana/adopt-dog.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-05-01T00:00:00.000Z"
+  },
+  {
     "filename": "ginger.md",
     "location": "germasogeia",
     "name": "Ginger",
@@ -269,6 +301,23 @@
     ],
     "size": "medium",
     "added": "2026-02-11T00:00:00.000Z"
+  },
+  {
+    "filename": "mailo.md",
+    "location": "germasogeia",
+    "name": "Mailo",
+    "breed": "Mixed breed",
+    "age": 3,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/mailo/cute-dog.jpg",
+      "img/germasogeia/mailo/mailo-adopt.jpg",
+      "img/germasogeia/mailo/smiling-dog.jpg",
+      "img/germasogeia/mailo/dog-in-cage.jpg"
+    ],
+    "size": "small",
+    "added": "2026-05-01T00:00:00.000Z"
   },
   {
     "filename": "oliver.md",
