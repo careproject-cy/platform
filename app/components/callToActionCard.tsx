@@ -10,11 +10,11 @@ const CTACard: React.FC = () => {
   return (
     <Section accent className="border-t">
       <Container xl>
-        <Card accent xl noPadding overflowHidden relative justifyCenter shadow className="w-full min-h-96">
-          <Img xl absolute tag={Image} src="/dog-card.png" alt="dog card" width={0} height={0}
+        <Card accent xl noPadding overflowHidden relative justifyCenter shadow wFull className="min-h-96">
+          <Img xl absolute objectCover hFull wFull overflowHidden tag={Image} src="/dog-card.png" alt="dog card" width={0} height={0}
                sizes="(max-width: 768px) 100vw, 300px"
-               className="object-cover h-full w-full lg:aspect-5/2 rounded-xl overflow-hidden"/>
-          <Col absolute className="w-3/5 h-full bg-gradient-to-r from-orange-400 to-red-600/0"></Col>
+               className="lg:aspect-5/2 rounded-xl"/>
+          <Col absolute hFull className="w-3/5 bg-gradient-to-r from-orange-400 to-red-600/0"></Col>
           <Stack xl className="p-14 max-lg:p-8 max-w-xl z-10">
             <SectionTitle textLeft className="text-white">
               Ready to power the rescue?

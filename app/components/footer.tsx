@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <Section primary filled className="border-t" tag={'footer'}>
       <Container xl itemsStart>
-        <Row xl tabletCol justifyBetween itemsStart className="w-full">
+        <Row xl tabletCol justifyBetween itemsStart wFull>
           <Col lg className="max-w-lg">
             <Link href="/">
               <Row itemsCenter>
@@ -31,7 +31,7 @@ export default function Footer() {
                   {icon: GitHub, link: "https://github.com/careproject-cy/"},
                 ].map((item, i) => (
                     <Link href={item.link} key={i}>
-                      <Card xs primary noBorder filled className="w-fit opacity-75 hover:opacity-100 duration-300 bg-bg-filled-hover-primary">
+                      <Card xs primary noBorder filled wFit className="opacity-75 hover:opacity-100 duration-300 bg-bg-filled-hover-primary">
                         <item.icon className="text-text-warning size-7"/>
                       </Card>
                     </Link>

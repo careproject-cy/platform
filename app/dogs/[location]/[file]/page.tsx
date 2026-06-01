@@ -86,7 +86,7 @@ export default async function DogPage({params}: IdProps) {
   return (
     <Section>
       <Container lg>
-        <Row lg justifyBetween tabletCol className="w-full">
+        <Row lg justifyBetween tabletCol wFull>
           <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {
             href: "/dogs",
             text: "Dogs"
@@ -125,10 +125,10 @@ export default async function DogPage({params}: IdProps) {
           </Col>
         </Row>
         {similarDogs.length !== 0 &&
-          <Col xl itemsCenter className="w-full gap-10 pb-10">
+          <Col xl itemsCenter wFull className="gap-10 pb-10">
             <Divider/>
             <SectionTitle>Similar dogs</SectionTitle>
-            <Grid3 xl className="w-full">
+            <Grid3 xl wFull>
               {similarDogs.map((dog) => (
                 <DogCard key={dog.filename} {...dog} />
               ))}

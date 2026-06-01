@@ -13,7 +13,7 @@ interface GalleryProps {
 
 const SquareImage = ({ src, alt, size, className, imageClassName, onClick }: { src: string, alt: string, size: number, className?: string, imageClassName?: string, onClick?: React.MouseEventHandler }) => {
   return (
-    <Col className={twMerge(`relative overflow-hidden rounded-2xl`, className || "")}>
+    <Col relative overflowHidden className={twMerge(`rounded-2xl`, className || "")}>
       <Image src={src} alt={`${alt} background`} width={size} height={size}
         sizes="(max-width: 768px) 100vw, 50vw"
         loading='eager'
@@ -55,21 +55,21 @@ const Gallery: React.FC<GalleryProps> = ({ images, className, chipText }) => {
   return (
     <div className={twMerge(`relative flex justify-center w-full rounded-2xl`, className || "")}>
       <Col sm>
-        <Row itemsCenter relative className="overflow-hidden rounded-2xl">
+        <Row itemsCenter relative overflowHidden className="rounded-2xl">
           <button onClick={prevImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-75 rounded-full absolute left-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
             <ChevronLeft className="size-6" />
           </button>
           <button onClick={nextImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-75 rounded-full absolute right-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
             <ChevronRight className="size-6" />
           </button>
-          <Col relative className="overflow-hidden">
+          <Col relative overflowHidden>
             <SquareImage src={images[visible]} alt={`image-${visible}`} size={1000} />
             {chipText &&
               <Chip lg semibold absolute sans className="right-2 bottom-2 opacity-75">{chipText}</Chip>
             }
           </Col>
         </Row>
-        <Row sm ref={thumbnailsRef} className="overflow-x-hidden max-md:overflow-x-scroll">
+        <Row sm ref={thumbnailsRef} overflowXHidden className="max-md:overflow-x-scroll">
           {images.map((src, idx) => (
             <Image key={idx}
               loading='eager'

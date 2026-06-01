@@ -20,7 +20,7 @@ export default function GallerySection({images}: GallerySectionProps) {
   return (
     <Section>
       <Container xl itemsCenter>
-        <Col itemsCenter className="w-full">
+        <Col itemsCenter wFull>
           <SectionTitle>Success Stories</SectionTitle>
           <Text xl textCenter className="max-w-[600px]">
             Celebrate with us! These amazing dogs have found their forever homes through our rescue efforts.

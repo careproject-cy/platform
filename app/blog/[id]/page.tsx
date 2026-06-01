@@ -50,7 +50,7 @@ export default async function BlogPage({params}: BlogPageProps) {
         <Col lg>
           <PageTitle>{post.title}</PageTitle>
           <Row mobileCol justifyBetween>
-            <Text secondary semibold className="w-full">{getDate(post.date)}</Text>
+            <Text secondary semibold wFull>{getDate(post.date)}</Text>
             <Sharer shareText={shareText} url={url} labelText={""}/>
           </Row>
         </Col>

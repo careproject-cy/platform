@@ -13,7 +13,7 @@ export default function Layout() {
   const pathname = usePathname()
 
   return (
-    <Row itemsCenter justifyBetween relative className="border-b px-4 py-2 w-full bg-white" tag={'header'} desktopCol>
+    <Row itemsCenter justifyBetween relative wFull className="border-b px-4 py-2 bg-white" tag={'header'} desktopCol>
       <Row itemsCenter justifyBetween className="max-xl:w-full">
         <Logo/>
         <Button outline noShadow rounded className="hidden max-xl:flex" onClick={() => setIsVisible(!isVisible)}>

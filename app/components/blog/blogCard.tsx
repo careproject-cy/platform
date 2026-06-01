@@ -26,11 +26,11 @@ export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPost
           className="relative object-cover h-auto w-full aspect-3/2 rounded-xl overflow-hidden"
         />
       </Link>
-      <Col className="w-full">
+      <Col wFull>
         <Title semibold serif lg tag={Link} href={`/blog/${id}`}>
           {title}
         </Title>
-        <Text secondary className="line-clamp-2">{desc}</Text>
+        <Text secondary lineClamp2>{desc}</Text>
         <Text semibold secondary>{getDate(post.date)}</Text>
       </Col>
     </Tag>

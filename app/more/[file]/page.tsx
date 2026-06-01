@@ -31,7 +31,7 @@ export default async function Page({params}: MdPageProps) {
     <Section>
       <Container>
         <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {href: `/more/${file}`, text: title}]}/>
-        <Row xl tabletCol reverse className="w-full">
+        <Row xl tabletCol reverse wFull>
           {file == "donate" &&
             <Row itemsCenter className="w-1/2 max-lg:w-full">
               <DonationCard/>

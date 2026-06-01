@@ -35,8 +35,8 @@ export default function MdComponent({md}: MdComponentProps) {
                 title: string;
               } & Record<string, unknown>;
               return (
-                <Img tag={Image} {...rest} title={title} src={getImageSrc(src)} alt={alt}
-                     className="w-full rounded-lg"
+                <Img tag={Image} wFull {...rest} title={title} src={getImageSrc(src)} alt={alt}
+                     className="rounded-lg"
                      width={0}
                      height={0}
                      sizes="100vw"
