@@ -24,7 +24,7 @@ export default function HeroSection({ carouselImages }: HeroSectionProps) {
       <Container xl className="py-12 max-lg:py-10 max-md:py-8">
         <Row xl tabletCol className="max-lg:gap-20">
           <Col xl className="w-1/2 max-lg:w-full">
-            <PageTitle>
+            <PageTitle primary>
               Every dog deserves a <span className="whitespace-nowrap"><span
               className="relative isolate inline-block no-underline text-(--color-text-accent)
          before:content-[''] before:absolute before:left-0 before:top-2/3
@@ -32,7 +32,7 @@ export default function HeroSection({ carouselImages }: HeroSectionProps) {
             >loving home</span>.</span> Help us give them a
               chance.
             </PageTitle>
-            <Text lg>{subtitle}</Text>
+            <Text lg secondary>{subtitle}</Text>
             <Row lg mobileCol>
               <Button filled accent lg tag={Link} href="/more/donate"
                       className="max-sm:w-full">
