@@ -19,6 +19,7 @@ const extraClasses: ThemeExtraClasses = {
 const themeDefaults: ThemeDefaults = {
   button: {
     main: {
+      md: true,
       noShadow: true,
       pill: true,
       primary: true,
