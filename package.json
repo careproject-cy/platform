@@ -14,8 +14,8 @@
   "dependencies": {
     "@markdoc/markdoc": "^0.5.0",
     "@tailwindcss/postcss": "^4.0.9",
-    "@vaneui/md": "^0.9.0-alpha.20260109171658.9f1aa7a",
-    "@vaneui/ui": "^0.9.0-alpha.20260108153335.d1109b4",
+    "@vaneui/md": "0.9.0-alpha.20260528173618.c555981",
+    "@vaneui/ui": "0.9.0-alpha.20260601111042.b35fefe",
     "@vercel/analytics": "^1.6.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

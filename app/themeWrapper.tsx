@@ -6,7 +6,9 @@ import { ThemeDefaults, ThemeExtraClasses, ThemeProvider } from "@vaneui/ui";
 // Extra classes for custom styling (replaces old theme overrides)
 const extraClasses: ThemeExtraClasses = {
   button: {
-    filled: 'bg-gradient-to-br from-orange-400 via-orange-500 to-orange-700 hover:opacity-90 active:opacity-100',
+    main: {
+      filled: 'bg-gradient-to-br from-orange-400 via-orange-500 to-orange-700 hover:opacity-90 active:opacity-100',
+    },
   },
   container: {
     xl: "gap-10",
@@ -16,10 +18,12 @@ const extraClasses: ThemeExtraClasses = {
 
 const themeDefaults: ThemeDefaults = {
   button: {
-    noShadow: true,
-    pill: true,
-    primary: true,
-    shadow: true,
+    main: {
+      noShadow: true,
+      pill: true,
+      primary: true,
+      shadow: true,
+    },
   },
   pageTitle: {
     serif: true,
