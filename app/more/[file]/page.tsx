@@ -29,7 +29,7 @@ export default async function Page({params}: MdPageProps) {
 
   return (
     <Section>
-      <Container>
+      <Container xs={file !== "donate"}>
         <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {href: `/more/${file}`, text: title}]}/>
         <Row xl tabletCol reverse wFull>
           {file == "donate" &&
