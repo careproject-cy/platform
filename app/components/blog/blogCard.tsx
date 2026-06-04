@@ -27,7 +27,7 @@ export function BlogCard({ post, horizontal, reverse = false }: { post: BlogPost
         />
       </Link>
       <Col wFull>
-        <Title semibold serif lg tag={Link} href={`/blog/${id}`}>
+        <Title semibold serif tag={Link} href={`/blog/${id}`}>
           {title}
         </Title>
         <Text secondary lineClamp2>{desc}</Text>

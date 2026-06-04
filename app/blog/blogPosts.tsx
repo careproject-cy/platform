@@ -21,7 +21,7 @@ export default function BlogPosts({ posts }: { posts: BlogPostMetadata[] }) {
     <>
       <Col lg>
         <LargeBlogCard post={latestPost} />
-        <Grid3>
+        <Grid3 lg>
           {visiblePosts.map((post) => (
             <BlogCard key={post.filename} post={post} />
           ))}

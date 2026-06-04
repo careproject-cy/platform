@@ -26,7 +26,7 @@ export default function BlogPostsSection({ latestPost, recentPosts }: BlogPostsS
         <SectionTitle>Latest Blog Posts</SectionTitle>
         <Col lg>
           <LargeBlogCard post={latestPost}/>
-          <Grid3>
+          <Grid3 lg>
             {recentPosts.map((post) => (
               <BlogCard key={post.filename} post={post}/>
             ))}

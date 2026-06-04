@@ -32,7 +32,7 @@ export default function HeroSection({ carouselImages }: HeroSectionProps) {
             >loving home</span>.</span> Help us give them a
               chance.
             </PageTitle>
-            <Text lg secondary>{subtitle}</Text>
+            <Text lg primary medium>{subtitle}</Text>
             <Row lg mobileCol>
               <Button filled accent lg tag={Link} href="/more/donate"
                       className="max-sm:w-full">

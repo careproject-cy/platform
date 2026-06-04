@@ -7,28 +7,23 @@ import { ThemeDefaults, ThemeExtraClasses, ThemeProvider } from "@vaneui/ui";
 const extraClasses: ThemeExtraClasses = {
   button: {
     main: {
-      filled: 'bg-gradient-to-br from-orange-400 via-orange-500 to-orange-700 hover:opacity-90 active:opacity-100',
+      filled: 'bg-gradient-to-br from-orange-500 via-orange-500 to-orange-700 hover:opacity-90 active:opacity-100',
     },
   },
-  container: {
-    xl: "gap-10",
-    lg: "gap-8",
-  }
 }
 
 const themeDefaults: ThemeDefaults = {
   button: {
     main: {
       md: true,
-      noShadow: true,
-      pill: true,
+      sharp: true,
       primary: true,
       shadow: true,
     },
   },
   pageTitle: {
     serif: true,
-    xl: true,
+    lg: true,
   },
   sectionTitle: {
     serif: true,
@@ -36,7 +31,7 @@ const themeDefaults: ThemeDefaults = {
     textCenter: true,
   },
   badge: {
-    accent: true,
+    secondary: true,
   }
 }
 

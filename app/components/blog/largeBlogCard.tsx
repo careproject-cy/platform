@@ -31,9 +31,9 @@ export function LargeBlogCard({post}: { post: BlogPostMetadata }) {
       </Link>
       <Col>
         <Badge sm tabletHide hidden={tags.length === 0}>{tags[0]}</Badge>
-        <SectionTitle serif lg textLeft tag={Link} href={`/blog/${id}`}>{title}</SectionTitle>
+        <SectionTitle serif md textLeft tag={Link} href={`/blog/${id}`}>{title}</SectionTitle>
         <Text lg secondary lineClamp3>{desc}</Text>
-        <Text lg secondary semibold>{getDate(post.date)}</Text>
+        <Text secondary semibold>{getDate(post.date)}</Text>
         <Button lg tag={Link} href={`/blog/${id}`}>Read more<ArrowRight/></Button>
       </Col>
     </Row>
