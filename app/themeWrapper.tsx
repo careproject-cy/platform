@@ -16,7 +16,7 @@ const themeDefaults: ThemeDefaults = {
   button: {
     main: {
       md: true,
-      sharp: true,
+      rounded: true,
       primary: true,
       shadow: true,
     },
