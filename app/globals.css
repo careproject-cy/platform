@@ -30,8 +30,6 @@
 
     --rw: 2px;
 
-    --font-serif: "Crimson Pro", serif;
-
     --_gradient-blend-mode: normal; /* or multiply, screen, overlay, etc. */
     --_gradient-blur: 8px;          /* how strong the frosted blur is */
 }
