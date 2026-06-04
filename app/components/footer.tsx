@@ -1,6 +1,6 @@
 'use client'
 
-import { Container, Link as VLink, Section, Text, Col, Row, Title, Card, IconButton } from "@vaneui/ui"
+import { Container, Link as VLink, Section, Text, Col, Row, Title, IconButton } from "@vaneui/ui"
 import { platform_name } from "../data/consts"
 import Link from 'next/link'
 import Image from "next/image";
