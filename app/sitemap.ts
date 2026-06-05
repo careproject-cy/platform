@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { fetchDogs, fetchBlogposts } from './data/fetchData'
-import { domain } from './data/consts'
+import { domain, ADOPTED_PAGE_SIZE } from './data/consts'
 
 const baseUrl = `https://${domain}`
 
@@ -43,7 +43,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }))
 
-  const ADOPTED_PAGE_SIZE = 12
   const adoptedCount = dogs.filter((dog) => dog.status === 'Adopted').length
   const adoptedPageCount = Math.max(1, Math.ceil(adoptedCount / ADOPTED_PAGE_SIZE))
   const adoptedRoutes: MetadataRoute.Sitemap = Array.from(

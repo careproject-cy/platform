@@ -5,9 +5,7 @@ import Breadcrumbs from "@/app/components/breadcrumbs"
 import DogCard from "@/app/components/dogCard"
 import Pagination from "@/app/components/pagination"
 import { fetchDogs } from "@/app/data/fetchData"
-import { platform_name } from "@/app/data/consts"
-
-const PAGE_SIZE = 12
+import { platform_name, ADOPTED_PAGE_SIZE as PAGE_SIZE } from "@/app/data/consts"
 
 async function getAdoptedDogs() {
   const dogs = await fetchDogs()
