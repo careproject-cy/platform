@@ -10,7 +10,9 @@ import BlogPostsSection from "./components/sections/blogPostsSection"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: `Home Page | ${platform_name}`,
+    title: `Dog Adoption & Rescue in Cyprus | ${platform_name}`,
+    description:
+      "CARE Project rescues, fosters, and rehomes stray dogs across Cyprus. Meet adoptable dogs, read rescue stories, and help us support animal welfare.",
   };
 }
 

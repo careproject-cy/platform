@@ -5,6 +5,7 @@ import { platform_name } from "@/app/data/consts"
 import { fetchMd } from "@/app/data/fetchData"
 import MdComponent from "@/app/components/md/mdComponent"
 import DonationCard from "@/app/components/donateCard"
+import { getImageSrc } from "@/app/utils/images"
 
 
 interface MdPageProps {
@@ -14,9 +15,19 @@ interface MdPageProps {
 export async function generateMetadata({params}: MdPageProps): Promise<Metadata> {
   const {file} = await params;
   const {frontmatter} = await fetchMd(`data/pages/${file}.md`);
+  const title = (frontmatter.title as string) || "Page";
+  const description = frontmatter.description as string | undefined;
+  const image = frontmatter.imageSrc ? getImageSrc(frontmatter.imageSrc as string) : undefined;
   return {
-    title: `${frontmatter.title || "Page"} | ${platform_name}`,
-    // You can also add description or other meta from frontmatter.
+    title: `${title} | ${platform_name}`,
+    description,
+    alternates: {canonical: `/more/${file}`},
+    openGraph: {
+      title,
+      description,
+      url: `/more/${file}`,
+      ...(image ? {images: [image]} : {}),
+    },
   };
 }
 

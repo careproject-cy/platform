@@ -32,10 +32,17 @@ export async function generateMetadata({params}: IdProps): Promise<Metadata> {
   const imgUrl = getImageSrc(dog.images[0]);
   const url = `https://${domain}/dogs/${location}/${file}`
   
+  const description = dog.status === 'Adopted'
+    ? `${dog.name}, a ${dog.breed}, found a loving forever home through CARE Project's dog rescue in Cyprus.`
+    : `Meet ${dog.name}, a ${getStringFromYears(dog.age)} ${dog.gender.toLowerCase()} ${dog.breed} looking for a home in Cyprus. Learn how to adopt ${dog.name} through CARE Project.`
+
   return {
     title: `${dog.name} | ${dog.breed} | ${platform_name}`,
+    description,
+    alternates: {canonical: `/dogs/${location}/${file}`},
     openGraph: {
       url: url,
+      description,
       images: [
         {
           url: imgUrl || "care-project-social.png",
@@ -94,7 +101,7 @@ export default async function DogPage({params}: IdProps) {
           <Sharer shareText={shareText} url={url}/>
         </Row>
         <Row xl mobileCol itemsStart>
-          <Gallery className="flex-1" images={galleryImages}
+          <Gallery className="flex-1" images={galleryImages} alt={dog.name}
                    chipText={showStatus ? status : undefined}/>
           <Col lg className="flex-1">
             <Col sm>

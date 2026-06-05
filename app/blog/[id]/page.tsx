@@ -23,9 +23,27 @@ export async function generateMetadata({params}: BlogPageProps): Promise<Metadat
   const {id} = await params;
   const posts = await fetchBlogposts();
   const post = posts.find(p => p.filename === `${id}.md`)
+  if (!post) {
+    return {title: `Not found | ${platform_name}`};
+  }
+  const url = `https://${domain}/blog/${id}`;
+  const image = getImageSrc(post.imageSrc);
   return {
-    title: `${post?.title ?? "Page"} | ${platform_name}`,
-    // You can also add description or other meta from frontmatter.
+    title: `${post.title} | ${platform_name}`,
+    description: post.description,
+    alternates: {canonical: `/blog/${id}`},
+    openGraph: {
+      type: 'article',
+      title: post.title,
+      description: post.description,
+      url,
+      images: [image],
+      publishedTime: new Date(post.date).toISOString(),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      images: [image],
+    },
   };
 }
 
@@ -44,8 +62,29 @@ export default async function BlogPage({params}: BlogPageProps) {
 
   const url = `https://${domain}/blog/${post.filename.replace(".md", "")}`;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    image: getImageSrc(post.imageSrc),
+    datePublished: new Date(post.date).toISOString(),
+    url,
+    mainEntityOfPage: url,
+    author: {"@type": "Organization", name: platform_name, url: `https://${domain}`},
+    publisher: {
+      "@type": "Organization",
+      name: platform_name,
+      logo: {"@type": "ImageObject", url: `https://${domain}/logo.png`},
+    },
+  };
+
   return (
     <Section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
+      />
       <Container sm>
         <Col lg>
           <PageTitle>{post.title}</PageTitle>
