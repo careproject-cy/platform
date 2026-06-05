@@ -43,6 +43,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }))
 
+  const ADOPTED_PAGE_SIZE = 12
+  const adoptedCount = dogs.filter((dog) => dog.status === 'Adopted').length
+  const adoptedPageCount = Math.max(1, Math.ceil(adoptedCount / ADOPTED_PAGE_SIZE))
+  const adoptedRoutes: MetadataRoute.Sitemap = Array.from(
+    { length: adoptedPageCount },
+    (_, i) => ({
+      url: `${baseUrl}/adopted/${i + 1}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }),
+  )
+
   const blogRoutes: MetadataRoute.Sitemap = blogPosts
     .filter((post) => post.visible)
     .map((post) => ({
@@ -52,5 +65,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }))
 
-  return [...staticRoutes, ...dogRoutes, ...blogRoutes]
+  return [...staticRoutes, ...adoptedRoutes, ...dogRoutes, ...blogRoutes]
 }
