@@ -32,7 +32,7 @@ export default function GallerySection({images}: GallerySectionProps) {
           </Text>
         </Col>
         <InfiniteGallery images={images} className="w-full"/>
-        <Button lg tag={Link} href="/adopted">
+        <Button lg tag={Link} href="/adopted/1">
           View all adopted dogs <ArrowRight/>
         </Button>
       </Container>

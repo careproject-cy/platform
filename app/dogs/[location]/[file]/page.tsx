@@ -89,7 +89,7 @@ export default async function DogPage({params}: IdProps) {
       <Container lg>
         <Row lg justifyBetween tabletCol wFull>
           <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"},
-            isAdopted ? {href: "/adopted", text: "Adopted Dogs"} : {href: "/dogs", text: "Dogs"},
+            isAdopted ? {href: "/adopted/1", text: "Adopted Dogs"} : {href: "/dogs", text: "Dogs"},
             {href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name}]}/>
           <Sharer shareText={shareText} url={url}/>
         </Row>
