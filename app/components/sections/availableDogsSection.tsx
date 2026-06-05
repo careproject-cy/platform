@@ -28,7 +28,7 @@ export default function AvailableDogsSection({ dogs }: AvailableDogsSectionProps
         </Col>
         <Grid4 xl>
           {dogs.map((dog) => (
-            <DogCard key={dog.filename} {...dog} />
+            <DogCard key={`${dog.location}/${dog.filename}`} {...dog} />
           ))}
         </Grid4>
         <Button lg tag={Link} href="/dogs">
