@@ -9,6 +9,7 @@ interface GalleryProps {
   images: string[]
   className?: string
   chipText?: string
+  alt?: string
 }
 
 const SquareImage = ({ src, alt, size, className, imageClassName, onClick }: { src: string, alt: string, size: number, className?: string, imageClassName?: string, onClick?: React.MouseEventHandler }) => {
@@ -28,7 +29,8 @@ const SquareImage = ({ src, alt, size, className, imageClassName, onClick }: { s
   );
 }
 
-const Gallery: React.FC<GalleryProps> = ({ images, className, chipText }) => {
+const Gallery: React.FC<GalleryProps> = ({ images, className, chipText, alt }) => {
+  const baseAlt = alt || "Photo"
 
   const [visible, setVisible] = useState(0)
   const thumbnailsRef = useRef<HTMLDivElement>(null)
@@ -63,7 +65,7 @@ const Gallery: React.FC<GalleryProps> = ({ images, className, chipText }) => {
             <ChevronRight className="size-6" />
           </button>
           <Col relative overflowHidden>
-            <SquareImage src={images[visible]} alt={`image-${visible}`} size={1000} />
+            <SquareImage src={images[visible]} alt={`${baseAlt} – photo ${visible + 1}`} size={1000} />
             {chipText &&
               <Chip lg semibold absolute sans className="right-2 bottom-2 opacity-75">{chipText}</Chip>
             }
@@ -72,10 +74,10 @@ const Gallery: React.FC<GalleryProps> = ({ images, className, chipText }) => {
         <Row sm ref={thumbnailsRef} overflowXHidden className="max-md:overflow-x-scroll">
           {images.map((src, idx) => (
             <Image key={idx}
-              loading='eager'
+              loading='lazy'
               onClick={() => setVisible(idx)}
               src={src}
-              alt={`Image ${idx}`}
+              alt={`${baseAlt} – thumbnail ${idx + 1}`}
               width={400}
               height={400}
               sizes="(max-width: 768px) 100vw, 50vw"
