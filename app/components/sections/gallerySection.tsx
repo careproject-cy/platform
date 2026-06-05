@@ -1,3 +1,5 @@
+"use client"
+
 import InfiniteGallery from '../infiniteGallery'
 import Link from 'next/link'
 import {
