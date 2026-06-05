@@ -7,17 +7,21 @@ import { DogMetadata } from "../data/dogMetadata"
 import { Chip } from "@vaneui/ui"
 import { getStringFromYears } from "../utils/dateUtils"
 
-export default function DogCard(dog: DogMetadata) {
+export default function DogCard(dog: DogMetadata & { adoptedView?: boolean }) {
   const dogImages = dog.images.map((image) => getImageSrc(image));
   const status = dog.status
   const name = dog.name
   const breed = dog.breed
   const age = dog.age
   const gender = dog.gender
-  const notAvailable = status === 'Not available' || status === 'Adopted'
+  const adoptedView = dog.adoptedView ?? false
+  const isAdopted = status === 'Adopted'
+  // 'Not available' is always hidden. Adopted dogs are hidden everywhere
+  // EXCEPT when a caller explicitly opts in via adoptedView (the /adopted grid).
+  const hidden = status === 'Not available' || (isAdopted && !adoptedView)
   const showStatus = status !== 'Available'
   return (
-    notAvailable ? null :
+    hidden ? null :
       <Link href={`/dogs/${dog.location}/${dog.filename.replace(".md", "")}`} className="w-full">
         <Col xl>
           <Col lg relative className="hover:scale-102 transition-all duration-200">
