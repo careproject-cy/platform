@@ -100,7 +100,7 @@ export default async function DogPage({params}: IdProps) {
             <Col sm>
               <PageTitle>{dog.name}</PageTitle>
               {isAdopted &&
-                <Text lg semibold accent>🐾 Found their forever home</Text>
+                <Text lg semibold accent><span aria-hidden="true">🐾</span> Found their forever home</Text>
               }
               <Row itemsCenter justifyBetween>
                 <Text semibold lg>{sizeText}</Text>
