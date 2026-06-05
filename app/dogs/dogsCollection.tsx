@@ -54,7 +54,7 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
       </Row>
       <Grid4 xl>
         {displayedDogs.map((dog) => (
-          <DogCard key={dog.filename} {...dog} />
+          <DogCard key={`${dog.location}/${dog.filename}`} {...dog} />
         ))}
       </Grid4>
       {visibleDogs < filteredDogs.length && (
