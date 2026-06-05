@@ -82,15 +82,15 @@ export default async function DogPage({params}: IdProps) {
 
   const status = dog.status
   const showStatus = status !== 'Available'
+  const isAdopted = status === 'Adopted'
 
   return (
     <Section>
       <Container lg>
         <Row lg justifyBetween tabletCol wFull>
-          <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {
-            href: "/dogs",
-            text: "Dogs"
-          }, {href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name}]}/>
+          <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"},
+            isAdopted ? {href: "/adopted", text: "Adopted Dogs"} : {href: "/dogs", text: "Dogs"},
+            {href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name}]}/>
           <Sharer shareText={shareText} url={url}/>
         </Row>
         <Row xl mobileCol itemsStart>
@@ -99,6 +99,9 @@ export default async function DogPage({params}: IdProps) {
           <Col lg className="flex-1">
             <Col sm>
               <PageTitle>{dog.name}</PageTitle>
+              {isAdopted &&
+                <Text lg semibold accent>🐾 Found their forever home</Text>
+              }
               <Row itemsCenter justifyBetween>
                 <Text semibold lg>{sizeText}</Text>
                 <Chip semibold lg>{dog.gender}</Chip>
@@ -112,22 +115,26 @@ export default async function DogPage({params}: IdProps) {
             <Col lg>
               <MdComponent md={content}/>
             </Col>
-            <Divider/>
-            <Col>
-              <Title xs secondary>
-                Added at {getDate(dog.added)}
-              </Title>
-              <Text sm secondary>
-                Please note that the information about the dog is collected at the time the dog was added to the
-                website meaning some of the data may not be accurate.
-              </Text>
-            </Col>
+            {!isAdopted &&
+              <>
+                <Divider/>
+                <Col>
+                  <Title xs secondary>
+                    Added at {getDate(dog.added)}
+                  </Title>
+                  <Text sm secondary>
+                    Please note that the information about the dog is collected at the time the dog was added to the
+                    website meaning some of the data may not be accurate.
+                  </Text>
+                </Col>
+              </>
+            }
           </Col>
         </Row>
         {similarDogs.length !== 0 &&
           <Col xl itemsCenter wFull className="gap-10 pb-10">
             <Divider/>
-            <SectionTitle>Similar dogs</SectionTitle>
+            <SectionTitle>{isAdopted ? "Dogs still looking for a home" : "Similar dogs"}</SectionTitle>
             <Grid3 xl wFull>
               {similarDogs.map((dog) => (
                 <DogCard key={dog.filename} {...dog} />
