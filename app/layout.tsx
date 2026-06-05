@@ -9,6 +9,7 @@ import { Col } from "@vaneui/ui";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 import CTACard from "@/app/components/callToActionCard";
+import StructuredData from "@/app/components/structuredData";
 
 const sans = Open_Sans({
   variable: "--font-sans",
@@ -60,6 +61,7 @@ export default function RootLayout(
       <script src="https://analytics.ahrefs.com/analytics.js" data-key="j+/2DiRHjgrgVvAfvvGKDw" async></script>
     </head>
     <body className={`${mono.variable} ${sans.variable} ${serif.variable} antialiased font-sans`}>
+    <StructuredData/>
     <ThemeWrapper>
       <Col className="min-h-screen" noGap>
         <Header/>

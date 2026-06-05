@@ -1,0 +1,15 @@
+# CARE Project
+
+> CARE (Cyprus Animals Rescue Effort) Project is a UANA Foundation initiative that rescues, fosters, and rehomes stray dogs in Cyprus. Run by volunteers, it provides medical care and rehabilitation and promotes adoption across the island.
+
+## Main pages
+- [Adoptable dogs](https://careproject.cy/dogs): Dogs currently available for adoption in Cyprus
+- [Adopted dogs](https://careproject.cy/adopted/1): Success stories of dogs who found their forever homes
+- [Blog](https://careproject.cy/blog): Rescue stories and practical pet-care guides
+- [About](https://careproject.cy/more/about): Who we are and what we do
+
+## How to help
+- [Adopt](https://careproject.cy/more/adopt): How to adopt a rescued dog
+- [Foster](https://careproject.cy/more/foster): How to foster a dog
+- [Donate](https://careproject.cy/more/donate): Support our rescue work
+- [Get involved](https://careproject.cy/more/get-involved): Volunteer and other ways to help
