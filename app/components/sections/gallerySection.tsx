@@ -1,11 +1,14 @@
 import InfiniteGallery from '../infiniteGallery'
+import Link from 'next/link'
 import {
+  Button,
   Col,
   Container,
   Section,
   SectionTitle,
   Text,
 } from "@vaneui/ui"
+import { ArrowRight } from "react-feather"
 
 interface GalleryImage {
   src: string
@@ -27,6 +30,9 @@ export default function GallerySection({images}: GallerySectionProps) {
           </Text>
         </Col>
         <InfiniteGallery images={images} className="w-full"/>
+        <Button lg tag={Link} href="/adopted">
+          View all adopted dogs <ArrowRight/>
+        </Button>
       </Container>
     </Section>
   )
