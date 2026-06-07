@@ -3,6 +3,16 @@
 
 @source "../node_modules/@vaneui/ui";
 
+/* Register VaneUI's responsive breakpoints so Tailwind generates the
+   max-mobile / max-tablet / max-desktop variants its layout props rely on
+   (mobileCol, tabletCol, mobileHide, responsive padding/gap/font-size, etc.).
+   Values match VaneUI's contract: mobile 48rem, tablet 64rem, desktop 80rem. */
+@theme {
+    --breakpoint-mobile: 48rem;
+    --breakpoint-tablet: 64rem;
+    --breakpoint-desktop: 80rem;
+}
+
 :root {
     --background: #ffffff;
     --foreground: #171717;
