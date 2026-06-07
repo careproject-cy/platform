@@ -4,13 +4,20 @@ import Link from 'next/link'
 import Logo from "./logo"
 import { Row } from "@vaneui/ui"
 import { Button } from "@vaneui/ui"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { usePathname } from 'next/navigation'
 import { Heart } from 'react-feather';
 
 export default function Layout() {
   const [isVisible, setIsVisible] = useState(false)
   const pathname = usePathname()
+
+  // The header lives in the root layout and persists across App Router
+  // navigations, so the mobile menu would stay open after tapping a link.
+  // Close it whenever the route changes.
+  useEffect(() => {
+    setIsVisible(false)
+  }, [pathname])
 
   return (
     <Row itemsCenter justifyBetween relative wFull className="border-b px-4 py-2 bg-white" tag={'header'} desktopCol>
