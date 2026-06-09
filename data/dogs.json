@@ -1,37 +1,5 @@
 [
   {
-    "filename": "abi.md",
-    "location": "mesageitonia",
-    "name": "Abi",
-    "breed": "Mixed breed",
-    "age": 0.4,
-    "gender": "female",
-    "status": "Available",
-    "images": [
-      "img/mesageitonia/abi/adopt-dont-shop.jpg",
-      "img/mesageitonia/abi/mixed-breed.jpg"
-    ],
-    "size": "medium",
-    "added": "2026-05-19T00:00:00.000Z"
-  },
-  {
-    "filename": "aster.md",
-    "location": "mesageitonia",
-    "name": "Aster",
-    "breed": "Mixed breed",
-    "age": 1.5,
-    "gender": "female",
-    "status": "Available",
-    "images": [
-      "img/mesageitonia/aster/adopt-dont-shop.jpeg",
-      "img/mesageitonia/aster/smilie-dog.jpeg",
-      "img/mesageitonia/aster/black-dog.jpg",
-      "img/mesageitonia/aster/dog-in-the-cage.jpg"
-    ],
-    "size": "small",
-    "added": "2026-04-16T00:00:00.000Z"
-  },
-  {
     "filename": "bailey.md",
     "location": "mesageitonia",
     "name": "Bailey",
@@ -66,6 +34,34 @@
     "added": "2025-05-17T00:00:00.000Z"
   },
   {
+    "filename": "chesty.md",
+    "location": "mesageitonia",
+    "name": "Chesty",
+    "breed": "Mixed breed",
+    "age": 0.25,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/chesty/chesty-puppy.jpeg"
+    ],
+    "size": "small",
+    "added": "2026-06-09T00:00:00.000Z"
+  },
+  {
+    "filename": "coco.md",
+    "location": "mesageitonia",
+    "name": "Coco",
+    "breed": "Mixed breed",
+    "age": 0.25,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/coco/coco-puppy.jpeg"
+    ],
+    "size": "small",
+    "added": "2026-06-09T00:00:00.000Z"
+  },
+  {
     "filename": "danny.md",
     "location": "mesageitonia",
     "name": "Danny",
@@ -81,6 +77,20 @@
     ],
     "size": "small",
     "added": "2026-04-17T00:00:00.000Z"
+  },
+  {
+    "filename": "hazel.md",
+    "location": "mesageitonia",
+    "name": "Hazel",
+    "breed": "Mixed breed",
+    "age": 0.25,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/hazel/hazel-puppy.jpeg"
+    ],
+    "size": "small",
+    "added": "2026-06-09T00:00:00.000Z"
   },
   {
     "filename": "indy.md",
@@ -133,20 +143,18 @@
     "added": "2026-04-01T00:00:00.000Z"
   },
   {
-    "filename": "karma.md",
+    "filename": "kaju.md",
     "location": "mesageitonia",
-    "name": "Karma",
+    "name": "Kaju",
     "breed": "Mixed breed",
-    "age": 1,
-    "gender": "female",
-    "status": "Reserved",
+    "age": 0.25,
+    "gender": "male",
+    "status": "Available",
     "images": [
-      "img/mesageitonia/karma/karma-female.jpg",
-      "img/mesageitonia/karma/adopt-dog.jpg",
-      "img/mesageitonia/karma/after-surgery.jpg"
+      "img/mesageitonia/kaju/kaju-puppy.jpeg"
     ],
-    "size": "medium",
-    "added": "2026-01-10T00:00:00.000Z"
+    "size": "small",
+    "added": "2026-06-09T00:00:00.000Z"
   },
   {
     "filename": "kiara.md",
@@ -225,6 +233,20 @@
     "added": "2025-06-15T00:00:00.000Z"
   },
   {
+    "filename": "pina.md",
+    "location": "mesageitonia",
+    "name": "Pina",
+    "breed": "Mixed breed",
+    "age": 0.25,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/pina/pina-puppy.jpeg"
+    ],
+    "size": "small",
+    "added": "2026-06-09T00:00:00.000Z"
+  },
+  {
     "filename": "sarabi.md",
     "location": "mesageitonia",
     "name": "Sarabi",
@@ -282,23 +304,6 @@
     "added": "2026-04-01T00:00:00.000Z"
   },
   {
-    "filename": "bear.md",
-    "location": "germasogeia",
-    "name": "Bear",
-    "breed": "Chow-chow mixed",
-    "age": 3,
-    "gender": "male",
-    "status": "Available",
-    "images": [
-      "img/germasogeia/bear/smilie-boy.jpeg",
-      "img/germasogeia/bear/happy-boy.jpg",
-      "img/germasogeia/bear/adopt-dog.jpg",
-      "img/germasogeia/bear/chow-chow-mixed.jpeg"
-    ],
-    "size": "medium",
-    "added": "2026-04-07T00:00:00.000Z"
-  },
-  {
     "filename": "brando.md",
     "location": "germasogeia",
     "name": "Brando",
@@ -339,7 +344,7 @@
     "breed": "Mixed breed",
     "age": 2,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/buffy/handsome-boy.jpg",
       "img/germasogeia/buffy/foster-adopt-dog.jpg",
@@ -399,23 +404,6 @@
     ],
     "size": "medium",
     "added": "2026-03-18T00:00:00.000Z"
-  },
-  {
-    "filename": "harris.md",
-    "location": "germasogeia",
-    "name": "Harris",
-    "breed": "Pointer mixed",
-    "age": 0.7,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/germasogeia/harris/abandoned-dog.jpg",
-      "img/germasogeia/harris/pointer-mix.jpg",
-      "img/germasogeia/harris/shelter-pound-limassol.jpg",
-      "img/germasogeia/harris/puppy-in-the-cage.jpg"
-    ],
-    "size": "medium",
-    "added": "2026-02-11T00:00:00.000Z"
   },
   {
     "filename": "mailo.md",
@@ -487,6 +475,21 @@
     ],
     "size": "large",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "abi.md",
+    "location": "adopted",
+    "name": "Abi",
+    "breed": "Mixed breed",
+    "age": 0.4,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/abi/adopt-dont-shop.jpg",
+      "img/mesageitonia/abi/mixed-breed.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-05-19T00:00:00.000Z"
   },
   {
     "filename": "alfie.md",
@@ -570,6 +573,23 @@
     "added": "2026-01-01T00:00:00.000Z"
   },
   {
+    "filename": "aster.md",
+    "location": "adopted",
+    "name": "Aster",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/aster/adopt-dont-shop.jpeg",
+      "img/mesageitonia/aster/smilie-dog.jpeg",
+      "img/mesageitonia/aster/black-dog.jpg",
+      "img/mesageitonia/aster/dog-in-the-cage.jpg"
+    ],
+    "size": "small",
+    "added": "2026-04-16T00:00:00.000Z"
+  },
+  {
     "filename": "axel.md",
     "location": "adopted",
     "name": "Axel",
@@ -620,6 +640,23 @@
     ],
     "size": "large",
     "added": "2025-04-14T00:00:00.000Z"
+  },
+  {
+    "filename": "bear.md",
+    "location": "adopted",
+    "name": "Bear",
+    "breed": "Chow-chow mixed",
+    "age": 3,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/bear/smilie-boy.jpeg",
+      "img/germasogeia/bear/happy-boy.jpg",
+      "img/germasogeia/bear/adopt-dog.jpg",
+      "img/germasogeia/bear/chow-chow-mixed.jpeg"
+    ],
+    "size": "medium",
+    "added": "2026-04-07T00:00:00.000Z"
   },
   {
     "filename": "bella.md",
@@ -932,6 +969,23 @@
     "added": "2025-05-17T00:00:00.000Z"
   },
   {
+    "filename": "harris.md",
+    "location": "adopted",
+    "name": "Harris",
+    "breed": "Pointer mixed",
+    "age": 0.7,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/harris/abandoned-dog.jpg",
+      "img/germasogeia/harris/pointer-mix.jpg",
+      "img/germasogeia/harris/shelter-pound-limassol.jpg",
+      "img/germasogeia/harris/puppy-in-the-cage.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-02-11T00:00:00.000Z"
+  },
+  {
     "filename": "javier.md",
     "location": "adopted",
     "name": "Javier",
@@ -961,6 +1015,22 @@
     ],
     "size": "small",
     "added": "2026-04-21T00:00:00.000Z"
+  },
+  {
+    "filename": "karma.md",
+    "location": "adopted",
+    "name": "Karma",
+    "breed": "Mixed breed",
+    "age": 1,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/karma/karma-female.jpg",
+      "img/mesageitonia/karma/adopt-dog.jpg",
+      "img/mesageitonia/karma/after-surgery.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-01-10T00:00:00.000Z"
   },
   {
     "filename": "kayla.md",
