@@ -3,7 +3,7 @@
   breed: Pointer mixed
   age: 0.7
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/harris/abandoned-dog.jpg,
     img/germasogeia/harris/pointer-mix.jpg,

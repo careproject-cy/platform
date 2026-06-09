@@ -3,7 +3,7 @@
   breed: Chow-chow mixed
   age: 3
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/bear/smilie-boy.jpeg,
     img/germasogeia/bear/happy-boy.jpg,

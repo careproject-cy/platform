@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 2
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/buffy/handsome-boy.jpg,
     img/germasogeia/buffy/foster-adopt-dog.jpg,

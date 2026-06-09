@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 0.4
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/abi/adopt-dont-shop.jpg,
     img/mesageitonia/abi/mixed-breed.jpg,

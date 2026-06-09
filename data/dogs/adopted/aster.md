@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 1.5
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/aster/adopt-dont-shop.jpeg,
     img/mesageitonia/aster/smilie-dog.jpeg,
