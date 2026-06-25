@@ -6,7 +6,7 @@
     "breed": "Hound mixed",
     "age": 1.5,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/bailey/hound-dog-cyprus.jpg",
       "img/mesageitonia/bailey/boy-shelter.jpeg",
@@ -163,7 +163,7 @@
     "breed": "German Shepherd mixed",
     "age": 0.16,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/kiara/kiara-puppy.jpg"
     ],
@@ -191,7 +191,7 @@
     "breed": "German Shepherd mixed",
     "age": 0.2,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/nala/nala-puppy.jpg"
     ],
@@ -253,7 +253,7 @@
     "breed": "German Shepherd mixed",
     "age": 0.16,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/sarabi/sarabi-puppy.jpg"
     ],
@@ -281,7 +281,7 @@
     "breed": "German Shepherd mixed",
     "age": 0.16,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/zira/zira-puppy.jpg"
     ],
@@ -429,7 +429,7 @@
     "breed": "Mixed breed",
     "age": 1,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/germasogeia/oliver/beutiful-boy.jpg",
       "img/germasogeia/oliver/smile-dog.jpg",
