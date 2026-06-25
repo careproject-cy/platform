@@ -3,7 +3,7 @@
   breed: Hound mixed
   age: 1.5
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/bailey/hound-dog-cyprus.jpg,
     img/mesageitonia/bailey/boy-shelter.jpeg,

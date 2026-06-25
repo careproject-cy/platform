@@ -3,7 +3,7 @@
   breed: German Shepherd mixed
   age: 0.16
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/zira/zira-puppy.jpg
   ]
