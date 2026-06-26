@@ -1,7 +1,7 @@
 ---
   name: Diana
   breed: Mixed breed
-  age: 4
+  age: 1.5
   gender: female
   status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
