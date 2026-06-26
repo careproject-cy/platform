@@ -247,6 +247,22 @@
     "added": "2026-06-09T00:00:00.000Z"
   },
   {
+    "filename": "ramos.md",
+    "location": "mesageitonia",
+    "name": "Ramos",
+    "breed": "Hound mixed",
+    "age": 10,
+    "gender": "male",
+    "status": "Available",
+    "images": [
+      "img/mesageitonia/ramos/boy-shelter.jpeg",
+      "img/mesageitonia/ramos/hound-dog-cyprus.jpeg",
+      "img/mesageitonia/ramos/male-adopt.jpeg"
+    ],
+    "size": "medium",
+    "added": "2026-06-26T00:00:00.000Z"
+  },
+  {
     "filename": "sarabi.md",
     "location": "mesageitonia",
     "name": "Sarabi",
@@ -376,7 +392,7 @@
     "location": "germasogeia",
     "name": "Diana",
     "breed": "Mixed breed",
-    "age": 4,
+    "age": 1.5,
     "gender": "female",
     "status": "Available",
     "images": [
@@ -387,6 +403,23 @@
     ],
     "size": "medium",
     "added": "2026-05-01T00:00:00.000Z"
+  },
+  {
+    "filename": "gina.md",
+    "location": "germasogeia",
+    "name": "Gina",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/ginas/happy-girl.jpg",
+      "img/germasogeia/ginas/girl-adopt.jpg",
+      "img/germasogeia/ginas/cyprus-shelters.jpg",
+      "img/germasogeia/ginas/dog-in-the-cage.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-06-20T00:00:00.000Z"
   },
   {
     "filename": "ginger.md",
@@ -406,6 +439,40 @@
     "added": "2026-03-18T00:00:00.000Z"
   },
   {
+    "filename": "goldie.md",
+    "location": "germasogeia",
+    "name": "Goldie",
+    "breed": "Mixed breed",
+    "age": 2,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/goldie/goldie-adopt.jpg",
+      "img/germasogeia/goldie/girl-adopt.jpg",
+      "img/germasogeia/goldie/cyprus-shelters.jpg",
+      "img/germasogeia/goldie/happy-girl.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-06-15T00:00:00.000Z"
+  },
+  {
+    "filename": "luna.md",
+    "location": "germasogeia",
+    "name": "Luna",
+    "breed": "Mixed breed",
+    "age": 1.5,
+    "gender": "female",
+    "status": "Available",
+    "images": [
+      "img/germasogeia/lunas/beautiful-girl.jpg",
+      "img/germasogeia/lunas/smilie-luna.jpg",
+      "img/germasogeia/lunas/shelter-dog.jpg",
+      "img/germasogeia/lunas/adopt-dog.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-05-01T00:00:00.000Z"
+  },
+  {
     "filename": "mailo.md",
     "location": "germasogeia",
     "name": "Mailo",
@@ -421,6 +488,23 @@
     ],
     "size": "small",
     "added": "2026-05-01T00:00:00.000Z"
+  },
+  {
+    "filename": "mars.md",
+    "location": "germasogeia",
+    "name": "Mars",
+    "breed": "Cyprus poodle",
+    "age": 2,
+    "gender": "male",
+    "status": "Reserved",
+    "images": [
+      "img/germasogeia/mars/abandoned-dog.jpg",
+      "img/germasogeia/mars/male-for-adopt.jpg",
+      "img/germasogeia/mars/mars-adopt-cyprus.jpg",
+      "img/germasogeia/mars/sad-boy-adopt.jpg"
+    ],
+    "size": "small",
+    "added": "2026-06-01T00:00:00.000Z"
   },
   {
     "filename": "oliver.md",
