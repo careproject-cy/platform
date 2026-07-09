@@ -6,7 +6,7 @@
     "breed": "Hound mixed",
     "age": 1.5,
     "gender": "male",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/mesageitonia/bailey/hound-dog-cyprus.jpg",
       "img/mesageitonia/bailey/boy-shelter.jpeg",
@@ -40,7 +40,7 @@
     "breed": "Mixed breed",
     "age": 0.25,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/chesty/chesty-puppy.jpeg"
     ],
@@ -54,7 +54,7 @@
     "breed": "Mixed breed",
     "age": 0.25,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/coco/coco-puppy.jpeg"
     ],
@@ -68,7 +68,7 @@
     "breed": "Mixed breed",
     "age": 1.5,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/danny/happy-boy.jpg",
       "img/mesageitonia/danny/adopt-dog.jpg",
@@ -85,7 +85,7 @@
     "breed": "Mixed breed",
     "age": 0.25,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/hazel/hazel-puppy.jpeg"
     ],
@@ -149,7 +149,7 @@
     "breed": "Mixed breed",
     "age": 0.25,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/kaju/kaju-puppy.jpeg"
     ],
@@ -163,7 +163,7 @@
     "breed": "German Shepherd mixed",
     "age": 0.16,
     "gender": "female",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/mesageitonia/kiara/kiara-puppy.jpg"
     ],
@@ -191,7 +191,7 @@
     "breed": "German Shepherd mixed",
     "age": 0.2,
     "gender": "female",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/mesageitonia/nala/nala-puppy.jpg"
     ],
@@ -239,7 +239,7 @@
     "breed": "Mixed breed",
     "age": 0.25,
     "gender": "female",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/pina/pina-puppy.jpeg"
     ],
@@ -283,7 +283,7 @@
     "breed": "German Shepherd mixed",
     "age": 0.16,
     "gender": "male",
-    "status": "Available",
+    "status": "Reserved",
     "images": [
       "img/mesageitonia/zazu/zazu-puppy.jpg"
     ],
@@ -297,7 +297,7 @@
     "breed": "German Shepherd mixed",
     "age": 0.16,
     "gender": "female",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/mesageitonia/zira/zira-puppy.jpg"
     ],
@@ -496,7 +496,7 @@
     "breed": "Cyprus poodle",
     "age": 2,
     "gender": "male",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/germasogeia/mars/abandoned-dog.jpg",
       "img/germasogeia/mars/male-for-adopt.jpg",
@@ -513,7 +513,7 @@
     "breed": "Mixed breed",
     "age": 1,
     "gender": "male",
-    "status": "Reserved",
+    "status": "Adopted",
     "images": [
       "img/germasogeia/oliver/beutiful-boy.jpg",
       "img/germasogeia/oliver/smile-dog.jpg",
