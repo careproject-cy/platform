@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 0.25
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/coco/coco-puppy.jpeg
   ]

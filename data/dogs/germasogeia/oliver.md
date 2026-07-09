@@ -3,7 +3,7 @@
   breed:  Mixed breed
   age: 1
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/oliver/beutiful-boy.jpg,
     img/germasogeia/oliver/smile-dog.jpg,

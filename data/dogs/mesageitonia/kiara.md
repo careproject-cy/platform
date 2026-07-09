@@ -3,7 +3,7 @@
   breed: German Shepherd mixed
   age: 0.16
   gender: female
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/kiara/kiara-puppy.jpg
   ]

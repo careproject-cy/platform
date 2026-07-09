@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 1.5
   gender: male
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/danny/happy-boy.jpg,
     img/mesageitonia/danny/adopt-dog.jpg,
