@@ -1,22 +1,5 @@
 [
   {
-    "filename": "bailey.md",
-    "location": "mesageitonia",
-    "name": "Bailey",
-    "breed": "Hound mixed",
-    "age": 1.5,
-    "gender": "male",
-    "status": "Adopted",
-    "images": [
-      "img/mesageitonia/bailey/hound-dog-cyprus.jpg",
-      "img/mesageitonia/bailey/boy-shelter.jpeg",
-      "img/mesageitonia/bailey/male-adopt.jpeg",
-      "img/mesageitonia/bailey/smilie-boy.jpg"
-    ],
-    "size": "medium",
-    "added": "2026-02-01T00:00:00.000Z"
-  },
-  {
     "filename": "charlie.md",
     "location": "mesageitonia",
     "name": "Charlie",
@@ -99,7 +82,7 @@
     "breed": "German Shepherd",
     "age": 4,
     "gender": "female",
-    "status": "Available",
+    "status": "Adopted",
     "images": [
       "img/mesageitonia/indy/mommy-dog.jpg",
       "img/mesageitonia/indy/smilie-dog.jpg",
@@ -157,20 +140,6 @@
     "added": "2026-06-09T00:00:00.000Z"
   },
   {
-    "filename": "kiara.md",
-    "location": "mesageitonia",
-    "name": "Kiara",
-    "breed": "German Shepherd mixed",
-    "age": 0.16,
-    "gender": "female",
-    "status": "Adopted",
-    "images": [
-      "img/mesageitonia/kiara/kiara-puppy.jpg"
-    ],
-    "size": "large",
-    "added": "2026-05-18T00:00:00.000Z"
-  },
-  {
     "filename": "mufasa.md",
     "location": "mesageitonia",
     "name": "Mufasa",
@@ -180,20 +149,6 @@
     "status": "Available",
     "images": [
       "img/mesageitonia/mufasa/mufasa-puppy.jpg"
-    ],
-    "size": "large",
-    "added": "2026-05-18T00:00:00.000Z"
-  },
-  {
-    "filename": "nala.md",
-    "location": "mesageitonia",
-    "name": "Nala",
-    "breed": "German Shepherd mixed",
-    "age": 0.2,
-    "gender": "female",
-    "status": "Adopted",
-    "images": [
-      "img/mesageitonia/nala/nala-puppy.jpg"
     ],
     "size": "large",
     "added": "2026-05-18T00:00:00.000Z"
@@ -272,34 +227,6 @@
     "status": "Reserved",
     "images": [
       "img/mesageitonia/sarabi/sarabi-puppy.jpg"
-    ],
-    "size": "large",
-    "added": "2026-05-18T00:00:00.000Z"
-  },
-  {
-    "filename": "zazu.md",
-    "location": "mesageitonia",
-    "name": "Zazu",
-    "breed": "German Shepherd mixed",
-    "age": 0.16,
-    "gender": "male",
-    "status": "Reserved",
-    "images": [
-      "img/mesageitonia/zazu/zazu-puppy.jpg"
-    ],
-    "size": "large",
-    "added": "2026-05-18T00:00:00.000Z"
-  },
-  {
-    "filename": "zira.md",
-    "location": "mesageitonia",
-    "name": "Zira",
-    "breed": "German Shepherd mixed",
-    "age": 0.16,
-    "gender": "female",
-    "status": "Adopted",
-    "images": [
-      "img/mesageitonia/zira/zira-puppy.jpg"
     ],
     "size": "large",
     "added": "2026-05-18T00:00:00.000Z"
@@ -437,23 +364,6 @@
     ],
     "size": "medium",
     "added": "2026-03-18T00:00:00.000Z"
-  },
-  {
-    "filename": "goldie.md",
-    "location": "germasogeia",
-    "name": "Goldie",
-    "breed": "Mixed breed",
-    "age": 2,
-    "gender": "female",
-    "status": "Available",
-    "images": [
-      "img/germasogeia/goldie/goldie-adopt.jpg",
-      "img/germasogeia/goldie/girl-adopt.jpg",
-      "img/germasogeia/goldie/cyprus-shelters.jpg",
-      "img/germasogeia/goldie/happy-girl.jpg"
-    ],
-    "size": "medium",
-    "added": "2026-06-15T00:00:00.000Z"
   },
   {
     "filename": "luna.md",
@@ -690,6 +600,23 @@
     ],
     "size": "small",
     "added": "2025-11-17T00:00:00.000Z"
+  },
+  {
+    "filename": "bailey.md",
+    "location": "adopted",
+    "name": "Bailey",
+    "breed": "Hound mixed",
+    "age": 1.5,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/bailey/hound-dog-cyprus.jpg",
+      "img/mesageitonia/bailey/boy-shelter.jpeg",
+      "img/mesageitonia/bailey/male-adopt.jpeg",
+      "img/mesageitonia/bailey/smilie-boy.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-02-01T00:00:00.000Z"
   },
   {
     "filename": "banksy.md",
@@ -1053,6 +980,23 @@
     "added": "2025-05-17T00:00:00.000Z"
   },
   {
+    "filename": "goldie.md",
+    "location": "adopted",
+    "name": "Goldie",
+    "breed": "Mixed breed",
+    "age": 2,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/germasogeia/goldie/goldie-adopt.jpg",
+      "img/germasogeia/goldie/girl-adopt.jpg",
+      "img/germasogeia/goldie/cyprus-shelters.jpg",
+      "img/germasogeia/goldie/happy-girl.jpg"
+    ],
+    "size": "medium",
+    "added": "2026-06-15T00:00:00.000Z"
+  },
+  {
     "filename": "harris.md",
     "location": "adopted",
     "name": "Harris",
@@ -1132,6 +1076,20 @@
     ],
     "size": "medium",
     "added": "2025-02-14T00:00:00.000Z"
+  },
+  {
+    "filename": "kiara.md",
+    "location": "adopted",
+    "name": "Kiara",
+    "breed": "German Shepherd mixed",
+    "age": 0.16,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/kiara/kiara-puppy.jpg"
+    ],
+    "size": "large",
+    "added": "2026-05-18T00:00:00.000Z"
   },
   {
     "filename": "kodi.md",
@@ -1374,6 +1332,20 @@
     ],
     "size": "medium",
     "added": "2025-10-22T00:00:00.000Z"
+  },
+  {
+    "filename": "nala1.md",
+    "location": "adopted",
+    "name": "Nala",
+    "breed": "German Shepherd mixed",
+    "age": 0.2,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/nala/nala-puppy.jpg"
+    ],
+    "size": "large",
+    "added": "2026-05-18T00:00:00.000Z"
   },
   {
     "filename": "nora.md",
@@ -1657,6 +1629,20 @@
     "added": "2025-03-25T00:00:00.000Z"
   },
   {
+    "filename": "zazu.md",
+    "location": "adopted",
+    "name": "Zazu",
+    "breed": "German Shepherd mixed",
+    "age": 0.16,
+    "gender": "male",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/zazu/zazu-puppy.jpg"
+    ],
+    "size": "large",
+    "added": "2026-05-18T00:00:00.000Z"
+  },
+  {
     "filename": "ziggy.md",
     "location": "adopted",
     "name": "Ziggy",
@@ -1672,5 +1658,19 @@
     ],
     "size": "medium",
     "added": "2025-05-15T00:00:00.000Z"
+  },
+  {
+    "filename": "zira.md",
+    "location": "adopted",
+    "name": "Zira",
+    "breed": "German Shepherd mixed",
+    "age": 0.16,
+    "gender": "female",
+    "status": "Adopted",
+    "images": [
+      "img/mesageitonia/zira/zira-puppy.jpg"
+    ],
+    "size": "large",
+    "added": "2026-05-18T00:00:00.000Z"
   }
 ]
