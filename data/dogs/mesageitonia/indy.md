@@ -3,7 +3,7 @@
   breed: German Shepherd
   age: 4
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/indy/mommy-dog.jpg,
     img/mesageitonia/indy/smilie-dog.jpg,

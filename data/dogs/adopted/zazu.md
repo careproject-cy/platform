@@ -3,7 +3,7 @@
   breed: German Shepherd mixed
   age: 0.16
   gender: male
-  status: Reserved # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/mesageitonia/zazu/zazu-puppy.jpg
   ]

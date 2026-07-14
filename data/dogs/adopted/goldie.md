@@ -3,7 +3,7 @@
   breed: Mixed breed
   age: 2
   gender: female
-  status: Available # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
+  status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/goldie/goldie-adopt.jpg,
     img/germasogeia/goldie/girl-adopt.jpg,
