@@ -1,7 +1,8 @@
 @import "tailwindcss";
 @import "@vaneui/ui/vars";
 
-@source "../node_modules/@vaneui/ui";
+/* Relative to this file: app/(frontend)/ -> repo root. */
+@source "../../node_modules/@vaneui/ui";
 
 /* Register VaneUI's responsive breakpoints so Tailwind generates the
    max-mobile / max-tablet / max-desktop variants its layout props rely on
