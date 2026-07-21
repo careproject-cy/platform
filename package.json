@@ -9,8 +9,6 @@
     "start": "npm run lint && npm run typecheck && next start",
     "lint": "eslint app",
     "typecheck": "tsc --noEmit",
-    "generate-blogposts": "npx tsx lib/generateBlogPostsJson.ts",
-    "generate-dogs": "npx tsx lib/generateDogsJson.ts",
     "payload": "payload",
     "generate:types": "payload generate:types",
     "generate:importmap": "payload generate:importmap",

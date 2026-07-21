@@ -6,7 +6,6 @@
   status: Adopted # 'Reserved' | 'In foster care' | 'Available' | 'Not available' | 'Adopted'
   images: [
     img/germasogeia/mars/abandoned-dog.jpg,
-    img/germasogeia/mars/male-for-adopt.jpg,
     img/germasogeia/mars/mars-adopt-cyprus.jpg,
     img/germasogeia/mars/sad-boy-adopt.jpg,
   ]
