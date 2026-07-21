@@ -15,7 +15,12 @@ export const Media: CollectionConfig = {
     mimeTypes: ['image/*'],
     focalPoint: true,
     crop: true,
-    adminThumbnail: 'thumbnail',
+    // Naming a size here yields a relative /api/media/file/... URL, which 500s because
+    // disablePayloadAccessControl means no local file is ever written. Return the CDN URL instead.
+    adminThumbnail: ({ doc }) => {
+      const sizes = doc?.sizes as { thumbnail?: { url?: string | null } } | undefined
+      return sizes?.thumbnail?.url || (doc?.url as string | undefined) || null
+    },
     imageSizes: [
       { name: 'thumbnail', width: 400, height: 300 },
       { name: 'card', width: 768, height: 576 },
