@@ -15,9 +15,10 @@ import { cloudfront_domain, platform_name } from './app/data/consts'
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // Without S3 credentials uploads fall back to local disk, so the app still boots in dev.
+// Use || not ?? - these arrive as empty strings from .env files, which ?? would not replace.
 const s3Enabled = Boolean(process.env.S3_BUCKET)
-const mediaPrefix = process.env.S3_MEDIA_PREFIX ?? 'cms'
-const publicBase = process.env.S3_PUBLIC_BASE_URL ?? `https://${cloudfront_domain}`
+const mediaPrefix = process.env.S3_MEDIA_PREFIX || 'cms'
+const publicBase = process.env.S3_PUBLIC_BASE_URL || `https://${cloudfront_domain}`
 
 export default buildConfig({
   admin: {

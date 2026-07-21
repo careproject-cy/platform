@@ -16,7 +16,7 @@
     "generate:importmap": "payload generate:importmap",
     "migrate": "payload migrate",
     "migrate:create": "payload migrate:create",
-    "import-content": "payload run lib/importContentToPayload.ts"
+    "import-content": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx lib/importContentToPayload.ts"
   },
   "dependencies": {
     "@markdoc/markdoc": "^0.5.0",

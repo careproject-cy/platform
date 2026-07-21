@@ -13,11 +13,24 @@ import { getPayload } from 'payload'
 import config from '../payload.config'
 import { cloudfront_domain } from '../app/data/consts'
 
+// The npm script preloads .env and .env.local via node --env-file-if-exists, because payload.config
+// reads process.env when it is first imported - loading env from inside this file would be too late.
+if (!process.env.S3_BUCKET) {
+  console.error(
+    'S3_BUCKET is not set. Uploads would be silently skipped and every image would 404.\n' +
+      'Set the S3_* variables in .env or .env.local before importing.',
+  )
+  process.exit(1)
+}
+
 type Payload = Awaited<ReturnType<typeof getPayload>>
 type Frontmatter = Record<string, unknown>
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const skipRevalidate = { disableRevalidate: true }
+
+// Must be a fresh object per operation: the cloud-storage plugin mutates the context it is given
+// and sets skipCloudStorage on it, so a shared object silently skips every upload after the first.
+const importContext = () => ({ disableRevalidate: true })
 
 const DOG_STATUSES = ['Available', 'Reserved', 'In foster care', 'Not available', 'Adopted'] as const
 const DOG_SIZES = ['small', 'medium', 'large'] as const
@@ -52,7 +65,7 @@ async function uploadImage(payload: Payload, src: string, alt: string): Promise<
       size: buffer.length,
     },
     overrideAccess: true,
-    context: skipRevalidate,
+    context: importContext(),
   })
 
   mediaCache.set(url, doc.id)
@@ -141,7 +154,7 @@ async function importDogs(payload: Payload) {
         body: content.trim(),
       },
       overrideAccess: true,
-      context: skipRevalidate,
+      context: importContext(),
     })
   }
 }
@@ -183,7 +196,7 @@ async function importPosts(payload: Payload) {
         body: content.trim(),
       },
       overrideAccess: true,
-      context: skipRevalidate,
+      context: importContext(),
     })
   }
 }
