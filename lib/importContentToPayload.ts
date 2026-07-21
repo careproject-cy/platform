@@ -70,10 +70,18 @@ function pickOption<T extends readonly string[]>(
   return found ?? fallback
 }
 
-async function alreadyExists(payload: Payload, collection: 'dogs' | 'posts', slug: string) {
+/** Dog slugs are only unique within a location - /dogs/adopted/luna and /dogs/germasogeia/luna are different dogs. */
+async function alreadyExists(
+  payload: Payload,
+  collection: 'dogs' | 'posts',
+  slug: string,
+  location?: string,
+) {
   const { docs } = await payload.find({
     collection,
-    where: { slug: { equals: slug } },
+    where: location
+      ? { and: [{ slug: { equals: slug } }, { location: { equals: location } }] }
+      : { slug: { equals: slug } },
     limit: 1,
     overrideAccess: true,
   })
@@ -96,8 +104,8 @@ async function importDogs(payload: Payload) {
       'location',
     )
 
-    if (await alreadyExists(payload, 'dogs', slug)) {
-      console.log(`  = ${slug} (exists, skipped)`)
+    if (await alreadyExists(payload, 'dogs', slug, location)) {
+      console.log(`  = ${location}/${slug} (exists, skipped)`)
       continue
     }
 
