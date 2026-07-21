@@ -37,7 +37,7 @@ export default async function HomePage() {
       <HowWeHelpSection/>
       <AvailableDogsSection dogs={dogsToShow}/>
       <GallerySection images={galleryImages}/>
-      <BlogPostsSection latestPost={latestPost} recentPosts={recentPosts}/>
+      {latestPost && <BlogPostsSection latestPost={latestPost} recentPosts={recentPosts}/>}
     </>
   )
 }

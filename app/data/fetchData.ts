@@ -120,6 +120,8 @@ const readBlogposts = cache(async (): Promise<BlogPostMetadata[]> => {
     depth: 1,
     pagination: false,
     sort: '-date',
+    // Hidden posts must stay out of every listing, as the old JSON generator did.
+    where: { visible: { equals: true } },
   });
   return docs.map(toBlogPostMetadata);
 });
