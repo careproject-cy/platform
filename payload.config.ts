@@ -16,6 +16,13 @@ const dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // Without S3 credentials uploads fall back to local disk, so the app still boots in dev.
 // Use || not ?? - these arrive as empty strings from .env files, which ?? would not replace.
+// pg already treats sslmode=require as verify-full but warns that pg v9 will loosen it.
+// Stating verify-full keeps today's behaviour and silences the warning; Neon serves a valid cert.
+const connectionString = (process.env.DATABASE_URL || '').replace(
+  /([?&]sslmode=)(require|prefer|verify-ca)(?=&|$)/,
+  '$1verify-full',
+)
+
 const s3Enabled = Boolean(process.env.S3_BUCKET)
 const mediaPrefix = process.env.S3_MEDIA_PREFIX || 'cms'
 const publicBase = process.env.S3_PUBLIC_BASE_URL || `https://${cloudfront_domain}`
@@ -29,7 +36,7 @@ export default buildConfig({
   collections: [Dogs, Posts, Media, Users],
   editor: lexicalEditor(),
   db: postgresAdapter({
-    pool: { connectionString: process.env.DATABASE_URL ?? '' },
+    pool: { connectionString },
   }),
   secret: process.env.PAYLOAD_SECRET ?? '',
   // The site reads content through the Local API; no public GraphQL surface needed.
