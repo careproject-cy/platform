@@ -5,7 +5,9 @@ export const Posts: CollectionConfig = {
   slug: 'posts',
   labels: { singular: 'Blog post', plural: 'Blog posts' },
   access: {
-    read: () => true,
+    // The site queries through the Local API (overrideAccess), so this only constrains the
+    // public REST API - without it, GET /api/posts serves hidden posts to anyone.
+    read: ({ req: { user } }) => Boolean(user) || { visible: { equals: true } },
     create: ({ req: { user } }) => Boolean(user),
     update: ({ req: { user } }) => Boolean(user),
     delete: ({ req: { user } }) => Boolean(user),
@@ -41,6 +43,7 @@ export const Posts: CollectionConfig = {
       type: 'text',
       required: true,
       index: true,
+      unique: true,
       admin: {
         position: 'sidebar',
         description: 'URL segment, e.g. "2026-07-adoptions" for /blog/2026-07-adoptions.',

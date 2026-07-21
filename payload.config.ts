@@ -10,7 +10,7 @@ import { Dogs } from './collections/Dogs'
 import { Posts } from './collections/Posts'
 import { Media } from './collections/Media'
 import { Users } from './collections/Users'
-import { cloudfront_domain, platform_name } from './app/data/consts'
+import { cloudfront_domain, domain, platform_name } from './app/data/consts'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -27,7 +27,15 @@ const s3Enabled = Boolean(process.env.S3_BUCKET)
 const mediaPrefix = process.env.S3_MEDIA_PREFIX || 'cms'
 const publicBase = process.env.S3_PUBLIC_BASE_URL || `https://${cloudfront_domain}`
 
+const serverURL = process.env.NEXT_PUBLIC_SERVER_URL || `https://${domain}`
+
 export default buildConfig({
+  serverURL,
+  // Without these, csrf is empty (cookie accepted from any Origin) and password-reset links
+  // would be built from the attacker-controllable Host header.
+  cors: [serverURL],
+  csrf: [serverURL],
+  upload: { limits: { fileSize: 8 * 1024 * 1024 } },
   admin: {
     user: Users.slug,
     importMap: { baseDir: path.resolve(dirname) },
@@ -37,6 +45,9 @@ export default buildConfig({
   editor: lexicalEditor(),
   db: postgresAdapter({
     pool: { connectionString },
+    // Dev mode otherwise auto-pushes schema changes straight into whatever DATABASE_URL points at,
+    // which here is production. Schema changes go through migrations only.
+    push: false,
   }),
   secret: process.env.PAYLOAD_SECRET ?? '',
   // The site reads content through the Local API; no public GraphQL surface needed.

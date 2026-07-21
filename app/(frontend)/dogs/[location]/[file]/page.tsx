@@ -82,7 +82,9 @@ export default async function DogPage({params}: IdProps) {
     d.size === dog.size && d.filename !== dog.filename
     && d.status != "Adopted" && d.status != "Not available").slice(0, 9)
 
-  const galleryImages = dog.images.map((image) => getImageSrc(image));
+  const galleryImages = dog.images.length
+    ? dog.images.map((image) => getImageSrc(image))
+    : [getImageSrc(null)];
 
   const shareText = `Check out ${dog.name}!`
   const url = `https://${domain}/dogs/${location}/${file}`

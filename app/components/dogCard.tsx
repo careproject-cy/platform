@@ -8,7 +8,6 @@ import { Chip } from "@vaneui/ui"
 import { getStringFromYears } from "../utils/dateUtils"
 
 export default function DogCard(dog: DogMetadata & { adoptedView?: boolean }) {
-  const dogImages = dog.images.map((image) => getImageSrc(image));
   const status = dog.status
   const name = dog.name
   const breed = dog.breed
@@ -28,7 +27,7 @@ export default function DogCard(dog: DogMetadata & { adoptedView?: boolean }) {
             <Img relative shadow objectCover hAuto wFull
               tag={Image}
               loading='lazy'
-              src={dogImages[0]}
+              src={getImageSrc(dog.images[0])}
               alt={name}
               width={300}
               height={300}

@@ -16,6 +16,9 @@ export const Dogs: CollectionConfig = {
     group: 'Content',
   },
   versions: { drafts: false, maxPerDoc: 50 },
+  // /dogs/[location]/[slug] must resolve to exactly one dog - two Ginas and two Lunas already
+  // exist in different locations, so uniqueness is on the pair, not the slug alone.
+  indexes: [{ fields: ['slug', 'location'], unique: true }],
   hooks: {
     afterChange: [
       async ({ doc, req }) => {
