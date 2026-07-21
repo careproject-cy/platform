@@ -22,7 +22,8 @@ Thank you for your interest in contributing to CARE Project! This platform helps
 | `npm run typecheck` | Run TypeScript type checking |
 | `npm run generate:types` | Regenerate `payload-types.ts` after changing a collection |
 | `npm run migrate:create` | Create a database migration after changing a collection |
-| `npm run migrate` | Apply pending database migrations |
+| `npm run migrate` | Apply pending database migrations (never runs during a build) |
+| `npm run migrate:status` | List migrations and whether each has run |
 | `npm run import-content` | One-off import of the legacy Markdown in `data/` into the CMS |
 
 ### Tech Stack

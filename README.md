@@ -86,6 +86,25 @@ The legacy Markdown in `data/dogs/` and `data/blog/` is kept as the migration so
 npm run import-content
 ```
 
+### Deploying
+
+Builds do **not** run database migrations. Schema changes are applied deliberately, so that a preview
+build of an unmerged branch can never alter the production database and a rolled-back deploy never
+leaves an un-rolled-back schema behind.
+
+When a change adds or alters a collection field:
+
+```bash
+npm run migrate:create <name>   # generate the migration, commit it
+npm run migrate                 # apply it locally
+```
+
+Then, before merging to `main`, apply it to production with `DATABASE_URL` pointing at the production
+database, and confirm with `npm run migrate:status` that every migration reads `Ran: Yes`. Deploy after
+that, never before - the new code expects the new schema.
+
+Migrations read `.env` (not `.env.local`), because that is what the Payload CLI loads.
+
 ### Build
 
 ```bash

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "npm run lint && npm run typecheck && next dev --turbopack",
-    "build": "npm run lint && npm run typecheck && payload migrate && next build",
+    "build": "npm run lint && npm run typecheck && next build",
     "start": "npm run lint && npm run typecheck && next start",
     "lint": "eslint app",
     "typecheck": "tsc --noEmit",
@@ -13,6 +13,7 @@
     "generate:types": "payload generate:types",
     "generate:importmap": "payload generate:importmap",
     "migrate": "payload migrate",
+    "migrate:status": "payload migrate:status",
     "migrate:create": "payload migrate:create",
     "import-content": "node --env-file-if-exists=.env --env-file-if-exists=.env.local --import tsx lib/importContentToPayload.ts"
   },
