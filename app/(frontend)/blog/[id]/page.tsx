@@ -5,7 +5,7 @@ import { Button, Row } from "@vaneui/ui"
 import { Col, Container, Section } from "@vaneui/ui"
 import { PageTitle, SectionTitle, Text } from "@vaneui/ui"
 import MdComponent from "@/app/components/md/mdComponent"
-import { fetchBlogposts, fetchMd } from "@/app/data/fetchData"
+import { fetchBlogposts, fetchPostBody } from "@/app/data/fetchData"
 import Image from "next/image"
 import { getImageSrc } from "@/app/utils/images"
 import { getDate } from "@/app/utils/dateUtils"
@@ -51,7 +51,7 @@ export default async function BlogPage({params}: BlogPageProps) {
   const {id} = await params
   const posts = await fetchBlogposts();
   const post = posts.find(p => p.filename === `${id}.md`)
-  const {content} = await fetchMd(`data/blog/${id}.md`)
+  const content = await fetchPostBody(id)
 
   if (!post || !post.visible) {
     notFound()

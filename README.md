@@ -22,6 +22,8 @@ Every rescue organization deserves a modern adoption platform. Most operate thro
 ## Tech Stack
 
 - [Next.js](https://nextjs.org) 16 (App Router, Turbopack)
+- [Payload CMS](https://payloadcms.com) 3 (dog profiles and blog posts, admin at `/admin`)
+- [Postgres](https://neon.com) (content storage; Neon on Vercel)
 - [VaneUI](https://vaneui.com) (React component library)
 - [Markdoc](https://markdoc.dev) (blog and pages)
 - [Tailwind CSS](https://tailwindcss.com) v4
@@ -54,21 +56,34 @@ cd platform
 npm install
 ```
 
+### Configuration
+
+Copy `.env.example` to `.env` and fill in a Postgres connection string and a Payload secret. Without
+`S3_BUCKET` set, image uploads fall back to local disk, which is fine for development.
+
+```bash
+cp .env.example .env
+npm run migrate
+```
+
 ### Development
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser. The admin panel is at
+[/admin](http://localhost:3000/admin) - the first visit prompts you to create an admin account.
 
-### Content Generation
+### Content
 
-Dog profiles and blog posts are stored as Markdown files in the `data/` directory. After adding or editing content, regenerate the JSON data files:
+Dog profiles and blog posts are managed in the CMS at `/admin` and publish without a deploy. Their body
+text is Markdown, rendered through Markdoc. Static pages remain Markdown files in `data/pages/`.
+
+The legacy Markdown in `data/dogs/` and `data/blog/` is kept as the migration source; import it once with:
 
 ```bash
-npm run generate-dogs
-npm run generate-blogposts
+npm run import-content
 ```
 
 ### Build
@@ -82,21 +97,21 @@ npm run build
 ```
 careproject/
   app/
+    (frontend)/       # The public website
+      blog/           # Blog pages
+      dogs/           # Dog profile pages
+      more/           # Static pages (adopt, foster, donate, etc.)
+    (payload)/        # CMS admin panel and REST API
     components/       # React components (header, footer, dog cards, etc.)
     data/             # Constants and data fetching utilities
-    blog/             # Blog pages
-    dogs/             # Dog profile pages
-    more/             # Static pages (adopt, foster, donate, etc.)
+  collections/        # Payload collections (dogs, posts, media, users)
+  payload.config.ts   # CMS configuration
   data/
-    dogs/             # Dog profiles as Markdown files
-      adopted/        # Successfully adopted dogs
-      germasogeia/    # Dogs from Germasogeia shelter
-      mesageitonia/   # Dogs from Mesageitonia shelter
-      other/          # Dogs from other locations
-    blog/             # Blog posts as Markdown files
+    dogs/             # Legacy dog Markdown, kept as the migration source
+    blog/             # Legacy blog Markdown, kept as the migration source
     pages/            # Static page content as Markdown
   public/             # Static assets (logos, images)
-  lib/                # Data generation scripts
+  lib/                # Content import and generation scripts
 ```
 
 ## UANA Foundation

@@ -32,6 +32,10 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# payload local upload fallback (used only when S3 is not configured)
+/media
 
 # vercel
 .vercel

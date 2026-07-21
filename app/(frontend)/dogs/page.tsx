@@ -1,8 +1,8 @@
 import { Container, Section } from "@vaneui/ui"
 import { PageTitle } from "@vaneui/ui"
-import { fetchDogs } from "../data/fetchData"
+import { fetchDogs } from "@/app/data/fetchData"
 import DogsCollection from "./dogsCollection"
-import { platform_name } from "../data/consts"
+import { platform_name } from "@/app/data/consts"
 import { Metadata } from "next"
 
 export async function generateMetadata(): Promise<Metadata> {

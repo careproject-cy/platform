@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
-import { fetchDogs, fetchBlogposts } from './data/fetchData'
-import { domain, ADOPTED_PAGE_SIZE } from './data/consts'
+import { fetchDogs, fetchBlogposts } from '@/app/data/fetchData'
+import { domain, ADOPTED_PAGE_SIZE } from '@/app/data/consts'
 
 const baseUrl = `https://${domain}`
 

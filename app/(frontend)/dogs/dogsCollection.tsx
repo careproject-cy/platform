@@ -1,11 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import DogCard from '../components/dogCard'
+import DogCard from '@/app/components/dogCard'
 import { Button } from "@vaneui/ui"
 import { Grid4, Row } from "@vaneui/ui"
-import NoResults from "../components/noResults"
-import { DogMetadata } from "../data/dogMetadata"
+import NoResults from "@/app/components/noResults"
+import { DogMetadata } from "@/app/data/dogMetadata"
 import { ArrowDown } from "react-feather";
 
 export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {

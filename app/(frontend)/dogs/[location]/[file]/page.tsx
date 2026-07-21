@@ -9,7 +9,7 @@ import { domain, platform_name } from "@/app/data/consts"
 import DogCard from "@/app/components/dogCard"
 import { getImageSrc } from "@/app/utils/images"
 import { getDate, getStringFromYears } from "@/app/utils/dateUtils"
-import { fetchDogs, fetchMd } from "@/app/data/fetchData"
+import { fetchDogs, fetchDogBody } from "@/app/data/fetchData"
 import MdComponent from "@/app/components/md/mdComponent"
 import Sharer from "@/app/components/sharerWrapper"
 import { Chip } from "@vaneui/ui"
@@ -70,7 +70,7 @@ export default async function DogPage({params}: IdProps) {
     notFound()
   }
 
-  const {content} = await fetchMd(`data/dogs/${location}/${filename}`)
+  const content = await fetchDogBody(location, file)
 
   const sizeText =
     dog.size === "small"

@@ -1,12 +1,12 @@
-import { platform_name } from "./data/consts"
-import { fetchBlogposts, fetchDogs } from "./data/fetchData"
-import { getImageSrc } from "./utils/images"
+import { platform_name } from "@/app/data/consts"
+import { fetchBlogposts, fetchDogs } from "@/app/data/fetchData"
+import { getImageSrc } from "@/app/utils/images"
 import { Metadata } from "next"
-import HeroSection from "./components/sections/heroSection"
-import HowWeHelpSection from "./components/sections/howWeHelpSection"
-import AvailableDogsSection from "./components/sections/availableDogsSection"
-import GallerySection from "./components/sections/gallerySection"
-import BlogPostsSection from "./components/sections/blogPostsSection"
+import HeroSection from "@/app/components/sections/heroSection"
+import HowWeHelpSection from "@/app/components/sections/howWeHelpSection"
+import AvailableDogsSection from "@/app/components/sections/availableDogsSection"
+import GallerySection from "@/app/components/sections/gallerySection"
+import BlogPostsSection from "@/app/components/sections/blogPostsSection"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

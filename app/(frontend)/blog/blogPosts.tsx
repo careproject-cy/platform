@@ -1,11 +1,11 @@
 'use client'
 
-import { BlogCard } from "../components/blog/blogCard"
+import { BlogCard } from "@/app/components/blog/blogCard"
 import { Button } from "@vaneui/ui"
 import { useState } from 'react'
 import { Col, Grid3 } from "@vaneui/ui"
-import { BlogPostMetadata } from "../data/blogPostMetadata"
-import { LargeBlogCard } from "../components/blog/largeBlogCard"
+import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
+import { LargeBlogCard } from "@/app/components/blog/largeBlogCard"
 
 export default function BlogPosts({ posts }: { posts: BlogPostMetadata[] }) {
 

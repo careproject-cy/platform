@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { Container, Section } from "@vaneui/ui"
 import { PageTitle } from "@vaneui/ui"
-import { fetchBlogposts } from "../data/fetchData"
+import { fetchBlogposts } from "@/app/data/fetchData"
 import BlogPosts from "./blogPosts"
-import { platform_name } from "../data/consts"
+import { platform_name } from "@/app/data/consts"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {

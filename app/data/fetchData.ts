@@ -2,6 +2,10 @@ import { notFound } from 'next/navigation'
 import { BlogPostMetadata } from "./blogPostMetadata";
 import { DogMetadata } from "./dogMetadata";
 import { unstable_cache } from "next/cache";
+import { getPayload } from "payload";
+import config from "@payload-config";
+import type { Dog, Media, Post } from "@/payload-types";
+import { cache } from "react";
 import matter from "gray-matter";
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -30,12 +34,13 @@ async function readFileAndParse(relUrl: string): Promise<MdResult> {
   }
 }
 
+/** Static pages under data/pages/ are still plain Markdown files; dogs and posts live in Payload. */
 export async function fetchMd(relUrl: string): Promise<MdResult> {
   if (process.env.NODE_ENV === "development") {
     // Use simple memory cache in development
     const cacheKey = `md:${relUrl}`;
     const cached = memoryCache.get(cacheKey);
-    
+
     if (cached) {
       if ((Date.now() - cached.timestamp) < CACHE_TTL) {
         return cached.data as MdResult;
@@ -60,42 +65,106 @@ export async function fetchMd(relUrl: string): Promise<MdResult> {
   }
 }
 
-async function readJsonFile(filename: string) {
-  console.log(`Reading ${filename} from disk...`);
-  const filePath = path.join(process.cwd(), 'data', filename);
-  const fileContent = await fs.readFile(filePath, 'utf8');
-  return JSON.parse(fileContent);
+async function payloadClient() {
+  return getPayload({ config });
 }
 
-async function getData<T>(filename: string): Promise<T[]> {
-  if (process.env.NODE_ENV === "development") {
-    // Use simple memory cache in development for faster reloads
-    const cacheKey = `data:${filename}`;
-    const cached = memoryCache.get(cacheKey);
-
-    if (cached) {
-      if ((Date.now() - cached.timestamp) < CACHE_TTL) {
-        return cached.data as T[];
-      }
-      memoryCache.delete(cacheKey);
-    }
-
-    const result = await readJsonFile(filename);
-    memoryCache.set(cacheKey, { data: result, timestamp: Date.now() });
-    return result;
-  } else {
-    // In production, read JSON directly - no caching needed since
-    // the file is generated at build time and fresh per deployment
-    return await readJsonFile(filename) as T[];
-  }
+function mediaUrl(media: number | Media | null | undefined): string | null {
+  return typeof media === 'object' && media?.url ? media.url : null;
 }
 
-export async function fetchBlogposts() {
-  const posts = await getData<BlogPostMetadata>('blogposts.json');
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+function toDogMetadata(dog: Dog): DogMetadata {
+  return {
+    filename: `${dog.slug}.md`,
+    location: dog.location,
+    name: dog.name,
+    breed: dog.breed,
+    age: dog.age,
+    gender: dog.gender,
+    status: dog.status,
+    images: (dog.images ?? []).map(mediaUrl).filter((url): url is string => url !== null),
+    size: dog.size,
+    added: new Date(dog.added),
+  };
 }
 
-export async function fetchDogs() {
-  const dogs = await getData<DogMetadata>('dogs.json');
-  return dogs.sort((a, b) => new Date(b.added).getTime() - new Date(a.added).getTime());
+function toBlogPostMetadata(post: Post): BlogPostMetadata {
+  return {
+    filename: `${post.slug}.md`,
+    title: post.title,
+    date: new Date(post.date),
+    description: post.description,
+    imageSrc: mediaUrl(post.coverImage) ?? '',
+    tags: post.tags ?? [],
+    visible: post.visible ?? false,
+  };
+}
+
+// React cache() dedupes within one request; across requests Next's route cache holds the
+// rendered page until a Payload afterChange hook calls revalidatePath.
+const readDogs = cache(async (): Promise<DogMetadata[]> => {
+  const payload = await payloadClient();
+  const { docs } = await payload.find({
+    collection: 'dogs',
+    depth: 1,
+    pagination: false,
+    sort: '-added',
+  });
+  return docs.map(toDogMetadata);
+});
+
+const readBlogposts = cache(async (): Promise<BlogPostMetadata[]> => {
+  const payload = await payloadClient();
+  const { docs } = await payload.find({
+    collection: 'posts',
+    depth: 1,
+    pagination: false,
+    sort: '-date',
+  });
+  return docs.map(toBlogPostMetadata);
+});
+
+export async function fetchBlogposts(): Promise<BlogPostMetadata[]> {
+  const posts = await readBlogposts();
+  // Copy before sorting - the cached array is shared across callers in this request.
+  return [...posts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+}
+
+export async function fetchDogs(): Promise<DogMetadata[]> {
+  const dogs = await readDogs();
+  return [...dogs].sort((a, b) => new Date(b.added).getTime() - new Date(a.added).getTime());
+}
+
+const readDogBody = cache(async (location: string, slug: string): Promise<string | null> => {
+  const payload = await payloadClient();
+  const { docs } = await payload.find({
+    collection: 'dogs',
+    depth: 0,
+    limit: 1,
+    where: { and: [{ slug: { equals: slug } }, { location: { equals: location } }] },
+  });
+  return docs[0]?.body ?? null;
+});
+
+const readPostBody = cache(async (slug: string): Promise<string | null> => {
+  const payload = await payloadClient();
+  const { docs } = await payload.find({
+    collection: 'posts',
+    depth: 0,
+    limit: 1,
+    where: { slug: { equals: slug } },
+  });
+  return docs[0]?.body ?? null;
+});
+
+export async function fetchDogBody(location: string, slug: string): Promise<string> {
+  const body = await readDogBody(location, slug);
+  if (body === null) notFound();
+  return body;
+}
+
+export async function fetchPostBody(slug: string): Promise<string> {
+  const body = await readPostBody(slug);
+  if (body === null) notFound();
+  return body;
 }

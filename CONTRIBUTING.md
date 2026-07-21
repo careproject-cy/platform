@@ -20,19 +20,28 @@ Thank you for your interest in contributing to CARE Project! This platform helps
 | `npm run build` | Production build (includes lint + typecheck) |
 | `npm run lint` | Run ESLint |
 | `npm run typecheck` | Run TypeScript type checking |
-| `npm run generate-dogs` | Regenerate dogs.json from Markdown files |
-| `npm run generate-blogposts` | Regenerate blogposts.json from Markdown files |
+| `npm run generate:types` | Regenerate `payload-types.ts` after changing a collection |
+| `npm run migrate:create` | Create a database migration after changing a collection |
+| `npm run migrate` | Apply pending database migrations |
+| `npm run import-content` | One-off import of the legacy Markdown in `data/` into the CMS |
 
 ### Tech Stack
 
 - **Next.js 16** with App Router
+- **Payload CMS 3** for dog profiles and blog posts (admin at `/admin`)
+- **Postgres** (Neon on Vercel) for content storage
 - **VaneUI** for UI components (boolean props API)
 - **Markdoc** for Markdown rendering
 - **Tailwind CSS v4** for styling
 
 ### Content
 
-Dog profiles and blog posts are Markdown files in the `data/` directory. After editing content, run the generation scripts to update the JSON data files.
+Dog profiles and blog posts live in Payload and are edited at `/admin` - no deploy is needed to publish
+them. Their body text is still Markdown, rendered through Markdoc. Static pages (`data/pages/`) remain
+Markdown files in the repository.
+
+Local development needs a Postgres connection string and a Payload secret. Copy `.env.example` to `.env`
+and fill them in; without `S3_BUCKET` set, uploads fall back to local disk.
 
 ## Pull Request Process
 
