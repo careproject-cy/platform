@@ -18,6 +18,12 @@ interface IdProps {
   params: Promise<{ location: string, file: string }>
 }
 
+// Prerender every dog at build time; dynamicParams stays true so CMS-added dogs resolve on demand,
+// and revalidatePath keeps them fresh. Turns a per-request Neon round trip into a static page.
+export async function generateStaticParams() {
+  const dogs = await fetchDogs()
+  return dogs.map((dog) => ({ location: dog.location, file: dog.filename.replace(".md", "") }))
+}
 
 export async function generateMetadata({params}: IdProps): Promise<Metadata> {
   const {location, file} = await params

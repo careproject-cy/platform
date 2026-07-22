@@ -73,7 +73,8 @@ function mediaUrl(media: number | Media | null | undefined): string | null {
   return typeof media === 'object' && media?.url ? media.url : null;
 }
 
-function toDogMetadata(dog: Dog): DogMetadata {
+// Accepts a Dog with or without body - the listing query omits it for performance.
+function toDogMetadata(dog: Omit<Dog, 'body'>): DogMetadata {
   return {
     filename: `${dog.slug}.md`,
     location: dog.location,
@@ -109,6 +110,8 @@ const readDogs = cache(async (): Promise<DogMetadata[]> => {
     depth: 1,
     pagination: false,
     sort: '-added',
+    // The listing needs metadata + images, never the markdown body of all 100 dogs per render.
+    select: { body: false },
   });
   return docs.map(toDogMetadata);
 });

@@ -19,6 +19,12 @@ interface BlogPageProps {
   params: Promise<{ id: string }>
 }
 
+// Prerender each post; dynamicParams stays true so new posts resolve on demand.
+export async function generateStaticParams() {
+  const posts = await fetchBlogposts()
+  return posts.map((post) => ({ id: post.filename.replace(".md", "") }))
+}
+
 export async function generateMetadata({params}: BlogPageProps): Promise<Metadata> {
   const {id} = await params;
   const posts = await fetchBlogposts();
@@ -51,11 +57,12 @@ export default async function BlogPage({params}: BlogPageProps) {
   const {id} = await params
   const posts = await fetchBlogposts();
   const post = posts.find(p => p.filename === `${id}.md`)
-  const content = await fetchPostBody(id)
 
   if (!post || !post.visible) {
     notFound()
   }
+
+  const content = await fetchPostBody(id)
 
   const relatedPosts = posts.filter(p => p.tags.some(t => post.tags.includes(t)) && p.filename !== post.filename).slice(0, 3)
   const shareText = `Check out a new blog post: ${post.title}`
