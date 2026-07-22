@@ -2,18 +2,23 @@ import type { NextConfig } from "next";
 import { withPayload } from "@payloadcms/next/withPayload";
 import { cloudfront_domain } from "./app/data/consts";
 
+// A fork points S3_PUBLIC_BASE_URL at its own CDN; allow that host so next/image does not 500.
+// Both are listed so CARE's CloudFront and a fork's host work without editing this file.
+const mediaHostnames = Array.from(
+  new Set(
+    [
+      process.env.S3_PUBLIC_BASE_URL ? new URL(process.env.S3_PUBLIC_BASE_URL).hostname : null,
+      cloudfront_domain,
+    ].filter((h): h is string => Boolean(h)),
+  ),
+);
+
 const nextConfig: NextConfig = {
   images: {
     minimumCacheTTL: 2678400, // 31 days
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-      },
-      {
-        protocol: 'https',
-        hostname: cloudfront_domain,
-      },
+      { protocol: 'https', hostname: 'placehold.co' },
+      ...mediaHostnames.map((hostname) => ({ protocol: 'https' as const, hostname })),
     ],
   },
   async headers() {

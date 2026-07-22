@@ -66,6 +66,11 @@ cp .env.example .env
 npm run migrate
 ```
 
+Running your own instance needs a Postgres database (Neon's free tier is enough) and, for uploaded
+images, an S3 bucket. Set `S3_PUBLIC_BASE_URL` to the public URL your images are served from (e.g. a
+CloudFront or bucket URL) and `next/image` will allow that host automatically. `DATABASE_URL` is
+required at **build** time, not just at runtime, because pages are prerendered.
+
 ### Development
 
 ```bash
@@ -104,6 +109,22 @@ database, and confirm with `npm run migrate:status` that every migration reads `
 that, never before - the new code expects the new schema.
 
 Migrations read `.env` (not `.env.local`), because that is what the Payload CLI loads.
+
+### Backups
+
+`.github/workflows/db-backup.yml` runs `pg_dump` daily (03:00 UTC) and uploads a gzipped dump to S3,
+keeping 30 days. A dump contains password hashes and all content, so it must **not** go in the media
+bucket - that bucket is served publicly through CloudFront. Use a separate **private** bucket:
+
+1. Create an S3 bucket with **Block Public Access** on and no CloudFront distribution.
+2. Create an IAM user scoped to `s3:PutObject`, `s3:GetObject`, `s3:DeleteObject`, `s3:ListBucket` on
+   that bucket only.
+3. Add these GitHub repository secrets (Settings -> Secrets and variables -> Actions):
+   `BACKUP_DATABASE_URL` (Neon's **unpooled** connection string), `BACKUP_S3_BUCKET`, `BACKUP_S3_REGION`,
+   `BACKUP_S3_ACCESS_KEY_ID`, `BACKUP_S3_SECRET_ACCESS_KEY`.
+
+Run it on demand from the Actions tab ("Run workflow"). Restore with
+`gunzip -c dump.sql.gz | psql "$DATABASE_URL"` against a fresh database.
 
 ### Build
 
