@@ -8,7 +8,7 @@ import Breadcrumbs from "@/app/components/breadcrumbs"
 import { domain, platform_name } from "@/app/data/consts"
 import DogCard from "@/app/components/dogCard"
 import { getImageSrc } from "@/app/utils/images"
-import { getDate, getStringFromYears } from "@/app/utils/dateUtils"
+import { getDate } from "@/app/utils/dateUtils"
 import { fetchDogs, fetchDogBody } from "@/app/data/fetchData"
 import MdComponent from "@/app/components/md/mdComponent"
 import Sharer from "@/app/components/sharerWrapper"
@@ -40,7 +40,7 @@ export async function generateMetadata({params}: IdProps): Promise<Metadata> {
   
   const description = dog.status === 'Adopted'
     ? `${dog.name}, a ${dog.breed}, found a loving forever home through CARE Project's dog rescue in Cyprus.`
-    : `Meet ${dog.name}, a ${getStringFromYears(dog.age)} ${dog.gender.toLowerCase()} ${dog.breed} looking for a home in Cyprus. Learn how to adopt ${dog.name} through CARE Project.`
+    : `Meet ${dog.name}, a ${dog.ageText} ${dog.gender.toLowerCase()} ${dog.breed} looking for a home in Cyprus. Learn how to adopt ${dog.name} through CARE Project.`
 
   return {
     title: `${dog.name} | ${dog.breed} | ${platform_name}`,
@@ -123,7 +123,7 @@ export default async function DogPage({params}: IdProps) {
               </Row>
               <Row justifyBetween>
                 <Text lg>{dog.breed}</Text>
-                <Text lg>{getStringFromYears(dog.age)}</Text>
+                <Text lg>{dog.ageText}</Text>
               </Row>
             </Col>
             <Divider/>

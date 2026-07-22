@@ -6,6 +6,7 @@ import { getPayload } from "payload";
 import config from "@payload-config";
 import type { Dog, Media, Post } from "@/payload-types";
 import { cache } from "react";
+import { ageYearsFromBirthDate, getReadableAge, getStringFromYears } from "@/app/utils/dateUtils";
 import matter from "gray-matter";
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -75,12 +76,16 @@ function mediaUrl(media: number | Media | null | undefined): string | null {
 
 // Accepts a Dog with or without body - the listing query omits it for performance.
 function toDogMetadata(dog: Omit<Dog, 'body'>): DogMetadata {
+  // Birth date, when present, gives an age that stays current; otherwise fall back to the number.
+  const age = dog.birthDate ? ageYearsFromBirthDate(dog.birthDate) : dog.age;
+  const ageText = dog.birthDate ? getReadableAge(age) : getStringFromYears(dog.age);
   return {
     filename: `${dog.slug}.md`,
     location: dog.location,
     name: dog.name,
     breed: dog.breed,
-    age: dog.age,
+    age,
+    ageText,
     gender: dog.gender,
     status: dog.status,
     images: (dog.images ?? []).map(mediaUrl).filter((url): url is string => url !== null),

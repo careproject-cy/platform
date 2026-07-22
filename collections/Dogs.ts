@@ -88,9 +88,18 @@ export const Dogs: CollectionConfig = {
           name: 'age',
           type: 'number',
           required: true,
-          admin: { description: 'Age in years, e.g. 1.5' },
+          admin: { description: 'Age in years, e.g. 1.5. Used only when birth date is empty.' },
         },
       ],
+    },
+    {
+      name: 'birthDate',
+      type: 'date',
+      admin: {
+        position: 'sidebar',
+        date: { pickerAppearance: 'dayOnly' },
+        description: 'Optional. If set, the shown age is calculated from this and stays current.',
+      },
     },
     {
       type: 'row',

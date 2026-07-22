@@ -5,13 +5,11 @@ import Link from 'next/link'
 import { getImageSrc } from "../utils/images"
 import { DogMetadata } from "../data/dogMetadata"
 import { Chip } from "@vaneui/ui"
-import { getStringFromYears } from "../utils/dateUtils"
 
 export default function DogCard(dog: DogMetadata & { adoptedView?: boolean }) {
   const status = dog.status
   const name = dog.name
   const breed = dog.breed
-  const age = dog.age
   const gender = dog.gender
   const adoptedView = dog.adoptedView ?? false
   const isAdopted = status === 'Adopted'
@@ -44,7 +42,7 @@ export default function DogCard(dog: DogMetadata & { adoptedView?: boolean }) {
               <Chip semibold sm>{gender}</Chip>
             </Row>
             <Text secondary italic>{breed}</Text>
-            <Text secondary sm>{getStringFromYears(age)}</Text>
+            <Text secondary sm>{dog.ageText}</Text>
           </Col>
         </Col>
       </Link>

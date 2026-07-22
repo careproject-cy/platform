@@ -137,9 +137,13 @@ export interface Dog {
   added: string;
   breed: string;
   /**
-   * Age in years, e.g. 1.5
+   * Age in years, e.g. 1.5. Used only when birth date is empty.
    */
   age: number;
+  /**
+   * Optional. If set, the shown age is calculated from this and stays current.
+   */
+  birthDate?: string | null;
   gender: 'female' | 'male';
   size: 'small' | 'medium' | 'large';
   /**
@@ -363,6 +367,7 @@ export interface DogsSelect<T extends boolean = true> {
   added?: T;
   breed?: T;
   age?: T;
+  birthDate?: T;
   gender?: T;
   size?: T;
   images?: T;
