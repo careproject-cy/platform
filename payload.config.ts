@@ -35,7 +35,8 @@ export default buildConfig({
   // would be built from the attacker-controllable Host header.
   cors: [serverURL],
   csrf: [serverURL],
-  upload: { limits: { fileSize: 8 * 1024 * 1024 } },
+  // Enforced when signing the S3 upload URL; phone photos routinely exceed 10 MB.
+  upload: { limits: { fileSize: 25 * 1024 * 1024 } },
   admin: {
     user: Users.slug,
     importMap: { baseDir: path.resolve(dirname) },
