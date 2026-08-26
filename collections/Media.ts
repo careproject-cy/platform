@@ -23,6 +23,8 @@ export const Media: CollectionConfig = {
       const sizes = doc?.sizes as { thumbnail?: { url?: string | null } } | undefined
       return sizes?.thumbnail?.url || (doc?.url as string | undefined) || null
     },
+    // Caps the stored original; hero at 1920 is the largest size ever rendered.
+    resizeOptions: { width: 2560, withoutEnlargement: true },
     imageSizes: [
       { name: 'thumbnail', width: 400, height: 300 },
       { name: 'card', width: 768, height: 576 },

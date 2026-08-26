@@ -57,6 +57,8 @@ export default buildConfig({
   plugins: [
     s3Storage({
       enabled: s3Enabled,
+      // Browser PUTs straight to S3; Vercel caps a function request body at 4.5 MB.
+      clientUploads: true,
       collections: {
         media: {
           prefix: mediaPrefix,
