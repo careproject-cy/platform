@@ -70,8 +70,10 @@ async function payloadClient() {
   return getPayload({ config });
 }
 
+// Prefer derivatives: named by the DB, unlike the original, and far smaller than the raw upload.
 function mediaUrl(media: number | Media | null | undefined): string | null {
-  return typeof media === 'object' && media?.url ? media.url : null;
+  if (typeof media !== 'object' || !media) return null;
+  return media.sizes?.hero?.url || media.sizes?.gallery?.url || media.url || null;
 }
 
 // Accepts a Dog with or without body - the listing query omits it for performance.
