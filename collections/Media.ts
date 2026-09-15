@@ -63,6 +63,14 @@ export const Media: CollectionConfig = {
       },
     ],
     afterChange: [
+      // clientUploads PUTs under the browser filename, but Payload then renames the doc
+      // (.jpeg -> .jpg, dedupe suffix), stranding the original. Re-upload it under the final name.
+      ({ doc, req }) => {
+        if (req.file?.clientUploadContext && req.file.name !== doc.filename) {
+          delete req.file.clientUploadContext
+        }
+        return doc
+      },
       async ({ doc, req }) => {
         await revalidateSite(req.context?.disableRevalidate)
         return doc
