@@ -14,11 +14,13 @@ export async function getLandingData() {
   const [dogs, posts] = await Promise.all([fetchDogs(), fetchBlogposts()])
   const available = dogs.filter(d => d.status === "Available" || d.status === "In foster care").map(toLanding)
   const adopted = dogs.filter(d => d.status === "Adopted").map(toLanding)
+  const reserved = dogs.filter(d => d.status === "Reserved").map(toLanding)
   const newest = [...available].sort((a, b) => new Date(b.added).getTime() - new Date(a.added).getTime())
   return {
     available,
     newest,
     adopted,
+    reserved,
     posts: posts.map(p => ({ ...p, href: `/blog/${p.filename.replace(".md", "")}`, img: getImageSrc(p.imageSrc) })),
     counts: {
       available: available.length,
