@@ -55,7 +55,16 @@
 @keyframes cp-up { to { transform: translateY(-50%); } }
 .cp-drift { animation: cp-up var(--drift, 80s) linear infinite; }
 
+@keyframes cp-grow { from { width: 0; } to { width: 100%; } }
+.cp-progress { animation: cp-grow 3.2s linear both; }
+
+.cp-spot-light {
+  -webkit-mask-image: radial-gradient(circle 190px at var(--x) var(--y), #000 55%, transparent 100%);
+  mask-image: radial-gradient(circle 190px at var(--x) var(--y), #000 55%, transparent 100%);
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .cp-spot-light { -webkit-mask-image: none; mask-image: none; }
   .cp-drift { animation: none; }
   [data-reveal] { transition: none !important; opacity: 1 !important; transform: none !important; }
   .cp-pulse { animation: none; }
