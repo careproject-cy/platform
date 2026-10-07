@@ -15,3 +15,11 @@
 @media (prefers-reduced-motion: reduce) {
   .lp-route, .lp-route-flow, .lp-pulse, .lp-fan, .lp-rise, .lp-swap { animation: none; }
 }
+
+@keyframes lp-stamp { 0% { transform: scale(1.8) rotate(var(--r, -8deg)); opacity: 0; } 60% { transform: scale(.94) rotate(var(--r, -8deg)); opacity: 1; } 100% { transform: scale(1) rotate(var(--r, -8deg)); opacity: .9; } }
+.lp-stamp { transform: rotate(var(--r, -8deg)); animation: lp-stamp .5s cubic-bezier(.3, 1.4, .5, 1) both; }
+@media (prefers-reduced-motion: reduce) { .lp-stamp { animation: none; } }
+
+@keyframes lp-float { 0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-10px) rotate(var(--r, 0deg)); } }
+.lp-float { transform: rotate(var(--r, 0deg)); animation: lp-float 6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .lp-float { animation: none; } }
