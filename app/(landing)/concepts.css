@@ -55,6 +55,11 @@
 @keyframes cp-up { to { transform: translateY(-50%); } }
 .cp-drift { animation: cp-up var(--drift, 80s) linear infinite; }
 
+@keyframes cp-left { to { transform: translateX(-50%); } }
+.cp-marquee { animation: cp-left var(--speed, 60s) linear infinite; }
+.cp-marquee-rev { animation-direction: reverse; }
+.cp-marquee-wrap:hover .cp-marquee { animation-play-state: paused; }
+
 @keyframes cp-grow { from { width: 0; } to { width: 100%; } }
 .cp-progress { animation: cp-grow 3.2s linear both; }
 
@@ -65,7 +70,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .cp-spot-light { -webkit-mask-image: none; mask-image: none; }
-  .cp-drift { animation: none; }
+  .cp-drift, .cp-marquee { animation: none; }
   [data-reveal] { transition: none !important; opacity: 1 !important; transform: none !important; }
   .cp-pulse { animation: none; }
 }
