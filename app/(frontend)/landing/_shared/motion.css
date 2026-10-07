@@ -1,0 +1,17 @@
+@keyframes lp-dash { to { stroke-dashoffset: -40; } }
+@keyframes lp-draw { from { stroke-dashoffset: 600; } to { stroke-dashoffset: 0; } }
+@keyframes lp-pulse { 0%, 100% { transform: scale(1); opacity: .5; } 50% { transform: scale(2.4); opacity: 0; } }
+@keyframes lp-fan { from { transform: translate(0, 40px) rotate(0deg); opacity: 0; } }
+@keyframes lp-rise { from { transform: translateY(16px); opacity: 0; } }
+@keyframes lp-swap { from { transform: translateY(24px) rotate(-3deg) scale(.96); opacity: 0; } }
+
+.lp-route { stroke-dasharray: 600; animation: lp-draw 2.2s cubic-bezier(.6, 0, .2, 1) both; }
+.lp-route-flow { stroke-dasharray: 6 14; animation: lp-dash 1.6s linear infinite; }
+.lp-pulse { transform-box: fill-box; transform-origin: center; animation: lp-pulse 2.4s ease-out infinite; }
+.lp-fan { animation: lp-fan .9s cubic-bezier(.2, .8, .2, 1.1) both; }
+.lp-rise { animation: lp-rise .7s cubic-bezier(.2, .8, .2, 1) both; }
+.lp-swap { animation: lp-swap .45s cubic-bezier(.2, .8, .2, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-route, .lp-route-flow, .lp-pulse, .lp-fan, .lp-rise, .lp-swap { animation: none; }
+}
