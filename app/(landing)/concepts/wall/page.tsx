@@ -1,9 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
-import { getLandingData, type LandingDog } from "@/app/(frontend)/landing/_shared/data"
+import { getLandingData } from "@/app/(frontend)/landing/_shared/data"
 import SiteHeader from "../_kit/siteHeader"
 import SiteFooter from "../_kit/siteFooter"
-import DonateBand from "../_kit/donateBand"
+import CTACard from "@/app/components/callToActionCard"
 import Reveal from "../_kit/reveal"
 import { bTheme, serif } from "../b/body"
 import PhotoWall from "./photoWall"
@@ -18,15 +18,12 @@ const steps = [
   ["Welcome home", "Fill in the application. In Cyprus the €250 fee covers passport, microchip, vaccines, and neutering."],
 ]
 
-// Small round photo set inline with running text.
-function Chip({ dog }: { dog?: LandingDog }) {
-  if (!dog) return null
-  return (
-    <span className="relative inline-block align-middle w-[1.9em] h-[1.1em] md:w-[2.2em] rounded-full overflow-hidden mx-1 -translate-y-[0.06em] ring-2 ring-[var(--bg)]">
-      <Image src={dog.img} alt="" fill sizes="120px" className="object-cover"/>
-    </span>
-  )
-}
+const work = [
+  ["Rescue", "We take in dogs from a municipal shelter and the streets, and help other shelters where we can."],
+  ["Vet care", "Vaccines, neutering, diagnostics, and months of treatment for leishmaniasis and tick-borne disease."],
+  ["Foster & socialise", "Long-term foster homes where dogs recover, learn to trust people, and get ready for family life."],
+  ["Adoption & travel", "Paperwork, microchips, and transport to families in Cyprus, the UK, Germany, and the Netherlands."],
+]
 
 function Heading({ title, children }: { title: React.ReactNode; children?: React.ReactNode }) {
   return (
@@ -71,18 +68,26 @@ export default async function WallLanding() {
           </div>
         </section>
 
-        <section className="max-w-6xl mx-auto px-4 md:px-6 py-28 md:py-36">
-          <Reveal>
-            <p className="font-[family-name:var(--font-serif)] text-4xl md:text-6xl leading-[1.12] tracking-[-0.01em] text-balance">
-              We find stray dogs <Chip dog={newest[0]}/> in shelters and on the streets of Cyprus, pay for their vet care <Chip dog={newest[1]}/>,
-              help them recover in foster homes <Chip dog={newest[2]}/>, and stay with each one until a family <Chip dog={adopted[0]}/> takes them home.
+        <section className="max-w-6xl mx-auto px-4 md:px-6 py-24 md:py-32 grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20">
+          <Reveal className="lg:sticky lg:top-28 self-start">
+            <h2 className="font-[family-name:var(--font-serif)] text-5xl md:text-7xl leading-[0.95] tracking-[-0.02em] text-balance">
+              Rescue, recover, <em className="text-[var(--accent)]">rehome</em>
+            </h2>
+            <p className="mt-6 text-lg text-[var(--muted)] leading-relaxed max-w-md">
+              CARE Project is a volunteer team of the UANA Foundation, a registered nonprofit in Cyprus. We are not a shelter: we step in where dogs need it most and stay with each one until they are home.
             </p>
+            <Link href="/more/about" className="inline-block mt-8 rounded-full border border-[var(--line)] px-5 py-2.5 text-sm font-medium hover:border-[var(--ink)]">Read our story</Link>
           </Reveal>
-          <Reveal delay={80} className="mt-12 flex flex-wrap gap-x-10 gap-y-4 text-[var(--muted)]">
-            <span>Run by volunteers of the UANA Foundation</span>
-            <span>No paid staff</span>
-            <span>Adoptions in Cyprus, the UK, Germany, and the Netherlands</span>
-          </Reveal>
+          <div className="border-t border-[var(--line)]">
+            {work.map(([t, d], i) => (
+              <Reveal key={t} delay={i * 60}>
+                <div className="group grid sm:grid-cols-[1fr_1.4fr] gap-2 sm:gap-8 py-8 border-b border-[var(--line)]">
+                  <h3 className="font-[family-name:var(--font-serif)] text-3xl md:text-4xl leading-none group-hover:text-[var(--accent)] transition-colors">{t}</h3>
+                  <p className="text-[var(--muted)] leading-relaxed">{d}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </section>
 
         <section className="bg-[var(--accent-soft)] border-y border-[var(--line)] overflow-hidden">
@@ -164,13 +169,8 @@ export default async function WallLanding() {
           </section>
         )}
 
-        <div className="relative">
-          <div aria-hidden="true" className="absolute inset-x-3 inset-y-6 overflow-hidden rounded-[32px] opacity-25 grayscale">
-            <PhotoWall dogs={[...adopted.slice(20), ...newest].slice(0, 20)} labels="none"/>
-          </div>
-          <div className="relative">
-            <DonateBand title="Fund a dog's way home" dark/>
-          </div>
+        <div className="pt-12" style={{ "--cta-accent": "var(--accent)" } as React.CSSProperties}>
+          <CTACard/>
         </div>
       </main>
       <SiteFooter/>
