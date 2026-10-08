@@ -17,7 +17,7 @@ export const bTheme = {
 
 // Concept B below the hero, shared by the hero experiments.
 export default function BBody({ data }: { data: Awaited<ReturnType<typeof getLandingData>> }) {
-  const { available, adopted, posts, counts } = data
+  const { available, adopted, posts } = data
   const lead = posts[0]
   return (
     <>
@@ -25,7 +25,7 @@ export default function BBody({ data }: { data: Awaited<ReturnType<typeof getLan
           <div className="max-w-6xl mx-auto px-4 md:px-6 py-24">
             <Reveal className="flex flex-wrap items-end justify-between gap-6 mb-10">
               <h2 className="font-[family-name:var(--font-serif)] text-5xl md:text-6xl tracking-[-0.02em] leading-none">Looking for a home</h2>
-              <Link href="/dogs" className="text-sm font-medium underline underline-offset-4 decoration-[var(--accent)]">Browse all {counts.available} dogs</Link>
+              <Link href="/dogs" className="text-sm font-medium underline underline-offset-4 decoration-[var(--accent)]">Browse all dogs</Link>
             </Reveal>
             <DogTabs dogs={available}/>
           </div>

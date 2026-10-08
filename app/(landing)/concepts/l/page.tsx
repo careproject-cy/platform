@@ -24,14 +24,14 @@ function Row({ dogs, label, reverse = false, speed }: { dogs: LandingDog[]; labe
 }
 
 function Hero({ data }: { data: LandingData }) {
-  const { newest, adopted, counts } = data
+  const { newest, adopted } = data
 
   return (
     <section className="pt-10 md:pt-12 pb-24">
       <div className="max-w-4xl mx-auto px-4 md:px-6 text-center">
         <Reveal>
           <h1 className="font-[family-name:var(--font-serif)] text-6xl md:text-[5.5rem] leading-[0.9] tracking-[-0.02em] text-balance">
-            Second chances, <em className="text-[var(--accent)]">one dog</em> at a time
+            Meet your <em className="text-[var(--accent)]">new best friend</em>
           </h1>
         </Reveal>
         <Reveal delay={80}>
@@ -40,7 +40,7 @@ function Hero({ data }: { data: LandingData }) {
           </p>
         </Reveal>
         <Reveal delay={140} className="mt-8 flex flex-wrap justify-center gap-3">
-          <Link href="/dogs" className="rounded-full bg-[var(--accent)] text-white px-6 py-3 font-medium hover:opacity-90">Meet all {counts.available} dogs</Link>
+          <Link href="/dogs" className="rounded-full bg-[var(--accent)] text-white px-6 py-3 font-medium hover:opacity-90">Meet the dogs</Link>
           <Link href="/more/donate" className="rounded-full border border-[var(--line)] px-6 py-3 font-medium hover:border-[var(--ink)]">Donate</Link>
         </Reveal>
       </div>

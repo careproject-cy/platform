@@ -22,7 +22,7 @@ const slots = [
 ]
 
 function Hero({ data }: { data: LandingData }) {
-  const { newest, adopted, counts } = data
+  const { newest, adopted } = data
   const photos = [...newest, ...adopted].slice(0, slots.length)
 
   return (
@@ -45,11 +45,11 @@ function Hero({ data }: { data: LandingData }) {
         ))}
         <div className="relative z-10 text-center max-w-2xl">
           <Reveal>
-            <p className="text-sm text-[var(--muted)]">{counts.available} dogs waiting · {counts.adopted} already home</p>
+            <p className="text-sm text-[var(--muted)]">A volunteer dog rescue in Cyprus</p>
           </Reveal>
           <Reveal delay={60}>
             <h1 className="mt-5 font-[family-name:var(--font-serif)] text-6xl md:text-[6rem] leading-[0.92] tracking-[-0.02em]">
-              Second chances, <em className="text-[var(--accent)]">one dog</em> at a time
+              Find the dog who&apos;s been <em className="text-[var(--accent)]">waiting for you</em>
             </h1>
           </Reveal>
           <Reveal delay={120}>

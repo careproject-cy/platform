@@ -19,11 +19,10 @@ export default function DogTabs({ dogs }: { dogs: LandingDog[] }) {
     <>
       <div role="tablist" aria-label="Filter dogs" className="flex flex-wrap gap-2">
         {tabs.map(t => {
-          const n = dogs.filter(t.test).length
           return (
             <button key={t.key} role="tab" aria-selected={tab === t.key} onClick={() => setTab(t.key)}
                     className={`rounded-full border px-4 py-2 text-sm transition-colors ${tab === t.key ? "border-[var(--ink)] bg-[var(--ink)] text-[var(--bg)]" : "border-[var(--line)] text-[var(--muted)] hover:text-[var(--ink)]"}`}>
-              {t.label} <span className="opacity-60 ml-1">{n}</span>
+              {t.label}
             </button>
           )
         })}

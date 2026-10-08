@@ -12,7 +12,7 @@ export const metadata = { title: "Concept B: Editorial" }
 
 export default async function ConceptB() {
   const data = await getLandingData()
-  const { newest, counts } = data
+  const { newest } = data
   const [p1, p2, p3] = newest
 
   return (
@@ -29,7 +29,7 @@ export default async function ConceptB() {
             </Reveal>
             <Reveal delay={60}>
               <h1 className="mt-6 font-[family-name:var(--font-serif)] text-6xl md:text-[5.5rem] leading-[0.95] tracking-[-0.02em]">
-                Second chances, <em className="text-[var(--accent)]">one dog</em> at a time
+                Rescued in Cyprus. <em className="text-[var(--accent)]">Ready to be yours.</em>
               </h1>
             </Reveal>
             <Reveal delay={120}>
@@ -42,9 +42,9 @@ export default async function ConceptB() {
               <Link href="/more/foster" className="rounded-full border border-[var(--line)] px-6 py-3 font-medium hover:border-[var(--ink)]">Become a foster</Link>
             </Reveal>
             <Reveal delay={240} className="mt-14 grid grid-cols-3 max-w-md border-t border-[var(--line)]">
-              {[[counts.available, "waiting now"], [counts.adopted, "adopted"], [4, "countries"]].map(([n, l]) => (
-                <div key={l as string} className="pt-5 pr-4">
-                  <div className="font-[family-name:var(--font-serif)] text-4xl">{n}</div>
+              {[["Vet care", "covered for every dog"], ["4 countries", "Cyprus, UK, DE, NL"], ["Volunteers", "no paid staff"]].map(([n, l]) => (
+                <div key={n} className="pt-5 pr-4">
+                  <div className="font-[family-name:var(--font-serif)] text-2xl">{n}</div>
                   <div className="text-sm text-[var(--muted)] mt-1">{l}</div>
                 </div>
               ))}

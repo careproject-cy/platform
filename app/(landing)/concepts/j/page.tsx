@@ -8,7 +8,7 @@ export const metadata = { title: "Hero J: Photo wall" }
 const ratios = ["aspect-[3/4]", "aspect-square", "aspect-[4/5]", "aspect-[3/5]", "aspect-[5/6]"]
 
 function Hero({ data }: { data: LandingData }) {
-  const { newest, adopted, counts } = data
+  const { newest, adopted } = data
   const photos = [...newest, ...adopted].slice(0, 20)
   const cols = [0, 1, 2, 3, 4].map(c => photos.filter((_, i) => i % 5 === c))
 
@@ -31,13 +31,13 @@ function Hero({ data }: { data: LandingData }) {
         <div className="absolute inset-x-0 bottom-0 px-5 md:px-12 pb-10 md:pb-14">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-end md:justify-between gap-8">
             <Reveal>
-              <h1 className="font-[family-name:var(--font-serif)] text-6xl md:text-[6.5rem] leading-[0.9] tracking-[-0.02em] max-w-[11ch]">
-                Second chances, <em className="text-[var(--accent)]">one dog</em> at a time
+              <h1 className="font-[family-name:var(--font-serif)] text-6xl md:text-[5.25rem] leading-[0.92] tracking-[-0.02em] max-w-[13ch] text-balance">
+                From the streets of Cyprus <em className="text-[var(--accent)]">to your sofa</em>
               </h1>
             </Reveal>
             <Reveal delay={100} className="max-w-sm">
               <p className="text-lg text-[var(--muted)] leading-relaxed">
-                {counts.available} rescued dogs are waiting for homes in Cyprus, the UK, Germany, and the Netherlands. {counts.adopted} have already found one.
+                Rescued dogs waiting for homes in Cyprus, the UK, Germany, and the Netherlands. Some of these faces have already found one.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link href="/dogs" className="rounded-full bg-[var(--accent)] text-white px-6 py-3 font-medium hover:opacity-90">Meet the dogs</Link>

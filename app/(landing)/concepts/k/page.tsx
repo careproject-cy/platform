@@ -19,7 +19,7 @@ const spans = [
 ]
 
 function Hero({ data }: { data: LandingData }) {
-  const { newest, counts } = data
+  const { newest } = data
   const photos = newest.slice(0, 8)
 
   return (
@@ -27,7 +27,7 @@ function Hero({ data }: { data: LandingData }) {
       <div>
         <Reveal>
           <h1 className="font-[family-name:var(--font-serif)] text-6xl md:text-[5.25rem] leading-[0.93] tracking-[-0.02em]">
-            Second chances, <em className="text-[var(--accent)]">one dog</em> at a time
+            Give a Cyprus rescue dog <em className="text-[var(--accent)]">a home</em>
           </h1>
         </Reveal>
         <Reveal delay={80}>
@@ -46,8 +46,8 @@ function Hero({ data }: { data: LandingData }) {
           if (i === 3) {
             return (
               <div key="stat" className={`${span} rounded-[24px] bg-[var(--accent)] text-white p-4 flex flex-col justify-between`}>
-                <span className="text-xs text-white/75">Adopted</span>
-                <span className="font-[family-name:var(--font-serif)] text-4xl md:text-5xl leading-none">{counts.adopted}</span>
+                <span className="text-xs text-white/75">Adopt in</span>
+                <span className="font-[family-name:var(--font-serif)] text-xl md:text-2xl leading-tight">Cyprus, UK, Germany, Netherlands</span>
               </div>
             )
           }
