@@ -48,9 +48,6 @@ export default function Footer() {
         <span>© {new Date().getFullYear()} CARE Project · UANA Foundation, Cyprus</span>
         <span>100% volunteer-run. Every euro goes to the animals.</span>
       </div>
-      <div aria-hidden="true" className="overflow-hidden border-t border-[var(--line)] flex justify-center">
-        <span className="cp-wordmark">CARE</span>
-      </div>
     </footer>
   )
 }
