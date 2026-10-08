@@ -2,11 +2,15 @@
 
 import { useState } from 'react'
 import DogCard from '@/app/components/dogCard'
-import { Button } from "@vaneui/ui"
-import { Grid4, Row } from "@vaneui/ui"
 import NoResults from "@/app/components/noResults"
 import { DogMetadata } from "@/app/data/dogMetadata"
-import { ArrowDown } from "react-feather";
+
+const ages = [
+  { key: 'all', label: 'All ages' },
+  { key: 'young', label: 'Young (0-3)' },
+  { key: 'adult', label: 'Adult (4-8)' },
+  { key: 'senior', label: 'Senior (9+)' },
+]
 
 export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
 
@@ -16,13 +20,12 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
 
   const availableDogs = dogs.filter(dog => dog.status !== 'Not available' && dog.status !== 'Adopted')
   const filteredDogs = availableDogs.filter(dog => {
-    const notAvailable = dog.status === 'Not available' || dog.status === 'Adopted'
     const ageMatch = ageFilter === 'all' ||
       (ageFilter === 'young' && dog.age <= 3) ||
       (ageFilter === 'adult' && dog.age > 3 && dog.age <= 8) ||
       (ageFilter === 'senior' && dog.age > 8)
     const breedMatch = breedFilter === 'all' || dog.breed.toLowerCase().includes(breedFilter.toLowerCase())
-    return ageMatch && breedMatch && !notAvailable
+    return ageMatch && breedMatch
   })
 
   const displayedDogs = filteredDogs.slice(0, visibleDogs)
@@ -30,40 +33,40 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
 
   return (
     <>
-      <Row lg mobileCol className="max-md:w-full">
-        <Row mobileCol itemsCenter className="max-md:w-full">
-          <label htmlFor="age-filter" className="text-sm font-medium max-sm:w-full">Filter by Age:</label>
-          <select value={ageFilter} onChange={(event) => setAgeFilter(event.target.value as string)}
-            className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50 max-sm:w-full">
-            <option className="bg-white text-gray-800 p-2" value={"all"}>All Ages</option>
-            <option className="bg-white text-gray-800 p-2" value={"young"}>Young (0-3 years)</option>
-            <option className="bg-white text-gray-800 p-2" value={"adult"}>Adult (4-8 years)</option>
-            <option className="bg-white text-gray-800 p-2" value={"senior"}>Senior (9+ years)</option>
-          </select>
-        </Row>
-        <Row mobileCol itemsCenter className="max-md:w-full">
-          <label htmlFor="breed-filter" className="text-sm font-medium max-sm:w-full">Filter by Breed:</label>
-          <select value={breedFilter} onChange={(event) => setBreedFilter(event.target.value as string)}
-            className="p-2 border rounded-lg cursor-pointer hover:bg-gray-50 max-sm:w-full">
-            <option className="bg-white text-gray-800 p-2" value={"all"}>All Breeds</option>
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-10 border-b border-[var(--line)]">
+        <div role="group" aria-label="Filter by age" className="flex flex-wrap gap-2">
+          {ages.map(a => (
+            <button key={a.key} onClick={() => setAgeFilter(a.key)} aria-pressed={ageFilter === a.key}
+                    className={`rounded-full border px-4 py-2 text-sm transition-colors ${ageFilter === a.key ? "border-[var(--ink)] bg-[var(--ink)] text-white" : "border-[var(--line)] text-[var(--muted)] hover:text-[var(--ink)]"}`}>
+              {a.label}
+            </button>
+          ))}
+        </div>
+        <label className="flex items-center gap-3 text-sm text-[var(--muted)]">
+          Breed
+          <select value={breedFilter} onChange={(event) => setBreedFilter(event.target.value)}
+                  className="rounded-full border border-[var(--line)] bg-white px-4 py-2 text-[var(--ink)] cursor-pointer hover:border-[var(--ink)]">
+            <option value="all">All breeds</option>
             {uniqueBreeds.map(breed => (
-              <option className="bg-white text-gray-800 p-2" key={breed} value={breed.toLowerCase()}>{breed}</option>
+              <option key={breed} value={breed.toLowerCase()}>{breed}</option>
             ))}
           </select>
-        </Row>
-      </Row>
-      <Grid4 xl>
+        </label>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-10 pt-10">
         {displayedDogs.map((dog) => (
           <DogCard key={`${dog.location}/${dog.filename}`} {...dog} />
         ))}
-      </Grid4>
+      </div>
       {visibleDogs < filteredDogs.length && (
-        <Button onClick={() => setVisibleDogs(prev => prev + 20)}>
-          <ArrowDown/> See more dogs
-        </Button>
+        <div className="flex justify-center pt-12">
+          <button onClick={() => setVisibleDogs(prev => prev + 20)}
+                  className="rounded-full border border-[var(--line)] px-6 py-3 font-medium hover:border-[var(--ink)]">
+            See more dogs
+          </button>
+        </div>
       )}
       {displayedDogs.length === 0 && <NoResults />}
     </>
   )
 }
-

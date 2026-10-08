@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { Section, Container, Col, Grid4, PageTitle, Text } from "@vaneui/ui"
+import { PageHeader } from "@/app/components/site/heading"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import DogCard from "@/app/components/dogCard"
 import Pagination from "@/app/components/pagination"
@@ -52,22 +52,19 @@ export default async function AdoptedDogsPage({params}: { params: Promise<{ page
   const pageDogs = adoptedDogs.slice(start, start + PAGE_SIZE)
 
   return (
-    <Section>
-      <Container xl>
-        <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {href: "/adopted/1", text: "Adopted Dogs"}]}/>
-        <Col itemsCenter wFull>
-          <PageTitle textCenter>Adopted Dogs</PageTitle>
-          <Text xl textCenter secondary className="max-w-[600px]">
-            Every one of these dogs found their forever home. Thank you for being part of their stories.
-          </Text>
-        </Col>
-        <Grid4 xl wFull>
-          {pageDogs.map((dog) => (
-            <DogCard key={`${dog.location}/${dog.filename}`} {...dog} adoptedView/>
-          ))}
-        </Grid4>
+    <div className="w-full max-w-6xl mx-auto px-4 md:px-6 pb-24">
+      <PageHeader eyebrow={<Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {href: "/adopted/1", text: "Adopted dogs"}]}/>}
+                  title={<>They all <em className="text-[var(--accent)]">went home</em></>}>
+        Every one of these dogs found their forever home. Thank you for being part of their stories.
+      </PageHeader>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        {pageDogs.map((dog) => (
+          <DogCard key={`${dog.location}/${dog.filename}`} {...dog} adoptedView/>
+        ))}
+      </div>
+      <div className="pt-14">
         <Pagination basePath="/adopted" currentPage={pageNum} totalPages={totalPages}/>
-      </Container>
-    </Section>
+      </div>
+    </div>
   )
 }

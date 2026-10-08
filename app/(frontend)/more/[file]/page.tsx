@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Section, Container, Row } from "@vaneui/ui"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import { platform_name } from "@/app/data/consts"
 import { fetchMd } from "@/app/data/fetchData"
@@ -38,22 +37,22 @@ export default async function Page({params}: MdPageProps) {
 
   const title = (frontmatter.title as string) || "Page"
 
+  const isDonate = file === "donate"
+
   return (
-    <Section>
-      <Container xs={file !== "donate"}>
-        <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {href: `/more/${file}`, text: title}]}/>
-        <Row xl tabletCol reverse wFull>
-          {file == "donate" &&
-            <Row itemsCenter className="w-1/2 max-lg:w-full">
-              <DonationCard/>
-            </Row>
-          }
-          <Row className={file == "donate" ? "w-1/2 max-lg:w-full" : "w-full"}>
-            <MdComponent md={content}/>
-          </Row>
-        </Row>
-      </Container>
-    </Section>
+    <div className={`w-full mx-auto px-4 md:px-6 pt-10 pb-24 ${isDonate ? "max-w-6xl" : "max-w-3xl"}`}>
+      <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {href: `/more/${file}`, text: title}]}/>
+      <div className={isDonate ? "mt-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start" : "mt-6"}>
+        <div className="min-w-0">
+          <MdComponent md={content}/>
+        </div>
+        {isDonate &&
+          <div className="lg:sticky lg:top-24">
+            <DonationCard/>
+          </div>
+        }
+      </div>
+    </div>
   )
 }
 

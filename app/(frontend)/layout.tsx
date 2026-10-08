@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans, Noto_Sans_Mono, Montserrat } from "next/font/google";
+import { Inter, Noto_Sans_Mono, Instrument_Serif } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 import { slogan, social_img_url } from "@/app/data/consts";
@@ -11,7 +11,7 @@ import Footer from "@/app/components/footer";
 import CTACard from "@/app/components/callToActionCard";
 import StructuredData from "@/app/components/structuredData";
 
-const sans = Open_Sans({
+const sans = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
 });
@@ -21,9 +21,11 @@ const mono = Noto_Sans_Mono({
   subsets: ["latin"],
 });
 
-const serif = Montserrat({
+const serif = Instrument_Serif({
   variable: "--font-serif",
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {

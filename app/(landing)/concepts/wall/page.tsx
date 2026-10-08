@@ -6,8 +6,8 @@ import SiteFooter from "../_kit/siteFooter"
 import CTACard from "@/app/components/callToActionCard"
 import Reveal from "../_kit/reveal"
 import { bTheme, serif } from "../b/body"
-import PhotoWall from "./photoWall"
-import DogWall from "./dogWall"
+import PhotoWall from "@/app/components/site/photoWall"
+import DogWall from "@/app/components/site/dogWall"
 
 export const metadata = { title: "Concept: Photo wall" }
 

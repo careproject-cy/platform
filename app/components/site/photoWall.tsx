@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import type { LandingDog } from "@/app/(frontend)/landing/_shared/data"
+import type { LandingDog } from "@/app/data/landingData"
 
 const ratios = ["aspect-[3/4]", "aspect-square", "aspect-[4/5]", "aspect-[3/5]", "aspect-[5/6]"]
 
@@ -27,7 +27,7 @@ export default function PhotoWall({ dogs, cols = 5, labels = "hover", suffix, pr
                   <span className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/55 to-transparent"/>
                   <span className="absolute left-3 right-3 bottom-3 text-white">
                     <span className="block font-[family-name:var(--font-serif)] text-2xl leading-none">{d.name}</span>
-                    <span className={`block text-xs text-white/80 mt-1 ${suffix ? "" : "capitalize"}`}>{suffix ?? `${d.gender} · ${d.ageText}`}</span>
+                    <span className="block text-xs text-white/80 mt-1">{suffix ?? <><span className="capitalize">{d.gender}</span> · {d.ageText}</>}</span>
                   </span>
                 </>
               )}

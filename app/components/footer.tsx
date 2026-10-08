@@ -1,84 +1,56 @@
-'use client'
+import Image from "next/image"
+import Link from "next/link"
 
-import { Container, Link as VLink, Section, Text, Col, Row, Title, IconButton } from "@vaneui/ui"
-import { platform_name } from "../data/consts"
-import Link from 'next/link'
-import Image from "next/image";
-import React from "react";
-import { Facebook, GitHub, Instagram, Linkedin, Send } from "react-feather";
+const columns = [
+  { title: "Adopt", links: [["Dogs for adoption", "/dogs"], ["How adoption works", "/more/adopt"], ["Adopted dogs", "/adopted/1"]] },
+  { title: "Help", links: [["Donate", "/more/donate"], ["Foster", "/more/foster"], ["Volunteer", "/more/get-involved"]] },
+  { title: "About", links: [["Our story", "/more/about"], ["Stories", "/blog"], ["UANA Foundation", "https://uanafoundation.com/"]] },
+]
+
+const social = [
+  ["Instagram", "https://www.instagram.com/uana.cy/"],
+  ["Facebook", "https://www.facebook.com/careproject.cy"],
+  ["LinkedIn", "https://www.linkedin.com/company/uana-foundation/"],
+  ["Telegram", "https://t.me/care_project"],
+  ["GitHub", "https://github.com/careproject-cy/"],
+]
 
 export default function Footer() {
   return (
-    <Section primary filled className="border-t" tag={'footer'}>
-      <Container xl itemsStart>
-        <Row xl tabletCol justifyBetween itemsStart wFull>
-          <Col lg className="max-w-lg">
-            <Link href="/">
-              <Row itemsCenter>
-                <Image src="/logo.png" alt={platform_name} width={80} height={80} className="h-12 w-auto rounded-lg" />
-                <Title lg serif bold mobileHide className="text-white">
-                  {platform_name}
-                </Title>
-              </Row>
-            </Link>
-            <Row>
-              {
-                [
-                  { icon: Instagram, link: "https://www.instagram.com/uana.cy/" },
-                  { icon: Facebook, link: "https://www.facebook.com/careproject.cy" },
-                  { icon: Linkedin, link: "https://www.linkedin.com/company/uana-foundation/" },
-                  { icon: Send, link: "https://t.me/care_project" },
-                  { icon: GitHub, link: "https://github.com/careproject-cy/" },
-                ].map((item, i) => (
-                  <IconButton secondary lg filled href={item.link} key={i}>
-                    <item.icon />
-                  </IconButton>
-                ))
-              }
-            </Row>
-            <Text lg className="text-white">
-              <b>CARE (Cyprus Animals Rescue Effort) Project</b> is a{' '}
-              <VLink lg tag={Link} href="https://uanafoundation.com/" target="_blank" className="text-blue-400">UANA Foundation</VLink>
-              {' '}initiative that supports animal welfare in Cyprus. Run by devoted volunteers, it&apos;s dedicated to helping stray dogs in Cyprus.
-            </Text>
-            <Text className="text-white opacity-50">&copy; 2026 {platform_name}. All rights reserved.</Text>
-          </Col>
-          <Row itemsStart mobileCol>
-            {
-              [
-                {
-                  category: "About",
-                  links: [
-                    { href: "/", text: "Home" },
-                    { href: "/dogs", text: "Dogs" },
-                    { href: "/blog", text: "Blog" },
-                    { href: "/more/about", text: "About" },
-                  ]
-                },
-                {
-                  category: "Support us",
-                  links: [
-                    { href: "/more/get-involved", text: "Get Involved" },
-                    { href: "/more/adopt", text: "Adopt us" },
-                    { href: "/more/donate", text: "Donate" },
-                    { href: "/more/foster", text: "Foster" },
-                  ]
-                }
-              ].map((item, index) => (
-                <Col lg key={index} className="w-64">
-                  <Text xl semibold uppercase className="text-white opacity-50 pt-3">{item.category}</Text>
-                  <Col sm>
-                    {item.links.map((link, i) => (
-                      <VLink noUnderline tag={Link} key={i} href={link.href} className="text-white">{link.text}</VLink>
-                    ))}
-                  </Col>
-                </Col>
-              )
-              )
-            }
-          </Row>
-        </Row>
-      </Container>
-    </Section>
+    <footer className="border-t border-[var(--line)]">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 pt-16 pb-10 grid gap-10 md:grid-cols-[1.4fr_repeat(3,1fr)]">
+        <div className="max-w-xs">
+          <div className="flex items-center gap-2.5">
+            <Image src="/logo.svg" alt="" width={45} height={32} className="h-8 w-auto rounded-md"/>
+            <span className="font-semibold tracking-tight">CARE Project</span>
+          </div>
+          <p className="text-sm text-[var(--muted)] mt-4 leading-relaxed">
+            Cyprus Animals Rescue Effort, a volunteer project of the UANA Foundation. We rescue, treat, and rehome stray dogs across Cyprus.
+          </p>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 mt-6 text-sm">
+            {social.map(([name, href]) => (
+              <a key={name} href={href} target="_blank" rel="noopener noreferrer" className="text-[var(--muted)] hover:text-[var(--ink)]">{name}</a>
+            ))}
+          </div>
+        </div>
+        {columns.map(c => (
+          <div key={c.title}>
+            <div className="text-sm font-medium">{c.title}</div>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              {c.links.map(([text, href]) => (
+                <li key={href}><Link href={href} className="text-[var(--muted)] hover:text-[var(--ink)]">{text}</Link></li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div className="max-w-6xl mx-auto px-4 md:px-6 py-5 border-t border-[var(--line)] flex flex-wrap justify-between gap-2 text-xs text-[var(--muted)]">
+        <span>© {new Date().getFullYear()} CARE Project · UANA Foundation, Cyprus</span>
+        <span>100% volunteer-run. Every euro goes to the animals.</span>
+      </div>
+      <div aria-hidden="true" className="overflow-hidden border-t border-[var(--line)] flex justify-center">
+        <span className="cp-wordmark">CARE</span>
+      </div>
+    </footer>
   )
 }

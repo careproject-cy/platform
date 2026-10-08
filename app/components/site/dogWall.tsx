@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import PhotoWall from "./photoWall"
-import type { LandingDog } from "@/app/(frontend)/landing/_shared/data"
+import type { LandingDog } from "@/app/data/landingData"
 
 const tabs = [
   { key: "all", label: "All dogs", test: () => true },
