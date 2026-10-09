@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Inter, Instrument_Serif } from 'next/font/google'
+import { Button, Col, PageTitle, Section, Text } from '@vaneui/ui'
 import './(frontend)/globals.css'
 import { platform_name } from '@/app/data/consts'
 
@@ -9,20 +10,20 @@ export const metadata: Metadata = {
   title: `404 - Page Not Found | ${platform_name}`,
 }
 
+const sans = Inter({ variable: '--font-sans', subsets: ['latin'] })
+const serif = Instrument_Serif({ variable: '--font-serif', subsets: ['latin'], weight: '400', style: ['normal', 'italic'] })
+
 export default function GlobalNotFound() {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <main className="flex min-h-screen flex-col items-center justify-center gap-6 px-6 text-center">
-          <h1 className="text-5xl font-semibold tracking-tight">This page wandered off</h1>
-          <p className="text-lg text-[var(--muted)]">The page you are looking for does not exist.</p>
-          <Link
-            href="/"
-            className="rounded-full bg-[var(--accent)] text-white px-6 py-3 font-medium hover:opacity-90"
-          >
-            Open home page
-          </Link>
-        </main>
+      <body className={`${sans.variable} ${serif.variable} antialiased font-sans`}>
+        <Section hScreen itemsCenter justifyCenter tag="main">
+          <Col lg itemsCenter className="max-w-3xl">
+            <PageTitle xl fontNormal textCenter>This page wandered <em className="italic text-(--color-text-accent)">off</em></PageTitle>
+            <Text lg secondary textCenter>The page you are looking for does not exist.</Text>
+            <Button md pill filled accent href="/">Open home page</Button>
+          </Col>
+        </Section>
       </body>
     </html>
   )

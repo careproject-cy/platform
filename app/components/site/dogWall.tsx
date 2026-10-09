@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { Button, Col, Row } from "@vaneui/ui"
 import PhotoWall from "./photoWall"
 import type { LandingDog } from "@/app/data/landingData"
 
@@ -16,18 +17,18 @@ export default function DogWall({ dogs }: { dogs: LandingDog[] }) {
   const shown = dogs.filter(tabs.find(t => t.key === tab)!.test).slice(0, 12)
 
   return (
-    <>
-      <div role="tablist" aria-label="Filter dogs" className="flex flex-wrap gap-2">
+    <Col xl noGap>
+      <Row xs flexWrap role="tablist" aria-label="Filter dogs">
         {tabs.map(t => (
-          <button key={t.key} role="tab" aria-selected={tab === t.key} onClick={() => setTab(t.key)}
-                  className={`rounded-full border px-4 py-2 text-sm transition-colors ${tab === t.key ? "border-[var(--ink)] bg-[var(--ink)] text-[var(--bg)]" : "border-[var(--line)] bg-[var(--bg)] text-[var(--muted)] hover:text-[var(--ink)]"}`}>
+          <Button key={t.key} sm role="tab" aria-selected={tab === t.key} onClick={() => setTab(t.key)}
+                  filled={tab === t.key} secondary={tab !== t.key} fontNormal className={tab === t.key ? "" : "bg-[var(--bg)]"}>
             {t.label}
-          </button>
+          </Button>
         ))}
-      </div>
-      <div key={tab} className="mt-14 pt-12">
+      </Row>
+      <Col key={tab} className="mt-14 pt-12">
         <PhotoWall dogs={shown} cols={4} labels="always"/>
-      </div>
-    </>
+      </Col>
+    </Col>
   )
 }

@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image"
-import Link from "next/link"
+import NextLink from "next/link"
+import { Col, Container, IconButton, Link, Row, Section, Text } from "@vaneui/ui"
 import { Facebook, GitHub, Instagram, Linkedin, Send } from "react-feather"
 
 const columns = [
@@ -18,40 +21,46 @@ const social = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--line)]">
-      <div className="max-w-6xl mx-auto px-4 md:px-6 pt-16 pb-10 grid gap-10 md:grid-cols-[1.4fr_repeat(3,1fr)]">
-        <div className="max-w-xs">
-          <div className="flex items-center gap-2.5">
-            <Image src="/logo.svg" alt="" width={45} height={32} className="h-8 w-auto rounded-md"/>
-            <span className="font-semibold tracking-tight">CARE Project</span>
-          </div>
-          <p className="text-sm text-[var(--muted)] mt-4 leading-relaxed">
-            Cyprus Animals Rescue Effort, a volunteer project of the UANA Foundation. We rescue, treat, and rehome stray dogs across Cyprus.
-          </p>
-          <div className="flex flex-wrap gap-2 mt-6">
-            {social.map(({ name, icon: Icon, href }) => (
-              <a key={name} href={href} target="_blank" rel="noopener noreferrer" aria-label={`${name} (opens in a new tab)`} title={name}
-                 className="size-10 grid place-items-center rounded-full border border-[var(--line)] text-[var(--muted)] hover:text-white hover:bg-[var(--accent)] hover:border-[var(--accent)] transition-colors">
-                <Icon className="size-[18px]" aria-hidden="true"/>
-              </a>
-            ))}
-          </div>
-        </div>
-        {columns.map(c => (
-          <div key={c.title}>
-            <div className="text-sm font-medium">{c.title}</div>
-            <ul className="mt-4 space-y-2.5 text-sm">
-              {c.links.map(([text, href]) => (
-                <li key={href}><Link href={href} className="text-[var(--muted)] hover:text-[var(--ink)]">{text}</Link></li>
+    <Section tag="footer" borderT noPadding>
+      <Container lg itemsStretch className="px-4 md:px-6">
+        <Row xl mobileStack itemsStart className="pt-16 pb-10 max-mobile:items-stretch">
+          <Col className="max-w-xs flex-[1.4]">
+            <Row sm>
+              <Image src="/logo.svg" alt="" width={45} height={32} className="h-8 w-auto rounded-md"/>
+              <Text fontSemibold trackingTight>CARE Project</Text>
+            </Row>
+            <Text sm secondary>
+              Cyprus Animals Rescue Effort, a volunteer project of the UANA Foundation. We rescue, treat, and rehome stray dogs across Cyprus.
+            </Text>
+            <Row xs flexWrap>
+              {social.map(({ name, icon: Icon, href }) => (
+                <IconButton key={name} md secondary tag="a" href={href} target="_blank" rel="noopener noreferrer"
+                            aria-label={`${name} (opens in a new tab)`} title={name}>
+                  <Icon aria-hidden="true"/>
+                </IconButton>
               ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-      <div className="max-w-6xl mx-auto px-4 md:px-6 py-5 border-t border-[var(--line)] flex flex-wrap justify-between gap-2 text-xs text-[var(--muted)]">
-        <span>© {new Date().getFullYear()} CARE Project · UANA Foundation, Cyprus</span>
-        <span>100% volunteer-run. Every euro goes to the animals.</span>
-      </div>
-    </footer>
+            </Row>
+          </Col>
+          {columns.map(c => (
+            <Col key={c.title} className="flex-1">
+              <Text sm fontMedium>{c.title}</Text>
+              <Col sm tag="ul">
+                {c.links.map(([text, href]) => (
+                  <li key={href}>
+                    {href.startsWith("http")
+                      ? <Link sm secondary noUnderline href={href} external>{text}</Link>
+                      : <Link sm secondary noUnderline tag={NextLink} href={href}>{text}</Link>}
+                  </li>
+                ))}
+              </Col>
+            </Col>
+          ))}
+        </Row>
+        <Row justifyBetween flexWrap borderT className="py-5">
+          <Text xs secondary>© {new Date().getFullYear()} CARE Project · UANA Foundation, Cyprus</Text>
+          <Text xs secondary>100% volunteer-run. Every euro goes to the animals.</Text>
+        </Row>
+      </Container>
+    </Section>
   )
 }

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Md } from "@vaneui/md";
-import { Img, ThemeProvider } from "@vaneui/ui";
+import { Img } from "@vaneui/ui";
 import { getImageSrc } from "@/app/utils/images";
 import Image from "next/image";
 
@@ -13,18 +13,6 @@ interface MdComponentProps {
 export default function MdComponent({md}: MdComponentProps) {
   return (
     <div className="md-content">
-    <ThemeProvider extraClasses={{
-      text: {
-        md: "leading-8 w-full",
-      },
-      title: {
-        xs: "pt-2",
-        sm: "pt-3",
-        md: "pt-4",
-        lg: "pt-5",
-        xl: "pt-6"
-      },
-    }}>
       <Md
         content={md}
         config={{
@@ -37,7 +25,6 @@ export default function MdComponent({md}: MdComponentProps) {
               } & Record<string, unknown>;
               return (
                 <Img tag={Image} wFull {...rest} title={title} src={getImageSrc(src)} alt={alt}
-                     className="rounded-lg"
                      width={0}
                      height={0}
                      sizes="100vw"
@@ -47,7 +34,6 @@ export default function MdComponent({md}: MdComponentProps) {
           }
         }}
       />
-    </ThemeProvider>
     </div>
   );
 }
