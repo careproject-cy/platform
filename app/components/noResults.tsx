@@ -1,13 +1,14 @@
 import React from 'react';
 import Image from 'next/image'
+import { Col, Text, Title } from "@vaneui/ui";
 
 const NoResults: React.FC = () => {
   return (
-    <div className="flex flex-col items-center text-center py-16 opacity-60">
+    <Col itemsCenter className="py-16 opacity-60">
       <Image src="/dog.svg" alt="" width={240} height={160} />
-      <p className="mt-6 font-serif text-4xl">No dogs match these filters</p>
-      <p className="mt-2 text-[var(--muted)]">Try another age or breed.</p>
-    </div>
+      <Title xl>No dogs match these filters</Title>
+      <Text secondary>Try another age or breed.</Text>
+    </Col>
   );
 };
 

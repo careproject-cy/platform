@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
-import { Chip, Col, Row } from "@vaneui/ui"
+import { Chip, Col, IconButton, Row } from "@vaneui/ui"
 import { ChevronLeft, ChevronRight } from 'react-feather'
 
 interface GalleryProps {
@@ -55,19 +55,19 @@ const Gallery: React.FC<GalleryProps> = ({ images, className, chipText, alt }) =
   }
 
   return (
-    <div className={twMerge(`relative flex justify-center w-full rounded-2xl`, className || "")}>
+    <Row relative justifyCenter wFull className={twMerge(`rounded-2xl`, className || "")}>
       <Col sm>
         <Row itemsCenter relative overflowHidden className="rounded-2xl">
-          <button onClick={prevImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-75 rounded-full absolute left-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
-            <ChevronLeft className="size-6" />
-          </button>
-          <button onClick={nextImage} className="cursor-pointer transition-all duration-100 bg-gray-100 opacity-75 rounded-full absolute right-2 z-20 h-8 w-8 flex items-center justify-center hover:shadow-sm hover:opacity-100">
-            <ChevronRight className="size-6" />
-          </button>
+          <IconButton md secondary absolute onClick={prevImage} aria-label="Previous photo" className="left-2 z-20 bg-white/80 backdrop-blur">
+            <ChevronLeft/>
+          </IconButton>
+          <IconButton md secondary absolute onClick={nextImage} aria-label="Next photo" className="right-2 z-20 bg-white/80 backdrop-blur">
+            <ChevronRight/>
+          </IconButton>
           <Col relative overflowHidden>
             <SquareImage src={images[visible]} alt={`${baseAlt} – photo ${visible + 1}`} size={1000} />
             {chipText &&
-              <Chip lg semibold absolute sans className="right-2 bottom-2 opacity-75">{chipText}</Chip>
+              <Chip lg fontSemibold absolute className="right-2 bottom-2 opacity-75">{chipText}</Chip>
             }
           </Col>
         </Row>
@@ -86,7 +86,7 @@ const Gallery: React.FC<GalleryProps> = ({ images, className, chipText, alt }) =
           ))}
         </Row>
       </Col>
-    </div>
+    </Row>
   )
 }
 

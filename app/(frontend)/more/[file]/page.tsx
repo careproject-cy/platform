@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
+import { Col, Row } from "@vaneui/ui"
 import Breadcrumbs from "@/app/components/breadcrumbs"
+import PageShell from "@/app/components/site/pageShell"
 import { platform_name } from "@/app/data/consts"
 import { fetchMd } from "@/app/data/fetchData"
 import MdComponent from "@/app/components/md/mdComponent"
@@ -40,19 +42,16 @@ export default async function Page({params}: MdPageProps) {
   const isDonate = file === "donate"
 
   return (
-    <div className={`w-full mx-auto px-4 md:px-6 pt-10 pb-24 ${isDonate ? "max-w-6xl" : "max-w-3xl"}`}>
-      <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {href: `/more/${file}`, text: title}]}/>
-      <div className={isDonate ? "mt-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start" : "mt-6"}>
-        <div className="min-w-0">
-          <MdComponent md={content}/>
-        </div>
-        {isDonate &&
-          <div className="lg:sticky lg:top-24">
-            <DonationCard/>
-          </div>
-        }
-      </div>
-    </div>
+    <PageShell size={isDonate ? "lg" : "xs"}>
+      <Col className="pt-10">
+        <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {href: `/more/${file}`, text: title}]}/>
+      </Col>
+      {isDonate
+        ? <Row xl tabletStack itemsStart className="max-tablet:items-stretch">
+            <Col className="flex-1 min-w-0"><MdComponent md={content}/></Col>
+            <Col className="flex-1 lg:sticky lg:top-24"><DonationCard/></Col>
+          </Row>
+        : <MdComponent md={content}/>}
+    </PageShell>
   )
 }
-

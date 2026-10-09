@@ -1,9 +1,10 @@
-import Link from "next/link"
 import { fetchDogs } from "@/app/data/fetchData"
 import DogsCollection from "./dogsCollection"
 import { platform_name } from "@/app/data/consts"
 import { Metadata } from "next"
-import { PageHeader } from "@/app/components/site/heading"
+import { Accent, PageHeader } from "@/app/components/site/heading"
+import PageShell from "@/app/components/site/pageShell"
+import { TextLink } from "@/app/components/site/links"
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -14,12 +15,12 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function DogsPage() {
   const dogs = await fetchDogs()
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 md:px-6 pb-24">
-      <PageHeader title={<>Looking for <em className="text-[var(--accent)]">a home</em></>}>
+    <PageShell>
+      <PageHeader title={<>Looking for <Accent>a home</Accent></>}>
         Every dog here was rescued in Cyprus and cared for by our volunteers. Adopt in Cyprus, the UK, Germany, or the Netherlands.{" "}
-        <Link href="/more/adopt" className="text-[var(--ink)] underline underline-offset-4 decoration-[var(--accent)]">How adoption works</Link>
+        <TextLink href="/more/adopt" inheritSize>How adoption works</TextLink>
       </PageHeader>
       <DogsCollection dogs={dogs}/>
-    </div>
+    </PageShell>
   )
 }

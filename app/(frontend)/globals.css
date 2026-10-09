@@ -1,52 +1,91 @@
 @import "tailwindcss";
 @import "@vaneui/ui/vars";
+@import "@vaneui/md/styles";
 
 /* Relative to this file: app/(frontend)/ -> repo root. */
-@source "../../node_modules/@vaneui/ui";
+@source "../../node_modules/@vaneui/ui/dist";
 
-/* Register VaneUI's responsive breakpoints so Tailwind generates the
-   max-mobile / max-tablet / max-desktop variants its layout props rely on
-   (mobileCol, tabletCol, mobileHide, responsive padding/gap/font-size, etc.).
-   Values match VaneUI's contract: mobile 48rem, tablet 64rem, desktop 80rem. */
+/* VaneUI's breakpoints, so its mobile/tablet/desktop props get matching Tailwind variants. */
+/* Headings use Instrument Serif, which next/font registers as --font-serif on body. */
+@theme inline {
+    --font-heading: var(--font-serif);
+}
+
 @theme {
     --breakpoint-mobile: 48rem;
     --breakpoint-tablet: 64rem;
     --breakpoint-desktop: 80rem;
 }
 
+/* Site palette, mapped onto VaneUI's colour tokens so components pick it up. */
 :root {
-    /* Site palette; the new layout components read these directly. */
     --bg: #ffffff;
     --ink: #101a14;
     --muted: #5d6a62;
     --line: #e3e8e4;
     --accent: #166534;
     --accent-soft: #eef6f0;
-    --cta-accent: var(--accent);
 
-    --background: var(--bg);
-    --foreground: var(--ink);
-
-    /* VaneUI tokens mapped onto the same palette */
     --color-text-primary: var(--ink);
     --color-text-secondary: var(--muted);
+    --color-text-tertiary: var(--muted);
     --color-text-link: var(--accent);
     --color-text-accent: var(--accent);
-    --color-text-filled-accent: white;
+    --color-text-filled-primary: #ffffff;
+    --color-text-filled-accent: #ffffff;
+
+    --color-bg-primary: var(--bg);
+    --color-bg-hover-primary: color-mix(in oklab, var(--ink) 6%, transparent);
+    --color-bg-active-primary: color-mix(in oklab, var(--ink) 10%, transparent);
+    --color-bg-filled-primary: var(--ink);
+    --color-bg-filled-hover-primary: #26332b;
+    --color-bg-filled-active-primary: #364339;
 
     --color-bg-accent: var(--accent-soft);
     --color-bg-hover-accent: #dfeee3;
     --color-bg-active-accent: #cfe5d6;
-    --color-bg-layout-accent: var(--accent-soft);
-
     --color-bg-filled-accent: var(--accent);
     --color-bg-filled-hover-accent: #14532d;
     --color-bg-filled-active-accent: #0f3f22;
-    --color-text-filled-primary: white;
 
+    --color-border-primary: var(--line);
+    --color-border-secondary: var(--line);
     --color-border-accent: #bcd8c4;
+    --color-focus-primary: var(--accent);
+    --color-focus-accent: var(--accent);
+}
 
-    --rw: 2px;
+/* Dark islands (happy endings wall, donation card) keep the green accent and the palette's ink. */
+[data-theme="dark"] {
+    --bg: #101a14;
+    --line: rgb(255 255 255 / 18%);
+    --color-bg-primary: var(--bg);
+    --color-text-primary: #ffffff;
+    --color-text-secondary: rgb(255 255 255 / 72%);
+    --color-text-accent: #86efac;
+    --color-border-primary: rgb(255 255 255 / 35%);
+    --color-bg-hover-primary: rgb(255 255 255 / 10%);
+    --color-bg-filled-primary: #ffffff;
+    --color-text-filled-primary: var(--ink);
+    --color-bg-filled-hover-primary: #e8ece9;
+    --color-bg-filled-accent: var(--accent);
+    --color-bg-filled-hover-accent: #14532d;
+    --color-text-filled-accent: #ffffff;
+    --color-focus-primary: #86efac;
+    --color-focus-accent: #86efac;
+}
+
+/* Display sizes for the serif headings: larger than VaneUI's stock xl, still size-driven. */
+.vane-page-title[data-size="xl"] {
+    --fs-unit-desktop: 42; --fs-unit-tablet: 36; --fs-unit-mobile: 24;
+    --lh: .95;
+}
+.vane-page-title[data-size="xl"].hero-title {
+    --fs-desktop: clamp(5.25rem, 5vw, 7.5rem);
+}
+.vane-section-title[data-size="xl"] {
+    --fs-unit-desktop: 36; --fs-unit-tablet: 30; --fs-unit-mobile: 24;
+    --lh: .95;
 }
 
 body {
@@ -55,32 +94,18 @@ body {
 }
 
 /* Instrument Serif ships one weight; never fake a bold. */
-.font-serif {
+.font-serif, .font-heading {
     font-synthesis: none;
 }
 
-@layer base {
-
-    *,
-    ::after,
-    ::before,
-    ::backdrop,
-    ::file-selector-button {
-        border-color: var(--color-gray-200, #E5E7EB);
-    }
-}
-
-/* Markdown pages and posts: serif headings to match the rest of the site */
+/* Markdown pages and posts: larger serif rhythm than the stock heading sizes */
 .md-content :is(h1, h2, h3) {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-synthesis: none;
     letter-spacing: -0.01em;
     line-height: 1;
 }
-.md-content h1 { font-size: clamp(3rem, 7vw, 4.75rem); margin-bottom: .25em; }
-.md-content h2 { font-size: clamp(2.25rem, 4vw, 3rem); padding-top: .6em; }
-.md-content h3 { font-size: 1.9rem; padding-top: .5em; }
+.md-content h1 { font-size: clamp(3rem, 7vw, 4.75rem); }
+.md-content h2 { font-size: clamp(2.25rem, 4vw, 3rem); padding-top: .4em; }
+.md-content h3 { font-size: 1.9rem; padding-top: .3em; }
 
 [data-reveal] { transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--reveal-delay, 0ms); }
 [data-reveal="out"] { opacity: 0; transform: translateY(16px); }

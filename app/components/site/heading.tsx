@@ -1,10 +1,13 @@
+import { Col, PageTitle, Row, SectionTitle, Text } from "@vaneui/ui"
 import Reveal from "./reveal"
 
 export function SectionHeading({ title, children }: { title: React.ReactNode; children?: React.ReactNode }) {
   return (
-    <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-      <h2 className="font-serif text-5xl md:text-7xl leading-[0.95] tracking-[-0.02em] max-w-[14ch] text-balance">{title}</h2>
-      {children}
+    <Reveal>
+      <Row lg mobileStack justifyBetween itemsEnd className="max-mobile:items-start">
+        <SectionTitle xl className="max-w-[14ch] text-balance">{title}</SectionTitle>
+        {children}
+      </Row>
     </Reveal>
   )
 }
@@ -12,16 +15,21 @@ export function SectionHeading({ title, children }: { title: React.ReactNode; ch
 // Top of an inner page: optional crumbs line, large serif title, optional intro.
 export function PageHeader({ eyebrow, title, children }: { eyebrow?: React.ReactNode; title: React.ReactNode; children?: React.ReactNode }) {
   return (
-    <header className="pt-12 md:pt-16 pb-10 md:pb-14">
-      {eyebrow && <div className="mb-6">{eyebrow}</div>}
+    <Col lg tag="header" className="pt-12 md:pt-16 pb-10 md:pb-14">
+      {eyebrow}
       <Reveal>
-        <h1 className="font-serif text-5xl md:text-[5.25rem] leading-[0.95] tracking-[-0.02em] max-w-[16ch] text-balance">{title}</h1>
+        <PageTitle xl className="max-w-[16ch] text-balance">{title}</PageTitle>
       </Reveal>
       {children && (
         <Reveal delay={80}>
-          <div className="mt-6 text-lg text-[var(--muted)] leading-relaxed max-w-2xl">{children}</div>
+          <Text lg secondary className="max-w-2xl">{children}</Text>
         </Reveal>
       )}
-    </header>
+    </Col>
   )
+}
+
+// Highlighted words inside a heading; colour comes from the accent token so dark islands get their own.
+export function Accent({ children }: { children: React.ReactNode }) {
+  return <em className="italic text-(--color-text-accent)">{children}</em>
 }

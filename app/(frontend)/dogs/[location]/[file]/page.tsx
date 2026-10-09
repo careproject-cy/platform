@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import Link from "next/link"
+import { Col, Grid2, Grid3, PageTitle, Row, SectionTitle, Text } from "@vaneui/ui"
+import PageShell from "@/app/components/site/pageShell"
+import { LinkButton } from "@/app/components/site/links"
+import { Accent } from "@/app/components/site/heading"
 import Gallery from "@/app/components/gallery"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import { domain, platform_name } from "@/app/data/consts"
@@ -104,57 +107,56 @@ export default async function DogPage({params}: IdProps) {
   ]
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 md:px-6 pt-10 pb-24">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+    <PageShell>
+      <Row mobileStack justifyBetween className="pt-10 max-mobile:items-start">
         <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"},
           isAdopted ? {href: "/adopted/1", text: "Adopted dogs"} : {href: "/dogs", text: "Dogs"},
           {href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name}]}/>
-        <div className="md:w-auto"><Sharer shareText={shareText} url={url}/></div>
-      </div>
+        <Sharer shareText={shareText} url={url}/>
+      </Row>
 
-      <div className="mt-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-        <Gallery images={galleryImages} alt={dog.name} chipText={showStatus ? status : undefined}/>
-        <div className="lg:sticky lg:top-24">
-          {isAdopted && <p className="text-[var(--accent)] font-medium"><span aria-hidden="true">🐾</span> Found their forever home</p>}
-          <h1 className="font-serif text-6xl md:text-8xl leading-[0.9] tracking-[-0.02em] mt-2">{dog.name}</h1>
-          <dl className="mt-8 grid grid-cols-2 border-t border-[var(--line)]">
+      <Row xl tabletStack itemsStart className="mt-4 max-tablet:items-stretch">
+        <Gallery className="flex-1" images={galleryImages} alt={dog.name} chipText={showStatus ? status : undefined}/>
+        <Col lg className="flex-1 lg:sticky lg:top-24">
+          {isAdopted && <Text accent fontMedium><span aria-hidden="true">🐾</span> Found their forever home</Text>}
+          <PageTitle xl>{dog.name}</PageTitle>
+          <Grid2 noGap tag="dl" borderT className="max-mobile:grid-cols-2">
             {facts.map(([k, v]) => (
-              <div key={k} className="py-4 border-b border-[var(--line)] pr-4">
-                <dt className="text-xs text-[var(--muted)]">{k}</dt>
-                <dd className={`mt-1 font-medium ${k === "Sex" ? "capitalize" : ""}`}>{v}</dd>
-              </div>
+              <Col xs key={k} borderB className="py-4 pr-4">
+                <Text xs secondary tag="dt">{k}</Text>
+                <Text fontMedium tag="dd" className={k === "Sex" ? "capitalize" : ""}>{v}</Text>
+              </Col>
             ))}
-          </dl>
+          </Grid2>
           {!isAdopted && (
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/more/adopt" className="rounded-full bg-[var(--accent)] text-white px-6 py-3 font-medium hover:opacity-90">Ask about {dog.name}</Link>
-              <Link href="/more/foster" className="rounded-full border border-[var(--line)] px-6 py-3 font-medium hover:border-[var(--ink)]">Foster instead</Link>
-            </div>
+            <Row sm flexWrap>
+              <LinkButton filled accent href="/more/adopt">Ask about {dog.name}</LinkButton>
+              <LinkButton href="/more/foster">Foster instead</LinkButton>
+            </Row>
           )}
-          <div className="mt-10">
-            <MdComponent md={content}/>
-          </div>
+          <MdComponent md={content}/>
           {!isAdopted &&
-            <p className="mt-10 pt-6 border-t border-[var(--line)] text-sm text-[var(--muted)]">
-              Added {getDate(dog.added)}. Details were collected when {dog.name} joined the site, so some may have changed.
-            </p>
+            <Col borderT className="pt-6">
+              <Text sm secondary>
+                Added {getDate(dog.added)}. Details were collected when {dog.name} joined the site, so some may have changed.
+              </Text>
+            </Col>
           }
-        </div>
-      </div>
+        </Col>
+      </Row>
 
       {similarDogs.length !== 0 &&
-        <section className="mt-28">
-          <h2 className="font-serif text-5xl md:text-6xl leading-[0.95] tracking-[-0.02em]">
-            {isAdopted ? <>Still looking for <em className="text-[var(--accent)]">a home</em></> : <>Similar <em className="text-[var(--accent)]">dogs</em></>}
-          </h2>
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-10">
+        <Col xl className="mt-20">
+          <SectionTitle xl>
+            {isAdopted ? <>Still looking for <Accent>a home</Accent></> : <>Similar <Accent>dogs</Accent></>}
+          </SectionTitle>
+          <Grid3 className="gap-x-5 gap-y-10 max-mobile:grid-cols-2">
             {similarDogs.map((dog) => (
-              <DogCard key={dog.filename} {...dog} />
+              <DogCard key={`${dog.location}/${dog.filename}`} {...dog} />
             ))}
-          </div>
-        </section>
+          </Grid3>
+        </Col>
       }
-    </div>
+    </PageShell>
   )
 }
-

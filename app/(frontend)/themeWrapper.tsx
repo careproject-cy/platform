@@ -3,25 +3,29 @@
 import React from "react";
 import { ThemeDefaults, ThemeProvider } from "@vaneui/ui";
 
+// Instrument Serif ships one weight, so headings use the normal weight.
 const themeDefaults: ThemeDefaults = {
   button: {
     main: {
       md: true,
       pill: true,
-      primary: true,
     },
   },
+  iconButton: {
+    pill: true,
+  },
   pageTitle: {
-    serif: true,
-    lg: true,
+    fontNormal: true,
   },
   sectionTitle: {
-    serif: true,
-    xl: true,
+    fontNormal: true,
   },
-  badge: {
-    secondary: true,
-  }
+  title: {
+    fontNormal: true,
+  },
+  chip: {
+    pill: true,
+  },
 }
 
 export default function ThemeWrapper({children}: Readonly<{

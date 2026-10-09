@@ -4,6 +4,7 @@ import { useState } from 'react'
 import DogCard from '@/app/components/dogCard'
 import NoResults from "@/app/components/noResults"
 import { DogMetadata } from "@/app/data/dogMetadata"
+import { Button, Col, Grid4, Label, Row, Select } from "@vaneui/ui"
 
 const ages = [
   { key: 'all', label: 'All ages' },
@@ -32,41 +33,37 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
   const uniqueBreeds = Array.from(new Set(availableDogs.map(dog => dog.breed))).sort()
 
   return (
-    <>
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-10 border-b border-[var(--line)]">
-        <div role="group" aria-label="Filter by age" className="flex flex-wrap gap-2">
+    <Col xl noGap>
+      <Row lg mobileStack justifyBetween borderB className="pb-10 max-mobile:items-start">
+        <Row xs flexWrap role="group" aria-label="Filter by age">
           {ages.map(a => (
-            <button key={a.key} onClick={() => setAgeFilter(a.key)} aria-pressed={ageFilter === a.key}
-                    className={`rounded-full border px-4 py-2 text-sm transition-colors ${ageFilter === a.key ? "border-[var(--ink)] bg-[var(--ink)] text-white" : "border-[var(--line)] text-[var(--muted)] hover:text-[var(--ink)]"}`}>
+            <Button key={a.key} sm fontNormal onClick={() => setAgeFilter(a.key)} aria-pressed={ageFilter === a.key}
+                    filled={ageFilter === a.key} secondary={ageFilter !== a.key}>
               {a.label}
-            </button>
+            </Button>
           ))}
-        </div>
-        <label className="flex items-center gap-3 text-sm text-[var(--muted)]">
+        </Row>
+        <Label row itemsCenter secondary>
           Breed
-          <select value={breedFilter} onChange={(event) => setBreedFilter(event.target.value)}
-                  className="rounded-full border border-[var(--line)] bg-white px-4 py-2 text-[var(--ink)] cursor-pointer hover:border-[var(--ink)]">
+          <Select sm pill wAuto value={breedFilter} onChange={(event) => setBreedFilter(event.target.value)}>
             <option value="all">All breeds</option>
             {uniqueBreeds.map(breed => (
               <option key={breed} value={breed.toLowerCase()}>{breed}</option>
             ))}
-          </select>
-        </label>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-5 gap-y-10 pt-10">
+          </Select>
+        </Label>
+      </Row>
+      <Grid4 className="gap-x-5 gap-y-10 pt-10">
         {displayedDogs.map((dog) => (
           <DogCard key={`${dog.location}/${dog.filename}`} {...dog} />
         ))}
-      </div>
+      </Grid4>
       {visibleDogs < filteredDogs.length && (
-        <div className="flex justify-center pt-12">
-          <button onClick={() => setVisibleDogs(prev => prev + 20)}
-                  className="rounded-full border border-[var(--line)] px-6 py-3 font-medium hover:border-[var(--ink)]">
-            See more dogs
-          </button>
-        </div>
+        <Row justifyCenter className="pt-12">
+          <Button onClick={() => setVisibleDogs(prev => prev + 20)}>See more dogs</Button>
+        </Row>
       )}
       {displayedDogs.length === 0 && <NoResults />}
-    </>
+    </Col>
   )
 }

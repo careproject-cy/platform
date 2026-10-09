@@ -31,3 +31,5 @@ export async function getLandingData() {
     },
   }
 }
+
+export type LandingData = Awaited<ReturnType<typeof getLandingData>>
