@@ -130,8 +130,8 @@ export default async function DogPage({params}: IdProps) {
           </Grid2>
           {!isAdopted && (
             <Row sm flexWrap>
-              <LinkButton filled accent href="/more/adopt">Ask about {dog.name}</LinkButton>
-              <LinkButton href="/more/foster">Foster instead</LinkButton>
+              <LinkButton filled accent href="/more/adopt">How adoption works</LinkButton>
+              <LinkButton href="/more/foster">How fostering works</LinkButton>
             </Row>
           )}
           <MdComponent md={content}/>
