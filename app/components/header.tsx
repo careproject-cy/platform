@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 inset-x-0 z-50 bg-[color-mix(in_oklab,var(--bg)_82%,transparent)] backdrop-blur-xl border-b border-[var(--line)]">
-      <div className="max-w-6xl mx-auto px-4 md:px-6 h-16 flex items-center gap-8">
+      <div className="max-w-6xl 2xl:max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center gap-8">
         <Link href="/" className="flex items-center gap-2.5 shrink-0 rounded-md focus-visible:outline-2 focus-visible:outline-[var(--accent)]">
           <Image src="/logo.svg" alt="" width={45} height={32} className="h-8 w-auto rounded-md"/>
           <span className="font-semibold tracking-tight text-[15px]">CARE Project</span>

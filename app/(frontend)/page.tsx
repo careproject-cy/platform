@@ -32,24 +32,24 @@ const work = [
 
 export default async function HomePage() {
   const { newest, available, adopted, posts } = await getLandingData()
-  const heroWall = [...newest, ...adopted].slice(0, 20)
+  const heroWall = [...newest, ...adopted].slice(0, 32)
   const fade = "pointer-events-none absolute inset-x-0"
 
   return (
     <>
       <section className="relative px-3 pt-3">
-        <div className="relative h-[760px] md:h-[800px] overflow-hidden rounded-[32px]">
-          <PhotoWall dogs={heroWall} priority/>
+        <div className="relative h-[760px] md:h-[clamp(720px,calc(100svh-76px),1080px)] overflow-hidden rounded-[32px]">
+          <PhotoWall dogs={heroWall} cols={8} priority/>
           <div className={`${fade} bottom-0 h-[72%] md:h-[62%] bg-[linear-gradient(0deg,var(--bg)_0%,var(--bg)_42%,color-mix(in_oklab,var(--bg)_75%,transparent)_70%,transparent_100%)]`}/>
           <div className="absolute inset-x-0 bottom-0 px-5 md:px-12 pb-10 md:pb-14">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+            <div className="max-w-6xl 2xl:max-w-7xl mx-auto flex flex-col md:flex-row md:items-end md:justify-between gap-8">
               <Reveal>
-                <h1 className="font-serif text-5xl md:text-[5.25rem] leading-[0.92] tracking-[-0.02em] max-w-[13ch] text-balance">
+                <h1 className="font-serif text-5xl md:text-[clamp(5.25rem,5vw,7.5rem)] leading-[0.92] tracking-[-0.02em] max-w-[13ch] text-balance">
                   From the streets of Cyprus <em className="text-[var(--accent)]">to your sofa</em>
                 </h1>
               </Reveal>
-              <Reveal delay={100} className="max-w-sm">
-                <p className="text-lg text-[var(--muted)] leading-relaxed">
+              <Reveal delay={100} className="max-w-sm 2xl:max-w-md">
+                <p className="text-lg 2xl:text-xl text-[var(--muted)] leading-relaxed">
                   Rescued dogs waiting for homes in Cyprus, the UK, Germany, and the Netherlands. Some of these faces have already found one.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3">
