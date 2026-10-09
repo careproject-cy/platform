@@ -12,6 +12,7 @@ interface MdComponentProps {
 
 export default function MdComponent({md}: MdComponentProps) {
   return (
+    <div className="md-content">
     <ThemeProvider extraClasses={{
       text: {
         md: "leading-8 w-full",
@@ -47,5 +48,6 @@ export default function MdComponent({md}: MdComponentProps) {
         }}
       />
     </ThemeProvider>
+    </div>
   );
 }

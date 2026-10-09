@@ -81,7 +81,7 @@ const Gallery: React.FC<GalleryProps> = ({ images, className, chipText, alt }) =
               width={400}
               height={400}
               sizes="(max-width: 768px) 100vw, 50vw"
-              className={`object-cover aspect-square w-24 rounded-xl cursor-pointer border-3 ${idx === visible ? "border-amber-400" : "border-gray-100"}`}
+              className={`object-cover aspect-square w-24 rounded-xl cursor-pointer border-3 ${idx === visible ? "border-[var(--accent)]" : "border-transparent opacity-70 hover:opacity-100"}`}
             />
           ))}
         </Row>

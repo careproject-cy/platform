@@ -15,38 +15,48 @@
 }
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    /* Site palette; the new layout components read these directly. */
+    --bg: #ffffff;
+    --ink: #101a14;
+    --muted: #5d6a62;
+    --line: #e3e8e4;
+    --accent: #166534;
+    --accent-soft: #eef6f0;
+    --cta-accent: var(--accent);
 
-    /* Override default colors - using new VaneUI naming convention */
-    --color-text-primary: var(--color-gray-800, #171717);
-    --color-text-secondary: var(--color-gray-500, #6B7280);
-    --color-text-link: var(--color-blue-600, #2563EB);
-    --color-text-accent: var(--color-orange-500);
+    --background: var(--bg);
+    --foreground: var(--ink);
 
+    /* VaneUI tokens mapped onto the same palette */
+    --color-text-primary: var(--ink);
+    --color-text-secondary: var(--muted);
+    --color-text-link: var(--accent);
+    --color-text-accent: var(--accent);
     --color-text-filled-accent: white;
 
-    /* Accent color overrides (orange theme instead of default rose) */
-    --color-bg-accent: var(--color-orange-50, #FFF7ED);
-    --color-bg-hover-accent: var(--color-orange-100);
-    --color-bg-active-accent: var(--color-orange-200);
-    --color-bg-layout-accent: var(--color-orange-50, #FFF7ED);
+    --color-bg-accent: var(--accent-soft);
+    --color-bg-hover-accent: #dfeee3;
+    --color-bg-active-accent: #cfe5d6;
+    --color-bg-layout-accent: var(--accent-soft);
 
-    --color-bg-filled-accent: var(--color-orange-600);
-    --color-bg-filled-hover-accent: var(--color-orange-700);
-    --color-bg-filled-active-accent: var(--color-orange-800);
+    --color-bg-filled-accent: var(--accent);
+    --color-bg-filled-hover-accent: #14532d;
+    --color-bg-filled-active-accent: #0f3f22;
     --color-text-filled-primary: white;
 
-    --color-border-accent: var(--color-orange-200);
+    --color-border-accent: #bcd8c4;
 
     --rw: 2px;
-
-    --_gradient-blend-mode: normal; /* or multiply, screen, overlay, etc. */
-    --_gradient-blur: 8px;          /* how strong the frosted blur is */
 }
 
 body {
-    background: var(--background);
+    background: var(--bg);
+    color: var(--ink);
+}
+
+/* Instrument Serif ships one weight; never fake a bold. */
+.font-serif {
+    font-synthesis: none;
 }
 
 @layer base {
@@ -60,42 +70,22 @@ body {
     }
 }
 
-.mesh-grad {
-    position: relative;
-    overflow: hidden;         /* clip the blur */
-
-    /* Aurora background on the element */
-    background:
-            radial-gradient(at 90% 6%, #FFD5A6 0px, transparent 50%),
-            radial-gradient(at 22% 78%, #FFFFFF 0px, transparent 50%),
-            radial-gradient(at 10% 55%, #FF6A00 0px, transparent 50%),
-            radial-gradient(at 30% 95%, #FFD5A6 0px, transparent 50%),
-            #FFFFFF;
-    background-blend-mode: var(--_gradient-blend-mode);
+/* Markdown pages and posts: serif headings to match the rest of the site */
+.md-content :is(h1, h2, h3) {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-synthesis: none;
+    letter-spacing: -0.01em;
+    line-height: 1;
 }
+.md-content h1 { font-size: clamp(3rem, 7vw, 4.75rem); margin-bottom: .25em; }
+.md-content h2 { font-size: clamp(2.25rem, 4vw, 3rem); padding-top: .6em; }
+.md-content h3 { font-size: 1.9rem; padding-top: .5em; }
 
-/* Blurred copy of the aurora behind content */
-.mesh-grad::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: inherit;                 /* clone the aurora */
-    background-blend-mode: inherit;
-    filter: blur(var(--_gradient-blur)); /* the "frost" */
-    z-index: 0;
-}
+[data-reveal] { transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--reveal-delay, 0ms); }
+[data-reveal="out"] { opacity: 0; transform: translateY(16px); }
+[data-reveal="in"] { opacity: 1; transform: none; }
 
-/* Milky glass tint */
-.mesh-grad::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0.6);   /* adjust opacity to taste */
-    z-index: 0;
-}
-
-/* Ensure real content sits above the pseudo-layers */
-.mesh-grad > * {
-    position: relative;
-    z-index: 1;
+@media (prefers-reduced-motion: reduce) {
+    [data-reveal] { transition: none !important; opacity: 1 !important; transform: none !important; }
 }

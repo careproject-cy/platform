@@ -1,7 +1,4 @@
-"use client"
-
 import Link from 'next/link'
-import { Button, Row } from "@vaneui/ui"
 import { ChevronLeft, ChevronRight } from 'react-feather'
 
 interface PaginationProps {
@@ -10,26 +7,29 @@ interface PaginationProps {
   totalPages: number
 }
 
+const item = "size-11 grid place-items-center rounded-full border text-sm transition-colors"
+
 export default function Pagination({basePath, currentPage, totalPages}: PaginationProps) {
   if (totalPages <= 1) return null
 
   const pages = Array.from({length: totalPages}, (_, i) => i + 1)
   const hasPrev = currentPage > 1
   const hasNext = currentPage < totalPages
+  const idle = `${item} border-[var(--line)] hover:border-[var(--ink)]`
 
   return (
-    <Row sm itemsCenter justifyCenter flexWrap wFull>
+    <nav aria-label="Pagination" className="flex flex-wrap items-center justify-center gap-2">
       {hasPrev
-        ? <Button sm tag={Link} href={`${basePath}/${currentPage - 1}`} aria-label="Previous page"><ChevronLeft/></Button>
-        : <Button sm disabled aria-label="Previous page"><ChevronLeft/></Button>}
+        ? <Link href={`${basePath}/${currentPage - 1}`} aria-label="Previous page" className={idle}><ChevronLeft className="size-4"/></Link>
+        : <span aria-hidden="true" className={`${item} border-[var(--line)] opacity-40`}><ChevronLeft className="size-4"/></span>}
       {pages.map((p) => (
         p === currentPage
-          ? <Button key={p} sm filled aria-current="page">{p}</Button>
-          : <Button key={p} sm tag={Link} href={`${basePath}/${p}`}>{p}</Button>
+          ? <span key={p} aria-current="page" className={`${item} border-[var(--ink)] bg-[var(--ink)] text-white`}>{p}</span>
+          : <Link key={p} href={`${basePath}/${p}`} className={idle}>{p}</Link>
       ))}
       {hasNext
-        ? <Button sm tag={Link} href={`${basePath}/${currentPage + 1}`} aria-label="Next page"><ChevronRight/></Button>
-        : <Button sm disabled aria-label="Next page"><ChevronRight/></Button>}
-    </Row>
+        ? <Link href={`${basePath}/${currentPage + 1}`} aria-label="Next page" className={idle}><ChevronRight className="size-4"/></Link>
+        : <span aria-hidden="true" className={`${item} border-[var(--line)] opacity-40`}><ChevronRight className="size-4"/></span>}
+    </nav>
   )
 }

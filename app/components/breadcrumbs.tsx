@@ -1,7 +1,3 @@
-'use client'
-
-import { Row } from "@vaneui/ui"
-import { Text } from "@vaneui/ui"
 import Link from 'next/link'
 import React from 'react'
 import { domain } from "@/app/data/consts"
@@ -27,16 +23,16 @@ export default function Breadcrumbs({ breadcrumbs }: BreadcrumbsProps) {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />
-    <Row md itemsCenter wFull>
+    <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm text-[var(--muted)]">
       {breadcrumbs.map(({ href, text }, idx) => (
         <React.Fragment key={idx}>
-          <Text lg tag={Link} href={href}>{text}</Text>
-          {idx < breadcrumbs.length - 1 &&
-            <Text lg secondary tag={"span"}>/</Text>
-          }
+          {idx < breadcrumbs.length - 1
+            ? <Link href={href} className="hover:text-[var(--ink)]">{text}</Link>
+            : <span aria-current="page" className="text-[var(--ink)]">{text}</span>}
+          {idx < breadcrumbs.length - 1 && <span aria-hidden="true">/</span>}
         </React.Fragment>
       ))}
-    </Row>
+    </nav>
     </>
   )
 }

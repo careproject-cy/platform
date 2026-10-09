@@ -1,36 +1,33 @@
 'use client'
 
 import { BlogCard } from "@/app/components/blog/blogCard"
-import { Button } from "@vaneui/ui"
 import { useState } from 'react'
-import { Col, Grid3, Text } from "@vaneui/ui"
 import { BlogPostMetadata } from "@/app/data/blogPostMetadata"
 import { LargeBlogCard } from "@/app/components/blog/largeBlogCard"
 
 export default function BlogPosts({ posts }: { posts: BlogPostMetadata[] }) {
 
-  const [visibleCount, setVisibleCount] = useState(4)
+  const [visibleCount, setVisibleCount] = useState(7)
   const latestPost = posts[0]
   const visiblePosts = posts.slice(1, visibleCount)
 
-  if (!latestPost) return <Text lg secondary>No posts yet - check back soon.</Text>
-
-  const loadMore = () => {
-    setVisibleCount(prev => prev + 3)
-  }
+  if (!latestPost) return <p className="text-lg text-[var(--muted)]">No posts yet - check back soon.</p>
 
   return (
     <>
-      <Col lg>
-        <LargeBlogCard post={latestPost} />
-        <Grid3 lg>
-          {visiblePosts.map((post) => (
-            <BlogCard key={post.filename} post={post} />
-          ))}
-        </Grid3>
-      </Col>
+      <LargeBlogCard post={latestPost} />
+      <div className="mt-20 pt-14 border-t border-[var(--line)] grid md:grid-cols-3 gap-x-6 gap-y-12">
+        {visiblePosts.map((post) => (
+          <BlogCard key={post.filename} post={post} />
+        ))}
+      </div>
       {visibleCount < posts.length && (
-        <Button onClick={loadMore}>Load More Posts</Button>
+        <div className="flex justify-center pt-14">
+          <button onClick={() => setVisibleCount(prev => prev + 6)}
+                  className="rounded-full border border-[var(--line)] px-6 py-3 font-medium hover:border-[var(--ink)]">
+            Load more stories
+          </button>
+        </div>
       )}
     </>
   )

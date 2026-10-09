@@ -41,7 +41,7 @@ export default function DonationCard() {
   }
 
   return (
-    <div className="flex flex-col gap-[10px] min-w-[220px] max-w-[600px] mx-auto my-5 p-5 border border-gray-200 bg-gray-50 rounded-[16px] text-center">
+    <div className="flex flex-col gap-[10px] min-w-[220px] max-w-[600px] mx-auto my-5 p-5 border border-[var(--line)] bg-white rounded-[28px] shadow-[0_24px_60px_-30px_rgba(16,26,20,.35)] text-center">
       <div className="flex justify-center items-center gap-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ export default function DonationCard() {
           className={
             isMonthly
               ? "cursor-pointer py-4 px-2 rounded-[14px] text-center w-1/2 flex justify-center items-center gap-2"
-              : "cursor-pointer py-4 px-2 rounded-[14px] text-center w-1/2 flex justify-center items-center gap-2 text-blue-600 font-bold bg-blue-100 ring-2 ring-blue-600 ring-inset"
+              : "cursor-pointer py-4 px-2 rounded-[14px] text-center w-1/2 flex justify-center items-center gap-2 text-[var(--accent)] font-bold bg-[var(--accent-soft)] ring-2 ring-[var(--accent)] ring-inset"
           }
         >
           Donate once
@@ -73,7 +73,7 @@ export default function DonationCard() {
           className={
             !isMonthly
               ? "cursor-pointer py-4 px-2 rounded-[14px] text-center w-1/2 flex justify-center items-center gap-2"
-              : "cursor-pointer py-4 px-2 rounded-[14px] text-center w-1/2 flex justify-center items-center gap-2 text-blue-600 font-bold bg-blue-100 ring-2 ring-blue-600 ring-inset"
+              : "cursor-pointer py-4 px-2 rounded-[14px] text-center w-1/2 flex justify-center items-center gap-2 text-[var(--accent)] font-bold bg-[var(--accent-soft)] ring-2 ring-[var(--accent)] ring-inset"
           }
         >
           <svg
@@ -97,7 +97,7 @@ export default function DonationCard() {
             key={amount}
             className={
               selectedAmount === amount
-                ? "border border-gray-200 bg-orange-500 text-white py-2 px-4 m-[5px] rounded-lg cursor-pointer text-base"
+                ? "border border-gray-200 bg-[var(--accent)] text-white py-2 px-4 m-[5px] rounded-lg cursor-pointer text-base"
                 : "border border-gray-200 bg-white py-2 px-4 m-[5px] rounded-lg cursor-pointer text-base"
             }
             onClick={() => handleAmountClick(amount)}
@@ -108,7 +108,7 @@ export default function DonationCard() {
         <button
           className={
             priceOptions.indexOf(selectedAmount) < 0
-              ? "border border-gray-200 bg-orange-500 text-white py-2 px-4 m-[5px] rounded-lg cursor-pointer text-base"
+              ? "border border-gray-200 bg-[var(--accent)] text-white py-2 px-4 m-[5px] rounded-lg cursor-pointer text-base"
               : "border border-gray-200 bg-white py-2 px-4 m-[5px] rounded-lg cursor-pointer text-base"
           }
           onClick={() => handleAmountClick(isMonthly ? "1500" : "5")}
@@ -128,7 +128,7 @@ export default function DonationCard() {
           onChange={(e) => {
             if (!isMonthly) setSelectedAmount(e.target.value)
           }}
-          className="w-full border-none bg-white p-0 rounded-lg text-[28px] text-left outline-none flex-grow text-blue-600"
+          className="w-full border-none bg-white p-0 rounded-lg text-[28px] text-left outline-none flex-grow text-[var(--accent)]"
         />
         <div className="text-[20px] text-[#777]">EUR</div>
       </div>
@@ -137,7 +137,7 @@ export default function DonationCard() {
         id="donate-button"
         target="_blank"
         href={getLink(isMonthly, selectedAmount)}
-        className="mt-2.5 bg-orange-500 text-[20px] font-bold border-none py-4 px-8 rounded-lg cursor-pointer no-underline text-white"
+        className="mt-2.5 bg-[var(--accent)] text-[18px] font-semibold border-none py-4 px-8 rounded-full cursor-pointer no-underline text-white"
       >
         Donate
       </a>

@@ -1,8 +1,6 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { Col, Row, Section, Container, Grid3 } from "@vaneui/ui"
-import { PageTitle, SectionTitle, Text, Title } from "@vaneui/ui"
-import { Divider } from "@vaneui/ui"
+import Link from "next/link"
 import Gallery from "@/app/components/gallery"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import { domain, platform_name } from "@/app/data/consts"
@@ -12,7 +10,6 @@ import { getDate } from "@/app/utils/dateUtils"
 import { fetchDogs, fetchDogBody } from "@/app/data/fetchData"
 import MdComponent from "@/app/components/md/mdComponent"
 import Sharer from "@/app/components/sharerWrapper"
-import { Chip } from "@vaneui/ui"
 
 interface IdProps {
   params: Promise<{ location: string, file: string }>
@@ -99,66 +96,65 @@ export default async function DogPage({params}: IdProps) {
   const showStatus = status !== 'Available'
   const isAdopted = status === 'Adopted'
 
+  const facts = [
+    ["Sex", dog.gender],
+    ["Age", dog.ageText],
+    ["Size", sizeText],
+    ["Breed", dog.breed],
+  ]
+
   return (
-    <Section>
-      <Container lg>
-        <Row lg justifyBetween tabletCol wFull>
-          <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"},
-            isAdopted ? {href: "/adopted/1", text: "Adopted Dogs"} : {href: "/dogs", text: "Dogs"},
-            {href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name}]}/>
-          <Sharer shareText={shareText} url={url}/>
-        </Row>
-        <Row xl mobileCol itemsStart>
-          <Gallery className="flex-1" images={galleryImages} alt={dog.name}
-                   chipText={showStatus ? status : undefined}/>
-          <Col lg className="flex-1">
-            <Col sm>
-              <PageTitle>{dog.name}</PageTitle>
-              {isAdopted &&
-                <Text lg semibold accent><span aria-hidden="true">🐾</span> Found their forever home</Text>
-              }
-              <Row itemsCenter justifyBetween>
-                <Text semibold lg>{sizeText}</Text>
-                <Chip semibold lg>{dog.gender}</Chip>
-              </Row>
-              <Row justifyBetween>
-                <Text lg>{dog.breed}</Text>
-                <Text lg>{dog.ageText}</Text>
-              </Row>
-            </Col>
-            <Divider/>
-            <Col lg>
-              <MdComponent md={content}/>
-            </Col>
-            {!isAdopted &&
-              <>
-                <Divider/>
-                <Col>
-                  <Title xs secondary>
-                    Added at {getDate(dog.added)}
-                  </Title>
-                  <Text sm secondary>
-                    Please note that the information about the dog is collected at the time the dog was added to the
-                    website meaning some of the data may not be accurate.
-                  </Text>
-                </Col>
-              </>
-            }
-          </Col>
-        </Row>
-        {similarDogs.length !== 0 &&
-          <Col xl itemsCenter wFull className="gap-10 pb-10">
-            <Divider/>
-            <SectionTitle>{isAdopted ? "Dogs still looking for a home" : "Similar dogs"}</SectionTitle>
-            <Grid3 xl wFull>
-              {similarDogs.map((dog) => (
-                <DogCard key={dog.filename} {...dog} />
-              ))}
-            </Grid3>
-          </Col>
-        }
-      </Container>
-    </Section>
+    <div className="w-full max-w-6xl mx-auto px-4 md:px-6 pt-10 pb-24">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"},
+          isAdopted ? {href: "/adopted/1", text: "Adopted dogs"} : {href: "/dogs", text: "Dogs"},
+          {href: `/dogs/${location}/${dog.filename.replace(".md", "")}`, text: dog.name}]}/>
+        <div className="md:w-auto"><Sharer shareText={shareText} url={url}/></div>
+      </div>
+
+      <div className="mt-8 grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <Gallery images={galleryImages} alt={dog.name} chipText={showStatus ? status : undefined}/>
+        <div className="lg:sticky lg:top-24">
+          {isAdopted && <p className="text-[var(--accent)] font-medium"><span aria-hidden="true">🐾</span> Found their forever home</p>}
+          <h1 className="font-serif text-6xl md:text-8xl leading-[0.9] tracking-[-0.02em] mt-2">{dog.name}</h1>
+          <dl className="mt-8 grid grid-cols-2 border-t border-[var(--line)]">
+            {facts.map(([k, v]) => (
+              <div key={k} className="py-4 border-b border-[var(--line)] pr-4">
+                <dt className="text-xs text-[var(--muted)]">{k}</dt>
+                <dd className={`mt-1 font-medium ${k === "Sex" ? "capitalize" : ""}`}>{v}</dd>
+              </div>
+            ))}
+          </dl>
+          {!isAdopted && (
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/more/adopt" className="rounded-full bg-[var(--accent)] text-white px-6 py-3 font-medium hover:opacity-90">Ask about {dog.name}</Link>
+              <Link href="/more/foster" className="rounded-full border border-[var(--line)] px-6 py-3 font-medium hover:border-[var(--ink)]">Foster instead</Link>
+            </div>
+          )}
+          <div className="mt-10">
+            <MdComponent md={content}/>
+          </div>
+          {!isAdopted &&
+            <p className="mt-10 pt-6 border-t border-[var(--line)] text-sm text-[var(--muted)]">
+              Added {getDate(dog.added)}. Details were collected when {dog.name} joined the site, so some may have changed.
+            </p>
+          }
+        </div>
+      </div>
+
+      {similarDogs.length !== 0 &&
+        <section className="mt-28">
+          <h2 className="font-serif text-5xl md:text-6xl leading-[0.95] tracking-[-0.02em]">
+            {isAdopted ? <>Still looking for <em className="text-[var(--accent)]">a home</em></> : <>Similar <em className="text-[var(--accent)]">dogs</em></>}
+          </h2>
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-10">
+            {similarDogs.map((dog) => (
+              <DogCard key={dog.filename} {...dog} />
+            ))}
+          </div>
+        </section>
+      }
+    </div>
   )
 }
 

@@ -1,15 +1,12 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { Button, Row } from "@vaneui/ui"
-import { Col, Container, Section } from "@vaneui/ui"
-import { PageTitle, SectionTitle, Text } from "@vaneui/ui"
 import MdComponent from "@/app/components/md/mdComponent"
 import { fetchBlogposts, fetchPostBody } from "@/app/data/fetchData"
 import Image from "next/image"
 import { getImageSrc } from "@/app/utils/images"
 import { getDate } from "@/app/utils/dateUtils"
-import { Divider } from "@vaneui/ui"
+import Breadcrumbs from "@/app/components/breadcrumbs"
 import { BlogCard } from "@/app/components/blog/blogCard"
 import Sharer from "@/app/components/sharerWrapper"
 import { domain, platform_name } from "@/app/data/consts"
@@ -87,47 +84,43 @@ export default async function BlogPage({params}: BlogPageProps) {
   };
 
   return (
-    <Section>
+    <div className="w-full">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}}
       />
-      <Container sm>
-        <Col lg>
-          <PageTitle>{post.title}</PageTitle>
-          <Row mobileCol justifyBetween>
-            <Text secondary semibold wFull>{getDate(post.date)}</Text>
-            <Sharer shareText={shareText} url={url} labelText={""}/>
-          </Row>
-        </Col>
-      </Container>
-      <Container xs tag={"article"}>
-        <Col xl>
-          <Col lg>
-            <Image
-              src={getImageSrc(post.imageSrc)}
-              alt={post.title}
-              width={600}
-              height={400}
-              className="relative object-cover w-full aspect-3/2 rounded-xl overflow-hidden"
-            />
-            <MdComponent md={content}/>
-            <Sharer shareText={shareText} url={url}/>
-          </Col>
-          <Link href="/blog"><Button lg><ArrowLeft/>Back to Blog</Button></Link>
-          {relatedPosts.length === 0 ? null :
-            <>
-              <Divider/>
-              <SectionTitle lg>Related Posts</SectionTitle>
-              <Col xl>
-                {relatedPosts.map((p, i) => (
-                  <BlogCard key={p.filename} post={p} horizontal reverse={i % 2 !== 0}/>
-                ))}
-              </Col>
-            </>
-          }
-        </Col>
-      </Container>
-    </Section>
+      <header className="max-w-3xl mx-auto px-4 md:px-6 pt-12 md:pt-16">
+        <Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {href: "/blog", text: "Stories"}, {href: `/blog/${id}`, text: post.title}]}/>
+        <h1 className="mt-8 font-serif text-5xl md:text-7xl leading-[0.98] tracking-[-0.02em] text-balance">{post.title}</h1>
+        <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <p className="text-[var(--muted)]">{getDate(post.date)}</p>
+          <div><Sharer shareText={shareText} url={url} labelText={""}/></div>
+        </div>
+      </header>
+      <div className="max-w-5xl mx-auto px-4 md:px-6 mt-10">
+        <div className="relative aspect-[16/9] rounded-[28px] overflow-hidden bg-[var(--line)]">
+          <Image src={getImageSrc(post.imageSrc)} alt={post.title} fill priority sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover"/>
+        </div>
+      </div>
+      <article className="max-w-2xl mx-auto px-4 md:px-6 mt-12">
+        <MdComponent md={content}/>
+        <div className="mt-12 pt-8 border-t border-[var(--line)] flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <Link href="/blog" className="inline-flex items-center gap-2 rounded-full border border-[var(--line)] px-5 py-2.5 text-sm font-medium hover:border-[var(--ink)]">
+            <ArrowLeft className="size-4"/> All stories
+          </Link>
+          <div><Sharer shareText={shareText} url={url}/></div>
+        </div>
+      </article>
+      {relatedPosts.length > 0 &&
+        <section className="max-w-6xl mx-auto px-4 md:px-6 pt-24 pb-8">
+          <h2 className="font-serif text-5xl md:text-6xl leading-[0.95] tracking-[-0.02em]">Related <em className="text-[var(--accent)]">stories</em></h2>
+          <div className="mt-10 grid md:grid-cols-3 gap-x-6 gap-y-12">
+            {relatedPosts.map((p) => (
+              <BlogCard key={p.filename} post={p}/>
+            ))}
+          </div>
+        </section>
+      }
+    </div>
   )
 }
