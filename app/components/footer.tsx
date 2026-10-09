@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Facebook, GitHub, Instagram, Linkedin, Send } from "react-feather"
 
 const columns = [
   { title: "Adopt", links: [["Dogs for adoption", "/dogs"], ["How adoption works", "/more/adopt"], ["Adopted dogs", "/adopted/1"]] },
@@ -8,11 +9,11 @@ const columns = [
 ]
 
 const social = [
-  ["Instagram", "https://www.instagram.com/uana.cy/"],
-  ["Facebook", "https://www.facebook.com/careproject.cy"],
-  ["LinkedIn", "https://www.linkedin.com/company/uana-foundation/"],
-  ["Telegram", "https://t.me/care_project"],
-  ["GitHub", "https://github.com/careproject-cy/"],
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/uana.cy/" },
+  { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/careproject.cy" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/uana-foundation/" },
+  { name: "Telegram", icon: Send, href: "https://t.me/care_project" },
+  { name: "GitHub", icon: GitHub, href: "https://github.com/careproject-cy/" },
 ]
 
 export default function Footer() {
@@ -27,9 +28,12 @@ export default function Footer() {
           <p className="text-sm text-[var(--muted)] mt-4 leading-relaxed">
             Cyprus Animals Rescue Effort, a volunteer project of the UANA Foundation. We rescue, treat, and rehome stray dogs across Cyprus.
           </p>
-          <div className="flex flex-wrap gap-x-4 gap-y-2 mt-6 text-sm">
-            {social.map(([name, href]) => (
-              <a key={name} href={href} target="_blank" rel="noopener noreferrer" className="text-[var(--muted)] hover:text-[var(--ink)]">{name}</a>
+          <div className="flex flex-wrap gap-2 mt-6">
+            {social.map(({ name, icon: Icon, href }) => (
+              <a key={name} href={href} target="_blank" rel="noopener noreferrer" aria-label={`${name} (opens in a new tab)`} title={name}
+                 className="size-10 grid place-items-center rounded-full border border-[var(--line)] text-[var(--muted)] hover:text-white hover:bg-[var(--accent)] hover:border-[var(--accent)] transition-colors">
+                <Icon className="size-[18px]" aria-hidden="true"/>
+              </a>
             ))}
           </div>
         </div>
