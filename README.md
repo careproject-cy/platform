@@ -7,7 +7,7 @@
 
 [careproject.cy](https://careproject.cy) | [UANA Foundation](https://uanafoundation.com)
 
-![CARE Project](public/care-project-social.png)
+![CARE Project landing page](public/readme-hero.jpg)
 
 ## About
 
