@@ -1,7 +1,7 @@
 # CARE Project - Cyprus Animals Rescue Effort
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://app.cloudback.it/badge/careproject-cy/platform)](https://cloudback.it)
+[![Backup](https://app.cloudback.it/badge/careproject-cy/platform)](https://cloudback.it)
 
 **A 100% volunteer-run dog rescue platform helping stray and shelter-bound dogs across Cyprus find loving homes.**
 
@@ -45,7 +45,7 @@ Every rescue organization deserves a modern adoption platform. Most operate thro
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 20.9+
 - npm
 
 ### Installation
@@ -135,7 +135,7 @@ npm run build
 ## Project Structure
 
 ```
-careproject/
+platform/
   app/
     (frontend)/       # The public website
       blog/           # Blog pages
