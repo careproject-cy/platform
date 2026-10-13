@@ -28,6 +28,7 @@
     "@vaneui/md": "1.1.1",
     "@vaneui/ui": "1.4.3",
     "@vercel/analytics": "^1.6.1",
+    "@vercel/speed-insights": "^2.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "graphql": "^16.14.2",

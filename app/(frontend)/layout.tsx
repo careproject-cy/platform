@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Sans_Mono, Instrument_Serif } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import "./globals.css";
 import { slogan, social_img_url } from "@/app/data/consts";
 import React from "react";
@@ -75,6 +76,7 @@ export default function RootLayout(
       </Col>
     </ThemeWrapper>
     <Analytics/>
+    <SpeedInsights/>
     </body>
     </html>
   );
