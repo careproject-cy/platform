@@ -2,7 +2,6 @@
 title: Foster Process
 date: 2024-10-10
 description: Fostering a dog provides a temporary loving home while we search for their forever family. Learn more about our fostering process and how you can help.
-imageSrc: https://placehold.co/400x400?text=Image+placeholder
 tags: [fostering, dogs, rescue]
 ---
 

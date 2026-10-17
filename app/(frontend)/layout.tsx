@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: social_img_url,
-        width: 800,
-        height: 600,
-        alt: `care-project-social`
+        width: 1200,
+        height: 630,
+        alt: "Rescued dogs of CARE Project: From the streets of Cyprus to your sofa"
       }
     ]
   },

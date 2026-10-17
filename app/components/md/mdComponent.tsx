@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import { Md } from "@vaneui/md";
+import { Md, headingAnchors } from "@vaneui/md";
 import { Img } from "@vaneui/ui";
 import { getImageSrc } from "@/app/utils/images";
 import Image from "next/image";
@@ -15,6 +15,7 @@ export default function MdComponent({md}: MdComponentProps) {
     <div className="md-content">
       <Md
         content={md}
+        transform={headingAnchors()}
         config={{
           components: {
             MdImage: (props) => {
