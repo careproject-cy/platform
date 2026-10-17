@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Col, Row } from "@vaneui/ui"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import PageShell from "@/app/components/site/pageShell"
-import { platform_name } from "@/app/data/consts"
+import { platform_name, social_img_url } from "@/app/data/consts"
 import { fetchMd } from "@/app/data/fetchData"
 import MdComponent from "@/app/components/md/mdComponent"
 import DonationCard from "@/app/components/donateCard"
@@ -18,7 +18,7 @@ export async function generateMetadata({params}: MdPageProps): Promise<Metadata>
   const {frontmatter} = await fetchMd(`data/pages/${file}.md`);
   const title = (frontmatter.title as string) || "Page";
   const description = frontmatter.description as string | undefined;
-  const image = frontmatter.imageSrc ? getImageSrc(frontmatter.imageSrc as string) : undefined;
+  const image = frontmatter.imageSrc ? getImageSrc(frontmatter.imageSrc as string) : social_img_url;
   return {
     title: `${title} | ${platform_name}`,
     description,
@@ -27,7 +27,7 @@ export async function generateMetadata({params}: MdPageProps): Promise<Metadata>
       title,
       description,
       url: `/more/${file}`,
-      ...(image ? {images: [image]} : {}),
+      images: [image],
     },
   };
 }

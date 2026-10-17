@@ -32,13 +32,13 @@ export default function Header() {
           ))}
         </Row>
         <Row sm>
-          <NavLink wFit tabletHide tag={NextLink} href="/more/get-involved" active={isActive("/more/get-involved")}>Volunteer</NavLink>
+          <NavLink wFit tabletHide tag={NextLink} href="/more/get-involved#volunteer" active={isActive("/more/get-involved")}>Volunteer</NavLink>
           <Button sm filled accent tag={NextLink} href="/more/donate">
             <Heart fill="currentColor"/> Donate
           </Button>
           <div className="lg:hidden">
             <Menu trigger={<IconButton sm aria-label="Open menu"><MenuIcon/></IconButton>}>
-              {[{ href: "/", text: "Home" }, ...nav, { href: "/more/get-involved", text: "Volunteer" }].map(n => (
+              {[{ href: "/", text: "Home" }, ...nav, { href: "/more/get-involved#volunteer", text: "Volunteer" }].map(n => (
                 <MenuItem key={n.href} tag={NextLink} href={n.href}>{n.text}</MenuItem>
               ))}
             </Menu>

@@ -51,16 +51,14 @@ export async function generateMetadata({params}: IdProps): Promise<Metadata> {
       description,
       images: [
         {
-          url: imgUrl || "care-project-social.png",
-          width: 800,
-          height: 600,
+          url: imgUrl,
           alt: `${dog.name} open graph image`
         }
       ]
     },
     twitter: {
       card: "summary_large_image",
-      images: [imgUrl || "care-project-social.png"]
+      images: [imgUrl]
     }
   }
 }

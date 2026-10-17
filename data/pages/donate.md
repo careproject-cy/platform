@@ -2,7 +2,6 @@
 title: Donate
 date: 2024-10-10
 description: Donate to save lives today
-imageSrc: https://placehold.co/400x400?text=Image+placeholder
 tags: [donate, hel]
 ---
 

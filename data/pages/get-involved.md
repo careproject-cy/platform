@@ -1,7 +1,6 @@
 ---
 title: Get Involved
 description: Dogs are known for their friendly nature and unwavering devotion. They often communicate through body language and thrive on social interaction.
-imageSrc: https://placehold.co/400x400?text=Image+placeholder
 ---
 
 ## Get Involved
