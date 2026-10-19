@@ -1,6 +1,4 @@
 import type { MetadataRoute } from 'next'
-import { promises as fs } from 'fs'
-import path from 'path'
 import { fetchDogs, fetchBlogposts } from '@/app/data/fetchData'
 import { domain, ADOPTED_PAGE_SIZE, morePages } from '@/app/data/consts'
 import { getImageSrc } from '@/app/utils/images'
@@ -9,15 +7,6 @@ const baseUrl = `https://${domain}`
 
 function newest(dates: Date[]): Date | undefined {
   return dates.length ? new Date(Math.max(...dates.map((d) => d.getTime()))) : undefined
-}
-
-// A Markdown page changes when its file does; on Vercel the mtime is the deploy that shipped it.
-async function fileModified(page: string): Promise<Date | undefined> {
-  try {
-    return (await fs.stat(path.join(process.cwd(), 'data/pages', `${page}.md`))).mtime
-  } catch {
-    return undefined
-  }
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -31,9 +20,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: baseUrl, lastModified: newest([...dogs.map((d) => d.updatedAt), ...visiblePosts.map((p) => p.updatedAt)]) },
     { url: `${baseUrl}/dogs`, lastModified: newest(dogs.filter((d) => d.status !== 'Adopted').map((d) => d.updatedAt)) },
     { url: `${baseUrl}/blog`, lastModified: newest(visiblePosts.map((p) => p.updatedAt)) },
-    ...(await Promise.all(
-      morePages.map(async (page) => ({ url: `${baseUrl}/more/${page}`, lastModified: await fileModified(page) })),
-    )),
+    // No reliable edit date for the Markdown pages (file mtimes are the deploy time), so none is claimed.
+    ...morePages.map((page) => ({ url: `${baseUrl}/more/${page}` })),
   ]
 
   const dogRoutes: MetadataRoute.Sitemap = dogs.map((dog) => ({
