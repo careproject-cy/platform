@@ -11,8 +11,24 @@ import { getDate } from "@/app/utils/dateUtils"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import { BlogCard } from "@/app/components/blog/blogCard"
 import Sharer from "@/app/components/sharerWrapper"
-import { domain, platform_name } from "@/app/data/consts"
+import { baseOpenGraph, domain, platform_name } from "@/app/data/consts"
 import { ArrowLeft } from "react-feather";
+
+// Search results cut titles near 60 characters and descriptions near 155, so trim to fit.
+function pageTitle(title: string): string {
+  const full = `${title} | ${platform_name}`
+  return full.length > 60 ? title : full
+}
+
+function metaDescription(text: string): string {
+  if (text.length <= 155) return text
+  const cut = text.slice(0, 154)
+  return `${cut.slice(0, cut.lastIndexOf(" ")).replace(/[\s,.;:–-]+$/, "")}…`
+}
+
+function absoluteUrl(src: string): string {
+  return new URL(src, `https://${domain}`).href
+}
 
 interface BlogPageProps {
   params: Promise<{ id: string }>
@@ -33,17 +49,20 @@ export async function generateMetadata({params}: BlogPageProps): Promise<Metadat
   }
   const url = `https://${domain}/blog/${id}`;
   const image = getImageSrc(post.imageSrc);
+  const description = metaDescription(post.description);
   return {
-    title: `${post.title} | ${platform_name}`,
-    description: post.description,
+    title: pageTitle(post.title),
+    description,
     alternates: {canonical: `/blog/${id}`},
     openGraph: {
+      ...baseOpenGraph,
       type: 'article',
       title: post.title,
-      description: post.description,
+      description,
       url,
-      images: [image],
+      images: [{url: image, width: post.image?.width, height: post.image?.height, alt: post.image?.alt || post.title}],
       publishedTime: new Date(post.date).toISOString(),
+      modifiedTime: new Date(post.updatedAt).toISOString(),
     },
     twitter: {
       card: 'summary_large_image',
@@ -72,17 +91,16 @@ export default async function BlogPage({params}: BlogPageProps) {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
-    description: post.description,
-    image: getImageSrc(post.imageSrc),
+    description: metaDescription(post.description),
+    image: absoluteUrl(getImageSrc(post.imageSrc)),
     datePublished: new Date(post.date).toISOString(),
+    dateModified: new Date(post.updatedAt).toISOString(),
+    inLanguage: "en",
     url,
     mainEntityOfPage: url,
-    author: {"@type": "Organization", name: platform_name, url: `https://${domain}`},
-    publisher: {
-      "@type": "Organization",
-      name: platform_name,
-      logo: {"@type": "ImageObject", url: `https://${domain}/logo.png`},
-    },
+    // Points at the sitewide NGO node in StructuredData rather than re-declaring it.
+    author: {"@type": "Organization", "@id": `https://${domain}/#organization`, name: platform_name, url: `https://${domain}`},
+    publisher: {"@id": `https://${domain}/#organization`},
   };
 
   return (
@@ -102,7 +120,7 @@ export default async function BlogPage({params}: BlogPageProps) {
         </Container>
         <Container md itemsStretch>
           <Col relative overflowHidden className="aspect-[16/9] rounded-[28px] bg-(--line)">
-            <Image src={getImageSrc(post.imageSrc)} alt={post.title} fill priority sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover"/>
+            <Image src={getImageSrc(post.imageSrc)} alt={post.image?.alt || post.title} fill priority sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover"/>
           </Col>
         </Container>
         <Container xs itemsStretch tag="article" className="max-w-2xl">

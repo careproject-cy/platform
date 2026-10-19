@@ -46,8 +46,10 @@ export const Dogs: CollectionConfig = {
       index: true,
       admin: {
         position: 'sidebar',
-        description: 'URL segment, e.g. "luna" for /dogs/germasogeia/luna. Changing it breaks existing links.',
+        description: 'URL segment, e.g. "luna" for /dogs/germasogeia/luna. Lowercase; changing it breaks existing links.',
       },
+      // Mixed-case slugs made /dogs/germasogeia/thyra 404 while /Thyra worked.
+      hooks: { beforeValidate: [({ value }) => (typeof value === 'string' ? value.trim().toLowerCase() : value)] },
     },
     {
       name: 'location',
@@ -55,7 +57,10 @@ export const Dogs: CollectionConfig = {
       required: true,
       index: true,
       defaultValue: 'germasogeia',
-      admin: { position: 'sidebar' },
+      admin: {
+        position: 'sidebar',
+        description: 'Keep the shelter the dog came from, even after adoption: set Status to Adopted instead. Old links to a moved dog still redirect.',
+      },
       options: [
         { label: 'Germasogeia', value: 'germasogeia' },
         { label: 'Mesageitonia', value: 'mesageitonia' },

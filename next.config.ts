@@ -16,10 +16,22 @@ const mediaHostnames = Array.from(
 const nextConfig: NextConfig = {
   images: {
     minimumCacheTTL: 2678400, // 31 days
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       { protocol: 'https', hostname: 'placehold.co' },
       ...mediaHostnames.map((hostname) => ({ protocol: 'https' as const, hostname })),
     ],
+  },
+  async redirects() {
+    // One host for search engines; canonical tags already say apex, this makes it a hard 308.
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.careproject.cy' }],
+        destination: 'https://careproject.cy/:path*',
+        permanent: true,
+      },
+    ];
   },
   async headers() {
     return [
@@ -32,6 +44,11 @@ const nextConfig: NextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
         ],
+      },
+      {
+        // robots.txt stops crawling but not indexing of linked admin/API URLs.
+        source: '/:dir(admin|api)/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
       },
     ];
   },

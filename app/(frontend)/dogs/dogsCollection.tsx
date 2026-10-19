@@ -1,9 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import DogCard from '@/app/components/dogCard'
+import DogCard, { type DogCardData } from '@/app/components/dogCard'
 import NoResults from "@/app/components/noResults"
-import { DogMetadata } from "@/app/data/dogMetadata"
 import { Button, Col, Grid4, Label, Row, Select } from "@vaneui/ui"
 
 const ages = [
@@ -13,24 +12,29 @@ const ages = [
   { key: 'senior', label: 'Senior (9+)' },
 ]
 
-export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
+export type CollectionDog = DogCardData & { age: number }
+
+// `dogs` is already limited to adoptable dogs on the server. Every card is rendered so all dog links are in
+// the HTML; cards past `visibleDogs` are only hidden with CSS until "See more dogs" reveals them.
+export default function DogsCollection({ dogs }: { dogs: CollectionDog[] }) {
 
   const [ageFilter, setAgeFilter] = useState<string>('all')
   const [breedFilter, setBreedFilter] = useState<string>('all')
   const [visibleDogs, setVisibleDogs] = useState(12)
 
-  const availableDogs = dogs.filter(dog => dog.status !== 'Not available' && dog.status !== 'Adopted')
-  const filteredDogs = availableDogs.filter(dog => {
+  const matches = (dog: CollectionDog) => {
     const ageMatch = ageFilter === 'all' ||
       (ageFilter === 'young' && dog.age <= 3) ||
       (ageFilter === 'adult' && dog.age > 3 && dog.age <= 8) ||
       (ageFilter === 'senior' && dog.age > 8)
     const breedMatch = breedFilter === 'all' || dog.breed.toLowerCase().includes(breedFilter.toLowerCase())
     return ageMatch && breedMatch
-  })
+  }
 
-  const displayedDogs = filteredDogs.slice(0, visibleDogs)
-  const uniqueBreeds = Array.from(new Set(availableDogs.map(dog => dog.breed))).sort()
+  // Position of each dog among the filtered ones (-1 when filtered out).
+  let shown = 0
+  const positions = dogs.map(dog => (matches(dog) ? shown++ : -1))
+  const uniqueBreeds = Array.from(new Set(dogs.map(dog => dog.breed))).sort()
 
   return (
     <Col xl noGap>
@@ -54,16 +58,18 @@ export default function DogsCollection({ dogs }: { dogs: DogMetadata[] }) {
         </Label>
       </Row>
       <Grid4 className="gap-x-5 gap-y-10 pt-10">
-        {displayedDogs.map((dog) => (
-          <DogCard key={`${dog.location}/${dog.filename}`} {...dog} />
+        {dogs.map((dog, i) => (
+          <div key={`${dog.location}/${dog.filename}`} className={positions[i] < 0 || positions[i] >= visibleDogs ? "hidden" : "contents"}>
+            <DogCard {...dog} />
+          </div>
         ))}
       </Grid4>
-      {visibleDogs < filteredDogs.length && (
+      {visibleDogs < shown && (
         <Row justifyCenter className="pt-12">
           <Button onClick={() => setVisibleDogs(prev => prev + 20)}>See more dogs</Button>
         </Row>
       )}
-      {displayedDogs.length === 0 && <NoResults />}
+      {shown === 0 && <NoResults />}
     </Col>
   )
 }

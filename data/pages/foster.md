@@ -1,13 +1,14 @@
 ---
 title: Foster Process
+seoTitle: Foster a Rescue Dog in Limassol, Cyprus
 date: 2024-10-10
-description: Fostering a dog provides a temporary loving home while we search for their forever family. Learn more about our fostering process and how you can help.
+description: Foster a rescue dog in Limassol, Cyprus. Give a shelter dog a safe, loving home while we find their forever family. Learn how fostering works.
 tags: [fostering, dogs, rescue]
 ---
 
 # Foster a Dog
 
-Fostering a dog is one of the most impactful ways to support the **CARE Project**. We are looking for dedicated foster homes who are willing to provide a safe and loving environment for dogs in need — often for an extended period — until they are ready for adoption.
+Fostering a dog is one of the most impactful ways to support the **CARE Project**. We are looking for dedicated foster homes who are willing to provide a safe and loving environment for dogs in need — often for an extended period — until they are ready for adoption. Our foster dogs come from the municipal shelters in Germasogeia and Mesageitonia, in the Limassol district of Cyprus.
 
 ## Why Long-Term Foster Care is Important
 

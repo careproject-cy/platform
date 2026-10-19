@@ -7,7 +7,7 @@ import Breadcrumbs from "@/app/components/breadcrumbs"
 import DogCard from "@/app/components/dogCard"
 import Pagination from "@/app/components/pagination"
 import { fetchDogs } from "@/app/data/fetchData"
-import { platform_name, ADOPTED_PAGE_SIZE as PAGE_SIZE } from "@/app/data/consts"
+import { baseOpenGraph, platform_name, ADOPTED_PAGE_SIZE as PAGE_SIZE } from "@/app/data/consts"
 
 async function getAdoptedDogs() {
   const dogs = await fetchDogs()
@@ -33,10 +33,19 @@ export async function generateMetadata({params}: { params: Promise<{ page: strin
   const title = pageNum > 1
     ? `Adopted Dogs - Page ${pageNum} | ${platform_name}`
     : `Adopted Dogs | ${platform_name}`
+  const description = "Meet the rescued dogs who found their forever homes through the CARE Project."
+    + (pageNum > 1 ? ` Page ${pageNum}.` : "")
   return {
     title,
-    description: "Meet the rescued dogs who found their forever homes through the CARE Project.",
+    description,
     alternates: {canonical: `/adopted/${pageNum}`},
+    openGraph: {
+      ...baseOpenGraph,
+      url: `/adopted/${pageNum}`,
+      title,
+      description,
+      images: [{ url: '/social-preview.png', width: 1200, height: 630, alt: 'CARE Project rescue dogs in Cyprus' }],
+    },
   }
 }
 
@@ -56,7 +65,7 @@ export default async function AdoptedDogsPage({params}: { params: Promise<{ page
   return (
     <PageShell>
       <PageHeader eyebrow={<Breadcrumbs breadcrumbs={[{href: "/", text: "Home"}, {href: "/adopted/1", text: "Adopted dogs"}]}/>}
-                  title={<>They all <Accent>went home</Accent></>}>
+                  title={<>Adopted rescue dogs: they all <Accent>went home</Accent></>}>
         Every one of these dogs found their forever home. Thank you for being part of their stories.
       </PageHeader>
       <Grid4>

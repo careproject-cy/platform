@@ -1,10 +1,8 @@
-"use client"
-
 import React from 'react';
-import NextLink from 'next/link'
 import Image from 'next/image'
-import { Button, Card, Col, Container, Row, Section, SectionTitle, Text } from "@vaneui/ui"
+import { Card, Col, Container, Row, Section, SectionTitle, Text } from "@vaneui/ui"
 import { Heart } from "react-feather";
+import { LinkButton } from "@/app/components/site/links"
 
 const CTACard: React.FC = () => {
   return (
@@ -23,8 +21,8 @@ const CTACard: React.FC = () => {
               different shelters and track each case until adoption.
             </Text>
             <Row sm flexWrap>
-              <Button filled accent tag={NextLink} href="/more/donate">Donate now <Heart/></Button>
-              <Button tag={NextLink} href="/more/get-involved">Other ways to help</Button>
+              <LinkButton filled accent href="/more/donate">Donate now <Heart/></LinkButton>
+              <LinkButton href="/more/get-involved">Other ways to help</LinkButton>
             </Row>
             <Text sm secondary>€5 buys a deworming tablet. Run entirely by volunteers.</Text>
           </Col>

@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { BlogPostMetadata } from "./blogPostMetadata";
-import { DogMetadata } from "./dogMetadata";
+import { DogMetadata, ImageInfo } from "./dogMetadata";
 import { unstable_cache } from "next/cache";
 import { getPayload } from "payload";
 import config from "@payload-config";
@@ -76,6 +76,28 @@ function mediaUrl(media: number | Media | null | undefined): string | null {
   return media.sizes?.hero?.url || media.sizes?.gallery?.url || media.url || null;
 }
 
+// Same derivative choice as mediaUrl, with its pixel size for og:image width/height.
+function mediaImage(media: number | Media | null | undefined): ImageInfo | null {
+  if (typeof media !== 'object' || !media) return null;
+  const size = media.sizes?.hero?.url ? media.sizes.hero : media.sizes?.gallery?.url ? media.sizes.gallery : media;
+  if (!size.url) return null;
+  return {
+    url: size.url,
+    width: size.width ?? undefined,
+    height: size.height ?? undefined,
+    alt: media.alt?.trim() || undefined,
+  };
+}
+
+// Editors type breeds freely ("Staff mix", " Vizla cross"); tidy the most common variants.
+function normalizeBreed(breed: string): string {
+  const b = breed.trim().replace(/\s+/g, ' ');
+  return b
+    .replace(/\bmixed$/i, 'mix')
+    .replace(/\bVizla\b/i, 'Vizsla')
+    .replace(/^Staff\b/i, 'Staffordshire Bull Terrier');
+}
+
 // Accepts a Dog with or without body - the listing query omits it for performance.
 function toDogMetadata(dog: Omit<Dog, 'body'>): DogMetadata {
   // Birth date, when present, gives an age that stays current; otherwise fall back to the number.
@@ -85,14 +107,16 @@ function toDogMetadata(dog: Omit<Dog, 'body'>): DogMetadata {
     filename: `${dog.slug}.md`,
     location: dog.location,
     name: dog.name,
-    breed: dog.breed,
+    breed: normalizeBreed(dog.breed),
     age,
     ageText,
     gender: dog.gender,
     status: dog.status,
     images: (dog.images ?? []).map(mediaUrl).filter((url): url is string => url !== null),
+    imageInfo: (dog.images ?? []).map(mediaImage).filter((img): img is ImageInfo => img !== null),
     size: dog.size,
     added: new Date(dog.added),
+    updatedAt: new Date(dog.updatedAt),
   };
 }
 
@@ -103,8 +127,10 @@ function toBlogPostMetadata(post: Post): BlogPostMetadata {
     date: new Date(post.date),
     description: post.description,
     imageSrc: mediaUrl(post.coverImage) ?? '',
+    image: mediaImage(post.coverImage) ?? undefined,
     tags: post.tags ?? [],
     visible: post.visible ?? false,
+    updatedAt: new Date(post.updatedAt),
   };
 }
 
