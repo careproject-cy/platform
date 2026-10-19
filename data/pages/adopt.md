@@ -2,7 +2,6 @@
 title: Adoption Process
 date: 2024-10-10
 description: Adopting a dog is a life-changing decision that provides a forever home for animals in need. Learn about our adoption process and how you can make a difference.
-imageSrc: https://placehold.co/400x400?text=Image+placeholder
 tags: [adoption, dogs, rescue]
 ---
 

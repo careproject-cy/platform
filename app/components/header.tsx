@@ -17,6 +17,8 @@ const nav = [
 export default function Header() {
   const pathname = usePathname()
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`)
+  // Volunteer links to a section of Get involved, so it is hidden while that page is open.
+  const volunteer = pathname === "/more/get-involved" ? [] : [{ href: "/more/get-involved#volunteer", text: "Volunteer" }]
 
   return (
     <Row tag="header" sticky borderB noGap justifyCenter
@@ -32,13 +34,15 @@ export default function Header() {
           ))}
         </Row>
         <Row sm>
-          <NavLink wFit tabletHide tag={NextLink} href="/more/get-involved" active={isActive("/more/get-involved")}>Volunteer</NavLink>
+          {volunteer.map(n => (
+            <NavLink key={n.href} wFit tabletHide tag={NextLink} href={n.href}>{n.text}</NavLink>
+          ))}
           <Button sm filled accent tag={NextLink} href="/more/donate">
             <Heart fill="currentColor"/> Donate
           </Button>
           <div className="lg:hidden">
             <Menu trigger={<IconButton sm aria-label="Open menu"><MenuIcon/></IconButton>}>
-              {[{ href: "/", text: "Home" }, ...nav, { href: "/more/get-involved", text: "Volunteer" }].map(n => (
+              {[{ href: "/", text: "Home" }, ...nav, ...volunteer].map(n => (
                 <MenuItem key={n.href} tag={NextLink} href={n.href}>{n.text}</MenuItem>
               ))}
             </Menu>
