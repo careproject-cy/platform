@@ -14,9 +14,9 @@ interface GalleryProps {
   alts?: (string | undefined)[]
 }
 
-const SquareImage = ({ src, alt, size, className, imageClassName, onClick, preload = false }: { src: string, alt: string, size: number, className?: string, imageClassName?: string, onClick?: React.MouseEventHandler, preload?: boolean }) => {
+const SquareImage = ({ src, alt, size, className, imageClassName, onClick, preload = false, hidden = false }: { src: string, alt: string, size: number, className?: string, imageClassName?: string, onClick?: React.MouseEventHandler, preload?: boolean, hidden?: boolean }) => {
   return (
-    <Col relative overflowHidden className={twMerge(`rounded-2xl`, className || "")}>
+    <Col relative overflowHidden aria-hidden={hidden || undefined} className={twMerge(`rounded-2xl`, className || "")}>
       {/* Decorative blurred fill behind the contained photo: a tiny variant is enough under the blur. */}
       <Image src={src} alt="" aria-hidden width={size} height={size}
         sizes="96px"
@@ -24,11 +24,11 @@ const SquareImage = ({ src, alt, size, className, imageClassName, onClick, prelo
         loading='eager'
         className={twMerge(`aspect-square object-cover blur-xs`, imageClassName || "")}
       />
-      <Image onClick={onClick} src={src} alt={alt} width={size} height={size}
+      <Image onClick={onClick} src={src} alt={hidden ? "" : alt} width={size} height={size}
         sizes="(max-width: 768px) 100vw, 50vw"
         loading='eager'
         preload={preload}
-        fetchPriority={preload ? "high" : undefined}
+        fetchPriority={preload ? "high" : hidden ? "low" : undefined}
         className={twMerge(`absolute object-contain h-full w-full`, imageClassName || "")}
       />
     </Col>
@@ -40,6 +40,18 @@ const Gallery: React.FC<GalleryProps> = ({ images, className, chipText, alt, alt
   const altFor = (idx: number) => alts?.[idx] || `${baseAlt} – photo ${idx + 1}`
 
   const [visible, setVisible] = useState(0)
+  // Fetched photos stay mounted so switching back never refetches.
+  const [mounted, setMounted] = useState<Set<number>>(() => new Set([0]))
+  const mount = (...indexes: number[]) => setMounted((prev) => {
+    if (indexes.every((i) => prev.has(i))) return prev
+    return new Set([...prev, ...indexes])
+  })
+  // Prefetch neighbours after hydration so they never compete with the first photo.
+  useEffect(() => {
+    const n = images.length
+    mount(visible, (visible + 1) % n, (visible - 1 + n) % n)
+  }, [visible, images.length])
+
   const thumbnailsRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (thumbnailsRef.current) {
@@ -72,16 +84,25 @@ const Gallery: React.FC<GalleryProps> = ({ images, className, chipText, alt, alt
             <ChevronRight/>
           </IconButton>
           <Col relative overflowHidden>
-            {/* Only the photo shown at load is the LCP candidate, so only it is preloaded. */}
-            <SquareImage src={images[visible]} alt={altFor(visible)} size={1000} preload={visible === 0} />
+            {/* Photo 0 stays in flow to size the frame and is the only one preloaded (LCP). */}
+            {images.map((src, idx) => mounted.has(idx) && (
+              <SquareImage key={idx} src={src} alt={altFor(idx)} size={1000} preload={idx === 0}
+                hidden={idx !== visible}
+                className={twMerge(
+                  "transition-opacity duration-200",
+                  idx !== 0 && "absolute inset-0",
+                  idx === visible ? "z-10 opacity-100" : "opacity-0 pointer-events-none",
+                )} />
+            ))}
             {chipText &&
-              <Chip lg fontSemibold absolute className="right-2 bottom-2 opacity-75">{chipText}</Chip>
+              <Chip lg fontSemibold absolute className="right-2 bottom-2 z-20 opacity-75">{chipText}</Chip>
             }
           </Col>
         </Row>
         <Row sm ref={thumbnailsRef} overflowXHidden className="max-md:overflow-x-scroll">
           {images.map((src, idx) => (
             <button key={idx} type="button" onClick={() => setVisible(idx)} aria-pressed={idx === visible}
+                    onPointerEnter={() => mount(idx)} onFocus={() => mount(idx)}
                     className="shrink-0 rounded-xl cursor-pointer">
               <Image
                 loading='lazy'
