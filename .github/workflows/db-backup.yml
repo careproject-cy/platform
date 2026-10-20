@@ -59,7 +59,8 @@ jobs:
           set -euo pipefail
           STAMP="$(date -u +%Y-%m-%d_%H%M%S)"
           FILE="careproject-db-${STAMP}.sql.gz"
-          pg_dump "$DATABASE_URL" --no-owner --no-privileges --format=plain | gzip -9 > "$FILE"
+          # The runner ships an older pg_dump on PATH; call the v17 client explicitly.
+          /usr/lib/postgresql/17/bin/pg_dump "$DATABASE_URL" --no-owner --no-privileges --format=plain | gzip -9 > "$FILE"
           SIZE="$(stat -c%s "$FILE")"
           echo "Dump size: ${SIZE} bytes"
           # A healthy dump is comfortably over 10 KB; anything smaller means the dump failed.
