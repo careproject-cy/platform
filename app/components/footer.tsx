@@ -4,10 +4,11 @@ import Image from "next/image"
 import NextLink from "next/link"
 import { Col, Container, IconButton, Link, Row, Section, Text } from "@vaneui/ui"
 import { Facebook, GitHub, Instagram, Linkedin, Send } from "react-feather"
+import { contact_email, parent_org_reg_number } from "@/app/data/consts"
 
 const columns = [
   { title: "Adopt", links: [["Dogs for adoption", "/dogs"], ["How adoption works", "/more/adopt"], ["Adopted dogs", "/adopted/1"]] },
-  { title: "Help", links: [["Donate", "/more/donate"], ["Foster", "/more/foster"], ["Volunteer", "/more/get-involved"]] },
+  { title: "Help", links: [["Donate", "/more/donate"], ["Foster", "/more/foster"], ["Volunteer", "/more/get-involved#volunteer"]] },
   { title: "About", links: [["Our story", "/more/about"], ["Stories", "/blog"], ["UANA Foundation", "https://uanafoundation.com/"]] },
 ]
 
@@ -32,6 +33,7 @@ export default function Footer() {
             <Text sm secondary>
               Cyprus Animals Rescue Effort, a volunteer project of the UANA Foundation. We rescue, treat, and rehome stray dogs across Cyprus.
             </Text>
+            <Link sm secondary href={`mailto:${contact_email}`}>{contact_email}</Link>
             <Row xs flexWrap>
               {social.map(({ name, icon: Icon, href }) => (
                 <IconButton key={name} md secondary tag="a" href={href} target="_blank" rel="noopener noreferrer"
@@ -57,7 +59,7 @@ export default function Footer() {
           ))}
         </Row>
         <Row justifyBetween flexWrap borderT className="py-5">
-          <Text xs secondary>© {new Date().getFullYear()} CARE Project · UANA Foundation, Cyprus</Text>
+          <Text xs secondary>© {new Date().getFullYear()} CARE Project · UANA Foundation, Cyprus · Reg. No. {parent_org_reg_number}</Text>
           <Text xs secondary>100% volunteer-run. Every euro goes to the animals.</Text>
         </Row>
       </Container>

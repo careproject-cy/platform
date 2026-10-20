@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Inter, Noto_Sans_Mono, Instrument_Serif } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import "./globals.css";
-import { slogan, social_img_url } from "@/app/data/consts";
+import { baseOpenGraph, social_img_url } from "@/app/data/consts";
 import React from "react";
 import ThemeWrapper from "@/app/(frontend)/themeWrapper";
 import { Col } from "@vaneui/ui";
@@ -17,9 +18,11 @@ const sans = Inter({
   subsets: ["latin"],
 });
 
+// Only code-style text uses it, so it should not compete with the hero fonts for preload.
 const mono = Noto_Sans_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
+  preload: false,
 });
 
 const serif = Instrument_Serif({
@@ -34,8 +37,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: './',
   },
-  description: slogan,
+  description: "CARE Project rescues, fosters and rehomes stray dogs from Limassol shelters in Cyprus, with adoption in Cyprus, the UK, Germany and the Netherlands.",
   openGraph: {
+    ...baseOpenGraph,
     url: './',
     images: [
       {
@@ -52,6 +56,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#101a14" },
+  ],
+};
+
 export default function RootLayout(
   {
     children,
@@ -60,9 +71,6 @@ export default function RootLayout(
   }>) {
   return (
     <html lang="en">
-    <head>
-      <script src="https://analytics.ahrefs.com/analytics.js" data-key="j+/2DiRHjgrgVvAfvvGKDw" async></script>
-    </head>
     <body className={`${mono.variable} ${sans.variable} ${serif.variable} antialiased font-sans`}>
     <StructuredData/>
     <ThemeWrapper>
@@ -75,6 +83,7 @@ export default function RootLayout(
         <Footer/>
       </Col>
     </ThemeWrapper>
+    <Script src="https://analytics.ahrefs.com/analytics.js" data-key="j+/2DiRHjgrgVvAfvvGKDw" strategy="afterInteractive"/>
     <Analytics/>
     <SpeedInsights/>
     </body>

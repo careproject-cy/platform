@@ -1,8 +1,8 @@
 ---
 title: About us
+seoTitle: About CARE Project – Dog Rescue in Limassol, Cyprus
 date: 2024-10-10
-description: Dogs are known for their friendly nature and unwavering devotion. They often communicate through body language and thrive on social interaction.
-tags: [next.js, plugin]
+description: CARE Project (Cyprus Animals Rescue Effort) is a UANA Foundation initiative rescuing, treating and rehoming stray dogs from Limassol shelters in Cyprus.
 ---
 
 # About us
@@ -10,6 +10,18 @@ tags: [next.js, plugin]
 The **CARE (Cyprus Animals Rescue Effort)** Project is an initiative of the [UANA Foundation](https://uanafoundation.com/), a nonprofit organization dedicated to supporting animal welfare in Cyprus. CARE is run by a group of volunteers who share a deep love for animals and a strong commitment to helping stray dogs.
 
 Although we all have full-time jobs and families, we are united by our passion for animal welfare and our desire to make the world a better place for stray dogs. We focus on helping dogs find loving homes both in Cyprus and abroad through partnerships with organizations in the UK, Germany, and the Netherlands.
+
+## Who We Are
+
+CARE Project is run entirely by volunteers as a project of the [UANA Foundation](https://uanafoundation.com/), a registered non-profit organisation in Cyprus (**Reg. Number ΗΕ 442538**). UANA Foundation handles the adoption and fostering process for the dogs in our care.
+
+### Where We Work
+
+We work with dogs at the **municipal shelters in Germasogeia and Mesageitonia**, in the **Limassol district** of Cyprus. From there, we help dogs find homes in Cyprus, the UK, Germany, and the Netherlands.
+
+### How to Contact Us
+
+For questions about adoption, fostering, volunteering, or donations, email us at [info@uanafoundation.com](mailto:info@uanafoundation.com).
 
 ## Our Mission
 
@@ -26,6 +38,6 @@ At this stage, our efforts are focused on one of the municipal shelters in Cypru
 
 ## How You Can Help
 
-We rely on the support of our community to carry out our mission. Whether through **adoption**, **fostering**, **donations**, or **volunteering**, your contribution can make a real difference in the lives of the dogs we care for. If you're passionate about animal welfare and want to help, we would love to hear from you.
+We rely on the support of our community to carry out our mission. Whether through [adopting a dog](/more/adopt), [fostering](/more/foster), [donating](/more/donate), or [volunteering](/more/get-involved#volunteer), your contribution can make a real difference in the lives of the dogs we care for. If you're passionate about animal welfare and want to help, we would love to hear from you.
 
 Together, we can give these dogs the happy and healthy lives they deserve.

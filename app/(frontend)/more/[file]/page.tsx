@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Col, Row } from "@vaneui/ui"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import PageShell from "@/app/components/site/pageShell"
-import { platform_name, social_img_url } from "@/app/data/consts"
+import { baseOpenGraph, morePages, platform_name, social_img_url } from "@/app/data/consts"
 import { fetchMd } from "@/app/data/fetchData"
 import MdComponent from "@/app/components/md/mdComponent"
 import DonationCard from "@/app/components/donateCard"
@@ -13,17 +13,29 @@ interface MdPageProps {
   params: Promise<{ file: string }>
 }
 
+// Only the known Markdown pages exist; anything else 404s without touching the filesystem.
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  return morePages.map((file) => ({ file }))
+}
+
 export async function generateMetadata({params}: MdPageProps): Promise<Metadata> {
   const {file} = await params;
   const {frontmatter} = await fetchMd(`data/pages/${file}.md`);
-  const title = (frontmatter.title as string) || "Page";
+  // seoTitle is the search-facing title; title stays short for the breadcrumb.
+  const seoTitle = (frontmatter.seoTitle as string) || (frontmatter.title as string) || "Page";
+  const title = seoTitle.includes(platform_name) ? seoTitle : `${seoTitle} | ${platform_name}`;
   const description = frontmatter.description as string | undefined;
-  const image = frontmatter.imageSrc ? getImageSrc(frontmatter.imageSrc as string) : social_img_url;
+  const image = frontmatter.imageSrc
+    ? {url: getImageSrc(frontmatter.imageSrc as string)}
+    : {url: social_img_url, width: 1200, height: 630, alt: "Rescued dogs of CARE Project in Cyprus"};
   return {
-    title: `${title} | ${platform_name}`,
+    title,
     description,
     alternates: {canonical: `/more/${file}`},
     openGraph: {
+      ...baseOpenGraph,
       title,
       description,
       url: `/more/${file}`,

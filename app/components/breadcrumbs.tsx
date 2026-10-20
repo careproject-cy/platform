@@ -1,9 +1,7 @@
-'use client'
-
-import NextLink from 'next/link'
 import React from 'react'
-import { Link, Row, Text } from "@vaneui/ui"
+import { Row, Text } from "@vaneui/ui"
 import { domain } from "@/app/data/consts"
+import { TextLink } from "@/app/components/site/links"
 
 interface BreadcrumbsProps {
   breadcrumbs: { href: string, text: string }[]
@@ -30,7 +28,7 @@ export default function Breadcrumbs({ breadcrumbs }: BreadcrumbsProps) {
       {breadcrumbs.map(({ href, text }, idx) => (
         <React.Fragment key={idx}>
           {idx < breadcrumbs.length - 1
-            ? <Link sm secondary noUnderline tag={NextLink} href={href}>{text}</Link>
+            ? <TextLink sm secondary noUnderline href={href}>{text}</TextLink>
             : <Text sm tag="span" aria-current="page">{text}</Text>}
           {idx < breadcrumbs.length - 1 && <Text sm secondary tag="span" aria-hidden="true">/</Text>}
         </React.Fragment>

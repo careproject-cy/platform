@@ -1,68 +1,46 @@
 import type { MetadataRoute } from 'next'
 import { fetchDogs, fetchBlogposts } from '@/app/data/fetchData'
-import { domain, ADOPTED_PAGE_SIZE } from '@/app/data/consts'
+import { domain, ADOPTED_PAGE_SIZE, morePages } from '@/app/data/consts'
+import { getImageSrc } from '@/app/utils/images'
 
 const baseUrl = `https://${domain}`
 
-const staticPages = ['about', 'adopt', 'donate', 'foster', 'get-involved']
+function newest(dates: Date[]): Date | undefined {
+  return dates.length ? new Date(Math.max(...dates.map((d) => d.getTime()))) : undefined
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [dogs, blogPosts] = await Promise.all([fetchDogs(), fetchBlogposts()])
+  const [allDogs, blogPosts] = await Promise.all([fetchDogs(), fetchBlogposts()])
+  // "Not available" dogs are hidden from every listing and noindexed, so leave them out here too.
+  const dogs = allDogs.filter((dog) => dog.status !== 'Not available')
+  const adopted = dogs.filter((dog) => dog.status === 'Adopted')
+  const visiblePosts = blogPosts.filter((post) => post.visible)
 
   const staticRoutes: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/dogs`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    ...staticPages.map((page) => ({
-      url: `${baseUrl}/more/${page}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    })),
+    { url: baseUrl, lastModified: newest([...dogs.map((d) => d.updatedAt), ...visiblePosts.map((p) => p.updatedAt)]) },
+    { url: `${baseUrl}/dogs`, lastModified: newest(dogs.filter((d) => d.status !== 'Adopted').map((d) => d.updatedAt)) },
+    { url: `${baseUrl}/blog`, lastModified: newest(visiblePosts.map((p) => p.updatedAt)) },
+    // No reliable edit date for the Markdown pages (file mtimes are the deploy time), so none is claimed.
+    ...morePages.map((page) => ({ url: `${baseUrl}/more/${page}` })),
   ]
 
   const dogRoutes: MetadataRoute.Sitemap = dogs.map((dog) => ({
     url: `${baseUrl}/dogs/${dog.location}/${dog.filename.replace('.md', '')}`,
-    lastModified: new Date(dog.added),
-    changeFrequency: 'monthly',
-    priority: 0.6,
+    lastModified: dog.updatedAt,
+    images: dog.images.slice(0, 3).map((src) => getImageSrc(src)),
   }))
 
-  const adoptedCount = dogs.filter((dog) => dog.status === 'Adopted').length
-  const adoptedPageCount = Math.max(1, Math.ceil(adoptedCount / ADOPTED_PAGE_SIZE))
-  const adoptedRoutes: MetadataRoute.Sitemap = Array.from(
-    { length: adoptedPageCount },
-    (_, i) => ({
-      url: `${baseUrl}/adopted/${i + 1}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    }),
-  )
+  const adoptedPageCount = Math.max(1, Math.ceil(adopted.length / ADOPTED_PAGE_SIZE))
+  const adoptedRoutes: MetadataRoute.Sitemap = Array.from({ length: adoptedPageCount }, (_, i) => ({
+    url: `${baseUrl}/adopted/${i + 1}`,
+    lastModified: newest(adopted.slice(i * ADOPTED_PAGE_SIZE, (i + 1) * ADOPTED_PAGE_SIZE).map((d) => d.updatedAt)),
+  }))
 
-  const blogRoutes: MetadataRoute.Sitemap = blogPosts
-    .filter((post) => post.visible)
-    .map((post) => ({
-      url: `${baseUrl}/blog/${post.filename.replace('.md', '')}`,
-      lastModified: new Date(post.date),
-      changeFrequency: 'yearly',
-      priority: 0.7,
-    }))
+  const blogRoutes: MetadataRoute.Sitemap = visiblePosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.filename.replace('.md', '')}`,
+    lastModified: post.updatedAt,
+    images: post.imageSrc ? [getImageSrc(post.imageSrc)] : undefined,
+  }))
 
   return [...staticRoutes, ...adoptedRoutes, ...dogRoutes, ...blogRoutes]
 }

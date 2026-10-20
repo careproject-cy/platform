@@ -10,33 +10,40 @@ interface GalleryProps {
   className?: string
   chipText?: string
   alt?: string
+  /** Alt text per image (editor-written or templated); falls back to `${alt} – photo N`. */
+  alts?: (string | undefined)[]
 }
 
-const SquareImage = ({ src, alt, size, className, imageClassName, onClick }: { src: string, alt: string, size: number, className?: string, imageClassName?: string, onClick?: React.MouseEventHandler }) => {
+const SquareImage = ({ src, alt, size, className, imageClassName, onClick, preload = false }: { src: string, alt: string, size: number, className?: string, imageClassName?: string, onClick?: React.MouseEventHandler, preload?: boolean }) => {
   return (
     <Col relative overflowHidden className={twMerge(`rounded-2xl`, className || "")}>
-      <Image src={src} alt={`${alt} background`} width={size} height={size}
-        sizes="(max-width: 768px) 100vw, 50vw"
+      {/* Decorative blurred fill behind the contained photo: a tiny variant is enough under the blur. */}
+      <Image src={src} alt="" aria-hidden width={size} height={size}
+        sizes="96px"
+        quality={30}
         loading='eager'
         className={twMerge(`aspect-square object-cover blur-xs`, imageClassName || "")}
       />
       <Image onClick={onClick} src={src} alt={alt} width={size} height={size}
         sizes="(max-width: 768px) 100vw, 50vw"
         loading='eager'
+        preload={preload}
+        fetchPriority={preload ? "high" : undefined}
         className={twMerge(`absolute object-contain h-full w-full`, imageClassName || "")}
       />
     </Col>
   );
 }
 
-const Gallery: React.FC<GalleryProps> = ({ images, className, chipText, alt }) => {
+const Gallery: React.FC<GalleryProps> = ({ images, className, chipText, alt, alts }) => {
   const baseAlt = alt || "Photo"
+  const altFor = (idx: number) => alts?.[idx] || `${baseAlt} – photo ${idx + 1}`
 
   const [visible, setVisible] = useState(0)
   const thumbnailsRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     if (thumbnailsRef.current) {
-      const thumbnails = thumbnailsRef.current.querySelectorAll('img')
+      const thumbnails = thumbnailsRef.current.querySelectorAll('button')
       if (thumbnails[visible]) {
         const thumbnail = thumbnails[visible]
         const scrollContainer = thumbnailsRef.current
@@ -65,7 +72,8 @@ const Gallery: React.FC<GalleryProps> = ({ images, className, chipText, alt }) =
             <ChevronRight/>
           </IconButton>
           <Col relative overflowHidden>
-            <SquareImage src={images[visible]} alt={`${baseAlt} – photo ${visible + 1}`} size={1000} />
+            {/* Only the photo shown at load is the LCP candidate, so only it is preloaded. */}
+            <SquareImage src={images[visible]} alt={altFor(visible)} size={1000} preload={visible === 0} />
             {chipText &&
               <Chip lg fontSemibold absolute className="right-2 bottom-2 opacity-75">{chipText}</Chip>
             }
@@ -73,16 +81,18 @@ const Gallery: React.FC<GalleryProps> = ({ images, className, chipText, alt }) =
         </Row>
         <Row sm ref={thumbnailsRef} overflowXHidden className="max-md:overflow-x-scroll">
           {images.map((src, idx) => (
-            <Image key={idx}
-              loading='lazy'
-              onClick={() => setVisible(idx)}
-              src={src}
-              alt={`${baseAlt} – thumbnail ${idx + 1}`}
-              width={400}
-              height={400}
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className={`object-cover aspect-square w-24 rounded-xl cursor-pointer border-3 ${idx === visible ? "border-[var(--accent)]" : "border-transparent opacity-70 hover:opacity-100"}`}
-            />
+            <button key={idx} type="button" onClick={() => setVisible(idx)} aria-pressed={idx === visible}
+                    className="shrink-0 rounded-xl cursor-pointer">
+              <Image
+                loading='lazy'
+                src={src}
+                alt={altFor(idx)}
+                width={96}
+                height={96}
+                sizes="96px"
+                className={`object-cover aspect-square w-24 rounded-xl border-3 ${idx === visible ? "border-[var(--accent)]" : "border-transparent opacity-70 hover:opacity-100"}`}
+              />
+            </button>
           ))}
         </Row>
       </Col>

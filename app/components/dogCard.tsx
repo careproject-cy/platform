@@ -1,12 +1,18 @@
-'use client'
-
 import Image from 'next/image'
-import NextLink from 'next/link'
 import { Badge, Chip, Col, Row, Text, Title } from "@vaneui/ui"
 import { getImageSrc } from "../utils/images"
 import { DogMetadata } from "../data/dogMetadata"
+import { LinkCol } from "./site/links"
 
-export default function DogCard(dog: DogMetadata & { adoptedView?: boolean }) {
+// Only what the card renders, so callers can pass slim objects to client lists.
+export type DogCardData = Pick<DogMetadata, "filename" | "location" | "name" | "breed" | "ageText" | "gender" | "status" | "size">
+  & { images: string[] }
+
+// Default for Grid4: 2 columns below 768px, 3 below 1024px, then 4 inside a ~1200px container.
+// Callers in another grid pass their own `sizes`.
+const cardSizes = "(max-width: 767px) 50vw, (max-width: 1023px) 33vw, 320px"
+
+export default function DogCard(dog: DogCardData & { adoptedView?: boolean; sizes?: string }) {
   const status = dog.status
   const adoptedView = dog.adoptedView ?? false
   const isAdopted = status === 'Adopted'
@@ -17,10 +23,10 @@ export default function DogCard(dog: DogMetadata & { adoptedView?: boolean }) {
   if (hidden) return null
 
   return (
-    <Col sm tag={NextLink} href={`/dogs/${dog.location}/${dog.filename.replace(".md", "")}`} className="group w-full">
+    <LinkCol sm href={`/dogs/${dog.location}/${dog.filename.replace(".md", "")}`} className="group w-full">
       <Col relative overflowHidden className="aspect-[4/5] rounded-[22px] bg-(--line)">
-        <Image src={getImageSrc(dog.images[0])} alt={dog.name} fill loading="lazy"
-               sizes="(max-width: 768px) 50vw, 25vw"
+        <Image src={getImageSrc(dog.images[0])} alt={isAdopted ? `${dog.name}, adopted rescue dog` : `${dog.name}, ${dog.breed} for adoption`}
+               fill loading="lazy" sizes={dog.sizes ?? cardSizes}
                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"/>
         <span className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/55 to-transparent"/>
         {showStatus && (
@@ -41,6 +47,6 @@ export default function DogCard(dog: DogMetadata & { adoptedView?: boolean }) {
           <Chip xs noShrink className="capitalize">{dog.size}</Chip>
         </Row>
       )}
-    </Col>
+    </LinkCol>
   )
 }

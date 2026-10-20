@@ -65,7 +65,7 @@ export const Posts: CollectionConfig = {
       name: 'description',
       type: 'textarea',
       required: true,
-      admin: { description: 'Short summary shown on cards and in search results.' },
+      admin: { description: 'Short summary shown on cards and in search results. Aim for 120-155 characters; longer text is cut off in search results.' },
     },
     {
       name: 'coverImage',
