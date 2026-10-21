@@ -87,7 +87,7 @@ export default function HomeView({ data }: { data: LandingData }) {
             <TextLink sm fontMedium href="/dogs">Browse all dogs</TextLink>
           </SectionHeading>
           <DogWall dogs={available}/>
-          <Row justifyCenter>
+          <Row justifyCenter className="pt-8 md:pt-12">
             <LinkButton filled accent href="/dogs">Browse all dogs</LinkButton>
           </Row>
         </Container>
