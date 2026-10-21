@@ -102,7 +102,7 @@ export default function HomeView({ data }: { data: LandingData }) {
             {steps.map(([t, d], i) => {
               const dog = adopted[i + 1]
               return (
-                <li key={t} className={`list-none ${i % 2 ? "md:mt-12" : ""}`}>
+                <li key={t} className="list-none">
                   <Reveal delay={i * 60}>
                     <Col>
                       <Col relative overflowHidden className="aspect-[3/4] rounded-[22px] bg-(--line)">
@@ -152,12 +152,12 @@ export default function HomeView({ data }: { data: LandingData }) {
             </SectionHeading>
             <Grid3 lg itemsStart className="max-tablet:grid-cols-3 max-mobile:grid-cols-1">
               {posts.map((p, i) => (
-                <Reveal key={p.href} delay={i * 60} className={i === 1 ? "md:mt-16" : ""}>
+                <Reveal key={p.href} delay={i * 60}>
                   <LinkCol sm href={p.href} className="group">
-                    <Col relative overflowHidden className={`${i === 1 ? "aspect-[4/5]" : "aspect-[4/3]"} rounded-[22px]`}>
+                    <Col relative overflowHidden className="aspect-[4/3] rounded-[22px]">
                       <Image src={p.img} alt="" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-[1.04] transition-transform duration-700"/>
                     </Col>
-                    <Title className="group-hover:text-(--color-text-accent)">{p.title}</Title>
+                    <Title className="md:min-h-[2lh] text-balance group-hover:text-(--color-text-accent)">{p.title}</Title>
                     <Text sm secondary lineClamp2>{p.description}</Text>
                   </LinkCol>
                 </Reveal>

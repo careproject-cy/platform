@@ -26,8 +26,8 @@ export default function DogWall({ dogs }: { dogs: LandingDog[] }) {
           </Button>
         ))}
       </Row>
-      <Col key={tab} className="mt-14 pt-12">
-        <PhotoWall dogs={shown} cols={4} labels="always"/>
+      <Col key={tab} className="pt-8">
+        <PhotoWall dogs={shown} cols={4} labels="always" even/>
       </Col>
     </Col>
   )

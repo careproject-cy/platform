@@ -6,12 +6,14 @@ import { LinkCol } from "./links"
 const ratios = ["aspect-[3/4]", "aspect-square", "aspect-[4/5]", "aspect-[3/5]", "aspect-[5/6]"]
 
 // Masonry of dog photos in staggered columns; labels show on hover, always, or never.
-export default function PhotoWall({ dogs, cols = 5, labels = "hover", suffix, priority = false }: {
+// `even` drops the stagger so photos (and their labels) line up in rows.
+export default function PhotoWall({ dogs, cols = 5, labels = "hover", suffix, priority = false, even = false }: {
   dogs: LandingDog[]
   cols?: 4 | 5 | 8
   labels?: "hover" | "always" | "none"
   suffix?: string
   priority?: boolean
+  even?: boolean
 }) {
   const columns = Array.from({ length: cols }, (_, c) => dogs.filter((_, i) => i % cols === c))
   const mobileCols = labels === "always" ? 2 : 3
@@ -28,10 +30,10 @@ export default function PhotoWall({ dogs, cols = 5, labels = "hover", suffix, pr
   return (
     <Grid3 sm className={`${baseCols} ${gridCols}`}>
       {columns.map((col, c) => (
-        <Col sm key={c} className={`${c % 2 ? "-mt-16" : "-mt-4"} ${c >= mobileCols ? "max-md:hidden" : ""} ${hideFrom(c)}`}>
+        <Col sm key={c} className={`${even ? "" : c % 2 ? "-mt-16" : "-mt-4"} ${c >= mobileCols ? "max-md:hidden" : ""} ${hideFrom(c)}`}>
           {col.map((d, i) => (
             <LinkCol key={d.href} href={d.href} relative overflowHidden
-                     className={`group ${ratios[(c + i) % ratios.length]} rounded-[22px] bg-[var(--line)]`}>
+                     className={`group ${even ? "aspect-[4/5]" : ratios[(c + i) % ratios.length]} rounded-[22px] bg-[var(--line)]`}>
               <Image src={d.img} alt={labels === "none" ? "" : d.name} fill sizes={sizes}
                      preload={preloadImg(c, i)} loading={eagerImg(c, i) ? "eager" : undefined}
                      className="object-cover group-hover:scale-[1.04] transition-transform duration-700"/>
