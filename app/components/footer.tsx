@@ -2,14 +2,15 @@
 
 import Image from "next/image"
 import NextLink from "next/link"
-import { Col, Container, IconButton, Link, Row, Section, Text } from "@vaneui/ui"
-import { Facebook, GitHub, Instagram, Linkedin, Send } from "react-feather"
+import { Button, Col, Container, Link, Row, Section, Text, Title } from "@vaneui/ui"
+import { Facebook, Instagram, Linkedin, Send } from "react-feather"
 import { contact_email, parent_org_reg_number } from "@/app/data/consts"
+import { Accent } from "@/app/components/site/heading"
 
 const columns = [
   { title: "Adopt", links: [["Dogs for adoption", "/dogs"], ["How adoption works", "/more/adopt"], ["Adopted dogs", "/adopted/1"]] },
   { title: "Help", links: [["Donate", "/more/donate"], ["Foster", "/more/foster"], ["Volunteer", "/more/get-involved#volunteer"]] },
-  { title: "About", links: [["Our story", "/more/about"], ["Stories", "/blog"], ["UANA Foundation", "https://uanafoundation.com/"]] },
+  { title: "About", links: [["Our story", "/more/about"], ["Stories", "/blog"], ["UANA Foundation", "https://uanafoundation.com/"], ["GitHub", "https://github.com/careproject-cy/"]] },
 ]
 
 const social = [
@@ -17,13 +18,22 @@ const social = [
   { name: "Facebook", icon: Facebook, href: "https://www.facebook.com/careproject.cy" },
   { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/uana-foundation/" },
   { name: "Telegram", icon: Send, href: "https://t.me/care_project" },
-  { name: "GitHub", icon: GitHub, href: "https://github.com/careproject-cy/" },
 ]
 
 export default function Footer() {
   return (
     <Section tag="footer" borderT noPadding>
       <Container lg itemsStretch className="px-4 md:px-6">
+        <Row mobileStack justifyBetween borderB className="py-10 max-mobile:items-start">
+          <Title xl className="leading-none">Follow the <Accent>rescues</Accent></Title>
+          <Row sm flexWrap>
+            {social.map(({ name, icon: Icon, href }) => (
+              <Button key={name} tag="a" href={href} target="_blank" rel="noopener noreferrer" aria-label={`${name} (opens in a new tab)`}>
+                <Icon aria-hidden="true"/> {name}
+              </Button>
+            ))}
+          </Row>
+        </Row>
         <Row xl mobileStack itemsStart className="pt-16 pb-10 max-mobile:items-stretch">
           <Col className="max-w-xs flex-[1.4]">
             <Row sm>
@@ -34,14 +44,6 @@ export default function Footer() {
               Cyprus Animals Rescue Effort, a volunteer project of the UANA Foundation. We rescue, treat, and rehome stray dogs across Cyprus.
             </Text>
             <Link sm secondary href={`mailto:${contact_email}`}>{contact_email}</Link>
-            <Row xs flexWrap>
-              {social.map(({ name, icon: Icon, href }) => (
-                <IconButton key={name} md secondary tag="a" href={href} target="_blank" rel="noopener noreferrer"
-                            aria-label={`${name} (opens in a new tab)`} title={name}>
-                  <Icon aria-hidden="true"/>
-                </IconButton>
-              ))}
-            </Row>
           </Col>
           {columns.map(c => (
             <Col key={c.title} className="flex-1">
