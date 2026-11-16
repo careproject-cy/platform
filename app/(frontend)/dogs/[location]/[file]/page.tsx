@@ -145,15 +145,21 @@ export default async function DogPage({params}: IdProps) {
     ["Breed", dog.breed],
   ]
 
-  // No Google rich result exists for adoptable pets (and Product would be wrong), so this only
-  // ties the page to the site and NGO nodes and names its main photo.
+  // Product would misrepresent an adoption, so the dog is a plain Thing typed as a dog via Wikidata.
   const mainImage = dog.imageInfo[0]
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
+    "@type": "ItemPage",
     "@id": `${url}#webpage`,
     url,
     name: dog.name,
+    mainEntity: {
+      "@type": "Thing",
+      additionalType: "https://www.wikidata.org/wiki/Q144",
+      name: dog.name,
+      description: `${dog.gender === "female" ? "Female" : "Male"} ${breed}, ${agePhrase(dog.ageText)}, ${sizeText.toLowerCase()}. ${isAdopted ? "Adopted" : `Status: ${status}`}.`,
+      ...(mainImage && {image: getImageSrc(mainImage.url)}),
+    },
     isPartOf: {"@id": `https://${domain}/#website`},
     publisher: {"@id": `https://${domain}/#organization`},
     datePublished: new Date(dog.added).toISOString(),

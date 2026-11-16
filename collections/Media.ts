@@ -1,5 +1,5 @@
 import { APIError, type CollectionConfig } from 'payload'
-import { revalidateSite } from './hooks/revalidate'
+import { refreshSite } from './hooks/revalidate'
 
 export const Media: CollectionConfig = {
   slug: 'media',
@@ -71,14 +71,15 @@ export const Media: CollectionConfig = {
         }
         return doc
       },
-      async ({ doc, req }) => {
-        await revalidateSite(req.context?.disableRevalidate)
+      async ({ doc, operation, req }) => {
+        // A new upload is not on any page yet; the dog or post save that uses it refreshes those.
+        if (operation === 'update') await refreshSite('all', [], req.context?.disableRevalidate)
         return doc
       },
     ],
     afterDelete: [
       async ({ doc, req }) => {
-        await revalidateSite(req.context?.disableRevalidate)
+        await refreshSite('all', [], req.context?.disableRevalidate)
         return doc
       },
     ],

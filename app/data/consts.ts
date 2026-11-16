@@ -7,6 +7,9 @@ export const cloudfront_domain = "d1ki5tb2ey2mtg.cloudfront.net";
 
 export const domain = "careproject.cy";
 
+// Public by design: served at /<key>.txt so IndexNow engines can verify the site.
+export const indexNowKey = "ea81ed305b23f5edc56cee633e0c4f19";
+
 export const social_img_url = `https://careproject.cy/social-preview.png`;
 
 // Number of adopted dogs shown per page on /adopted/[page] (also used by the sitemap).

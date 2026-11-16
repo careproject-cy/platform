@@ -1,5 +1,7 @@
 import type { CollectionConfig } from 'payload'
-import { revalidateSite } from './hooks/revalidate'
+import { refreshSite } from './hooks/revalidate'
+
+const dogPath = (dog: { location: string; slug: string }) => `/dogs/${dog.location}/${dog.slug}`
 
 export const Dogs: CollectionConfig = {
   slug: 'dogs',
@@ -21,14 +23,14 @@ export const Dogs: CollectionConfig = {
   indexes: [{ fields: ['slug', 'location'], unique: true }],
   hooks: {
     afterChange: [
-      async ({ doc, req }) => {
-        await revalidateSite(req.context?.disableRevalidate)
+      async ({ doc, previousDoc, req }) => {
+        await refreshSite('dogs', [dogPath(doc), ...(previousDoc?.slug ? [dogPath(previousDoc)] : [])], req.context?.disableRevalidate)
         return doc
       },
     ],
     afterDelete: [
       async ({ doc, req }) => {
-        await revalidateSite(req.context?.disableRevalidate)
+        await refreshSite('dogs', [dogPath(doc)], req.context?.disableRevalidate)
         return doc
       },
     ],
