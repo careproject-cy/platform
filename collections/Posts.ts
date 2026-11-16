@@ -1,5 +1,5 @@
 import type { CollectionConfig } from 'payload'
-import { revalidateSite } from './hooks/revalidate'
+import { refreshSite } from './hooks/revalidate'
 
 export const Posts: CollectionConfig = {
   slug: 'posts',
@@ -21,13 +21,13 @@ export const Posts: CollectionConfig = {
   hooks: {
     afterChange: [
       async ({ doc, req }) => {
-        await revalidateSite(req.context?.disableRevalidate)
+        await refreshSite('posts', [`/blog/${doc.slug}`], req.context?.disableRevalidate)
         return doc
       },
     ],
     afterDelete: [
       async ({ doc, req }) => {
-        await revalidateSite(req.context?.disableRevalidate)
+        await refreshSite('posts', [`/blog/${doc.slug}`], req.context?.disableRevalidate)
         return doc
       },
     ],
