@@ -26,6 +26,11 @@ const themeDefaults: ThemeDefaults = {
   chip: {
     pill: true,
   },
+  // Fields defaulted to md before VaneUI 1.7.1; keep that size.
+  input: { md: true },
+  textarea: { md: true },
+  select: { md: true },
+  field: { main: { md: true } },
 }
 
 export default function ThemeWrapper({children}: Readonly<{
