@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: './',
   },
-  description: "CARE Project rescues, fosters and rehomes stray dogs from Limassol shelters in Cyprus, with adoption in Cyprus, the UK, Germany and the Netherlands.",
+  description: "CARE Project, a UANA Foundation project, rescues, fosters and rehomes stray dogs from Limassol shelters in Cyprus, with adoption in Cyprus, the UK, Germany and the Netherlands.",
   openGraph: {
     ...baseOpenGraph,
     url: './',

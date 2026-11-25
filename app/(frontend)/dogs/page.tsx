@@ -44,7 +44,7 @@ export default async function DogsPage() {
   return (
     <PageShell>
       <PageHeader title={<>Rescue dogs looking for <Accent>a home in Cyprus</Accent></>}>
-        Every dog here was rescued in Cyprus and cared for by our volunteers. Adopt in Cyprus, the UK, Germany, or the Netherlands.{" "}
+        Every dog here was rescued in Cyprus and cared for by UANA Foundation volunteers. Adopt in Cyprus, the UK, Germany, or the Netherlands.{" "}
         <TextLink href="/more/adopt" inheritSize>How adoption works</TextLink>
       </PageHeader>
       <DogsCollection dogs={adoptable}/>

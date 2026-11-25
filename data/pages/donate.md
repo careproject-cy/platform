@@ -27,7 +27,7 @@ Your donation pays for the care of the dogs we rescue from the municipal shelter
 
 ## Who receives your donation
 
-Donations are received by the [UANA Foundation](https://uanafoundation.com/), a registered non-profit organisation in Cyprus (**Reg. Number ΗΕ 442538**). CARE Project is a volunteer-run initiative of the UANA Foundation.
+Donations are received by the [UANA Foundation](https://uanafoundation.com/), a registered non-profit organisation in Cyprus (**Reg. Number ΗΕ 442538**). CARE Project is owned and run by the UANA Foundation and run by UANA Foundation volunteers. UANA pays the vet clinics and suppliers directly.
 
 If you have any questions about donating or how your donation is used, please email us at [info@uanafoundation.com](mailto:info@uanafoundation.com).
 

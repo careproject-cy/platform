@@ -10,7 +10,7 @@ import { Accent } from "@/app/components/site/heading"
 const columns = [
   { title: "Adopt", links: [["Dogs for adoption", "/dogs"], ["How adoption works", "/more/adopt"], ["Adopted dogs", "/adopted/1"]] },
   { title: "Help", links: [["Donate", "/more/donate"], ["Foster", "/more/foster"], ["Volunteer", "/more/get-involved#volunteer"]] },
-  { title: "About", links: [["Our story", "/more/about"], ["Stories", "/blog"], ["UANA Foundation", "https://uanafoundation.com/"], ["GitHub", "https://github.com/careproject-cy/"]] },
+  { title: "About", links: [["Our story", "/more/about"], ["Stories", "/blog"], ["About UANA Foundation", "https://uanafoundation.com/"], ["GitHub", "https://github.com/careproject-cy/"]] },
 ]
 
 const social = [
@@ -41,7 +41,7 @@ export default function Footer() {
               <Text fontSemibold trackingTight>CARE Project</Text>
             </Row>
             <Text sm secondary>
-              Cyprus Animals Rescue Effort, a volunteer project of the UANA Foundation. We rescue, treat, and rehome stray dogs across Cyprus.
+              Cyprus Animals Rescue Effort, a project of the UANA Foundation. Run by UANA Foundation volunteers. UANA handles the paperwork, bills and documents.
             </Text>
             <Link sm secondary href={`mailto:${contact_email}`}>{contact_email}</Link>
           </Col>
@@ -62,7 +62,7 @@ export default function Footer() {
         </Row>
         <Row justifyBetween flexWrap borderT className="py-5">
           <Text xs secondary>© {new Date().getFullYear()} CARE Project · UANA Foundation, Cyprus · Reg. No. {parent_org_reg_number}</Text>
-          <Text xs secondary>100% volunteer-run. Every euro goes to the animals.</Text>
+          <Text xs secondary>Donations go to UANA Foundation and are spent on the animals.</Text>
         </Row>
       </Container>
     </Section>

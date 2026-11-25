@@ -2,18 +2,26 @@
 title: About us
 seoTitle: About CARE Project – Dog Rescue in Limassol, Cyprus
 date: 2024-10-10
-description: CARE Project (Cyprus Animals Rescue Effort) is a UANA Foundation initiative rescuing, treating and rehoming stray dogs from Limassol shelters in Cyprus.
+description: CARE Project (Cyprus Animals Rescue Effort) is a UANA Foundation project rescuing, treating and rehoming stray dogs from Limassol shelters in Cyprus.
 ---
 
 # About us
 
-The **CARE (Cyprus Animals Rescue Effort)** Project is an initiative of the [UANA Foundation](https://uanafoundation.com/), a nonprofit organization dedicated to supporting animal welfare in Cyprus. CARE is run by a group of volunteers who share a deep love for animals and a strong commitment to helping stray dogs.
+The **CARE (Cyprus Animals Rescue Effort)** Project is owned and run by the [UANA Foundation](https://uanafoundation.com/), a nonprofit organization dedicated to supporting animal welfare in Cyprus. CARE is run by UANA Foundation volunteers who share a deep love for animals and a strong commitment to helping stray dogs.
 
 Although we all have full-time jobs and families, we are united by our passion for animal welfare and our desire to make the world a better place for stray dogs. We focus on helping dogs find loving homes both in Cyprus and abroad through partnerships with organizations in the UK, Germany, and the Netherlands.
 
 ## Who We Are
 
-CARE Project is run entirely by volunteers as a project of the [UANA Foundation](https://uanafoundation.com/), a registered non-profit organisation in Cyprus (**Reg. Number ΗΕ 442538**). UANA Foundation handles the adoption and fostering process for the dogs in our care.
+CARE Project is owned and run by the [UANA Foundation](https://uanafoundation.com/), a registered non-profit organisation in Cyprus (**Reg. Number ΗΕ 442538**). It is run by UANA Foundation volunteers. UANA Foundation:
+
+- **Owns and runs** CARE Project.
+- **Receives all donations** and the adoption fees.
+- **Pays the bills** of vet clinics, shelters and suppliers.
+- **Signs the agreements** with adopters and foster families.
+- **Prepares the documents**: passports, microchip registration and travel paperwork.
+
+UANA Foundation also supports other animal rescuers across Cyprus. Read more at [uanafoundation.com](https://uanafoundation.com/).
 
 ### Where We Work
 

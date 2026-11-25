@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Col, Row } from "@vaneui/ui"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import PageShell from "@/app/components/site/pageShell"
-import { baseOpenGraph, domain, morePages, platform_name, social_img_url } from "@/app/data/consts"
+import { baseOpenGraph, domain, morePages, parent_org_url, platform_name, social_img_url } from "@/app/data/consts"
 import { fetchMd } from "@/app/data/fetchData"
 import MdComponent from "@/app/components/md/mdComponent"
 import DonationCard from "@/app/components/donateCard"
@@ -66,6 +66,7 @@ export default async function Page({params}: MdPageProps) {
     mainEntityOfPage: url,
     author: {"@type": "Organization", "@id": `https://${domain}/#organization`, name: platform_name, url: `https://${domain}`},
     publisher: {"@id": `https://${domain}/#organization`},
+    copyrightHolder: {"@id": `${parent_org_url}/#organization`},
   }
 
   return (

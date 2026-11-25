@@ -24,13 +24,14 @@ const graph = {
       logo: { "@type": "ImageObject", url: `${baseUrl}/logo.png`, width: 256, height: 256 },
       image: social_img_url,
       description:
-        "CARE (Cyprus Animals Rescue Effort) Project is a UANA Foundation initiative that rescues, fosters, and rehomes stray dogs from Limassol shelters in Cyprus.",
+        "CARE (Cyprus Animals Rescue Effort) Project is owned and run by UANA Foundation. Run by UANA Foundation volunteers, it rescues, fosters, and rehomes stray dogs from Limassol shelters in Cyprus.",
       email: contact_email,
       contactPoint: { "@type": "ContactPoint", contactType: "adoption and fostering enquiries", email: contact_email },
       areaServed: { "@type": "Country", name: "Cyprus" },
       address: { "@type": "PostalAddress", addressRegion: "Limassol", addressCountry: "CY" },
       parentOrganization: { "@id": `${parent_org_url}/#organization` },
-      potentialAction: { "@type": "DonateAction", target: `${baseUrl}/more/donate`, recipient: { "@id": orgId } },
+      // UANA Foundation receives the donations.
+      potentialAction: { "@type": "DonateAction", target: `${baseUrl}/more/donate`, recipient: { "@id": `${parent_org_url}/#organization` } },
       sameAs: [
         "https://www.facebook.com/careproject.cy",
         "https://t.me/care_project",
@@ -42,7 +43,10 @@ const graph = {
       "@id": `${parent_org_url}/#organization`,
       name: parent_org_name,
       url: parent_org_url,
+      description: "UANA Foundation is a registered non-profit in Cyprus that supports animal rescuers. It owns and runs CARE Project.",
       email: contact_email,
+      contactPoint: { "@type": "ContactPoint", contactType: "donations, adoption and volunteering", email: contact_email },
+      subOrganization: { "@id": orgId },
       identifier: { "@type": "PropertyValue", name: "Registration number", value: parent_org_reg_number },
       address: { "@type": "PostalAddress", addressCountry: "CY" },
       sameAs: [

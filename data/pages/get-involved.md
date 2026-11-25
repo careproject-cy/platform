@@ -18,7 +18,7 @@ Every contribution makes a real difference in the lives of the animals we care f
 
 ## Shelter Needs - Material Donations
 
-Our shelter is always in need of essential supplies. Your material donations help us ensure the comfort and care of the dogs. Here are some items we’re currently in need of:
+The shelters we support are always in need of essential supplies. Your material donations help us ensure the comfort and care of the dogs. Here are some items we’re currently in need of:
 
 - **Dog bedding** (blankets, beds, towels)
 - **Tough rubber toys** (safe for chewing, no stuffing)
@@ -35,7 +35,7 @@ If you can offer a dog a safe home while they wait for their forever family, fos
 
 ## Volunteer
 
-We are always looking for passionate volunteers to support the **CARE Project** in Limassol. You can get involved by:
+We are always looking for passionate volunteers to join the **UANA Foundation** and work on the **CARE Project** in Limassol. You will volunteer as part of UANA Foundation. You can get involved by:
 
 - Helping find loving homes for our dogs by sharing their stories and assisting with the adoption process.
 - Spending quality time with the dogs — socializing, walking, and providing basic training.

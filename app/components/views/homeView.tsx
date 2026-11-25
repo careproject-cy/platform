@@ -62,7 +62,7 @@ export default function HomeView({ data }: { data: LandingData }) {
               <Col lg>
                 <SectionTitle xl className="text-balance">Rescue, recover, <Accent>rehome</Accent></SectionTitle>
                 <Text lg secondary className="max-w-md">
-                  CARE Project is a volunteer team of the UANA Foundation, a registered nonprofit in Cyprus. We are not a shelter: we step in where dogs need it most and stay with each one until they are home.
+                  CARE Project is a project of the UANA Foundation, a registered nonprofit in Cyprus, run by UANA Foundation volunteers. UANA takes care of the paperwork, vet bills and documents. We are not a shelter: we step in where dogs need it most and stay with each one until they are home.
                 </Text>
                 <LinkButton href="/more/about">Read our story</LinkButton>
               </Col>
@@ -96,7 +96,7 @@ export default function HomeView({ data }: { data: LandingData }) {
       <Section xl>
         <Container lg itemsStretch>
           <SectionHeading title={<>How adoption <Accent>works</Accent></>}>
-            <Text secondary className="max-w-sm">Adoptions are handled by the UANA Foundation, a registered nonprofit in Cyprus. Fees abroad depend on our partner organisations.</Text>
+            <Text secondary className="max-w-sm">Adoptions are handled by the UANA Foundation, a registered nonprofit in Cyprus. UANA signs the adoption agreement and prepares the travel documents. Fees abroad depend on our partner organisations.</Text>
           </SectionHeading>
           <Grid4 tag="ol" className="max-tablet:grid-cols-4 max-mobile:grid-cols-2">
             {steps.map(([t, d], i) => {
@@ -136,7 +136,7 @@ export default function HomeView({ data }: { data: LandingData }) {
                 <Text secondary>
                   &ldquo;United by our passion for animal welfare and our desire to make the world a better place for stray dogs.&rdquo;
                 </Text>
-                <Text sm secondary className="opacity-70">The CARE Project volunteers</Text>
+                <Text sm secondary className="opacity-70">UANA Foundation volunteers</Text>
                 <LinkButton filled href="/adopted/1">See happy endings</LinkButton>
               </Col>
             </Reveal>

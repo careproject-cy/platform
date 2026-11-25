@@ -6,7 +6,7 @@ import { LinkButton, TextLink } from "@/app/components/site/links"
 import { Accent } from "@/app/components/site/heading"
 import Gallery from "@/app/components/gallery"
 import Breadcrumbs from "@/app/components/breadcrumbs"
-import { baseOpenGraph, contact_email, domain, locationLabels, platform_name } from "@/app/data/consts"
+import { baseOpenGraph, contact_email, domain, locationLabels, parent_org_url, platform_name } from "@/app/data/consts"
 import type { DogMetadata } from "@/app/data/dogMetadata"
 import DogCard from "@/app/components/dogCard"
 import { getImageSrc } from "@/app/utils/images"
@@ -162,6 +162,7 @@ export default async function DogPage({params}: IdProps) {
     },
     isPartOf: {"@id": `https://${domain}/#website`},
     publisher: {"@id": `https://${domain}/#organization`},
+    copyrightHolder: {"@id": `${parent_org_url}/#organization`},
     datePublished: new Date(dog.added).toISOString(),
     dateModified: new Date(dog.updatedAt).toISOString(),
     ...(mainImage && {
