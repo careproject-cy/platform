@@ -7,13 +7,13 @@ description: CARE Project (Cyprus Animals Rescue Effort) is a UANA Foundation pr
 
 # About us
 
-The **CARE (Cyprus Animals Rescue Effort)** Project is owned and run by the [UANA Foundation](https://uanafoundation.com/), a nonprofit organization dedicated to supporting animal welfare in Cyprus. CARE is run by UANA Foundation volunteers who share a deep love for animals and a strong commitment to helping stray dogs.
+The **CARE (Cyprus Animals Rescue Effort)** Project is owned by the [UANA Foundation](https://uanafoundation.com/), a nonprofit organization dedicated to supporting animal welfare in Cyprus, and run by UANA Foundation volunteers who share a deep love for animals and a strong commitment to helping stray dogs.
 
 Although we all have full-time jobs and families, we are united by our passion for animal welfare and our desire to make the world a better place for stray dogs. We focus on helping dogs find loving homes both in Cyprus and abroad through partnerships with organizations in the UK, Germany, and the Netherlands.
 
 ## Who We Are
 
-CARE Project is owned and run by the [UANA Foundation](https://uanafoundation.com/), a registered non-profit organisation in Cyprus (**Reg. Number ΗΕ 442538**). It is run by UANA Foundation volunteers. UANA Foundation:
+CARE Project is owned by the [UANA Foundation](https://uanafoundation.com/), a registered non-profit organisation in Cyprus (**Reg. Number ΗΕ 442538**), and run by UANA Foundation volunteers. UANA Foundation:
 
 - **Owns and runs** CARE Project.
 - **Receives all donations** and the adoption fees.

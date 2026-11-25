@@ -24,7 +24,7 @@ const graph = {
       logo: { "@type": "ImageObject", url: `${baseUrl}/logo.png`, width: 256, height: 256 },
       image: social_img_url,
       description:
-        "CARE (Cyprus Animals Rescue Effort) Project is owned and run by UANA Foundation. Run by UANA Foundation volunteers, it rescues, fosters, and rehomes stray dogs from Limassol shelters in Cyprus.",
+        "CARE (Cyprus Animals Rescue Effort) Project is owned by UANA Foundation and run by its volunteers. It rescues, fosters, and rehomes stray dogs from Limassol shelters in Cyprus.",
       email: contact_email,
       contactPoint: { "@type": "ContactPoint", contactType: "adoption and fostering enquiries", email: contact_email },
       areaServed: { "@type": "Country", name: "Cyprus" },
