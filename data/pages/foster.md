@@ -8,7 +8,7 @@ tags: [fostering, dogs, rescue]
 
 # Foster a Dog
 
-Fostering a dog is one of the most impactful ways to support the **CARE Project**. We are looking for dedicated foster homes who are willing to provide a safe and loving environment for dogs in need — often for an extended period — until they are ready for adoption. Our foster dogs come from the municipal shelters in Germasogeia and Mesageitonia, in the Limassol district of Cyprus.
+Fostering a dog is one of the most impactful ways to support the **CARE Project**, run by the UANA Foundation. We are looking for dedicated foster homes who are willing to provide a safe and loving environment for dogs in need — often for an extended period — until they are ready for adoption. Our foster dogs come from the municipal shelters in Germasogeia and Mesageitonia, in the Limassol district of Cyprus.
 
 ## Why Long-Term Foster Care is Important
 
@@ -45,5 +45,5 @@ If you're ready to make a difference in a dog's life and have the ability to fos
 
 ## Ready to foster a pet?
 
-Foster process is handled by [UANA Foundation](https://uanafoundation.com/), a nonprofit organization dedicated to supporting animal welfare in Cyprus.
+Foster process is handled by [UANA Foundation](https://uanafoundation.com/), a nonprofit organization dedicated to supporting animal welfare in Cyprus. UANA Foundation signs a foster agreement with you and, depending on the dog's case, can also cover vet costs while the dog is in foster.
 If you are interested in fostering a dog, please email us at [info@uanafoundation.com](mailto:info@uanafoundation.com)

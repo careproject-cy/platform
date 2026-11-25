@@ -3,7 +3,7 @@
 import Image from "next/image"
 import NextLink from "next/link"
 import { usePathname } from "next/navigation"
-import { Button, IconButton, Menu, MenuItem, NavLink, Row, Text } from "@vaneui/ui"
+import { Button, Col, IconButton, Menu, MenuItem, NavLink, Row, Text } from "@vaneui/ui"
 import { Heart, Menu as MenuIcon } from "react-feather"
 
 const nav = [
@@ -30,7 +30,10 @@ export default function Header() {
       <Row xl justifyBetween className="w-full max-w-6xl 2xl:max-w-7xl h-16 px-4 md:px-6">
         <Row sm noShrink relative tag={NextLink} href="/" className={`rounded-md ${hitArea}`}>
           <Image src="/logo.svg" alt="" width={45} height={32} className="h-8 w-auto rounded-md"/>
-          <Text fontSemibold trackingTight whitespaceNowrap>CARE Project</Text>
+          <Col noGap>
+            <Text fontSemibold trackingTight whitespaceNowrap className="leading-tight">CARE Project</Text>
+            <Text xs secondary whitespaceNowrap className="leading-tight">by UANA Foundation</Text>
+          </Col>
         </Row>
         <Row xs tag="nav" aria-label="Main" tabletHide className="flex-1">
           {nav.map(n => (

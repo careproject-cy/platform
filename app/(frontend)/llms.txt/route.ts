@@ -19,7 +19,7 @@ export async function GET() {
 
   const body = `# CARE Project
 
-> CARE (Cyprus Animals Rescue Effort) Project is a UANA Foundation initiative that rescues, fosters, and rehomes stray dogs in Cyprus. Run by volunteers, it provides medical care and rehabilitation and promotes adoption across the island.
+> CARE (Cyprus Animals Rescue Effort) Project is owned and run by the UANA Foundation, a registered non-profit in Cyprus (Reg. No. ΗΕ 442538). It rescues, fosters, and rehomes stray dogs in Cyprus and is run by UANA Foundation volunteers. UANA handles all the paperwork, pays the vet and shelter bills, and prepares the adoption, foster and travel documents.
 
 ## Main pages
 - [Adoptable dogs](${baseUrl}/dogs): Dogs currently available for adoption in Cyprus

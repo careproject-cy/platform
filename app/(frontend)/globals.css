@@ -5,6 +5,13 @@
 /* Relative to this file: app/(frontend)/ -> repo root. */
 @source "../../node_modules/@vaneui/ui/dist";
 
+/* Card and layout corners as before VaneUI 1.8.0, which made them smaller. */
+[data-vane-type=layout][data-size=xs] { --br-unit: 3; }
+[data-vane-type=layout][data-size=sm] { --br-unit: 4; }
+[data-vane-type=layout][data-size=md] { --br-unit: 5; }
+[data-vane-type=layout][data-size=lg] { --br-unit: 6; }
+[data-vane-type=layout][data-size=xl] { --br-unit: 7; }
+
 /* VaneUI's breakpoints, so its mobile/tablet/desktop props get matching Tailwind variants. */
 /* Headings use Instrument Serif, which next/font registers as --font-serif on body. */
 @theme inline {
@@ -60,6 +67,7 @@
     --bg: #101a14;
     --line: rgb(255 255 255 / 18%);
     --color-bg-primary: var(--bg);
+    --color-bg-raised: var(--bg); /* VaneUI 1.8.2+ lifts dark surfaces; keep them on the page colour */
     --color-text-primary: #ffffff;
     --color-text-secondary: rgb(255 255 255 / 72%);
     --color-text-accent: #86efac;

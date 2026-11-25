@@ -10,7 +10,7 @@ tags: [adoption, dogs, rescue]
 
 Providing a loving home to a rescue dog is one of the most rewarding experiences. Many of our dogs have faced neglect, abandonment, or illness, but through adoption, they get a second chance at a happy life. By choosing to adopt, you are not only giving a dog a home but also contributing to their healing and well-being.
 
-We facilitate adoptions in **Cyprus, the UK, Germany, and the Netherlands**. Our goal is to ensure that each dog finds a home that suits their needs and lifestyle.
+The [UANA Foundation](https://uanafoundation.com/) arranges adoptions in **Cyprus, the UK, Germany, and the Netherlands**. Our goal is to ensure that each dog finds a home that suits their needs and lifestyle.
 
 ## Adoption Process
 
@@ -20,12 +20,12 @@ Adopting a dog is a responsible and lifelong commitment. Our process is designed
 
 - **Meeting at the Shelter** – You will visit the shelter where the dog is located (Germasogeia or Mesageitonia, Limassol district), meet the volunteers, and get to know the dog in person. This helps ensure a good match.
 - **Home Check** – Volunteers will assess your home environment to confirm it meets the dog's needs.
-- **Application Form** – You will complete an adoption application, which will be sent via email.
+- **Application Form** – You will complete an adoption application, which UANA Foundation will send you by email.
 
 ### Adopting from abroad (UK, Germany, Netherlands)
 
 - **Getting to Know the Dog** – Since you can't easily visit the shelter, you get to know the dog through photos and videos and a call with our volunteers, who know each dog's character and needs.
-- **Application Form** – You will complete an adoption application, which will be sent via email.
+- **Application Form** – You will complete an adoption application, which UANA Foundation will send you by email.
 - **Home Check** – A home check is arranged with the organization that assists with the adoption in your country.
 - **Travel Preparation** – Before travelling, the dog gets an **EU pet passport**, a **microchip** and a **rabies vaccination**. There is a waiting period after the rabies vaccination before the dog can travel. Exact requirements depend on the destination country, and we will guide you through them.
 - **Transport** – Transport to your country is arranged once the dog is ready to travel.
@@ -43,7 +43,7 @@ Once we receive your email, we'll provide you with the adoption application form
 
 ## Adoption Fees
 
-- **In Cyprus:** The adoption fee is **€250**. This covers essential veterinary expenses, including a passport, microchip, vaccinations, and spaying/neutering.
+- **In Cyprus:** The adoption fee is **€250**, paid to UANA Foundation. This covers essential veterinary expenses, including a passport, microchip, vaccinations, and spaying/neutering.
 - **For the UK, Germany, and the Netherlands:** Adoption fees vary depending on the organizations that assist with the rehoming process. Additional costs, such as transport, may apply.
 
 We are committed to finding the best homes for our dogs and assisting adopters in choosing a dog that fits their lifestyle. 
@@ -52,7 +52,7 @@ We are committed to finding the best homes for our dogs and assisting adopters i
 
 ### How much does it cost to adopt a dog in Cyprus?
 
-The adoption fee in Cyprus is **€250**. It covers the dog's passport, microchip, vaccinations, and spaying/neutering.
+The adoption fee in Cyprus is **€250**, paid to UANA Foundation. It covers the dog's passport, microchip, vaccinations, and spaying/neutering.
 
 ### Can I adopt a dog from abroad?
 
@@ -72,7 +72,7 @@ Your country of residence, your housing type (apartment or house), any other pet
 
 ### Who handles the adoption?
 
-The adoption process is handled by the [UANA Foundation](https://uanafoundation.com/), a nonprofit organization dedicated to supporting animal welfare in Cyprus.
+The adoption process is handled by the [UANA Foundation](https://uanafoundation.com/), a registered nonprofit in Cyprus (Reg. Number ΗΕ 442538) that owns and runs CARE Project. UANA signs the adoption agreement, receives the adoption fee, pays the vet costs before adoption, and prepares the documents: passport, microchip registration and travel papers.
 
 **Thank you for considering adoption and giving a rescue dog a second chance at life!**
 

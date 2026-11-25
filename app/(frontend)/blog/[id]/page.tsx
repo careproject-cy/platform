@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { Col, Container, Grid3, PageTitle, Row, Section, SectionTitle, Text } from "@vaneui/ui"
-import { LinkButton } from "@/app/components/site/links"
+import { LinkButton, TextLink } from "@/app/components/site/links"
 import { Accent } from "@/app/components/site/heading"
 import type { Metadata } from 'next'
 import MdComponent from "@/app/components/md/mdComponent"
@@ -11,7 +11,7 @@ import { getDate } from "@/app/utils/dateUtils"
 import Breadcrumbs from "@/app/components/breadcrumbs"
 import { BlogCard } from "@/app/components/blog/blogCard"
 import Sharer from "@/app/components/sharerWrapper"
-import { baseOpenGraph, domain, platform_name } from "@/app/data/consts"
+import { baseOpenGraph, domain, parent_org_name, parent_org_url, platform_name } from "@/app/data/consts"
 import { ArrowLeft } from "react-feather";
 
 // Search results cut titles near 60 characters and descriptions near 155, so trim to fit.
@@ -101,6 +101,7 @@ export default async function BlogPage({params}: BlogPageProps) {
     // Points at the sitewide NGO node in StructuredData rather than re-declaring it.
     author: {"@type": "Organization", "@id": `https://${domain}/#organization`, name: platform_name, url: `https://${domain}`},
     publisher: {"@id": `https://${domain}/#organization`},
+    copyrightHolder: {"@id": `${parent_org_url}/#organization`},
   };
 
   return (
@@ -125,6 +126,10 @@ export default async function BlogPage({params}: BlogPageProps) {
         </Container>
         <Container xs itemsStretch tag="article" className="max-w-2xl">
           <MdComponent md={content}/>
+          <Text sm secondary>
+            CARE Project is run by the {parent_org_name}, a registered non-profit in Cyprus.{" "}
+            <TextLink href="/more/about" inheritSize>About us</TextLink>
+          </Text>
           <Row mobileStack justifyBetween borderT className="mt-8 pt-8 max-mobile:items-start">
             <LinkButton href="/blog"><ArrowLeft/> All stories</LinkButton>
             <Sharer shareText={shareText} url={url}/>

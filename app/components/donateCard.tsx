@@ -3,6 +3,7 @@
 import React, { useState } from "react"
 import { Button, Card, Col, Field, Input, Row, Text, Title } from "@vaneui/ui"
 import { Heart, Shield } from "react-feather"
+import { parent_org_name, parent_org_reg_number } from "@/app/data/consts"
 
 export default function DonationCard() {
   const [selectedAmount, setSelectedAmount] = useState("25")
@@ -86,6 +87,7 @@ export default function DonationCard() {
               href={getLink(isMonthly, selectedAmount)}>
         Donate €{selectedAmount}{isMonthly ? " a month" : ""}
       </Button>
+      <Text xs secondary textCenter>Payments go to {parent_org_name} (Reg. No. {parent_org_reg_number}) via Stripe.</Text>
     </Card>
   )
 }

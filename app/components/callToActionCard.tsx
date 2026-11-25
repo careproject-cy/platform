@@ -24,7 +24,7 @@ const CTACard: React.FC = () => {
               <LinkButton filled accent href="/more/donate">Donate now <Heart/></LinkButton>
               <LinkButton href="/more/get-involved">Other ways to help</LinkButton>
             </Row>
-            <Text sm secondary>€5 buys a deworming tablet. Run entirely by volunteers.</Text>
+            <Text sm secondary>€5 buys a deworming tablet. Donations go to the UANA Foundation, which pays the vet bills.</Text>
           </Col>
         </Card>
       </Container>
